@@ -1,0 +1,2446 @@
+<InvoiceRoot xmlns="">
+  <CompanyBan>26305533</CompanyBan>
+  <Invoice>
+    <InvoiceNumber>WK61500132</InvoiceNumber>
+    <InvoiceDate>2011/07/14</InvoiceDate>
+    <InvoiceTime>13:20:12</InvoiceTime>
+    <SellerId>26305533</SellerId>
+    <BuyerName />
+    <BuyerId />
+    <InvoiceType>03</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <CarrierType />
+    <CarrierId1 />
+    <CarrierId2 />
+    <PrintMark>Y</PrintMark>
+    <NPOBAN />
+    <RandomNumber>3753</RandomNumber>
+    <InvoiceItem>
+      <Description>懷舊筆記本-台灣地圖</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>60</UnitPrice>
+      <Amount>60.0000</Amount>
+      <SequenceNumber>1</SequenceNumber>
+      <Item>I1</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>總折讓</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>0</UnitPrice>
+      <Amount>0</Amount>
+      <SequenceNumber>999</SequenceNumber>
+      <Item>999</Item>
+      <Remark>總折讓</Remark>
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <SalesAmount>57</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0.05</TaxRate>
+    <TaxAmount>3</TaxAmount>
+    <TotalAmount>60</TotalAmount>
+    <DiscountAmount>0</DiscountAmount>
+  </Invoice>
+  <Invoice>
+    <InvoiceNumber>WK61500133</InvoiceNumber>
+    <InvoiceDate>2011/07/14</InvoiceDate>
+    <InvoiceTime>13:21:11</InvoiceTime>
+    <SellerId>26305533</SellerId>
+    <BuyerName />
+    <BuyerId />
+    <InvoiceType>03</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <CarrierType />
+    <CarrierId1 />
+    <CarrierId2 />
+    <PrintMark>Y</PrintMark>
+    <NPOBAN />
+    <RandomNumber>3870</RandomNumber>
+    <InvoiceItem>
+      <Description>懷舊筆記本(8款)</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>60</UnitPrice>
+      <Amount>60.0000</Amount>
+      <SequenceNumber>1</SequenceNumber>
+      <Item>I1</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>總折讓</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>0</UnitPrice>
+      <Amount>0</Amount>
+      <SequenceNumber>999</SequenceNumber>
+      <Item>999</Item>
+      <Remark>總折讓</Remark>
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <SalesAmount>57</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0.05</TaxRate>
+    <TaxAmount>3</TaxAmount>
+    <TotalAmount>60</TotalAmount>
+    <DiscountAmount>0</DiscountAmount>
+  </Invoice>
+  <Invoice>
+    <InvoiceNumber>WK61500134</InvoiceNumber>
+    <InvoiceDate>2011/07/14</InvoiceDate>
+    <InvoiceTime>15:49:48</InvoiceTime>
+    <SellerId>26305533</SellerId>
+    <BuyerName />
+    <BuyerId />
+    <InvoiceType>03</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <CarrierType />
+    <CarrierId1 />
+    <CarrierId2 />
+    <PrintMark>Y</PrintMark>
+    <NPOBAN />
+    <RandomNumber>3987</RandomNumber>
+    <InvoiceItem>
+      <Description>金色國徽錶(小)</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>490</UnitPrice>
+      <Amount>490.0000</Amount>
+      <SequenceNumber>1</SequenceNumber>
+      <Item>I1</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>總折讓</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>0</UnitPrice>
+      <Amount>0</Amount>
+      <SequenceNumber>999</SequenceNumber>
+      <Item>999</Item>
+      <Remark>總折讓</Remark>
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <SalesAmount>467</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0.05</TaxRate>
+    <TaxAmount>23</TaxAmount>
+    <TotalAmount>490</TotalAmount>
+    <DiscountAmount>0</DiscountAmount>
+  </Invoice>
+  <Invoice>
+    <InvoiceNumber>WK61500135</InvoiceNumber>
+    <InvoiceDate>2011/07/14</InvoiceDate>
+    <InvoiceTime>16:18:35</InvoiceTime>
+    <SellerId>26305533</SellerId>
+    <BuyerName />
+    <BuyerId />
+    <InvoiceType>03</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <CarrierType />
+    <CarrierId1 />
+    <CarrierId2 />
+    <PrintMark>Y</PrintMark>
+    <NPOBAN />
+    <RandomNumber>4103</RandomNumber>
+    <InvoiceItem>
+      <Description>明信片-KUSO蔣公(檳榔西施)</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>35</UnitPrice>
+      <Amount>35.0000</Amount>
+      <SequenceNumber>1</SequenceNumber>
+      <Item>I1</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>總折讓</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>0</UnitPrice>
+      <Amount>0</Amount>
+      <SequenceNumber>999</SequenceNumber>
+      <Item>999</Item>
+      <Remark>總折讓</Remark>
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <SalesAmount>33</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0.05</TaxRate>
+    <TaxAmount>2</TaxAmount>
+    <TotalAmount>35</TotalAmount>
+    <DiscountAmount>0</DiscountAmount>
+  </Invoice>
+  <Invoice>
+    <InvoiceNumber>WK61500136</InvoiceNumber>
+    <InvoiceDate>2011/07/14</InvoiceDate>
+    <InvoiceTime>16:22:48</InvoiceTime>
+    <SellerId>26305533</SellerId>
+    <BuyerName />
+    <BuyerId />
+    <InvoiceType>03</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <CarrierType />
+    <CarrierId1 />
+    <CarrierId2 />
+    <PrintMark>Y</PrintMark>
+    <NPOBAN />
+    <RandomNumber>4220</RandomNumber>
+    <InvoiceItem>
+      <Description>建國100國旗紀念徽章</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>120</UnitPrice>
+      <Amount>120.0000</Amount>
+      <SequenceNumber>1</SequenceNumber>
+      <Item>I1</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>懷舊明信片</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>30</UnitPrice>
+      <Amount>30.0000</Amount>
+      <SequenceNumber>2</SequenceNumber>
+      <Item>I2</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>總折讓</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>0</UnitPrice>
+      <Amount>0</Amount>
+      <SequenceNumber>999</SequenceNumber>
+      <Item>999</Item>
+      <Remark>總折讓</Remark>
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <SalesAmount>143</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0.05</TaxRate>
+    <TaxAmount>7</TaxAmount>
+    <TotalAmount>150</TotalAmount>
+    <DiscountAmount>0</DiscountAmount>
+  </Invoice>
+  <Invoice>
+    <InvoiceNumber>WK61500137</InvoiceNumber>
+    <InvoiceDate>2011/07/14</InvoiceDate>
+    <InvoiceTime>18:58:20</InvoiceTime>
+    <SellerId>26305533</SellerId>
+    <BuyerName />
+    <BuyerId />
+    <InvoiceType>03</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <CarrierType />
+    <CarrierId1 />
+    <CarrierId2 />
+    <PrintMark>Y</PrintMark>
+    <NPOBAN />
+    <RandomNumber>4337</RandomNumber>
+    <InvoiceItem>
+      <Description>蘋安健康-蘋果脆片</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>200</UnitPrice>
+      <Amount>200.0000</Amount>
+      <SequenceNumber>1</SequenceNumber>
+      <Item>I1</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>總折讓</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>0</UnitPrice>
+      <Amount>0</Amount>
+      <SequenceNumber>999</SequenceNumber>
+      <Item>999</Item>
+      <Remark>總折讓</Remark>
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <SalesAmount>190</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0.05</TaxRate>
+    <TaxAmount>10</TaxAmount>
+    <TotalAmount>200</TotalAmount>
+    <DiscountAmount>0</DiscountAmount>
+  </Invoice>
+  <Invoice>
+    <InvoiceNumber>WK61500138</InvoiceNumber>
+    <InvoiceDate>2011/07/14</InvoiceDate>
+    <InvoiceTime>19:31:20</InvoiceTime>
+    <SellerId>26305533</SellerId>
+    <BuyerName />
+    <BuyerId />
+    <InvoiceType>03</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <CarrierType />
+    <CarrierId1 />
+    <CarrierId2 />
+    <PrintMark>Y</PrintMark>
+    <NPOBAN />
+    <RandomNumber>4453</RandomNumber>
+    <InvoiceItem>
+      <Description>建國百年紀念國旗圍巾</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>390</UnitPrice>
+      <Amount>390.0000</Amount>
+      <SequenceNumber>1</SequenceNumber>
+      <Item>I1</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>總折讓</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>-90</UnitPrice>
+      <Amount>-90</Amount>
+      <SequenceNumber>999</SequenceNumber>
+      <Item>999</Item>
+      <Remark>總折讓</Remark>
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <SalesAmount>286</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0.05</TaxRate>
+    <TaxAmount>14</TaxAmount>
+    <TotalAmount>300</TotalAmount>
+    <DiscountAmount>0</DiscountAmount>
+  </Invoice>
+  <Invoice>
+    <InvoiceNumber>WK61500139</InvoiceNumber>
+    <InvoiceDate>2011/07/14</InvoiceDate>
+    <InvoiceTime>19:39:38</InvoiceTime>
+    <SellerId>26305533</SellerId>
+    <BuyerName />
+    <BuyerId />
+    <InvoiceType>03</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <CarrierType />
+    <CarrierId1 />
+    <CarrierId2 />
+    <PrintMark>Y</PrintMark>
+    <NPOBAN />
+    <RandomNumber>4570</RandomNumber>
+    <InvoiceItem>
+      <Description>原住民娃娃吊飾</Description>
+      <Quantity>2.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>60</UnitPrice>
+      <Amount>120.0000</Amount>
+      <SequenceNumber>1</SequenceNumber>
+      <Item>I1</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>總折讓</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>0</UnitPrice>
+      <Amount>0</Amount>
+      <SequenceNumber>999</SequenceNumber>
+      <Item>999</Item>
+      <Remark>總折讓</Remark>
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <SalesAmount>114</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0.05</TaxRate>
+    <TaxAmount>6</TaxAmount>
+    <TotalAmount>120</TotalAmount>
+    <DiscountAmount>0</DiscountAmount>
+  </Invoice>
+  <Invoice>
+    <InvoiceNumber>WK61500140</InvoiceNumber>
+    <InvoiceDate>2011/07/14</InvoiceDate>
+    <InvoiceTime>19:52:00</InvoiceTime>
+    <SellerId>26305533</SellerId>
+    <BuyerName />
+    <BuyerId />
+    <InvoiceType>03</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <CarrierType />
+    <CarrierId1 />
+    <CarrierId2 />
+    <PrintMark>Y</PrintMark>
+    <NPOBAN />
+    <RandomNumber>4687</RandomNumber>
+    <InvoiceItem>
+      <Description>懷舊筆記本-瑪麗蓮夢露</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>60</UnitPrice>
+      <Amount>60.0000</Amount>
+      <SequenceNumber>1</SequenceNumber>
+      <Item>I1</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>懷舊筆記本-紅歌星</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>60</UnitPrice>
+      <Amount>60.0000</Amount>
+      <SequenceNumber>2</SequenceNumber>
+      <Item>I2</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>懷舊筆記本(8款)</Description>
+      <Quantity>4.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>60</UnitPrice>
+      <Amount>240.0000</Amount>
+      <SequenceNumber>3</SequenceNumber>
+      <Item>I3</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>懷舊筆記本-大明星</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>60</UnitPrice>
+      <Amount>60.0000</Amount>
+      <SequenceNumber>4</SequenceNumber>
+      <Item>I4</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>懷舊筆記本-漫畫人物</Description>
+      <Quantity>3.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>60</UnitPrice>
+      <Amount>180.0000</Amount>
+      <SequenceNumber>5</SequenceNumber>
+      <Item>I5</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>總折讓</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>0</UnitPrice>
+      <Amount>0</Amount>
+      <SequenceNumber>999</SequenceNumber>
+      <Item>999</Item>
+      <Remark>總折讓</Remark>
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <SalesAmount>571</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0.05</TaxRate>
+    <TaxAmount>29</TaxAmount>
+    <TotalAmount>600</TotalAmount>
+    <DiscountAmount>0</DiscountAmount>
+  </Invoice>
+  <Invoice>
+    <InvoiceNumber>WK61500141</InvoiceNumber>
+    <InvoiceDate>2011/07/15</InvoiceDate>
+    <InvoiceTime>10:35:00</InvoiceTime>
+    <SellerId>26305533</SellerId>
+    <BuyerName />
+    <BuyerId />
+    <InvoiceType>03</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <CarrierType />
+    <CarrierId1 />
+    <CarrierId2 />
+    <PrintMark>Y</PrintMark>
+    <NPOBAN />
+    <RandomNumber>4803</RandomNumber>
+    <InvoiceItem>
+      <Description>台灣盒-茶葉梅</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>150</UnitPrice>
+      <Amount>150.0000</Amount>
+      <SequenceNumber>1</SequenceNumber>
+      <Item>I1</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>台灣盒-芒果干</Description>
+      <Quantity>2.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>150</UnitPrice>
+      <Amount>300.0000</Amount>
+      <SequenceNumber>2</SequenceNumber>
+      <Item>I2</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>台灣盒-紫蘇梅</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>150</UnitPrice>
+      <Amount>150.0000</Amount>
+      <SequenceNumber>3</SequenceNumber>
+      <Item>I3</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>台灣盒-情人果+梅粉</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>150</UnitPrice>
+      <Amount>150.0000</Amount>
+      <SequenceNumber>4</SequenceNumber>
+      <Item>I4</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>總折讓</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>0</UnitPrice>
+      <Amount>0</Amount>
+      <SequenceNumber>999</SequenceNumber>
+      <Item>999</Item>
+      <Remark>總折讓</Remark>
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <SalesAmount>714</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0.05</TaxRate>
+    <TaxAmount>36</TaxAmount>
+    <TotalAmount>750</TotalAmount>
+    <DiscountAmount>0</DiscountAmount>
+  </Invoice>
+  <Invoice>
+    <InvoiceNumber>WK61500142</InvoiceNumber>
+    <InvoiceDate>2011/07/15</InvoiceDate>
+    <InvoiceTime>11:05:51</InvoiceTime>
+    <SellerId>26305533</SellerId>
+    <BuyerName />
+    <BuyerId />
+    <InvoiceType>03</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <CarrierType />
+    <CarrierId1 />
+    <CarrierId2 />
+    <PrintMark>Y</PrintMark>
+    <NPOBAN />
+    <RandomNumber>4920</RandomNumber>
+    <InvoiceItem>
+      <Description>蔣介石健康長壽一百招</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>249</UnitPrice>
+      <Amount>249.0000</Amount>
+      <SequenceNumber>1</SequenceNumber>
+      <Item>I1</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>舊曲情懷-蔡琴系列 3CD</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>199</UnitPrice>
+      <Amount>199.0000</Amount>
+      <SequenceNumber>2</SequenceNumber>
+      <Item>I2</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>總折讓</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>0</UnitPrice>
+      <Amount>0</Amount>
+      <SequenceNumber>999</SequenceNumber>
+      <Item>999</Item>
+      <Remark>總折讓</Remark>
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <SalesAmount>427</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0.05</TaxRate>
+    <TaxAmount>21</TaxAmount>
+    <TotalAmount>448</TotalAmount>
+    <DiscountAmount>0</DiscountAmount>
+  </Invoice>
+  <Invoice>
+    <InvoiceNumber>WK61500143</InvoiceNumber>
+    <InvoiceDate>2011/07/15</InvoiceDate>
+    <InvoiceTime>11:46:16</InvoiceTime>
+    <SellerId>26305533</SellerId>
+    <BuyerName />
+    <BuyerId />
+    <InvoiceType>03</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <CarrierType />
+    <CarrierId1 />
+    <CarrierId2 />
+    <PrintMark>Y</PrintMark>
+    <NPOBAN />
+    <RandomNumber>5037</RandomNumber>
+    <InvoiceItem>
+      <Description>台灣名勝20明信片</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>200</UnitPrice>
+      <Amount>200.0000</Amount>
+      <SequenceNumber>1</SequenceNumber>
+      <Item>I1</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>總折讓</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>0</UnitPrice>
+      <Amount>0</Amount>
+      <SequenceNumber>999</SequenceNumber>
+      <Item>999</Item>
+      <Remark>總折讓</Remark>
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <SalesAmount>190</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0.05</TaxRate>
+    <TaxAmount>10</TaxAmount>
+    <TotalAmount>200</TotalAmount>
+    <DiscountAmount>0</DiscountAmount>
+  </Invoice>
+  <Invoice>
+    <InvoiceNumber>WK61500144</InvoiceNumber>
+    <InvoiceDate>2011/07/15</InvoiceDate>
+    <InvoiceTime>12:25:22</InvoiceTime>
+    <SellerId>26305533</SellerId>
+    <BuyerName />
+    <BuyerId />
+    <InvoiceType>03</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <CarrierType />
+    <CarrierId1 />
+    <CarrierId2 />
+    <PrintMark>Y</PrintMark>
+    <NPOBAN />
+    <RandomNumber>5153</RandomNumber>
+    <InvoiceItem>
+      <Description>原住民娃娃吊飾</Description>
+      <Quantity>2.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>60</UnitPrice>
+      <Amount>120.0000</Amount>
+      <SequenceNumber>1</SequenceNumber>
+      <Item>I1</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>總折讓</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>0</UnitPrice>
+      <Amount>0</Amount>
+      <SequenceNumber>999</SequenceNumber>
+      <Item>999</Item>
+      <Remark>總折讓</Remark>
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <SalesAmount>114</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0.05</TaxRate>
+    <TaxAmount>6</TaxAmount>
+    <TotalAmount>120</TotalAmount>
+    <DiscountAmount>0</DiscountAmount>
+  </Invoice>
+  <Invoice>
+    <InvoiceNumber>WK61500145</InvoiceNumber>
+    <InvoiceDate>2011/07/15</InvoiceDate>
+    <InvoiceTime>12:47:17</InvoiceTime>
+    <SellerId>26305533</SellerId>
+    <BuyerName />
+    <BuyerId />
+    <InvoiceType>03</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <CarrierType />
+    <CarrierId1 />
+    <CarrierId2 />
+    <PrintMark>Y</PrintMark>
+    <NPOBAN />
+    <RandomNumber>5270</RandomNumber>
+    <InvoiceItem>
+      <Description>原住民娃娃磁鐵</Description>
+      <Quantity>6.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>60</UnitPrice>
+      <Amount>360.0000</Amount>
+      <SequenceNumber>1</SequenceNumber>
+      <Item>I1</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>總折讓</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>-18</UnitPrice>
+      <Amount>-18</Amount>
+      <SequenceNumber>999</SequenceNumber>
+      <Item>999</Item>
+      <Remark>總折讓</Remark>
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <SalesAmount>326</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0.05</TaxRate>
+    <TaxAmount>16</TaxAmount>
+    <TotalAmount>342</TotalAmount>
+    <DiscountAmount>0</DiscountAmount>
+  </Invoice>
+  <Invoice>
+    <InvoiceNumber>WK61500146</InvoiceNumber>
+    <InvoiceDate>2011/07/15</InvoiceDate>
+    <InvoiceTime>13:24:47</InvoiceTime>
+    <SellerId>26305533</SellerId>
+    <BuyerName />
+    <BuyerId />
+    <InvoiceType>03</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <CarrierType />
+    <CarrierId1 />
+    <CarrierId2 />
+    <PrintMark>Y</PrintMark>
+    <NPOBAN />
+    <RandomNumber>5387</RandomNumber>
+    <InvoiceItem>
+      <Description>吃果籽芒果布丁</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>99</UnitPrice>
+      <Amount>99.0000</Amount>
+      <SequenceNumber>1</SequenceNumber>
+      <Item>I1</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>台灣迴紋針書籤(6入)</Description>
+      <Quantity>3.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>99</UnitPrice>
+      <Amount>297.0000</Amount>
+      <SequenceNumber>2</SequenceNumber>
+      <Item>I2</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>總折讓</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>0</UnitPrice>
+      <Amount>0</Amount>
+      <SequenceNumber>999</SequenceNumber>
+      <Item>999</Item>
+      <Remark>總折讓</Remark>
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <SalesAmount>377</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0.05</TaxRate>
+    <TaxAmount>19</TaxAmount>
+    <TotalAmount>396</TotalAmount>
+    <DiscountAmount>0</DiscountAmount>
+  </Invoice>
+  <Invoice>
+    <InvoiceNumber>WK61500147</InvoiceNumber>
+    <InvoiceDate>2011/07/15</InvoiceDate>
+    <InvoiceTime>15:37:17</InvoiceTime>
+    <SellerId>26305533</SellerId>
+    <BuyerName />
+    <BuyerId />
+    <InvoiceType>03</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <CarrierType />
+    <CarrierId1 />
+    <CarrierId2 />
+    <PrintMark>Y</PrintMark>
+    <NPOBAN />
+    <RandomNumber>5503</RandomNumber>
+    <InvoiceItem>
+      <Description>原住民娃娃磁鐵</Description>
+      <Quantity>4.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>60</UnitPrice>
+      <Amount>240.0000</Amount>
+      <SequenceNumber>1</SequenceNumber>
+      <Item>I1</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>總折讓</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>0</UnitPrice>
+      <Amount>0</Amount>
+      <SequenceNumber>999</SequenceNumber>
+      <Item>999</Item>
+      <Remark>總折讓</Remark>
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <SalesAmount>229</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0.05</TaxRate>
+    <TaxAmount>11</TaxAmount>
+    <TotalAmount>240</TotalAmount>
+    <DiscountAmount>0</DiscountAmount>
+  </Invoice>
+  <Invoice>
+    <InvoiceNumber>WK61500148</InvoiceNumber>
+    <InvoiceDate>2011/07/15</InvoiceDate>
+    <InvoiceTime>17:09:28</InvoiceTime>
+    <SellerId>26305533</SellerId>
+    <BuyerName />
+    <BuyerId />
+    <InvoiceType>03</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <CarrierType />
+    <CarrierId1 />
+    <CarrierId2 />
+    <PrintMark>Y</PrintMark>
+    <NPOBAN />
+    <RandomNumber>5620</RandomNumber>
+    <InvoiceItem>
+      <Description>國父單章</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>70</UnitPrice>
+      <Amount>70.0000</Amount>
+      <SequenceNumber>1</SequenceNumber>
+      <Item>I1</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>蔣公單章</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>70</UnitPrice>
+      <Amount>70.0000</Amount>
+      <SequenceNumber>2</SequenceNumber>
+      <Item>I2</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>總折讓</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>0</UnitPrice>
+      <Amount>0</Amount>
+      <SequenceNumber>999</SequenceNumber>
+      <Item>999</Item>
+      <Remark>總折讓</Remark>
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <SalesAmount>133</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0.05</TaxRate>
+    <TaxAmount>7</TaxAmount>
+    <TotalAmount>140</TotalAmount>
+    <DiscountAmount>0</DiscountAmount>
+  </Invoice>
+  <Invoice>
+    <InvoiceNumber>WK61500149</InvoiceNumber>
+    <InvoiceDate>2011/07/15</InvoiceDate>
+    <InvoiceTime>17:10:39</InvoiceTime>
+    <SellerId>26305533</SellerId>
+    <BuyerName />
+    <BuyerId />
+    <InvoiceType>03</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <CarrierType />
+    <CarrierId1 />
+    <CarrierId2 />
+    <PrintMark>Y</PrintMark>
+    <NPOBAN />
+    <RandomNumber>5737</RandomNumber>
+    <InvoiceItem>
+      <Description>台灣書籤筆記本</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>99</UnitPrice>
+      <Amount>99.0000</Amount>
+      <SequenceNumber>1</SequenceNumber>
+      <Item>I1</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>總折讓</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>0</UnitPrice>
+      <Amount>0</Amount>
+      <SequenceNumber>999</SequenceNumber>
+      <Item>999</Item>
+      <Remark>總折讓</Remark>
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <SalesAmount>94</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0.05</TaxRate>
+    <TaxAmount>5</TaxAmount>
+    <TotalAmount>99</TotalAmount>
+    <DiscountAmount>0</DiscountAmount>
+  </Invoice>
+  <Invoice>
+    <InvoiceNumber>WK61500150</InvoiceNumber>
+    <InvoiceDate>2011/07/15</InvoiceDate>
+    <InvoiceTime>20:36:21</InvoiceTime>
+    <SellerId>26305533</SellerId>
+    <BuyerName />
+    <BuyerId />
+    <InvoiceType>03</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <CarrierType />
+    <CarrierId1 />
+    <CarrierId2 />
+    <PrintMark>Y</PrintMark>
+    <NPOBAN />
+    <RandomNumber>5853</RandomNumber>
+    <InvoiceItem>
+      <Description>懷舊筆記本-共產納粹</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>60</UnitPrice>
+      <Amount>60.0000</Amount>
+      <SequenceNumber>1</SequenceNumber>
+      <Item>I1</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>總折讓</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>0</UnitPrice>
+      <Amount>0</Amount>
+      <SequenceNumber>999</SequenceNumber>
+      <Item>999</Item>
+      <Remark>總折讓</Remark>
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <SalesAmount>57</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0.05</TaxRate>
+    <TaxAmount>3</TaxAmount>
+    <TotalAmount>60</TotalAmount>
+    <DiscountAmount>0</DiscountAmount>
+  </Invoice>
+  <Invoice>
+    <InvoiceNumber>WK61500151</InvoiceNumber>
+    <InvoiceDate>2011/07/15</InvoiceDate>
+    <InvoiceTime>20:42:11</InvoiceTime>
+    <SellerId>26305533</SellerId>
+    <BuyerName />
+    <BuyerId />
+    <InvoiceType>03</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <CarrierType />
+    <CarrierId1 />
+    <CarrierId2 />
+    <PrintMark>Y</PrintMark>
+    <NPOBAN />
+    <RandomNumber>5970</RandomNumber>
+    <InvoiceItem>
+      <Description>國旗貼紙(小)</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>20</UnitPrice>
+      <Amount>20.0000</Amount>
+      <SequenceNumber>1</SequenceNumber>
+      <Item>I1</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>總折讓</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>0</UnitPrice>
+      <Amount>0</Amount>
+      <SequenceNumber>999</SequenceNumber>
+      <Item>999</Item>
+      <Remark>總折讓</Remark>
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <SalesAmount>19</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0.05</TaxRate>
+    <TaxAmount>1</TaxAmount>
+    <TotalAmount>20</TotalAmount>
+    <DiscountAmount>0</DiscountAmount>
+  </Invoice>
+  <Invoice>
+    <InvoiceNumber>WK61500152</InvoiceNumber>
+    <InvoiceDate>2011/07/15</InvoiceDate>
+    <InvoiceTime>22:17:05</InvoiceTime>
+    <SellerId>26305533</SellerId>
+    <BuyerName />
+    <BuyerId />
+    <InvoiceType>03</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <CarrierType />
+    <CarrierId1 />
+    <CarrierId2 />
+    <PrintMark>Y</PrintMark>
+    <NPOBAN />
+    <RandomNumber>6087</RandomNumber>
+    <InvoiceItem>
+      <Description>雙耳貝殼包</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>290</UnitPrice>
+      <Amount>290.0000</Amount>
+      <SequenceNumber>1</SequenceNumber>
+      <Item>I1</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>黑芝麻酥餅</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>68</UnitPrice>
+      <Amount>68.0000</Amount>
+      <SequenceNumber>2</SequenceNumber>
+      <Item>I2</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>總折讓</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>0</UnitPrice>
+      <Amount>0</Amount>
+      <SequenceNumber>999</SequenceNumber>
+      <Item>999</Item>
+      <Remark>總折讓</Remark>
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <SalesAmount>341</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0.05</TaxRate>
+    <TaxAmount>17</TaxAmount>
+    <TotalAmount>358</TotalAmount>
+    <DiscountAmount>0</DiscountAmount>
+  </Invoice>
+  <Invoice>
+    <InvoiceNumber>WK61500153</InvoiceNumber>
+    <InvoiceDate>2011/07/16</InvoiceDate>
+    <InvoiceTime>12:50:54</InvoiceTime>
+    <SellerId>26305533</SellerId>
+    <BuyerName />
+    <BuyerId />
+    <InvoiceType>03</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <CarrierType />
+    <CarrierId1 />
+    <CarrierId2 />
+    <PrintMark>Y</PrintMark>
+    <NPOBAN />
+    <RandomNumber>6203</RandomNumber>
+    <InvoiceItem>
+      <Description>翩翩起舞吊飾</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>290</UnitPrice>
+      <Amount>290.0000</Amount>
+      <SequenceNumber>1</SequenceNumber>
+      <Item>I1</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>總折讓</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>0</UnitPrice>
+      <Amount>0</Amount>
+      <SequenceNumber>999</SequenceNumber>
+      <Item>999</Item>
+      <Remark>總折讓</Remark>
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <SalesAmount>276</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0.05</TaxRate>
+    <TaxAmount>14</TaxAmount>
+    <TotalAmount>290</TotalAmount>
+    <DiscountAmount>0</DiscountAmount>
+  </Invoice>
+  <Invoice>
+    <InvoiceNumber>WK61500154</InvoiceNumber>
+    <InvoiceDate>2011/07/16</InvoiceDate>
+    <InvoiceTime>13:01:05</InvoiceTime>
+    <SellerId>26305533</SellerId>
+    <BuyerName />
+    <BuyerId />
+    <InvoiceType>03</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <CarrierType />
+    <CarrierId1 />
+    <CarrierId2 />
+    <PrintMark>Y</PrintMark>
+    <NPOBAN />
+    <RandomNumber>6320</RandomNumber>
+    <InvoiceItem>
+      <Description>單張明信片(40款)</Description>
+      <Quantity>3.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>20</UnitPrice>
+      <Amount>60.0000</Amount>
+      <SequenceNumber>1</SequenceNumber>
+      <Item>I1</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>總折讓</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>0</UnitPrice>
+      <Amount>0</Amount>
+      <SequenceNumber>999</SequenceNumber>
+      <Item>999</Item>
+      <Remark>總折讓</Remark>
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <SalesAmount>57</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0.05</TaxRate>
+    <TaxAmount>3</TaxAmount>
+    <TotalAmount>60</TotalAmount>
+    <DiscountAmount>0</DiscountAmount>
+  </Invoice>
+  <Invoice>
+    <InvoiceNumber>WK61500155</InvoiceNumber>
+    <InvoiceDate>2011/07/16</InvoiceDate>
+    <InvoiceTime>13:14:52</InvoiceTime>
+    <SellerId>26305533</SellerId>
+    <BuyerName />
+    <BuyerId />
+    <InvoiceType>03</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <CarrierType />
+    <CarrierId1 />
+    <CarrierId2 />
+    <PrintMark>Y</PrintMark>
+    <NPOBAN />
+    <RandomNumber>6437</RandomNumber>
+    <InvoiceItem>
+      <Description>明信片-Q版蔣公(台北之夜)</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>35</UnitPrice>
+      <Amount>35.0000</Amount>
+      <SequenceNumber>1</SequenceNumber>
+      <Item>I1</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>單張明信片(40款)</Description>
+      <Quantity>3.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>20</UnitPrice>
+      <Amount>60.0000</Amount>
+      <SequenceNumber>2</SequenceNumber>
+      <Item>I2</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>總折讓</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>0</UnitPrice>
+      <Amount>0</Amount>
+      <SequenceNumber>999</SequenceNumber>
+      <Item>999</Item>
+      <Remark>總折讓</Remark>
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <SalesAmount>90</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0.05</TaxRate>
+    <TaxAmount>5</TaxAmount>
+    <TotalAmount>95</TotalAmount>
+    <DiscountAmount>0</DiscountAmount>
+  </Invoice>
+  <Invoice>
+    <InvoiceNumber>WK61500156</InvoiceNumber>
+    <InvoiceDate>2011/07/16</InvoiceDate>
+    <InvoiceTime>13:15:33</InvoiceTime>
+    <SellerId>26305533</SellerId>
+    <BuyerName />
+    <BuyerId />
+    <InvoiceType>03</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <CarrierType />
+    <CarrierId1 />
+    <CarrierId2 />
+    <PrintMark>Y</PrintMark>
+    <NPOBAN />
+    <RandomNumber>6553</RandomNumber>
+    <InvoiceItem>
+      <Description>明信片-Q版蔣公(台北之夜)</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>35</UnitPrice>
+      <Amount>35.0000</Amount>
+      <SequenceNumber>1</SequenceNumber>
+      <Item>I1</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>明信片-KUSO蔣公(竹林雅仕)</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>35</UnitPrice>
+      <Amount>35.0000</Amount>
+      <SequenceNumber>2</SequenceNumber>
+      <Item>I2</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>總折讓</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>0</UnitPrice>
+      <Amount>0</Amount>
+      <SequenceNumber>999</SequenceNumber>
+      <Item>999</Item>
+      <Remark>總折讓</Remark>
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <SalesAmount>67</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0.05</TaxRate>
+    <TaxAmount>3</TaxAmount>
+    <TotalAmount>70</TotalAmount>
+    <DiscountAmount>0</DiscountAmount>
+  </Invoice>
+  <Invoice>
+    <InvoiceNumber>WK61500157</InvoiceNumber>
+    <InvoiceDate>2011/07/16</InvoiceDate>
+    <InvoiceTime>13:26:42</InvoiceTime>
+    <SellerId>26305533</SellerId>
+    <BuyerName />
+    <BuyerId />
+    <InvoiceType>03</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <CarrierType />
+    <CarrierId1 />
+    <CarrierId2 />
+    <PrintMark>Y</PrintMark>
+    <NPOBAN />
+    <RandomNumber>6670</RandomNumber>
+    <InvoiceItem>
+      <Description>油桐花2入響杯組</Description>
+      <Quantity>2.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>590</UnitPrice>
+      <Amount>1180.0000</Amount>
+      <SequenceNumber>1</SequenceNumber>
+      <Item>I1</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>TAIWAN中正紀念堂S</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>590</UnitPrice>
+      <Amount>590.0000</Amount>
+      <SequenceNumber>2</SequenceNumber>
+      <Item>I2</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>台灣地圖(白)8</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>590</UnitPrice>
+      <Amount>590.0000</Amount>
+      <SequenceNumber>3</SequenceNumber>
+      <Item>I3</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>台灣地圖(白)10</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>590</UnitPrice>
+      <Amount>590.0000</Amount>
+      <SequenceNumber>4</SequenceNumber>
+      <Item>I4</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>百年紀念大紅保溫瓶</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>480</UnitPrice>
+      <Amount>480.0000</Amount>
+      <SequenceNumber>5</SequenceNumber>
+      <Item>I5</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>總折讓</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>-190</UnitPrice>
+      <Amount>-190</Amount>
+      <SequenceNumber>999</SequenceNumber>
+      <Item>999</Item>
+      <Remark>總折讓</Remark>
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <SalesAmount>3086</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0.05</TaxRate>
+    <TaxAmount>154</TaxAmount>
+    <TotalAmount>3240</TotalAmount>
+    <DiscountAmount>0</DiscountAmount>
+  </Invoice>
+  <Invoice>
+    <InvoiceNumber>WK61500158</InvoiceNumber>
+    <InvoiceDate>2011/07/16</InvoiceDate>
+    <InvoiceTime>13:32:43</InvoiceTime>
+    <SellerId>26305533</SellerId>
+    <BuyerName />
+    <BuyerId />
+    <InvoiceType>03</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <CarrierType />
+    <CarrierId1 />
+    <CarrierId2 />
+    <PrintMark>Y</PrintMark>
+    <NPOBAN />
+    <RandomNumber>6787</RandomNumber>
+    <InvoiceItem>
+      <Description>枇杷喉爽-量販包</Description>
+      <Quantity>2.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>65</UnitPrice>
+      <Amount>130.0000</Amount>
+      <SequenceNumber>1</SequenceNumber>
+      <Item>I1</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>總折讓</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>0</UnitPrice>
+      <Amount>0</Amount>
+      <SequenceNumber>999</SequenceNumber>
+      <Item>999</Item>
+      <Remark>總折讓</Remark>
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <SalesAmount>124</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0.05</TaxRate>
+    <TaxAmount>6</TaxAmount>
+    <TotalAmount>130</TotalAmount>
+    <DiscountAmount>0</DiscountAmount>
+  </Invoice>
+  <Invoice>
+    <InvoiceNumber>WK61500159</InvoiceNumber>
+    <InvoiceDate>2011/07/16</InvoiceDate>
+    <InvoiceTime>13:34:17</InvoiceTime>
+    <SellerId>26305533</SellerId>
+    <BuyerName />
+    <BuyerId />
+    <InvoiceType>03</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <CarrierType />
+    <CarrierId1 />
+    <CarrierId2 />
+    <PrintMark>Y</PrintMark>
+    <NPOBAN />
+    <RandomNumber>6903</RandomNumber>
+    <InvoiceItem>
+      <Description>原住民娃娃鎖圈</Description>
+      <Quantity>2.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>60</UnitPrice>
+      <Amount>120.0000</Amount>
+      <SequenceNumber>1</SequenceNumber>
+      <Item>I1</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>單張明信片(40款)</Description>
+      <Quantity>10.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>20</UnitPrice>
+      <Amount>200.0000</Amount>
+      <SequenceNumber>2</SequenceNumber>
+      <Item>I2</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>總折讓</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>0</UnitPrice>
+      <Amount>0</Amount>
+      <SequenceNumber>999</SequenceNumber>
+      <Item>999</Item>
+      <Remark>總折讓</Remark>
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <SalesAmount>305</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0.05</TaxRate>
+    <TaxAmount>15</TaxAmount>
+    <TotalAmount>320</TotalAmount>
+    <DiscountAmount>0</DiscountAmount>
+  </Invoice>
+  <Invoice>
+    <InvoiceNumber>WK61500160</InvoiceNumber>
+    <InvoiceDate>2011/07/16</InvoiceDate>
+    <InvoiceTime>13:34:39</InvoiceTime>
+    <SellerId>26305533</SellerId>
+    <BuyerName />
+    <BuyerId />
+    <InvoiceType>03</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <CarrierType />
+    <CarrierId1 />
+    <CarrierId2 />
+    <PrintMark>Y</PrintMark>
+    <NPOBAN />
+    <RandomNumber>7020</RandomNumber>
+    <InvoiceItem>
+      <Description>單張明信片(40款)</Description>
+      <Quantity>3.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>20</UnitPrice>
+      <Amount>60.0000</Amount>
+      <SequenceNumber>1</SequenceNumber>
+      <Item>I1</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>總折讓</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>0</UnitPrice>
+      <Amount>0</Amount>
+      <SequenceNumber>999</SequenceNumber>
+      <Item>999</Item>
+      <Remark>總折讓</Remark>
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <SalesAmount>57</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0.05</TaxRate>
+    <TaxAmount>3</TaxAmount>
+    <TotalAmount>60</TotalAmount>
+    <DiscountAmount>0</DiscountAmount>
+  </Invoice>
+  <Invoice>
+    <InvoiceNumber>WK61500161</InvoiceNumber>
+    <InvoiceDate>2011/07/16</InvoiceDate>
+    <InvoiceTime>14:02:45</InvoiceTime>
+    <SellerId>26305533</SellerId>
+    <BuyerName />
+    <BuyerId />
+    <InvoiceType>03</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <CarrierType />
+    <CarrierId1 />
+    <CarrierId2 />
+    <PrintMark>Y</PrintMark>
+    <NPOBAN />
+    <RandomNumber>7137</RandomNumber>
+    <InvoiceItem>
+      <Description>花伴水果叉-綠</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>360</UnitPrice>
+      <Amount>360.0000</Amount>
+      <SequenceNumber>1</SequenceNumber>
+      <Item>I1</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>總折讓</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>0</UnitPrice>
+      <Amount>0</Amount>
+      <SequenceNumber>999</SequenceNumber>
+      <Item>999</Item>
+      <Remark>總折讓</Remark>
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <SalesAmount>343</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0.05</TaxRate>
+    <TaxAmount>17</TaxAmount>
+    <TotalAmount>360</TotalAmount>
+    <DiscountAmount>0</DiscountAmount>
+  </Invoice>
+  <Invoice>
+    <InvoiceNumber>WK61500162</InvoiceNumber>
+    <InvoiceDate>2011/07/16</InvoiceDate>
+    <InvoiceTime>14:20:35</InvoiceTime>
+    <SellerId>26305533</SellerId>
+    <BuyerName />
+    <BuyerId />
+    <InvoiceType>03</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <CarrierType />
+    <CarrierId1 />
+    <CarrierId2 />
+    <PrintMark>Y</PrintMark>
+    <NPOBAN />
+    <RandomNumber>7253</RandomNumber>
+    <InvoiceItem>
+      <Description>8入台灣風景套卡(大)</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>130</UnitPrice>
+      <Amount>130.0000</Amount>
+      <SequenceNumber>1</SequenceNumber>
+      <Item>I1</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>總折讓</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>0</UnitPrice>
+      <Amount>0</Amount>
+      <SequenceNumber>999</SequenceNumber>
+      <Item>999</Item>
+      <Remark>總折讓</Remark>
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <SalesAmount>124</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0.05</TaxRate>
+    <TaxAmount>6</TaxAmount>
+    <TotalAmount>130</TotalAmount>
+    <DiscountAmount>0</DiscountAmount>
+  </Invoice>
+  <Invoice>
+    <InvoiceNumber>WK61500163</InvoiceNumber>
+    <InvoiceDate>2011/07/16</InvoiceDate>
+    <InvoiceTime>15:38:36</InvoiceTime>
+    <SellerId>26305533</SellerId>
+    <BuyerName />
+    <BuyerId />
+    <InvoiceType>03</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <CarrierType />
+    <CarrierId1 />
+    <CarrierId2 />
+    <PrintMark>Y</PrintMark>
+    <NPOBAN />
+    <RandomNumber>7370</RandomNumber>
+    <InvoiceItem>
+      <Description>建國百年紀念國旗圍巾</Description>
+      <Quantity>2.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>390</UnitPrice>
+      <Amount>780.0000</Amount>
+      <SequenceNumber>1</SequenceNumber>
+      <Item>I1</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>總折讓</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>-180</UnitPrice>
+      <Amount>-180</Amount>
+      <SequenceNumber>999</SequenceNumber>
+      <Item>999</Item>
+      <Remark>總折讓</Remark>
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <SalesAmount>571</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0.05</TaxRate>
+    <TaxAmount>29</TaxAmount>
+    <TotalAmount>600</TotalAmount>
+    <DiscountAmount>0</DiscountAmount>
+  </Invoice>
+  <Invoice>
+    <InvoiceNumber>WK61500164</InvoiceNumber>
+    <InvoiceDate>2011/07/16</InvoiceDate>
+    <InvoiceTime>15:45:55</InvoiceTime>
+    <SellerId>26305533</SellerId>
+    <BuyerName />
+    <BuyerId />
+    <InvoiceType>03</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <CarrierType />
+    <CarrierId1 />
+    <CarrierId2 />
+    <PrintMark>Y</PrintMark>
+    <NPOBAN />
+    <RandomNumber>7487</RandomNumber>
+    <InvoiceItem>
+      <Description>吃果籽荔枝布丁</Description>
+      <Quantity>3.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>99</UnitPrice>
+      <Amount>297.0000</Amount>
+      <SequenceNumber>1</SequenceNumber>
+      <Item>I1</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>吃果籽芒果布丁</Description>
+      <Quantity>2.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>99</UnitPrice>
+      <Amount>198.0000</Amount>
+      <SequenceNumber>2</SequenceNumber>
+      <Item>I2</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>總折讓</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>0</UnitPrice>
+      <Amount>0</Amount>
+      <SequenceNumber>999</SequenceNumber>
+      <Item>999</Item>
+      <Remark>總折讓</Remark>
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <SalesAmount>471</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0.05</TaxRate>
+    <TaxAmount>24</TaxAmount>
+    <TotalAmount>495</TotalAmount>
+    <DiscountAmount>0</DiscountAmount>
+  </Invoice>
+  <Invoice>
+    <InvoiceNumber>WK61500165</InvoiceNumber>
+    <InvoiceDate>2011/07/16</InvoiceDate>
+    <InvoiceTime>17:39:00</InvoiceTime>
+    <SellerId>26305533</SellerId>
+    <BuyerName />
+    <BuyerId />
+    <InvoiceType>03</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <CarrierType />
+    <CarrierId1 />
+    <CarrierId2 />
+    <PrintMark>Y</PrintMark>
+    <NPOBAN />
+    <RandomNumber>7603</RandomNumber>
+    <InvoiceItem>
+      <Description>木頭明信片-台灣風景區</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>70</UnitPrice>
+      <Amount>70.0000</Amount>
+      <SequenceNumber>1</SequenceNumber>
+      <Item>I1</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>總折讓</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>0</UnitPrice>
+      <Amount>0</Amount>
+      <SequenceNumber>999</SequenceNumber>
+      <Item>999</Item>
+      <Remark>總折讓</Remark>
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <SalesAmount>67</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0.05</TaxRate>
+    <TaxAmount>3</TaxAmount>
+    <TotalAmount>70</TotalAmount>
+    <DiscountAmount>0</DiscountAmount>
+  </Invoice>
+  <Invoice>
+    <InvoiceNumber>WK61500166</InvoiceNumber>
+    <InvoiceDate>2011/07/16</InvoiceDate>
+    <InvoiceTime>19:02:20</InvoiceTime>
+    <SellerId>26305533</SellerId>
+    <BuyerName />
+    <BuyerId />
+    <InvoiceType>03</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <CarrierType />
+    <CarrierId1 />
+    <CarrierId2 />
+    <PrintMark>Y</PrintMark>
+    <NPOBAN />
+    <RandomNumber>7720</RandomNumber>
+    <InvoiceItem>
+      <Description>我愛台北-有緣相逢(黑)S</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>590</UnitPrice>
+      <Amount>590.0000</Amount>
+      <SequenceNumber>1</SequenceNumber>
+      <Item>I1</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>台灣地圖(白)S</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>590</UnitPrice>
+      <Amount>590.0000</Amount>
+      <SequenceNumber>2</SequenceNumber>
+      <Item>I2</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>總折讓</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>-190</UnitPrice>
+      <Amount>-190</Amount>
+      <SequenceNumber>999</SequenceNumber>
+      <Item>999</Item>
+      <Remark>總折讓</Remark>
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <SalesAmount>943</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0.05</TaxRate>
+    <TaxAmount>47</TaxAmount>
+    <TotalAmount>990</TotalAmount>
+    <DiscountAmount>0</DiscountAmount>
+  </Invoice>
+  <Invoice>
+    <InvoiceNumber>WK61500167</InvoiceNumber>
+    <InvoiceDate>2011/07/17</InvoiceDate>
+    <InvoiceTime>13:47:15</InvoiceTime>
+    <SellerId>26305533</SellerId>
+    <BuyerName />
+    <BuyerId />
+    <InvoiceType>03</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <CarrierType />
+    <CarrierId1 />
+    <CarrierId2 />
+    <PrintMark>Y</PrintMark>
+    <NPOBAN />
+    <RandomNumber>7837</RandomNumber>
+    <InvoiceItem>
+      <Description>貓熊造型吊繩-白</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>190</UnitPrice>
+      <Amount>190.0000</Amount>
+      <SequenceNumber>1</SequenceNumber>
+      <Item>I1</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>忍者造型吊繩-黑</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>190</UnitPrice>
+      <Amount>190.0000</Amount>
+      <SequenceNumber>2</SequenceNumber>
+      <Item>I2</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>建國100拼圖鑰匙圈-賞梅花</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>180</UnitPrice>
+      <Amount>180.0000</Amount>
+      <SequenceNumber>3</SequenceNumber>
+      <Item>I3</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>總折讓</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>0</UnitPrice>
+      <Amount>0</Amount>
+      <SequenceNumber>999</SequenceNumber>
+      <Item>999</Item>
+      <Remark>總折讓</Remark>
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <SalesAmount>533</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0.05</TaxRate>
+    <TaxAmount>27</TaxAmount>
+    <TotalAmount>560</TotalAmount>
+    <DiscountAmount>0</DiscountAmount>
+  </Invoice>
+  <Invoice>
+    <InvoiceNumber>WK61500168</InvoiceNumber>
+    <InvoiceDate>2011/07/17</InvoiceDate>
+    <InvoiceTime>13:57:47</InvoiceTime>
+    <SellerId>26305533</SellerId>
+    <BuyerName />
+    <BuyerId />
+    <InvoiceType>03</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <CarrierType />
+    <CarrierId1 />
+    <CarrierId2 />
+    <PrintMark>Y</PrintMark>
+    <NPOBAN />
+    <RandomNumber>7953</RandomNumber>
+    <InvoiceItem>
+      <Description>懷舊筆記本-漫畫人物</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>60</UnitPrice>
+      <Amount>60.0000</Amount>
+      <SequenceNumber>1</SequenceNumber>
+      <Item>I1</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>總折讓</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>0</UnitPrice>
+      <Amount>0</Amount>
+      <SequenceNumber>999</SequenceNumber>
+      <Item>999</Item>
+      <Remark>總折讓</Remark>
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <SalesAmount>57</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0.05</TaxRate>
+    <TaxAmount>3</TaxAmount>
+    <TotalAmount>60</TotalAmount>
+    <DiscountAmount>0</DiscountAmount>
+  </Invoice>
+  <Invoice>
+    <InvoiceNumber>WK61500169</InvoiceNumber>
+    <InvoiceDate>2011/07/17</InvoiceDate>
+    <InvoiceTime>15:28:01</InvoiceTime>
+    <SellerId>26305533</SellerId>
+    <BuyerName />
+    <BuyerId />
+    <InvoiceType>03</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <CarrierType />
+    <CarrierId1 />
+    <CarrierId2 />
+    <PrintMark>Y</PrintMark>
+    <NPOBAN />
+    <RandomNumber>8070</RandomNumber>
+    <InvoiceItem>
+      <Description>原住民娃娃鎖圈</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>60</UnitPrice>
+      <Amount>60.0000</Amount>
+      <SequenceNumber>1</SequenceNumber>
+      <Item>I1</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>總折讓</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>0</UnitPrice>
+      <Amount>0</Amount>
+      <SequenceNumber>999</SequenceNumber>
+      <Item>999</Item>
+      <Remark>總折讓</Remark>
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <SalesAmount>57</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0.05</TaxRate>
+    <TaxAmount>3</TaxAmount>
+    <TotalAmount>60</TotalAmount>
+    <DiscountAmount>0</DiscountAmount>
+  </Invoice>
+  <Invoice>
+    <InvoiceNumber>WK61500170</InvoiceNumber>
+    <InvoiceDate>2011/07/17</InvoiceDate>
+    <InvoiceTime>16:54:32</InvoiceTime>
+    <SellerId>26305533</SellerId>
+    <BuyerName />
+    <BuyerId />
+    <InvoiceType>03</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <CarrierType />
+    <CarrierId1 />
+    <CarrierId2 />
+    <PrintMark>Y</PrintMark>
+    <NPOBAN />
+    <RandomNumber>8187</RandomNumber>
+    <InvoiceItem>
+      <Description>單張明信片(40款)</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>20</UnitPrice>
+      <Amount>20.0000</Amount>
+      <SequenceNumber>2</SequenceNumber>
+      <Item>I2</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>懷舊明信片</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>30</UnitPrice>
+      <Amount>30.0000</Amount>
+      <SequenceNumber>3</SequenceNumber>
+      <Item>I3</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>懷舊筆記本-台灣地圖</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>60</UnitPrice>
+      <Amount>60.0000</Amount>
+      <SequenceNumber>4</SequenceNumber>
+      <Item>I4</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>總折讓</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>0</UnitPrice>
+      <Amount>0</Amount>
+      <SequenceNumber>999</SequenceNumber>
+      <Item>999</Item>
+      <Remark>總折讓</Remark>
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <SalesAmount>105</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0.05</TaxRate>
+    <TaxAmount>5</TaxAmount>
+    <TotalAmount>110</TotalAmount>
+    <DiscountAmount>0</DiscountAmount>
+  </Invoice>
+  <Invoice>
+    <InvoiceNumber>WK61500171</InvoiceNumber>
+    <InvoiceDate>2011/07/17</InvoiceDate>
+    <InvoiceTime>16:55:39</InvoiceTime>
+    <SellerId>26305533</SellerId>
+    <BuyerName />
+    <BuyerId />
+    <InvoiceType>03</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <CarrierType />
+    <CarrierId1 />
+    <CarrierId2 />
+    <PrintMark>Y</PrintMark>
+    <NPOBAN />
+    <RandomNumber>8303</RandomNumber>
+    <InvoiceItem>
+      <Description>磁鐵開瓶器-詠春</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>99</UnitPrice>
+      <Amount>99.0000</Amount>
+      <SequenceNumber>1</SequenceNumber>
+      <Item>I1</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>總折讓</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>0</UnitPrice>
+      <Amount>0</Amount>
+      <SequenceNumber>999</SequenceNumber>
+      <Item>999</Item>
+      <Remark>總折讓</Remark>
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <SalesAmount>94</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0.05</TaxRate>
+    <TaxAmount>5</TaxAmount>
+    <TotalAmount>99</TotalAmount>
+    <DiscountAmount>0</DiscountAmount>
+  </Invoice>
+  <Invoice>
+    <InvoiceNumber>WK61500172</InvoiceNumber>
+    <InvoiceDate>2011/07/17</InvoiceDate>
+    <InvoiceTime>16:56:04</InvoiceTime>
+    <SellerId>26305533</SellerId>
+    <BuyerName />
+    <BuyerId />
+    <InvoiceType>03</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <CarrierType />
+    <CarrierId1 />
+    <CarrierId2 />
+    <PrintMark>Y</PrintMark>
+    <NPOBAN />
+    <RandomNumber>8420</RandomNumber>
+    <InvoiceItem>
+      <Description>磁鐵開瓶器-詠春</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>99</UnitPrice>
+      <Amount>99.0000</Amount>
+      <SequenceNumber>1</SequenceNumber>
+      <Item>I1</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>總折讓</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>0</UnitPrice>
+      <Amount>0</Amount>
+      <SequenceNumber>999</SequenceNumber>
+      <Item>999</Item>
+      <Remark>總折讓</Remark>
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <SalesAmount>94</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0.05</TaxRate>
+    <TaxAmount>5</TaxAmount>
+    <TotalAmount>99</TotalAmount>
+    <DiscountAmount>0</DiscountAmount>
+  </Invoice>
+  <Invoice>
+    <InvoiceNumber>WK61500173</InvoiceNumber>
+    <InvoiceDate>2011/07/17</InvoiceDate>
+    <InvoiceTime>17:35:28</InvoiceTime>
+    <SellerId>26305533</SellerId>
+    <BuyerName />
+    <BuyerId />
+    <InvoiceType>03</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <CarrierType />
+    <CarrierId1 />
+    <CarrierId2 />
+    <PrintMark>Y</PrintMark>
+    <NPOBAN />
+    <RandomNumber>8537</RandomNumber>
+    <InvoiceItem>
+      <Description>蔣公6入軟木杯墊</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>280</UnitPrice>
+      <Amount>280.0000</Amount>
+      <SequenceNumber>1</SequenceNumber>
+      <Item>I1</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>總折讓</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>0</UnitPrice>
+      <Amount>0</Amount>
+      <SequenceNumber>999</SequenceNumber>
+      <Item>999</Item>
+      <Remark>總折讓</Remark>
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <SalesAmount>267</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0.05</TaxRate>
+    <TaxAmount>13</TaxAmount>
+    <TotalAmount>280</TotalAmount>
+    <DiscountAmount>0</DiscountAmount>
+  </Invoice>
+  <Invoice>
+    <InvoiceNumber>WK61500174</InvoiceNumber>
+    <InvoiceDate>2011/07/17</InvoiceDate>
+    <InvoiceTime>18:02:30</InvoiceTime>
+    <SellerId>26305533</SellerId>
+    <BuyerName />
+    <BuyerId />
+    <InvoiceType>03</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <CarrierType />
+    <CarrierId1 />
+    <CarrierId2 />
+    <PrintMark>Y</PrintMark>
+    <NPOBAN />
+    <RandomNumber>8653</RandomNumber>
+    <InvoiceItem>
+      <Description>貓頭鷹造型吊繩-灰</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>190</UnitPrice>
+      <Amount>190.0000</Amount>
+      <SequenceNumber>1</SequenceNumber>
+      <Item>I1</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>總折讓</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>-19</UnitPrice>
+      <Amount>-19</Amount>
+      <SequenceNumber>999</SequenceNumber>
+      <Item>999</Item>
+      <Remark>總折讓</Remark>
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <SalesAmount>163</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0.05</TaxRate>
+    <TaxAmount>8</TaxAmount>
+    <TotalAmount>171</TotalAmount>
+    <DiscountAmount>0</DiscountAmount>
+  </Invoice>
+  <Invoice>
+    <InvoiceNumber>WK61500175</InvoiceNumber>
+    <InvoiceDate>2011/07/17</InvoiceDate>
+    <InvoiceTime>20:14:49</InvoiceTime>
+    <SellerId>26305533</SellerId>
+    <BuyerName />
+    <BuyerId />
+    <InvoiceType>03</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <CarrierType />
+    <CarrierId1 />
+    <CarrierId2 />
+    <PrintMark>Y</PrintMark>
+    <NPOBAN />
+    <RandomNumber>8770</RandomNumber>
+    <InvoiceItem>
+      <Description>金愛台灣鎖圈-台北</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>399</UnitPrice>
+      <Amount>399.0000</Amount>
+      <SequenceNumber>1</SequenceNumber>
+      <Item>I1</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>總折讓</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>0</UnitPrice>
+      <Amount>0</Amount>
+      <SequenceNumber>999</SequenceNumber>
+      <Item>999</Item>
+      <Remark>總折讓</Remark>
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <SalesAmount>380</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0.05</TaxRate>
+    <TaxAmount>19</TaxAmount>
+    <TotalAmount>399</TotalAmount>
+    <DiscountAmount>0</DiscountAmount>
+  </Invoice>
+  <Invoice>
+    <InvoiceNumber>WK61500176</InvoiceNumber>
+    <InvoiceDate>2011/07/17</InvoiceDate>
+    <InvoiceTime>20:26:15</InvoiceTime>
+    <SellerId>26305533</SellerId>
+    <BuyerName />
+    <BuyerId />
+    <InvoiceType>03</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <CarrierType />
+    <CarrierId1 />
+    <CarrierId2 />
+    <PrintMark>Y</PrintMark>
+    <NPOBAN />
+    <RandomNumber>8887</RandomNumber>
+    <InvoiceItem>
+      <Description>單張明信片(40款)</Description>
+      <Quantity>6.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>20</UnitPrice>
+      <Amount>120.0000</Amount>
+      <SequenceNumber>1</SequenceNumber>
+      <Item>I1</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>總折讓</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>0</UnitPrice>
+      <Amount>0</Amount>
+      <SequenceNumber>999</SequenceNumber>
+      <Item>999</Item>
+      <Remark>總折讓</Remark>
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <SalesAmount>114</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0.05</TaxRate>
+    <TaxAmount>6</TaxAmount>
+    <TotalAmount>120</TotalAmount>
+    <DiscountAmount>0</DiscountAmount>
+  </Invoice>
+  <Invoice>
+    <InvoiceNumber>WK61500177</InvoiceNumber>
+    <InvoiceDate>2011/07/18</InvoiceDate>
+    <InvoiceTime>12:04:25</InvoiceTime>
+    <SellerId>26305533</SellerId>
+    <BuyerName />
+    <BuyerId />
+    <InvoiceType>03</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <CarrierType />
+    <CarrierId1 />
+    <CarrierId2 />
+    <PrintMark>Y</PrintMark>
+    <NPOBAN />
+    <RandomNumber>9003</RandomNumber>
+    <InvoiceItem>
+      <Description>紅花5入響杯組</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>1200</UnitPrice>
+      <Amount>1200.0000</Amount>
+      <SequenceNumber>1</SequenceNumber>
+      <Item>I1</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>懷舊明信片</Description>
+      <Quantity>3.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>30</UnitPrice>
+      <Amount>90.0000</Amount>
+      <SequenceNumber>2</SequenceNumber>
+      <Item>I2</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>花漾吸水杯墊(12款)</Description>
+      <Quantity>2.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>190</UnitPrice>
+      <Amount>380.0000</Amount>
+      <SequenceNumber>3</SequenceNumber>
+      <Item>I3</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>蔣介石秘史</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>299</UnitPrice>
+      <Amount>299.0000</Amount>
+      <SequenceNumber>4</SequenceNumber>
+      <Item>I4</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>總折讓</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>0</UnitPrice>
+      <Amount>0</Amount>
+      <SequenceNumber>999</SequenceNumber>
+      <Item>999</Item>
+      <Remark>總折讓</Remark>
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <SalesAmount>1875</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0.05</TaxRate>
+    <TaxAmount>94</TaxAmount>
+    <TotalAmount>1969</TotalAmount>
+    <DiscountAmount>0</DiscountAmount>
+  </Invoice>
+  <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+    <SignedInfo>
+      <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" />
+      <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" />
+      <Reference URI="">
+        <Transforms>
+          <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" />
+        </Transforms>
+        <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <DigestValue>N9o9lEnqBt/cjN523ntrjOFIQ64=</DigestValue>
+      </Reference>
+    </SignedInfo>
+    <SignatureValue>PUqvhUn5fKYIBSD4uhTNM6H+i70mJk7ohJHLhZlcGIdzZNsg71HAEtwRQpVzi9ozVR5FG0P7qJqhTFL6vIOTOrg8j/km/4HJDpyw532j8DqtfF444qp2baNe569SzxzkzLaTLO6SvjPrp1Stf/IwDbMEXMQQQm8ZW6vIObL6y00=</SignatureValue>
+    <KeyInfo>
+      <X509Data>
+        <X509Certificate>MIIESTCCAzGgAwIBAgIKWfWX8gAAAAABgDANBgkqhkiG9w0BAQUFADAjMSEwHwYDVQQDExhVWEIyQiBDZXJ0aWZpY2F0ZSBDZW50ZXIwHhcNMTEwNTI3MDI1MDIyWhcNMjEwNTI3MDMwMDIyWjCBjTELMAkGA1UEBhMCVFcxDzANBgNVBAgTBlRhaXdhbjEPMA0GA1UEBxMGVGFpcGVpMScwJQYDVQQKDB7lj5bntZXmnKrkvoblr6bmpa3mnInpmZDlhazlj7gxETAPBgNVBAMTCDI2MzA1NTMzMSAwHgYJKoZIhvcNAQkBFhFtb25pY2FAamRnLmNvbS50dzCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA28XClMYBEJzqBFzinSP7SqfUUwwONqP+38sHupd8hMLpoSFazoSUJI0VKhYD//EXXJ67LmeyTups0SmnQei9DpWpMMgWmPti924qEndOgoxkG9pqZ3mTA1MzFEz8ZTLQmEQWAPX0F5/B/ys/i5/R7rprCk6yaLuHHk+sB0eLKG0CAwEAAaOCAZYwggGSMA4GA1UdDwEB/wQEAwIE8DATBgNVHSUEDDAKBggrBgEFBQcDAjAdBgNVHQ4EFgQU0FFa5GDUWuXjhXeWRHahE9AuiKgwHwYDVR0jBBgwFoAUlbMoBgQsg/0edCxDQbn5h5tgoC8wgYEGA1UdHwR6MHgwdqB0oHKGOGh0dHA6Ly9zc2xjYS9DZXJ0RW5yb2xsL1VYQjJCJTIwQ2VydGlmaWNhdGUlMjBDZW50ZXIuY3JshjZmaWxlOi8vXFxTU0xDQVxDZXJ0RW5yb2xsXFVYQjJCIENlcnRpZmljYXRlIENlbnRlci5jcmwwgaYGCCsGAQUFBwEBBIGZMIGWMEoGCCsGAQUFBzAChj5odHRwOi8vc3NsY2EvQ2VydEVucm9sbC9TU0xDQV9VWEIyQiUyMENlcnRpZmljYXRlJTIwQ2VudGVyLmNydDBIBggrBgEFBQcwAoY8ZmlsZTovL1xcU1NMQ0FcQ2VydEVucm9sbFxTU0xDQV9VWEIyQiBDZXJ0aWZpY2F0ZSBDZW50ZXIuY3J0MA0GCSqGSIb3DQEBBQUAA4IBAQBuQSlgHsTzKX4JSgJnxQnaoiMpa0ttgCugsog2k5skf7rUkjKQdZgl3NOgiFvPUDQ2UdpRubmSpFMHBMPOJWCBNTX+W7TQ2IsPG7+JDrZ+FmwRnQEvi696eCnqdjthXIdetG7Z9E4kAPEspQag/OgPpI5L4XwWin8wmqGjIHAL+jMbqKwYS21LiLVc9zlbkbISPhoy2Q+6bg3IC3dP5Yi3oBiudaIYMUCN9NZbTDlj4izB5bgDKu74jSH+ZJj7blORy+XlmZ8U1363IaV1UQnuPjJm2CGo8AT7inmV6zd4Y2ygf03bIUlLn55YnXdPCD+IcU6qF3WxGHk6MRPifFhr</X509Certificate>
+      </X509Data>
+    </KeyInfo>
+  </Signature>
+</InvoiceRoot>

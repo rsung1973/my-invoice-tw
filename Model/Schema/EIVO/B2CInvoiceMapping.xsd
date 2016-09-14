@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="InvoiceMapRoot">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="InvoiceMap" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="DataNumber" type="xs:string" />
+                            <xs:element name="InvoiceNumber" type="xs:string" />
+                            <xs:element name="InvoiceDate" type="xs:string" />
+                            <xs:element name="InvoiceTime" type="xs:string" />
+                            <xs:element name="SellerId" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

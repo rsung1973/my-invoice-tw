@@ -1,0 +1,2588 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.uxb2b.com/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.uxb2b.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.uxb2b.com/">
+      <s:element name="UploadInvoice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uploadData">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadInvoiceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadInvoiceResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadAllowance">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uploadData">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadAllowanceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadAllowanceResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadB1401">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uploadData">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadB1401Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadB1401Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadB0401">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uploadData">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadB0401Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadB0401Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadInvoiceAutoTrackNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uploadData">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadInvoiceAutoTrackNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadInvoiceAutoTrackNoResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadInvoiceCmsCSVAutoTrackNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uploadData" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadInvoiceCmsCSVAutoTrackNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadInvoiceCmsCSVAutoTrackNoResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadInvoiceCancellationCmsCSV">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uploadData" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadInvoiceCancellationCmsCSVResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadInvoiceCancellationCmsCSVResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadInvoiceCancellation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uploadData">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadInvoiceCancellationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadInvoiceCancellationResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadAllowanceCancellation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uploadData">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadAllowanceCancellationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadAllowanceCancellationResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadB0501">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uploadData">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadB0501Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadB0501Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUpdatedWelfareAgenciesInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sellerReceiptNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUpdatedWelfareAgenciesInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUpdatedWelfareAgenciesInfoResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWelfareAgenciesInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sellerReceiptNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWelfareAgenciesInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWelfareAgenciesInfoResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIncomingInvoices">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sellerInfo">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIncomingInvoicesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetIncomingInvoicesResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInvoicesMap">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sellerInfo">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInvoicesMapResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetInvoicesMapResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIncomingInvoiceCancellations">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sellerInfo">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIncomingInvoiceCancellationsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetIncomingInvoiceCancellationsResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIncomingAllowances">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sellerInfo">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIncomingAllowancesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetIncomingAllowancesResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIncomingAllowanceCancellations">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sellerInfo">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIncomingAllowanceCancellationsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetIncomingAllowanceCancellationsResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AcknowledgeLivingReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sellerInfo">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AcknowledgeLivingReportResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetIncomingWinningInvoices">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sellerInfo">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIncomingWinningInvoicesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetIncomingWinningInvoicesResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSignerCertificateContent">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="activationKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSignerCertificateContentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSignerCertificateContentResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRegisteredMember">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sellerInfo">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRegisteredMemberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRegisteredMemberResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadA1101">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uploadData">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadA1101Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadA1101Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadA1401">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uploadData">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadA1401Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadA1401Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadA0401">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uploadData">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadA0401Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadA0401Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadB1101">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uploadData">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadB1101Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadB1101Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadA0201">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uploadData">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadA0201Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadA0201Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadA0501">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uploadData">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadA0501Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadA0501Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadB0201">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uploadData">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadB0201Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadB0201Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="B2CUploadInvoice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uploadData">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="B2CUploadInvoiceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="B2CUploadInvoiceResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="B2CUploadInvoiceCancellation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uploadData">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="B2CUploadInvoiceCancellationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="B2CUploadInvoiceCancellationResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NotifyCounterpartBusiness">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uploadData">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NotifyCounterpartBusinessResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ReceiveContentAsPDF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sellerInfo">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="clientID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceiveContentAsPDFResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReceiveContentAsPDFResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DeleteTempForReceivePDF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sellerInfo">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="PdfFile" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteTempForReceivePDFResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteTempForReceivePDFResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInvoiceMailTracking">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sellerInfo">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="clientID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInvoiceMailTrackingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetInvoiceMailTrackingResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInvoiceReturnedMail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sellerInfo">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="clientID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInvoiceReturnedMailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetInvoiceReturnedMailResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadInvoiceAutoTrackNoByClient">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uploadData">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="clientID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadInvoiceAutoTrackNoByClientResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadInvoiceAutoTrackNoByClientResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadInvoiceAutoTrackNoV2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uploadData">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadInvoiceAutoTrackNoV2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadInvoiceAutoTrackNoV2Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadInvoiceCancellationV2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uploadData">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadInvoiceCancellationV2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadInvoiceCancellationV2Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadAllowanceV2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uploadData">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadAllowanceV2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadAllowanceV2Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadAllowanceCancellationV2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uploadData">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadAllowanceCancellationV2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadAllowanceCancellationV2Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadInvoiceV2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uploadData">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadInvoiceV2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadInvoiceV2Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadInvoiceCmsCSVAutoTrackNoV2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uploadData" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadInvoiceCmsCSVAutoTrackNoV2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadInvoiceCmsCSVAutoTrackNoV2Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadBranchTrack">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uploadData">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadBranchTrackResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadBranchTrackResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadInvoiceV2_C0401">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uploadData">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadInvoiceV2_C0401Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadInvoiceV2_C0401Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadInvoiceCancellationV2_C0501">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uploadData">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadInvoiceCancellationV2_C0501Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadInvoiceCancellationV2_C0501Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadInvoiceEnterprise">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uploadData">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadInvoiceEnterpriseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadInvoiceEnterpriseResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCurrentYearInvoiceTrackCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sellerInfo">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCurrentYearInvoiceTrackCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCurrentYearInvoiceTrackCodeResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerIdListByAgent">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sellerInfo">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerIdListByAgentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCustomerIdListByAgentResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVacantInvoiceNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sellerInfo">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="receiptNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVacantInvoiceNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetVacantInvoiceNoResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="UploadInvoiceSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadInvoice" />
+  </wsdl:message>
+  <wsdl:message name="UploadInvoiceSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadInvoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadAllowanceSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadAllowance" />
+  </wsdl:message>
+  <wsdl:message name="UploadAllowanceSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadAllowanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadB1401SoapIn">
+    <wsdl:part name="parameters" element="tns:UploadB1401" />
+  </wsdl:message>
+  <wsdl:message name="UploadB1401SoapOut">
+    <wsdl:part name="parameters" element="tns:UploadB1401Response" />
+  </wsdl:message>
+  <wsdl:message name="UploadB0401SoapIn">
+    <wsdl:part name="parameters" element="tns:UploadB0401" />
+  </wsdl:message>
+  <wsdl:message name="UploadB0401SoapOut">
+    <wsdl:part name="parameters" element="tns:UploadB0401Response" />
+  </wsdl:message>
+  <wsdl:message name="UploadInvoiceAutoTrackNoSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadInvoiceAutoTrackNo" />
+  </wsdl:message>
+  <wsdl:message name="UploadInvoiceAutoTrackNoSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadInvoiceAutoTrackNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadInvoiceCmsCSVAutoTrackNoSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadInvoiceCmsCSVAutoTrackNo" />
+  </wsdl:message>
+  <wsdl:message name="UploadInvoiceCmsCSVAutoTrackNoSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadInvoiceCmsCSVAutoTrackNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadInvoiceCancellationCmsCSVSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadInvoiceCancellationCmsCSV" />
+  </wsdl:message>
+  <wsdl:message name="UploadInvoiceCancellationCmsCSVSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadInvoiceCancellationCmsCSVResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadInvoiceCancellationSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadInvoiceCancellation" />
+  </wsdl:message>
+  <wsdl:message name="UploadInvoiceCancellationSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadInvoiceCancellationResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadAllowanceCancellationSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadAllowanceCancellation" />
+  </wsdl:message>
+  <wsdl:message name="UploadAllowanceCancellationSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadAllowanceCancellationResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadB0501SoapIn">
+    <wsdl:part name="parameters" element="tns:UploadB0501" />
+  </wsdl:message>
+  <wsdl:message name="UploadB0501SoapOut">
+    <wsdl:part name="parameters" element="tns:UploadB0501Response" />
+  </wsdl:message>
+  <wsdl:message name="GetUpdatedWelfareAgenciesInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUpdatedWelfareAgenciesInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetUpdatedWelfareAgenciesInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUpdatedWelfareAgenciesInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWelfareAgenciesInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWelfareAgenciesInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetWelfareAgenciesInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWelfareAgenciesInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetIncomingInvoicesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetIncomingInvoices" />
+  </wsdl:message>
+  <wsdl:message name="GetIncomingInvoicesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetIncomingInvoicesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInvoicesMapSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInvoicesMap" />
+  </wsdl:message>
+  <wsdl:message name="GetInvoicesMapSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInvoicesMapResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetIncomingInvoiceCancellationsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetIncomingInvoiceCancellations" />
+  </wsdl:message>
+  <wsdl:message name="GetIncomingInvoiceCancellationsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetIncomingInvoiceCancellationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetIncomingAllowancesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetIncomingAllowances" />
+  </wsdl:message>
+  <wsdl:message name="GetIncomingAllowancesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetIncomingAllowancesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetIncomingAllowanceCancellationsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetIncomingAllowanceCancellations" />
+  </wsdl:message>
+  <wsdl:message name="GetIncomingAllowanceCancellationsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetIncomingAllowanceCancellationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcknowledgeLivingReportSoapIn">
+    <wsdl:part name="parameters" element="tns:AcknowledgeLivingReport" />
+  </wsdl:message>
+  <wsdl:message name="AcknowledgeLivingReportSoapOut">
+    <wsdl:part name="parameters" element="tns:AcknowledgeLivingReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetIncomingWinningInvoicesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetIncomingWinningInvoices" />
+  </wsdl:message>
+  <wsdl:message name="GetIncomingWinningInvoicesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetIncomingWinningInvoicesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSignerCertificateContentSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSignerCertificateContent" />
+  </wsdl:message>
+  <wsdl:message name="GetSignerCertificateContentSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSignerCertificateContentResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRegisteredMemberSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRegisteredMember" />
+  </wsdl:message>
+  <wsdl:message name="GetRegisteredMemberSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRegisteredMemberResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadA1101SoapIn">
+    <wsdl:part name="parameters" element="tns:UploadA1101" />
+  </wsdl:message>
+  <wsdl:message name="UploadA1101SoapOut">
+    <wsdl:part name="parameters" element="tns:UploadA1101Response" />
+  </wsdl:message>
+  <wsdl:message name="UploadA1401SoapIn">
+    <wsdl:part name="parameters" element="tns:UploadA1401" />
+  </wsdl:message>
+  <wsdl:message name="UploadA1401SoapOut">
+    <wsdl:part name="parameters" element="tns:UploadA1401Response" />
+  </wsdl:message>
+  <wsdl:message name="UploadA0401SoapIn">
+    <wsdl:part name="parameters" element="tns:UploadA0401" />
+  </wsdl:message>
+  <wsdl:message name="UploadA0401SoapOut">
+    <wsdl:part name="parameters" element="tns:UploadA0401Response" />
+  </wsdl:message>
+  <wsdl:message name="UploadB1101SoapIn">
+    <wsdl:part name="parameters" element="tns:UploadB1101" />
+  </wsdl:message>
+  <wsdl:message name="UploadB1101SoapOut">
+    <wsdl:part name="parameters" element="tns:UploadB1101Response" />
+  </wsdl:message>
+  <wsdl:message name="UploadA0201SoapIn">
+    <wsdl:part name="parameters" element="tns:UploadA0201" />
+  </wsdl:message>
+  <wsdl:message name="UploadA0201SoapOut">
+    <wsdl:part name="parameters" element="tns:UploadA0201Response" />
+  </wsdl:message>
+  <wsdl:message name="UploadA0501SoapIn">
+    <wsdl:part name="parameters" element="tns:UploadA0501" />
+  </wsdl:message>
+  <wsdl:message name="UploadA0501SoapOut">
+    <wsdl:part name="parameters" element="tns:UploadA0501Response" />
+  </wsdl:message>
+  <wsdl:message name="UploadB0201SoapIn">
+    <wsdl:part name="parameters" element="tns:UploadB0201" />
+  </wsdl:message>
+  <wsdl:message name="UploadB0201SoapOut">
+    <wsdl:part name="parameters" element="tns:UploadB0201Response" />
+  </wsdl:message>
+  <wsdl:message name="B2CUploadInvoiceSoapIn">
+    <wsdl:part name="parameters" element="tns:B2CUploadInvoice" />
+  </wsdl:message>
+  <wsdl:message name="B2CUploadInvoiceSoapOut">
+    <wsdl:part name="parameters" element="tns:B2CUploadInvoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="B2CUploadInvoiceCancellationSoapIn">
+    <wsdl:part name="parameters" element="tns:B2CUploadInvoiceCancellation" />
+  </wsdl:message>
+  <wsdl:message name="B2CUploadInvoiceCancellationSoapOut">
+    <wsdl:part name="parameters" element="tns:B2CUploadInvoiceCancellationResponse" />
+  </wsdl:message>
+  <wsdl:message name="NotifyCounterpartBusinessSoapIn">
+    <wsdl:part name="parameters" element="tns:NotifyCounterpartBusiness" />
+  </wsdl:message>
+  <wsdl:message name="NotifyCounterpartBusinessSoapOut">
+    <wsdl:part name="parameters" element="tns:NotifyCounterpartBusinessResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReceiveContentAsPDFSoapIn">
+    <wsdl:part name="parameters" element="tns:ReceiveContentAsPDF" />
+  </wsdl:message>
+  <wsdl:message name="ReceiveContentAsPDFSoapOut">
+    <wsdl:part name="parameters" element="tns:ReceiveContentAsPDFResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteTempForReceivePDFSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteTempForReceivePDF" />
+  </wsdl:message>
+  <wsdl:message name="DeleteTempForReceivePDFSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteTempForReceivePDFResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInvoiceMailTrackingSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInvoiceMailTracking" />
+  </wsdl:message>
+  <wsdl:message name="GetInvoiceMailTrackingSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInvoiceMailTrackingResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInvoiceReturnedMailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInvoiceReturnedMail" />
+  </wsdl:message>
+  <wsdl:message name="GetInvoiceReturnedMailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInvoiceReturnedMailResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadInvoiceAutoTrackNoByClientSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadInvoiceAutoTrackNoByClient" />
+  </wsdl:message>
+  <wsdl:message name="UploadInvoiceAutoTrackNoByClientSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadInvoiceAutoTrackNoByClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadInvoiceAutoTrackNoV2SoapIn">
+    <wsdl:part name="parameters" element="tns:UploadInvoiceAutoTrackNoV2" />
+  </wsdl:message>
+  <wsdl:message name="UploadInvoiceAutoTrackNoV2SoapOut">
+    <wsdl:part name="parameters" element="tns:UploadInvoiceAutoTrackNoV2Response" />
+  </wsdl:message>
+  <wsdl:message name="UploadInvoiceCancellationV2SoapIn">
+    <wsdl:part name="parameters" element="tns:UploadInvoiceCancellationV2" />
+  </wsdl:message>
+  <wsdl:message name="UploadInvoiceCancellationV2SoapOut">
+    <wsdl:part name="parameters" element="tns:UploadInvoiceCancellationV2Response" />
+  </wsdl:message>
+  <wsdl:message name="UploadAllowanceV2SoapIn">
+    <wsdl:part name="parameters" element="tns:UploadAllowanceV2" />
+  </wsdl:message>
+  <wsdl:message name="UploadAllowanceV2SoapOut">
+    <wsdl:part name="parameters" element="tns:UploadAllowanceV2Response" />
+  </wsdl:message>
+  <wsdl:message name="UploadAllowanceCancellationV2SoapIn">
+    <wsdl:part name="parameters" element="tns:UploadAllowanceCancellationV2" />
+  </wsdl:message>
+  <wsdl:message name="UploadAllowanceCancellationV2SoapOut">
+    <wsdl:part name="parameters" element="tns:UploadAllowanceCancellationV2Response" />
+  </wsdl:message>
+  <wsdl:message name="UploadInvoiceV2SoapIn">
+    <wsdl:part name="parameters" element="tns:UploadInvoiceV2" />
+  </wsdl:message>
+  <wsdl:message name="UploadInvoiceV2SoapOut">
+    <wsdl:part name="parameters" element="tns:UploadInvoiceV2Response" />
+  </wsdl:message>
+  <wsdl:message name="UploadInvoiceCmsCSVAutoTrackNoV2SoapIn">
+    <wsdl:part name="parameters" element="tns:UploadInvoiceCmsCSVAutoTrackNoV2" />
+  </wsdl:message>
+  <wsdl:message name="UploadInvoiceCmsCSVAutoTrackNoV2SoapOut">
+    <wsdl:part name="parameters" element="tns:UploadInvoiceCmsCSVAutoTrackNoV2Response" />
+  </wsdl:message>
+  <wsdl:message name="UploadBranchTrackSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadBranchTrack" />
+  </wsdl:message>
+  <wsdl:message name="UploadBranchTrackSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadBranchTrackResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadInvoiceV2_C0401SoapIn">
+    <wsdl:part name="parameters" element="tns:UploadInvoiceV2_C0401" />
+  </wsdl:message>
+  <wsdl:message name="UploadInvoiceV2_C0401SoapOut">
+    <wsdl:part name="parameters" element="tns:UploadInvoiceV2_C0401Response" />
+  </wsdl:message>
+  <wsdl:message name="UploadInvoiceCancellationV2_C0501SoapIn">
+    <wsdl:part name="parameters" element="tns:UploadInvoiceCancellationV2_C0501" />
+  </wsdl:message>
+  <wsdl:message name="UploadInvoiceCancellationV2_C0501SoapOut">
+    <wsdl:part name="parameters" element="tns:UploadInvoiceCancellationV2_C0501Response" />
+  </wsdl:message>
+  <wsdl:message name="UploadInvoiceEnterpriseSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadInvoiceEnterprise" />
+  </wsdl:message>
+  <wsdl:message name="UploadInvoiceEnterpriseSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadInvoiceEnterpriseResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrentYearInvoiceTrackCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCurrentYearInvoiceTrackCode" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrentYearInvoiceTrackCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCurrentYearInvoiceTrackCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerIdListByAgentSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCustomerIdListByAgent" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerIdListByAgentSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCustomerIdListByAgentResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetVacantInvoiceNoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetVacantInvoiceNo" />
+  </wsdl:message>
+  <wsdl:message name="GetVacantInvoiceNoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetVacantInvoiceNoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="eInvoiceServiceSoap">
+    <wsdl:operation name="UploadInvoice">
+      <wsdl:input message="tns:UploadInvoiceSoapIn" />
+      <wsdl:output message="tns:UploadInvoiceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadAllowance">
+      <wsdl:input message="tns:UploadAllowanceSoapIn" />
+      <wsdl:output message="tns:UploadAllowanceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadB1401">
+      <wsdl:input message="tns:UploadB1401SoapIn" />
+      <wsdl:output message="tns:UploadB1401SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadB0401">
+      <wsdl:input message="tns:UploadB0401SoapIn" />
+      <wsdl:output message="tns:UploadB0401SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadInvoiceAutoTrackNo">
+      <wsdl:input message="tns:UploadInvoiceAutoTrackNoSoapIn" />
+      <wsdl:output message="tns:UploadInvoiceAutoTrackNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadInvoiceCmsCSVAutoTrackNo">
+      <wsdl:input message="tns:UploadInvoiceCmsCSVAutoTrackNoSoapIn" />
+      <wsdl:output message="tns:UploadInvoiceCmsCSVAutoTrackNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadInvoiceCancellationCmsCSV">
+      <wsdl:input message="tns:UploadInvoiceCancellationCmsCSVSoapIn" />
+      <wsdl:output message="tns:UploadInvoiceCancellationCmsCSVSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadInvoiceCancellation">
+      <wsdl:input message="tns:UploadInvoiceCancellationSoapIn" />
+      <wsdl:output message="tns:UploadInvoiceCancellationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadAllowanceCancellation">
+      <wsdl:input message="tns:UploadAllowanceCancellationSoapIn" />
+      <wsdl:output message="tns:UploadAllowanceCancellationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadB0501">
+      <wsdl:input message="tns:UploadB0501SoapIn" />
+      <wsdl:output message="tns:UploadB0501SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUpdatedWelfareAgenciesInfo">
+      <wsdl:input message="tns:GetUpdatedWelfareAgenciesInfoSoapIn" />
+      <wsdl:output message="tns:GetUpdatedWelfareAgenciesInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWelfareAgenciesInfo">
+      <wsdl:input message="tns:GetWelfareAgenciesInfoSoapIn" />
+      <wsdl:output message="tns:GetWelfareAgenciesInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIncomingInvoices">
+      <wsdl:input message="tns:GetIncomingInvoicesSoapIn" />
+      <wsdl:output message="tns:GetIncomingInvoicesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoicesMap">
+      <wsdl:input message="tns:GetInvoicesMapSoapIn" />
+      <wsdl:output message="tns:GetInvoicesMapSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIncomingInvoiceCancellations">
+      <wsdl:input message="tns:GetIncomingInvoiceCancellationsSoapIn" />
+      <wsdl:output message="tns:GetIncomingInvoiceCancellationsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIncomingAllowances">
+      <wsdl:input message="tns:GetIncomingAllowancesSoapIn" />
+      <wsdl:output message="tns:GetIncomingAllowancesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIncomingAllowanceCancellations">
+      <wsdl:input message="tns:GetIncomingAllowanceCancellationsSoapIn" />
+      <wsdl:output message="tns:GetIncomingAllowanceCancellationsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AcknowledgeLivingReport">
+      <wsdl:input message="tns:AcknowledgeLivingReportSoapIn" />
+      <wsdl:output message="tns:AcknowledgeLivingReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIncomingWinningInvoices">
+      <wsdl:input message="tns:GetIncomingWinningInvoicesSoapIn" />
+      <wsdl:output message="tns:GetIncomingWinningInvoicesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSignerCertificateContent">
+      <wsdl:input message="tns:GetSignerCertificateContentSoapIn" />
+      <wsdl:output message="tns:GetSignerCertificateContentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegisteredMember">
+      <wsdl:input message="tns:GetRegisteredMemberSoapIn" />
+      <wsdl:output message="tns:GetRegisteredMemberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadA1101">
+      <wsdl:input message="tns:UploadA1101SoapIn" />
+      <wsdl:output message="tns:UploadA1101SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadA1401">
+      <wsdl:input message="tns:UploadA1401SoapIn" />
+      <wsdl:output message="tns:UploadA1401SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadA0401">
+      <wsdl:input message="tns:UploadA0401SoapIn" />
+      <wsdl:output message="tns:UploadA0401SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadB1101">
+      <wsdl:input message="tns:UploadB1101SoapIn" />
+      <wsdl:output message="tns:UploadB1101SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadA0201">
+      <wsdl:input message="tns:UploadA0201SoapIn" />
+      <wsdl:output message="tns:UploadA0201SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadA0501">
+      <wsdl:input message="tns:UploadA0501SoapIn" />
+      <wsdl:output message="tns:UploadA0501SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadB0201">
+      <wsdl:input message="tns:UploadB0201SoapIn" />
+      <wsdl:output message="tns:UploadB0201SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="B2CUploadInvoice">
+      <wsdl:input message="tns:B2CUploadInvoiceSoapIn" />
+      <wsdl:output message="tns:B2CUploadInvoiceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="B2CUploadInvoiceCancellation">
+      <wsdl:input message="tns:B2CUploadInvoiceCancellationSoapIn" />
+      <wsdl:output message="tns:B2CUploadInvoiceCancellationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyCounterpartBusiness">
+      <wsdl:input message="tns:NotifyCounterpartBusinessSoapIn" />
+      <wsdl:output message="tns:NotifyCounterpartBusinessSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveContentAsPDF">
+      <wsdl:input message="tns:ReceiveContentAsPDFSoapIn" />
+      <wsdl:output message="tns:ReceiveContentAsPDFSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTempForReceivePDF">
+      <wsdl:input message="tns:DeleteTempForReceivePDFSoapIn" />
+      <wsdl:output message="tns:DeleteTempForReceivePDFSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoiceMailTracking">
+      <wsdl:input message="tns:GetInvoiceMailTrackingSoapIn" />
+      <wsdl:output message="tns:GetInvoiceMailTrackingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoiceReturnedMail">
+      <wsdl:input message="tns:GetInvoiceReturnedMailSoapIn" />
+      <wsdl:output message="tns:GetInvoiceReturnedMailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadInvoiceAutoTrackNoByClient">
+      <wsdl:input message="tns:UploadInvoiceAutoTrackNoByClientSoapIn" />
+      <wsdl:output message="tns:UploadInvoiceAutoTrackNoByClientSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadInvoiceAutoTrackNoV2">
+      <wsdl:input message="tns:UploadInvoiceAutoTrackNoV2SoapIn" />
+      <wsdl:output message="tns:UploadInvoiceAutoTrackNoV2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadInvoiceCancellationV2">
+      <wsdl:input message="tns:UploadInvoiceCancellationV2SoapIn" />
+      <wsdl:output message="tns:UploadInvoiceCancellationV2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadAllowanceV2">
+      <wsdl:input message="tns:UploadAllowanceV2SoapIn" />
+      <wsdl:output message="tns:UploadAllowanceV2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadAllowanceCancellationV2">
+      <wsdl:input message="tns:UploadAllowanceCancellationV2SoapIn" />
+      <wsdl:output message="tns:UploadAllowanceCancellationV2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadInvoiceV2">
+      <wsdl:input message="tns:UploadInvoiceV2SoapIn" />
+      <wsdl:output message="tns:UploadInvoiceV2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadInvoiceCmsCSVAutoTrackNoV2">
+      <wsdl:input message="tns:UploadInvoiceCmsCSVAutoTrackNoV2SoapIn" />
+      <wsdl:output message="tns:UploadInvoiceCmsCSVAutoTrackNoV2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadBranchTrack">
+      <wsdl:input message="tns:UploadBranchTrackSoapIn" />
+      <wsdl:output message="tns:UploadBranchTrackSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadInvoiceV2_C0401">
+      <wsdl:input message="tns:UploadInvoiceV2_C0401SoapIn" />
+      <wsdl:output message="tns:UploadInvoiceV2_C0401SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadInvoiceCancellationV2_C0501">
+      <wsdl:input message="tns:UploadInvoiceCancellationV2_C0501SoapIn" />
+      <wsdl:output message="tns:UploadInvoiceCancellationV2_C0501SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadInvoiceEnterprise">
+      <wsdl:input message="tns:UploadInvoiceEnterpriseSoapIn" />
+      <wsdl:output message="tns:UploadInvoiceEnterpriseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentYearInvoiceTrackCode">
+      <wsdl:input message="tns:GetCurrentYearInvoiceTrackCodeSoapIn" />
+      <wsdl:output message="tns:GetCurrentYearInvoiceTrackCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerIdListByAgent">
+      <wsdl:input message="tns:GetCustomerIdListByAgentSoapIn" />
+      <wsdl:output message="tns:GetCustomerIdListByAgentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVacantInvoiceNo">
+      <wsdl:input message="tns:GetVacantInvoiceNoSoapIn" />
+      <wsdl:output message="tns:GetVacantInvoiceNoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="eInvoiceServiceSoap" type="tns:eInvoiceServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UploadInvoice">
+      <soap:operation soapAction="http://www.uxb2b.com/UploadInvoice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadAllowance">
+      <soap:operation soapAction="http://www.uxb2b.com/UploadAllowance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadB1401">
+      <soap:operation soapAction="http://www.uxb2b.com/UploadB1401" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadB0401">
+      <soap:operation soapAction="http://www.uxb2b.com/UploadB0401" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadInvoiceAutoTrackNo">
+      <soap:operation soapAction="http://www.uxb2b.com/UploadInvoiceAutoTrackNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadInvoiceCmsCSVAutoTrackNo">
+      <soap:operation soapAction="http://www.uxb2b.com/UploadInvoiceCmsCSVAutoTrackNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadInvoiceCancellationCmsCSV">
+      <soap:operation soapAction="http://www.uxb2b.com/UploadInvoiceCancellationCmsCSV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadInvoiceCancellation">
+      <soap:operation soapAction="http://www.uxb2b.com/UploadInvoiceCancellation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadAllowanceCancellation">
+      <soap:operation soapAction="http://www.uxb2b.com/UploadAllowanceCancellation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadB0501">
+      <soap:operation soapAction="http://www.uxb2b.com/UploadB0501" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUpdatedWelfareAgenciesInfo">
+      <soap:operation soapAction="http://www.uxb2b.com/GetUpdatedWelfareAgenciesInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWelfareAgenciesInfo">
+      <soap:operation soapAction="http://www.uxb2b.com/GetWelfareAgenciesInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIncomingInvoices">
+      <soap:operation soapAction="http://www.uxb2b.com/GetIncomingInvoices" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoicesMap">
+      <soap:operation soapAction="http://www.uxb2b.com/GetInvoicesMap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIncomingInvoiceCancellations">
+      <soap:operation soapAction="http://www.uxb2b.com/GetIncomingInvoiceCancellations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIncomingAllowances">
+      <soap:operation soapAction="http://www.uxb2b.com/GetIncomingAllowances" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIncomingAllowanceCancellations">
+      <soap:operation soapAction="http://www.uxb2b.com/GetIncomingAllowanceCancellations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AcknowledgeLivingReport">
+      <soap:operation soapAction="http://www.uxb2b.com/AcknowledgeLivingReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIncomingWinningInvoices">
+      <soap:operation soapAction="http://www.uxb2b.com/GetIncomingWinningInvoices" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSignerCertificateContent">
+      <soap:operation soapAction="http://www.uxb2b.com/GetSignerCertificateContent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegisteredMember">
+      <soap:operation soapAction="http://www.uxb2b.com/GetRegisteredMember" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadA1101">
+      <soap:operation soapAction="http://www.uxb2b.com/UploadA1101" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadA1401">
+      <soap:operation soapAction="http://www.uxb2b.com/UploadA1401" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadA0401">
+      <soap:operation soapAction="http://www.uxb2b.com/UploadA0401" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadB1101">
+      <soap:operation soapAction="http://www.uxb2b.com/UploadB1101" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadA0201">
+      <soap:operation soapAction="http://www.uxb2b.com/UploadA0201" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadA0501">
+      <soap:operation soapAction="http://www.uxb2b.com/UploadA0501" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadB0201">
+      <soap:operation soapAction="http://www.uxb2b.com/UploadB0201" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="B2CUploadInvoice">
+      <soap:operation soapAction="http://www.uxb2b.com/B2CUploadInvoice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="B2CUploadInvoiceCancellation">
+      <soap:operation soapAction="http://www.uxb2b.com/B2CUploadInvoiceCancellation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyCounterpartBusiness">
+      <soap:operation soapAction="http://www.uxb2b.com/NotifyCounterpartBusiness" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveContentAsPDF">
+      <soap:operation soapAction="http://www.uxb2b.com/ReceiveContentAsPDF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTempForReceivePDF">
+      <soap:operation soapAction="http://www.uxb2b.com/DeleteTempForReceivePDF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoiceMailTracking">
+      <soap:operation soapAction="http://www.uxb2b.com/GetInvoiceMailTracking" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoiceReturnedMail">
+      <soap:operation soapAction="http://www.uxb2b.com/GetInvoiceReturnedMail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadInvoiceAutoTrackNoByClient">
+      <soap:operation soapAction="http://www.uxb2b.com/UploadInvoiceAutoTrackNoByClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadInvoiceAutoTrackNoV2">
+      <soap:operation soapAction="http://www.uxb2b.com/UploadInvoiceAutoTrackNoV2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadInvoiceCancellationV2">
+      <soap:operation soapAction="http://www.uxb2b.com/UploadInvoiceCancellationV2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadAllowanceV2">
+      <soap:operation soapAction="http://www.uxb2b.com/UploadAllowanceV2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadAllowanceCancellationV2">
+      <soap:operation soapAction="http://www.uxb2b.com/UploadAllowanceCancellationV2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadInvoiceV2">
+      <soap:operation soapAction="http://www.uxb2b.com/UploadInvoiceV2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadInvoiceCmsCSVAutoTrackNoV2">
+      <soap:operation soapAction="http://www.uxb2b.com/UploadInvoiceCmsCSVAutoTrackNoV2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadBranchTrack">
+      <soap:operation soapAction="http://www.uxb2b.com/UploadBranchTrack" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadInvoiceV2_C0401">
+      <soap:operation soapAction="http://www.uxb2b.com/UploadInvoiceV2_C0401" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadInvoiceCancellationV2_C0501">
+      <soap:operation soapAction="http://www.uxb2b.com/UploadInvoiceCancellationV2_C0501" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadInvoiceEnterprise">
+      <soap:operation soapAction="http://www.uxb2b.com/UploadInvoiceEnterprise" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentYearInvoiceTrackCode">
+      <soap:operation soapAction="http://www.uxb2b.com/GetCurrentYearInvoiceTrackCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerIdListByAgent">
+      <soap:operation soapAction="http://www.uxb2b.com/GetCustomerIdListByAgent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVacantInvoiceNo">
+      <soap:operation soapAction="http://www.uxb2b.com/GetVacantInvoiceNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="eInvoiceServiceSoap12" type="tns:eInvoiceServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UploadInvoice">
+      <soap12:operation soapAction="http://www.uxb2b.com/UploadInvoice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadAllowance">
+      <soap12:operation soapAction="http://www.uxb2b.com/UploadAllowance" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadB1401">
+      <soap12:operation soapAction="http://www.uxb2b.com/UploadB1401" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadB0401">
+      <soap12:operation soapAction="http://www.uxb2b.com/UploadB0401" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadInvoiceAutoTrackNo">
+      <soap12:operation soapAction="http://www.uxb2b.com/UploadInvoiceAutoTrackNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadInvoiceCmsCSVAutoTrackNo">
+      <soap12:operation soapAction="http://www.uxb2b.com/UploadInvoiceCmsCSVAutoTrackNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadInvoiceCancellationCmsCSV">
+      <soap12:operation soapAction="http://www.uxb2b.com/UploadInvoiceCancellationCmsCSV" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadInvoiceCancellation">
+      <soap12:operation soapAction="http://www.uxb2b.com/UploadInvoiceCancellation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadAllowanceCancellation">
+      <soap12:operation soapAction="http://www.uxb2b.com/UploadAllowanceCancellation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadB0501">
+      <soap12:operation soapAction="http://www.uxb2b.com/UploadB0501" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUpdatedWelfareAgenciesInfo">
+      <soap12:operation soapAction="http://www.uxb2b.com/GetUpdatedWelfareAgenciesInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWelfareAgenciesInfo">
+      <soap12:operation soapAction="http://www.uxb2b.com/GetWelfareAgenciesInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIncomingInvoices">
+      <soap12:operation soapAction="http://www.uxb2b.com/GetIncomingInvoices" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoicesMap">
+      <soap12:operation soapAction="http://www.uxb2b.com/GetInvoicesMap" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIncomingInvoiceCancellations">
+      <soap12:operation soapAction="http://www.uxb2b.com/GetIncomingInvoiceCancellations" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIncomingAllowances">
+      <soap12:operation soapAction="http://www.uxb2b.com/GetIncomingAllowances" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIncomingAllowanceCancellations">
+      <soap12:operation soapAction="http://www.uxb2b.com/GetIncomingAllowanceCancellations" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AcknowledgeLivingReport">
+      <soap12:operation soapAction="http://www.uxb2b.com/AcknowledgeLivingReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIncomingWinningInvoices">
+      <soap12:operation soapAction="http://www.uxb2b.com/GetIncomingWinningInvoices" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSignerCertificateContent">
+      <soap12:operation soapAction="http://www.uxb2b.com/GetSignerCertificateContent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegisteredMember">
+      <soap12:operation soapAction="http://www.uxb2b.com/GetRegisteredMember" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadA1101">
+      <soap12:operation soapAction="http://www.uxb2b.com/UploadA1101" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadA1401">
+      <soap12:operation soapAction="http://www.uxb2b.com/UploadA1401" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadA0401">
+      <soap12:operation soapAction="http://www.uxb2b.com/UploadA0401" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadB1101">
+      <soap12:operation soapAction="http://www.uxb2b.com/UploadB1101" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadA0201">
+      <soap12:operation soapAction="http://www.uxb2b.com/UploadA0201" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadA0501">
+      <soap12:operation soapAction="http://www.uxb2b.com/UploadA0501" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadB0201">
+      <soap12:operation soapAction="http://www.uxb2b.com/UploadB0201" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="B2CUploadInvoice">
+      <soap12:operation soapAction="http://www.uxb2b.com/B2CUploadInvoice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="B2CUploadInvoiceCancellation">
+      <soap12:operation soapAction="http://www.uxb2b.com/B2CUploadInvoiceCancellation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyCounterpartBusiness">
+      <soap12:operation soapAction="http://www.uxb2b.com/NotifyCounterpartBusiness" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveContentAsPDF">
+      <soap12:operation soapAction="http://www.uxb2b.com/ReceiveContentAsPDF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTempForReceivePDF">
+      <soap12:operation soapAction="http://www.uxb2b.com/DeleteTempForReceivePDF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoiceMailTracking">
+      <soap12:operation soapAction="http://www.uxb2b.com/GetInvoiceMailTracking" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoiceReturnedMail">
+      <soap12:operation soapAction="http://www.uxb2b.com/GetInvoiceReturnedMail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadInvoiceAutoTrackNoByClient">
+      <soap12:operation soapAction="http://www.uxb2b.com/UploadInvoiceAutoTrackNoByClient" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadInvoiceAutoTrackNoV2">
+      <soap12:operation soapAction="http://www.uxb2b.com/UploadInvoiceAutoTrackNoV2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadInvoiceCancellationV2">
+      <soap12:operation soapAction="http://www.uxb2b.com/UploadInvoiceCancellationV2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadAllowanceV2">
+      <soap12:operation soapAction="http://www.uxb2b.com/UploadAllowanceV2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadAllowanceCancellationV2">
+      <soap12:operation soapAction="http://www.uxb2b.com/UploadAllowanceCancellationV2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadInvoiceV2">
+      <soap12:operation soapAction="http://www.uxb2b.com/UploadInvoiceV2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadInvoiceCmsCSVAutoTrackNoV2">
+      <soap12:operation soapAction="http://www.uxb2b.com/UploadInvoiceCmsCSVAutoTrackNoV2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadBranchTrack">
+      <soap12:operation soapAction="http://www.uxb2b.com/UploadBranchTrack" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadInvoiceV2_C0401">
+      <soap12:operation soapAction="http://www.uxb2b.com/UploadInvoiceV2_C0401" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadInvoiceCancellationV2_C0501">
+      <soap12:operation soapAction="http://www.uxb2b.com/UploadInvoiceCancellationV2_C0501" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadInvoiceEnterprise">
+      <soap12:operation soapAction="http://www.uxb2b.com/UploadInvoiceEnterprise" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentYearInvoiceTrackCode">
+      <soap12:operation soapAction="http://www.uxb2b.com/GetCurrentYearInvoiceTrackCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerIdListByAgent">
+      <soap12:operation soapAction="http://www.uxb2b.com/GetCustomerIdListByAgent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVacantInvoiceNo">
+      <soap12:operation soapAction="http://www.uxb2b.com/GetVacantInvoiceNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="eInvoiceService">
+    <wsdl:port name="eInvoiceServiceSoap" binding="tns:eInvoiceServiceSoap">
+      <soap:address location="http://localhost:2598/Published/eInvoiceService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="eInvoiceServiceSoap12" binding="tns:eInvoiceServiceSoap12">
+      <soap12:address location="http://localhost:2598/Published/eInvoiceService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

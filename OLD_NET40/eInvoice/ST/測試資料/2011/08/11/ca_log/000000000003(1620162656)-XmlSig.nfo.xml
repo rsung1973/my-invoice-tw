@@ -1,0 +1,71 @@
+﻿<InvoiceRoot xmlns="">
+  <CompanyBan>26305533</CompanyBan>
+  <Invoice>
+    <InvoiceNumber>WK61500368</InvoiceNumber>
+    <InvoiceDate>2011/08/11</InvoiceDate>
+    <InvoiceTime>16:19:46</InvoiceTime>
+    <SellerId>26305533</SellerId>
+    <BuyerName />
+    <BuyerId />
+    <InvoiceType>03</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <CarrierType />
+    <CarrierId1 />
+    <CarrierId2 />
+    <PrintMark>Y</PrintMark>
+    <NPOBAN />
+    <RandomNumber>7994</RandomNumber>
+    <InvoiceItem>
+      <Description>典藏蔣宋馬克杯-站坐</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>200</UnitPrice>
+      <Amount>200.0000</Amount>
+      <SequenceNumber>1</SequenceNumber>
+      <Item>I1</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>光芒寶寶QQ票卡夾-藍</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>250</UnitPrice>
+      <Amount>250.0000</Amount>
+      <SequenceNumber>2</SequenceNumber>
+      <Item>I2</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>建國100國旗紀念徽章</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>120</UnitPrice>
+      <Amount>120.0000</Amount>
+      <SequenceNumber>3</SequenceNumber>
+      <Item>I3</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>總折讓</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>0</UnitPrice>
+      <Amount>0</Amount>
+      <SequenceNumber>999</SequenceNumber>
+      <Item>999</Item>
+      <Remark>總折讓</Remark>
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <SalesAmount>543</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0.05</TaxRate>
+    <TaxAmount>27</TaxAmount>
+    <TotalAmount>570</TotalAmount>
+    <DiscountAmount>0</DiscountAmount>
+  </Invoice>
+</InvoiceRoot>

@@ -1,0 +1,11 @@
+<dsPKCS7>
+  <pkcs7Envelop>
+    <UniqueID>59F597F2000000000180</UniqueID>
+    <NotBefore>2011/5/27 上午 10:50:22</NotBefore>
+    <NotAfter>2021/5/27 上午 11:00:22</NotAfter>
+    <Subject>E=monica@jdg.com.tw, CN=26305533, O=取絕未來實業有限公司, L=Taipei, S=Taiwan, C=TW</Subject>
+    <Issuer>CN=UXB2B Certificate Center</Issuer>
+    <DataSignature>G:\Project\PublishedWeb\MyInvoice\logs\2011\08\09\ca_log\000000000001(1544455156)-XmlSig.nfo.xml</DataSignature>
+    <ActionTime>2011-08-09T15:44:45.046875+08:00</ActionTime>
+  </pkcs7Envelop>
+</dsPKCS7>

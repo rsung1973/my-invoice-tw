@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=big5" />
+<link href="css/content.css" rel="stylesheet" type="text/css" />
+<link href="css/table.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="javascript/join.js"></script>
+<title>電子發票系統</title>
+</head>
+
+<body>
+<!--路徑名稱-->
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="30"><img src="images/path_left.gif" alt="" width="30" height="29" /></td>
+    <td bgcolor="#ecedd5">首頁 > 折讓單匯入</td>
+    <td width="18"><img src="images/path_right.gif" alt="" width="18" height="29" /></td>
+  </tr>
+</table>
+<!--交易畫面標題-->
+<h1><img src="images/icon_search.gif" width="29" height="28" border="0" align="absmiddle" />折讓單匯入</h1>
+<div id="border_gray">
+<!--表格 開始-->
+<form name="addForm">
+<table width="100%" border="0" cellpadding="0" cellspacing="0" id="left_title">
+  <tr id="other">
+    <th width="20%" nowrap="nowrap">折讓單匯入</th>
+    <td class="tdleft">
+        <label for="fileField"></label>
+        <input type="file" name="fileField" id="fileField" class="textfield" />
+        
+        <input name="query2" type="button" class="btn" value="確認" onclick="location.href='ImportInvoice_list.htm'" />
+        </td>
+  </tr>
+  </table>
+<br />
+<table width="100%" border="0" cellpadding="0" cellspacing="0" id="table01">
+  <tr>
+    <th nowrap="nowrap">序號</th>
+    <th nowrap="nowrap">google id</th>
+    <th nowrap="nowrap">折讓號碼</th>
+    <th nowrap="nowrap">原發票號碼</th>
+    <th nowrap="nowrap">買受人名稱</th>
+    <th nowrap="nowrap">買受人統編</th>
+    <th nowrap="nowrap">未稅金額</th>
+    <th nowrap="nowrap">稅額</th>
+    <th nowrap="nowrap">含稅金額</th>
+    <th nowrap="nowrap">匯入狀態</th>
+  </tr>
+  <tr>
+    <td align="center">20110719001</td>
+    <td align="center">5007928574</td>
+    <td align="center">ZZ82373631</td>
+    <td align="center">AY74423557</td>
+    <td>財團法人工業技術研究院</td>
+    <td align="center">27509630</td>
+    <td align="right">95,238</td>
+    <td align="right">4,762</td>
+    <td align="right">100,000</td>
+    <td align="center">成功</td>
+  </tr>
+  <tr class="OldLace">
+    <td align="center">20110719002</td>
+    <td align="center">6984261233</td>
+    <td align="center">ZZ82373632</td>
+    <td align="center">AY74423558</td>
+    <td>台灣亞太開發網路資訊有限公司</td>
+    <td align="center">24398563</td>
+    <td align="right">28,571</td>
+    <td align="right">1,429</td>
+    <td align="right">30,000</td>
+    <td align="center">成功</td>
+  </tr>
+  <tr>
+    <td align="center">20110719003</td>
+    <td align="center">5240005525</td>
+    <td align="center">ZZ82373633</td>
+    <td align="center">N/A</td>
+    <td>洄瀾客棧股份有限公司</td>
+    <td align="center">70640107</td>
+    <td align="right">28,571</td>
+    <td align="right">1,429</td>
+    <td align="right">30,000</td>
+    <td align="center"><span class="red">失敗：資料重覆</span></td>
+  </tr>
+  <tr class="OldLace">
+    <td align="center">20110719004</td>
+    <td align="center">7589069723</td>
+    <td align="center">ZZ82373634</td>
+    <td align="center">AY74423559</td>
+    <td>品思產品設計有限公司</td>
+    <td align="center">N/A</td>
+    <td align="right">1,429</td>
+    <td align="right">71</td>
+    <td align="right">1,500</td>
+    <td align="center">成功</td>
+  </tr>
+  <tr>
+    <td align="center">20110719005</td>
+    <td align="center">8862584086</td>
+    <td align="center">ZZ82373635</td>
+    <td align="center">N/A</td>
+    <td>彰化楊月馬自達</td>
+    <td align="center">N/A</td>
+    <td align="right">952</td>
+    <td align="right">48</td>
+    <td align="right">1,000</td>
+    <td align="center"><span class="red">失敗：資料格式錯誤</span></td>
+  </tr>
+  <tr>
+      <td colspan="10" align="right" class="total-count"> 總計&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;匯入總筆數：5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;成功：3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;失敗：2 </td>
+  </tr>
+</table>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" id="table-count">
+  <tr>
+    <td>| 1 | <a href="#">2</a> |&nbsp; <a href="#">後10頁</a> | <a href="#">最後1頁</a>
+      <input name="textfield" type="text" class="textfield" size="3" />
+      <input name="cancel22" type="reset" class="btn" value="頁數" /></td>
+    <td align="right" nowrap="nowrap"><span>總筆數：100&nbsp;&nbsp;&nbsp;總頁數：10</span></td>
+  </tr>
+</table>
+</form>
+<!--表格 結束-->
+</div>
+<!--按鈕-->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="Bargain_btn"><input name="B3" type="button" class="btn" value="列印" />&nbsp;<input name="B3" type="button" class="btn" value="匯出EXCEL檔" /></td>
+  </tr>
+</table>
+</body>
+</html>

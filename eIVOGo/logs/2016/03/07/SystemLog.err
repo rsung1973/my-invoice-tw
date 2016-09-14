@@ -1,0 +1,147 @@
+2016/03/07 14:17:03
+System.Web.HttpException (0x80004005): The controller for path '/favicon.ico' was not found or does not implement IController.
+   於 System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   於 System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   於 System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   於 System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   於 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   於 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2016/03/07 16:05:55
+System.Web.HttpException (0x80004005): The controller for path '/favicon.ico' was not found or does not implement IController.
+   於 System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   於 System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   於 System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   於 System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   於 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   於 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2016/03/07 16:47:20
+System.ArgumentNullException: 值不能為 null。
+參數名稱: source
+   於 System.Linq.Enumerable.Contains[TSource](IEnumerable`1 source, TSource value, IEqualityComparer`1 comparer)
+   於 ClosedXML.Excel.XLHyperlink.get_InternalAddress()
+   於 ClosedXML.Excel.XLWorkbook.GenerateWorksheetPartContent(WorksheetPart worksheetPart, XLWorksheet xlWorksheet, SaveContext context)
+   於 ClosedXML.Excel.XLWorkbook.CreateParts(SpreadsheetDocument document)
+   於 ClosedXML.Excel.XLWorkbook.CreatePackage(Stream stream, Boolean newStream, SpreadsheetDocumentType spreadsheetDocumentType)
+   於 ClosedXML.Excel.XLWorkbook.SaveAs(String file)
+   於 eIVOGo.Controllers.DataExchangeController.UpdateTrackCode() 於 c:\Project\VM-SIT04\IFS-EIVO03\eIVOGo\Controllers\DataExchangeController.cs: 行 90
+2016/03/07 16:47:21
+System.UnauthorizedAccessException: 拒絕存取路徑 'C:\Project\AppDev\IFS-EIVO03\eIVOGo\resource\SysAdminMenu.xml'。
+   於 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   於 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   於 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   於 System.Xml.XmlDocument.Save(String filename)
+   於 Uxnet.Com.Providers.UserMenuManager.Save(String menuPath, XmlDocument menuDoc) 於 c:\Project\VM-SIT04\Uxnet\Uxnet.Com\Providers\UserMenuManager.cs: 行 44
+   於 Uxnet.Com.Providers.UserMenuManager.Save(XmlDocument doc) 於 c:\Project\VM-SIT04\Uxnet\Uxnet.Com\Providers\UserMenuManager.cs: 行 67
+   於 Uxnet.Web.Module.SiteAction.SiteMenuBar.mainMenu_PreRender(Object sender, EventArgs e) 於 c:\Project\VM-SIT04\Uxnet\Uxnet.Web\Module\SiteAction\SiteMenuBar.ascx.cs: 行 135
+   於 System.EventHandler.Invoke(Object sender, EventArgs e)
+   於 System.Web.UI.Control.OnPreRender(EventArgs e)
+   於 System.Web.UI.WebControls.Menu.OnPreRender(EventArgs e)
+   於 System.Web.UI.Control.PreRenderRecursiveInternal()
+   於 System.Web.UI.Control.PreRenderRecursiveInternal()
+   於 System.Web.UI.Control.PreRenderRecursiveInternal()
+   於 System.Web.UI.Control.PreRenderRecursiveInternal()
+   於 System.Web.UI.Control.PreRenderRecursiveInternal()
+   於 System.Web.UI.Control.PreRenderRecursiveInternal()
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016/03/07 16:47:21
+System.Web.HttpException (0x80004005): 執行處理常式 'System.Web.Mvc.HttpHandlerUtil+ServerExecuteHttpHandlerWrapper' 的子要求時發生錯誤。 ---> System.Web.HttpException (0x80004005): Execution of the child request failed. Please examine the InnerException for more information. ---> System.Web.HttpUnhandledException (0x80004005): 已發生類型 'System.Web.HttpUnhandledException' 的例外狀況。 ---> System.UnauthorizedAccessException: 拒絕存取路徑 'C:\Project\AppDev\IFS-EIVO03\eIVOGo\resource\SysAdminMenu.xml'。
+   於 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   於 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   於 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   於 System.Xml.XmlDocument.Save(String filename)
+   於 Uxnet.Com.Providers.UserMenuManager.Save(String menuPath, XmlDocument menuDoc) 於 c:\Project\VM-SIT04\Uxnet\Uxnet.Com\Providers\UserMenuManager.cs: 行 44
+   於 Uxnet.Com.Providers.UserMenuManager.Save(XmlDocument doc) 於 c:\Project\VM-SIT04\Uxnet\Uxnet.Com\Providers\UserMenuManager.cs: 行 67
+   於 Uxnet.Web.Module.SiteAction.SiteMenuBar.mainMenu_PreRender(Object sender, EventArgs e) 於 c:\Project\VM-SIT04\Uxnet\Uxnet.Web\Module\SiteAction\SiteMenuBar.ascx.cs: 行 135
+   於 System.EventHandler.Invoke(Object sender, EventArgs e)
+   於 System.Web.UI.Control.OnPreRender(EventArgs e)
+   於 System.Web.UI.WebControls.Menu.OnPreRender(EventArgs e)
+   於 System.Web.UI.Control.PreRenderRecursiveInternal()
+   於 System.Web.UI.Control.PreRenderRecursiveInternal()
+   於 System.Web.UI.Control.PreRenderRecursiveInternal()
+   於 System.Web.UI.Control.PreRenderRecursiveInternal()
+   於 System.Web.UI.Control.PreRenderRecursiveInternal()
+   於 System.Web.UI.Control.PreRenderRecursiveInternal()
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.HandleError(Exception e)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.ProcessRequest()
+   於 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   於 ASP.views_dataexchange_index_aspx.ProcessRequest(HttpContext context) 於 c:\Windows\Microsoft.NET\Framework64\v4.0.30319\Temporary ASP.NET Files\root\a2b94b33\c7a953da\App_Web_0snkniw0.0.cs: 行 0
+   於 System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerWrapper.<>c__DisplayClass4.<Wrap>b__3()
+   於 System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerWrapper.Wrap[TResult](Func`1 func)
+   於 System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerWrapper.Wrap[TResult](Func`1 func)
+   於 System.Web.HttpServerUtility.ExecuteInternal(IHttpHandler handler, TextWriter writer, Boolean preserveForm, Boolean setPreviousPage, VirtualPath path, VirtualPath filePath, String physPath, Exception error, String queryStringOverride)
+   於 System.Web.HttpServerUtility.ExecuteInternal(IHttpHandler handler, TextWriter writer, Boolean preserveForm, Boolean setPreviousPage, VirtualPath path, VirtualPath filePath, String physPath, Exception error, String queryStringOverride)
+   於 System.Web.HttpServerUtility.Execute(IHttpHandler handler, TextWriter writer, Boolean preserveForm, Boolean setPreviousPage)
+   於 System.Web.HttpServerUtility.Execute(IHttpHandler handler, TextWriter writer, Boolean preserveForm)
+   於 System.Web.Mvc.ViewPage.RenderView(ViewContext viewContext)
+   於 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   於 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   於 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   於 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   於 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   於 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   於 System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   於 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   於 System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   於 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   於 System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   於 System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   於 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   於 System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   於 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   於 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2016/03/07 16:55:39
+System.Web.HttpException (0x80070057): 遠端主機已關閉連接。錯誤碼為 0x80070057。
+   於 System.Web.Hosting.IIS7WorkerRequest.RaiseCommunicationError(Int32 result, Boolean throwOnDisconnect)
+   於 System.Web.Hosting.IIS7WorkerRequest.ExplicitFlush()
+   於 System.Web.HttpResponse.Flush(Boolean finalFlush, Boolean async)
+   於 System.Web.HttpResponse.End()
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 Business.Helper.WebPageUtility.get_UserProfile() 於 c:\Project\VM-SIT04\IFS-EIVO03\Business\Helper\WebPageUtility.cs: 行 27
+   於 eIVOGo.template.base_page.Page_Load(Object sender, EventArgs e) 於 c:\Project\VM-SIT04\IFS-EIVO03\eIVOGo\template\base_page.aspx.cs: 行 21
+   於 System.Web.UI.Control.OnLoad(EventArgs e)
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016/03/07 16:55:40
+System.Web.HttpException (0x80004005): 執行處理常式 'System.Web.Mvc.HttpHandlerUtil+ServerExecuteHttpHandlerWrapper' 的子要求時發生錯誤。 ---> System.Web.HttpUnhandledException (0x80004005): 已發生類型 'System.Web.HttpUnhandledException' 的例外狀況。 ---> System.Web.HttpException (0x80070057): 遠端主機已關閉連接。錯誤碼為 0x80070057。
+   於 System.Web.Hosting.IIS7WorkerRequest.RaiseCommunicationError(Int32 result, Boolean throwOnDisconnect)
+   於 System.Web.Hosting.IIS7WorkerRequest.ExplicitFlush()
+   於 System.Web.HttpResponse.Flush(Boolean finalFlush, Boolean async)
+   於 System.Web.HttpResponse.End()
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 Business.Helper.WebPageUtility.get_UserProfile() 於 c:\Project\VM-SIT04\IFS-EIVO03\Business\Helper\WebPageUtility.cs: 行 27
+   於 eIVOGo.template.base_page.Page_Load(Object sender, EventArgs e) 於 c:\Project\VM-SIT04\IFS-EIVO03\eIVOGo\template\base_page.aspx.cs: 行 21
+   於 System.Web.UI.Control.OnLoad(EventArgs e)
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.HandleError(Exception e)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.ProcessRequest()
+   於 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   於 ASP.views_dataexchange_index_aspx.ProcessRequest(HttpContext context) 於 c:\Windows\Microsoft.NET\Framework64\v4.0.30319\Temporary ASP.NET Files\root\a2b94b33\c7a953da\App_Web_vncxzr4p.0.cs: 行 0
+   於 System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerWrapper.<>c__DisplayClass4.<Wrap>b__3()
+   於 System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerWrapper.Wrap[TResult](Func`1 func)
+   於 System.Web.HttpServerUtility.ExecuteInternal(IHttpHandler handler, TextWriter writer, Boolean preserveForm, Boolean setPreviousPage, VirtualPath path, VirtualPath filePath, String physPath, Exception error, String queryStringOverride)
+   於 System.Web.HttpServerUtility.ExecuteInternal(IHttpHandler handler, TextWriter writer, Boolean preserveForm, Boolean setPreviousPage, VirtualPath path, VirtualPath filePath, String physPath, Exception error, String queryStringOverride)
+   於 System.Web.HttpServerUtility.Execute(IHttpHandler handler, TextWriter writer, Boolean preserveForm, Boolean setPreviousPage)
+   於 System.Web.HttpServerUtility.Execute(IHttpHandler handler, TextWriter writer, Boolean preserveForm)
+   於 System.Web.Mvc.ViewPage.RenderView(ViewContext viewContext)
+   於 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   於 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   於 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   於 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   於 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   於 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   於 System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   於 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   於 System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   於 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   於 System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   於 System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   於 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   於 System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   於 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   於 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)

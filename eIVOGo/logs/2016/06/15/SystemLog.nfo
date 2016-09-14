@@ -1,0 +1,1636 @@
+2016/06/15 16:39:19
+SELECT [t1].[DocID], [t1].[DocType], [t1].[DocDate], [t1].[CurrentStep]
+FROM [dbo].[DocumentReplication] AS [t0]
+INNER JOIN [dbo].[CDS_Document] AS [t1] ON [t1].[DocID] = [t0].[DocID]
+LEFT OUTER JOIN [dbo].[DocumentOwner] AS [t2] ON [t2].[DocID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[Organization] AS [t3] ON [t3].[CompanyID] = [t2].[OwnerID]
+LEFT OUTER JOIN [dbo].[OrganizationStatus] AS [t4] ON [t4].[CompanyID] = [t3].[CompanyID]
+LEFT OUTER JOIN [dbo].[InvoiceItem] AS [t5] ON [t5].[InvoiceID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[InvoiceBuyer] AS [t6] ON [t6].[InvoiceID] = [t5].[InvoiceID]
+WHERE ([t1].[DocType] = @p0) AND ([t4].[SetToNotifyCounterpartBySMS] = @p1) AND ([t6].[ReceiptNo] = @p2)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input NVarChar (Size = 4000; Prec = 0; Scale = 0) [0000000000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+delete from DocumentReplication
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[SMSNotificationQueue] AS [t0]
+WHERE [t0].[MessageID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+
+2016/06/15 16:39:20
+SELECT [t0].[MsgID], [t0].[MessageContents], [t0].[StartDate], [t0].[EndDate], [t0].[AlwaysShow], [t0].[UpdateTime], [t0].[CreateTime]
+FROM [dbo].[SystemMessage] AS [t0]
+WHERE ([t0].[AlwaysShow] = 1) OR (([t0].[StartDate] <= @p0) AND (DATEADD(ms, (CONVERT(BigInt,@p1 * 86400000)) % 86400000, DATEADD(day, (CONVERT(BigInt,@p1 * 86400000)) / 86400000, [t0].[EndDate])) > @p2))
+-- @p0: Input DateTime (Size = -1; Prec = 0; Scale = 0) [2016/6/15 下午 04:39:20]
+-- @p1: Input Float (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input DateTime (Size = -1; Prec = 0; Scale = 0) [2016/6/15 下午 04:39:20]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+
+2016/06/15 16:39:21
+SELECT [t0].[MsgID], [t0].[MessageContents], [t0].[StartDate], [t0].[EndDate], [t0].[AlwaysShow], [t0].[UpdateTime], [t0].[CreateTime]
+FROM [dbo].[SystemMessage] AS [t0]
+WHERE ([t0].[AlwaysShow] = 1) OR (([t0].[StartDate] <= @p0) AND (DATEADD(ms, (CONVERT(BigInt,@p1 * 86400000)) % 86400000, DATEADD(day, (CONVERT(BigInt,@p1 * 86400000)) / 86400000, [t0].[EndDate])) > @p2))
+-- @p0: Input DateTime (Size = -1; Prec = 0; Scale = 0) [2016/6/15 下午 04:39:21]
+-- @p1: Input Float (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input DateTime (Size = -1; Prec = 0; Scale = 0) [2016/6/15 下午 04:39:21]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+
+2016/06/15 16:39:21
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [12]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [11]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [14]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+
+2016/06/15 16:39:21
+event message處理完成!
+2016/06/15 16:39:22
+SELECT [t0].[MsgID], [t0].[MessageContents], [t0].[StartDate], [t0].[EndDate], [t0].[AlwaysShow], [t0].[UpdateTime], [t0].[CreateTime]
+FROM [dbo].[SystemMessage] AS [t0]
+WHERE ([t0].[AlwaysShow] = 1) OR (([t0].[StartDate] <= @p0) AND (DATEADD(ms, (CONVERT(BigInt,@p1 * 86400000)) % 86400000, DATEADD(day, (CONVERT(BigInt,@p1 * 86400000)) / 86400000, [t0].[EndDate])) > @p2))
+-- @p0: Input DateTime (Size = -1; Prec = 0; Scale = 0) [2016/6/15 下午 04:39:22]
+-- @p1: Input Float (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input DateTime (Size = -1; Prec = 0; Scale = 0) [2016/6/15 下午 04:39:22]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+
+2016/06/15 16:39:33
+SELECT TOP (1) [t0].[UID], [t0].[UserName], [t0].[PID], [t0].[Password], [t0].[ContactTitle], [t0].[Address], [t0].[City], [t0].[Region], [t0].[PostalCode], [t0].[Country], [t0].[MobilePhone], [t0].[Phone], [t0].[Phone2], [t0].[Fax], [t0].[EMail], [t0].[Expiration], [t0].[Creator], [t0].[AuthID], [t0].[LevelID], [t0].[ThemeName], [t0].[Password2], [t2].[test], [t2].[UID] AS [UID2], [t2].[CurrentLevel]
+FROM [dbo].[UserProfile] AS [t0]
+LEFT OUTER JOIN (
+    SELECT 1 AS [test], [t1].[UID], [t1].[CurrentLevel]
+    FROM [dbo].[UserProfileStatus] AS [t1]
+    ) AS [t2] ON [t2].[UID] = [t0].[UID]
+WHERE ([t0].[PID] = @p0) AND ([t2].[CurrentLevel] <> @p1)
+-- @p0: Input NVarChar (Size = 4000; Prec = 0; Scale = 0) [ifsadmin]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [1101]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[UID], [t0].[RoleID], [t0].[OrgaCateID], [t1].[OrgaCateID] AS [OrgaCateID2], [t1].[CompanyID], [t1].[CategoryID], [t2].[ContactName], [t2].[Fax], [t2].[LogoURL], [t2].[CompanyName], [t2].[CompanyID] AS [CompanyID2], [t2].[ReceiptNo], [t2].[Phone], [t2].[ContactFax], [t2].[ContactPhone], [t2].[ContactMobilePhone], [t2].[RegAddr], [t2].[UndertakerName], [t2].[Addr], [t2].[EnglishName], [t2].[EnglishAddr], [t2].[EnglishRegAddr], [t2].[ContactEmail], [t2].[UndertakerPhone], [t2].[UndertakerFax], [t2].[UndertakerMobilePhone], [t2].[InvoiceSignature], [t2].[UndertakerID], [t2].[ContactTitle], [t3].[CategoryID] AS [CategoryID2], [t3].[Category], [t3].[CharacterURL], [t4].[RoleID] AS [RoleID2], [t4].[SiteMenu], [t4].[Role]
+FROM [dbo].[UserRole] AS [t0]
+INNER JOIN ([dbo].[OrganizationCategory] AS [t1]
+    INNER JOIN [dbo].[Organization] AS [t2] ON [t2].[CompanyID] = [t1].[CompanyID]
+    INNER JOIN [dbo].[CategoryDefinition] AS [t3] ON [t3].[CategoryID] = [t1].[CategoryID]) ON [t1].[OrgaCateID] = [t0].[OrgaCateID]
+INNER JOIN [dbo].[UserRoleDefinition] AS [t4] ON [t4].[RoleID] = [t0].[RoleID]
+WHERE [t0].[UID] = @x1
+-- @x1: Input Int (Size = -1; Prec = 0; Scale = 0) [2]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+
+2016/06/15 16:39:38
+SELECT TOP (1) [t1].[MenuID], [t1].[SiteMenu]
+FROM [dbo].[UserMenu] AS [t0]
+INNER JOIN [dbo].[MenuControl] AS [t1] ON [t1].[MenuID] = [t0].[MenuID]
+WHERE ([t0].[RoleID] = @p0) AND ([t0].[CategoryID] = @p1)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+
+2016/06/15 16:39:40
+SELECT [t0].[MsgID], [t0].[MessageContents], [t0].[StartDate], [t0].[EndDate], [t0].[AlwaysShow], [t0].[UpdateTime], [t0].[CreateTime]
+FROM [dbo].[SystemMessage] AS [t0]
+WHERE ([t0].[AlwaysShow] = 1) OR (([t0].[StartDate] <= @p0) AND (DATEADD(ms, (CONVERT(BigInt,@p1 * 86400000)) % 86400000, DATEADD(day, (CONVERT(BigInt,@p1 * 86400000)) / 86400000, [t0].[EndDate])) > @p2))
+-- @p0: Input DateTime (Size = -1; Prec = 0; Scale = 0) [2016/6/15 下午 04:39:38]
+-- @p1: Input Float (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input DateTime (Size = -1; Prec = 0; Scale = 0) [2016/6/15 下午 04:39:38]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+
+2016/06/15 16:44:18
+SELECT [t0].[TrackID], [t0].[TrackCode], [t0].[Year], [t0].[PeriodNo]
+FROM [dbo].[InvoiceTrackCode] AS [t0]
+WHERE ([t0].[Year] = @p0) AND ([t0].[PeriodNo] = @p1)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [2016]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [2]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[IntervalID], [t0].[TrackID], [t0].[SellerID], [t0].[StartNo], [t0].[EndNo]
+FROM [dbo].[InvoiceNoInterval] AS [t0]
+WHERE [t0].[TrackID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[UnassignedInvoiceNo] AS [t0]
+WHERE ([t0].[TrackID] = @p0) AND ([t0].[SellerID] = @p1)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [2420]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[UAID], [t0].[TrackID], [t0].[SellerID], [t0].[InvoiceBeginNo], [t0].[InvoiceEndNo]
+FROM [dbo].[UnassignedInvoiceNo] AS [t0]
+WHERE ([t0].[TrackID] = @p0) AND ([t0].[SellerID] = @p1)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [2420]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT TOP (1) [t0].[ContactName], [t0].[Fax], [t0].[LogoURL], [t0].[CompanyName], [t0].[CompanyID], [t0].[ReceiptNo], [t0].[Phone], [t0].[ContactFax], [t0].[ContactPhone], [t0].[ContactMobilePhone], [t0].[RegAddr], [t0].[UndertakerName], [t0].[Addr], [t0].[EnglishName], [t0].[EnglishAddr], [t0].[EnglishRegAddr], [t0].[ContactEmail], [t0].[UndertakerPhone], [t0].[UndertakerFax], [t0].[UndertakerMobilePhone], [t0].[InvoiceSignature], [t0].[UndertakerID], [t0].[ContactTitle]
+FROM [dbo].[Organization] AS [t0]
+WHERE [t0].[CompanyID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [2420]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[OrgaCateID], [t0].[CompanyID], [t0].[CategoryID]
+FROM [dbo].[OrganizationCategory] AS [t0]
+WHERE [t0].[CompanyID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [2420]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[InvoiceNo] AS [value]
+FROM [dbo].[InvoiceNoAssignment] AS [t0]
+WHERE [t0].[IntervalID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [152]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[UnassignedInvoiceNo] AS [t0]
+WHERE ([t0].[TrackID] = @p0) AND ([t0].[SellerID] = @p1)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [2425]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[UAID], [t0].[TrackID], [t0].[SellerID], [t0].[InvoiceBeginNo], [t0].[InvoiceEndNo]
+FROM [dbo].[UnassignedInvoiceNo] AS [t0]
+WHERE ([t0].[TrackID] = @p0) AND ([t0].[SellerID] = @p1)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [2425]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT TOP (1) [t0].[ContactName], [t0].[Fax], [t0].[LogoURL], [t0].[CompanyName], [t0].[CompanyID], [t0].[ReceiptNo], [t0].[Phone], [t0].[ContactFax], [t0].[ContactPhone], [t0].[ContactMobilePhone], [t0].[RegAddr], [t0].[UndertakerName], [t0].[Addr], [t0].[EnglishName], [t0].[EnglishAddr], [t0].[EnglishRegAddr], [t0].[ContactEmail], [t0].[UndertakerPhone], [t0].[UndertakerFax], [t0].[UndertakerMobilePhone], [t0].[InvoiceSignature], [t0].[UndertakerID], [t0].[ContactTitle]
+FROM [dbo].[Organization] AS [t0]
+WHERE [t0].[CompanyID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [2425]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[OrgaCateID], [t0].[CompanyID], [t0].[CategoryID]
+FROM [dbo].[OrganizationCategory] AS [t0]
+WHERE [t0].[CompanyID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [2425]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[InvoiceNo] AS [value]
+FROM [dbo].[InvoiceNoAssignment] AS [t0]
+WHERE [t0].[IntervalID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [153]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[UnassignedInvoiceNo] AS [t0]
+WHERE ([t0].[TrackID] = @p0) AND ([t0].[SellerID] = @p1)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [2392]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[UAID], [t0].[TrackID], [t0].[SellerID], [t0].[InvoiceBeginNo], [t0].[InvoiceEndNo]
+FROM [dbo].[UnassignedInvoiceNo] AS [t0]
+WHERE ([t0].[TrackID] = @p0) AND ([t0].[SellerID] = @p1)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [2392]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT TOP (1) [t0].[ContactName], [t0].[Fax], [t0].[LogoURL], [t0].[CompanyName], [t0].[CompanyID], [t0].[ReceiptNo], [t0].[Phone], [t0].[ContactFax], [t0].[ContactPhone], [t0].[ContactMobilePhone], [t0].[RegAddr], [t0].[UndertakerName], [t0].[Addr], [t0].[EnglishName], [t0].[EnglishAddr], [t0].[EnglishRegAddr], [t0].[ContactEmail], [t0].[UndertakerPhone], [t0].[UndertakerFax], [t0].[UndertakerMobilePhone], [t0].[InvoiceSignature], [t0].[UndertakerID], [t0].[ContactTitle]
+FROM [dbo].[Organization] AS [t0]
+WHERE [t0].[CompanyID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [2392]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[OrgaCateID], [t0].[CompanyID], [t0].[CategoryID]
+FROM [dbo].[OrganizationCategory] AS [t0]
+WHERE [t0].[CompanyID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [2392]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[InvoiceNo] AS [value]
+FROM [dbo].[InvoiceNoAssignment] AS [t0]
+WHERE [t0].[IntervalID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [154]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[UnassignedInvoiceNo] AS [t0]
+WHERE ([t0].[TrackID] = @p0) AND ([t0].[SellerID] = @p1)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [2415]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[UAID], [t0].[TrackID], [t0].[SellerID], [t0].[InvoiceBeginNo], [t0].[InvoiceEndNo]
+FROM [dbo].[UnassignedInvoiceNo] AS [t0]
+WHERE ([t0].[TrackID] = @p0) AND ([t0].[SellerID] = @p1)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [2415]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT TOP (1) [t0].[ContactName], [t0].[Fax], [t0].[LogoURL], [t0].[CompanyName], [t0].[CompanyID], [t0].[ReceiptNo], [t0].[Phone], [t0].[ContactFax], [t0].[ContactPhone], [t0].[ContactMobilePhone], [t0].[RegAddr], [t0].[UndertakerName], [t0].[Addr], [t0].[EnglishName], [t0].[EnglishAddr], [t0].[EnglishRegAddr], [t0].[ContactEmail], [t0].[UndertakerPhone], [t0].[UndertakerFax], [t0].[UndertakerMobilePhone], [t0].[InvoiceSignature], [t0].[UndertakerID], [t0].[ContactTitle]
+FROM [dbo].[Organization] AS [t0]
+WHERE [t0].[CompanyID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [2415]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[OrgaCateID], [t0].[CompanyID], [t0].[CategoryID]
+FROM [dbo].[OrganizationCategory] AS [t0]
+WHERE [t0].[CompanyID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [2415]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[InvoiceNo] AS [value]
+FROM [dbo].[InvoiceNoAssignment] AS [t0]
+WHERE [t0].[IntervalID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [155]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[UnassignedInvoiceNo] AS [t0]
+WHERE ([t0].[TrackID] = @p0) AND ([t0].[SellerID] = @p1)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [2421]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[UAID], [t0].[TrackID], [t0].[SellerID], [t0].[InvoiceBeginNo], [t0].[InvoiceEndNo]
+FROM [dbo].[UnassignedInvoiceNo] AS [t0]
+WHERE ([t0].[TrackID] = @p0) AND ([t0].[SellerID] = @p1)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [2421]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT TOP (1) [t0].[ContactName], [t0].[Fax], [t0].[LogoURL], [t0].[CompanyName], [t0].[CompanyID], [t0].[ReceiptNo], [t0].[Phone], [t0].[ContactFax], [t0].[ContactPhone], [t0].[ContactMobilePhone], [t0].[RegAddr], [t0].[UndertakerName], [t0].[Addr], [t0].[EnglishName], [t0].[EnglishAddr], [t0].[EnglishRegAddr], [t0].[ContactEmail], [t0].[UndertakerPhone], [t0].[UndertakerFax], [t0].[UndertakerMobilePhone], [t0].[InvoiceSignature], [t0].[UndertakerID], [t0].[ContactTitle]
+FROM [dbo].[Organization] AS [t0]
+WHERE [t0].[CompanyID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [2421]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[OrgaCateID], [t0].[CompanyID], [t0].[CategoryID]
+FROM [dbo].[OrganizationCategory] AS [t0]
+WHERE [t0].[CompanyID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [2421]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[InvoiceNo] AS [value]
+FROM [dbo].[InvoiceNoAssignment] AS [t0]
+WHERE [t0].[IntervalID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [156]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[UnassignedInvoiceNo] AS [t0]
+WHERE ([t0].[TrackID] = @p0) AND ([t0].[SellerID] = @p1)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [2393]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[UAID], [t0].[TrackID], [t0].[SellerID], [t0].[InvoiceBeginNo], [t0].[InvoiceEndNo]
+FROM [dbo].[UnassignedInvoiceNo] AS [t0]
+WHERE ([t0].[TrackID] = @p0) AND ([t0].[SellerID] = @p1)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [2393]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT TOP (1) [t0].[ContactName], [t0].[Fax], [t0].[LogoURL], [t0].[CompanyName], [t0].[CompanyID], [t0].[ReceiptNo], [t0].[Phone], [t0].[ContactFax], [t0].[ContactPhone], [t0].[ContactMobilePhone], [t0].[RegAddr], [t0].[UndertakerName], [t0].[Addr], [t0].[EnglishName], [t0].[EnglishAddr], [t0].[EnglishRegAddr], [t0].[ContactEmail], [t0].[UndertakerPhone], [t0].[UndertakerFax], [t0].[UndertakerMobilePhone], [t0].[InvoiceSignature], [t0].[UndertakerID], [t0].[ContactTitle]
+FROM [dbo].[Organization] AS [t0]
+WHERE [t0].[CompanyID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [2393]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[OrgaCateID], [t0].[CompanyID], [t0].[CategoryID]
+FROM [dbo].[OrganizationCategory] AS [t0]
+WHERE [t0].[CompanyID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [2393]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[InvoiceNo] AS [value]
+FROM [dbo].[InvoiceNoAssignment] AS [t0]
+WHERE [t0].[IntervalID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [157]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[UnassignedInvoiceNo] AS [t0]
+WHERE ([t0].[TrackID] = @p0) AND ([t0].[SellerID] = @p1)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [2403]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[UAID], [t0].[TrackID], [t0].[SellerID], [t0].[InvoiceBeginNo], [t0].[InvoiceEndNo]
+FROM [dbo].[UnassignedInvoiceNo] AS [t0]
+WHERE ([t0].[TrackID] = @p0) AND ([t0].[SellerID] = @p1)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [2403]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT TOP (1) [t0].[ContactName], [t0].[Fax], [t0].[LogoURL], [t0].[CompanyName], [t0].[CompanyID], [t0].[ReceiptNo], [t0].[Phone], [t0].[ContactFax], [t0].[ContactPhone], [t0].[ContactMobilePhone], [t0].[RegAddr], [t0].[UndertakerName], [t0].[Addr], [t0].[EnglishName], [t0].[EnglishAddr], [t0].[EnglishRegAddr], [t0].[ContactEmail], [t0].[UndertakerPhone], [t0].[UndertakerFax], [t0].[UndertakerMobilePhone], [t0].[InvoiceSignature], [t0].[UndertakerID], [t0].[ContactTitle]
+FROM [dbo].[Organization] AS [t0]
+WHERE [t0].[CompanyID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [2403]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[OrgaCateID], [t0].[CompanyID], [t0].[CategoryID]
+FROM [dbo].[OrganizationCategory] AS [t0]
+WHERE [t0].[CompanyID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [2403]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[InvoiceNo] AS [value]
+FROM [dbo].[InvoiceNoAssignment] AS [t0]
+WHERE [t0].[IntervalID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [158]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[UnassignedInvoiceNo] AS [t0]
+WHERE ([t0].[TrackID] = @p0) AND ([t0].[SellerID] = @p1)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [2417]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[UAID], [t0].[TrackID], [t0].[SellerID], [t0].[InvoiceBeginNo], [t0].[InvoiceEndNo]
+FROM [dbo].[UnassignedInvoiceNo] AS [t0]
+WHERE ([t0].[TrackID] = @p0) AND ([t0].[SellerID] = @p1)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [2417]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT TOP (1) [t0].[ContactName], [t0].[Fax], [t0].[LogoURL], [t0].[CompanyName], [t0].[CompanyID], [t0].[ReceiptNo], [t0].[Phone], [t0].[ContactFax], [t0].[ContactPhone], [t0].[ContactMobilePhone], [t0].[RegAddr], [t0].[UndertakerName], [t0].[Addr], [t0].[EnglishName], [t0].[EnglishAddr], [t0].[EnglishRegAddr], [t0].[ContactEmail], [t0].[UndertakerPhone], [t0].[UndertakerFax], [t0].[UndertakerMobilePhone], [t0].[InvoiceSignature], [t0].[UndertakerID], [t0].[ContactTitle]
+FROM [dbo].[Organization] AS [t0]
+WHERE [t0].[CompanyID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [2417]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[OrgaCateID], [t0].[CompanyID], [t0].[CategoryID]
+FROM [dbo].[OrganizationCategory] AS [t0]
+WHERE [t0].[CompanyID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [2417]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[InvoiceNo] AS [value]
+FROM [dbo].[InvoiceNoAssignment] AS [t0]
+WHERE [t0].[IntervalID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [159]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[UnassignedInvoiceNo] AS [t0]
+WHERE ([t0].[TrackID] = @p0) AND ([t0].[SellerID] = @p1)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [2413]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[UAID], [t0].[TrackID], [t0].[SellerID], [t0].[InvoiceBeginNo], [t0].[InvoiceEndNo]
+FROM [dbo].[UnassignedInvoiceNo] AS [t0]
+WHERE ([t0].[TrackID] = @p0) AND ([t0].[SellerID] = @p1)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [2413]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT TOP (1) [t0].[ContactName], [t0].[Fax], [t0].[LogoURL], [t0].[CompanyName], [t0].[CompanyID], [t0].[ReceiptNo], [t0].[Phone], [t0].[ContactFax], [t0].[ContactPhone], [t0].[ContactMobilePhone], [t0].[RegAddr], [t0].[UndertakerName], [t0].[Addr], [t0].[EnglishName], [t0].[EnglishAddr], [t0].[EnglishRegAddr], [t0].[ContactEmail], [t0].[UndertakerPhone], [t0].[UndertakerFax], [t0].[UndertakerMobilePhone], [t0].[InvoiceSignature], [t0].[UndertakerID], [t0].[ContactTitle]
+FROM [dbo].[Organization] AS [t0]
+WHERE [t0].[CompanyID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [2413]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[OrgaCateID], [t0].[CompanyID], [t0].[CategoryID]
+FROM [dbo].[OrganizationCategory] AS [t0]
+WHERE [t0].[CompanyID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [2413]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[InvoiceNo] AS [value]
+FROM [dbo].[InvoiceNoAssignment] AS [t0]
+WHERE [t0].[IntervalID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [160]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[UnassignedInvoiceNo] AS [t0]
+WHERE ([t0].[TrackID] = @p0) AND ([t0].[SellerID] = @p1)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [2419]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[UAID], [t0].[TrackID], [t0].[SellerID], [t0].[InvoiceBeginNo], [t0].[InvoiceEndNo]
+FROM [dbo].[UnassignedInvoiceNo] AS [t0]
+WHERE ([t0].[TrackID] = @p0) AND ([t0].[SellerID] = @p1)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [2419]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT TOP (1) [t0].[ContactName], [t0].[Fax], [t0].[LogoURL], [t0].[CompanyName], [t0].[CompanyID], [t0].[ReceiptNo], [t0].[Phone], [t0].[ContactFax], [t0].[ContactPhone], [t0].[ContactMobilePhone], [t0].[RegAddr], [t0].[UndertakerName], [t0].[Addr], [t0].[EnglishName], [t0].[EnglishAddr], [t0].[EnglishRegAddr], [t0].[ContactEmail], [t0].[UndertakerPhone], [t0].[UndertakerFax], [t0].[UndertakerMobilePhone], [t0].[InvoiceSignature], [t0].[UndertakerID], [t0].[ContactTitle]
+FROM [dbo].[Organization] AS [t0]
+WHERE [t0].[CompanyID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [2419]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[OrgaCateID], [t0].[CompanyID], [t0].[CategoryID]
+FROM [dbo].[OrganizationCategory] AS [t0]
+WHERE [t0].[CompanyID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [2419]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[InvoiceNo] AS [value]
+FROM [dbo].[InvoiceNoAssignment] AS [t0]
+WHERE [t0].[IntervalID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [161]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[UnassignedInvoiceNo] AS [t0]
+WHERE ([t0].[TrackID] = @p0) AND ([t0].[SellerID] = @p1)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [2411]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[UAID], [t0].[TrackID], [t0].[SellerID], [t0].[InvoiceBeginNo], [t0].[InvoiceEndNo]
+FROM [dbo].[UnassignedInvoiceNo] AS [t0]
+WHERE ([t0].[TrackID] = @p0) AND ([t0].[SellerID] = @p1)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [2411]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT TOP (1) [t0].[ContactName], [t0].[Fax], [t0].[LogoURL], [t0].[CompanyName], [t0].[CompanyID], [t0].[ReceiptNo], [t0].[Phone], [t0].[ContactFax], [t0].[ContactPhone], [t0].[ContactMobilePhone], [t0].[RegAddr], [t0].[UndertakerName], [t0].[Addr], [t0].[EnglishName], [t0].[EnglishAddr], [t0].[EnglishRegAddr], [t0].[ContactEmail], [t0].[UndertakerPhone], [t0].[UndertakerFax], [t0].[UndertakerMobilePhone], [t0].[InvoiceSignature], [t0].[UndertakerID], [t0].[ContactTitle]
+FROM [dbo].[Organization] AS [t0]
+WHERE [t0].[CompanyID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [2411]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[OrgaCateID], [t0].[CompanyID], [t0].[CategoryID]
+FROM [dbo].[OrganizationCategory] AS [t0]
+WHERE [t0].[CompanyID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [2411]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[InvoiceNo] AS [value]
+FROM [dbo].[InvoiceNoAssignment] AS [t0]
+WHERE [t0].[IntervalID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [162]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[UnassignedInvoiceNo] AS [t0]
+WHERE ([t0].[TrackID] = @p0) AND ([t0].[SellerID] = @p1)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [2416]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[UAID], [t0].[TrackID], [t0].[SellerID], [t0].[InvoiceBeginNo], [t0].[InvoiceEndNo]
+FROM [dbo].[UnassignedInvoiceNo] AS [t0]
+WHERE ([t0].[TrackID] = @p0) AND ([t0].[SellerID] = @p1)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [2416]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT TOP (1) [t0].[ContactName], [t0].[Fax], [t0].[LogoURL], [t0].[CompanyName], [t0].[CompanyID], [t0].[ReceiptNo], [t0].[Phone], [t0].[ContactFax], [t0].[ContactPhone], [t0].[ContactMobilePhone], [t0].[RegAddr], [t0].[UndertakerName], [t0].[Addr], [t0].[EnglishName], [t0].[EnglishAddr], [t0].[EnglishRegAddr], [t0].[ContactEmail], [t0].[UndertakerPhone], [t0].[UndertakerFax], [t0].[UndertakerMobilePhone], [t0].[InvoiceSignature], [t0].[UndertakerID], [t0].[ContactTitle]
+FROM [dbo].[Organization] AS [t0]
+WHERE [t0].[CompanyID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [2416]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[OrgaCateID], [t0].[CompanyID], [t0].[CategoryID]
+FROM [dbo].[OrganizationCategory] AS [t0]
+WHERE [t0].[CompanyID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [2416]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[InvoiceNo] AS [value]
+FROM [dbo].[InvoiceNoAssignment] AS [t0]
+WHERE [t0].[IntervalID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [163]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[UnassignedInvoiceNo] AS [t0]
+WHERE ([t0].[TrackID] = @p0) AND ([t0].[SellerID] = @p1)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [2416]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[UAID], [t0].[TrackID], [t0].[SellerID], [t0].[InvoiceBeginNo], [t0].[InvoiceEndNo]
+FROM [dbo].[UnassignedInvoiceNo] AS [t0]
+WHERE ([t0].[TrackID] = @p0) AND ([t0].[SellerID] = @p1)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [2416]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[InvoiceNo] AS [value]
+FROM [dbo].[InvoiceNoAssignment] AS [t0]
+WHERE [t0].[IntervalID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [164]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[UnassignedInvoiceNo] AS [t0]
+WHERE ([t0].[TrackID] = @p0) AND ([t0].[SellerID] = @p1)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [2414]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[UAID], [t0].[TrackID], [t0].[SellerID], [t0].[InvoiceBeginNo], [t0].[InvoiceEndNo]
+FROM [dbo].[UnassignedInvoiceNo] AS [t0]
+WHERE ([t0].[TrackID] = @p0) AND ([t0].[SellerID] = @p1)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [2414]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT TOP (1) [t0].[ContactName], [t0].[Fax], [t0].[LogoURL], [t0].[CompanyName], [t0].[CompanyID], [t0].[ReceiptNo], [t0].[Phone], [t0].[ContactFax], [t0].[ContactPhone], [t0].[ContactMobilePhone], [t0].[RegAddr], [t0].[UndertakerName], [t0].[Addr], [t0].[EnglishName], [t0].[EnglishAddr], [t0].[EnglishRegAddr], [t0].[ContactEmail], [t0].[UndertakerPhone], [t0].[UndertakerFax], [t0].[UndertakerMobilePhone], [t0].[InvoiceSignature], [t0].[UndertakerID], [t0].[ContactTitle]
+FROM [dbo].[Organization] AS [t0]
+WHERE [t0].[CompanyID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [2414]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[OrgaCateID], [t0].[CompanyID], [t0].[CategoryID]
+FROM [dbo].[OrganizationCategory] AS [t0]
+WHERE [t0].[CompanyID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [2414]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[InvoiceNo] AS [value]
+FROM [dbo].[InvoiceNoAssignment] AS [t0]
+WHERE [t0].[IntervalID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [165]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[IntervalID], [t0].[TrackID], [t0].[SellerID], [t0].[StartNo], [t0].[EndNo]
+FROM [dbo].[InvoiceNoInterval] AS [t0]
+WHERE [t0].[TrackID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [95]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[IntervalID], [t0].[TrackID], [t0].[SellerID], [t0].[StartNo], [t0].[EndNo]
+FROM [dbo].[InvoiceNoInterval] AS [t0]
+WHERE [t0].[TrackID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [96]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[IntervalID], [t0].[TrackID], [t0].[SellerID], [t0].[StartNo], [t0].[EndNo]
+FROM [dbo].[InvoiceNoInterval] AS [t0]
+WHERE [t0].[TrackID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [97]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[IntervalID], [t0].[TrackID], [t0].[SellerID], [t0].[StartNo], [t0].[EndNo]
+FROM [dbo].[InvoiceNoInterval] AS [t0]
+WHERE [t0].[TrackID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [98]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[IntervalID], [t0].[TrackID], [t0].[SellerID], [t0].[StartNo], [t0].[EndNo]
+FROM [dbo].[InvoiceNoInterval] AS [t0]
+WHERE [t0].[TrackID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [99]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[IntervalID], [t0].[TrackID], [t0].[SellerID], [t0].[StartNo], [t0].[EndNo]
+FROM [dbo].[InvoiceNoInterval] AS [t0]
+WHERE [t0].[TrackID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [154]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[IntervalID], [t0].[TrackID], [t0].[SellerID], [t0].[StartNo], [t0].[EndNo]
+FROM [dbo].[InvoiceNoInterval] AS [t0]
+WHERE [t0].[TrackID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [155]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[IntervalID], [t0].[TrackID], [t0].[SellerID], [t0].[StartNo], [t0].[EndNo]
+FROM [dbo].[InvoiceNoInterval] AS [t0]
+WHERE [t0].[TrackID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [156]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[IntervalID], [t0].[TrackID], [t0].[SellerID], [t0].[StartNo], [t0].[EndNo]
+FROM [dbo].[InvoiceNoInterval] AS [t0]
+WHERE [t0].[TrackID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [157]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[IntervalID], [t0].[TrackID], [t0].[SellerID], [t0].[StartNo], [t0].[EndNo]
+FROM [dbo].[InvoiceNoInterval] AS [t0]
+WHERE [t0].[TrackID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [158]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[IntervalID], [t0].[TrackID], [t0].[SellerID], [t0].[StartNo], [t0].[EndNo]
+FROM [dbo].[InvoiceNoInterval] AS [t0]
+WHERE [t0].[TrackID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [159]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[IntervalID], [t0].[TrackID], [t0].[SellerID], [t0].[StartNo], [t0].[EndNo]
+FROM [dbo].[InvoiceNoInterval] AS [t0]
+WHERE [t0].[TrackID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [160]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[IntervalID], [t0].[TrackID], [t0].[SellerID], [t0].[StartNo], [t0].[EndNo]
+FROM [dbo].[InvoiceNoInterval] AS [t0]
+WHERE [t0].[TrackID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [161]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[IntervalID], [t0].[TrackID], [t0].[SellerID], [t0].[StartNo], [t0].[EndNo]
+FROM [dbo].[InvoiceNoInterval] AS [t0]
+WHERE [t0].[TrackID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [162]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[IntervalID], [t0].[TrackID], [t0].[SellerID], [t0].[StartNo], [t0].[EndNo]
+FROM [dbo].[InvoiceNoInterval] AS [t0]
+WHERE [t0].[TrackID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [163]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[IntervalID], [t0].[TrackID], [t0].[SellerID], [t0].[StartNo], [t0].[EndNo]
+FROM [dbo].[InvoiceNoInterval] AS [t0]
+WHERE [t0].[TrackID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [164]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[UnassignedInvoiceNo] AS [t0]
+WHERE ([t0].[TrackID] = @p0) AND ([t0].[SellerID] = @p1)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [164]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [2409]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[UAID], [t0].[TrackID], [t0].[SellerID], [t0].[InvoiceBeginNo], [t0].[InvoiceEndNo]
+FROM [dbo].[UnassignedInvoiceNo] AS [t0]
+WHERE ([t0].[TrackID] = @p0) AND ([t0].[SellerID] = @p1)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [164]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [2409]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT TOP (1) [t0].[ContactName], [t0].[Fax], [t0].[LogoURL], [t0].[CompanyName], [t0].[CompanyID], [t0].[ReceiptNo], [t0].[Phone], [t0].[ContactFax], [t0].[ContactPhone], [t0].[ContactMobilePhone], [t0].[RegAddr], [t0].[UndertakerName], [t0].[Addr], [t0].[EnglishName], [t0].[EnglishAddr], [t0].[EnglishRegAddr], [t0].[ContactEmail], [t0].[UndertakerPhone], [t0].[UndertakerFax], [t0].[UndertakerMobilePhone], [t0].[InvoiceSignature], [t0].[UndertakerID], [t0].[ContactTitle]
+FROM [dbo].[Organization] AS [t0]
+WHERE [t0].[CompanyID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [2409]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[OrgaCateID], [t0].[CompanyID], [t0].[CategoryID]
+FROM [dbo].[OrganizationCategory] AS [t0]
+WHERE [t0].[CompanyID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [2409]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[InvoiceNo] AS [value]
+FROM [dbo].[InvoiceNoAssignment] AS [t0]
+WHERE [t0].[IntervalID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [166]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[IntervalID], [t0].[TrackID], [t0].[SellerID], [t0].[StartNo], [t0].[EndNo]
+FROM [dbo].[InvoiceNoInterval] AS [t0]
+WHERE [t0].[TrackID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [165]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[IntervalID], [t0].[TrackID], [t0].[SellerID], [t0].[StartNo], [t0].[EndNo]
+FROM [dbo].[InvoiceNoInterval] AS [t0]
+WHERE [t0].[TrackID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [166]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[IntervalID], [t0].[TrackID], [t0].[SellerID], [t0].[StartNo], [t0].[EndNo]
+FROM [dbo].[InvoiceNoInterval] AS [t0]
+WHERE [t0].[TrackID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [167]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[IntervalID], [t0].[TrackID], [t0].[SellerID], [t0].[StartNo], [t0].[EndNo]
+FROM [dbo].[InvoiceNoInterval] AS [t0]
+WHERE [t0].[TrackID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [168]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[IntervalID], [t0].[TrackID], [t0].[SellerID], [t0].[StartNo], [t0].[EndNo]
+FROM [dbo].[InvoiceNoInterval] AS [t0]
+WHERE [t0].[TrackID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [169]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[IntervalID], [t0].[TrackID], [t0].[SellerID], [t0].[StartNo], [t0].[EndNo]
+FROM [dbo].[InvoiceNoInterval] AS [t0]
+WHERE [t0].[TrackID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [170]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[IntervalID], [t0].[TrackID], [t0].[SellerID], [t0].[StartNo], [t0].[EndNo]
+FROM [dbo].[InvoiceNoInterval] AS [t0]
+WHERE [t0].[TrackID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [171]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[IntervalID], [t0].[TrackID], [t0].[SellerID], [t0].[StartNo], [t0].[EndNo]
+FROM [dbo].[InvoiceNoInterval] AS [t0]
+WHERE [t0].[TrackID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [172]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[IntervalID], [t0].[TrackID], [t0].[SellerID], [t0].[StartNo], [t0].[EndNo]
+FROM [dbo].[InvoiceNoInterval] AS [t0]
+WHERE [t0].[TrackID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [173]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[IntervalID], [t0].[TrackID], [t0].[SellerID], [t0].[StartNo], [t0].[EndNo]
+FROM [dbo].[InvoiceNoInterval] AS [t0]
+WHERE [t0].[TrackID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [174]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[IntervalID], [t0].[TrackID], [t0].[SellerID], [t0].[StartNo], [t0].[EndNo]
+FROM [dbo].[InvoiceNoInterval] AS [t0]
+WHERE [t0].[TrackID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [175]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[IntervalID], [t0].[TrackID], [t0].[SellerID], [t0].[StartNo], [t0].[EndNo]
+FROM [dbo].[InvoiceNoInterval] AS [t0]
+WHERE [t0].[TrackID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [176]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[IntervalID], [t0].[TrackID], [t0].[SellerID], [t0].[StartNo], [t0].[EndNo]
+FROM [dbo].[InvoiceNoInterval] AS [t0]
+WHERE [t0].[TrackID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [177]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[IntervalID], [t0].[TrackID], [t0].[SellerID], [t0].[StartNo], [t0].[EndNo]
+FROM [dbo].[InvoiceNoInterval] AS [t0]
+WHERE [t0].[TrackID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [178]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[IntervalID], [t0].[TrackID], [t0].[SellerID], [t0].[StartNo], [t0].[EndNo]
+FROM [dbo].[InvoiceNoInterval] AS [t0]
+WHERE [t0].[TrackID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [179]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[IntervalID], [t0].[TrackID], [t0].[SellerID], [t0].[StartNo], [t0].[EndNo]
+FROM [dbo].[InvoiceNoInterval] AS [t0]
+WHERE [t0].[TrackID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [128]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[IntervalID], [t0].[TrackID], [t0].[SellerID], [t0].[StartNo], [t0].[EndNo]
+FROM [dbo].[InvoiceNoInterval] AS [t0]
+WHERE [t0].[TrackID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [125]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[IntervalID], [t0].[TrackID], [t0].[SellerID], [t0].[StartNo], [t0].[EndNo]
+FROM [dbo].[InvoiceNoInterval] AS [t0]
+WHERE [t0].[TrackID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [76]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[UnassignedInvoiceNo] AS [t0]
+WHERE ([t0].[TrackID] = @p0) AND ([t0].[SellerID] = @p1)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [76]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [2420]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[UAID], [t0].[TrackID], [t0].[SellerID], [t0].[InvoiceBeginNo], [t0].[InvoiceEndNo]
+FROM [dbo].[UnassignedInvoiceNo] AS [t0]
+WHERE ([t0].[TrackID] = @p0) AND ([t0].[SellerID] = @p1)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [76]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [2420]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[InvoiceNo] AS [value]
+FROM [dbo].[InvoiceNoAssignment] AS [t0]
+WHERE [t0].[IntervalID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [151]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[IntervalID], [t0].[TrackID], [t0].[SellerID], [t0].[StartNo], [t0].[EndNo]
+FROM [dbo].[InvoiceNoInterval] AS [t0]
+WHERE [t0].[TrackID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [126]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+INSERT INTO [dbo].[UnassignedInvoiceNo]([TrackID], [SellerID], [InvoiceBeginNo], [InvoiceEndNo])
+VALUES (@p0, @p1, @p2, @p3)
+
+SELECT CONVERT(Int,SCOPE_IDENTITY()) AS [value]
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [2420]
+-- @p2: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p3: Input Int (Size = -1; Prec = 0; Scale = 0) [10000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+INSERT INTO [dbo].[UnassignedInvoiceNo]([TrackID], [SellerID], [InvoiceBeginNo], [InvoiceEndNo])
+VALUES (@p0, @p1, @p2, @p3)
+
+SELECT CONVERT(Int,SCOPE_IDENTITY()) AS [value]
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [2425]
+-- @p2: Input Int (Size = -1; Prec = 0; Scale = 0) [20001]
+-- @p3: Input Int (Size = -1; Prec = 0; Scale = 0) [30000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+INSERT INTO [dbo].[UnassignedInvoiceNo]([TrackID], [SellerID], [InvoiceBeginNo], [InvoiceEndNo])
+VALUES (@p0, @p1, @p2, @p3)
+
+SELECT CONVERT(Int,SCOPE_IDENTITY()) AS [value]
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [2392]
+-- @p2: Input Int (Size = -1; Prec = 0; Scale = 0) [50011]
+-- @p3: Input Int (Size = -1; Prec = 0; Scale = 0) [60000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+INSERT INTO [dbo].[UnassignedInvoiceNo]([TrackID], [SellerID], [InvoiceBeginNo], [InvoiceEndNo])
+VALUES (@p0, @p1, @p2, @p3)
+
+SELECT CONVERT(Int,SCOPE_IDENTITY()) AS [value]
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [2415]
+-- @p2: Input Int (Size = -1; Prec = 0; Scale = 0) [60001]
+-- @p3: Input Int (Size = -1; Prec = 0; Scale = 0) [70000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+INSERT INTO [dbo].[UnassignedInvoiceNo]([TrackID], [SellerID], [InvoiceBeginNo], [InvoiceEndNo])
+VALUES (@p0, @p1, @p2, @p3)
+
+SELECT CONVERT(Int,SCOPE_IDENTITY()) AS [value]
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [2421]
+-- @p2: Input Int (Size = -1; Prec = 0; Scale = 0) [70001]
+-- @p3: Input Int (Size = -1; Prec = 0; Scale = 0) [80000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+INSERT INTO [dbo].[UnassignedInvoiceNo]([TrackID], [SellerID], [InvoiceBeginNo], [InvoiceEndNo])
+VALUES (@p0, @p1, @p2, @p3)
+
+SELECT CONVERT(Int,SCOPE_IDENTITY()) AS [value]
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [2393]
+-- @p2: Input Int (Size = -1; Prec = 0; Scale = 0) [80001]
+-- @p3: Input Int (Size = -1; Prec = 0; Scale = 0) [90000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+INSERT INTO [dbo].[UnassignedInvoiceNo]([TrackID], [SellerID], [InvoiceBeginNo], [InvoiceEndNo])
+VALUES (@p0, @p1, @p2, @p3)
+
+SELECT CONVERT(Int,SCOPE_IDENTITY()) AS [value]
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [2403]
+-- @p2: Input Int (Size = -1; Prec = 0; Scale = 0) [90047]
+-- @p3: Input Int (Size = -1; Prec = 0; Scale = 0) [100000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+INSERT INTO [dbo].[UnassignedInvoiceNo]([TrackID], [SellerID], [InvoiceBeginNo], [InvoiceEndNo])
+VALUES (@p0, @p1, @p2, @p3)
+
+SELECT CONVERT(Int,SCOPE_IDENTITY()) AS [value]
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [2417]
+-- @p2: Input Int (Size = -1; Prec = 0; Scale = 0) [100001]
+-- @p3: Input Int (Size = -1; Prec = 0; Scale = 0) [110000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+INSERT INTO [dbo].[UnassignedInvoiceNo]([TrackID], [SellerID], [InvoiceBeginNo], [InvoiceEndNo])
+VALUES (@p0, @p1, @p2, @p3)
+
+SELECT CONVERT(Int,SCOPE_IDENTITY()) AS [value]
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [2413]
+-- @p2: Input Int (Size = -1; Prec = 0; Scale = 0) [110008]
+-- @p3: Input Int (Size = -1; Prec = 0; Scale = 0) [120000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+INSERT INTO [dbo].[UnassignedInvoiceNo]([TrackID], [SellerID], [InvoiceBeginNo], [InvoiceEndNo])
+VALUES (@p0, @p1, @p2, @p3)
+
+SELECT CONVERT(Int,SCOPE_IDENTITY()) AS [value]
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [2419]
+-- @p2: Input Int (Size = -1; Prec = 0; Scale = 0) [120001]
+-- @p3: Input Int (Size = -1; Prec = 0; Scale = 0) [130000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+INSERT INTO [dbo].[UnassignedInvoiceNo]([TrackID], [SellerID], [InvoiceBeginNo], [InvoiceEndNo])
+VALUES (@p0, @p1, @p2, @p3)
+
+SELECT CONVERT(Int,SCOPE_IDENTITY()) AS [value]
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [2411]
+-- @p2: Input Int (Size = -1; Prec = 0; Scale = 0) [130001]
+-- @p3: Input Int (Size = -1; Prec = 0; Scale = 0) [140000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+INSERT INTO [dbo].[UnassignedInvoiceNo]([TrackID], [SellerID], [InvoiceBeginNo], [InvoiceEndNo])
+VALUES (@p0, @p1, @p2, @p3)
+
+SELECT CONVERT(Int,SCOPE_IDENTITY()) AS [value]
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [2416]
+-- @p2: Input Int (Size = -1; Prec = 0; Scale = 0) [140001]
+-- @p3: Input Int (Size = -1; Prec = 0; Scale = 0) [150000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+INSERT INTO [dbo].[UnassignedInvoiceNo]([TrackID], [SellerID], [InvoiceBeginNo], [InvoiceEndNo])
+VALUES (@p0, @p1, @p2, @p3)
+
+SELECT CONVERT(Int,SCOPE_IDENTITY()) AS [value]
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [2416]
+-- @p2: Input Int (Size = -1; Prec = 0; Scale = 0) [150001]
+-- @p3: Input Int (Size = -1; Prec = 0; Scale = 0) [160000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+INSERT INTO [dbo].[UnassignedInvoiceNo]([TrackID], [SellerID], [InvoiceBeginNo], [InvoiceEndNo])
+VALUES (@p0, @p1, @p2, @p3)
+
+SELECT CONVERT(Int,SCOPE_IDENTITY()) AS [value]
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [2414]
+-- @p2: Input Int (Size = -1; Prec = 0; Scale = 0) [160001]
+-- @p3: Input Int (Size = -1; Prec = 0; Scale = 0) [170000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+INSERT INTO [dbo].[UnassignedInvoiceNo]([TrackID], [SellerID], [InvoiceBeginNo], [InvoiceEndNo])
+VALUES (@p0, @p1, @p2, @p3)
+
+SELECT CONVERT(Int,SCOPE_IDENTITY()) AS [value]
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [164]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [2409]
+-- @p2: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p3: Input Int (Size = -1; Prec = 0; Scale = 0) [10000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+INSERT INTO [dbo].[UnassignedInvoiceNo]([TrackID], [SellerID], [InvoiceBeginNo], [InvoiceEndNo])
+VALUES (@p0, @p1, @p2, @p3)
+
+SELECT CONVERT(Int,SCOPE_IDENTITY()) AS [value]
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [76]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [2420]
+-- @p2: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p3: Input Int (Size = -1; Prec = 0; Scale = 0) [10000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+DELETE FROM [dbo].[UnassignedInvoiceNo] WHERE ([UAID] = @p0) AND ([TrackID] = @p1) AND ([SellerID] = @p2) AND ([InvoiceBeginNo] = @p3) AND ([InvoiceEndNo] = @p4)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [20391]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- @p2: Input Int (Size = -1; Prec = 0; Scale = 0) [2420]
+-- @p3: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p4: Input Int (Size = -1; Prec = 0; Scale = 0) [10000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+DELETE FROM [dbo].[UnassignedInvoiceNo] WHERE ([UAID] = @p0) AND ([TrackID] = @p1) AND ([SellerID] = @p2) AND ([InvoiceBeginNo] = @p3) AND ([InvoiceEndNo] = @p4)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [20392]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- @p2: Input Int (Size = -1; Prec = 0; Scale = 0) [2425]
+-- @p3: Input Int (Size = -1; Prec = 0; Scale = 0) [20001]
+-- @p4: Input Int (Size = -1; Prec = 0; Scale = 0) [30000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+DELETE FROM [dbo].[UnassignedInvoiceNo] WHERE ([UAID] = @p0) AND ([TrackID] = @p1) AND ([SellerID] = @p2) AND ([InvoiceBeginNo] = @p3) AND ([InvoiceEndNo] = @p4)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [20393]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- @p2: Input Int (Size = -1; Prec = 0; Scale = 0) [2392]
+-- @p3: Input Int (Size = -1; Prec = 0; Scale = 0) [50011]
+-- @p4: Input Int (Size = -1; Prec = 0; Scale = 0) [60000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+DELETE FROM [dbo].[UnassignedInvoiceNo] WHERE ([UAID] = @p0) AND ([TrackID] = @p1) AND ([SellerID] = @p2) AND ([InvoiceBeginNo] = @p3) AND ([InvoiceEndNo] = @p4)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [20394]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- @p2: Input Int (Size = -1; Prec = 0; Scale = 0) [2415]
+-- @p3: Input Int (Size = -1; Prec = 0; Scale = 0) [60001]
+-- @p4: Input Int (Size = -1; Prec = 0; Scale = 0) [70000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+DELETE FROM [dbo].[UnassignedInvoiceNo] WHERE ([UAID] = @p0) AND ([TrackID] = @p1) AND ([SellerID] = @p2) AND ([InvoiceBeginNo] = @p3) AND ([InvoiceEndNo] = @p4)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [20395]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- @p2: Input Int (Size = -1; Prec = 0; Scale = 0) [2421]
+-- @p3: Input Int (Size = -1; Prec = 0; Scale = 0) [70001]
+-- @p4: Input Int (Size = -1; Prec = 0; Scale = 0) [80000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+DELETE FROM [dbo].[UnassignedInvoiceNo] WHERE ([UAID] = @p0) AND ([TrackID] = @p1) AND ([SellerID] = @p2) AND ([InvoiceBeginNo] = @p3) AND ([InvoiceEndNo] = @p4)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [20396]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- @p2: Input Int (Size = -1; Prec = 0; Scale = 0) [2393]
+-- @p3: Input Int (Size = -1; Prec = 0; Scale = 0) [80001]
+-- @p4: Input Int (Size = -1; Prec = 0; Scale = 0) [90000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+DELETE FROM [dbo].[UnassignedInvoiceNo] WHERE ([UAID] = @p0) AND ([TrackID] = @p1) AND ([SellerID] = @p2) AND ([InvoiceBeginNo] = @p3) AND ([InvoiceEndNo] = @p4)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [20397]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- @p2: Input Int (Size = -1; Prec = 0; Scale = 0) [2403]
+-- @p3: Input Int (Size = -1; Prec = 0; Scale = 0) [90047]
+-- @p4: Input Int (Size = -1; Prec = 0; Scale = 0) [100000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+DELETE FROM [dbo].[UnassignedInvoiceNo] WHERE ([UAID] = @p0) AND ([TrackID] = @p1) AND ([SellerID] = @p2) AND ([InvoiceBeginNo] = @p3) AND ([InvoiceEndNo] = @p4)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [20398]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- @p2: Input Int (Size = -1; Prec = 0; Scale = 0) [2417]
+-- @p3: Input Int (Size = -1; Prec = 0; Scale = 0) [100001]
+-- @p4: Input Int (Size = -1; Prec = 0; Scale = 0) [110000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+DELETE FROM [dbo].[UnassignedInvoiceNo] WHERE ([UAID] = @p0) AND ([TrackID] = @p1) AND ([SellerID] = @p2) AND ([InvoiceBeginNo] = @p3) AND ([InvoiceEndNo] = @p4)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [20399]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- @p2: Input Int (Size = -1; Prec = 0; Scale = 0) [2413]
+-- @p3: Input Int (Size = -1; Prec = 0; Scale = 0) [110008]
+-- @p4: Input Int (Size = -1; Prec = 0; Scale = 0) [120000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+DELETE FROM [dbo].[UnassignedInvoiceNo] WHERE ([UAID] = @p0) AND ([TrackID] = @p1) AND ([SellerID] = @p2) AND ([InvoiceBeginNo] = @p3) AND ([InvoiceEndNo] = @p4)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [20400]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- @p2: Input Int (Size = -1; Prec = 0; Scale = 0) [2419]
+-- @p3: Input Int (Size = -1; Prec = 0; Scale = 0) [120001]
+-- @p4: Input Int (Size = -1; Prec = 0; Scale = 0) [130000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+DELETE FROM [dbo].[UnassignedInvoiceNo] WHERE ([UAID] = @p0) AND ([TrackID] = @p1) AND ([SellerID] = @p2) AND ([InvoiceBeginNo] = @p3) AND ([InvoiceEndNo] = @p4)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [20401]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- @p2: Input Int (Size = -1; Prec = 0; Scale = 0) [2411]
+-- @p3: Input Int (Size = -1; Prec = 0; Scale = 0) [130001]
+-- @p4: Input Int (Size = -1; Prec = 0; Scale = 0) [140000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+DELETE FROM [dbo].[UnassignedInvoiceNo] WHERE ([UAID] = @p0) AND ([TrackID] = @p1) AND ([SellerID] = @p2) AND ([InvoiceBeginNo] = @p3) AND ([InvoiceEndNo] = @p4)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [20402]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- @p2: Input Int (Size = -1; Prec = 0; Scale = 0) [2416]
+-- @p3: Input Int (Size = -1; Prec = 0; Scale = 0) [140001]
+-- @p4: Input Int (Size = -1; Prec = 0; Scale = 0) [150000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+DELETE FROM [dbo].[UnassignedInvoiceNo] WHERE ([UAID] = @p0) AND ([TrackID] = @p1) AND ([SellerID] = @p2) AND ([InvoiceBeginNo] = @p3) AND ([InvoiceEndNo] = @p4)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [20403]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- @p2: Input Int (Size = -1; Prec = 0; Scale = 0) [2416]
+-- @p3: Input Int (Size = -1; Prec = 0; Scale = 0) [150001]
+-- @p4: Input Int (Size = -1; Prec = 0; Scale = 0) [160000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+DELETE FROM [dbo].[UnassignedInvoiceNo] WHERE ([UAID] = @p0) AND ([TrackID] = @p1) AND ([SellerID] = @p2) AND ([InvoiceBeginNo] = @p3) AND ([InvoiceEndNo] = @p4)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [20404]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [94]
+-- @p2: Input Int (Size = -1; Prec = 0; Scale = 0) [2414]
+-- @p3: Input Int (Size = -1; Prec = 0; Scale = 0) [160001]
+-- @p4: Input Int (Size = -1; Prec = 0; Scale = 0) [170000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+DELETE FROM [dbo].[UnassignedInvoiceNo] WHERE ([UAID] = @p0) AND ([TrackID] = @p1) AND ([SellerID] = @p2) AND ([InvoiceBeginNo] = @p3) AND ([InvoiceEndNo] = @p4)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [20405]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [164]
+-- @p2: Input Int (Size = -1; Prec = 0; Scale = 0) [2409]
+-- @p3: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p4: Input Int (Size = -1; Prec = 0; Scale = 0) [10000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+DELETE FROM [dbo].[UnassignedInvoiceNo] WHERE ([UAID] = @p0) AND ([TrackID] = @p1) AND ([SellerID] = @p2) AND ([InvoiceBeginNo] = @p3) AND ([InvoiceEndNo] = @p4)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [20406]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [76]
+-- @p2: Input Int (Size = -1; Prec = 0; Scale = 0) [2420]
+-- @p3: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p4: Input Int (Size = -1; Prec = 0; Scale = 0) [10000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+
+2016/06/15 16:44:19
+SELECT [t1].[DocID], [t1].[DocType], [t1].[DocDate], [t1].[CurrentStep]
+FROM [dbo].[DocumentReplication] AS [t0]
+INNER JOIN [dbo].[CDS_Document] AS [t1] ON [t1].[DocID] = [t0].[DocID]
+LEFT OUTER JOIN [dbo].[DocumentOwner] AS [t2] ON [t2].[DocID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[Organization] AS [t3] ON [t3].[CompanyID] = [t2].[OwnerID]
+LEFT OUTER JOIN [dbo].[OrganizationStatus] AS [t4] ON [t4].[CompanyID] = [t3].[CompanyID]
+LEFT OUTER JOIN [dbo].[InvoiceItem] AS [t5] ON [t5].[InvoiceID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[InvoiceBuyer] AS [t6] ON [t6].[InvoiceID] = [t5].[InvoiceID]
+WHERE ([t1].[DocType] = @p0) AND ([t4].[SetToNotifyCounterpartBySMS] = @p1) AND ([t6].[ReceiptNo] = @p2)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input NVarChar (Size = 4000; Prec = 0; Scale = 0) [0000000000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+delete from DocumentReplication
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[SMSNotificationQueue] AS [t0]
+WHERE [t0].[MessageID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+
+2016/06/15 16:44:19
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [12]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [11]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [14]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+
+2016/06/15 16:44:19
+event message處理完成!
+2016/06/15 17:05:16
+SELECT [t1].[DocID], [t1].[DocType], [t1].[DocDate], [t1].[CurrentStep]
+FROM [dbo].[DocumentReplication] AS [t0]
+INNER JOIN [dbo].[CDS_Document] AS [t1] ON [t1].[DocID] = [t0].[DocID]
+LEFT OUTER JOIN [dbo].[DocumentOwner] AS [t2] ON [t2].[DocID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[Organization] AS [t3] ON [t3].[CompanyID] = [t2].[OwnerID]
+LEFT OUTER JOIN [dbo].[OrganizationStatus] AS [t4] ON [t4].[CompanyID] = [t3].[CompanyID]
+LEFT OUTER JOIN [dbo].[InvoiceItem] AS [t5] ON [t5].[InvoiceID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[InvoiceBuyer] AS [t6] ON [t6].[InvoiceID] = [t5].[InvoiceID]
+WHERE ([t1].[DocType] = @p0) AND ([t4].[SetToNotifyCounterpartBySMS] = @p1) AND ([t6].[ReceiptNo] = @p2)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input NVarChar (Size = 4000; Prec = 0; Scale = 0) [0000000000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+delete from DocumentReplication
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[SMSNotificationQueue] AS [t0]
+WHERE [t0].[MessageID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+
+2016/06/15 17:05:16
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [12]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [11]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [14]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+
+2016/06/15 17:05:16
+event message處理完成!
+2016/06/15 17:05:20
+SELECT TOP (1) [t0].[UID], [t0].[UserName], [t0].[PID], [t0].[Password], [t0].[ContactTitle], [t0].[Address], [t0].[City], [t0].[Region], [t0].[PostalCode], [t0].[Country], [t0].[MobilePhone], [t0].[Phone], [t0].[Phone2], [t0].[Fax], [t0].[EMail], [t0].[Expiration], [t0].[Creator], [t0].[AuthID], [t0].[LevelID], [t0].[ThemeName], [t0].[Password2], [t2].[test], [t2].[UID] AS [UID2], [t2].[CurrentLevel]
+FROM [dbo].[UserProfile] AS [t0]
+LEFT OUTER JOIN (
+    SELECT 1 AS [test], [t1].[UID], [t1].[CurrentLevel]
+    FROM [dbo].[UserProfileStatus] AS [t1]
+    ) AS [t2] ON [t2].[UID] = [t0].[UID]
+WHERE ([t0].[PID] = @p0) AND ([t2].[CurrentLevel] <> @p1)
+-- @p0: Input NVarChar (Size = 4000; Prec = 0; Scale = 0) [ifsadmin]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [1101]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[UID], [t0].[RoleID], [t0].[OrgaCateID], [t1].[OrgaCateID] AS [OrgaCateID2], [t1].[CompanyID], [t1].[CategoryID], [t2].[ContactName], [t2].[Fax], [t2].[LogoURL], [t2].[CompanyName], [t2].[CompanyID] AS [CompanyID2], [t2].[ReceiptNo], [t2].[Phone], [t2].[ContactFax], [t2].[ContactPhone], [t2].[ContactMobilePhone], [t2].[RegAddr], [t2].[UndertakerName], [t2].[Addr], [t2].[EnglishName], [t2].[EnglishAddr], [t2].[EnglishRegAddr], [t2].[ContactEmail], [t2].[UndertakerPhone], [t2].[UndertakerFax], [t2].[UndertakerMobilePhone], [t2].[InvoiceSignature], [t2].[UndertakerID], [t2].[ContactTitle], [t3].[CategoryID] AS [CategoryID2], [t3].[Category], [t3].[CharacterURL], [t4].[RoleID] AS [RoleID2], [t4].[SiteMenu], [t4].[Role]
+FROM [dbo].[UserRole] AS [t0]
+INNER JOIN ([dbo].[OrganizationCategory] AS [t1]
+    INNER JOIN [dbo].[Organization] AS [t2] ON [t2].[CompanyID] = [t1].[CompanyID]
+    INNER JOIN [dbo].[CategoryDefinition] AS [t3] ON [t3].[CategoryID] = [t1].[CategoryID]) ON [t1].[OrgaCateID] = [t0].[OrgaCateID]
+INNER JOIN [dbo].[UserRoleDefinition] AS [t4] ON [t4].[RoleID] = [t0].[RoleID]
+WHERE [t0].[UID] = @x1
+-- @x1: Input Int (Size = -1; Prec = 0; Scale = 0) [2]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+
+2016/06/15 17:05:23
+SELECT TOP (1) [t1].[MenuID], [t1].[SiteMenu]
+FROM [dbo].[UserMenu] AS [t0]
+INNER JOIN [dbo].[MenuControl] AS [t1] ON [t1].[MenuID] = [t0].[MenuID]
+WHERE ([t0].[RoleID] = @p0) AND ([t0].[CategoryID] = @p1)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+
+2016/06/15 17:05:24
+SELECT [t0].[MsgID], [t0].[MessageContents], [t0].[StartDate], [t0].[EndDate], [t0].[AlwaysShow], [t0].[UpdateTime], [t0].[CreateTime]
+FROM [dbo].[SystemMessage] AS [t0]
+WHERE ([t0].[AlwaysShow] = 1) OR (([t0].[StartDate] <= @p0) AND (DATEADD(ms, (CONVERT(BigInt,@p1 * 86400000)) % 86400000, DATEADD(day, (CONVERT(BigInt,@p1 * 86400000)) / 86400000, [t0].[EndDate])) > @p2))
+-- @p0: Input DateTime (Size = -1; Prec = 0; Scale = 0) [2016/6/15 下午 05:05:23]
+-- @p1: Input Float (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input DateTime (Size = -1; Prec = 0; Scale = 0) [2016/6/15 下午 05:05:23]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+
+2016/06/15 17:05:53
+SELECT [t0].[MsgID], [t0].[MessageContents], [t0].[StartDate], [t0].[EndDate], [t0].[AlwaysShow], [t0].[UpdateTime], [t0].[CreateTime]
+FROM [dbo].[SystemMessage] AS [t0]
+WHERE ([t0].[AlwaysShow] = 1) OR (([t0].[StartDate] <= @p0) AND (DATEADD(ms, (CONVERT(BigInt,@p1 * 86400000)) % 86400000, DATEADD(day, (CONVERT(BigInt,@p1 * 86400000)) / 86400000, [t0].[EndDate])) > @p2))
+-- @p0: Input DateTime (Size = -1; Prec = 0; Scale = 0) [2016/6/15 下午 05:05:53]
+-- @p1: Input Float (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input DateTime (Size = -1; Prec = 0; Scale = 0) [2016/6/15 下午 05:05:53]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+
+2016/06/15 17:05:56
+SELECT [t1].[DocID], [t1].[DocType], [t1].[DocDate], [t1].[CurrentStep]
+FROM [dbo].[DocumentReplication] AS [t0]
+INNER JOIN [dbo].[CDS_Document] AS [t1] ON [t1].[DocID] = [t0].[DocID]
+LEFT OUTER JOIN [dbo].[DocumentOwner] AS [t2] ON [t2].[DocID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[Organization] AS [t3] ON [t3].[CompanyID] = [t2].[OwnerID]
+LEFT OUTER JOIN [dbo].[OrganizationStatus] AS [t4] ON [t4].[CompanyID] = [t3].[CompanyID]
+LEFT OUTER JOIN [dbo].[InvoiceItem] AS [t5] ON [t5].[InvoiceID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[InvoiceBuyer] AS [t6] ON [t6].[InvoiceID] = [t5].[InvoiceID]
+WHERE ([t1].[DocType] = @p0) AND ([t4].[SetToNotifyCounterpartBySMS] = @p1) AND ([t6].[ReceiptNo] = @p2)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input NVarChar (Size = 4000; Prec = 0; Scale = 0) [0000000000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+delete from DocumentReplication
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[SMSNotificationQueue] AS [t0]
+WHERE [t0].[MessageID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+
+2016/06/15 17:05:56
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [12]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [11]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [14]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+
+2016/06/15 17:05:56
+event message處理完成!
+2016/06/15 17:06:22
+SELECT [t0].[MsgID], [t0].[MessageContents], [t0].[StartDate], [t0].[EndDate], [t0].[AlwaysShow], [t0].[UpdateTime], [t0].[CreateTime]
+FROM [dbo].[SystemMessage] AS [t0]
+WHERE ([t0].[AlwaysShow] = 1) OR (([t0].[StartDate] <= @p0) AND (DATEADD(ms, (CONVERT(BigInt,@p1 * 86400000)) % 86400000, DATEADD(day, (CONVERT(BigInt,@p1 * 86400000)) / 86400000, [t0].[EndDate])) > @p2))
+-- @p0: Input DateTime (Size = -1; Prec = 0; Scale = 0) [2016/6/15 下午 05:06:22]
+-- @p1: Input Float (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input DateTime (Size = -1; Prec = 0; Scale = 0) [2016/6/15 下午 05:06:22]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+
+2016/06/15 17:06:29
+SELECT TOP (1) [t0].[UID], [t0].[UserName], [t0].[PID], [t0].[Password], [t0].[ContactTitle], [t0].[Address], [t0].[City], [t0].[Region], [t0].[PostalCode], [t0].[Country], [t0].[MobilePhone], [t0].[Phone], [t0].[Phone2], [t0].[Fax], [t0].[EMail], [t0].[Expiration], [t0].[Creator], [t0].[AuthID], [t0].[LevelID], [t0].[ThemeName], [t0].[Password2], [t2].[test], [t2].[UID] AS [UID2], [t2].[CurrentLevel]
+FROM [dbo].[UserProfile] AS [t0]
+LEFT OUTER JOIN (
+    SELECT 1 AS [test], [t1].[UID], [t1].[CurrentLevel]
+    FROM [dbo].[UserProfileStatus] AS [t1]
+    ) AS [t2] ON [t2].[UID] = [t0].[UID]
+WHERE ([t0].[PID] = @p0) AND ([t2].[CurrentLevel] <> @p1)
+-- @p0: Input NVarChar (Size = 4000; Prec = 0; Scale = 0) [ifsadmin]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [1101]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[UID], [t0].[RoleID], [t0].[OrgaCateID], [t1].[OrgaCateID] AS [OrgaCateID2], [t1].[CompanyID], [t1].[CategoryID], [t2].[ContactName], [t2].[Fax], [t2].[LogoURL], [t2].[CompanyName], [t2].[CompanyID] AS [CompanyID2], [t2].[ReceiptNo], [t2].[Phone], [t2].[ContactFax], [t2].[ContactPhone], [t2].[ContactMobilePhone], [t2].[RegAddr], [t2].[UndertakerName], [t2].[Addr], [t2].[EnglishName], [t2].[EnglishAddr], [t2].[EnglishRegAddr], [t2].[ContactEmail], [t2].[UndertakerPhone], [t2].[UndertakerFax], [t2].[UndertakerMobilePhone], [t2].[InvoiceSignature], [t2].[UndertakerID], [t2].[ContactTitle], [t3].[CategoryID] AS [CategoryID2], [t3].[Category], [t3].[CharacterURL], [t4].[RoleID] AS [RoleID2], [t4].[SiteMenu], [t4].[Role]
+FROM [dbo].[UserRole] AS [t0]
+INNER JOIN ([dbo].[OrganizationCategory] AS [t1]
+    INNER JOIN [dbo].[Organization] AS [t2] ON [t2].[CompanyID] = [t1].[CompanyID]
+    INNER JOIN [dbo].[CategoryDefinition] AS [t3] ON [t3].[CategoryID] = [t1].[CategoryID]) ON [t1].[OrgaCateID] = [t0].[OrgaCateID]
+INNER JOIN [dbo].[UserRoleDefinition] AS [t4] ON [t4].[RoleID] = [t0].[RoleID]
+WHERE [t0].[UID] = @x1
+-- @x1: Input Int (Size = -1; Prec = 0; Scale = 0) [2]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+
+2016/06/15 17:06:30
+SELECT TOP (1) [t1].[MenuID], [t1].[SiteMenu]
+FROM [dbo].[UserMenu] AS [t0]
+INNER JOIN [dbo].[MenuControl] AS [t1] ON [t1].[MenuID] = [t0].[MenuID]
+WHERE ([t0].[RoleID] = @p0) AND ([t0].[CategoryID] = @p1)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+
+2016/06/15 17:06:31
+SELECT [t0].[MsgID], [t0].[MessageContents], [t0].[StartDate], [t0].[EndDate], [t0].[AlwaysShow], [t0].[UpdateTime], [t0].[CreateTime]
+FROM [dbo].[SystemMessage] AS [t0]
+WHERE ([t0].[AlwaysShow] = 1) OR (([t0].[StartDate] <= @p0) AND (DATEADD(ms, (CONVERT(BigInt,@p1 * 86400000)) % 86400000, DATEADD(day, (CONVERT(BigInt,@p1 * 86400000)) / 86400000, [t0].[EndDate])) > @p2))
+-- @p0: Input DateTime (Size = -1; Prec = 0; Scale = 0) [2016/6/15 下午 05:06:30]
+-- @p1: Input Float (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input DateTime (Size = -1; Prec = 0; Scale = 0) [2016/6/15 下午 05:06:30]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+
+2016/06/15 17:06:34
+SELECT [t0].[MsgID], [t0].[MessageContents], [t0].[StartDate], [t0].[EndDate], [t0].[AlwaysShow], [t0].[UpdateTime], [t0].[CreateTime]
+FROM [dbo].[SystemMessage] AS [t0]
+WHERE ([t0].[AlwaysShow] = 1) OR (([t0].[StartDate] <= @p0) AND (DATEADD(ms, (CONVERT(BigInt,@p1 * 86400000)) % 86400000, DATEADD(day, (CONVERT(BigInt,@p1 * 86400000)) / 86400000, [t0].[EndDate])) > @p2))
+-- @p0: Input DateTime (Size = -1; Prec = 0; Scale = 0) [2016/6/15 下午 05:06:34]
+-- @p1: Input Float (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input DateTime (Size = -1; Prec = 0; Scale = 0) [2016/6/15 下午 05:06:34]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+
+2016/06/15 17:06:39
+SELECT [t0].[MsgID], [t0].[MessageContents], [t0].[StartDate], [t0].[EndDate], [t0].[AlwaysShow], [t0].[UpdateTime], [t0].[CreateTime]
+FROM [dbo].[SystemMessage] AS [t0]
+WHERE ([t0].[AlwaysShow] = 1) OR (([t0].[StartDate] <= @p0) AND (DATEADD(ms, (CONVERT(BigInt,@p1 * 86400000)) % 86400000, DATEADD(day, (CONVERT(BigInt,@p1 * 86400000)) / 86400000, [t0].[EndDate])) > @p2))
+-- @p0: Input DateTime (Size = -1; Prec = 0; Scale = 0) [2016/6/15 下午 05:06:38]
+-- @p1: Input Float (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input DateTime (Size = -1; Prec = 0; Scale = 0) [2016/6/15 下午 05:06:38]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+
+2016/06/15 17:06:49
+SELECT [t0].[MsgID], [t0].[MessageContents], [t0].[StartDate], [t0].[EndDate], [t0].[AlwaysShow], [t0].[UpdateTime], [t0].[CreateTime]
+FROM [dbo].[SystemMessage] AS [t0]
+WHERE ([t0].[AlwaysShow] = 1) OR (([t0].[StartDate] <= @p0) AND (DATEADD(ms, (CONVERT(BigInt,@p1 * 86400000)) % 86400000, DATEADD(day, (CONVERT(BigInt,@p1 * 86400000)) / 86400000, [t0].[EndDate])) > @p2))
+-- @p0: Input DateTime (Size = -1; Prec = 0; Scale = 0) [2016/6/15 下午 05:06:49]
+-- @p1: Input Float (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input DateTime (Size = -1; Prec = 0; Scale = 0) [2016/6/15 下午 05:06:49]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+
+2016/06/15 17:06:50
+
+2016/06/15 17:10:56
+SELECT [t1].[DocID], [t1].[DocType], [t1].[DocDate], [t1].[CurrentStep]
+FROM [dbo].[DocumentReplication] AS [t0]
+INNER JOIN [dbo].[CDS_Document] AS [t1] ON [t1].[DocID] = [t0].[DocID]
+LEFT OUTER JOIN [dbo].[DocumentOwner] AS [t2] ON [t2].[DocID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[Organization] AS [t3] ON [t3].[CompanyID] = [t2].[OwnerID]
+LEFT OUTER JOIN [dbo].[OrganizationStatus] AS [t4] ON [t4].[CompanyID] = [t3].[CompanyID]
+LEFT OUTER JOIN [dbo].[InvoiceItem] AS [t5] ON [t5].[InvoiceID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[InvoiceBuyer] AS [t6] ON [t6].[InvoiceID] = [t5].[InvoiceID]
+WHERE ([t1].[DocType] = @p0) AND ([t4].[SetToNotifyCounterpartBySMS] = @p1) AND ([t6].[ReceiptNo] = @p2)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input NVarChar (Size = 4000; Prec = 0; Scale = 0) [0000000000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+delete from DocumentReplication
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[SMSNotificationQueue] AS [t0]
+WHERE [t0].[MessageID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+
+2016/06/15 17:10:56
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [12]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [11]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [14]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+
+2016/06/15 17:10:56
+event message處理完成!
+2016/06/15 17:15:56
+SELECT [t1].[DocID], [t1].[DocType], [t1].[DocDate], [t1].[CurrentStep]
+FROM [dbo].[DocumentReplication] AS [t0]
+INNER JOIN [dbo].[CDS_Document] AS [t1] ON [t1].[DocID] = [t0].[DocID]
+LEFT OUTER JOIN [dbo].[DocumentOwner] AS [t2] ON [t2].[DocID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[Organization] AS [t3] ON [t3].[CompanyID] = [t2].[OwnerID]
+LEFT OUTER JOIN [dbo].[OrganizationStatus] AS [t4] ON [t4].[CompanyID] = [t3].[CompanyID]
+LEFT OUTER JOIN [dbo].[InvoiceItem] AS [t5] ON [t5].[InvoiceID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[InvoiceBuyer] AS [t6] ON [t6].[InvoiceID] = [t5].[InvoiceID]
+WHERE ([t1].[DocType] = @p0) AND ([t4].[SetToNotifyCounterpartBySMS] = @p1) AND ([t6].[ReceiptNo] = @p2)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input NVarChar (Size = 4000; Prec = 0; Scale = 0) [0000000000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+delete from DocumentReplication
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[SMSNotificationQueue] AS [t0]
+WHERE [t0].[MessageID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+
+2016/06/15 17:15:56
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [12]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [11]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [14]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+
+2016/06/15 17:15:56
+event message處理完成!
+2016/06/15 17:20:56
+SELECT [t1].[DocID], [t1].[DocType], [t1].[DocDate], [t1].[CurrentStep]
+FROM [dbo].[DocumentReplication] AS [t0]
+INNER JOIN [dbo].[CDS_Document] AS [t1] ON [t1].[DocID] = [t0].[DocID]
+LEFT OUTER JOIN [dbo].[DocumentOwner] AS [t2] ON [t2].[DocID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[Organization] AS [t3] ON [t3].[CompanyID] = [t2].[OwnerID]
+LEFT OUTER JOIN [dbo].[OrganizationStatus] AS [t4] ON [t4].[CompanyID] = [t3].[CompanyID]
+LEFT OUTER JOIN [dbo].[InvoiceItem] AS [t5] ON [t5].[InvoiceID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[InvoiceBuyer] AS [t6] ON [t6].[InvoiceID] = [t5].[InvoiceID]
+WHERE ([t1].[DocType] = @p0) AND ([t4].[SetToNotifyCounterpartBySMS] = @p1) AND ([t6].[ReceiptNo] = @p2)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input NVarChar (Size = 4000; Prec = 0; Scale = 0) [0000000000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+delete from DocumentReplication
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[SMSNotificationQueue] AS [t0]
+WHERE [t0].[MessageID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+
+2016/06/15 17:20:56
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [12]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [11]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [14]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+
+2016/06/15 17:20:56
+event message處理完成!
+2016/06/15 17:25:56
+SELECT [t1].[DocID], [t1].[DocType], [t1].[DocDate], [t1].[CurrentStep]
+FROM [dbo].[DocumentReplication] AS [t0]
+INNER JOIN [dbo].[CDS_Document] AS [t1] ON [t1].[DocID] = [t0].[DocID]
+LEFT OUTER JOIN [dbo].[DocumentOwner] AS [t2] ON [t2].[DocID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[Organization] AS [t3] ON [t3].[CompanyID] = [t2].[OwnerID]
+LEFT OUTER JOIN [dbo].[OrganizationStatus] AS [t4] ON [t4].[CompanyID] = [t3].[CompanyID]
+LEFT OUTER JOIN [dbo].[InvoiceItem] AS [t5] ON [t5].[InvoiceID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[InvoiceBuyer] AS [t6] ON [t6].[InvoiceID] = [t5].[InvoiceID]
+WHERE ([t1].[DocType] = @p0) AND ([t4].[SetToNotifyCounterpartBySMS] = @p1) AND ([t6].[ReceiptNo] = @p2)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input NVarChar (Size = 4000; Prec = 0; Scale = 0) [0000000000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+delete from DocumentReplication
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[SMSNotificationQueue] AS [t0]
+WHERE [t0].[MessageID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+
+2016/06/15 17:25:56
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [12]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [11]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [14]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.1055.0
+
+
+2016/06/15 17:25:56
+event message處理完成!

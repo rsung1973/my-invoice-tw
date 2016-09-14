@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="EINVTurnkey2" Class="TurnKey2DataContext" Serialization="Unidirectional" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=172.16.2.23\SQLEXPRESS;Initial Catalog=EINVTurnkey2;Persist Security Info=True;User ID=sa" SettingsObjectName="Model.Properties.Settings" SettingsPropertyName="EINVTurnkey2ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.TURNKEY_USER_PROFILE" Member="TURNKEY_USER_PROFILE">
+    <Type Name="TURNKEY_USER_PROFILE">
+      <Column Name="USER_ID" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="USER_PASSWORD" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="USER_ROLE" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FROM_CONFIG" Member="FROM_CONFIG">
+    <Type Name="FROM_CONFIG">
+      <Column Name="TRANSPORT_ID" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="TRANSPORT_PASSWORD" Type="System.String" DbType="VarChar(45)" CanBeNull="true" />
+      <Column Name="PARTY_ID" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="PARTY_DESCRIPTION" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="ROUTING_ID" Type="System.String" DbType="VarChar(39)" CanBeNull="true" />
+      <Column Name="ROUTING_DESCRIPTION" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="SIGN_ID" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="SUBSTITUTE_PARTY_ID" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SCHEDULE_CONFIG" Member="SCHEDULE_CONFIG">
+    <Type Name="SCHEDULE_CONFIG">
+      <Column Name="TASK" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="ENABLE" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="SCHEDULE_TYPE" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="SCHEDULE_WEEK" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="SCHEDULE_TIME" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SCHEDULE_PERIOD" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="SCHEDULE_RANGE" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SIGN_CONFIG" Member="SIGN_CONFIG">
+    <Type Name="SIGN_CONFIG">
+      <Column Name="SIGN_ID" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="SIGN_TYPE" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="PFX_PATH" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="SIGN_PASSWORD" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TASK_CONFIG" Member="TASK_CONFIG">
+    <Type Name="TASK_CONFIG">
+      <Column Name="CATEGORY_TYPE" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="PROCESS_TYPE" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="TASK" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="SRC_PATH" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="TARGET_PATH" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="FILE_FORMAT" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="VERSION" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="ENCODING" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="TRANS_CHINESE_DATE" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TO_CONFIG" Member="TO_CONFIG">
+    <Type Name="TO_CONFIG">
+      <Column Name="PARTY_ID" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="PARTY_DESCRIPTION" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="ROUTING_ID" Type="System.String" DbType="VarChar(39)" CanBeNull="true" />
+      <Column Name="ROUTING_DESCRIPTION" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="FROM_PARTY_ID" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TURNKEY_MESSAGE_LOG" Member="TURNKEY_MESSAGE_LOG">
+    <Type Name="TURNKEY_MESSAGE_LOG">
+      <Column Name="SEQNO" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="SUBSEQNO" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="UUID" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="MESSAGE_TYPE" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="CATEGORY_TYPE" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="PROCESS_TYPE" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="FROM_PARTY_ID" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="TO_PARTY_ID" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="MESSAGE_DTS" Type="System.String" DbType="VarChar(17)" CanBeNull="true" />
+      <Column Name="CHARACTER_COUNT" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="STATUS" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="IN_OUT_BOUND" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="FROM_ROUTING_ID" Type="System.String" DbType="VarChar(39)" CanBeNull="true" />
+      <Column Name="TO_ROUTING_ID" Type="System.String" DbType="VarChar(39)" CanBeNull="true" />
+      <Column Name="INVOICE_IDENTIFIER" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TURNKEY_MESSAGE_LOG_DETAIL" Member="TURNKEY_MESSAGE_LOG_DETAIL">
+    <Type Name="TURNKEY_MESSAGE_LOG_DETAIL">
+      <Column Name="SEQNO" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="SUBSEQNO" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="PROCESS_DTS" Type="System.String" DbType="VarChar(17)" CanBeNull="true" />
+      <Column Name="TASK" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="STATUS" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="FILENAME" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="UUID" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TURNKEY_SEQUENCE" Member="TURNKEY_SEQUENCE">
+    <Type Name="TURNKEY_SEQUENCE">
+      <Column Name="SEQUENCE" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TURNKEY_SYSEVENT_LOG" Member="TURNKEY_SYSEVENT_LOG">
+    <Type Name="TURNKEY_SYSEVENT_LOG">
+      <Column Name="EVENTDTS" Type="System.String" DbType="VarChar(17) NOT NULL" CanBeNull="false" />
+      <Column Name="PARTY_ID" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="SEQNO" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="SUBSEQNO" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="ERRORCODE" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="UUID" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="INFORMATION1" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="INFORMATION2" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="INFORMATION3" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="MESSAGE1" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="MESSAGE2" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="MESSAGE3" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="MESSAGE4" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="MESSAGE5" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="MESSAGE6" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TURNKEY_TRANSPORT_CONFIG" Member="TURNKEY_TRANSPORT_CONFIG">
+    <Type Name="TURNKEY_TRANSPORT_CONFIG">
+      <Column Name="TRANSPORT_ID" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="TRANSPORT_PASSWORD" Type="System.String" DbType="VarChar(60) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.V_Logs" Member="V_Logs">
+    <Type Name="V_Logs">
+      <Column Name="SEQNO" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="SUBSEQNO" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="STATUS" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="DocType" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="TrackCode" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="No" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="InvoiceDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MESSAGE_DTS" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

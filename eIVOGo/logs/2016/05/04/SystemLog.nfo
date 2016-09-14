@@ -1,0 +1,2120 @@
+2016/05/04 00:03:39
+SELECT [t1].[DocID], [t1].[DocType], [t1].[DocDate], [t1].[CurrentStep]
+FROM [dbo].[DocumentReplication] AS [t0]
+INNER JOIN [dbo].[CDS_Document] AS [t1] ON [t1].[DocID] = [t0].[DocID]
+LEFT OUTER JOIN [dbo].[DocumentOwner] AS [t2] ON [t2].[DocID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[Organization] AS [t3] ON [t3].[CompanyID] = [t2].[OwnerID]
+LEFT OUTER JOIN [dbo].[OrganizationStatus] AS [t4] ON [t4].[CompanyID] = [t3].[CompanyID]
+LEFT OUTER JOIN [dbo].[InvoiceItem] AS [t5] ON [t5].[InvoiceID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[InvoiceBuyer] AS [t6] ON [t6].[InvoiceID] = [t5].[InvoiceID]
+WHERE ([t1].[DocType] = @p0) AND ([t4].[SetToNotifyCounterpartBySMS] = @p1) AND ([t6].[ReceiptNo] = @p2)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input NVarChar (Size = 4000; Prec = 0; Scale = 0) [0000000000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+delete from DocumentReplication
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[SMSNotificationQueue] AS [t0]
+WHERE [t0].[MessageID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 00:03:39
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [12]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [11]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [14]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 00:03:39
+event message處理完成!
+2016/05/04 00:08:39
+SELECT [t1].[DocID], [t1].[DocType], [t1].[DocDate], [t1].[CurrentStep]
+FROM [dbo].[DocumentReplication] AS [t0]
+INNER JOIN [dbo].[CDS_Document] AS [t1] ON [t1].[DocID] = [t0].[DocID]
+LEFT OUTER JOIN [dbo].[DocumentOwner] AS [t2] ON [t2].[DocID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[Organization] AS [t3] ON [t3].[CompanyID] = [t2].[OwnerID]
+LEFT OUTER JOIN [dbo].[OrganizationStatus] AS [t4] ON [t4].[CompanyID] = [t3].[CompanyID]
+LEFT OUTER JOIN [dbo].[InvoiceItem] AS [t5] ON [t5].[InvoiceID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[InvoiceBuyer] AS [t6] ON [t6].[InvoiceID] = [t5].[InvoiceID]
+WHERE ([t1].[DocType] = @p0) AND ([t4].[SetToNotifyCounterpartBySMS] = @p1) AND ([t6].[ReceiptNo] = @p2)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input NVarChar (Size = 4000; Prec = 0; Scale = 0) [0000000000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+delete from DocumentReplication
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[SMSNotificationQueue] AS [t0]
+WHERE [t0].[MessageID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 00:08:39
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [12]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [11]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [14]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 00:08:39
+event message處理完成!
+2016/05/04 00:13:39
+SELECT [t1].[DocID], [t1].[DocType], [t1].[DocDate], [t1].[CurrentStep]
+FROM [dbo].[DocumentReplication] AS [t0]
+INNER JOIN [dbo].[CDS_Document] AS [t1] ON [t1].[DocID] = [t0].[DocID]
+LEFT OUTER JOIN [dbo].[DocumentOwner] AS [t2] ON [t2].[DocID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[Organization] AS [t3] ON [t3].[CompanyID] = [t2].[OwnerID]
+LEFT OUTER JOIN [dbo].[OrganizationStatus] AS [t4] ON [t4].[CompanyID] = [t3].[CompanyID]
+LEFT OUTER JOIN [dbo].[InvoiceItem] AS [t5] ON [t5].[InvoiceID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[InvoiceBuyer] AS [t6] ON [t6].[InvoiceID] = [t5].[InvoiceID]
+WHERE ([t1].[DocType] = @p0) AND ([t4].[SetToNotifyCounterpartBySMS] = @p1) AND ([t6].[ReceiptNo] = @p2)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input NVarChar (Size = 4000; Prec = 0; Scale = 0) [0000000000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+delete from DocumentReplication
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[SMSNotificationQueue] AS [t0]
+WHERE [t0].[MessageID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 00:13:39
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [12]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [11]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [14]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 00:13:39
+event message處理完成!
+2016/05/04 00:18:39
+SELECT [t1].[DocID], [t1].[DocType], [t1].[DocDate], [t1].[CurrentStep]
+FROM [dbo].[DocumentReplication] AS [t0]
+INNER JOIN [dbo].[CDS_Document] AS [t1] ON [t1].[DocID] = [t0].[DocID]
+LEFT OUTER JOIN [dbo].[DocumentOwner] AS [t2] ON [t2].[DocID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[Organization] AS [t3] ON [t3].[CompanyID] = [t2].[OwnerID]
+LEFT OUTER JOIN [dbo].[OrganizationStatus] AS [t4] ON [t4].[CompanyID] = [t3].[CompanyID]
+LEFT OUTER JOIN [dbo].[InvoiceItem] AS [t5] ON [t5].[InvoiceID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[InvoiceBuyer] AS [t6] ON [t6].[InvoiceID] = [t5].[InvoiceID]
+WHERE ([t1].[DocType] = @p0) AND ([t4].[SetToNotifyCounterpartBySMS] = @p1) AND ([t6].[ReceiptNo] = @p2)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input NVarChar (Size = 4000; Prec = 0; Scale = 0) [0000000000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+delete from DocumentReplication
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[SMSNotificationQueue] AS [t0]
+WHERE [t0].[MessageID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 00:18:39
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [12]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [11]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [14]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 00:18:39
+event message處理完成!
+2016/05/04 00:23:39
+SELECT [t1].[DocID], [t1].[DocType], [t1].[DocDate], [t1].[CurrentStep]
+FROM [dbo].[DocumentReplication] AS [t0]
+INNER JOIN [dbo].[CDS_Document] AS [t1] ON [t1].[DocID] = [t0].[DocID]
+LEFT OUTER JOIN [dbo].[DocumentOwner] AS [t2] ON [t2].[DocID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[Organization] AS [t3] ON [t3].[CompanyID] = [t2].[OwnerID]
+LEFT OUTER JOIN [dbo].[OrganizationStatus] AS [t4] ON [t4].[CompanyID] = [t3].[CompanyID]
+LEFT OUTER JOIN [dbo].[InvoiceItem] AS [t5] ON [t5].[InvoiceID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[InvoiceBuyer] AS [t6] ON [t6].[InvoiceID] = [t5].[InvoiceID]
+WHERE ([t1].[DocType] = @p0) AND ([t4].[SetToNotifyCounterpartBySMS] = @p1) AND ([t6].[ReceiptNo] = @p2)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input NVarChar (Size = 4000; Prec = 0; Scale = 0) [0000000000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+delete from DocumentReplication
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[SMSNotificationQueue] AS [t0]
+WHERE [t0].[MessageID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 00:23:39
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [12]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [11]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [14]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 00:23:39
+event message處理完成!
+2016/05/04 00:28:39
+SELECT [t1].[DocID], [t1].[DocType], [t1].[DocDate], [t1].[CurrentStep]
+FROM [dbo].[DocumentReplication] AS [t0]
+INNER JOIN [dbo].[CDS_Document] AS [t1] ON [t1].[DocID] = [t0].[DocID]
+LEFT OUTER JOIN [dbo].[DocumentOwner] AS [t2] ON [t2].[DocID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[Organization] AS [t3] ON [t3].[CompanyID] = [t2].[OwnerID]
+LEFT OUTER JOIN [dbo].[OrganizationStatus] AS [t4] ON [t4].[CompanyID] = [t3].[CompanyID]
+LEFT OUTER JOIN [dbo].[InvoiceItem] AS [t5] ON [t5].[InvoiceID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[InvoiceBuyer] AS [t6] ON [t6].[InvoiceID] = [t5].[InvoiceID]
+WHERE ([t1].[DocType] = @p0) AND ([t4].[SetToNotifyCounterpartBySMS] = @p1) AND ([t6].[ReceiptNo] = @p2)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input NVarChar (Size = 4000; Prec = 0; Scale = 0) [0000000000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+delete from DocumentReplication
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[SMSNotificationQueue] AS [t0]
+WHERE [t0].[MessageID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 00:28:39
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [12]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [11]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [14]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 00:28:39
+event message處理完成!
+2016/05/04 00:33:39
+SELECT [t1].[DocID], [t1].[DocType], [t1].[DocDate], [t1].[CurrentStep]
+FROM [dbo].[DocumentReplication] AS [t0]
+INNER JOIN [dbo].[CDS_Document] AS [t1] ON [t1].[DocID] = [t0].[DocID]
+LEFT OUTER JOIN [dbo].[DocumentOwner] AS [t2] ON [t2].[DocID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[Organization] AS [t3] ON [t3].[CompanyID] = [t2].[OwnerID]
+LEFT OUTER JOIN [dbo].[OrganizationStatus] AS [t4] ON [t4].[CompanyID] = [t3].[CompanyID]
+LEFT OUTER JOIN [dbo].[InvoiceItem] AS [t5] ON [t5].[InvoiceID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[InvoiceBuyer] AS [t6] ON [t6].[InvoiceID] = [t5].[InvoiceID]
+WHERE ([t1].[DocType] = @p0) AND ([t4].[SetToNotifyCounterpartBySMS] = @p1) AND ([t6].[ReceiptNo] = @p2)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input NVarChar (Size = 4000; Prec = 0; Scale = 0) [0000000000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+delete from DocumentReplication
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[SMSNotificationQueue] AS [t0]
+WHERE [t0].[MessageID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 00:33:39
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [12]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [11]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [14]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 00:33:39
+event message處理完成!
+2016/05/04 00:38:39
+SELECT [t1].[DocID], [t1].[DocType], [t1].[DocDate], [t1].[CurrentStep]
+FROM [dbo].[DocumentReplication] AS [t0]
+INNER JOIN [dbo].[CDS_Document] AS [t1] ON [t1].[DocID] = [t0].[DocID]
+LEFT OUTER JOIN [dbo].[DocumentOwner] AS [t2] ON [t2].[DocID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[Organization] AS [t3] ON [t3].[CompanyID] = [t2].[OwnerID]
+LEFT OUTER JOIN [dbo].[OrganizationStatus] AS [t4] ON [t4].[CompanyID] = [t3].[CompanyID]
+LEFT OUTER JOIN [dbo].[InvoiceItem] AS [t5] ON [t5].[InvoiceID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[InvoiceBuyer] AS [t6] ON [t6].[InvoiceID] = [t5].[InvoiceID]
+WHERE ([t1].[DocType] = @p0) AND ([t4].[SetToNotifyCounterpartBySMS] = @p1) AND ([t6].[ReceiptNo] = @p2)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input NVarChar (Size = 4000; Prec = 0; Scale = 0) [0000000000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+delete from DocumentReplication
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[SMSNotificationQueue] AS [t0]
+WHERE [t0].[MessageID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 00:38:39
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [12]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [11]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [14]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 00:38:39
+event message處理完成!
+2016/05/04 00:43:39
+SELECT [t1].[DocID], [t1].[DocType], [t1].[DocDate], [t1].[CurrentStep]
+FROM [dbo].[DocumentReplication] AS [t0]
+INNER JOIN [dbo].[CDS_Document] AS [t1] ON [t1].[DocID] = [t0].[DocID]
+LEFT OUTER JOIN [dbo].[DocumentOwner] AS [t2] ON [t2].[DocID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[Organization] AS [t3] ON [t3].[CompanyID] = [t2].[OwnerID]
+LEFT OUTER JOIN [dbo].[OrganizationStatus] AS [t4] ON [t4].[CompanyID] = [t3].[CompanyID]
+LEFT OUTER JOIN [dbo].[InvoiceItem] AS [t5] ON [t5].[InvoiceID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[InvoiceBuyer] AS [t6] ON [t6].[InvoiceID] = [t5].[InvoiceID]
+WHERE ([t1].[DocType] = @p0) AND ([t4].[SetToNotifyCounterpartBySMS] = @p1) AND ([t6].[ReceiptNo] = @p2)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input NVarChar (Size = 4000; Prec = 0; Scale = 0) [0000000000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+delete from DocumentReplication
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[SMSNotificationQueue] AS [t0]
+WHERE [t0].[MessageID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 00:43:39
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [12]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [11]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [14]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 00:43:39
+event message處理完成!
+2016/05/04 00:48:39
+SELECT [t1].[DocID], [t1].[DocType], [t1].[DocDate], [t1].[CurrentStep]
+FROM [dbo].[DocumentReplication] AS [t0]
+INNER JOIN [dbo].[CDS_Document] AS [t1] ON [t1].[DocID] = [t0].[DocID]
+LEFT OUTER JOIN [dbo].[DocumentOwner] AS [t2] ON [t2].[DocID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[Organization] AS [t3] ON [t3].[CompanyID] = [t2].[OwnerID]
+LEFT OUTER JOIN [dbo].[OrganizationStatus] AS [t4] ON [t4].[CompanyID] = [t3].[CompanyID]
+LEFT OUTER JOIN [dbo].[InvoiceItem] AS [t5] ON [t5].[InvoiceID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[InvoiceBuyer] AS [t6] ON [t6].[InvoiceID] = [t5].[InvoiceID]
+WHERE ([t1].[DocType] = @p0) AND ([t4].[SetToNotifyCounterpartBySMS] = @p1) AND ([t6].[ReceiptNo] = @p2)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input NVarChar (Size = 4000; Prec = 0; Scale = 0) [0000000000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+delete from DocumentReplication
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[SMSNotificationQueue] AS [t0]
+WHERE [t0].[MessageID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 00:48:39
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [12]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [11]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [14]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 00:48:39
+event message處理完成!
+2016/05/04 00:53:39
+SELECT [t1].[DocID], [t1].[DocType], [t1].[DocDate], [t1].[CurrentStep]
+FROM [dbo].[DocumentReplication] AS [t0]
+INNER JOIN [dbo].[CDS_Document] AS [t1] ON [t1].[DocID] = [t0].[DocID]
+LEFT OUTER JOIN [dbo].[DocumentOwner] AS [t2] ON [t2].[DocID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[Organization] AS [t3] ON [t3].[CompanyID] = [t2].[OwnerID]
+LEFT OUTER JOIN [dbo].[OrganizationStatus] AS [t4] ON [t4].[CompanyID] = [t3].[CompanyID]
+LEFT OUTER JOIN [dbo].[InvoiceItem] AS [t5] ON [t5].[InvoiceID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[InvoiceBuyer] AS [t6] ON [t6].[InvoiceID] = [t5].[InvoiceID]
+WHERE ([t1].[DocType] = @p0) AND ([t4].[SetToNotifyCounterpartBySMS] = @p1) AND ([t6].[ReceiptNo] = @p2)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input NVarChar (Size = 4000; Prec = 0; Scale = 0) [0000000000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+delete from DocumentReplication
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[SMSNotificationQueue] AS [t0]
+WHERE [t0].[MessageID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 00:53:39
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [12]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [11]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [14]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 00:53:39
+event message處理完成!
+2016/05/04 00:58:39
+SELECT [t1].[DocID], [t1].[DocType], [t1].[DocDate], [t1].[CurrentStep]
+FROM [dbo].[DocumentReplication] AS [t0]
+INNER JOIN [dbo].[CDS_Document] AS [t1] ON [t1].[DocID] = [t0].[DocID]
+LEFT OUTER JOIN [dbo].[DocumentOwner] AS [t2] ON [t2].[DocID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[Organization] AS [t3] ON [t3].[CompanyID] = [t2].[OwnerID]
+LEFT OUTER JOIN [dbo].[OrganizationStatus] AS [t4] ON [t4].[CompanyID] = [t3].[CompanyID]
+LEFT OUTER JOIN [dbo].[InvoiceItem] AS [t5] ON [t5].[InvoiceID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[InvoiceBuyer] AS [t6] ON [t6].[InvoiceID] = [t5].[InvoiceID]
+WHERE ([t1].[DocType] = @p0) AND ([t4].[SetToNotifyCounterpartBySMS] = @p1) AND ([t6].[ReceiptNo] = @p2)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input NVarChar (Size = 4000; Prec = 0; Scale = 0) [0000000000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+delete from DocumentReplication
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[SMSNotificationQueue] AS [t0]
+WHERE [t0].[MessageID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 00:58:39
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [12]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [11]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [14]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 00:58:39
+event message處理完成!
+2016/05/04 01:03:39
+SELECT [t1].[DocID], [t1].[DocType], [t1].[DocDate], [t1].[CurrentStep]
+FROM [dbo].[DocumentReplication] AS [t0]
+INNER JOIN [dbo].[CDS_Document] AS [t1] ON [t1].[DocID] = [t0].[DocID]
+LEFT OUTER JOIN [dbo].[DocumentOwner] AS [t2] ON [t2].[DocID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[Organization] AS [t3] ON [t3].[CompanyID] = [t2].[OwnerID]
+LEFT OUTER JOIN [dbo].[OrganizationStatus] AS [t4] ON [t4].[CompanyID] = [t3].[CompanyID]
+LEFT OUTER JOIN [dbo].[InvoiceItem] AS [t5] ON [t5].[InvoiceID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[InvoiceBuyer] AS [t6] ON [t6].[InvoiceID] = [t5].[InvoiceID]
+WHERE ([t1].[DocType] = @p0) AND ([t4].[SetToNotifyCounterpartBySMS] = @p1) AND ([t6].[ReceiptNo] = @p2)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input NVarChar (Size = 4000; Prec = 0; Scale = 0) [0000000000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+delete from DocumentReplication
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[SMSNotificationQueue] AS [t0]
+WHERE [t0].[MessageID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 01:03:39
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [12]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [11]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [14]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 01:03:39
+event message處理完成!
+2016/05/04 01:08:39
+SELECT [t1].[DocID], [t1].[DocType], [t1].[DocDate], [t1].[CurrentStep]
+FROM [dbo].[DocumentReplication] AS [t0]
+INNER JOIN [dbo].[CDS_Document] AS [t1] ON [t1].[DocID] = [t0].[DocID]
+LEFT OUTER JOIN [dbo].[DocumentOwner] AS [t2] ON [t2].[DocID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[Organization] AS [t3] ON [t3].[CompanyID] = [t2].[OwnerID]
+LEFT OUTER JOIN [dbo].[OrganizationStatus] AS [t4] ON [t4].[CompanyID] = [t3].[CompanyID]
+LEFT OUTER JOIN [dbo].[InvoiceItem] AS [t5] ON [t5].[InvoiceID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[InvoiceBuyer] AS [t6] ON [t6].[InvoiceID] = [t5].[InvoiceID]
+WHERE ([t1].[DocType] = @p0) AND ([t4].[SetToNotifyCounterpartBySMS] = @p1) AND ([t6].[ReceiptNo] = @p2)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input NVarChar (Size = 4000; Prec = 0; Scale = 0) [0000000000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+delete from DocumentReplication
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[SMSNotificationQueue] AS [t0]
+WHERE [t0].[MessageID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 01:08:39
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [12]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [11]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [14]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 01:08:39
+event message處理完成!
+2016/05/04 01:13:39
+SELECT [t1].[DocID], [t1].[DocType], [t1].[DocDate], [t1].[CurrentStep]
+FROM [dbo].[DocumentReplication] AS [t0]
+INNER JOIN [dbo].[CDS_Document] AS [t1] ON [t1].[DocID] = [t0].[DocID]
+LEFT OUTER JOIN [dbo].[DocumentOwner] AS [t2] ON [t2].[DocID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[Organization] AS [t3] ON [t3].[CompanyID] = [t2].[OwnerID]
+LEFT OUTER JOIN [dbo].[OrganizationStatus] AS [t4] ON [t4].[CompanyID] = [t3].[CompanyID]
+LEFT OUTER JOIN [dbo].[InvoiceItem] AS [t5] ON [t5].[InvoiceID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[InvoiceBuyer] AS [t6] ON [t6].[InvoiceID] = [t5].[InvoiceID]
+WHERE ([t1].[DocType] = @p0) AND ([t4].[SetToNotifyCounterpartBySMS] = @p1) AND ([t6].[ReceiptNo] = @p2)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input NVarChar (Size = 4000; Prec = 0; Scale = 0) [0000000000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+delete from DocumentReplication
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[SMSNotificationQueue] AS [t0]
+WHERE [t0].[MessageID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 01:13:39
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [12]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [11]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [14]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 01:13:39
+event message處理完成!
+2016/05/04 01:18:39
+SELECT [t1].[DocID], [t1].[DocType], [t1].[DocDate], [t1].[CurrentStep]
+FROM [dbo].[DocumentReplication] AS [t0]
+INNER JOIN [dbo].[CDS_Document] AS [t1] ON [t1].[DocID] = [t0].[DocID]
+LEFT OUTER JOIN [dbo].[DocumentOwner] AS [t2] ON [t2].[DocID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[Organization] AS [t3] ON [t3].[CompanyID] = [t2].[OwnerID]
+LEFT OUTER JOIN [dbo].[OrganizationStatus] AS [t4] ON [t4].[CompanyID] = [t3].[CompanyID]
+LEFT OUTER JOIN [dbo].[InvoiceItem] AS [t5] ON [t5].[InvoiceID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[InvoiceBuyer] AS [t6] ON [t6].[InvoiceID] = [t5].[InvoiceID]
+WHERE ([t1].[DocType] = @p0) AND ([t4].[SetToNotifyCounterpartBySMS] = @p1) AND ([t6].[ReceiptNo] = @p2)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input NVarChar (Size = 4000; Prec = 0; Scale = 0) [0000000000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+delete from DocumentReplication
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[SMSNotificationQueue] AS [t0]
+WHERE [t0].[MessageID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 01:18:39
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [12]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [11]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [14]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 01:18:39
+event message處理完成!
+2016/05/04 01:23:39
+SELECT [t1].[DocID], [t1].[DocType], [t1].[DocDate], [t1].[CurrentStep]
+FROM [dbo].[DocumentReplication] AS [t0]
+INNER JOIN [dbo].[CDS_Document] AS [t1] ON [t1].[DocID] = [t0].[DocID]
+LEFT OUTER JOIN [dbo].[DocumentOwner] AS [t2] ON [t2].[DocID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[Organization] AS [t3] ON [t3].[CompanyID] = [t2].[OwnerID]
+LEFT OUTER JOIN [dbo].[OrganizationStatus] AS [t4] ON [t4].[CompanyID] = [t3].[CompanyID]
+LEFT OUTER JOIN [dbo].[InvoiceItem] AS [t5] ON [t5].[InvoiceID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[InvoiceBuyer] AS [t6] ON [t6].[InvoiceID] = [t5].[InvoiceID]
+WHERE ([t1].[DocType] = @p0) AND ([t4].[SetToNotifyCounterpartBySMS] = @p1) AND ([t6].[ReceiptNo] = @p2)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input NVarChar (Size = 4000; Prec = 0; Scale = 0) [0000000000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+delete from DocumentReplication
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[SMSNotificationQueue] AS [t0]
+WHERE [t0].[MessageID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 01:23:39
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [12]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [11]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [14]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 01:23:39
+event message處理完成!
+2016/05/04 01:28:39
+SELECT [t1].[DocID], [t1].[DocType], [t1].[DocDate], [t1].[CurrentStep]
+FROM [dbo].[DocumentReplication] AS [t0]
+INNER JOIN [dbo].[CDS_Document] AS [t1] ON [t1].[DocID] = [t0].[DocID]
+LEFT OUTER JOIN [dbo].[DocumentOwner] AS [t2] ON [t2].[DocID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[Organization] AS [t3] ON [t3].[CompanyID] = [t2].[OwnerID]
+LEFT OUTER JOIN [dbo].[OrganizationStatus] AS [t4] ON [t4].[CompanyID] = [t3].[CompanyID]
+LEFT OUTER JOIN [dbo].[InvoiceItem] AS [t5] ON [t5].[InvoiceID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[InvoiceBuyer] AS [t6] ON [t6].[InvoiceID] = [t5].[InvoiceID]
+WHERE ([t1].[DocType] = @p0) AND ([t4].[SetToNotifyCounterpartBySMS] = @p1) AND ([t6].[ReceiptNo] = @p2)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input NVarChar (Size = 4000; Prec = 0; Scale = 0) [0000000000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+delete from DocumentReplication
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[SMSNotificationQueue] AS [t0]
+WHERE [t0].[MessageID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 01:28:39
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [12]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [11]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [14]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 01:28:39
+event message處理完成!
+2016/05/04 01:33:39
+SELECT [t1].[DocID], [t1].[DocType], [t1].[DocDate], [t1].[CurrentStep]
+FROM [dbo].[DocumentReplication] AS [t0]
+INNER JOIN [dbo].[CDS_Document] AS [t1] ON [t1].[DocID] = [t0].[DocID]
+LEFT OUTER JOIN [dbo].[DocumentOwner] AS [t2] ON [t2].[DocID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[Organization] AS [t3] ON [t3].[CompanyID] = [t2].[OwnerID]
+LEFT OUTER JOIN [dbo].[OrganizationStatus] AS [t4] ON [t4].[CompanyID] = [t3].[CompanyID]
+LEFT OUTER JOIN [dbo].[InvoiceItem] AS [t5] ON [t5].[InvoiceID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[InvoiceBuyer] AS [t6] ON [t6].[InvoiceID] = [t5].[InvoiceID]
+WHERE ([t1].[DocType] = @p0) AND ([t4].[SetToNotifyCounterpartBySMS] = @p1) AND ([t6].[ReceiptNo] = @p2)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input NVarChar (Size = 4000; Prec = 0; Scale = 0) [0000000000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+delete from DocumentReplication
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[SMSNotificationQueue] AS [t0]
+WHERE [t0].[MessageID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 01:33:39
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [12]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [11]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [14]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 01:33:39
+event message處理完成!
+2016/05/04 01:38:39
+SELECT [t1].[DocID], [t1].[DocType], [t1].[DocDate], [t1].[CurrentStep]
+FROM [dbo].[DocumentReplication] AS [t0]
+INNER JOIN [dbo].[CDS_Document] AS [t1] ON [t1].[DocID] = [t0].[DocID]
+LEFT OUTER JOIN [dbo].[DocumentOwner] AS [t2] ON [t2].[DocID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[Organization] AS [t3] ON [t3].[CompanyID] = [t2].[OwnerID]
+LEFT OUTER JOIN [dbo].[OrganizationStatus] AS [t4] ON [t4].[CompanyID] = [t3].[CompanyID]
+LEFT OUTER JOIN [dbo].[InvoiceItem] AS [t5] ON [t5].[InvoiceID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[InvoiceBuyer] AS [t6] ON [t6].[InvoiceID] = [t5].[InvoiceID]
+WHERE ([t1].[DocType] = @p0) AND ([t4].[SetToNotifyCounterpartBySMS] = @p1) AND ([t6].[ReceiptNo] = @p2)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input NVarChar (Size = 4000; Prec = 0; Scale = 0) [0000000000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+delete from DocumentReplication
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[SMSNotificationQueue] AS [t0]
+WHERE [t0].[MessageID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 01:38:39
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [12]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [11]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [14]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 01:38:39
+event message處理完成!
+2016/05/04 01:43:39
+SELECT [t1].[DocID], [t1].[DocType], [t1].[DocDate], [t1].[CurrentStep]
+FROM [dbo].[DocumentReplication] AS [t0]
+INNER JOIN [dbo].[CDS_Document] AS [t1] ON [t1].[DocID] = [t0].[DocID]
+LEFT OUTER JOIN [dbo].[DocumentOwner] AS [t2] ON [t2].[DocID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[Organization] AS [t3] ON [t3].[CompanyID] = [t2].[OwnerID]
+LEFT OUTER JOIN [dbo].[OrganizationStatus] AS [t4] ON [t4].[CompanyID] = [t3].[CompanyID]
+LEFT OUTER JOIN [dbo].[InvoiceItem] AS [t5] ON [t5].[InvoiceID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[InvoiceBuyer] AS [t6] ON [t6].[InvoiceID] = [t5].[InvoiceID]
+WHERE ([t1].[DocType] = @p0) AND ([t4].[SetToNotifyCounterpartBySMS] = @p1) AND ([t6].[ReceiptNo] = @p2)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input NVarChar (Size = 4000; Prec = 0; Scale = 0) [0000000000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+delete from DocumentReplication
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[SMSNotificationQueue] AS [t0]
+WHERE [t0].[MessageID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 01:43:39
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [12]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [11]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [14]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 01:43:39
+event message處理完成!
+2016/05/04 01:48:39
+SELECT [t1].[DocID], [t1].[DocType], [t1].[DocDate], [t1].[CurrentStep]
+FROM [dbo].[DocumentReplication] AS [t0]
+INNER JOIN [dbo].[CDS_Document] AS [t1] ON [t1].[DocID] = [t0].[DocID]
+LEFT OUTER JOIN [dbo].[DocumentOwner] AS [t2] ON [t2].[DocID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[Organization] AS [t3] ON [t3].[CompanyID] = [t2].[OwnerID]
+LEFT OUTER JOIN [dbo].[OrganizationStatus] AS [t4] ON [t4].[CompanyID] = [t3].[CompanyID]
+LEFT OUTER JOIN [dbo].[InvoiceItem] AS [t5] ON [t5].[InvoiceID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[InvoiceBuyer] AS [t6] ON [t6].[InvoiceID] = [t5].[InvoiceID]
+WHERE ([t1].[DocType] = @p0) AND ([t4].[SetToNotifyCounterpartBySMS] = @p1) AND ([t6].[ReceiptNo] = @p2)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input NVarChar (Size = 4000; Prec = 0; Scale = 0) [0000000000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+delete from DocumentReplication
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[SMSNotificationQueue] AS [t0]
+WHERE [t0].[MessageID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 01:48:39
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [12]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [11]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [14]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 01:48:39
+event message處理完成!
+2016/05/04 01:53:39
+SELECT [t1].[DocID], [t1].[DocType], [t1].[DocDate], [t1].[CurrentStep]
+FROM [dbo].[DocumentReplication] AS [t0]
+INNER JOIN [dbo].[CDS_Document] AS [t1] ON [t1].[DocID] = [t0].[DocID]
+LEFT OUTER JOIN [dbo].[DocumentOwner] AS [t2] ON [t2].[DocID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[Organization] AS [t3] ON [t3].[CompanyID] = [t2].[OwnerID]
+LEFT OUTER JOIN [dbo].[OrganizationStatus] AS [t4] ON [t4].[CompanyID] = [t3].[CompanyID]
+LEFT OUTER JOIN [dbo].[InvoiceItem] AS [t5] ON [t5].[InvoiceID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[InvoiceBuyer] AS [t6] ON [t6].[InvoiceID] = [t5].[InvoiceID]
+WHERE ([t1].[DocType] = @p0) AND ([t4].[SetToNotifyCounterpartBySMS] = @p1) AND ([t6].[ReceiptNo] = @p2)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input NVarChar (Size = 4000; Prec = 0; Scale = 0) [0000000000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+delete from DocumentReplication
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[SMSNotificationQueue] AS [t0]
+WHERE [t0].[MessageID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 01:53:39
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [12]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [11]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [14]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 01:53:39
+event message處理完成!
+2016/05/04 01:58:39
+SELECT [t1].[DocID], [t1].[DocType], [t1].[DocDate], [t1].[CurrentStep]
+FROM [dbo].[DocumentReplication] AS [t0]
+INNER JOIN [dbo].[CDS_Document] AS [t1] ON [t1].[DocID] = [t0].[DocID]
+LEFT OUTER JOIN [dbo].[DocumentOwner] AS [t2] ON [t2].[DocID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[Organization] AS [t3] ON [t3].[CompanyID] = [t2].[OwnerID]
+LEFT OUTER JOIN [dbo].[OrganizationStatus] AS [t4] ON [t4].[CompanyID] = [t3].[CompanyID]
+LEFT OUTER JOIN [dbo].[InvoiceItem] AS [t5] ON [t5].[InvoiceID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[InvoiceBuyer] AS [t6] ON [t6].[InvoiceID] = [t5].[InvoiceID]
+WHERE ([t1].[DocType] = @p0) AND ([t4].[SetToNotifyCounterpartBySMS] = @p1) AND ([t6].[ReceiptNo] = @p2)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input NVarChar (Size = 4000; Prec = 0; Scale = 0) [0000000000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+delete from DocumentReplication
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[SMSNotificationQueue] AS [t0]
+WHERE [t0].[MessageID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 01:58:39
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [12]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [11]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [14]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 01:58:39
+event message處理完成!
+2016/05/04 02:03:39
+SELECT [t1].[DocID], [t1].[DocType], [t1].[DocDate], [t1].[CurrentStep]
+FROM [dbo].[DocumentReplication] AS [t0]
+INNER JOIN [dbo].[CDS_Document] AS [t1] ON [t1].[DocID] = [t0].[DocID]
+LEFT OUTER JOIN [dbo].[DocumentOwner] AS [t2] ON [t2].[DocID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[Organization] AS [t3] ON [t3].[CompanyID] = [t2].[OwnerID]
+LEFT OUTER JOIN [dbo].[OrganizationStatus] AS [t4] ON [t4].[CompanyID] = [t3].[CompanyID]
+LEFT OUTER JOIN [dbo].[InvoiceItem] AS [t5] ON [t5].[InvoiceID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[InvoiceBuyer] AS [t6] ON [t6].[InvoiceID] = [t5].[InvoiceID]
+WHERE ([t1].[DocType] = @p0) AND ([t4].[SetToNotifyCounterpartBySMS] = @p1) AND ([t6].[ReceiptNo] = @p2)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input NVarChar (Size = 4000; Prec = 0; Scale = 0) [0000000000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+delete from DocumentReplication
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[SMSNotificationQueue] AS [t0]
+WHERE [t0].[MessageID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 02:03:39
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [12]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [11]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [14]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 02:03:39
+event message處理完成!
+2016/05/04 02:08:39
+SELECT [t1].[DocID], [t1].[DocType], [t1].[DocDate], [t1].[CurrentStep]
+FROM [dbo].[DocumentReplication] AS [t0]
+INNER JOIN [dbo].[CDS_Document] AS [t1] ON [t1].[DocID] = [t0].[DocID]
+LEFT OUTER JOIN [dbo].[DocumentOwner] AS [t2] ON [t2].[DocID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[Organization] AS [t3] ON [t3].[CompanyID] = [t2].[OwnerID]
+LEFT OUTER JOIN [dbo].[OrganizationStatus] AS [t4] ON [t4].[CompanyID] = [t3].[CompanyID]
+LEFT OUTER JOIN [dbo].[InvoiceItem] AS [t5] ON [t5].[InvoiceID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[InvoiceBuyer] AS [t6] ON [t6].[InvoiceID] = [t5].[InvoiceID]
+WHERE ([t1].[DocType] = @p0) AND ([t4].[SetToNotifyCounterpartBySMS] = @p1) AND ([t6].[ReceiptNo] = @p2)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input NVarChar (Size = 4000; Prec = 0; Scale = 0) [0000000000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+delete from DocumentReplication
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[SMSNotificationQueue] AS [t0]
+WHERE [t0].[MessageID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 02:08:39
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [12]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [11]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [14]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 02:08:39
+event message處理完成!
+2016/05/04 02:13:39
+SELECT [t1].[DocID], [t1].[DocType], [t1].[DocDate], [t1].[CurrentStep]
+FROM [dbo].[DocumentReplication] AS [t0]
+INNER JOIN [dbo].[CDS_Document] AS [t1] ON [t1].[DocID] = [t0].[DocID]
+LEFT OUTER JOIN [dbo].[DocumentOwner] AS [t2] ON [t2].[DocID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[Organization] AS [t3] ON [t3].[CompanyID] = [t2].[OwnerID]
+LEFT OUTER JOIN [dbo].[OrganizationStatus] AS [t4] ON [t4].[CompanyID] = [t3].[CompanyID]
+LEFT OUTER JOIN [dbo].[InvoiceItem] AS [t5] ON [t5].[InvoiceID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[InvoiceBuyer] AS [t6] ON [t6].[InvoiceID] = [t5].[InvoiceID]
+WHERE ([t1].[DocType] = @p0) AND ([t4].[SetToNotifyCounterpartBySMS] = @p1) AND ([t6].[ReceiptNo] = @p2)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input NVarChar (Size = 4000; Prec = 0; Scale = 0) [0000000000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+delete from DocumentReplication
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[SMSNotificationQueue] AS [t0]
+WHERE [t0].[MessageID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 02:13:39
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [12]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [11]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [14]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 02:13:39
+event message處理完成!
+2016/05/04 02:18:39
+SELECT [t1].[DocID], [t1].[DocType], [t1].[DocDate], [t1].[CurrentStep]
+FROM [dbo].[DocumentReplication] AS [t0]
+INNER JOIN [dbo].[CDS_Document] AS [t1] ON [t1].[DocID] = [t0].[DocID]
+LEFT OUTER JOIN [dbo].[DocumentOwner] AS [t2] ON [t2].[DocID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[Organization] AS [t3] ON [t3].[CompanyID] = [t2].[OwnerID]
+LEFT OUTER JOIN [dbo].[OrganizationStatus] AS [t4] ON [t4].[CompanyID] = [t3].[CompanyID]
+LEFT OUTER JOIN [dbo].[InvoiceItem] AS [t5] ON [t5].[InvoiceID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[InvoiceBuyer] AS [t6] ON [t6].[InvoiceID] = [t5].[InvoiceID]
+WHERE ([t1].[DocType] = @p0) AND ([t4].[SetToNotifyCounterpartBySMS] = @p1) AND ([t6].[ReceiptNo] = @p2)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input NVarChar (Size = 4000; Prec = 0; Scale = 0) [0000000000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+delete from DocumentReplication
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[SMSNotificationQueue] AS [t0]
+WHERE [t0].[MessageID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 02:18:39
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [12]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [11]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [14]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 02:18:39
+event message處理完成!
+2016/05/04 02:23:39
+SELECT [t1].[DocID], [t1].[DocType], [t1].[DocDate], [t1].[CurrentStep]
+FROM [dbo].[DocumentReplication] AS [t0]
+INNER JOIN [dbo].[CDS_Document] AS [t1] ON [t1].[DocID] = [t0].[DocID]
+LEFT OUTER JOIN [dbo].[DocumentOwner] AS [t2] ON [t2].[DocID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[Organization] AS [t3] ON [t3].[CompanyID] = [t2].[OwnerID]
+LEFT OUTER JOIN [dbo].[OrganizationStatus] AS [t4] ON [t4].[CompanyID] = [t3].[CompanyID]
+LEFT OUTER JOIN [dbo].[InvoiceItem] AS [t5] ON [t5].[InvoiceID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[InvoiceBuyer] AS [t6] ON [t6].[InvoiceID] = [t5].[InvoiceID]
+WHERE ([t1].[DocType] = @p0) AND ([t4].[SetToNotifyCounterpartBySMS] = @p1) AND ([t6].[ReceiptNo] = @p2)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input NVarChar (Size = 4000; Prec = 0; Scale = 0) [0000000000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+delete from DocumentReplication
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[SMSNotificationQueue] AS [t0]
+WHERE [t0].[MessageID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 02:23:39
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [12]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [11]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [14]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 02:23:39
+event message處理完成!
+2016/05/04 02:28:39
+SELECT [t1].[DocID], [t1].[DocType], [t1].[DocDate], [t1].[CurrentStep]
+FROM [dbo].[DocumentReplication] AS [t0]
+INNER JOIN [dbo].[CDS_Document] AS [t1] ON [t1].[DocID] = [t0].[DocID]
+LEFT OUTER JOIN [dbo].[DocumentOwner] AS [t2] ON [t2].[DocID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[Organization] AS [t3] ON [t3].[CompanyID] = [t2].[OwnerID]
+LEFT OUTER JOIN [dbo].[OrganizationStatus] AS [t4] ON [t4].[CompanyID] = [t3].[CompanyID]
+LEFT OUTER JOIN [dbo].[InvoiceItem] AS [t5] ON [t5].[InvoiceID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[InvoiceBuyer] AS [t6] ON [t6].[InvoiceID] = [t5].[InvoiceID]
+WHERE ([t1].[DocType] = @p0) AND ([t4].[SetToNotifyCounterpartBySMS] = @p1) AND ([t6].[ReceiptNo] = @p2)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input NVarChar (Size = 4000; Prec = 0; Scale = 0) [0000000000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+delete from DocumentReplication
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[SMSNotificationQueue] AS [t0]
+WHERE [t0].[MessageID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 02:28:39
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [12]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [11]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [14]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 02:28:39
+event message處理完成!
+2016/05/04 02:33:39
+SELECT [t1].[DocID], [t1].[DocType], [t1].[DocDate], [t1].[CurrentStep]
+FROM [dbo].[DocumentReplication] AS [t0]
+INNER JOIN [dbo].[CDS_Document] AS [t1] ON [t1].[DocID] = [t0].[DocID]
+LEFT OUTER JOIN [dbo].[DocumentOwner] AS [t2] ON [t2].[DocID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[Organization] AS [t3] ON [t3].[CompanyID] = [t2].[OwnerID]
+LEFT OUTER JOIN [dbo].[OrganizationStatus] AS [t4] ON [t4].[CompanyID] = [t3].[CompanyID]
+LEFT OUTER JOIN [dbo].[InvoiceItem] AS [t5] ON [t5].[InvoiceID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[InvoiceBuyer] AS [t6] ON [t6].[InvoiceID] = [t5].[InvoiceID]
+WHERE ([t1].[DocType] = @p0) AND ([t4].[SetToNotifyCounterpartBySMS] = @p1) AND ([t6].[ReceiptNo] = @p2)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input NVarChar (Size = 4000; Prec = 0; Scale = 0) [0000000000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+delete from DocumentReplication
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[SMSNotificationQueue] AS [t0]
+WHERE [t0].[MessageID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 02:33:39
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [12]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [11]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [14]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 02:33:39
+event message處理完成!
+2016/05/04 02:38:39
+SELECT [t1].[DocID], [t1].[DocType], [t1].[DocDate], [t1].[CurrentStep]
+FROM [dbo].[DocumentReplication] AS [t0]
+INNER JOIN [dbo].[CDS_Document] AS [t1] ON [t1].[DocID] = [t0].[DocID]
+LEFT OUTER JOIN [dbo].[DocumentOwner] AS [t2] ON [t2].[DocID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[Organization] AS [t3] ON [t3].[CompanyID] = [t2].[OwnerID]
+LEFT OUTER JOIN [dbo].[OrganizationStatus] AS [t4] ON [t4].[CompanyID] = [t3].[CompanyID]
+LEFT OUTER JOIN [dbo].[InvoiceItem] AS [t5] ON [t5].[InvoiceID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[InvoiceBuyer] AS [t6] ON [t6].[InvoiceID] = [t5].[InvoiceID]
+WHERE ([t1].[DocType] = @p0) AND ([t4].[SetToNotifyCounterpartBySMS] = @p1) AND ([t6].[ReceiptNo] = @p2)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input NVarChar (Size = 4000; Prec = 0; Scale = 0) [0000000000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+delete from DocumentReplication
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[SMSNotificationQueue] AS [t0]
+WHERE [t0].[MessageID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 02:38:39
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [12]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [11]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [14]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 02:38:39
+event message處理完成!
+2016/05/04 02:43:39
+SELECT [t1].[DocID], [t1].[DocType], [t1].[DocDate], [t1].[CurrentStep]
+FROM [dbo].[DocumentReplication] AS [t0]
+INNER JOIN [dbo].[CDS_Document] AS [t1] ON [t1].[DocID] = [t0].[DocID]
+LEFT OUTER JOIN [dbo].[DocumentOwner] AS [t2] ON [t2].[DocID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[Organization] AS [t3] ON [t3].[CompanyID] = [t2].[OwnerID]
+LEFT OUTER JOIN [dbo].[OrganizationStatus] AS [t4] ON [t4].[CompanyID] = [t3].[CompanyID]
+LEFT OUTER JOIN [dbo].[InvoiceItem] AS [t5] ON [t5].[InvoiceID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[InvoiceBuyer] AS [t6] ON [t6].[InvoiceID] = [t5].[InvoiceID]
+WHERE ([t1].[DocType] = @p0) AND ([t4].[SetToNotifyCounterpartBySMS] = @p1) AND ([t6].[ReceiptNo] = @p2)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input NVarChar (Size = 4000; Prec = 0; Scale = 0) [0000000000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+delete from DocumentReplication
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[SMSNotificationQueue] AS [t0]
+WHERE [t0].[MessageID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 02:43:39
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [12]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [11]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [14]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 02:43:39
+event message處理完成!
+2016/05/04 02:48:39
+SELECT [t1].[DocID], [t1].[DocType], [t1].[DocDate], [t1].[CurrentStep]
+FROM [dbo].[DocumentReplication] AS [t0]
+INNER JOIN [dbo].[CDS_Document] AS [t1] ON [t1].[DocID] = [t0].[DocID]
+LEFT OUTER JOIN [dbo].[DocumentOwner] AS [t2] ON [t2].[DocID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[Organization] AS [t3] ON [t3].[CompanyID] = [t2].[OwnerID]
+LEFT OUTER JOIN [dbo].[OrganizationStatus] AS [t4] ON [t4].[CompanyID] = [t3].[CompanyID]
+LEFT OUTER JOIN [dbo].[InvoiceItem] AS [t5] ON [t5].[InvoiceID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[InvoiceBuyer] AS [t6] ON [t6].[InvoiceID] = [t5].[InvoiceID]
+WHERE ([t1].[DocType] = @p0) AND ([t4].[SetToNotifyCounterpartBySMS] = @p1) AND ([t6].[ReceiptNo] = @p2)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input NVarChar (Size = 4000; Prec = 0; Scale = 0) [0000000000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+delete from DocumentReplication
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[SMSNotificationQueue] AS [t0]
+WHERE [t0].[MessageID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 02:48:39
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [12]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [11]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [14]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 02:48:39
+event message處理完成!
+2016/05/04 02:53:39
+SELECT [t1].[DocID], [t1].[DocType], [t1].[DocDate], [t1].[CurrentStep]
+FROM [dbo].[DocumentReplication] AS [t0]
+INNER JOIN [dbo].[CDS_Document] AS [t1] ON [t1].[DocID] = [t0].[DocID]
+LEFT OUTER JOIN [dbo].[DocumentOwner] AS [t2] ON [t2].[DocID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[Organization] AS [t3] ON [t3].[CompanyID] = [t2].[OwnerID]
+LEFT OUTER JOIN [dbo].[OrganizationStatus] AS [t4] ON [t4].[CompanyID] = [t3].[CompanyID]
+LEFT OUTER JOIN [dbo].[InvoiceItem] AS [t5] ON [t5].[InvoiceID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[InvoiceBuyer] AS [t6] ON [t6].[InvoiceID] = [t5].[InvoiceID]
+WHERE ([t1].[DocType] = @p0) AND ([t4].[SetToNotifyCounterpartBySMS] = @p1) AND ([t6].[ReceiptNo] = @p2)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input NVarChar (Size = 4000; Prec = 0; Scale = 0) [0000000000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+delete from DocumentReplication
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[SMSNotificationQueue] AS [t0]
+WHERE [t0].[MessageID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 02:53:39
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [12]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [11]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [14]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 02:53:39
+event message處理完成!
+2016/05/04 02:58:39
+SELECT [t1].[DocID], [t1].[DocType], [t1].[DocDate], [t1].[CurrentStep]
+FROM [dbo].[DocumentReplication] AS [t0]
+INNER JOIN [dbo].[CDS_Document] AS [t1] ON [t1].[DocID] = [t0].[DocID]
+LEFT OUTER JOIN [dbo].[DocumentOwner] AS [t2] ON [t2].[DocID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[Organization] AS [t3] ON [t3].[CompanyID] = [t2].[OwnerID]
+LEFT OUTER JOIN [dbo].[OrganizationStatus] AS [t4] ON [t4].[CompanyID] = [t3].[CompanyID]
+LEFT OUTER JOIN [dbo].[InvoiceItem] AS [t5] ON [t5].[InvoiceID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[InvoiceBuyer] AS [t6] ON [t6].[InvoiceID] = [t5].[InvoiceID]
+WHERE ([t1].[DocType] = @p0) AND ([t4].[SetToNotifyCounterpartBySMS] = @p1) AND ([t6].[ReceiptNo] = @p2)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input NVarChar (Size = 4000; Prec = 0; Scale = 0) [0000000000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+delete from DocumentReplication
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[SMSNotificationQueue] AS [t0]
+WHERE [t0].[MessageID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 02:58:39
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [12]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [11]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [14]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 02:58:39
+event message處理完成!
+2016/05/04 03:03:39
+SELECT [t1].[DocID], [t1].[DocType], [t1].[DocDate], [t1].[CurrentStep]
+FROM [dbo].[DocumentReplication] AS [t0]
+INNER JOIN [dbo].[CDS_Document] AS [t1] ON [t1].[DocID] = [t0].[DocID]
+LEFT OUTER JOIN [dbo].[DocumentOwner] AS [t2] ON [t2].[DocID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[Organization] AS [t3] ON [t3].[CompanyID] = [t2].[OwnerID]
+LEFT OUTER JOIN [dbo].[OrganizationStatus] AS [t4] ON [t4].[CompanyID] = [t3].[CompanyID]
+LEFT OUTER JOIN [dbo].[InvoiceItem] AS [t5] ON [t5].[InvoiceID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[InvoiceBuyer] AS [t6] ON [t6].[InvoiceID] = [t5].[InvoiceID]
+WHERE ([t1].[DocType] = @p0) AND ([t4].[SetToNotifyCounterpartBySMS] = @p1) AND ([t6].[ReceiptNo] = @p2)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input NVarChar (Size = 4000; Prec = 0; Scale = 0) [0000000000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+delete from DocumentReplication
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[SMSNotificationQueue] AS [t0]
+WHERE [t0].[MessageID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 03:03:39
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [12]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [11]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [14]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 03:03:39
+event message處理完成!
+2016/05/04 03:08:39
+SELECT [t1].[DocID], [t1].[DocType], [t1].[DocDate], [t1].[CurrentStep]
+FROM [dbo].[DocumentReplication] AS [t0]
+INNER JOIN [dbo].[CDS_Document] AS [t1] ON [t1].[DocID] = [t0].[DocID]
+LEFT OUTER JOIN [dbo].[DocumentOwner] AS [t2] ON [t2].[DocID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[Organization] AS [t3] ON [t3].[CompanyID] = [t2].[OwnerID]
+LEFT OUTER JOIN [dbo].[OrganizationStatus] AS [t4] ON [t4].[CompanyID] = [t3].[CompanyID]
+LEFT OUTER JOIN [dbo].[InvoiceItem] AS [t5] ON [t5].[InvoiceID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[InvoiceBuyer] AS [t6] ON [t6].[InvoiceID] = [t5].[InvoiceID]
+WHERE ([t1].[DocType] = @p0) AND ([t4].[SetToNotifyCounterpartBySMS] = @p1) AND ([t6].[ReceiptNo] = @p2)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input NVarChar (Size = 4000; Prec = 0; Scale = 0) [0000000000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+delete from DocumentReplication
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[SMSNotificationQueue] AS [t0]
+WHERE [t0].[MessageID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 03:08:39
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [12]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [11]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [14]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 03:08:39
+event message處理完成!
+2016/05/04 03:13:39
+SELECT [t1].[DocID], [t1].[DocType], [t1].[DocDate], [t1].[CurrentStep]
+FROM [dbo].[DocumentReplication] AS [t0]
+INNER JOIN [dbo].[CDS_Document] AS [t1] ON [t1].[DocID] = [t0].[DocID]
+LEFT OUTER JOIN [dbo].[DocumentOwner] AS [t2] ON [t2].[DocID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[Organization] AS [t3] ON [t3].[CompanyID] = [t2].[OwnerID]
+LEFT OUTER JOIN [dbo].[OrganizationStatus] AS [t4] ON [t4].[CompanyID] = [t3].[CompanyID]
+LEFT OUTER JOIN [dbo].[InvoiceItem] AS [t5] ON [t5].[InvoiceID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[InvoiceBuyer] AS [t6] ON [t6].[InvoiceID] = [t5].[InvoiceID]
+WHERE ([t1].[DocType] = @p0) AND ([t4].[SetToNotifyCounterpartBySMS] = @p1) AND ([t6].[ReceiptNo] = @p2)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input NVarChar (Size = 4000; Prec = 0; Scale = 0) [0000000000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+delete from DocumentReplication
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[SMSNotificationQueue] AS [t0]
+WHERE [t0].[MessageID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 03:13:39
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [12]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [11]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [14]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 03:13:39
+event message處理完成!
+2016/05/04 03:18:39
+SELECT [t1].[DocID], [t1].[DocType], [t1].[DocDate], [t1].[CurrentStep]
+FROM [dbo].[DocumentReplication] AS [t0]
+INNER JOIN [dbo].[CDS_Document] AS [t1] ON [t1].[DocID] = [t0].[DocID]
+LEFT OUTER JOIN [dbo].[DocumentOwner] AS [t2] ON [t2].[DocID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[Organization] AS [t3] ON [t3].[CompanyID] = [t2].[OwnerID]
+LEFT OUTER JOIN [dbo].[OrganizationStatus] AS [t4] ON [t4].[CompanyID] = [t3].[CompanyID]
+LEFT OUTER JOIN [dbo].[InvoiceItem] AS [t5] ON [t5].[InvoiceID] = [t1].[DocID]
+LEFT OUTER JOIN [dbo].[InvoiceBuyer] AS [t6] ON [t6].[InvoiceID] = [t5].[InvoiceID]
+WHERE ([t1].[DocType] = @p0) AND ([t4].[SetToNotifyCounterpartBySMS] = @p1) AND ([t6].[ReceiptNo] = @p2)
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- @p1: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- @p2: Input NVarChar (Size = 4000; Prec = 0; Scale = 0) [0000000000]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+delete from DocumentReplication
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[SMSNotificationQueue] AS [t0]
+WHERE [t0].[MessageID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [1]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 03:18:39
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [10]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [12]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT [t0].[DocID], [t0].[TypeID]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [11]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+SELECT COUNT(*) AS [value]
+FROM [dbo].[DocumentDispatch] AS [t0]
+WHERE [t0].[TypeID] = @p0
+-- @p0: Input Int (Size = -1; Prec = 0; Scale = 0) [14]
+-- Context: SqlProvider(Sql2008) Model: AttributedMetaModel Build: 4.6.81.0
+
+
+2016/05/04 03:18:39
+event message處理完成!

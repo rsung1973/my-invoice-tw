@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="big5"?>
+<menuItem value="" url="">
+  <menuItem value="帳號管理" url="~/SAM/EditMyself.aspx">
+    <workItem value="" url="~/SAM/register_msg.aspx" />
+    <workItem value="" url="~/MainPage.aspx" />
+  </menuItem>
+  <menuItem value="買受人資料維護" url="~/SAM/BuyerManager.aspx">
+    <workItem value="" url="~/SAM/EditCompany.aspx" />
+    <workItem value="" url="~/SAM/EditBuyer.aspx" />
+    <workItem value="" url="~/SAM/register_msg.aspx" />
+  </menuItem>
+  <menuItem value="電子發票號碼維護" url="~/SAM/MaintainInvoiceNoInterval.aspx">
+    <workItem value="" url="~/SAM/CreateInvoiceNoInterval.aspx" />
+    <workItem value="" url="~/SAM/EditInvoiceNoInterval.aspx" />
+  </menuItem>
+  <menuItem value="查詢發票/折讓" url="~/Visitor/InquireInvoice.aspx" />
+  <menuItem value="發票列印" url="~/SAM/PrintInvoicesForSeller.aspx" />
+  <menuItem value="上期發票空白號碼查詢" url="~/SYS/UnusedInvoiceList.aspx" />
+  <menuItem value="查詢中獎清冊" url="~/Visitor/queryBonus.aspx" />
+  <menuItem value="發票作業" url="">
+    <menuItem value="作廢電子發票開立" url="~/Tools/CancelInvoice.aspx" clearCache="true">
+    </menuItem>
+    <menuItem value="媒體申報檔匯出" url="~/InvoiceQuery/InvoiceMediaReport" clearCache="true">
+    </menuItem>
+  </menuItem>
+  <menuItem value="客服訊息" url="~/SMS/DynamicSendSMSMessage.aspx" />
+  <menuItem value="重送開立發票通知" url="~/SAM/ResendInvoicesMail.aspx" />
+  <workItem value="首頁" url="~/MainPage.aspx" />
+  <workItem value="站務新聞" url="~/SAM/publish_system_event_page.aspx" />
+  <workItem value="" url="~/Saler/track_number_list.aspx" />
+</menuItem>

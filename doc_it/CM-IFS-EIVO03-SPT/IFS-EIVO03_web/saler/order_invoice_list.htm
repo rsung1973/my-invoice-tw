@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=big5" />
+<link href="css/content.css" rel="stylesheet" type="text/css" />
+<link href="css/table.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="javascript/join.js"></script>
+<script language="JavaScript" src="javascript/jquery.js"></script>
+<script type="text/javascript">
+<!--
+$(document).ready(function() {
+	$("#device").hide();
+	$("#uxb2b").hide();
+	
+	$("#r_dev").click(function(){
+		$("#device").show();
+		});
+	$("#member").click(function(){
+		$("#device").hide();
+		});
+		
+	$("#device").change(function(){
+		var sel=$('#device option:selected').text();
+		if(sel == "UXB2B條碼卡")
+		{
+			$("#uxb2b").show();
+		}
+		else
+		{
+			$("#uxb2b").hide();
+		};
+	});
+});
+-->
+</script>
+<title>電子發票系統</title>
+</head>
+
+<body>
+<!--路徑名稱-->
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="30"><img src="images/path_left.gif" alt="" width="30" height="29" /></td>
+    <td bgcolor="#ecedd5">首頁 > 訂單匯入與產生電子發票</td>
+    <td width="18"><img src="images/path_right.gif" alt="" width="18" height="29" /></td>
+  </tr>
+</table>
+<!--交易畫面標題-->
+<h1><img src="images/icon_search.gif" width="29" height="28" border="0" align="absmiddle" />訂單匯入與產生電子發票</h1>
+<div id="border_gray">
+<!--表格 開始-->
+<form name="addForm">
+  <table width="100%" border="0" cellpadding="0" cellspacing="0" id="left_title">
+    <tr id="other">
+      <th width="20%" nowrap="nowrap">訂單資料匯入</th>
+      <td class="tdleft"><label for="fileField"></label>
+        <input type="file" name="fileField" id="fileField" class="textfield" />
+        <input name="query2" type="button" class="btn" value="確認" onclick="location.href='order_invoice_list.htm'" /></td>
+    </tr>
+  </table>
+</form>
+<!--表格 結束-->
+</div>
+<!--按鈕-->
+<h1><img src="images/icon_search.gif" width="29" height="28" border="0" align="absmiddle" />訂單匯入與產生電子發票清冊</h1>
+<div id="border_gray2">
+  <!--表格 開始-->
+  <div id="border_gray">
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" id="table01">
+      <tr>
+      <th nowrap="nowrap">訂單編號</th>
+      <th nowrap="nowrap">訂購<br>日期</th>
+      <th nowrap="nowrap">商品名稱</th>
+      <th nowrap="nowrap">總價<br>NT$</th>
+      <th nowrap="nowrap">訂單<br>狀態</th>
+      <th nowrap="nowrap">訂單明細</th>
+      <th nowrap="nowrap">出貨<br>日期</th>
+      <th nowrap="nowrap">發票號碼</th>
+      <th nowrap="nowrap">取消<br>訂單</th>
+      <th nowrap="nowrap">換貨<br>維修</th>
+      <th nowrap>退貨</th>
+      <th nowrap>退款</th>
+      <th colspan="2" nowrap="nowrap">客服問答</th>
+      </tr>
+    <tr class="table-row01">
+      <td align="center">RM101209002060</td>
+      <td align="center">99/12/9</td>
+      <td>廣告</td>
+      <td align="right">36,000</td>
+      <td align="center">&nbsp;</td>
+      <td>&nbsp;</td>
+      <td align="center">&nbsp;</td>
+      <td align="center">LX20060432</td>
+      <td align="center">&nbsp;</td>
+      <td align="center">&nbsp;</td>
+      <td align="center">&nbsp;</td>
+      <td align="center">&nbsp;</td>
+      <td align="center" nowrap><a href="#">詢問</a></td>
+      <td align="center" nowrap><a href="#">記錄</a></td>
+    </tr>
+    <tr class="OldLace">
+      <td align="center">&nbsp;</td>
+      <td align="center">&nbsp;</td>
+      <td>&nbsp;</td>
+      <td align="right">&nbsp;</td>
+      <td align="center">&nbsp;</td>
+      <td>&nbsp;</td>
+      <td align="center">&nbsp;</td>
+      <td align="center">&nbsp;</td>
+      <td align="center">&nbsp;</td>
+      <td align="center">&nbsp;</td>
+      <td align="center">&nbsp;</td>
+      <td align="center">&nbsp;</td>
+      <td align="center" nowrap>&nbsp;</td>
+      <td align="center" nowrap>&nbsp;</td>
+    </tr>
+</table>
+</div>
+
+  <!--表格 結束-->
+</div>
+<!--按鈕-->
+</body>
+</html>

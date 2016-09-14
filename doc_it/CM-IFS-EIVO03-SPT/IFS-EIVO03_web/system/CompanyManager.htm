@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=big5" />
+<link href="css/content.css" rel="stylesheet" type="text/css" />
+<link href="css/table.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="javascript/join.js"></script>
+<script language="JavaScript" src="javascript/jquery.js"></script>
+<script type="text/javascript">
+<!--
+$(document).ready(function() {
+	$("#device").hide();
+	$("#uxb2b").hide();
+	
+	$("#r_dev").click(function(){
+		$("#device").show();
+		});
+	$("#member").click(function(){
+		$("#device").hide();
+		});
+		
+	$("#device").change(function(){
+		var sel=$('#device option:selected').text();
+		if(sel == "UXB2B條碼卡")
+		{
+			$("#uxb2b").show();
+		}
+		else
+		{
+			$("#uxb2b").hide();
+		};
+	});
+});
+-->
+</script>
+<title>網際優勢-實體通路開立電子發票獨立第三方平台</title>
+</head>
+
+<body>
+<!--路徑名稱-->
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="30"><img src="images/path_left.gif" alt="" width="30" height="29" /></td>
+    <td bgcolor="#ecedd5">首頁 > 商家資料維護</td>
+    <td width="18"><img src="images/path_right.gif" alt="" width="18" height="29" /></td>
+  </tr>
+</table>
+<!--交易畫面標題-->
+<h1><img src="images/icon_search.gif" alt="" width="29" height="28" border="0" align="absmiddle" />商家資料維護</h1>
+<div id="border_gray">
+  <!--表格 開始-->
+  <form name="addForm" id="addForm">
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" id="left_title">
+      <tr>
+        <th colspan="4" class="Head_style_a">查詢條件</th>
+      </tr>
+      <tr>
+        <th width="20%">統編</th>
+        <td class="tdleft"><input name="T" type="text" class="textfield" size="20" /></td>
+        <th nowrap="nowrap" class="tdleft">商家名稱</th>
+        <td class="tdleft"><input name="T2" type="text" class="textfield" size="20" /></td>
+      </tr>
+      <tr>
+        <th>商家狀態</th>
+        <td class="tdleft">
+        <select name="ctl00">
+        <option value="全部">全部</option>
+        <option value="1101">已停用</option>
+        <option value="1103">已啟用</option>
+        </select>
+        </td>
+        <td colspan="2" class="Bargain_btn" align="center">
+          <input type="button" name="Submit" class="btn" value="查詢" onclick="window.location='CompanyManager_list.htm'" />
+        </td>
+      </tr>
+    </table>
+  </form>
+  <!--表格 結束-->
+</div>
+<!--按鈕-->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="Bargain_btn"><input name="newAdd2" type="button" class="btn" value="新增商家" onclick="window.location.href='addCompany.htm'" /></td>
+  </tr>
+</table>
+<!--按鈕-->
+</body>
+</html>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<CancelInvoiceRoot>
+    <CompanyBan>26305533</CompanyBan>
+    <CancelInvoice>
+        <CancelInvoiceNumber>XP61500557</CancelInvoiceNumber>
+        <InvoiceDate>2011/10/16</InvoiceDate>
+        <SellerId>26305533</SellerId>
+        <CancelDate>2011/10/16</CancelDate>
+        <CancelTime>18:29:44</CancelTime>
+        <ReturnTaxDocumentNumber />
+        <Remark>未折扣就出發票</Remark>
+    </CancelInvoice>
+</CancelInvoiceRoot>

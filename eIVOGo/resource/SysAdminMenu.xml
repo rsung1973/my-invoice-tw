@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="big5"?>
+<menuItem value="" url="#">
+  <menuItem value="系統管理維護" url="">
+    <menuItem value="會員管理" url="~/SAM/MemberManager.aspx">
+      <workItem value="" url="~/SAM/AddMember.aspx" />
+      <workItem value="" url="~/SAM/ModifyMember.aspx" />
+      <workItem value="" url="~/SAM/CreateConsumerMember.aspx" />
+      <workItem value="" url="~/SAM/register_msg.aspx" />
+      <workItem value="" url="~/SAM/EditMember.aspx" />
+      <workItem value="" url="~/MainPage.aspx" />
+      <workItem value="" url="~/SAM/memberManager.aspx" />
+      <workItem value="" url="~/SAM/UserProfileManager.aspx" />
+      <workItem value="" url="~/SAM/EditUserProfile.aspx" />
+      <workItem value="" url="~/InvoiceQuery/InvoiceReport" />
+    </menuItem>
+    <menuItem value="店家資料維護" url="~/SAM/CompanyManager.aspx">
+      <workItem value="" url="~/SAM/AddCompany.aspx" />
+      <workItem value="" url="~/SAM/EditCompany.aspx" />
+      <workItem value="" url="~/SAM/register_msg.aspx" />
+      <workItem value="" url="~/EIVO/DownloadMIG.aspx" />
+      <workItem value="" url="~/OrganizationQuery/Inquire" />
+    </menuItem>
+    <menuItem value="店家資料維護" url="~/OrganizationQuery/Index">
+      <workItem value="" url="~/OrganizationQuery/Inquire" />
+      <workItem value="" url="~/SAM/EditCompany.aspx" />
+      <workItem value="" url="~/SAM/register_msg.aspx" />
+      <workItem value="" url="~/Handling/Index" />
+      <workItem value="" url="~/Published/view_data.aspx" />
+      <workItem value="" url="~/InvoiceQuery/InvoiceMediaReport" />
+    </menuItem>
+    <menuItem value="買受人資料維護" url="~/SAM/BuyerManager.aspx">
+      <workItem value="" url="~/SAM/EditCompany.aspx" />
+      <workItem value="" url="~/SAM/EditBuyer.aspx" />
+      <workItem value="" url="~/SAM/register_msg.aspx" />
+    </menuItem>
+    <menuItem value="社福機構資料維護" url="~/SAM/SocialWelfareAgenciesManger.aspx">
+      <workItem value="" url="~/SAM/modifySocialWelfareAgencies.aspx" />
+    </menuItem>
+    <menuItem value="電子發票字軌維護" url="~/EIVO/track_number_list.aspx">
+      <workItem value="" url="~/EIVO/track_number_list.aspx" />
+      <workItem value="" url="~/SAM/AddInvoiceTrackCode.aspx" />
+      <workItem value="" url="~/SAM/EditInvoiceTrackCode.aspx" />
+    </menuItem>
+    <menuItem value="電子發票中獎號碼維護" url="~/SAM/WinningNumbersManager.aspx">
+      <workItem value="" url="~/SAM/EditWinningNumber.aspx" />
+    </menuItem>
+    <menuItem value="上期發票空白號碼查詢" url="~/SYS/UnusedInvoiceList.aspx" />
+    <menuItem value="查詢發票/折讓" url="~/Inquiry/InquireInvoice.aspx">
+      <workItem value="" url="~/MainPage.aspx" />
+      <workItem value="" url="~/Visitor/InquireAllowance.aspx" />
+      <workItem value="" url="~/Visitor/InquireWinningInvoice.aspx" />
+      <workItem value="" url="~/Visitor/InquireInvoiceCancellation.aspx" />
+      <workItem value="" url="~/Visitor/InquireAllowanceCancellation.aspx" />
+      <workItem value="" url="~/Inquiry/InquireAllowance.aspx" />
+      <workItem value="" url="~/Visitor/InquireInvoice.aspx" />
+      <workItem value="" url="~/Inquiry/InquireInvoiceCancellation.aspx" />
+      <workItem value="" url="~/Inquiry/InquireAllowanceCancellation.aspx" />
+      <workItem value="" url="~/Inquiry/InquireWinningInvoice.aspx" />
+      <workItem value="" url="~/InvoiceQuery/InvoiceMediaReport" />
+    </menuItem>
+    <menuItem value="登錄掛號郵件號碼" url="~/EIVO/WebUploadMailMessage.aspx">
+      <workItem value="" url="~/EIVO/WebUploadReturnMailMessage.aspx" />
+    </menuItem>
+    <menuItem value="下載MIG檔案" url="~/EIVO/WebDownloadMIG.aspx">
+      <workItem value="" url="~/EIVO/WebDownloadMIG.aspx" />
+      <workItem value="" url="~/EIVO/DownloadMIG.aspx" />
+    </menuItem>
+    <menuItem value="發票列印" url="~/Inquiry/PrintInvoices.aspx">
+      <workItem value="" url="~/Inquiry/PrintWinningInvoices.aspx" />
+      <workItem value="" url="~/Inquiry/PrintAllowances.aspx" />
+      <workItem value="" url="~/MainPage.aspx" />
+      <workItem value="" url="~/InvoiceQuery/InvoiceReport" />
+      <workItem value="" url="~/WinningInvoice/ReportIndex" />
+    </menuItem>
+    <menuItem value="重送開立發票通知" url="~/SAM/ResendInvoicesMail.aspx" />
+    <!--<menuItem value="UXB2B會員條碼卡發行" url="~/SAM/CardManager.aspx">
+      <workItem value="" url="~/SAM/UXB2BCardGen.aspx" />
+    </menuItem>-->
+    <menuItem value="QR Code金鑰維護" url="~/SYS/UploadQRCodeKey.aspx" />
+    <menuItem value="查詢憑證使用記錄" url="~/SAM/queryCALog_list.aspx">
+      <workItem value="" url="~/SAM/queryCALog_list.aspx" />
+    </menuItem>
+    <!--<menuItem value="中獎清冊匯入" url="~/SAM/ImportWinner.aspx" />-->
+    <menuItem value="系統監控" url="">
+      <menuItem value="異常記錄查詢" url="~/SAM/SystemErrorLog.aspx" />
+      <menuItem value="用戶端連線狀態" url="~/SAM/SystemMonitor.aspx" />
+      <menuItem value="發票號連號檢查" url="~/SAM/CheckSequentialInvoiceNo.aspx" />
+    </menuItem>
+    <menuItem value="TurnKey監控" url="">
+      <menuItem value="TurnKey傳送狀態" url="~/SAM/TurnKeyMonitor.aspx" />
+      <menuItem value="TurnKey發票傳送紀錄" url="~/SAM/TurnKeyLog.aspx">
+        <workItem value="" url="~/SAM/TurnKeyMonitor.aspx" />
+      </menuItem>
+    </menuItem>
+    <!--<menuItem value="發票下載重置" url="~/SAM/InquireInvoiceToReset.aspx" />-->
+    <menuItem value="跑馬燈訊息維護" url="~/SYS/MaintainSystemMessage.aspx" />
+    <menuItem value="客服訊息" url="~/SMS/DynamicSendSMSMessage.aspx" />
+    <menuItem value="資料管理" url="">
+      <menuItem value="資料維護" url="~/DataExchange/Index">
+        <workItem value="" url="~/DataExchange/UpdateBuyer" />
+        <workItem value="" url="~/Views/DataExchange/Index.aspx" />
+        <workItem value="" url="~/WinningInvoice/ReportIndex" />
+      </menuItem>
+      <menuItem value="註銷作業" url="~/Inquiry/VoidInvoices.aspx" />
+    </menuItem>
+  </menuItem>
+  <menuItem value="統計報表" url="">
+    <menuItem value="發票明細查詢" url="~/InvoiceQuery/InvoiceReport">
+      <workItem value="" url="~/InvoiceQuery/Inquire" />
+      <workItem value="" url="~/InvoiceQuery/InvoiceAttachment" />
+      <workItem value="" url="~/InvoiceQuery/InquireAttachment" />
+    </menuItem>
+    <menuItem value="發票統計表" url="~/InvoiceQuery/InvoiceSummary">
+      <workItem value="" url="~/InvoiceQuery/InquireSummary" />
+    </menuItem>
+    <menuItem value="中獎統計表" url="~//WinningInvoice/ReportIndex" />
+    <menuItem value="捐贈統計表" url="~/DonatedInvoice/ReportIndex">
+      <workItem value="" url="~/Visitor/DonateReport.aspx" />
+      <workItem value="" url="~/DonatedInvoice/InquireReport" />
+    </menuItem>
+    <menuItem value="附件檔查詢＼下載" url="~/InvoiceQuery/InvoiceAttachment">
+    </menuItem>
+    <menuItem value="媒體申報檔匯出" url="~/InvoiceQuery/InvoiceMediaReport" clearCache="true">
+    </menuItem>
+  </menuItem>
+  <menuItem value="系統維護" url="">
+    <menuItem value="角色定義維護" url="~/SYS/MaintainUserRoleDefinition.aspx" />
+    <menuItem value="組織單位類別維護" url="~/SYS/MaintainCategoryDefinition.aspx" />
+    <menuItem value="工作選單維護" url="~/SYS/MaintainMenuControl.aspx">
+      <workItem value="" url="~/SYS/EditMenuNodes.aspx" />
+      <workItem value="" url="~/WinningInvoice/ReportIndex" />
+    </menuItem>
+    <menuItem value="工作選單套用維護" url="~/SYS/ApplyUserMenu.aspx" />
+    <menuItem value="公司類別套用維護" url="~/SYS/MaintainOrganizationCategory.aspx" />
+    <menuItem value="使用者角色維護" url="~/SYS/MaintainUserProfile.aspx">
+      <workItem value="" url="~/SYS/MaintainUserRole.aspx" />
+    </menuItem>
+  </menuItem>
+  <workItem value="首頁" url="~/MainPage.aspx" />
+  <workItem value="站務新聞" url="~/SAM/publish_system_event_page.aspx" />
+  <workItem value="" url="~/SAM/PrintAllowances.aspx" />
+  <workItem value="" url="~/GoogleInvoiceReport" />
+  <workItem value="" url="~/GoogleInvoiceReport/Inquire" />
+  <workItem value="" url="~/InvoiceQuery/InvoiceReport" />
+  <workItem value="" url="~/InvoiceQuery/Inquire" />
+  <workItem value="" url="~/InvoiceQuery/DownloadCSV" />
+  <workItem value="" url="~/Visitor/InquireWinningInvoice.aspx" />
+  <workItem value="" url="~/WinningInvoice/QueryIndex" />
+  <workItem value="" url="~/WinningInvoice/ReportIndex" />
+  <workItem value="" url="~/WinningInvoice/InquireReport" />
+  <workItem value="" url="~/Views/DonatedInvoice/Index.aspx" />
+  <workItem value="" url="~/InvoiceDonation" />
+  <workItem value="" url="~/InvoiceDonation/index" />
+  <workItem value="" url="~/InvoiceQuery/InvoiceAttachment" />
+  <workItem value="" url="~/InvoiceQuery/InquireAttachment" />
+  <workItem value="" url="~/DataExchange/Index" />
+  <workItem value="" url="~/DataExchange/UpdateBuyer" />
+  <workItem value="" url="~/Published/view_data.aspx" />
+  <workItem value="" url="~/InvoiceQuery/InvoiceMediaReport" />
+</menuItem>

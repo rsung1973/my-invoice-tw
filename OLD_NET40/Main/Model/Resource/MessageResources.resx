@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AlertAllowanceDateFormat" xml:space="preserve">
+    <value>折讓證明單日期錯誤(yyyy/MM/dd)；傳送資料:{0}</value>
+  </data>
+  <data name="AlertAllowanceDuplicated" xml:space="preserve">
+    <value>折讓證明單號碼已存在:{0}</value>
+  </data>
+  <data name="AlertAllowanceNoLength" xml:space="preserve">
+    <value>折讓證明單號碼長度超過16碼，傳送資料：{0}，TAG：&lt; AllowanceNumber /&gt;</value>
+  </data>
+  <data name="AlertAllowanceType" xml:space="preserve">
+    <value>折讓種類格式僅有 買方開立為\"1\"、賣方開立為\"2\"，傳送資料：{0}</value>
+  </data>
+  <data name="AlertAllowance_AllowanceSequenceNumber" xml:space="preserve">
+    <value>折讓證明單明細排列序號長度最多3碼，傳送資料：{0}，TAG：&lt; AllowanceSequenceNumber /&gt;</value>
+  </data>
+  <data name="AlertAllowance_InvoiceBuyerError" xml:space="preserve">
+    <value>發票買方統一編號錯誤，傳送資料：{0}</value>
+  </data>
+  <data name="AlertAllowance_InvoiceDate" xml:space="preserve">
+    <value>折讓的發票日期資料錯誤；原發票日期：{0} 、 上傳資料：{1}</value>
+  </data>
+  <data name="AlertAllowance_InvoiceDateFormat" xml:space="preserve">
+    <value>原開立發票日期錯誤，格式(yyyy/MM/dd)；傳送資料:{0}"</value>
+  </data>
+  <data name="AlertAllowance_InvoiceSellerIsDifferent" xml:space="preserve">
+    <value>折讓單賣方與發票賣方資料不符，傳送資料：{0}</value>
+  </data>
+  <data name="AlertAllowance_OriginalDescription" xml:space="preserve">
+    <value>原品名錯誤，原品名長度最多256碼，傳送資料：{0}，TAG：&lt; OriginalDescription /&gt;</value>
+  </data>
+  <data name="AlertAllowance_OriginalSequenceNumber" xml:space="preserve">
+    <value>原明細排列序號長度最多3碼，傳送資料：{0}，TAG：&lt; OriginalInvoiceNumber /&gt;</value>
+  </data>
+  <data name="AlertAllowance_TaxType" xml:space="preserve">
+    <value>課稅別格式錯誤，傳送資料：{0}，TAG：&lt; TaxType /&gt;</value>
+  </data>
+  <data name="AlertAllowance_Unit" xml:space="preserve">
+    <value>單位名稱長度最多6碼，傳送資料：{0}，TAG：&lt; Unit /&gt;</value>
+  </data>
+  <data name="AlertB2BInvoiceDonation" xml:space="preserve">
+    <value>B2B發票不接受捐贈註記。</value>
+  </data>
+  <data name="AlertBuyerNameLength" xml:space="preserve">
+    <value>買方名稱格式錯誤，長度最多60碼，傳送資料：{0}，TAG:&lt; BuyerName /&gt;</value>
+  </data>
+  <data name="AlertClearanceMarkExport" xml:space="preserve">
+    <value>通關方式註記格式錯誤，限填非經海關出口："1"或經海關出口："2"，上傳資料：{0},TAG:&lt; CustomsClearanceMark /&gt;</value>
+  </data>
+  <data name="AlertClearanceMarkZeroTax" xml:space="preserve">
+    <value>若為零稅率發票，通關方式註記(CustomsClearanceMark)為必填欄位，上傳資料：{0},TAG:&lt; CustomsClearanceMark /&gt;</value>
+  </data>
+  <data name="AlertContactToPrintAll" xml:space="preserve">
+    <value>公司帳號設定為全列印，請填寫聯絡人資訊；TAG:&lt; Contact /&gt;</value>
+  </data>
+  <data name="AlertDataDate" xml:space="preserve">
+    <value>單據日期錯誤，TAG:&lt; DataDate /&gt;</value>
+  </data>
+  <data name="AlertDataDateFormat" xml:space="preserve">
+    <value>單據日期格式錯誤(YYYY/MM/DD)；上傳資料:{0}</value>
+  </data>
+  <data name="AlertDataNumber" xml:space="preserve">
+    <value>單據號碼錯誤，TAG:&lt; DataNumber /&gt;</value>
+  </data>
+  <data name="AlertDataNumberDuplicated" xml:space="preserve">
+    <value>單據號碼不可重複；傳送資料:{0}，TAG:&lt; DataNumber /&gt;</value>
+  </data>
+  <data name="AlertDataNumberLimitedLength" xml:space="preserve">
+    <value>單據號碼資料長度最長為60碼；傳送資料:{0}，TAG:&lt; DataNumber /&gt;</value>
+  </data>
+  <data name="AlertDoationInvoiceCarryType" xml:space="preserve">
+    <value>註記捐贈時載具類別請留空白，傳送資料：{0}，TAG:&lt; CarrierType /&gt;</value>
+  </data>
+  <data name="AlertGoogleId" xml:space="preserve">
+    <value>GoogleId can not be blank，TAG:&lt; GoogleId /&gt;</value>
+  </data>
+  <data name="AlertGoogleIdLengthLimit" xml:space="preserve">
+    <value>GoogleId can not be over 64 characters，TAG:&lt; GoogleId /&gt;</value>
+  </data>
+  <data name="AlertInvalidSeller" xml:space="preserve">
+    <value>賣方為非註冊店家,開立人統一編號:{0}，TAG:&lt; SellerId /&gt;</value>
+  </data>
+  <data name="AlertInvoiceCarrierComplete" xml:space="preserve">
+    <value>上傳載具資料不完全，請檢查；1.載具類別、2.顯碼或隱瑪至少填一。</value>
+  </data>
+  <data name="AlertInvoiceCarrierLength" xml:space="preserve">
+    <value>載具類別或顯碼ID、隱碼ID的長度超出限制；載具類別：6碼、顯碼及隱碼ID：64。上傳資料→載具類別 {0}、顯碼ID {1}、隱碼ID {2}。</value>
+  </data>
+  <data name="AlertInvoiceDate" xml:space="preserve">
+    <value>發票日期，TAG：&lt; InvoiceDate /&gt;</value>
+  </data>
+  <data name="AlertInvoiceDateTime" xml:space="preserve">
+    <value>發票日期、發票時間格式錯誤(yyyy/MM/dd HH:mm:ss)；上傳資料:{0} {1}</value>
+  </data>
+  <data name="AlertInvoiceDelivery" xml:space="preserve">
+    <value>發票未標註列印、未捐贈，須提示載具；傳送資料:{0}，TAG:&lt; InvoiceNumber /&gt;</value>
+  </data>
+  <data name="AlertInvoiceDelivery_DataNo" xml:space="preserve">
+    <value>發票未標註列印、未捐贈，須提示載具；傳送資料:{0}，TAG:&lt; DataNumber /&gt;</value>
+  </data>
+  <data name="AlertInvoiceDuplicated" xml:space="preserve">
+    <value>發票號碼重複，已存在的發票資料。</value>
+  </data>
+  <data name="AlertInvoiceNumber" xml:space="preserve">
+    <value>發票號碼，傳送資料:{0}，TAG：&lt; InvoicNumber /&gt;</value>
+  </data>
+  <data name="AlertInvoiceTime" xml:space="preserve">
+    <value>發票時間，TAG：&lt; InvoiceTime /&gt;</value>
+  </data>
+  <data name="AlertNullTrackNoInterval" xml:space="preserve">
+    <value>未設定發票字軌或發票號碼已用完，發票開立人統編：{0}</value>
+  </data>
+  <data name="AlertPrintedInvoiceCarrierType" xml:space="preserve">
+    <value>註記列印時載具類別請留空白，傳送資料：{0}，TAG:&lt; CarrierType /&gt;</value>
+  </data>
+  <data name="AlertPrintedInvoiceDonation" xml:space="preserve">
+    <value>列印或設定全列印時，不得標註捐贈，傳送資料：{0}，TAG:&lt; DonateMark/&gt;</value>
+  </data>
+  <data name="AlertSellerNameLength" xml:space="preserve">
+    <value>賣方-營業人名稱錯誤，長度最多60碼，傳送資料：{0}，TAG：&lt; SellerName /&gt;</value>
+  </data>
+  <data name="AlertSellerSignature" xml:space="preserve">
+    <value>簽章設定人與發票開立人不符,開立人統一編號:{0}，TAG:&lt; SellerId /&gt;</value>
+  </data>
+  <data name="InvalidAllowanceDate" xml:space="preserve">
+    <value>折讓證明單日期為必填項目，TAG：&lt; AllowanceDate /&gt;</value>
+  </data>
+  <data name="InvalidAllowanceNo" xml:space="preserve">
+    <value>折讓證明單號碼為必填項目，TAG：&lt; AllowanceNumber /&gt;</value>
+  </data>
+  <data name="InvalidAllowance_InvoiceHasBeenCanceled" xml:space="preserve">
+    <value>該發票已作廢，不可折讓。</value>
+  </data>
+  <data name="InvalidAllowance_NoInvoiceData" xml:space="preserve">
+    <value>發票資料不存在，傳送資料：{0}，TAG：&lt; OriginalInvoiceNumber /&gt;</value>
+  </data>
+  <data name="InvalidBuyerId" xml:space="preserve">
+    <value>買方識別碼錯誤，傳送資料：{0}，TAG:&lt; BuyerId /&gt;</value>
+  </data>
+  <data name="InvalidBuyerName" xml:space="preserve">
+    <value>B2C買方名稱格式錯誤，長度為ASCII字元4碼或中文全形字元2碼，傳送資料：{0}，TAG:&lt; BuyerName /&gt;</value>
+  </data>
+  <data name="InvalidBuyerNameLengthLimit" xml:space="preserve">
+    <value>B2B買方名稱不能空白，長度最多60碼，傳送資料：{0}，TAG:&lt; BuyerName /&gt;</value>
+  </data>
+  <data name="InvalidContactAddress" xml:space="preserve">
+    <value>聯絡人地址錯誤，上傳資料：{0}，TAG:&lt; Address /&gt;</value>
+  </data>
+  <data name="InvalidContactEMail" xml:space="preserve">
+    <value>聯絡人Email錯誤，上傳資料：{0}，TAG:&lt; Email /&gt;</value>
+  </data>
+  <data name="InvalidContactName" xml:space="preserve">
+    <value>聯絡人名稱錯誤，上傳資料：{0}，TAG:&lt; Name /&gt; :</value>
+  </data>
+  <data name="InvalidContactPhone" xml:space="preserve">
+    <value>聯絡人電話號碼錯誤，上傳資料：{0}，TAG:&lt; TEL /&gt;</value>
+  </data>
+  <data name="InvalidCostAmount" xml:space="preserve">
+    <value>金額格式錯誤，傳送資料：{0}，TAG:&lt; Amount /&gt;</value>
+  </data>
+  <data name="InvalidDonationMark" xml:space="preserve">
+    <value>捐贈註記錯誤，上傳資料：{0}，TAG:&lt; DonateMark /&gt;</value>
+  </data>
+  <data name="InvalidDonationTaker" xml:space="preserve">
+    <value>未指定發票捐贈對象統一編號，傳送資料：{0}，TAG:&lt; NPOBAN /&gt;</value>
+  </data>
+  <data name="InvalidFreeTaxAmount" xml:space="preserve">
+    <value>免稅銷售額合計(新台幣)不可為負數且為整數，上傳資料：{0},TAG:&lt; FreeTaxSalesAmount /&gt;</value>
+  </data>
+  <data name="InvalidInvoiceType" xml:space="preserve">
+    <value>發票類別格式錯誤，請依發票種類填寫相應代號"01"-"06"，上傳資料：{0}，TAG:&lt; InvoiceType /&gt;</value>
+  </data>
+  <data name="InvalidPieceUnit" xml:space="preserve">
+    <value>單位格式錯誤，傳送資料：{0}，TAG:&lt; Unit /&gt;</value>
+  </data>
+  <data name="InvalidPrintMark" xml:space="preserve">
+    <value>電子發票證明聯已列印註記錯誤，TAG:&lt; PrintMark /&gt;</value>
+  </data>
+  <data name="InvalidProductDescription" xml:space="preserve">
+    <value>品項名稱不可空白長度不得大於256，傳送資料：{0}，TAG:&lt; Description /&gt;</value>
+  </data>
+  <data name="InvalidPublicCarrierType" xml:space="preserve">
+    <value>請依下列規範檢查載具資料：
+1.載具類別為非共通性載具。
+2.載具顯碼、隱碼開頭為'/'。
+3.含開頭'/'，長度為8碼。
+傳送資料：{0}，TAG:&lt; CarrierType /&gt;；{1}，TAG:&lt; CarrierId1 /&gt;；{2}，TAG:&lt; CarrierId2 /&gt;。</value>
+  </data>
+  <data name="InvalidRandomNumber" xml:space="preserve">
+    <value>交易隨機碼應由4位數值構成，上傳資料：{0}，TAG:&lt; RandomNumber /&gt;</value>
+  </data>
+  <data name="InvalidSellerNotAttributionTheAgent" xml:space="preserve">
+    <value>上傳店家並無登記在此發票開立代理店家底下:{0}，TAG:&lt; SellerId /&gt;；代理發票開立店家:{1}</value>
+  </data>
+  <data name="InvalidSellerOrAgent" xml:space="preserve">
+    <value>發票開立人為非註冊店家:{0}，TAG:&lt; SellerId /&gt;；也未註冊於機構:{1}，代理發票傳送</value>
+  </data>
+  <data name="InvalidSellingPrice" xml:space="preserve">
+    <value>應稅銷售額合計(新台幣)不可為負數且為整數，上傳資料：{0},TAG:&lt; SalesAmount /&gt;</value>
+  </data>
+  <data name="InvalidTaxAmount" xml:space="preserve">
+    <value>營業稅額不可為負數且為整數，上傳資料：{0},TAG:&lt; TaxAmount /&gt;</value>
+  </data>
+  <data name="InvalidTaxRate" xml:space="preserve">
+    <value>稅率格式錯誤，上傳資料：{0},TAG:&lt; TaxRate /&gt;</value>
+  </data>
+  <data name="InvalidTaxType" xml:space="preserve">
+    <value>課稅別格式錯誤，上傳資料：{0},TAG:&lt; TaxType /&gt;</value>
+  </data>
+  <data name="InvalidTotalAmount" xml:space="preserve">
+    <value>總金額不可為負數且為整數，上傳資料：{0},TAG:&lt; TaxAmount /&gt;</value>
+  </data>
+  <data name="InvalidUnitPrice" xml:space="preserve">
+    <value>單價資料格式錯誤，傳送資料：{0}，TAG:&lt; UnitPrice /&gt;</value>
+  </data>
+  <data name="InvalidZeroTaxAmount" xml:space="preserve">
+    <value>零稅率銷售額合計(新台幣)不可為負數且為整數，上傳資料：{0},TAG:&lt; ZeroTaxSalesAmount /&gt;</value>
+  </data>
+</root>

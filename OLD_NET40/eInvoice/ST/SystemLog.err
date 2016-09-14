@@ -1,0 +1,29 @@
+2012/10/15 17:51:18
+System.IO.FileNotFoundException: 找不到指定的檔案。
+   於 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   於 System.IO.__Error.WinIOError()
+   於 System.IO.File.Move(String sourceFileName, String destFileName)
+   於 InvoiceClient.Agent.InvoiceWatcher.processFile(String invFile) 於 J:\Project\AppDev\eInvoice\InvoiceClient\Agent\InvoiceWatcher.cs: 行 64
+2012/10/15 17:55:09
+System.IO.IOException: 由於另一個處理序正在使用檔案 'C:\UXB2B_EIVO\Invoice(正在處理)\20121005170106_Invoice.XML-20121008180334393.xml-20121008180351487.xml-20121008180356487.xml-20121015175124796.xml'，所以無法存取該檔案。
+   於 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   於 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
+   於 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   於 System.Xml.XmlDownloadManager.GetStream(Uri uri, ICredentials credentials, IWebProxy proxy, RequestCachePolicy cachePolicy)
+   於 System.Xml.XmlUrlResolver.GetEntity(Uri absoluteUri, String role, Type ofObjectToReturn)
+   於 System.Xml.XmlTextReaderImpl.OpenUrlDelegate(Object xmlResolver)
+   於 System.Threading.CompressedStack.runTryCode(Object userData)
+   於 System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup(TryCode code, CleanupCode backoutCode, Object userData)
+   於 System.Threading.CompressedStack.Run(CompressedStack compressedStack, ContextCallback callback, Object state)
+   於 System.Xml.XmlTextReaderImpl.OpenUrl()
+   於 System.Xml.XmlTextReaderImpl.Read()
+   於 System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   於 System.Xml.XmlDocument.Load(XmlReader reader)
+   於 System.Xml.XmlDocument.Load(String filename)
+   於 InvoiceClient.Agent.InvoiceWatcher.processFile(String invFile) 於 J:\Project\AppDev\eInvoice\InvoiceClient\Agent\InvoiceWatcher.cs: 行 77
+2012/10/15 17:55:09
+System.IO.FileNotFoundException: 找不到檔案 'C:\UXB2B_EIVO\Invoice(正在處理)\20121005170106_Invoice.XML-20121008180334393.xml-20121008180351487.xml-20121008180356487.xml-20121015175124796.xml'。
+檔案名稱: 'C:\UXB2B_EIVO\Invoice(正在處理)\20121005170106_Invoice.XML-20121008180334393.xml-20121008180351487.xml-20121008180356487.xml-20121015175124796.xml'
+   於 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   於 System.IO.File.Move(String sourceFileName, String destFileName)
+   於 InvoiceClient.Agent.InvoiceWatcher.storeFile(String srcName, String destName) 於 J:\Project\AppDev\eInvoice\InvoiceClient\Agent\InvoiceWatcher.cs: 行 126

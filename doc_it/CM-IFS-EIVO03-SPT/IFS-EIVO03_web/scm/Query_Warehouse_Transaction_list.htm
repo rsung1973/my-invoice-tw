@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=big5" />
+<link href="css/content.css" rel="stylesheet" type="text/css" />
+<link href="css/table.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="javascript/join.js"></script>
+<script language="JavaScript" src="javascript/jquery.js"></script>
+<script type="text/javascript">
+<!--
+$(document).ready(function() {
+	$("#device").hide();
+	$("#uxb2b").hide();
+	
+	$("#r_dev").click(function(){
+		$("#device").show();
+		});
+	$("#member").click(function(){
+		$("#device").hide();
+		});
+		
+	$("#device").change(function(){
+		var sel=$('#device option:selected').text();
+		if(sel == "UXB2B條碼卡")
+		{
+			$("#uxb2b").show();
+		}
+		else
+		{
+			$("#uxb2b").hide();
+		};
+	});
+});
+-->
+</script>
+<title>電子發票系統</title>
+</head>
+
+<body>
+<!--路徑名稱-->
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="30"><img src="images/path_left.gif" alt="" width="30" height="29" /></td>
+    <td bgcolor="#ecedd5">首頁 > 庫存異動查詢</td>
+    <td width="18"><img src="images/path_right.gif" alt="" width="18" height="29" /></td>
+  </tr>
+</table>
+<!--交易畫面標題-->
+<h1><img src="images/icon_search.gif" width="29" height="28" border="0" align="absmiddle" />庫存異動查詢</h1>
+<div id="border_gray">
+<!--表格 開始-->
+<form name="addForm">
+<table width="100%" border="0" cellpadding="0" cellspacing="0" id="left_title">
+  <tr>
+    <th colspan="2" class="Head_style_a">查詢條件</th>
+  </tr>
+  <tr>
+    <th>倉儲</th>
+    <td class="tdleft">
+    <select name="seller" size="1" class="textfield">
+      <option>全部</option>
+      <option>彰化</option>
+      <option>廣州</option>
+    </select>
+    </td>
+  </tr>
+  <tr>
+    <th>BarCode</th>
+    <td class="tdleft">
+    <input name="T" type="text" class="textfield" size="10">
+    </td>
+  </tr>
+  <tr>
+    <th>料品名稱</th>
+    <td class="tdleft">
+    <input name="T" type="text" class="textfield" size="10"><font color="blue">可輸入關鍵字查詢</font>
+    </td>
+  </tr>
+  <tr>
+    <th width="20%">日期區間</th>
+    <td class="tdleft">
+    自&nbsp;<input readonly name="appstartday" type="text" class="textfield" size="10" />
+    &nbsp;&nbsp;<img src="images/date.gif" width="16" height="15" border="0" align="absmiddle" style="cursor:hand;" onClick=calender(addForm.appstartday) />
+    至&nbsp;<input readonly name="appendday" type="text" class="textfield" size="10" />
+    &nbsp;<img src="images/date.gif" width="16" height="15" border="0" align="absmiddle" style="cursor:hand;" onClick=calender(addForm.appendday) /></td>
+  </tr>
+</table>
+</form>
+<!--表格 結束-->
+</div>
+<!--按鈕-->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="Bargain_btn"><input type="button" name="Submit" class="btn" value="查詢" onClick="window.location='Query_Warehouse_Transaction_list.htm'" />&nbsp;<input name="Reset" type="reset" class="btn" value="重填" /></td>
+  </tr>
+</table>
+<h1><img src="images/icon_search.gif" width="29" height="28" border="0" align="absmiddle" />查詢結果</h1>
+<div id="border_gray">
+  <!--表格 開始-->
+  <table width="100%" border="0" cellpadding="0" cellspacing="0" id="table01">
+    <tr>
+      <th width="20%">日期區間</th>
+      <th nowrap="nowrap">倉儲</th>
+      <th nowrap="nowrap">料品Barcode</th>
+      <th nowrap="nowrap">料品名稱</th>
+      <th nowrap="nowrap">入庫數量</th>
+      <th nowrap="nowrap">入庫瑕疵數量</th>
+      <th nowrap="nowrap">出庫數量</th>
+    </tr>
+    <tr>
+      <td align="center">100年09月05日～100年09月10日</td>
+      <td align="center">彰化</td>
+      <td align="center">012345023</td>
+      <td align="center">鋼筆</td>
+      <td align="right">0</td>
+      <td align="right">0</td>
+      <td align="right">1,000</td>
+    </tr>
+    <tr>
+      <td align="center">100年09月05日～100年09月10日</td>
+      <td align="center">彰化</td>
+      <td align="center">012345024</td>
+      <td align="center">鋼筆</td>
+      <td align="right">1,500</td>
+      <td align="right">2</td>
+      <td align="right">500</td>
+    </tr>
+    <tr>
+      <td align="center">100年09月05日～100年09月10日</td>
+      <td align="center">彰化</td>
+      <td align="center">012345025</td>
+      <td align="center">鋼筆</td>
+      <td align="right">1,200</td>
+      <td align="right">1</td>
+      <td align="right">0</td>
+    </tr>
+    <tr>
+      <td align="center">100年09月05日～100年09月10日</td>
+      <td align="center">彰化</td>
+      <td align="center">012535032</td>
+      <td align="center">書套</td>
+      <td align="right">0</td>
+      <td align="right">0</td>
+      <td align="right">2,000</td>
+    </tr>
+    <tr>
+      <td align="center">100年09月05日～100年09月10日</td>
+      <td align="center">彰化</td>
+      <td align="center">012535033</td>
+      <td align="center">書套</td>
+      <td align="right">1,200</td>
+      <td align="right">0</td>
+      <td align="right">1,800</td>
+    </tr>
+  </table>
+  <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" id="table-count">
+    <tr>
+      <td>| 1 | <a href="#">2</a> |&nbsp; <a href="#">後10頁</a> | <a href="#">最後1頁</a>
+        <input name="textfield" type="text" class="textfield" size="3" />
+        <input name="cancel22" type="reset" class="btn" value="頁數" /></td>
+      <td align="right" nowrap="nowrap"><span>總筆數：100&nbsp;&nbsp;&nbsp;總頁數：10</span></td>
+    </tr>
+  </table>
+<!--表格 結束-->
+</div>
+<!--按鈕-->
+
+</body>
+</html>

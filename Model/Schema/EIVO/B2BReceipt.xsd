@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="B2BReceipt" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="ReceiptRoot">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Receipt" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ReceiptNumber" type="xs:string" />
+                            <xs:element name="ReceiptDate" type="xs:string" />
+                            <xs:element name="SellerId" type="xs:string" />
+                            <xs:element name="BuyerId" type="xs:string" />
+                            <xs:element name="ReceiptItem" minOccurs="1" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Description" type="xs:string" />
+                                        <xs:element name="Quantity" type="xs:decimal" />
+                                        <xs:element name="UnitPrice" type="xs:decimal" />
+                                        <xs:element name="Amount" type="xs:decimal" />
+                                        <xs:element name="SequenceNumber" type="xs:unsignedInt" />
+                                        <xs:element name="Remark" type="xs:string" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="TotalAmount" type="xs:decimal" />
+                            <xs:element name="Remark" type="xs:string" nillable="1" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

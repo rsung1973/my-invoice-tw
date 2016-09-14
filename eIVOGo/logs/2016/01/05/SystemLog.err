@@ -1,0 +1,8 @@
+2016/01/05 16:57:17
+System.Web.HttpException (0x80004005): 傳送 HTTP 標頭後無法重新導向。
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 Business.Helper.WebPageUtility.get_UserProfile() 於 c:\Project\VM-SIT04\IFS-EIVO03\Business\Helper\WebPageUtility.cs: 行 27
+   於 eIVOGo.template.base_page.Page_Load(Object sender, EventArgs e) 於 c:\Project\VM-SIT04\IFS-EIVO03\eIVOGo\template\base_page.aspx.cs: 行 21
+   於 System.Web.UI.Control.OnLoad(EventArgs e)
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)

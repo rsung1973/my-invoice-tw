@@ -1,0 +1,24 @@
+body {
+	margin:0px;
+	padding:0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+/*內文Body用樣式*/
+.main_txt
+{
+	margin:0px;
+	padding:0px;
+	/*height:auto!important;
+	*height:400px;
+    min-height:400px;*/
+}
+form{
+	margin:0px;
+	padding:0px;
+}
+.copyright {
+	margin:0px 10px 0px 0px;
+	padding:0px;
+	color:#666666;
+}

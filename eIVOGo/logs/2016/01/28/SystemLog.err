@@ -1,0 +1,30 @@
+2016/01/28 17:23:35
+System.Web.HttpException (0x80070057): 遠端主機已關閉連接。錯誤碼為 0x80070057。
+   於 System.Web.Hosting.IIS7WorkerRequest.RaiseCommunicationError(Int32 result, Boolean throwOnDisconnect)
+   於 System.Web.Hosting.IIS7WorkerRequest.ExplicitFlush()
+   於 System.Web.HttpResponse.Flush(Boolean finalFlush, Boolean async)
+   於 System.Web.HttpResponse.End()
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 Business.Helper.WebPageUtility.get_UserProfile() 於 c:\Project\VM-SIT04\IFS-EIVO03\Business\Helper\WebPageUtility.cs: 行 27
+   於 eIVOGo.template.base_page.Page_Load(Object sender, EventArgs e) 於 c:\Project\VM-SIT04\IFS-EIVO03\eIVOGo\template\base_page.aspx.cs: 行 21
+   於 System.Web.UI.Control.OnLoad(EventArgs e)
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016/01/28 18:10:05
+System.NullReferenceException: 並未將物件參考設定為物件的執行個體。
+   於 eIVOGo.template.base_page.Page_Load(Object sender, EventArgs e) 於 c:\Project\VM-SIT04\IFS-EIVO03\eIVOGo\template\base_page.aspx.cs: 行 22
+   於 System.Web.UI.Control.OnLoad(EventArgs e)
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016/01/28 18:20:00
+System.Data.Linq.ChangeConflictException: 資料列找不到，或者已變更。
+   於 System.Data.Linq.ChangeProcessor.SubmitChanges(ConflictMode failureMode)
+   於 System.Data.Linq.DataContext.SubmitChanges(ConflictMode failureMode)
+   於 DataAccessLayer.basis.GenericManager`1.SubmitChanges() 於 c:\Project\VM-SIT04\Uxnet\Uxnet.Com\DataAccessLayer\basis\GenericManager.cs: 行 177
+   於 Model.InvoiceManagement.GovPlatformManager.saveInvoiceForGovPlatform(InvoiceManager mgr) 於 c:\Project\VM-SIT04\IFS-EIVO03\Model\InvoiceManagement\GovPlatformManager.cs: 行 83
+2016/01/28 18:47:18
+System.NullReferenceException: 並未將物件參考設定為物件的執行個體。
+   於 eIVOGo.template.base_page.Page_Load(Object sender, EventArgs e) 於 c:\Project\VM-SIT04\IFS-EIVO03\eIVOGo\template\base_page.aspx.cs: 行 22
+   於 System.Web.UI.Control.OnLoad(EventArgs e)
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)

@@ -1,0 +1,112 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvoiceClient", "InvoiceClient.csproj", "{90365DBC-0D13-4FA9-977E-9A8DF4A66E38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "..\Model\Model.csproj", "{2F1547B6-2DD4-4A57-A40F-258103591603}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "InvoiceClientInstaller", "..\InvoiceClientInstaller\InvoiceClientInstaller.vdproj", "{18D38066-56B5-42E4-B8AB-87F6FE83CAF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uxnet.Com", "..\..\Uxnet\Uxnet.Com\Uxnet.Com.csproj", "{72EDD90C-E7FE-44F4-8B9B-C9512F02D547}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uxnet.ToolAdapter", "..\..\Uxnet\Uxnet.ToolAdapter\Uxnet.ToolAdapter.csproj", "{B3AE4AFA-632C-493A-AC5A-9E6B7F9A2B30}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://vm-sit04.uxb2b.com/tfs/defaultcollection
+		SccProjectUniqueName0 = InvoiceClient.csproj
+		SccProjectName0 = .
+		SccAuxPath0 = https://vm-sit04.uxb2b.com/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProvider0 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName1 = ..\\Model\\Model.csproj
+		SccProjectName1 = ../Model
+		SccAuxPath1 = https://vm-sit04.uxb2b.com/tfs/defaultcollection
+		SccLocalPath1 = ..\\Model
+		SccProvider1 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName2 = ..\\InvoiceClientInstaller\\InvoiceClientInstaller.vdproj
+		SccProjectName2 = ../InvoiceClientInstaller
+		SccAuxPath2 = https://vm-sit04.uxb2b.com/tfs/defaultcollection
+		SccLocalPath2 = ..\\InvoiceClientInstaller
+		SccProvider2 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName3 = ..\\..\\Uxnet\\Uxnet.Com\\Uxnet.Com.csproj
+		SccProjectName3 = ../../Uxnet/Uxnet.Com
+		SccAuxPath3 = https://vm-sit04.uxb2b.com/tfs/defaultcollection
+		SccLocalPath3 = ..\\..\\Uxnet\\Uxnet.Com
+		SccProvider3 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName4 = ..\\..\\Uxnet\\Uxnet.ToolAdapter\\Uxnet.ToolAdapter.csproj
+		SccProjectName4 = ../../Uxnet/Uxnet.ToolAdapter
+		SccAuxPath4 = https://vm-sit04.uxb2b.com/tfs/defaultcollection
+		SccLocalPath4 = ..\\..\\Uxnet\\Uxnet.ToolAdapter
+		SccProvider4 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{90365DBC-0D13-4FA9-977E-9A8DF4A66E38}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{90365DBC-0D13-4FA9-977E-9A8DF4A66E38}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{90365DBC-0D13-4FA9-977E-9A8DF4A66E38}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{90365DBC-0D13-4FA9-977E-9A8DF4A66E38}.Debug|x86.ActiveCfg = Debug|x86
+		{90365DBC-0D13-4FA9-977E-9A8DF4A66E38}.Debug|x86.Build.0 = Debug|x86
+		{90365DBC-0D13-4FA9-977E-9A8DF4A66E38}.Release|Any CPU.ActiveCfg = Release|x86
+		{90365DBC-0D13-4FA9-977E-9A8DF4A66E38}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{90365DBC-0D13-4FA9-977E-9A8DF4A66E38}.Release|Mixed Platforms.Build.0 = Release|x86
+		{90365DBC-0D13-4FA9-977E-9A8DF4A66E38}.Release|x86.ActiveCfg = Release|x86
+		{90365DBC-0D13-4FA9-977E-9A8DF4A66E38}.Release|x86.Build.0 = Release|x86
+		{2F1547B6-2DD4-4A57-A40F-258103591603}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F1547B6-2DD4-4A57-A40F-258103591603}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F1547B6-2DD4-4A57-A40F-258103591603}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{2F1547B6-2DD4-4A57-A40F-258103591603}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{2F1547B6-2DD4-4A57-A40F-258103591603}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2F1547B6-2DD4-4A57-A40F-258103591603}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F1547B6-2DD4-4A57-A40F-258103591603}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F1547B6-2DD4-4A57-A40F-258103591603}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{2F1547B6-2DD4-4A57-A40F-258103591603}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{2F1547B6-2DD4-4A57-A40F-258103591603}.Release|x86.ActiveCfg = Release|Any CPU
+		{18D38066-56B5-42E4-B8AB-87F6FE83CAF0}.Debug|Any CPU.ActiveCfg = Debug
+		{18D38066-56B5-42E4-B8AB-87F6FE83CAF0}.Debug|Any CPU.Build.0 = Debug
+		{18D38066-56B5-42E4-B8AB-87F6FE83CAF0}.Debug|Mixed Platforms.ActiveCfg = Debug
+		{18D38066-56B5-42E4-B8AB-87F6FE83CAF0}.Debug|Mixed Platforms.Build.0 = Debug
+		{18D38066-56B5-42E4-B8AB-87F6FE83CAF0}.Debug|x86.ActiveCfg = Debug
+		{18D38066-56B5-42E4-B8AB-87F6FE83CAF0}.Debug|x86.Build.0 = Debug
+		{18D38066-56B5-42E4-B8AB-87F6FE83CAF0}.Release|Any CPU.ActiveCfg = Release
+		{18D38066-56B5-42E4-B8AB-87F6FE83CAF0}.Release|Any CPU.Build.0 = Release
+		{18D38066-56B5-42E4-B8AB-87F6FE83CAF0}.Release|Mixed Platforms.ActiveCfg = Release
+		{18D38066-56B5-42E4-B8AB-87F6FE83CAF0}.Release|Mixed Platforms.Build.0 = Release
+		{18D38066-56B5-42E4-B8AB-87F6FE83CAF0}.Release|x86.ActiveCfg = Release
+		{18D38066-56B5-42E4-B8AB-87F6FE83CAF0}.Release|x86.Build.0 = Release
+		{72EDD90C-E7FE-44F4-8B9B-C9512F02D547}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72EDD90C-E7FE-44F4-8B9B-C9512F02D547}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72EDD90C-E7FE-44F4-8B9B-C9512F02D547}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{72EDD90C-E7FE-44F4-8B9B-C9512F02D547}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{72EDD90C-E7FE-44F4-8B9B-C9512F02D547}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{72EDD90C-E7FE-44F4-8B9B-C9512F02D547}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72EDD90C-E7FE-44F4-8B9B-C9512F02D547}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72EDD90C-E7FE-44F4-8B9B-C9512F02D547}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{72EDD90C-E7FE-44F4-8B9B-C9512F02D547}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{72EDD90C-E7FE-44F4-8B9B-C9512F02D547}.Release|x86.ActiveCfg = Release|Any CPU
+		{B3AE4AFA-632C-493A-AC5A-9E6B7F9A2B30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3AE4AFA-632C-493A-AC5A-9E6B7F9A2B30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3AE4AFA-632C-493A-AC5A-9E6B7F9A2B30}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{B3AE4AFA-632C-493A-AC5A-9E6B7F9A2B30}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{B3AE4AFA-632C-493A-AC5A-9E6B7F9A2B30}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B3AE4AFA-632C-493A-AC5A-9E6B7F9A2B30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3AE4AFA-632C-493A-AC5A-9E6B7F9A2B30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3AE4AFA-632C-493A-AC5A-9E6B7F9A2B30}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{B3AE4AFA-632C-493A-AC5A-9E6B7F9A2B30}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{B3AE4AFA-632C-493A-AC5A-9E6B7F9A2B30}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

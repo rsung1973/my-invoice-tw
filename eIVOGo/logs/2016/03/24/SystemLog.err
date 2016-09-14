@@ -1,0 +1,663 @@
+2016/03/24 14:52:53
+System.ArgumentOutOfRangeException: 指定的引數超出有效值的範圍。
+參數名稱: index
+   於 System.Data.Linq.EntitySet`1.get_Item(Int32 index)
+   於 ASP.module_sam_editorganization_ascx.__DataBindingCategoryID(Object sender, EventArgs e) 於 c:\Project\VM-SIT04\IFS-EIVO03\eIVOGo\Module\SAM\EditOrganization.ascx: 行 59
+   於 System.Web.UI.Control.OnDataBinding(EventArgs e)
+   於 System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   於 System.Web.UI.Control.DataBindChildren()
+   於 System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   於 eIVOGo.Module.Base.EntityBase`2.DataBind() 於 c:\Project\VM-SIT04\IFS-EIVO03\eIVOGo\Module\Base\EntityBase.cs: 行 66
+   於 eIVOGo.Module.Base.EntityBase`2.BindData() 於 c:\Project\VM-SIT04\IFS-EIVO03\eIVOGo\Module\Base\EntityBase.cs: 行 59
+   於 ASP.module_sam_editcompany_ascx.module_sam_editcompany_ascx_PreRender(Object sender, EventArgs e) 於 c:\Project\VM-SIT04\IFS-EIVO03\eIVOGo\Module\SAM\EditCompany.ascx: 行 32
+   於 System.Web.UI.Control.OnPreRender(EventArgs e)
+   於 System.Web.UI.Control.PreRenderRecursiveInternal()
+   於 System.Web.UI.Control.PreRenderRecursiveInternal()
+   於 System.Web.UI.Control.PreRenderRecursiveInternal()
+   於 System.Web.UI.Control.PreRenderRecursiveInternal()
+   於 System.Web.UI.Control.PreRenderRecursiveInternal()
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016/03/24 14:52:53
+System.Web.HttpException (0x80004005): 執行 /SAM/EditCompany.aspx 的子要求時發生錯誤。 ---> System.Web.HttpUnhandledException (0x80004005): 已發生類型 'System.Web.HttpUnhandledException' 的例外狀況。 ---> System.ArgumentOutOfRangeException: 指定的引數超出有效值的範圍。
+參數名稱: index
+   於 System.Data.Linq.EntitySet`1.get_Item(Int32 index)
+   於 ASP.module_sam_editorganization_ascx.__DataBindingCategoryID(Object sender, EventArgs e) 於 c:\Project\VM-SIT04\IFS-EIVO03\eIVOGo\Module\SAM\EditOrganization.ascx: 行 59
+   於 System.Web.UI.Control.OnDataBinding(EventArgs e)
+   於 System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   於 System.Web.UI.Control.DataBindChildren()
+   於 System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   於 eIVOGo.Module.Base.EntityBase`2.DataBind() 於 c:\Project\VM-SIT04\IFS-EIVO03\eIVOGo\Module\Base\EntityBase.cs: 行 66
+   於 eIVOGo.Module.Base.EntityBase`2.BindData() 於 c:\Project\VM-SIT04\IFS-EIVO03\eIVOGo\Module\Base\EntityBase.cs: 行 59
+   於 ASP.module_sam_editcompany_ascx.module_sam_editcompany_ascx_PreRender(Object sender, EventArgs e) 於 c:\Project\VM-SIT04\IFS-EIVO03\eIVOGo\Module\SAM\EditCompany.ascx: 行 32
+   於 System.Web.UI.Control.OnPreRender(EventArgs e)
+   於 System.Web.UI.Control.PreRenderRecursiveInternal()
+   於 System.Web.UI.Control.PreRenderRecursiveInternal()
+   於 System.Web.UI.Control.PreRenderRecursiveInternal()
+   於 System.Web.UI.Control.PreRenderRecursiveInternal()
+   於 System.Web.UI.Control.PreRenderRecursiveInternal()
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.HandleError(Exception e)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.ProcessRequest()
+   於 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   於 ASP.sam_editcompany_aspx.ProcessRequest(HttpContext context) 於 c:\Windows\Microsoft.NET\Framework64\v4.0.30319\Temporary ASP.NET Files\root\735e7382\d679391e\App_Web_um0j4ve2.10.cs: 行 0
+   於 System.Web.HttpServerUtility.ExecuteInternal(IHttpHandler handler, TextWriter writer, Boolean preserveForm, Boolean setPreviousPage, VirtualPath path, VirtualPath filePath, String physPath, Exception error, String queryStringOverride)
+   於 System.Web.HttpServerUtility.ExecuteInternal(IHttpHandler handler, TextWriter writer, Boolean preserveForm, Boolean setPreviousPage, VirtualPath path, VirtualPath filePath, String physPath, Exception error, String queryStringOverride)
+   於 System.Web.HttpServerUtility.Execute(String path, TextWriter writer, Boolean preserveForm)
+   於 System.Web.HttpServerUtility.Transfer(String path, Boolean preserveForm)
+   於 System.Web.HttpServerUtility.Transfer(String path)
+   於 eIVOGo.Module.SAM.Business.CompanyList.<OnInit>b__2(String arg) 於 c:\Project\VM-SIT04\IFS-EIVO03\eIVOGo\Module\SAM\Business\CompanyList.ascx.cs: 行 40
+   於 Uxnet.Web.Module.Common.ActionHandler.RaisePostBackEvent(String eventArgument)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.ProcessRequest()
+   於 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   於 ASP.sam_companymanager_aspx.ProcessRequest(HttpContext context) 於 c:\Windows\Microsoft.NET\Framework64\v4.0.30319\Temporary ASP.NET Files\root\735e7382\d679391e\App_Web_um0j4ve2.1.cs: 行 0
+   於 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   於 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2016/03/24 14:52:53
+System.Web.HttpException (0x80004005): 執行 /SAM/EditCompany.aspx 的子要求時發生錯誤。 ---> System.Web.HttpUnhandledException (0x80004005): 已發生類型 'System.Web.HttpUnhandledException' 的例外狀況。 ---> System.ArgumentOutOfRangeException: 指定的引數超出有效值的範圍。
+參數名稱: index
+   於 System.Data.Linq.EntitySet`1.get_Item(Int32 index)
+   於 ASP.module_sam_editorganization_ascx.__DataBindingCategoryID(Object sender, EventArgs e) 於 c:\Project\VM-SIT04\IFS-EIVO03\eIVOGo\Module\SAM\EditOrganization.ascx: 行 59
+   於 System.Web.UI.Control.OnDataBinding(EventArgs e)
+   於 System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   於 System.Web.UI.Control.DataBindChildren()
+   於 System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   於 eIVOGo.Module.Base.EntityBase`2.DataBind() 於 c:\Project\VM-SIT04\IFS-EIVO03\eIVOGo\Module\Base\EntityBase.cs: 行 66
+   於 eIVOGo.Module.Base.EntityBase`2.BindData() 於 c:\Project\VM-SIT04\IFS-EIVO03\eIVOGo\Module\Base\EntityBase.cs: 行 59
+   於 ASP.module_sam_editcompany_ascx.module_sam_editcompany_ascx_PreRender(Object sender, EventArgs e) 於 c:\Project\VM-SIT04\IFS-EIVO03\eIVOGo\Module\SAM\EditCompany.ascx: 行 32
+   於 System.Web.UI.Control.OnPreRender(EventArgs e)
+   於 System.Web.UI.Control.PreRenderRecursiveInternal()
+   於 System.Web.UI.Control.PreRenderRecursiveInternal()
+   於 System.Web.UI.Control.PreRenderRecursiveInternal()
+   於 System.Web.UI.Control.PreRenderRecursiveInternal()
+   於 System.Web.UI.Control.PreRenderRecursiveInternal()
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.HandleError(Exception e)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.ProcessRequest()
+   於 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   於 ASP.sam_editcompany_aspx.ProcessRequest(HttpContext context) 於 c:\Windows\Microsoft.NET\Framework64\v4.0.30319\Temporary ASP.NET Files\root\735e7382\d679391e\App_Web_um0j4ve2.10.cs: 行 0
+   於 System.Web.HttpServerUtility.ExecuteInternal(IHttpHandler handler, TextWriter writer, Boolean preserveForm, Boolean setPreviousPage, VirtualPath path, VirtualPath filePath, String physPath, Exception error, String queryStringOverride)
+   於 System.Web.HttpServerUtility.ExecuteInternal(IHttpHandler handler, TextWriter writer, Boolean preserveForm, Boolean setPreviousPage, VirtualPath path, VirtualPath filePath, String physPath, Exception error, String queryStringOverride)
+   於 System.Web.HttpServerUtility.Execute(String path, TextWriter writer, Boolean preserveForm)
+   於 System.Web.HttpServerUtility.Transfer(String path, Boolean preserveForm)
+   於 System.Web.HttpServerUtility.Transfer(String path)
+   於 eIVOGo.Module.SAM.Business.CompanyList.<OnInit>b__2(String arg) 於 c:\Project\VM-SIT04\IFS-EIVO03\eIVOGo\Module\SAM\Business\CompanyList.ascx.cs: 行 40
+   於 Uxnet.Web.Module.Common.ActionHandler.RaisePostBackEvent(String eventArgument)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.ProcessRequest()
+   於 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   於 ASP.sam_companymanager_aspx.ProcessRequest(HttpContext context) 於 c:\Windows\Microsoft.NET\Framework64\v4.0.30319\Temporary ASP.NET Files\root\735e7382\d679391e\App_Web_um0j4ve2.1.cs: 行 0
+   於 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   於 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2016/03/24 14:55:33
+System.Net.Mail.SmtpException: 傳送郵件失敗。 ---> System.Net.WebException: 無法連接至遠端伺服器 ---> System.Net.Sockets.SocketException: 無法連線，因為目標電腦拒絕連線。 127.0.0.1:25
+   於 System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   於 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 內部例外狀況堆疊追蹤的結尾 ---
+   於 System.Net.ServicePoint.GetConnection(PooledStream PooledStream, Object owner, Boolean async, IPAddress& address, Socket& abortSocket, Socket& abortSocket6)
+   於 System.Net.PooledStream.Activate(Object owningObject, Boolean async, GeneralAsyncDelegate asyncCallback)
+   於 System.Net.ConnectionPool.GetConnection(Object owningObject, GeneralAsyncDelegate asyncCallback, Int32 creationTimeout)
+   於 System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   於 System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   於 System.Net.Mail.SmtpClient.GetConnection()
+   於 System.Net.Mail.SmtpClient.Send(MailMessage message)
+   --- 內部例外狀況堆疊追蹤的結尾 ---
+   於 System.Net.Mail.SmtpClient.Send(MailMessage message)
+   於 eIVOGo.services.ServiceWorkItem.doDailyTurnKeyCheck() 於 c:\Project\VM-SIT04\IFS-EIVO03\eIVOGo\services\ServiceWorkItem.cs: 行 244
+2016/03/24 15:29:14
+System.Web.HttpException (0x80004005): The controller for path '/favicon.ico' was not found or does not implement IController.
+   於 System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   於 System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   於 System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   於 System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   於 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   於 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2016/03/24 15:30:41
+System.Web.HttpException (0x80004005): The controller for path '/favicon.ico' was not found or does not implement IController.
+   於 System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   於 System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   於 System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   於 System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   於 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   於 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2016/03/24 15:34:29
+System.Net.Mail.SmtpException: 傳送郵件失敗。 ---> System.Net.WebException: 無法連接至遠端伺服器 ---> System.Net.Sockets.SocketException: 無法連線，因為目標電腦拒絕連線。 127.0.0.1:25
+   於 System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   於 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 內部例外狀況堆疊追蹤的結尾 ---
+   於 System.Net.ServicePoint.GetConnection(PooledStream PooledStream, Object owner, Boolean async, IPAddress& address, Socket& abortSocket, Socket& abortSocket6)
+   於 System.Net.PooledStream.Activate(Object owningObject, Boolean async, GeneralAsyncDelegate asyncCallback)
+   於 System.Net.ConnectionPool.GetConnection(Object owningObject, GeneralAsyncDelegate asyncCallback, Int32 creationTimeout)
+   於 System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   於 System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   於 System.Net.Mail.SmtpClient.GetConnection()
+   於 System.Net.Mail.SmtpClient.Send(MailMessage message)
+   --- 內部例外狀況堆疊追蹤的結尾 ---
+   於 System.Net.Mail.SmtpClient.Send(MailMessage message)
+   於 eIVOGo.services.ServiceWorkItem.doDailyTurnKeyCheck() 於 c:\Project\VM-SIT04\IFS-EIVO03\eIVOGo\services\ServiceWorkItem.cs: 行 244
+2016/03/24 16:12:27
+System.InvalidOperationException: Multiple types were found that match the controller named 'OrganizationQuery'. This can happen if the route that services this request ('{controller}/{action}/{id}') does not specify namespaces to search for a controller that matches the request. If this is the case, register this route by calling an overload of the 'MapRoute' method that takes a 'namespaces' parameter.
+
+The request for 'OrganizationQuery' has found the following matching controllers:
+eIVOGo.Controllers.OrganizationQueryController
+eIVOGo.Controllers.OrganizationQueryController
+   於 System.Web.Mvc.DefaultControllerFactory.GetControllerTypeWithinNamespaces(RouteBase route, String controllerName, HashSet`1 namespaces)
+   於 System.Web.Mvc.DefaultControllerFactory.GetControllerType(RequestContext requestContext, String controllerName)
+   於 System.Web.Mvc.DefaultControllerFactory.System.Web.Mvc.IControllerFactory.GetControllerSessionBehavior(RequestContext requestContext, String controllerName)
+   於 System.Web.Mvc.MvcRouteHandler.GetSessionStateBehavior(RequestContext requestContext)
+   於 System.Web.Mvc.MvcRouteHandler.GetHttpHandler(RequestContext requestContext)
+   於 System.Web.Routing.UrlRoutingModule.PostResolveRequestCache(HttpContextBase context)
+   於 System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   於 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2016/03/24 16:32:03
+System.Web.HttpException (0x80004005): 傳送 HTTP 標頭後無法重新導向。
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 Business.Helper.WebPageUtility.get_UserProfile() 於 c:\Project\VM-SIT04\IFS-EIVO03\Business\Helper\WebPageUtility.cs: 行 27
+   於 eIVOGo.template.base_page.Page_Load(Object sender, EventArgs e) 於 c:\Project\VM-SIT04\IFS-EIVO03\eIVOGo\template\base_page.aspx.cs: 行 21
+   於 System.Web.UI.Control.OnLoad(EventArgs e)
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016/03/24 16:32:03
+System.Web.HttpException (0x80004005): 執行處理常式 'System.Web.Mvc.HttpHandlerUtil+ServerExecuteHttpHandlerWrapper' 的子要求時發生錯誤。 ---> System.Web.HttpUnhandledException (0x80004005): 已發生類型 'System.Web.HttpUnhandledException' 的例外狀況。 ---> System.Web.HttpException (0x80004005): 傳送 HTTP 標頭後無法重新導向。
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 Business.Helper.WebPageUtility.get_UserProfile() 於 c:\Project\VM-SIT04\IFS-EIVO03\Business\Helper\WebPageUtility.cs: 行 27
+   於 eIVOGo.template.base_page.Page_Load(Object sender, EventArgs e) 於 c:\Project\VM-SIT04\IFS-EIVO03\eIVOGo\template\base_page.aspx.cs: 行 21
+   於 System.Web.UI.Control.OnLoad(EventArgs e)
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.HandleError(Exception e)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.ProcessRequest()
+   於 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   於 ASP.views_organizationquery_inquiryresult_aspx.ProcessRequest(HttpContext context) 於 c:\Windows\Microsoft.NET\Framework64\v4.0.30319\Temporary ASP.NET Files\root\735e7382\d679391e\App_Web_yefsvqul.0.cs: 行 0
+   於 System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerWrapper.<>c__DisplayClass4.<Wrap>b__3()
+   於 System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerWrapper.Wrap[TResult](Func`1 func)
+   於 System.Web.HttpServerUtility.ExecuteInternal(IHttpHandler handler, TextWriter writer, Boolean preserveForm, Boolean setPreviousPage, VirtualPath path, VirtualPath filePath, String physPath, Exception error, String queryStringOverride)
+   於 System.Web.HttpServerUtility.ExecuteInternal(IHttpHandler handler, TextWriter writer, Boolean preserveForm, Boolean setPreviousPage, VirtualPath path, VirtualPath filePath, String physPath, Exception error, String queryStringOverride)
+   於 System.Web.HttpServerUtility.Execute(IHttpHandler handler, TextWriter writer, Boolean preserveForm, Boolean setPreviousPage)
+   於 System.Web.HttpServerUtility.Execute(IHttpHandler handler, TextWriter writer, Boolean preserveForm)
+   於 System.Web.Mvc.ViewPage.RenderView(ViewContext viewContext)
+   於 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   於 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   於 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   於 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   於 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   於 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   於 System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   於 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   於 System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   於 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   於 System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   於 System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   於 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   於 System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   於 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   於 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2016/03/24 16:32:25
+System.Web.HttpUnhandledException (0x80004005): 已發生類型 'System.Web.HttpUnhandledException' 的例外狀況。 ---> System.InvalidOperationException: The partial view 'Module/InvoiceReport' was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/OrganizationQuery/Module/InvoiceReport.aspx
+~/Views/OrganizationQuery/Module/InvoiceReport.ascx
+~/Views/Shared/Module/InvoiceReport.aspx
+~/Views/Shared/Module/InvoiceReport.ascx
+~/Views/OrganizationQuery/Module/InvoiceReport.cshtml
+~/Views/OrganizationQuery/Module/InvoiceReport.vbhtml
+~/Views/Shared/Module/InvoiceReport.cshtml
+~/Views/Shared/Module/InvoiceReport.vbhtml
+   於 System.Web.Mvc.HtmlHelper.FindPartialView(ViewContext viewContext, String partialViewName, ViewEngineCollection viewEngineCollection)
+   於 System.Web.Mvc.HtmlHelper.RenderPartialInternal(String partialViewName, ViewDataDictionary viewData, Object model, TextWriter writer, ViewEngineCollection viewEngineCollection)
+   於 System.Web.Mvc.Html.RenderPartialExtensions.RenderPartial(HtmlHelper htmlHelper, String partialViewName, Object model)
+   於 ASP.views_organizationquery_module_inquiryresult_ascx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 於 c:\Project\VM-SIT04\IFS-EIVO03\eIVOGo\Views\OrganizationQuery\Module\InquiryResult.ascx: 行 16
+   於 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   於 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   於 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   於 System.Web.Mvc.ViewPage.Render(HtmlTextWriter writer)
+   於 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.HandleError(Exception e)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.ProcessRequest()
+   於 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   於 System.Web.Mvc.ViewPage.RenderView(ViewContext viewContext)
+   於 System.Web.Mvc.ViewUserControl.RenderViewAndRestoreContentType(ViewPage containerPage, ViewContext viewContext)
+   於 System.Web.Mvc.ViewUserControl.RenderView(ViewContext viewContext)
+   於 System.Web.Mvc.Html.RenderPartialExtensions.RenderPartial(HtmlHelper htmlHelper, String partialViewName, Object model)
+   於 ASP.views_organizationquery_inquiryresult_aspx.__RendermainContent(HtmlTextWriter __w, Control parameterContainer) 於 c:\Project\VM-SIT04\IFS-EIVO03\eIVOGo\Views\OrganizationQuery\InquiryResult.aspx: 行 9
+   於 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   於 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   於 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   於 System.Web.UI.HtmlControls.HtmlForm.RenderChildren(HtmlTextWriter writer)
+   於 System.Web.UI.HtmlControls.HtmlContainerControl.Render(HtmlTextWriter writer)
+   於 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   於 System.Web.UI.HtmlControls.HtmlForm.RenderControl(HtmlTextWriter writer)
+   於 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   於 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   於 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   於 System.Web.Mvc.ViewPage.Render(HtmlTextWriter writer)
+   於 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.ProcessRequest()
+   於 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   於 ASP.views_organizationquery_inquiryresult_aspx.ProcessRequest(HttpContext context) 於 c:\Windows\Microsoft.NET\Framework64\v4.0.30319\Temporary ASP.NET Files\root\735e7382\d679391e\App_Web_yefsvqul.0.cs: 行 0
+   於 System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerWrapper.<>c__DisplayClass4.<Wrap>b__3()
+   於 System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerWrapper.Wrap[TResult](Func`1 func)
+   於 System.Web.HttpServerUtility.ExecuteInternal(IHttpHandler handler, TextWriter writer, Boolean preserveForm, Boolean setPreviousPage, VirtualPath path, VirtualPath filePath, String physPath, Exception error, String queryStringOverride)
+2016/03/24 16:32:25
+System.Web.HttpException (0x80004005): 執行處理常式 'System.Web.Mvc.HttpHandlerUtil+ServerExecuteHttpHandlerWrapper' 的子要求時發生錯誤。 ---> System.Web.HttpUnhandledException (0x80004005): 已發生類型 'System.Web.HttpUnhandledException' 的例外狀況。 ---> System.InvalidOperationException: The partial view 'Module/InvoiceReport' was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/OrganizationQuery/Module/InvoiceReport.aspx
+~/Views/OrganizationQuery/Module/InvoiceReport.ascx
+~/Views/Shared/Module/InvoiceReport.aspx
+~/Views/Shared/Module/InvoiceReport.ascx
+~/Views/OrganizationQuery/Module/InvoiceReport.cshtml
+~/Views/OrganizationQuery/Module/InvoiceReport.vbhtml
+~/Views/Shared/Module/InvoiceReport.cshtml
+~/Views/Shared/Module/InvoiceReport.vbhtml
+   於 System.Web.Mvc.HtmlHelper.FindPartialView(ViewContext viewContext, String partialViewName, ViewEngineCollection viewEngineCollection)
+   於 System.Web.Mvc.HtmlHelper.RenderPartialInternal(String partialViewName, ViewDataDictionary viewData, Object model, TextWriter writer, ViewEngineCollection viewEngineCollection)
+   於 System.Web.Mvc.Html.RenderPartialExtensions.RenderPartial(HtmlHelper htmlHelper, String partialViewName, Object model)
+   於 ASP.views_organizationquery_module_inquiryresult_ascx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 於 c:\Project\VM-SIT04\IFS-EIVO03\eIVOGo\Views\OrganizationQuery\Module\InquiryResult.ascx: 行 16
+   於 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   於 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   於 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   於 System.Web.Mvc.ViewPage.Render(HtmlTextWriter writer)
+   於 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.HandleError(Exception e)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.ProcessRequest()
+   於 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   於 System.Web.Mvc.ViewPage.RenderView(ViewContext viewContext)
+   於 System.Web.Mvc.ViewUserControl.RenderViewAndRestoreContentType(ViewPage containerPage, ViewContext viewContext)
+   於 System.Web.Mvc.ViewUserControl.RenderView(ViewContext viewContext)
+   於 System.Web.Mvc.Html.RenderPartialExtensions.RenderPartial(HtmlHelper htmlHelper, String partialViewName, Object model)
+   於 ASP.views_organizationquery_inquiryresult_aspx.__RendermainContent(HtmlTextWriter __w, Control parameterContainer) 於 c:\Project\VM-SIT04\IFS-EIVO03\eIVOGo\Views\OrganizationQuery\InquiryResult.aspx: 行 9
+   於 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   於 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   於 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   於 System.Web.UI.HtmlControls.HtmlForm.RenderChildren(HtmlTextWriter writer)
+   於 System.Web.UI.HtmlControls.HtmlContainerControl.Render(HtmlTextWriter writer)
+   於 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   於 System.Web.UI.HtmlControls.HtmlForm.RenderControl(HtmlTextWriter writer)
+   於 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   於 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   於 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   於 System.Web.Mvc.ViewPage.Render(HtmlTextWriter writer)
+   於 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.ProcessRequest()
+   於 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   於 ASP.views_organizationquery_inquiryresult_aspx.ProcessRequest(HttpContext context) 於 c:\Windows\Microsoft.NET\Framework64\v4.0.30319\Temporary ASP.NET Files\root\735e7382\d679391e\App_Web_yefsvqul.0.cs: 行 0
+   於 System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerWrapper.<>c__DisplayClass4.<Wrap>b__3()
+   於 System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerWrapper.Wrap[TResult](Func`1 func)
+   於 System.Web.HttpServerUtility.ExecuteInternal(IHttpHandler handler, TextWriter writer, Boolean preserveForm, Boolean setPreviousPage, VirtualPath path, VirtualPath filePath, String physPath, Exception error, String queryStringOverride)
+   於 System.Web.HttpServerUtility.ExecuteInternal(IHttpHandler handler, TextWriter writer, Boolean preserveForm, Boolean setPreviousPage, VirtualPath path, VirtualPath filePath, String physPath, Exception error, String queryStringOverride)
+   於 System.Web.HttpServerUtility.Execute(IHttpHandler handler, TextWriter writer, Boolean preserveForm, Boolean setPreviousPage)
+   於 System.Web.HttpServerUtility.Execute(IHttpHandler handler, TextWriter writer, Boolean preserveForm)
+   於 System.Web.Mvc.ViewPage.RenderView(ViewContext viewContext)
+   於 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   於 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   於 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   於 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   於 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   於 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   於 System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   於 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   於 System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   於 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   於 System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   於 System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   於 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   於 System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   於 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   於 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2016/03/24 16:34:01
+System.Web.HttpException (0x80004005): 傳送 HTTP 標頭後無法重新導向。
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 Business.Helper.WebPageUtility.get_UserProfile() 於 c:\Project\VM-SIT04\IFS-EIVO03\Business\Helper\WebPageUtility.cs: 行 27
+   於 eIVOGo.template.base_page.Page_Load(Object sender, EventArgs e) 於 c:\Project\VM-SIT04\IFS-EIVO03\eIVOGo\template\base_page.aspx.cs: 行 21
+   於 System.Web.UI.Control.OnLoad(EventArgs e)
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016/03/24 16:34:02
+System.Web.HttpException (0x80004005): 執行處理常式 'System.Web.Mvc.HttpHandlerUtil+ServerExecuteHttpHandlerWrapper' 的子要求時發生錯誤。 ---> System.Web.HttpUnhandledException (0x80004005): 已發生類型 'System.Web.HttpUnhandledException' 的例外狀況。 ---> System.Web.HttpException (0x80004005): 傳送 HTTP 標頭後無法重新導向。
+   於 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   於 Business.Helper.WebPageUtility.get_UserProfile() 於 c:\Project\VM-SIT04\IFS-EIVO03\Business\Helper\WebPageUtility.cs: 行 27
+   於 eIVOGo.template.base_page.Page_Load(Object sender, EventArgs e) 於 c:\Project\VM-SIT04\IFS-EIVO03\eIVOGo\template\base_page.aspx.cs: 行 21
+   於 System.Web.UI.Control.OnLoad(EventArgs e)
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.HandleError(Exception e)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.ProcessRequest()
+   於 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   於 System.Web.Mvc.ViewPage.ProcessRequest(HttpContext context)
+   於 ASP.views_organizationquery_index_aspx.ProcessRequest(HttpContext context) 於 c:\Windows\Microsoft.NET\Framework64\v4.0.30319\Temporary ASP.NET Files\root\735e7382\d679391e\App_Web_yefsvqul.1.cs: 行 0
+   於 System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerWrapper.<>c__DisplayClass1.<ProcessRequest>b__0()
+   於 System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerWrapper.<>c__DisplayClass4.<Wrap>b__3()
+   於 System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerWrapper.Wrap[TResult](Func`1 func)
+   於 System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerWrapper.Wrap(Action action)
+   於 System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerWrapper.ProcessRequest(HttpContext context)
+   於 System.Web.HttpServerUtility.ExecuteInternal(IHttpHandler handler, TextWriter writer, Boolean preserveForm, Boolean setPreviousPage, VirtualPath path, VirtualPath filePath, String physPath, Exception error, String queryStringOverride)
+   於 System.Web.HttpServerUtility.ExecuteInternal(IHttpHandler handler, TextWriter writer, Boolean preserveForm, Boolean setPreviousPage, VirtualPath path, VirtualPath filePath, String physPath, Exception error, String queryStringOverride)
+   於 System.Web.HttpServerUtility.Execute(IHttpHandler handler, TextWriter writer, Boolean preserveForm, Boolean setPreviousPage)
+   於 System.Web.HttpServerUtility.Execute(IHttpHandler handler, TextWriter writer, Boolean preserveForm)
+   於 System.Web.Mvc.ViewPage.RenderView(ViewContext viewContext)
+   於 System.Web.Mvc.WebFormView.RenderViewPage(ViewContext context, ViewPage page)
+   於 System.Web.Mvc.WebFormView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   於 System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   於 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   於 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   於 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   於 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   於 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   於 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   於 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   於 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   於 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   於 System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   於 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   於 System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   於 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   於 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   於 System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   於 System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   於 System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   於 System.Web.Mvc.Controller.<BeginExecute>b__15(IAsyncResult asyncResult, Controller controller)
+   於 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   於 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   於 System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   於 System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   於 System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   於 System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   於 System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   於 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   於 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   於 System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   於 System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   於 System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   於 System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   於 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   於 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2016/03/24 16:34:40
+System.Web.HttpUnhandledException (0x80004005): 已發生類型 'System.Web.HttpUnhandledException' 的例外狀況。 ---> System.InvalidOperationException: The partial view 'Module/InvoiceReport' was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/OrganizationQuery/Module/InvoiceReport.aspx
+~/Views/OrganizationQuery/Module/InvoiceReport.ascx
+~/Views/Shared/Module/InvoiceReport.aspx
+~/Views/Shared/Module/InvoiceReport.ascx
+~/Views/OrganizationQuery/Module/InvoiceReport.cshtml
+~/Views/OrganizationQuery/Module/InvoiceReport.vbhtml
+~/Views/Shared/Module/InvoiceReport.cshtml
+~/Views/Shared/Module/InvoiceReport.vbhtml
+   於 System.Web.Mvc.HtmlHelper.FindPartialView(ViewContext viewContext, String partialViewName, ViewEngineCollection viewEngineCollection)
+   於 System.Web.Mvc.HtmlHelper.RenderPartialInternal(String partialViewName, ViewDataDictionary viewData, Object model, TextWriter writer, ViewEngineCollection viewEngineCollection)
+   於 System.Web.Mvc.Html.RenderPartialExtensions.RenderPartial(HtmlHelper htmlHelper, String partialViewName, Object model)
+   於 ASP.views_organizationquery_module_inquiryresult_ascx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 於 c:\Project\VM-SIT04\IFS-EIVO03\eIVOGo\Views\OrganizationQuery\Module\InquiryResult.ascx: 行 16
+   於 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   於 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   於 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   於 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   於 System.Web.Mvc.ViewPage.Render(HtmlTextWriter writer)
+   於 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.HandleError(Exception e)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.ProcessRequest()
+   於 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   於 System.Web.Mvc.ViewPage.ProcessRequest(HttpContext context)
+   於 System.Web.Mvc.ViewUserControl.ViewUserControlContainerPage.ProcessRequest(HttpContext context)
+   於 System.Web.Mvc.ViewPage.RenderView(ViewContext viewContext)
+   於 System.Web.Mvc.ViewUserControl.RenderViewAndRestoreContentType(ViewPage containerPage, ViewContext viewContext)
+   於 System.Web.Mvc.ViewUserControl.RenderView(ViewContext viewContext)
+   於 System.Web.Mvc.WebFormView.RenderViewUserControl(ViewContext context, ViewUserControl control)
+   於 System.Web.Mvc.WebFormView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   於 System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   於 System.Web.Mvc.HtmlHelper.RenderPartialInternal(String partialViewName, ViewDataDictionary viewData, Object model, TextWriter writer, ViewEngineCollection viewEngineCollection)
+   於 System.Web.Mvc.Html.RenderPartialExtensions.RenderPartial(HtmlHelper htmlHelper, String partialViewName, Object model)
+   於 ASP.views_organizationquery_inquiryresult_aspx.__RendermainContent(HtmlTextWriter __w, Control parameterContainer) 於 c:\Project\VM-SIT04\IFS-EIVO03\eIVOGo\Views\OrganizationQuery\InquiryResult.aspx: 行 9
+   於 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   於 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   於 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   於 System.Web.UI.HtmlControls.HtmlForm.RenderChildren(HtmlTextWriter writer)
+   於 System.Web.UI.HtmlControls.HtmlContainerControl.Render(HtmlTextWriter writer)
+   於 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   於 System.Web.UI.HtmlControls.HtmlForm.RenderControl(HtmlTextWriter writer)
+   於 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   於 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   於 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   於 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   於 System.Web.Mvc.ViewPage.Render(HtmlTextWriter writer)
+   於 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2016/03/24 16:34:41
+System.Web.HttpException (0x80004005): 執行處理常式 'System.Web.Mvc.HttpHandlerUtil+ServerExecuteHttpHandlerWrapper' 的子要求時發生錯誤。 ---> System.Web.HttpUnhandledException (0x80004005): 已發生類型 'System.Web.HttpUnhandledException' 的例外狀況。 ---> System.InvalidOperationException: The partial view 'Module/InvoiceReport' was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/OrganizationQuery/Module/InvoiceReport.aspx
+~/Views/OrganizationQuery/Module/InvoiceReport.ascx
+~/Views/Shared/Module/InvoiceReport.aspx
+~/Views/Shared/Module/InvoiceReport.ascx
+~/Views/OrganizationQuery/Module/InvoiceReport.cshtml
+~/Views/OrganizationQuery/Module/InvoiceReport.vbhtml
+~/Views/Shared/Module/InvoiceReport.cshtml
+~/Views/Shared/Module/InvoiceReport.vbhtml
+   於 System.Web.Mvc.HtmlHelper.FindPartialView(ViewContext viewContext, String partialViewName, ViewEngineCollection viewEngineCollection)
+   於 System.Web.Mvc.HtmlHelper.RenderPartialInternal(String partialViewName, ViewDataDictionary viewData, Object model, TextWriter writer, ViewEngineCollection viewEngineCollection)
+   於 System.Web.Mvc.Html.RenderPartialExtensions.RenderPartial(HtmlHelper htmlHelper, String partialViewName, Object model)
+   於 ASP.views_organizationquery_module_inquiryresult_ascx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 於 c:\Project\VM-SIT04\IFS-EIVO03\eIVOGo\Views\OrganizationQuery\Module\InquiryResult.ascx: 行 16
+   於 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   於 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   於 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   於 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   於 System.Web.Mvc.ViewPage.Render(HtmlTextWriter writer)
+   於 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.HandleError(Exception e)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.ProcessRequest()
+   於 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   於 System.Web.Mvc.ViewPage.ProcessRequest(HttpContext context)
+   於 System.Web.Mvc.ViewUserControl.ViewUserControlContainerPage.ProcessRequest(HttpContext context)
+   於 System.Web.Mvc.ViewPage.RenderView(ViewContext viewContext)
+   於 System.Web.Mvc.ViewUserControl.RenderViewAndRestoreContentType(ViewPage containerPage, ViewContext viewContext)
+   於 System.Web.Mvc.ViewUserControl.RenderView(ViewContext viewContext)
+   於 System.Web.Mvc.WebFormView.RenderViewUserControl(ViewContext context, ViewUserControl control)
+   於 System.Web.Mvc.WebFormView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   於 System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   於 System.Web.Mvc.HtmlHelper.RenderPartialInternal(String partialViewName, ViewDataDictionary viewData, Object model, TextWriter writer, ViewEngineCollection viewEngineCollection)
+   於 System.Web.Mvc.Html.RenderPartialExtensions.RenderPartial(HtmlHelper htmlHelper, String partialViewName, Object model)
+   於 ASP.views_organizationquery_inquiryresult_aspx.__RendermainContent(HtmlTextWriter __w, Control parameterContainer) 於 c:\Project\VM-SIT04\IFS-EIVO03\eIVOGo\Views\OrganizationQuery\InquiryResult.aspx: 行 9
+   於 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   於 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   於 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   於 System.Web.UI.HtmlControls.HtmlForm.RenderChildren(HtmlTextWriter writer)
+   於 System.Web.UI.HtmlControls.HtmlContainerControl.Render(HtmlTextWriter writer)
+   於 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   於 System.Web.UI.HtmlControls.HtmlForm.RenderControl(HtmlTextWriter writer)
+   於 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   於 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   於 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   於 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   於 System.Web.Mvc.ViewPage.Render(HtmlTextWriter writer)
+   於 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.ProcessRequest()
+   於 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   於 System.Web.Mvc.ViewPage.ProcessRequest(HttpContext context)
+   於 ASP.views_organizationquery_inquiryresult_aspx.ProcessRequest(HttpContext context) 於 c:\Windows\Microsoft.NET\Framework64\v4.0.30319\Temporary ASP.NET Files\root\735e7382\d679391e\App_Web_yefsvqul.0.cs: 行 0
+   於 System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerWrapper.<>c__DisplayClass1.<ProcessRequest>b__0()
+   於 System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerWrapper.<>c__DisplayClass4.<Wrap>b__3()
+   於 System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerWrapper.Wrap[TResult](Func`1 func)
+   於 System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerWrapper.Wrap(Action action)
+   於 System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerWrapper.ProcessRequest(HttpContext context)
+   於 System.Web.HttpServerUtility.ExecuteInternal(IHttpHandler handler, TextWriter writer, Boolean preserveForm, Boolean setPreviousPage, VirtualPath path, VirtualPath filePath, String physPath, Exception error, String queryStringOverride)
+   於 System.Web.HttpServerUtility.ExecuteInternal(IHttpHandler handler, TextWriter writer, Boolean preserveForm, Boolean setPreviousPage, VirtualPath path, VirtualPath filePath, String physPath, Exception error, String queryStringOverride)
+   於 System.Web.HttpServerUtility.Execute(IHttpHandler handler, TextWriter writer, Boolean preserveForm, Boolean setPreviousPage)
+   於 System.Web.HttpServerUtility.Execute(IHttpHandler handler, TextWriter writer, Boolean preserveForm)
+   於 System.Web.Mvc.ViewPage.RenderView(ViewContext viewContext)
+   於 System.Web.Mvc.WebFormView.RenderViewPage(ViewContext context, ViewPage page)
+   於 System.Web.Mvc.WebFormView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   於 System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   於 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   於 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   於 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   於 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   於 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   於 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   於 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   於 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   於 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   於 System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   於 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   於 System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   於 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   於 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   於 System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   於 System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   於 System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   於 System.Web.Mvc.Controller.<BeginExecute>b__15(IAsyncResult asyncResult, Controller controller)
+   於 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   於 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   於 System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   於 System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   於 System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   於 System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   於 System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   於 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   於 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   於 System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   於 System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   於 System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   於 System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   於 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   於 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2016/03/24 16:35:44
+System.InvalidOperationException: The view 'GridPage' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/OrganizationQuery/GridPage.aspx
+~/Views/OrganizationQuery/GridPage.ascx
+~/Views/Shared/GridPage.aspx
+~/Views/Shared/GridPage.ascx
+~/Views/OrganizationQuery/GridPage.cshtml
+~/Views/OrganizationQuery/GridPage.vbhtml
+~/Views/Shared/GridPage.cshtml
+~/Views/Shared/GridPage.vbhtml
+   於 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   於 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   於 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   於 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   於 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   於 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   於 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   於 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   於 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   於 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   於 System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   於 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   於 System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   於 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   於 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   於 System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   於 System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   於 System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   於 System.Web.Mvc.Controller.<BeginExecute>b__15(IAsyncResult asyncResult, Controller controller)
+   於 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   於 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   於 System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   於 System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   於 System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   於 System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   於 System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   於 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   於 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   於 System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   於 System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   於 System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   於 System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   於 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   於 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2016/03/24 16:36:05
+System.InvalidOperationException: The view 'GridPage' or its master was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/OrganizationQuery/GridPage.aspx
+~/Views/OrganizationQuery/GridPage.ascx
+~/Views/Shared/GridPage.aspx
+~/Views/Shared/GridPage.ascx
+~/Views/OrganizationQuery/GridPage.cshtml
+~/Views/OrganizationQuery/GridPage.vbhtml
+~/Views/Shared/GridPage.cshtml
+~/Views/Shared/GridPage.vbhtml
+   於 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   於 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   於 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   於 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   於 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   於 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   於 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   於 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   於 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   於 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   於 System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   於 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   於 System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   於 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   於 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   於 System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   於 System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   於 System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   於 System.Web.Mvc.Controller.<BeginExecute>b__15(IAsyncResult asyncResult, Controller controller)
+   於 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   於 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   於 System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   於 System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   於 System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   於 System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   於 System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   於 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   於 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   於 System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   於 System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   於 System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   於 System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   於 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   於 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2016/03/24 16:38:56
+System.Net.Mail.SmtpException: 傳送郵件失敗。 ---> System.Net.WebException: 無法連接至遠端伺服器 ---> System.Net.Sockets.SocketException: 無法連線，因為目標電腦拒絕連線。 127.0.0.1:25
+   於 System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   於 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 內部例外狀況堆疊追蹤的結尾 ---
+   於 System.Net.ServicePoint.GetConnection(PooledStream PooledStream, Object owner, Boolean async, IPAddress& address, Socket& abortSocket, Socket& abortSocket6)
+   於 System.Net.PooledStream.Activate(Object owningObject, Boolean async, GeneralAsyncDelegate asyncCallback)
+   於 System.Net.ConnectionPool.GetConnection(Object owningObject, GeneralAsyncDelegate asyncCallback, Int32 creationTimeout)
+   於 System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   於 System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   於 System.Net.Mail.SmtpClient.GetConnection()
+   於 System.Net.Mail.SmtpClient.Send(MailMessage message)
+   --- 內部例外狀況堆疊追蹤的結尾 ---
+   於 System.Net.Mail.SmtpClient.Send(MailMessage message)
+   於 eIVOGo.services.ServiceWorkItem.doDailyTurnKeyCheck() 於 c:\Project\VM-SIT04\IFS-EIVO03\eIVOGo\services\ServiceWorkItem.cs: 行 244
+2016/03/24 16:54:37
+System.Net.Mail.SmtpException: 傳送郵件失敗。 ---> System.Net.WebException: 無法連接至遠端伺服器 ---> System.Net.Sockets.SocketException: 無法連線，因為目標電腦拒絕連線。 127.0.0.1:25
+   於 System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   於 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 內部例外狀況堆疊追蹤的結尾 ---
+   於 System.Net.ServicePoint.GetConnection(PooledStream PooledStream, Object owner, Boolean async, IPAddress& address, Socket& abortSocket, Socket& abortSocket6)
+   於 System.Net.PooledStream.Activate(Object owningObject, Boolean async, GeneralAsyncDelegate asyncCallback)
+   於 System.Net.ConnectionPool.GetConnection(Object owningObject, GeneralAsyncDelegate asyncCallback, Int32 creationTimeout)
+   於 System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   於 System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   於 System.Net.Mail.SmtpClient.GetConnection()
+   於 System.Net.Mail.SmtpClient.Send(MailMessage message)
+   --- 內部例外狀況堆疊追蹤的結尾 ---
+   於 System.Net.Mail.SmtpClient.Send(MailMessage message)
+   於 eIVOGo.services.ServiceWorkItem.doDailyTurnKeyCheck() 於 c:\Project\VM-SIT04\IFS-EIVO03\eIVOGo\services\ServiceWorkItem.cs: 行 244

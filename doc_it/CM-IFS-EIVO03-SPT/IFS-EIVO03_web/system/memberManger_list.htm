@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=big5" />
+<link href="css/content.css" rel="stylesheet" type="text/css" />
+<link href="css/table.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="javascript/join.js"></script>
+<script language="JavaScript" src="javascript/jquery.js"></script>
+<script type="text/javascript">
+<!--
+$(document).ready(function() {
+	$("#device").hide();
+	$("#uxb2b").hide();
+	
+	$("#r_dev").click(function(){
+		$("#device").show();
+		});
+	$("#member").click(function(){
+		$("#device").hide();
+		});
+		
+	$("#device").change(function(){
+		var sel=$('#device option:selected').text();
+		if(sel == "UXB2B條碼卡")
+		{
+			$("#uxb2b").show();
+		}
+		else
+		{
+			$("#uxb2b").hide();
+		};
+	});
+});
+-->
+</script>
+<title>網際優勢-實體通路開立電子發票獨立第三方平台</title>
+</head>
+
+<body>
+<!--路徑名稱-->
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="30"><img src="images/path_left.gif" alt="" width="30" height="29" /></td>
+    <td bgcolor="#ecedd5">首頁 > 會員管理</td>
+    <td width="18"><img src="images/path_right.gif" alt="" width="18" height="29" /></td>
+  </tr>
+</table>
+<!--交易畫面標題-->
+<h1><img src="images/icon_search.gif" alt="" width="29" height="28" border="0" align="absmiddle" />會員管理</h1>
+<div id="border_gray">
+  <!--表格 開始-->
+  <form name="addForm" id="addForm">
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" id="left_title">
+      <tr>
+        <th colspan="5" class="Head_style_a">查詢條件</th>
+      </tr>
+      <tr>
+        <th width="20%">角色 </th>
+        <td class="tdleft"><select name="ctl00$mainContent$MemberManager1$RoleID" id="mainContent_MemberManager1_RoleID">
+          <option selected="selected" value="全部">全部</option>
+          <option value="55">Google台灣</option>
+          <option value="1">系統管理員</option>
+          <option value="51">商家</option>
+          <option value="52">進階會員</option>
+          <option value="54">網購商家</option>
+        </select></td>
+        <th nowrap="nowrap" class="tdleft">帳號</th>
+        <td class="tdleft"><input name="T2" type="text" class="textfield" size="20" /></td>
+        <td rowspan="2" align="center" class="Bargain_btn"><input type="button" name="Submit" class="btn" value="查詢" onclick="window.location='memberManger_list.htm'" /></td>
+      </tr>
+      <tr>
+        <th>姓名</th>
+        <td class="tdleft"><input name="T" type="text" class="textfield" size="20" /></td>
+        <th nowrap="nowrap" class="tdleft">會員狀態 </th>
+        <td class="tdleft"><select name="ctl00$mainContent$MemberManager1$ddlMemStatus" id="mainContent_MemberManager1_ddlMemStatus">
+          <option selected="selected" value="全部">全部</option>
+          <option value="1101">已停用</option>
+          <option value="1102">待回覆確認</option>
+          <option value="1103">已啟用</option>
+        </select></td>
+      </tr>
+    </table>
+  </form>
+  <!--表格 結束-->
+</div>
+<!--按鈕-->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="Bargain_btn"><input name="newAdd2" type="button" class="btn" value="新增帳號" onclick="window.location.href='addMember.htm'" /></td>
+  </tr>
+</table>
+<h1><img src="images/icon_search.gif" width="29" height="28" border="0" align="absmiddle" />查詢結果</h1>
+<div id="border_gray">
+  <!--表格 開始-->
+  <table width="100%" border="0" cellpadding="0" cellspacing="0" id="table01">
+		<tr>
+			<th scope="col">公司名稱</th><th scope="col">角色</th><th scope="col">會員姓名</th><th scope="col">代號</th><th scope="col">電子郵件</th><th scope="col">會員狀態</th><th scope="col">管理</th>
+		</tr>
+    <tr>
+			<td>系統公司</td>
+      <td align="center">系統管理員</td>
+      <td>System Admin</td>
+      <td>ifsadmin</td>
+      <td>rsung@uxb2b.com</td>
+      <td align="center">已啟用</td>
+      <td align="center">
+      <input name="modify2" type="button" class="btn" value="編輯" onclick="window.location.href='modifymember.htm'" />
+      &nbsp;&nbsp;&nbsp;
+      <input type="submit" name="ctl00" value="停用" onclick="if(confirm(&quot;確認停用此筆資料?&quot;))location.href='memberManger_list.htm'; return false;" id="btnDelete" class="btn" />
+      &nbsp;&nbsp;&nbsp;
+      <input type="submit" name="ctl00" value="重送確認信" id="btnSendMail" disabled="disabled" class="aspNetDisabled btn" />
+      </td>
+    </tr>
+    <tr class="OldLace">
+      <td>Google台灣</td>
+      <td align="center">Google台灣</td>
+      <td>Google台灣</td>
+      <td>70762419</td>
+      <td>howard@uxb2b.com</td>
+      <td align="center">待回覆確認 </td>
+      <td align="center">
+      <input name="modify2" type="button" class="btn" value="編輯" onclick="window.location.href='modifymember.htm'" />
+      &nbsp;&nbsp;&nbsp;
+      <input type="submit" name="ctl00" value="停用" disabled="disabled" onclick="if(confirm(&quot;確認停用此筆資料?&quot;))location.href='memberManger_list.htm'; return false;" id="btnDelete" class="btn" />
+      &nbsp;&nbsp;&nbsp;
+      <input type="submit" name="ctl00" value="重送確認信" id="btnSendMail" class="aspNetDisabled btn" />
+      </td>
+    </tr>
+    </table>
+  <!--表格 結束-->
+</div>
+<!--按鈕-->
+</body>
+</html>

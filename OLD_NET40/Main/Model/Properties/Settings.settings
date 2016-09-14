@@ -1,0 +1,73 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Model.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="eInvoiceConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=172.16.2.23\sqlexpress;Initial Catalog=EIVO03;Persist Security Info=True;User ID=eivo;Password=eivoeivo&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=172.16.2.23\sqlexpress;Initial Catalog=EIVO03;Persist Security Info=True;User ID=eivo;Password=eivoeivo</Value>
+    </Setting>
+    <Setting Name="SessionTimeout" Type="System.Double" Scope="Application">
+      <Value Profile="(Default)">20</Value>
+    </Setting>
+    <Setting Name="GOVPlatformOutbound" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\Ap2APPilot\ERPOutBox</Value>
+    </Setting>
+    <Setting Name="GOVPlatformResponse" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\Ap2APPilot\ebMSInBox</Value>
+    </Setting>
+    <Setting Name="A1401Outbound" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\EINVTurnkey\UpCast\B2CSTORAGE\A1401\SRC</Value>
+    </Setting>
+    <Setting Name="B1401Outbound" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\EINVTurnkey\UpCast\B2CSTORAGE\B1401\SRC</Value>
+    </Setting>
+    <Setting Name="A0501Outbound" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\EINVTurnkey\UpCast\B2CSTORAGE\A0501\SRC</Value>
+    </Setting>
+    <Setting Name="B0501Outbound" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\EINVTurnkey\UpCast\B2CSTORAGE\B0501\SRC</Value>
+    </Setting>
+    <Setting Name="A0401Outbound" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\EINVTurnkey\UpCast\B2CSTORAGE\A0401\SRC</Value>
+    </Setting>
+    <Setting Name="B0401Outbound" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\EINVTurnkey\UpCast\B2CSTORAGE\B0401\SRC</Value>
+    </Setting>
+    <Setting Name="B0301Outbound" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\EINVTurnkey\UpCast\B2CSTORAGE\B0301\SRC</Value>
+    </Setting>
+    <Setting Name="C0401Outbound" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\EINVTurnkey\UpCast\B2CSTORAGE\C0401\SRC</Value>
+    </Setting>
+    <Setting Name="C0501Outbound" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\EINVTurnkey\UpCast\B2CSTORAGE\C0501\SRC</Value>
+    </Setting>
+    <Setting Name="D0501Outbound" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\EINVTurnkey\UpCast\B2CSTORAGE\D0501\SRC</Value>
+    </Setting>
+    <Setting Name="E0402Outbound" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\EINVTurnkey\UpCast\B2CSTORAGE\E0402\SRC</Value>
+    </Setting>
+    <Setting Name="D0401Outbound" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\EINVTurnkey\UpCast\B2CSTORAGE\D0401\SRC</Value>
+    </Setting>
+    <Setting Name="E0401Outbound" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\EINVTurnkey\UpCast\B2CSTORAGE\E0401\SRC</Value>
+    </Setting>
+    <Setting Name="UploadedFilePath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">TempForPDF</Value>
+    </Setting>
+    <Setting Name="EINVTurnkey2ConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=172.16.2.23\SQLEXPRESS;Initial Catalog=EINVTurnkey2;Persist Security Info=True;User ID=sa;Password=111111&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=172.16.2.23\SQLEXPRESS;Initial Catalog=EINVTurnkey2;Persist Security Info=True;User ID=sa;Password=111111</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="big5"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="BranchTrack">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Main" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="SellerId" type="xs:string"/>
+                            <xs:element name="Year" type="xs:int"/>
+                            <xs:element name="PeriodNo" type="xs:string"/>
+                            <xs:element name="TrackCode" type="xs:string"/>
+                            <xs:element name="InvoiceBeginNo" type="xs:string"/>
+                            <xs:element name="InvoiceEndNo" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

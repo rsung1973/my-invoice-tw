@@ -1,0 +1,558 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="eInvoice" Class="SCMEntityDataContext" Serialization="Unidirectional" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=192.168.200.53\sqlexpress;Initial Catalog=eInvoice;Persist Security Info=True;User ID=eivo" SettingsObjectName="Model.Properties.Settings" SettingsPropertyName="eInvoiceConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.DocumentType" Member="DocumentTypes">
+    <Type Name="DocumentType">
+      <Column Name="TypeID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TypeName" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Association Name="DocumentType_CDS_Document" Member="CDS_Document" ThisKey="TypeID" OtherKey="DocType" Type="CDS_Document" />
+    </Type>
+  </Table>
+  <Table Name="scm.BUYER_DATA" Member="BUYER_DATA">
+    <Type Name="BUYER_DATA">
+      <Column Name="BUYER_SN" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BUYER_NAME" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="BUYER_ADDRESS" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="BUYER_PHONE" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="BUYER_MOBILE" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="BUYER_EMAIL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BUYER_BAN" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Association Name="BUYER_DATA_BUYER_ORDERS" Member="BUYER_ORDERS" ThisKey="BUYER_SN" OtherKey="BUYER_SN" Type="BUYER_ORDERS" />
+    </Type>
+  </Table>
+  <Table Name="scm.BUYER_SHIPMENT_DETAILS" Member="BUYER_SHIPMENT_DETAILS">
+    <Type Name="BUYER_SHIPMENT_DETAILS">
+      <Column Name="BS_DETAILS_SN" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BUYER_SHIPMENT_SN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BO_DETAILS_SN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BS_QUANTITY" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="BUYER_ORDERS_DETAILS_BUYER_SHIPMENT_DETAILS" Member="BUYER_ORDERS_DETAILS" ThisKey="BO_DETAILS_SN" OtherKey="BO_DETAILS_SN" Type="BUYER_ORDERS_DETAILS" IsForeignKey="true" />
+      <Association Name="BUYER_SHIPMENT_BUYER_SHIPMENT_DETAILS" Member="BUYER_SHIPMENT" ThisKey="BUYER_SHIPMENT_SN" OtherKey="BUYER_SHIPMENT_SN" Type="BUYER_SHIPMENT" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="scm.DELIVERY_COMPANY" Member="DELIVERY_COMPANY">
+    <Type Name="DELIVERY_COMPANY">
+      <Column Name="DELIVERY_COMPANY_SN" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DELIVERY_COMPANY_BAN" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="DELIVERY_COMPANY_NAME" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="DELIVERY_COMPANY_ADDRESS" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="DELIVERY_COMPANY_PHONE" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="DELIVERY_COMPANY_FAX" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="CONTACT_NAME" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="CONTACT_EMAIL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PRINT_FLAG" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="DELIVERY_COMPANY_BUYER_SHIPMENT" Member="BUYER_SHIPMENT" ThisKey="DELIVERY_COMPANY_SN" OtherKey="DELIVERY_COMPANY_SN" Type="BUYER_SHIPMENT" />
+    </Type>
+  </Table>
+  <Table Name="scm.MARKET_ATTRIBUTE" Member="MARKET_ATTRIBUTE">
+    <Type Name="MARKET_ATTRIBUTE">
+      <Column Name="MARKET_ATTR_SN" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MARKET_ATTR_NAME" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MARKET_RESOURCE_SN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="MARKET_ATTRIBUTE_ORDERS_MARKET_ATTRIBUTE_MAPPING" Member="ORDERS_MARKET_ATTRIBUTE_MAPPING" ThisKey="MARKET_ATTR_SN" OtherKey="MARKET_ATTR_NAME_SN" Type="ORDERS_MARKET_ATTRIBUTE_MAPPING" />
+      <Association Name="MARKET_RESOURCE_MARKET_ATTRIBUTE" Member="MARKET_RESOURCE" ThisKey="MARKET_RESOURCE_SN" OtherKey="MARKET_RESOURCE_SN" Type="MARKET_RESOURCE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="scm.MARKET_RESOURCE" Member="MARKET_RESOURCE">
+    <Type Name="MARKET_RESOURCE">
+      <Column Name="MARKET_RESOURCE_SN" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MARKET_RESOURCE_NAME" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="REMARK" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="MARKET_RESOURCE_MARKET_ATTRIBUTE" Member="MARKET_ATTRIBUTE" ThisKey="MARKET_RESOURCE_SN" OtherKey="MARKET_RESOURCE_SN" Type="MARKET_ATTRIBUTE" />
+      <Association Name="MARKET_RESOURCE_BUYER_ORDERS" Member="BUYER_ORDERS" ThisKey="MARKET_RESOURCE_SN" OtherKey="MARKET_RESOURCE_SN" Type="BUYER_ORDERS" />
+    </Type>
+  </Table>
+  <Table Name="scm.PRODUCTS_ATTRIBUTE_NAME" Member="PRODUCTS_ATTRIBUTE_NAME">
+    <Type Name="PRODUCTS_ATTRIBUTE_NAME">
+      <Column Name="PRODUCTS_ATTR_NAME_SN" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PRODUCTS_ATTR_NAME" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="PRODUCTS_ATTRIBUTE_NAME_PRODUCTS_ATTRIBUTE_MAPPING" Member="PRODUCTS_ATTRIBUTE_MAPPING" ThisKey="PRODUCTS_ATTR_NAME_SN" OtherKey="PRODUCTS_ATTR_NAME_SN" Type="PRODUCTS_ATTRIBUTE_MAPPING" />
+    </Type>
+  </Table>
+  <Table Name="scm.PRODUCTS_DATA" Member="PRODUCTS_DATA">
+    <Type Name="PRODUCTS_DATA">
+      <Column Name="PRODUCTS_SN" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PRODUCTS_BARCODE" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PRODUCTS_NAME" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="SELL_PRICE" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="BUY_PRICE" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="PW_MAPPING_SN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SUPPLIER_PRODUCTS_NUMBER_SN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="PRODUCTS_DATA_PRODUCTS_WAREHOUSE_MAPPING" Member="PRODUCTS_WAREHOUSE_MAPPING" ThisKey="PRODUCTS_SN" OtherKey="PRODUCTS_SN" Type="PRODUCTS_WAREHOUSE_MAPPING" />
+      <Association Name="PRODUCTS_DATA_SUPPLIER_PRODUCTS_NUMBER" Member="SUPPLIER_PRODUCTS_NUMBER" ThisKey="PRODUCTS_SN" OtherKey="PRODUCTS_SN" Type="SUPPLIER_PRODUCTS_NUMBER" />
+      <Association Name="PRODUCTS_DATA_SALES_PROMOTION_PRODUCTS" Member="SALES_PROMOTION_PRODUCTS" ThisKey="PRODUCTS_SN" OtherKey="PRODUCTS_SN" Type="SALES_PROMOTION_PRODUCTS" />
+      <Association Name="PRODUCTS_DATA_BUYER_ORDERS_DETAILS" Member="BUYER_ORDERS_DETAILS" ThisKey="PRODUCTS_SN" OtherKey="PRODUCTS_SN" Type="BUYER_ORDERS_DETAILS" />
+      <Association Name="PRODUCTS_DATA_PURCHASE_ORDER_RETURNED_DETAILS" Member="PURCHASE_ORDER_RETURNED_DETAILS" ThisKey="PRODUCTS_SN" OtherKey="PRODUCTS_SN" Type="PURCHASE_ORDER_RETURNED_DETAILS" />
+      <Association Name="PRODUCTS_DATA_PRODUCTS_ATTRIBUTE_MAPPING" Member="PRODUCTS_ATTRIBUTE_MAPPING" ThisKey="PRODUCTS_SN" OtherKey="PRODUCTS_SN" Type="PRODUCTS_ATTRIBUTE_MAPPING" />
+      <Association Name="PRODUCTS_DATA_EXCHANGE_GOODS_INBOUND_DETAILS" Member="EXCHANGE_GOODS_INBOUND_DETAILS" ThisKey="PRODUCTS_SN" OtherKey="PRODUCTS_SN" Type="EXCHANGE_GOODS_INBOUND_DETAILS" />
+      <Association Name="PRODUCTS_DATA_EXCHANGE_GOODS_OUTBOND_DETAILS" Member="EXCHANGE_GOODS_OUTBOND_DETAILS" ThisKey="PRODUCTS_SN" OtherKey="PRODUCTS_SN" Type="EXCHANGE_GOODS_OUTBOND_DETAILS" />
+    </Type>
+  </Table>
+  <Table Name="scm.PRODUCTS_WAREHOUSE_MAPPING" Member="PRODUCTS_WAREHOUSE_MAPPING">
+    <Type Name="PRODUCTS_WAREHOUSE_MAPPING">
+      <Column Name="PW_MAPPING_SN" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="WAREHOUSE_SN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PRODUCTS_SN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PRODUCTS_TOTAL_AMOUNT" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="PRODUCTS_PLAN_AMOUNT" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="PRODUCTS_SAFE_AMOUNT_PERCENTAGE" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="PRODUCTS_DEFECTIVE_AMOUNT" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Association Name="PRODUCTS_DATA_PRODUCTS_WAREHOUSE_MAPPING" Member="PRODUCTS_DATA" ThisKey="PRODUCTS_SN" OtherKey="PRODUCTS_SN" Type="PRODUCTS_DATA" IsForeignKey="true" />
+      <Association Name="WAREHOUSE_PRODUCTS_WAREHOUSE_MAPPING" Member="WAREHOUSE" ThisKey="WAREHOUSE_SN" OtherKey="WAREHOUSE_SN" Type="WAREHOUSE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="scm.PURCHASE_ORDER" Member="PURCHASE_ORDER">
+    <Type Name="PURCHASE_ORDER">
+      <Column Name="PURCHASE_ORDER_SN" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PURCHASE_ORDER_NUMBER" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="PO_TOTAL_AMOUNT" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="PO_STATUS" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PO_CLOSED_MODE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PO_DATETIME" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PO_DELETE_STATUS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SUPPLIER_SN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="WAREHOUSE_SN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="PURCHASE_ORDER_PURCHASE_ORDER_DETAILS" Member="PURCHASE_ORDER_DETAILS" ThisKey="PURCHASE_ORDER_SN" OtherKey="PURCHASE_ORDER_SN" Type="PURCHASE_ORDER_DETAILS" />
+      <Association Name="WAREHOUSE_PURCHASE_ORDER" Member="WAREHOUSE" ThisKey="WAREHOUSE_SN" OtherKey="WAREHOUSE_SN" Type="WAREHOUSE" IsForeignKey="true" />
+      <Association Name="SUPPLIER_PURCHASE_ORDER" Member="SUPPLIER" ThisKey="SUPPLIER_SN" OtherKey="SUPPLIER_SN" Type="SUPPLIER" IsForeignKey="true" />
+      <Association Name="CDS_Document_PURCHASE_ORDER" Member="CDS_Document" ThisKey="PURCHASE_ORDER_SN" OtherKey="DocID" Type="CDS_Document" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="scm.PURCHASE_ORDER_DETAILS_PRINT" Member="PURCHASE_ORDER_DETAILS_PRINT">
+    <Type Name="PURCHASE_ORDER_DETAILS_PRINT">
+      <Column Name="PO_DETAILS_SN" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="PURCHASE_ORDER_DETAILS_PURCHASE_ORDER_DETAILS_PRINT" Member="PURCHASE_ORDER_DETAILS" ThisKey="PO_DETAILS_SN" OtherKey="PO_DETAILS_SN" Type="PURCHASE_ORDER_DETAILS" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="scm.RECEIPT_TRANSACTION_LOG" Member="RECEIPT_TRANSACTION_LOG">
+    <Type Name="RECEIPT_TRANSACTION_LOG">
+      <Column Name="RTL_SN" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RECEIPT_SN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RECEIPT_TYPE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RECEIPT_ACTION" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RECEIPT_DATETIME" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UPDATE_USER_SN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RTL_REMARK" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="scm.PURCHASE_ORDER_DETAILS" Member="PURCHASE_ORDER_DETAILS">
+    <Type Name="PURCHASE_ORDER_DETAILS">
+      <Column Name="PO_DETAILS_SN" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PURCHASE_ORDER_SN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PO_QUANTITY" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PO_UNIT_PRICE" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="PO_DETAIL_STATUS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PRODUCTS_SN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SUPPLIER_SN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="PURCHASE_ORDER_DETAILS_PURCHASE_ORDER_DETAILS_PRINT" Member="PURCHASE_ORDER_DETAILS_PRINT" ThisKey="PO_DETAILS_SN" OtherKey="PO_DETAILS_SN" Type="PURCHASE_ORDER_DETAILS_PRINT" Cardinality="One" />
+      <Association Name="PURCHASE_ORDER_DETAILS_WAREHOUSE_WARRANT_DETAILS" Member="WAREHOUSE_WARRANT_DETAILS" ThisKey="PO_DETAILS_SN" OtherKey="PO_DETAILS_SN" Type="WAREHOUSE_WARRANT_DETAILS" />
+      <Association Name="PURCHASE_ORDER_PURCHASE_ORDER_DETAILS" Member="PURCHASE_ORDER" ThisKey="PURCHASE_ORDER_SN" OtherKey="PURCHASE_ORDER_SN" Type="PURCHASE_ORDER" IsForeignKey="true" />
+      <Association Name="SUPPLIER_PRODUCTS_NUMBER_PURCHASE_ORDER_DETAILS" Member="SUPPLIER_PRODUCTS_NUMBER" ThisKey="SUPPLIER_SN,PRODUCTS_SN" OtherKey="SUPPLIER_SN,PRODUCTS_SN" Type="SUPPLIER_PRODUCTS_NUMBER" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="scm.SUPPLIER_PRODUCTS_NUMBER" Member="SUPPLIER_PRODUCTS_NUMBER">
+    <Type Name="SUPPLIER_PRODUCTS_NUMBER">
+      <Column Name="SUPPLIER_SN" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SUPPLIER_PRODUCTS_NUMBER" Member="SUPPLIER_PRODUCTS_NUMBER1" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="PRODUCTS_SN" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="SUPPLIER_PRODUCTS_NUMBER_PURCHASE_ORDER_DETAILS" Member="PURCHASE_ORDER_DETAILS" ThisKey="SUPPLIER_SN,PRODUCTS_SN" OtherKey="SUPPLIER_SN,PRODUCTS_SN" Type="PURCHASE_ORDER_DETAILS" />
+      <Association Name="PRODUCTS_DATA_SUPPLIER_PRODUCTS_NUMBER" Member="PRODUCTS_DATA" ThisKey="PRODUCTS_SN" OtherKey="PRODUCTS_SN" Type="PRODUCTS_DATA" IsForeignKey="true" />
+      <Association Name="SUPPLIER_SUPPLIER_PRODUCTS_NUMBER" Member="SUPPLIER" ThisKey="SUPPLIER_SN" OtherKey="SUPPLIER_SN" Type="SUPPLIER" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="scm.WAREHOUSE" Member="WAREHOUSE">
+    <Type Name="WAREHOUSE">
+      <Column Name="WAREHOUSE_SN" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="WAREHOUSE_NAME" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="WAREHOUSE_NUMBER" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="WAREHOUSE_ADDRESS" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="WAREHOUSE_PHONE" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="WAREHOUSE_FAX" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="WAREHOUSE_CONTACT_NAME" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="CONTACT_EMAIL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="WAREHOUSE_PRODUCTS_WAREHOUSE_MAPPING" Member="PRODUCTS_WAREHOUSE_MAPPING" ThisKey="WAREHOUSE_SN" OtherKey="WAREHOUSE_SN" Type="PRODUCTS_WAREHOUSE_MAPPING" />
+      <Association Name="WAREHOUSE_PURCHASE_ORDER" Member="PURCHASE_ORDER" ThisKey="WAREHOUSE_SN" OtherKey="WAREHOUSE_SN" Type="PURCHASE_ORDER" />
+      <Association Name="WAREHOUSE_PURCHASE_ORDER_RETURNED" Member="PURCHASE_ORDER_RETURNEDs" ThisKey="WAREHOUSE_SN" OtherKey="WAREHOUSE_SN" Type="PURCHASE_ORDER_RETURNED" />
+      <Association Name="WAREHOUSE_BUYER_ORDERS" Member="BUYER_ORDERS" ThisKey="WAREHOUSE_SN" OtherKey="WAREHOUSE_SN" Type="BUYER_ORDERS" />
+      <Association Name="WAREHOUSE_EXCHANGE_GOODS" Member="EXCHANGE_GOODS" ThisKey="WAREHOUSE_SN" OtherKey="OUTBOUND_WAREHOUSE_SN" Type="EXCHANGE_GOODS" />
+      <Association Name="WAREHOUSE_EXCHANGE_GOODS1" Member="EXCHANGE_GOODS1" ThisKey="WAREHOUSE_SN" OtherKey="INBOUND_WAREHOUSE_SN" Type="EXCHANGE_GOODS" />
+      <Association Name="WAREHOUSE_WAREHOUSE_WARRANT" Member="WAREHOUSE_WARRANT" ThisKey="WAREHOUSE_SN" OtherKey="WAREHOUSE_SN" Type="WAREHOUSE_WARRANT" />
+      <Association Name="WAREHOUSE_GOODS_RETURNED" Member="GOODS_RETURNED" ThisKey="WAREHOUSE_SN" OtherKey="WAREHOUSE_SN" Type="GOODS_RETURNED" />
+    </Type>
+  </Table>
+  <Table Name="scm.GOODS_RETURNED_DETAILS" Member="GOODS_RETURNED_DETAILS">
+    <Type Name="GOODS_RETURNED_DETAILS">
+      <Column Name="GR_DETAILS_SN" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GOODS_RETURNED_SN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BO_DETAILS_SN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GR_QUANTITY" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Association Name="GOODS_RETURNED_DETAILS_WAREHOUSE_WARRANT_DETAILS" Member="WAREHOUSE_WARRANT_DETAILS" ThisKey="GR_DETAILS_SN" OtherKey="GR_DETAILS_SN" Type="WAREHOUSE_WARRANT_DETAILS" />
+      <Association Name="BUYER_ORDERS_DETAILS_GOODS_RETURNED_DETAILS" Member="BUYER_ORDERS_DETAILS" ThisKey="BO_DETAILS_SN" OtherKey="BO_DETAILS_SN" Type="BUYER_ORDERS_DETAILS" IsForeignKey="true" />
+      <Association Name="GOODS_RETURNED_GOODS_RETURNED_DETAILS" Member="GOODS_RETURNED" ThisKey="GOODS_RETURNED_SN" OtherKey="GOODS_RETURNED_SN" Type="GOODS_RETURNED" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="scm.SALES_PROMOTION_PRODUCTS" Member="SALES_PROMOTION_PRODUCTS">
+    <Type Name="SALES_PROMOTION_PRODUCTS">
+      <Column Name="SP_PRODUCTS_SN" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SALES_PROMOTION_SN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PRODUCTS_SN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SALES_PROMOTION_DISCOUNT_AMOUNT" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="SALES_PROMOTION_SELL_PRICE" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="PROMOTION_QUANTITY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="SALES_PROMOTION_PRODUCTS_BUYER_ORDERS_DETAILS" Member="BUYER_ORDERS_DETAILS" ThisKey="SP_PRODUCTS_SN" OtherKey="SP_PRODUCTS_SN" Type="BUYER_ORDERS_DETAILS" />
+      <Association Name="PRODUCTS_DATA_SALES_PROMOTION_PRODUCTS" Member="PRODUCTS_DATA" ThisKey="PRODUCTS_SN" OtherKey="PRODUCTS_SN" Type="PRODUCTS_DATA" IsForeignKey="true" />
+      <Association Name="SALES_PROMOTION_SALES_PROMOTION_PRODUCTS" Member="SALES_PROMOTION" ThisKey="SALES_PROMOTION_SN" OtherKey="SALES_PROMOTION_SN" Type="SALES_PROMOTION" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="scm.WAREHOUSE_WARRANT_DETAILS" Member="WAREHOUSE_WARRANT_DETAILS">
+    <Type Name="WAREHOUSE_WARRANT_DETAILS">
+      <Column Name="WW_DETAILS_SN" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="WAREHOUSE_WARRANT_SN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PO_DETAILS_SN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GR_DETAILS_SN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EGI_DETAILS_SN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RECEIPT_QUANTITY" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="WW_QUANTITY" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="WW_DEFECTIVE_QUANTITY" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Association Name="GOODS_RETURNED_DETAILS_WAREHOUSE_WARRANT_DETAILS" Member="GOODS_RETURNED_DETAILS" ThisKey="GR_DETAILS_SN" OtherKey="GR_DETAILS_SN" Type="GOODS_RETURNED_DETAILS" IsForeignKey="true" />
+      <Association Name="PURCHASE_ORDER_DETAILS_WAREHOUSE_WARRANT_DETAILS" Member="PURCHASE_ORDER_DETAILS" ThisKey="PO_DETAILS_SN" OtherKey="PO_DETAILS_SN" Type="PURCHASE_ORDER_DETAILS" IsForeignKey="true" />
+      <Association Name="EXCHANGE_GOODS_INBOUND_DETAILS_WAREHOUSE_WARRANT_DETAILS" Member="EXCHANGE_GOODS_INBOUND_DETAILS" ThisKey="EGI_DETAILS_SN" OtherKey="EGI_DETAILS_SN" Type="EXCHANGE_GOODS_INBOUND_DETAILS" IsForeignKey="true" />
+      <Association Name="WAREHOUSE_WARRANT_WAREHOUSE_WARRANT_DETAILS" Member="WAREHOUSE_WARRANT" ThisKey="WAREHOUSE_WARRANT_SN" OtherKey="WAREHOUSE_WARRANT_SN" Type="WAREHOUSE_WARRANT" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="scm.BUYER_ORDERS_DETAILS" Member="BUYER_ORDERS_DETAILS">
+    <Type Name="BUYER_ORDERS_DETAILS">
+      <Column Name="BO_DETAILS_SN" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BUYER_ORDERS_SN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BO_QUANTITY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SP_PRODUCTS_SN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PRODUCTS_SN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BO_UNIT_PRICE" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Association Name="BUYER_ORDERS_DETAILS_BUYER_SHIPMENT_DETAILS" Member="BUYER_SHIPMENT_DETAILS" ThisKey="BO_DETAILS_SN" OtherKey="BO_DETAILS_SN" Type="BUYER_SHIPMENT_DETAILS" />
+      <Association Name="BUYER_ORDERS_DETAILS_GOODS_RETURNED_DETAILS" Member="GOODS_RETURNED_DETAILS" ThisKey="BO_DETAILS_SN" OtherKey="BO_DETAILS_SN" Type="GOODS_RETURNED_DETAILS" />
+      <Association Name="PRODUCTS_DATA_BUYER_ORDERS_DETAILS" Member="PRODUCTS_DATA" ThisKey="PRODUCTS_SN" OtherKey="PRODUCTS_SN" Type="PRODUCTS_DATA" IsForeignKey="true" />
+      <Association Name="SALES_PROMOTION_PRODUCTS_BUYER_ORDERS_DETAILS" Member="SALES_PROMOTION_PRODUCTS" ThisKey="SP_PRODUCTS_SN" OtherKey="SP_PRODUCTS_SN" Type="SALES_PROMOTION_PRODUCTS" IsForeignKey="true" />
+      <Association Name="BUYER_ORDERS_BUYER_ORDERS_DETAILS" Member="BUYER_ORDERS" ThisKey="BUYER_ORDERS_SN" OtherKey="BUYER_ORDERS_SN" Type="BUYER_ORDERS" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="scm.PURCHASE_ORDER_RETURNED_DETAILS" Member="PURCHASE_ORDER_RETURNED_DETAILS">
+    <Type Name="PURCHASE_ORDER_RETURNED_DETAILS">
+      <Column Name="POR_DETAILS_SN" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PURCHASE_ORDER_RETURNED_SN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="POR_QUANTITY" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="POR_UNIT_PRICE" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="POR_DEFECTIVE_QUANTITY" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PRODUCTS_SN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="PRODUCTS_DATA_PURCHASE_ORDER_RETURNED_DETAILS" Member="PRODUCTS_DATA" ThisKey="PRODUCTS_SN" OtherKey="PRODUCTS_SN" Type="PRODUCTS_DATA" IsForeignKey="true" />
+      <Association Name="PURCHASE_ORDER_RETURNED_PURCHASE_ORDER_RETURNED_DETAILS" Member="PURCHASE_ORDER_RETURNED" ThisKey="PURCHASE_ORDER_RETURNED_SN" OtherKey="PURCHASE_ORDER_RETURNED_SN" Type="PURCHASE_ORDER_RETURNED" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="scm.ORDERS_MARKET_ATTRIBUTE_MAPPING" Member="ORDERS_MARKET_ATTRIBUTE_MAPPING">
+    <Type Name="ORDERS_MARKET_ATTRIBUTE_MAPPING">
+      <Column Name="BUYER_ORDERS_SN" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MARKET_ATTR_NAME_SN" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MARKET_ATTR_VALUE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="MARKET_ATTRIBUTE_ORDERS_MARKET_ATTRIBUTE_MAPPING" Member="MARKET_ATTRIBUTE" ThisKey="MARKET_ATTR_NAME_SN" OtherKey="MARKET_ATTR_SN" Type="MARKET_ATTRIBUTE" IsForeignKey="true" />
+      <Association Name="BUYER_ORDERS_ORDERS_MARKET_ATTRIBUTE_MAPPING" Member="BUYER_ORDERS" ThisKey="BUYER_ORDERS_SN" OtherKey="BUYER_ORDERS_SN" Type="BUYER_ORDERS" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="scm.PRODUCTS_ATTRIBUTE_MAPPING" Member="PRODUCTS_ATTRIBUTE_MAPPING">
+    <Type Name="PRODUCTS_ATTRIBUTE_MAPPING">
+      <Column Name="PRODUCTS_ATTR_NAME_SN" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PRODUCTS_ATTR_VALUE" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PRODUCTS_SN" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="PRODUCTS_ATTRIBUTE_NAME_PRODUCTS_ATTRIBUTE_MAPPING" Member="PRODUCTS_ATTRIBUTE_NAME" ThisKey="PRODUCTS_ATTR_NAME_SN" OtherKey="PRODUCTS_ATTR_NAME_SN" Type="PRODUCTS_ATTRIBUTE_NAME" IsForeignKey="true" />
+      <Association Name="PRODUCTS_DATA_PRODUCTS_ATTRIBUTE_MAPPING" Member="PRODUCTS_DATA" ThisKey="PRODUCTS_SN" OtherKey="PRODUCTS_SN" Type="PRODUCTS_DATA" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="scm.SUPPLIER" Member="SUPPLIER">
+    <Type Name="SUPPLIER">
+      <Column Name="SUPPLIER_SN" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SUPPLIER_BAN" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="SUPPLIER_NAME" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="SUPPLIER_ADDRESS" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="SUPPLIER_PHONE" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="SUPPLIER_FAX" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="SUPPLIER_CONTACT_NAME" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="CONTACT_EMAIL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="SUPPLIER_PURCHASE_ORDER" Member="PURCHASE_ORDER" ThisKey="SUPPLIER_SN" OtherKey="SUPPLIER_SN" Type="PURCHASE_ORDER" />
+      <Association Name="SUPPLIER_SUPPLIER_PRODUCTS_NUMBER" Member="SUPPLIER_PRODUCTS_NUMBER" ThisKey="SUPPLIER_SN" OtherKey="SUPPLIER_SN" Type="SUPPLIER_PRODUCTS_NUMBER" />
+      <Association Name="SUPPLIER_PURCHASE_ORDER_RETURNED" Member="PURCHASE_ORDER_RETURNEDs" ThisKey="SUPPLIER_SN" OtherKey="SUPPLIER_SN" Type="PURCHASE_ORDER_RETURNED" />
+      <Association Name="SUPPLIER_WAREHOUSE_WARRANT" Member="WAREHOUSE_WARRANT" ThisKey="SUPPLIER_SN" OtherKey="SUPPLIER_SN" Type="WAREHOUSE_WARRANT" />
+    </Type>
+  </Table>
+  <Table Name="scm.SALES_PROMOTION" Member="SALES_PROMOTION">
+    <Type Name="SALES_PROMOTION">
+      <Column Name="SALES_PROMOTION_SN" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SALES_PROMOTION_NAME" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SALES_PROMOTION_SYMBOL" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="SALES_PROMOTION_DISCOUNT" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="SALES_PROMOTION_DISCOUNT_AMOUNT" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="SALES_PROMOTION_SELL_PRICE" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Association Name="SALES_PROMOTION_SALES_PROMOTION_PRODUCTS" Member="SALES_PROMOTION_PRODUCTS" ThisKey="SALES_PROMOTION_SN" OtherKey="SALES_PROMOTION_SN" Type="SALES_PROMOTION_PRODUCTS" />
+    </Type>
+  </Table>
+  <Table Name="scm.PURCHASE_ORDER_RETURNED" Member="PURCHASE_ORDER_RETURNEDs">
+    <Type Name="PURCHASE_ORDER_RETURNED">
+      <Column Name="PURCHASE_ORDER_RETURNED_SN" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PURCHASE_ORDER_RETURNED_NUMBER" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="PO_RETURN_TOTAL_AMOUNT" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="PO_RETURNED_STATUS" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PO_RETURNED_DATETIME" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PO_RETURNED_DELETE_STATUS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SUPPLIER_SN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="WAREHOUSE_SN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="PURCHASE_ORDER_RETURNED_PURCHASE_ORDER_RETURNED_DETAILS" Member="PURCHASE_ORDER_RETURNED_DETAILS" ThisKey="PURCHASE_ORDER_RETURNED_SN" OtherKey="PURCHASE_ORDER_RETURNED_SN" Type="PURCHASE_ORDER_RETURNED_DETAILS" />
+      <Association Name="SUPPLIER_PURCHASE_ORDER_RETURNED" Member="SUPPLIER" ThisKey="SUPPLIER_SN" OtherKey="SUPPLIER_SN" Type="SUPPLIER" IsForeignKey="true" />
+      <Association Name="WAREHOUSE_PURCHASE_ORDER_RETURNED" Member="WAREHOUSE" ThisKey="WAREHOUSE_SN" OtherKey="WAREHOUSE_SN" Type="WAREHOUSE" IsForeignKey="true" />
+      <Association Name="CDS_Document_PURCHASE_ORDER_RETURNED" Member="CDS_Document" ThisKey="PURCHASE_ORDER_RETURNED_SN" OtherKey="DocID" Type="CDS_Document" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="scm.BUYER_ORDERS" Member="BUYER_ORDERS">
+    <Type Name="BUYER_ORDERS">
+      <Column Name="BUYER_ORDERS_SN" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="BUYER_ORDERS_NUMBER" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="MARKET_RESOURCE_SN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BUYER_SN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BUYER_ORDER_TYPE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ORDERS_ORIGINAL_AMOUNT" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ORDERS_DISCOUNT_AMOUNT" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ORDERS_AMOUNT" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="TAX_AMOUNT" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="TOTAL_AMOUNT" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="BO_SHIPMENT_STATUS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BO_RETURNED_EXCHANGE_STATUS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BO_DATETIME" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="BO_DELETE_STATUS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DISCOUNT_DESCRIPTION" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="WAREHOUSE_SN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="BUYER_ORDERS_BUYER_ORDERS_DETAILS" Member="BUYER_ORDERS_DETAILS" ThisKey="BUYER_ORDERS_SN" OtherKey="BUYER_ORDERS_SN" Type="BUYER_ORDERS_DETAILS" />
+      <Association Name="BUYER_ORDERS_ORDERS_MARKET_ATTRIBUTE_MAPPING" Member="ORDERS_MARKET_ATTRIBUTE_MAPPING" ThisKey="BUYER_ORDERS_SN" OtherKey="BUYER_ORDERS_SN" Type="ORDERS_MARKET_ATTRIBUTE_MAPPING" />
+      <Association Name="BUYER_ORDERS_EXCHANGE_GOODS" Member="EXCHANGE_GOODS" ThisKey="BUYER_ORDERS_SN" OtherKey="BUYER_ORDERS_SN" Type="EXCHANGE_GOODS" />
+      <Association Name="BUYER_ORDERS_GOODS_RETURNED" Member="GOODS_RETURNED" ThisKey="BUYER_ORDERS_SN" OtherKey="BUYER_ORDERS_SN" Type="GOODS_RETURNED" />
+      <Association Name="BUYER_DATA_BUYER_ORDERS" Member="BUYER_DATA" ThisKey="BUYER_SN" OtherKey="BUYER_SN" Type="BUYER_DATA" IsForeignKey="true" />
+      <Association Name="MARKET_RESOURCE_BUYER_ORDERS" Member="MARKET_RESOURCE" ThisKey="MARKET_RESOURCE_SN" OtherKey="MARKET_RESOURCE_SN" Type="MARKET_RESOURCE" IsForeignKey="true" />
+      <Association Name="WAREHOUSE_BUYER_ORDERS" Member="WAREHOUSE" ThisKey="WAREHOUSE_SN" OtherKey="WAREHOUSE_SN" Type="WAREHOUSE" IsForeignKey="true" />
+      <Association Name="CDS_Document_BUYER_ORDERS" Member="CDS_Document" ThisKey="BUYER_ORDERS_SN" OtherKey="DocID" Type="CDS_Document" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.InvoiceItem" Member="InvoiceItem">
+    <Type Name="InvoiceItem">
+      <Column Name="InvoiceID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="No" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="InvoiceDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CheckNo" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Remark" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="BuyerRemark" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="CustomsClearanceMark" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="TaxCenter" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="PermitDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PermitWord" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="PermitNumber" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Category" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="RelateNumber" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="InvoiceType" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="GroupMark" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="DonateMark" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="SellerID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DonationID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RandomNo" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="TrackCode" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Association Name="InvoiceItem_BUYER_SHIPMENT" Member="BUYER_SHIPMENT" ThisKey="InvoiceID" OtherKey="INVOICE_SN" Type="BUYER_SHIPMENT" />
+      <Association Name="InvoiceItem_InvoiceCancellation" Member="InvoiceCancellation" ThisKey="InvoiceID" OtherKey="InvoiceID" Type="InvoiceCancellation" Cardinality="One" />
+      <Association Name="CDS_Document_InvoiceItem" Member="CDS_Document" ThisKey="InvoiceID" OtherKey="DocID" Type="CDS_Document" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DocumentOwner" Member="DocumentOwner">
+    <Type Name="DocumentOwner">
+      <Column Name="DocID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="OwnerID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="CDS_Document_DocumentOwner" Member="CDS_Document" ThisKey="DocID" OtherKey="DocID" Type="CDS_Document" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="scm.EXCHANGE_GOODS" Member="EXCHANGE_GOODS">
+    <Type Name="EXCHANGE_GOODS">
+      <Column Name="EXCHANGE_GOODS_SN" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="EXCHANGE_GOODS_NUMBER" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="BUYER_ORDERS_SN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EXCHANGE_GOODS_DATETIME" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="EG_WW_STATUS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EG_BS_STATUS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EG_REASON" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="EXCHANGE_GOODS_DELETE_STATUS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OUTBOUND_WAREHOUSE_SN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="INBOUND_WAREHOUSE_SN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="EXCHANGE_GOODS_EXCHANGE_GOODS_INBOUND_DETAILS" Member="EXCHANGE_GOODS_INBOUND_DETAILS" ThisKey="EXCHANGE_GOODS_SN" OtherKey="EXCHANGE_GOODS_SN" Type="EXCHANGE_GOODS_INBOUND_DETAILS" />
+      <Association Name="EXCHANGE_GOODS_EXCHANGE_GOODS_OUTBOND_DETAILS" Member="EXCHANGE_GOODS_OUTBOND_DETAILS" ThisKey="EXCHANGE_GOODS_SN" OtherKey="EXCHANGE_GOODS_SN" Type="EXCHANGE_GOODS_OUTBOND_DETAILS" />
+      <Association Name="BUYER_ORDERS_EXCHANGE_GOODS" Member="BUYER_ORDERS" ThisKey="BUYER_ORDERS_SN" OtherKey="BUYER_ORDERS_SN" Type="BUYER_ORDERS" IsForeignKey="true" />
+      <Association Name="WAREHOUSE_EXCHANGE_GOODS" Member="OUTBOUND_WAREHOUSE" Storage="_WAREHOUSE" ThisKey="OUTBOUND_WAREHOUSE_SN" OtherKey="WAREHOUSE_SN" Type="WAREHOUSE" IsForeignKey="true" />
+      <Association Name="WAREHOUSE_EXCHANGE_GOODS1" Member="INBOUND_WAREHOUSE" Storage="_WAREHOUSE1" ThisKey="INBOUND_WAREHOUSE_SN" OtherKey="WAREHOUSE_SN" Type="WAREHOUSE" IsForeignKey="true" />
+      <Association Name="CDS_Document_EXCHANGE_GOODS" Member="CDS_Document" ThisKey="EXCHANGE_GOODS_SN" OtherKey="DocID" Type="CDS_Document" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="scm.EXCHANGE_GOODS_INBOUND_DETAILS" Member="EXCHANGE_GOODS_INBOUND_DETAILS">
+    <Type Name="EXCHANGE_GOODS_INBOUND_DETAILS">
+      <Column Name="EGI_DETAILS_SN" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EXCHANGE_GOODS_SN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GR_WW_QUANTITY" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="PRODUCTS_SN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BO_UNIT_PRICE" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="GR_WW_DEFECTIVE_AMOUNT" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Association Name="EXCHANGE_GOODS_INBOUND_DETAILS_WAREHOUSE_WARRANT_DETAILS" Member="WAREHOUSE_WARRANT_DETAILS" ThisKey="EGI_DETAILS_SN" OtherKey="EGI_DETAILS_SN" Type="WAREHOUSE_WARRANT_DETAILS" />
+      <Association Name="EXCHANGE_GOODS_EXCHANGE_GOODS_INBOUND_DETAILS" Member="EXCHANGE_GOODS" ThisKey="EXCHANGE_GOODS_SN" OtherKey="EXCHANGE_GOODS_SN" Type="EXCHANGE_GOODS" IsForeignKey="true" />
+      <Association Name="PRODUCTS_DATA_EXCHANGE_GOODS_INBOUND_DETAILS" Member="PRODUCTS_DATA" ThisKey="PRODUCTS_SN" OtherKey="PRODUCTS_SN" Type="PRODUCTS_DATA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="scm.EXCHANGE_GOODS_OUTBOND_DETAILS" Member="EXCHANGE_GOODS_OUTBOND_DETAILS">
+    <Type Name="EXCHANGE_GOODS_OUTBOND_DETAILS">
+      <Column Name="EGO_DETAILS_SN" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EXCHANGE_GOODS_SN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GR_BS_QUANTITY" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="PRODUCTS_SN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BO_UNIT_PRICE" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Association Name="EXCHANGE_GOODS_EXCHANGE_GOODS_OUTBOND_DETAILS" Member="EXCHANGE_GOODS" ThisKey="EXCHANGE_GOODS_SN" OtherKey="EXCHANGE_GOODS_SN" Type="EXCHANGE_GOODS" IsForeignKey="true" />
+      <Association Name="PRODUCTS_DATA_EXCHANGE_GOODS_OUTBOND_DETAILS" Member="PRODUCTS_DATA" ThisKey="PRODUCTS_SN" OtherKey="PRODUCTS_SN" Type="PRODUCTS_DATA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserProfile" Member="UserProfile">
+    <Type Name="UserProfile">
+      <Column Name="UID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="PID" Type="System.String" DbType="NVarChar(32) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="ContactTitle" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="Region" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="PostalCode" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="Country" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="MobilePhone" Type="System.String" DbType="NVarChar(24)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(24)" CanBeNull="true" />
+      <Column Name="Phone2" Type="System.String" DbType="NVarChar(24)" CanBeNull="true" />
+      <Column Name="Fax" Type="System.String" DbType="NVarChar(24)" CanBeNull="true" />
+      <Column Name="EMail" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="Expiration" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Creator" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AuthID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LevelID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ThemeName" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="Password2" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Association Name="UserProfile_UserProfile" Member="UserProfile2" ThisKey="UID" OtherKey="Creator" Type="UserProfile" />
+      <Association Name="UserProfile_UserProfile1" Member="UserProfile4" ThisKey="UID" OtherKey="AuthID" Type="UserProfile" />
+      <Association Name="UserProfile_DocumentProcessLog" Member="DocumentProcessLog" ThisKey="UID" OtherKey="UID" Type="DocumentProcessLog" />
+      <Association Name="UserProfile_UserProfile" Member="UserProfile1" ThisKey="Creator" OtherKey="UID" Type="UserProfile" IsForeignKey="true" />
+      <Association Name="UserProfile_UserProfile1" Member="UserProfile3" ThisKey="AuthID" OtherKey="UID" Type="UserProfile" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CDS_Document" Member="CDS_Document">
+    <Type Name="CDS_Document">
+      <Column Name="DocID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DocType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DocDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CurrentStep" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="CDS_Document_PURCHASE_ORDER" Member="PURCHASE_ORDER" ThisKey="DocID" OtherKey="PURCHASE_ORDER_SN" Type="PURCHASE_ORDER" Cardinality="One" />
+      <Association Name="CDS_Document_PURCHASE_ORDER_RETURNED" Member="PURCHASE_ORDER_RETURNED" ThisKey="DocID" OtherKey="PURCHASE_ORDER_RETURNED_SN" Type="PURCHASE_ORDER_RETURNED" Cardinality="One" />
+      <Association Name="CDS_Document_BUYER_ORDERS" Member="BUYER_ORDERS" ThisKey="DocID" OtherKey="BUYER_ORDERS_SN" Type="BUYER_ORDERS" Cardinality="One" />
+      <Association Name="CDS_Document_InvoiceItem" Member="InvoiceItem" ThisKey="DocID" OtherKey="InvoiceID" Type="InvoiceItem" Cardinality="One" />
+      <Association Name="CDS_Document_DocumentOwner" Member="DocumentOwner" ThisKey="DocID" OtherKey="DocID" Type="DocumentOwner" Cardinality="One" />
+      <Association Name="CDS_Document_EXCHANGE_GOODS" Member="EXCHANGE_GOODS" ThisKey="DocID" OtherKey="EXCHANGE_GOODS_SN" Type="EXCHANGE_GOODS" Cardinality="One" />
+      <Association Name="CDS_Document_BUYER_SHIPMENT" Member="BUYER_SHIPMENT" ThisKey="DocID" OtherKey="BUYER_SHIPMENT_SN" Type="BUYER_SHIPMENT" Cardinality="One" />
+      <Association Name="CDS_Document_WAREHOUSE_WARRANT" Member="WAREHOUSE_WARRANT" ThisKey="DocID" OtherKey="WAREHOUSE_WARRANT_SN" Type="WAREHOUSE_WARRANT" Cardinality="One" />
+      <Association Name="CDS_Document_GOODS_RETURNED" Member="GOODS_RETURNED" ThisKey="DocID" OtherKey="GOODS_RETURNED_SN" Type="GOODS_RETURNED" Cardinality="One" />
+      <Association Name="CDS_Document_DocumentProcessLog" Member="DocumentProcessLog" ThisKey="DocID" OtherKey="DocID" Type="DocumentProcessLog" />
+      <Association Name="DocumentType_CDS_Document" Member="DocumentType" ThisKey="DocType" OtherKey="TypeID" Type="DocumentType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="scm.BUYER_SHIPMENT" Member="BUYER_SHIPMENT">
+    <Type Name="BUYER_SHIPMENT">
+      <Column Name="BUYER_SHIPMENT_SN" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="BUYER_SHIPMENT_NUMBER" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="INVOICE_SN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SHIPMENT_ORIGINAL_AMOUNT" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="SHIPMENT_DISCOUNT_AMOUNT" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="SHIPMENT_AMOUNT" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="TAX_AMOUNT" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TOTAL_AMOUNT" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SHIPMENT_DATETIME" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DELIVERY_COMPANY_SN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="POST_PRINT_STATUS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="BUYER_SHIPMENT_BUYER_SHIPMENT_DETAILS" Member="BUYER_SHIPMENT_DETAILS" ThisKey="BUYER_SHIPMENT_SN" OtherKey="BUYER_SHIPMENT_SN" Type="BUYER_SHIPMENT_DETAILS" />
+      <Association Name="CDS_Document_BUYER_SHIPMENT" Member="CDS_Document" ThisKey="BUYER_SHIPMENT_SN" OtherKey="DocID" Type="CDS_Document" IsForeignKey="true" />
+      <Association Name="DELIVERY_COMPANY_BUYER_SHIPMENT" Member="DELIVERY_COMPANY" ThisKey="DELIVERY_COMPANY_SN" OtherKey="DELIVERY_COMPANY_SN" Type="DELIVERY_COMPANY" IsForeignKey="true" />
+      <Association Name="InvoiceItem_BUYER_SHIPMENT" Member="InvoiceItem" ThisKey="INVOICE_SN" OtherKey="InvoiceID" Type="InvoiceItem" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="scm.WAREHOUSE_WARRANT" Member="WAREHOUSE_WARRANT">
+    <Type Name="WAREHOUSE_WARRANT">
+      <Column Name="WAREHOUSE_WARRANT_SN" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="WAREHOUSE_WARRANT_NUMBER" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="SUPPLIER_SN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="WW_DATETIME" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="WW_DELETE_STATUS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="WAREHOUSE_SN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="WAREHOUSE_WARRANT_WAREHOUSE_WARRANT_DETAILS" Member="WAREHOUSE_WARRANT_DETAILS" ThisKey="WAREHOUSE_WARRANT_SN" OtherKey="WAREHOUSE_WARRANT_SN" Type="WAREHOUSE_WARRANT_DETAILS" />
+      <Association Name="CDS_Document_WAREHOUSE_WARRANT" Member="CDS_Document" ThisKey="WAREHOUSE_WARRANT_SN" OtherKey="DocID" Type="CDS_Document" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="SUPPLIER_WAREHOUSE_WARRANT" Member="SUPPLIER" ThisKey="SUPPLIER_SN" OtherKey="SUPPLIER_SN" Type="SUPPLIER" IsForeignKey="true" />
+      <Association Name="WAREHOUSE_WAREHOUSE_WARRANT" Member="WAREHOUSE" ThisKey="WAREHOUSE_SN" OtherKey="WAREHOUSE_SN" Type="WAREHOUSE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.InvoiceCancellation" Member="InvoiceCancellation">
+    <Type Name="InvoiceCancellation">
+      <Column Name="CancellationNo" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="CancelDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ReturnTaxDocumentNo" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="Remark" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="InvoiceID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="InvoiceCancellation_GOODS_RETURNED" Member="GOODS_RETURNED" ThisKey="InvoiceID" OtherKey="CANCEL_INVOICE_SN" Type="GOODS_RETURNED" />
+      <Association Name="InvoiceItem_InvoiceCancellation" Member="InvoiceItem" ThisKey="InvoiceID" OtherKey="InvoiceID" Type="InvoiceItem" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="scm.GOODS_RETURNED" Member="GOODS_RETURNED">
+    <Type Name="GOODS_RETURNED">
+      <Column Name="GOODS_RETURNED_SN" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="GOODS_RETURNED_NUMBER" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="BUYER_ORDERS_SN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CANCEL_INVOICE_SN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GR_STATUS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GR_REASON" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="GOODS_RETURNED_DATETIME" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="WAREHOUSE_SN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="GOODS_RETURNED_GOODS_RETURNED_DETAILS" Member="GOODS_RETURNED_DETAILS" ThisKey="GOODS_RETURNED_SN" OtherKey="GOODS_RETURNED_SN" Type="GOODS_RETURNED_DETAILS" />
+      <Association Name="BUYER_ORDERS_GOODS_RETURNED" Member="BUYER_ORDERS" ThisKey="BUYER_ORDERS_SN" OtherKey="BUYER_ORDERS_SN" Type="BUYER_ORDERS" IsForeignKey="true" />
+      <Association Name="CDS_Document_GOODS_RETURNED" Member="CDS_Document" ThisKey="GOODS_RETURNED_SN" OtherKey="DocID" Type="CDS_Document" IsForeignKey="true" />
+      <Association Name="InvoiceCancellation_GOODS_RETURNED" Member="InvoiceCancellation" ThisKey="CANCEL_INVOICE_SN" OtherKey="InvoiceID" Type="InvoiceCancellation" IsForeignKey="true" />
+      <Association Name="WAREHOUSE_GOODS_RETURNED" Member="WAREHOUSE" ThisKey="WAREHOUSE_SN" OtherKey="WAREHOUSE_SN" Type="WAREHOUSE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="scm.WAREHOUSE_PRODUCTS_TRANSACTION_LOG" Member="WAREHOUSE_PRODUCTS_TRANSACTION_LOG">
+    <Type Name="WAREHOUSE_PRODUCTS_TRANSACTION_LOG">
+      <Column Name="WPTL_SN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PRODUCTS_SN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="WAREHOUSE_SN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TRANSFORM_RECEIPT_DETAIL_SN" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IN_OUTBOUND_DATETIME" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="INBOUND_QUANTITY" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="OUTBOUND_QUANTITY" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="DEFECTIVE_QUANTITY" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DocumentProcessLog" Member="DocumentProcessLog">
+    <Type Name="DocumentProcessLog">
+      <Column Name="DocID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="StepDate" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FlowStep" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="DocumentProcessLog_DocumentReasonForRefusal" Member="DocumentReasonForRefusal" ThisKey="DocID,StepDate" OtherKey="DocID,TimeToRefuse" Type="DocumentReasonForRefusal" Cardinality="One" />
+      <Association Name="CDS_Document_DocumentProcessLog" Member="CDS_Document" ThisKey="DocID" OtherKey="DocID" Type="CDS_Document" IsForeignKey="true" />
+      <Association Name="UserProfile_DocumentProcessLog" Member="UserProfile" ThisKey="UID" OtherKey="UID" Type="UserProfile" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DocumentReasonForRefusal" Member="DocumentReasonForRefusal">
+    <Type Name="DocumentReasonForRefusal">
+      <Column Name="DocID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Reason" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TimeToRefuse" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="DocumentProcessLog_DocumentReasonForRefusal" Member="DocumentProcessLog" ThisKey="DocID,TimeToRefuse" OtherKey="DocID,StepDate" Type="DocumentProcessLog" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,546 @@
+2012/06/19 08:47:51
+System.Net.WebException: The remote name could not be resolved: 'eceivo.uxifs.com'
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at InvoiceClient.WS_Invoice.eInvoiceService.GetIncomingInvoices(XmlNode sellerInfo) in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Web References\WS_Invoice\Reference.cs:line 317
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingInvoices() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 49
+2012/06/19 08:47:54
+System.Net.WebException: The remote name could not be resolved: 'eceivo.uxifs.com'
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at InvoiceClient.WS_Invoice.eInvoiceService.GetIncomingInvoiceCancellations(XmlNode sellerInfo) in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Web References\WS_Invoice\Reference.cs:line 346
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingInvoiceCancellations() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 89
+2012/06/19 08:47:54
+System.Net.WebException: The remote name could not be resolved: 'eceivo.uxifs.com'
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at InvoiceClient.WS_Invoice.eInvoiceService.GetIncomingAllowances(XmlNode sellerInfo) in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Web References\WS_Invoice\Reference.cs:line 375
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingAllowances() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 130
+2012/06/19 08:47:54
+System.Net.WebException: The remote name could not be resolved: 'eceivo.uxifs.com'
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at InvoiceClient.WS_Invoice.eInvoiceService.GetIncomingAllowanceCancellations(XmlNode sellerInfo) in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Web References\WS_Invoice\Reference.cs:line 404
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingAllowanceCancellations() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 170
+2012/06/19 08:47:54
+System.Net.WebException: The remote name could not be resolved: 'eceivo.uxifs.com'
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at InvoiceClient.WS_Invoice.eInvoiceService.GetIncomingWinningInvoices(XmlNode sellerInfo) in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Web References\WS_Invoice\Reference.cs:line 461
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingWinningInvoices() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 226
+2012/06/19 09:17:55
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingInvoices() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 53
+2012/06/19 09:17:56
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingInvoiceCancellations() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 93
+2012/06/19 09:17:56
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingAllowances() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 134
+2012/06/19 09:17:57
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingAllowanceCancellations() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 174
+2012/06/19 09:48:03
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingInvoices() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 53
+2012/06/19 09:48:03
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingInvoiceCancellations() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 93
+2012/06/19 09:48:04
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingAllowances() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 134
+2012/06/19 09:48:04
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingAllowanceCancellations() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 174
+2012/06/19 10:18:09
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingInvoices() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 53
+2012/06/19 10:18:10
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingInvoiceCancellations() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 93
+2012/06/19 10:18:10
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingAllowances() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 134
+2012/06/19 10:18:10
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingAllowanceCancellations() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 174
+2012/06/19 10:48:15
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingInvoices() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 53
+2012/06/19 10:48:15
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingInvoiceCancellations() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 93
+2012/06/19 10:48:15
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingAllowances() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 134
+2012/06/19 10:48:15
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingAllowanceCancellations() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 174
+2012/06/19 11:18:20
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingInvoices() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 53
+2012/06/19 11:18:21
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingInvoiceCancellations() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 93
+2012/06/19 11:18:21
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingAllowances() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 134
+2012/06/19 11:18:21
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingAllowanceCancellations() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 174
+2012/06/19 11:48:26
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingInvoices() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 53
+2012/06/19 11:48:26
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingInvoiceCancellations() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 93
+2012/06/19 11:48:26
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingAllowances() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 134
+2012/06/19 11:48:26
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingAllowanceCancellations() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 174
+2012/06/19 12:18:32
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingInvoices() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 53
+2012/06/19 12:18:32
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingInvoiceCancellations() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 93
+2012/06/19 12:18:32
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingAllowances() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 134
+2012/06/19 12:18:32
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingAllowanceCancellations() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 174
+2012/06/19 12:48:37
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingInvoices() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 53
+2012/06/19 12:48:38
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingInvoiceCancellations() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 93
+2012/06/19 12:48:38
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingAllowances() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 134
+2012/06/19 12:48:38
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingAllowanceCancellations() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 174
+2012/06/19 13:18:38
+System.Net.WebException: The remote name could not be resolved: 'eceivo.uxifs.com'
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at InvoiceClient.WS_Invoice.eInvoiceService.GetIncomingInvoices(XmlNode sellerInfo) in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Web References\WS_Invoice\Reference.cs:line 317
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingInvoices() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 49
+2012/06/19 13:18:43
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingInvoiceCancellations() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 93
+2012/06/19 13:18:43
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingAllowances() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 134
+2012/06/19 13:18:44
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingAllowanceCancellations() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 174
+2012/06/19 13:48:49
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingInvoices() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 53
+2012/06/19 13:48:49
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingInvoiceCancellations() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 93
+2012/06/19 13:48:49
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingAllowances() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 134
+2012/06/19 13:48:49
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingAllowanceCancellations() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 174
+2012/06/19 14:18:54
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingInvoices() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 53
+2012/06/19 14:18:54
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingInvoiceCancellations() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 93
+2012/06/19 14:18:54
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingAllowances() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 134
+2012/06/19 14:18:54
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingAllowanceCancellations() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 174
+2012/06/19 14:48:59
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingInvoices() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 53
+2012/06/19 14:48:59
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingInvoiceCancellations() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 93
+2012/06/19 14:48:59
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingAllowances() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 134
+2012/06/19 14:48:59
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingAllowanceCancellations() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 174
+2012/06/19 15:19:05
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingInvoices() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 53
+2012/06/19 15:19:05
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingInvoiceCancellations() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 93
+2012/06/19 15:19:05
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingAllowances() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 134
+2012/06/19 15:19:05
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingAllowanceCancellations() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 174
+2012/06/19 15:49:10
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingInvoices() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 53
+2012/06/19 15:49:10
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingInvoiceCancellations() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 93
+2012/06/19 15:49:10
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingAllowances() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 134
+2012/06/19 15:49:10
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingAllowanceCancellations() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 174
+2012/06/19 16:19:16
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingInvoices() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 53
+2012/06/19 16:19:16
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingInvoiceCancellations() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 93
+2012/06/19 16:19:16
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingAllowances() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 134
+2012/06/19 16:19:16
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingAllowanceCancellations() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 174
+2012/06/19 16:49:21
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingInvoices() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 53
+2012/06/19 16:49:21
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingInvoiceCancellations() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 93
+2012/06/19 16:49:21
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingAllowances() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 134
+2012/06/19 16:49:22
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingAllowanceCancellations() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 174
+2012/06/19 17:19:28
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingInvoices() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 53
+2012/06/19 17:19:29
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingInvoiceCancellations() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 93
+2012/06/19 17:19:29
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingAllowances() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 134
+2012/06/19 17:19:30
+System.IO.DirectoryNotFoundException: Could not find a part of the path '\\Company\ebMSOutBox'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj)
+   at System.IO.Directory.CreateDirectory(String path)
+   at Utility.ExtensionMethods.CheckStoredPath(String fullPath)
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingAllowanceCancellations() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 174
+2012/06/19 17:49:30
+System.Net.WebException: The remote name could not be resolved: 'eceivo.uxifs.com'
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at InvoiceClient.WS_Invoice.eInvoiceService.GetIncomingInvoices(XmlNode sellerInfo) in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Web References\WS_Invoice\Reference.cs:line 317
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingInvoices() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 49
+2012/06/19 17:49:30
+System.Net.WebException: The remote name could not be resolved: 'eceivo.uxifs.com'
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at InvoiceClient.WS_Invoice.eInvoiceService.GetIncomingInvoiceCancellations(XmlNode sellerInfo) in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Web References\WS_Invoice\Reference.cs:line 346
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingInvoiceCancellations() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 89
+2012/06/19 17:49:30
+System.Net.WebException: The remote name could not be resolved: 'eceivo.uxifs.com'
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at InvoiceClient.WS_Invoice.eInvoiceService.GetIncomingAllowances(XmlNode sellerInfo) in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Web References\WS_Invoice\Reference.cs:line 375
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingAllowances() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 130
+2012/06/19 17:49:30
+System.Net.WebException: The remote name could not be resolved: 'eceivo.uxifs.com'
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at InvoiceClient.WS_Invoice.eInvoiceService.GetIncomingAllowanceCancellations(XmlNode sellerInfo) in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Web References\WS_Invoice\Reference.cs:line 404
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingAllowanceCancellations() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 170
+2012/06/19 17:49:30
+System.Net.WebException: The remote name could not be resolved: 'eceivo.uxifs.com'
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at InvoiceClient.WS_Invoice.eInvoiceService.GetIncomingWinningInvoices(XmlNode sellerInfo) in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Web References\WS_Invoice\Reference.cs:line 461
+   at InvoiceClient.Agent.InvoiceServerInspector.GetIncomingWinningInvoices() in F:\Project\AppDev\IFS-EIVO03\InvoiceClient\Agent\InvoiceServerInspector.cs:line 226

@@ -1,0 +1,53 @@
+body{
+	margin:0px;
+	padding:0px;
+	font-family: "Verdana", "Arial", "Helvetica", "sans-serif", "細明體", "新細明體"; 
+	font-size: 7pt;
+}
+.post
+{
+	height:10cm;
+}
+
+.company
+{
+	margin:15px 0px 0px 20px;
+	padding:0px;
+	color:#000;
+}
+.company .title
+{
+	margin:0px;
+	padding:0px;
+	font-size:14pt;
+	font-family:標楷體;
+	font-weight:normal;
+}
+.company p
+{
+	margin:0px;
+	padding:0px;
+	font-size:9pt;
+	font-family:標楷體;
+}
+
+.customer
+{
+	margin:90px 0px 0px 60px;
+	padding:0px;
+	color:#000;
+}
+.customer .title
+{
+	margin:0px;
+	padding:0px;
+	font-size:14pt;
+	font-family:標楷體;
+}
+.customer p
+{
+	margin:0px;
+	padding:0px;
+	font-size:14pt;
+	font-family:標楷體;
+}

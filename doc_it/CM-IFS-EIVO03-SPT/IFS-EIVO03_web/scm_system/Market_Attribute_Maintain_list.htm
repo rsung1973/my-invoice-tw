@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=big5" />
+<link href="css/content.css" rel="stylesheet" type="text/css" />
+<link href="css/table.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="javascript/join.js"></script>
+<script language="JavaScript" src="javascript/jquery.js"></script>
+<script type="text/javascript">
+<!--
+$(document).ready(function() {
+	$("#device").hide();
+	$("#uxb2b").hide();
+	
+	$("#r_dev").click(function(){
+		$("#device").show();
+		});
+	$("#member").click(function(){
+		$("#device").hide();
+		});
+		
+	$("#device").change(function(){
+		var sel=$('#device option:selected').text();
+		if(sel == "UXB2B條碼卡")
+		{
+			$("#uxb2b").show();
+		}
+		else
+		{
+			$("#uxb2b").hide();
+		};
+	});
+});
+-->
+</script>
+<title>電子發票系統</title>
+</head>
+
+<body>
+<!--路徑名稱-->
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="30"><img src="images/path_left.gif" alt="" width="30" height="29" /></td>
+    <td bgcolor="#ecedd5">首頁 > 網購通路平台屬性維護</td>
+    <td width="18"><img src="images/path_right.gif" alt="" width="18" height="29" /></td>
+  </tr>
+</table>
+<!--交易畫面標題-->
+<h1><img src="images/icon_search.gif" width="29" height="28" border="0" align="absmiddle" />網購通路平台屬性維護</h1>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="top_table">
+ <tr>
+     <td>
+         <input type="button" name="Button1" value="新增網購通路平台屬性" id="Button1" class="btn" class="btn" onClick="window.location='addMarket_Attribute_Maintain.htm'" />
+     </td>
+ </tr>
+</table>
+<div id="border_gray">
+<!--表格 開始-->
+<form name="addForm">
+<table width="100%" border="0" cellpadding="0" cellspacing="0" id="left_title">
+  <tr>
+    <th colspan="2" class="Head_style_a">查詢條件</th>
+    </tr>
+  <tr>
+    <th width="30%">網購通路來源名稱</th>
+    <td class="tdleft">
+    <select name="seller" size="1" class="textfield">
+      <option>全部</option>
+      <option>樂天市場</option>
+      <option>Yahoo商店街</option>
+      <option>Pchome商店街</option>
+    </select>
+    </td>
+  </tr>
+</table>
+</form>
+<!--表格 結束-->
+</div>
+<!--按鈕-->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="Bargain_btn"><input type="button" name="Submit" class="btn" value="查詢" onClick="window.location='Market_Attribute_Maintain_list.htm'" /></td>
+  </tr>
+</table>
+<h1><img src="images/icon_search.gif" width="29" height="28" border="0" align="absmiddle" />查詢結果</h1>
+<div id="border_gray">
+  <!--表格 開始-->
+  <table width="100%" border="0" cellpadding="0" cellspacing="0" id="table01">
+    <tr>
+      <th nowrap="nowrap">網購通路來源名稱</th>
+      <th nowrap="nowrap">網購通路平台屬性名稱</th>
+      <th nowrap="nowrap">&nbsp;</th>
+    </tr>
+    <tr>
+      <td align="center">樂天市場</td>
+      <td align="center">客戶編號</td>
+      <td width="120" align="center">
+      	<input name="modify2" type="button" class="btn" value="編輯" onclick="window.location.href='modifyMarket_Attribute_Maintain.htm'" />
+      		&nbsp;&nbsp;&nbsp;
+      	<input type="submit" name="ctl00" value="刪除" onclick="if(confirm(&quot;確認刪除此筆資料?&quot;))location.href='Market_Attribute_Maintain_list.htm'; return false;" id="btnDelete" class="btn" />
+      </td>
+    </tr>
+    <tr>
+      <td align="center">樂天市場</td>
+      <td align="center">訂單編號</td>
+      <td width="120" align="center">
+      	<input name="modify2" type="button" class="btn" value="編輯" onclick="window.location.href='modifyMarket_Attribute_Maintain.htm'" />
+      		&nbsp;&nbsp;&nbsp;
+      	<input type="submit" name="ctl00" value="刪除" onclick="if(confirm(&quot;確認刪除此筆資料?&quot;))location.href='Market_Attribute_Maintain_list.htm'; return false;" id="btnDelete" class="btn" />
+      </td>
+    </tr>
+    <tr>
+      <td align="center">Pchome商店街</td>
+      <td align="center">客戶編號</td>
+      <td width="120" align="center">
+      	<input name="modify2" type="button" class="btn" value="編輯" onclick="window.location.href='modifyMarket_Attribute_Maintain.htm'" />
+      		&nbsp;&nbsp;&nbsp;
+      	<input type="submit" name="ctl00" value="刪除" onclick="if(confirm(&quot;確認刪除此筆資料?&quot;))location.href='Market_Attribute_Maintain_list.htm'; return false;" id="btnDelete" class="btn" />
+      </td>
+    </tr>
+  </table>
+  <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" id="table-count">
+    <tr>
+      <td>| 1 | <a href="#">2</a> |&nbsp; <a href="#">後10頁</a> | <a href="#">最後1頁</a>
+        <input name="textfield" type="text" class="textfield" size="3" />
+        <input name="cancel22" type="reset" class="btn" value="頁數" /></td>
+      <td align="right" nowrap="nowrap"><span>總筆數：100&nbsp;&nbsp;&nbsp;總頁數：10</span></td>
+    </tr>
+  </table>
+<!--表格 結束-->
+</div>
+<!--按鈕-->
+
+</body>
+</html>

@@ -18,10 +18,11 @@ using System.Threading;
 using System.Data.SqlClient;
 using System.Data;
 using ClosedXML.Excel;
+using System.Data.Linq;
 
 namespace eIVOGo.Controllers
 {
-    public class InvoiceQueryController : Controller
+    public class InvoiceQueryController : SampleController<InvoiceItem>
     {
         protected UserProfileMember _userProfile;
 
@@ -56,14 +57,38 @@ namespace eIVOGo.Controllers
 
         public ActionResult InvoiceMediaReport()
         {
-            //ViewBag.HasQuery = false;
-            ViewBag.QueryAction = "Inquire";
-            ModelSource<InvoiceItem> models = new ModelSource<InvoiceItem>();
-            TempData.SetModelSource(models);
-            models.Inquiry = createModelInquiry();
-
-            return View(models.Inquiry);
+            ViewBag.QueryAction = "InquireInvoiceMedia";
+            return View();
         }
+
+        public ActionResult InquireInvoiceMedia(int sellerID,int year,int periodNo,String taxNo)
+        {
+            DateTime startDate = new DateTime(year, periodNo * 2 - 1, 1);
+            DataLoadOptions ops = new DataLoadOptions();
+            ops.LoadWith<InvoiceItem>(i => i.InvoiceBuyer);
+            ops.LoadWith<InvoiceItem>(i => i.InvoiceCancellation);
+            ops.LoadWith<InvoiceItem>(i => i.InvoiceAmountType);
+            ops.LoadWith<InvoiceItem>(i => i.InvoiceSeller);
+            models.GetDataContext().LoadOptions = ops;
+
+            var items = models.GetTable<InvoiceItem>().Where(i => i.SellerID == sellerID
+                    && i.InvoiceDate >= startDate 
+                    && i.InvoiceDate < startDate.AddMonths(2))
+                .OrderBy(i => i.InvoiceID);
+
+            if (items.Count() > 0)
+            {
+                ViewBag.TaxNo = taxNo;
+                ViewBag.FileName = String.Format("{0:d4}{1:d2}({2}).txt", year, periodNo, items.First().Organization.ReceiptNo);
+            }
+            else
+            {
+                ViewBag.FileName = "test.txt";
+            }
+
+            return View(items);
+        }
+
 
 
         public ActionResult Inquire()

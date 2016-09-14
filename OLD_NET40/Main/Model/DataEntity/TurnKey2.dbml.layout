@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 12.25, 12" name="TurnKey2">
+  <DataContextMoniker Name="/TurnKey2DataContext" />
+  <nestedChildShapes>
+    <classShape Id="f9580501-c62a-4436-8c70-506e6bca4319" absoluteBounds="0.75, 0.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/TurnKey2DataContext/TURNKEY_USER_PROFILE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d90db980-1bd8-4529-94ff-440426a16eec" absoluteBounds="0.765, 1.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="843324c5-be7d-4699-82c6-10b17411c0dc" absoluteBounds="3.75, 0.75, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/TurnKey2DataContext/FROM_CONFIG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a266efe3-fb1a-458d-835d-cb7382823bfc" absoluteBounds="3.765, 1.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="de7cc3b2-f697-4e38-af8e-38a7f0557ec2" absoluteBounds="0.75, 4.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/TurnKey2DataContext/SCHEDULE_CONFIG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e639d534-a220-4be2-aa57-526e61785a72" absoluteBounds="0.765, 5.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4772c46d-30f6-4862-b50f-97182f221f98" absoluteBounds="3.75, 4.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/TurnKey2DataContext/SIGN_CONFIG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b646407a-8dbf-4524-bafa-5cbec1c30cd0" absoluteBounds="3.765, 5.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3814d924-1afc-4bcc-a647-399214c820bb" absoluteBounds="6.75, 0.75, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/TurnKey2DataContext/TASK_CONFIG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e1d9c99e-de95-4ffb-959b-052b24870bcc" absoluteBounds="6.765, 1.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dabc68bb-cbb0-4b34-9629-b04c51243473" absoluteBounds="6.75, 4.75, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/TurnKey2DataContext/TO_CONFIG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9e470778-a091-4058-845f-f6d60c623b4a" absoluteBounds="6.765, 5.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2d9b9ffa-d75c-4f82-a24f-09b748f36a91" absoluteBounds="0.75, 7.75, 2, 3.6939111328124987">
+      <DataClassMoniker Name="/TurnKey2DataContext/TURNKEY_MESSAGE_LOG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e78308b6-1930-4fbb-9f45-6bc0049fa847" absoluteBounds="0.765, 8.21, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a531ba12-44b6-4dbc-98dd-59697dda0d52" absoluteBounds="3.75, 7.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/TurnKey2DataContext/TURNKEY_MESSAGE_LOG_DETAIL" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5f9c09b5-1129-4762-ac7b-6d6d413d12e3" absoluteBounds="3.765, 8.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fa9473ff-1fe0-4259-85bd-f0fe01ea2239" absoluteBounds="6.75, 7.75, 2, 1.0016910807291666">
+      <DataClassMoniker Name="/TurnKey2DataContext/TURNKEY_SEQUENCE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="618eb4b3-6dd4-4e01-9883-568efc660975" absoluteBounds="6.765, 8.21, 1.9700000000000002, 0.44169108072916669" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8ffbaed6-11c5-4f1b-b2be-a02a38d4b2f9" absoluteBounds="9.75, 0.75, 2, 3.6939111328124992">
+      <DataClassMoniker Name="/TurnKey2DataContext/TURNKEY_SYSEVENT_LOG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="04290a23-127d-4317-bb5c-2c9e0da9a709" absoluteBounds="9.765, 1.21, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7bb40786-4c8e-49b9-a040-be2a0b3c5c70" absoluteBounds="9.75, 5.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/TurnKey2DataContext/TURNKEY_TRANSPORT_CONFIG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="03307028-ee27-4ef0-88a2-c3b75ad232d9" absoluteBounds="9.765, 6.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ecabde40-056c-454c-b869-a932496fbf65" absoluteBounds="10, 9.375, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/TurnKey2DataContext/V_Logs" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3ad7eb81-19de-4abf-a626-8f420023d917" absoluteBounds="10.015, 9.835, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

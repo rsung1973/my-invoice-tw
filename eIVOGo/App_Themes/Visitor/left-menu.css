@@ -1,0 +1,104 @@
+.side_body
+{
+	margin:0px;
+	padding:0px;
+	font-family: Arial, Helvetica, sans-serif;
+	background:url(../../images/sider_bg.gif) repeat-y;
+	font-size:12px;
+}
+.menu_top 
+{
+	margin:0px;
+	margin-left:8px;
+	padding:0px;
+	background:url(../../images/menu_top.gif) no-repeat;
+	width:190px;
+	text-align:center;
+}
+.menu_buttom
+{
+	margin:0px;
+	margin-left:8px;
+	margin-bottom:10px;
+	padding:0px;
+	background:url(../../images/menu_buttom.gif) no-repeat;
+	width:190px;
+	height:6px;
+	text-align:center;
+}
+.menu_top table td
+{
+	padding:0px;
+	text-align:center;
+}
+
+#PageMenuBar1_TreeMenu1_mainMenu
+{
+    margin:0px;
+	padding:0px;
+	text-align:left;
+}
+#PageMenuBar1_TreeMenu1_mainMenu img.icon
+{ 
+   border-style:none;
+   vertical-align:middle;
+}
+#PageMenuBar1_TreeMenu1_mainMenu img.separator
+{
+   border-style:none;
+   display:block;
+}
+#PageMenuBar1_TreeMenu1_mainMenu ul
+{
+   margin:5px !important;
+   *margin:0px !important;/*IE6-IE7 Hack*/
+   padding:0px;
+   width:180px !important;
+}
+#PageMenuBar1_TreeMenu1_mainMenu ul li
+{
+    list-style:none;
+}
+#PageMenuBar1_TreeMenu1_mainMenu ul.dynamic { z-index:1; }
+#PageMenuBar1_TreeMenu1_mainMenu a 
+{
+   text-decoration:none;
+   white-space:nowrap;
+   display:block;
+}
+#PageMenuBar1_TreeMenu1_mainMenu a.popout
+{
+   background-image:url("/WebResource.axd?d=GIsZS5MIoffHYId0EIqpXQ1QWKUQxHAmITGocpWmyJY1&t=634351093019773456");
+   background-repeat:no-repeat;
+   background-position:right center;
+   padding-right:14px;
+}
+#PageMenuBar1_TreeMenu1_mainMenu a.level2
+{
+    margin:0px;
+	padding-top:3px !important;
+	padding-left:25px !important;
+	text-decoration: none;
+    font-size: 15px;
+    color:#8a4000;
+    line-height:180%;
+    border-bottom:1px solid #ca7d33;
+	background: url(../../images/arrow_01.gif) no-repeat 5px center;
+}
+#PageMenuBar1_TreeMenu1_mainMenu a.level3
+{
+	font-size: 13px;
+	color:#5c6978;
+	line-height:180%;
+	margin:0px;
+	border-bottom:1px dotted #a6a6a6;
+	background:#FFFFFF url(../../images/arrow_02.gif) no-repeat 10px center;
+	padding:0px;
+	padding-top:3px;
+	padding-left:30px !important;
+	text-decoration: none;
+}
+#PageMenuBar1_TreeMenu1_mainMenu a.level3:hover
+{
+	color: #006fba;
+}

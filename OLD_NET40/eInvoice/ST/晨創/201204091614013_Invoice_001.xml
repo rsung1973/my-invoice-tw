@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='Big5'?>
+<InvoiceRoot>
+<Invoice>
+<InvoiceNumber>AM83510834</InvoiceNumber>
+<InvoiceDate>2012/04/09</InvoiceDate>
+<InvoiceTime>16:14:13</InvoiceTime>
+<SellerId>53147117</SellerId>
+<BuyerId>0000000000</BuyerId>
+<BuyerName>OU25</BuyerName>
+<InvoiceType>05</InvoiceType>
+<DonateMark>0</DonateMark>
+<InvoiceItem>
+<Description>BP5823#B蒂巴蕾修身輕體蕾絲無縫塑體褲 三分丈</Description>
+<Quantity>2</Quantity>
+<Unit>N/A</Unit>
+<UnitPrice>200</UnitPrice>
+<Amount>400</Amount>
+<SequenceNumber>1</SequenceNumber>
+<Remark>N/A</Remark>
+</InvoiceItem>
+<InvoiceItem>
+<Description>金額減項 34$</Description>
+<Quantity>0</Quantity>
+<Unit>N/A</Unit>
+<UnitPrice>0</UnitPrice>
+<Amount>-34</Amount>
+<SequenceNumber>2</SequenceNumber>
+<Remark>N/A</Remark>
+</InvoiceItem>
+<InvoiceItem>
+<Description>運費</Description>
+<Quantity>1</Quantity>
+<Unit>N/A</Unit>
+<UnitPrice>50</UnitPrice>
+<Amount>50</Amount>
+<SequenceNumber>3</SequenceNumber>
+<Remark>N/A</Remark>
+</InvoiceItem>
+<SalesAmount>396</SalesAmount>
+<TaxType>1</TaxType>
+<TaxAmount>20</TaxAmount>
+<TotalAmount>416</TotalAmount>
+</Invoice>
+</InvoiceRoot>

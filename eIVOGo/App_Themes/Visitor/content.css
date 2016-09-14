@@ -1,0 +1,166 @@
+.content_body {
+	margin:10px;
+	padding:0px;
+	/*font-family: Arial, Helvetica, sans-serif;
+	font-size:12px;*/
+}
+form{
+	margin:0px;
+	padding:0px;
+}
+h1 {
+	/*color:#4682B4;*/
+	color:#0F72F1;
+	font-size:11pt;
+	line-height:150%;
+	letter-spacing:3px;
+	/*background: url(../../images/icon/icon_02.gif) no-repeat left center;*/
+	padding:2px 0px 0px 10px;
+	margin:10px 0px 5px 10px;
+}
+h1 a:link,h1 a:visited{
+	font-size:11pt;
+	color:#A0522D;
+	text-decoration: none;
+	font-weight:normal;
+}
+h1 a:hover{
+	color:#D2691E;
+	text-decoration: underline;
+}
+
+h2 {
+	color:#8B4513;
+	font-size:11pt;
+	line-height:150%;
+	letter-spacing:1px;
+	margin:0px 0px 0px 0px;
+	padding-left:20px;	
+	background:url(../../images/arrow_01.gif) no-repeat left 2px;	
+}
+h3 {
+	color: #005994;
+	font-size:13px;
+	line-height:150%;
+	letter-spacing:1px;
+	font-weight:normal;
+	margin:15px 0px 0px 0px;
+}
+pre {
+	color: #666666;
+	font-size:12px;
+	line-height: 20px;
+	letter-spacing:1px;
+	padding:0 0 0 15px;
+	margin:3px 0px 10px 0px;
+}
+.date{
+	color:#666666;
+	font-size:12px;
+	line-height: 20px;
+	letter-spacing:1px;
+	margin:8px 3px 5px 0px;
+	float:right;
+}
+a:link,a:visited{
+	font-size:12px;
+	color:#0C419A;
+	text-decoration: none;
+}
+a:hover{
+	color:#0066CC;
+	text-decoration: underline;
+}
+.color_Orange{
+	color:#FF6600;
+}
+.red{color:#FF0000;}
+.blue{color:#0000CD;}
+.darkorange{color:#FF8C00;}
+.SaddleBrown{color:#8B4513;}
+.gray{
+	color:#333333;
+}
+.OldLace{
+		background-color:#FDF5E6;
+}
+.f12-gray{
+	color:#333333;
+	font-size:13px;
+	font-weight:bold;
+}
+
+
+ul{
+	color:#778899;
+	font-size:12px;
+	line-height:150%;
+	letter-spacing:1px;
+	padding:0 0 0 0px;
+}
+ol{
+	color:#4682B4;
+	font-size:12px;
+	line-height: 20px;
+	letter-spacing:1px;
+	padding:0 0 0 0px;
+}
+
+#cline01{
+	border-top:1px dotted #999999;
+	margin:0px 0 5px 0px;
+	text-align:center;
+	color:#708090;
+	font-size:12px;
+	letter-spacing:5px;
+	padding:5px 0 0 0px;
+}
+#cline01 a:,#cline01 a:active,#cline01 a:visited{
+	color:#778899;
+	text-decoration: none;
+}
+#cline01 a:hover{
+	color:#191970;
+	text-decoration: none;
+}
+.pbtn{
+	margin:5px 0 10px 0px;
+	text-align:center;
+}
+#note
+{
+	border:1px solid #DEB887;
+	padding:5px;
+	color:#666666;
+	height:150px;
+	overflow:auto;
+}
+#invoice
+{
+	margin:0px auto;
+	padding:5px;
+	font-size:12px;
+	color:#666666;
+	width:220px;
+	border:1px solid #999;
+}
+#invoice p
+{
+	margin:0px;
+	padding:0px;
+	line-height:180%;
+}
+#invoice p.idate
+{
+	margin:0px;
+	padding:0px;
+	text-align:center;
+}
+#invoice p.inote
+{
+	margin:5px 0px;
+	padding:5px 0px;
+	text-align:center;
+	border-top:1px dotted #CCC;
+	border-bottom:1px dotted #CCC;
+}

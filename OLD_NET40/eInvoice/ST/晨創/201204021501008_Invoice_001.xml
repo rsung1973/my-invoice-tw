@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='Big5'?>
+<InvoiceRoot>
+<Invoice>
+<InvoiceNumber>AM83510442</InvoiceNumber>
+<InvoiceDate>2012/04/02</InvoiceDate>
+<InvoiceTime>15:01:08</InvoiceTime>
+<SellerId>53147117</SellerId>
+<BuyerId>0000000000</BuyerId>
+<BuyerName>I2B9</BuyerName>
+<InvoiceType>05</InvoiceType>
+<DonateMark>0</DonateMark>
+<InvoiceItem>
+<Description>春夏美肌顯瘦防曬透膚絲襪 6雙299</Description>
+<Quantity>2</Quantity>
+<Unit>N/A</Unit>
+<UnitPrice>299</UnitPrice>
+<Amount>598</Amount>
+<SequenceNumber>1</SequenceNumber>
+<Remark>N/A</Remark>
+</InvoiceItem>
+<InvoiceItem>
+<Description>BB9033#B貝拉貝兒Compression康纖對策300D護理大腿襪</Description>
+<Quantity>1</Quantity>
+<Unit>N/A</Unit>
+<UnitPrice>250</UnitPrice>
+<Amount>250</Amount>
+<SequenceNumber>2</SequenceNumber>
+<Remark>N/A</Remark>
+</InvoiceItem>
+<InvoiceItem>
+<Description>BB9016#B貝拉貝兒Calorie off波浪按摩袖套</Description>
+<Quantity>1</Quantity>
+<Unit>N/A</Unit>
+<UnitPrice>110</UnitPrice>
+<Amount>110</Amount>
+<SequenceNumber>3</SequenceNumber>
+<Remark>N/A</Remark>
+</InvoiceItem>
+<InvoiceItem>
+<Description>BW5006#B蒂巴蕾 BURNer燃燒系唐辛子纖腰按摩塑腰</Description>
+<Quantity>1</Quantity>
+<Unit>N/A</Unit>
+<UnitPrice>180</UnitPrice>
+<Amount>180</Amount>
+<SequenceNumber>4</SequenceNumber>
+<Remark>N/A</Remark>
+</InvoiceItem>
+<InvoiceItem>
+<Description>金額減項 81$</Description>
+<Quantity>0</Quantity>
+<Unit>N/A</Unit>
+<UnitPrice>0</UnitPrice>
+<Amount>-81</Amount>
+<SequenceNumber>5</SequenceNumber>
+<Remark>N/A</Remark>
+</InvoiceItem>
+<SalesAmount>1007</SalesAmount>
+<TaxType>1</TaxType>
+<TaxAmount>50</TaxAmount>
+<TotalAmount>1057</TotalAmount>
+</Invoice>
+</InvoiceRoot>

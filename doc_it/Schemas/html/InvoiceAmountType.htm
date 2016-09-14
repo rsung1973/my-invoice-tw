@@ -1,0 +1,395 @@
+<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <title>Table Details</title>
+    <LINK HREF="RadGrid_Office2007.css" REL="stylesheet" TYPE="text/css">
+    <LINK HREF="RadTabStrip.css" REL="stylesheet" TYPE="text/css">
+    <LINK HREF="RadTabStrip_Office2007.css" REL="stylesheet" TYPE="text/css">
+  </head>
+  <body class="RadGrid RadGrid_Office2007">
+    <table cellspacing="0" cellpadding="0" style="width:100%">
+      <tr>
+        <td>
+          <div id="RadTabStrip1" class="RadTabStrip RadTabStrip_Office2007 RadTabStripTop_Office2007">
+            <div class="rtsLevel rtsLevel1">
+              <ul class="rtsUL">
+                <li class="rtsLI rtsFirst rtsLast"><a class="rtsLink rtsSelected" href="#"><span class="rtsOut"><span class="rtsIn"><span class="rtsTxt"><font style="font-weight:bold" size="2.5px">Table Details</font></span></span></span></a></li>
+              </ul>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-top:solid 0px #8db2e3; border-right:solid 3px #8db2e3; border-bottom:solid 1px #8db2e3; border-left:solid 1px #8db2e3; padding:10px;">
+          <font style="font-weight:bold" size="2px">Description</font>
+          <hr class="RadGrid RadGrid_Office2007">
+          <font style="font-weight:normal" size="2px">發票消售金額明細檔</font><br><br><font style="font-weight:bold" size="2px">Table Properties</font>
+          <hr class="RadGrid RadGrid_Office2007">
+          <div class="RadGrid RadGrid_Office2007" style="width:30%;">
+            <table class="MasterTable_Office2007" cellspacing="0" style="width:100%;border-collapse:collapse;table-layout:auto;empty-cells:show;" id="ListOfTables">
+              <thead>
+                <tr class="GridRow_Office2007">
+                  <th class="GridHeader_Office2007" width="20%">Name</th>
+                  <th class="GridHeader_Office2007" width="80%">Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="GridRow_Office2007">
+                  <td>Description</td>
+                  <td>發票消售金額明細檔</td>
+                </tr>
+                <tr class="GridRow_Office2007">
+                  <td>Name</td>
+                  <td>InvoiceAmountType</td>
+                </tr>
+                <tr class="GridRow_Office2007">
+                  <td>Schema</td>
+                  <td>dbo</td>
+                </tr>
+                <tr class="GridRow_Office2007">
+                  <td>Data Size</td>
+                  <td>16 KB</td>
+                </tr>
+                <tr class="GridRow_Office2007">
+                  <td>Index Size</td>
+                  <td>16 KB</td>
+                </tr>
+                <tr class="GridRow_Office2007">
+                  <td>Rows</td>
+                  <td>71         </td>
+                </tr>
+                <tr class="GridRow_Office2007">
+                  <td>Columns</td>
+                  <td>12</td>
+                </tr>
+              </tbody>
+            </table>
+          </div><br><font style="font-weight:bold" size="2px">Columns</font>
+          <hr class="RadGrid RadGrid_Office2007">
+          <div class="RadGrid RadGrid_Office2007">
+            <table class="MasterTable_Office2007" cellspacing="0" style="width:100%;border-collapse:collapse;table-layout:auto;empty-cells:show;" id="ListOfTables">
+              <thead>
+                <tr class="GridRow_Office2007">
+                  <th class="GridHeader_Office2007" width="10%">Name</th>
+                  <th class="GridHeader_Office2007" width="35%">Description</th>
+                  <th class="GridHeader_Office2007" width="07%">Ordinal Position</th>
+                  <th class="GridHeader_Office2007" width="04%">Nullable</th>
+                  <th class="GridHeader_Office2007" width="06%">Data Type</th>
+                  <th class="GridHeader_Office2007" width="06%">Max Length</th>
+                  <th class="GridHeader_Office2007" width="06%">Octet Length</th>
+                  <th class="GridHeader_Office2007" width="05%">Sparse</th>
+                  <th class="GridHeader_Office2007" width="05%">Column Set</th>
+                  <th class="GridHeader_Office2007" width="05%">Filestream</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="GridRow_Office2007">
+                  <td>InvoiceID</td>
+                  <td>
+                               
+                            </td>
+                  <td>1</td>
+                  <td>NO</td>
+                  <td>int</td>
+                  <td>
+                               
+                            </td>
+                  <td>
+                               
+                            </td>
+                  <td>false</td>
+                  <td>false</td>
+                  <td>false</td>
+                </tr>
+                <tr class="GridRow_Office2007">
+                  <td>TaxType</td>
+                  <td>課稅別
+1：應稅
+2：零稅率
+3：免稅
+9：混合應稅與免稅或零稅率 (限收銀機發票無法分辨時使用)</td>
+                  <td>2</td>
+                  <td>YES</td>
+                  <td>tinyint</td>
+                  <td>
+                               
+                            </td>
+                  <td>
+                               
+                            </td>
+                  <td>false</td>
+                  <td>false</td>
+                  <td>false</td>
+                </tr>
+                <tr class="GridRow_Office2007">
+                  <td>SalesAmount</td>
+                  <td>應稅銷售額合計(新台幣)</td>
+                  <td>3</td>
+                  <td>YES</td>
+                  <td>decimal</td>
+                  <td>
+                               
+                            </td>
+                  <td>
+                               
+                            </td>
+                  <td>false</td>
+                  <td>false</td>
+                  <td>false</td>
+                </tr>
+                <tr class="GridRow_Office2007">
+                  <td>TaxAmount</td>
+                  <td>營業稅額</td>
+                  <td>4</td>
+                  <td>YES</td>
+                  <td>decimal</td>
+                  <td>
+                               
+                            </td>
+                  <td>
+                               
+                            </td>
+                  <td>false</td>
+                  <td>false</td>
+                  <td>false</td>
+                </tr>
+                <tr class="GridRow_Office2007">
+                  <td>TaxRate</td>
+                  <td>稅率</td>
+                  <td>5</td>
+                  <td>YES</td>
+                  <td>decimal</td>
+                  <td>
+                               
+                            </td>
+                  <td>
+                               
+                            </td>
+                  <td>false</td>
+                  <td>false</td>
+                  <td>false</td>
+                </tr>
+                <tr class="GridRow_Office2007">
+                  <td>TotalAmount</td>
+                  <td>總計
+整數
+(應稅銷售額合計+免稅銷售額合計+零稅率銷售額合計+營業稅額=此總計欄位) ，可為負數</td>
+                  <td>6</td>
+                  <td>YES</td>
+                  <td>decimal</td>
+                  <td>
+                               
+                            </td>
+                  <td>
+                               
+                            </td>
+                  <td>false</td>
+                  <td>false</td>
+                  <td>false</td>
+                </tr>
+                <tr class="GridRow_Office2007">
+                  <td>TotalAmountInChinese</td>
+                  <td>中文國字大寫金額</td>
+                  <td>7</td>
+                  <td>YES</td>
+                  <td>nvarchar</td>
+                  <td>32</td>
+                  <td>64</td>
+                  <td>false</td>
+                  <td>false</td>
+                  <td>false</td>
+                </tr>
+                <tr class="GridRow_Office2007">
+                  <td>DiscountAmount</td>
+                  <td>扣抵金額</td>
+                  <td>8</td>
+                  <td>YES</td>
+                  <td>decimal</td>
+                  <td>
+                               
+                            </td>
+                  <td>
+                               
+                            </td>
+                  <td>false</td>
+                  <td>false</td>
+                  <td>false</td>
+                </tr>
+                <tr class="GridRow_Office2007">
+                  <td>Adjustment</td>
+                  <td>角分調整</td>
+                  <td>9</td>
+                  <td>YES</td>
+                  <td>decimal</td>
+                  <td>
+                               
+                            </td>
+                  <td>
+                               
+                            </td>
+                  <td>false</td>
+                  <td>false</td>
+                  <td>false</td>
+                </tr>
+                <tr class="GridRow_Office2007">
+                  <td>OriginalCurrencyAmount</td>
+                  <td>原幣金額</td>
+                  <td>10</td>
+                  <td>YES</td>
+                  <td>decimal</td>
+                  <td>
+                               
+                            </td>
+                  <td>
+                               
+                            </td>
+                  <td>false</td>
+                  <td>false</td>
+                  <td>false</td>
+                </tr>
+                <tr class="GridRow_Office2007">
+                  <td>ExchangeRate</td>
+                  <td>匯率</td>
+                  <td>11</td>
+                  <td>YES</td>
+                  <td>decimal</td>
+                  <td>
+                               
+                            </td>
+                  <td>
+                               
+                            </td>
+                  <td>false</td>
+                  <td>false</td>
+                  <td>false</td>
+                </tr>
+                <tr class="GridRow_Office2007">
+                  <td>CurrencyID</td>
+                  <td>
+                               
+                            </td>
+                  <td>12</td>
+                  <td>YES</td>
+                  <td>int</td>
+                  <td>
+                               
+                            </td>
+                  <td>
+                               
+                            </td>
+                  <td>false</td>
+                  <td>false</td>
+                  <td>false</td>
+                </tr>
+              </tbody>
+            </table>
+          </div><br><font style="font-weight:bold" size="2px">Indexes</font>
+          <hr class="RadGrid RadGrid_Office2007">
+          <div class="RadGrid RadGrid_Office2007" style="width:50%;">
+            <table class="MasterTable_Office2007" cellspacing="0" style="width:100%;border-collapse:collapse;table-layout:auto;empty-cells:show;" id="ListOfTables">
+              <thead>
+                <tr class="GridRow_Office2007">
+                  <th class="GridHeader_Office2007" width="55%">Name</th>
+                  <th class="GridHeader_Office2007" width="30%">Column</th>
+                  <th class="GridHeader_Office2007" width="15%">Type</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="GridRow_Office2007">
+                  <td>PK_InvoiceAmountType</td>
+                  <td> InvoiceID</td>
+                  <td>CLUSTERED</td>
+                </tr>
+              </tbody>
+            </table>
+          </div><br><font style="font-weight:bold" size="2px">Foreign Keys</font>
+          <hr class="RadGrid RadGrid_Office2007">
+          <div class="RadGrid RadGrid_Office2007" style="width:50%;">
+            <table class="MasterTable_Office2007" cellspacing="0" style="width:100%;border-collapse:collapse;table-layout:auto;empty-cells:show;" id="ListOfTables">
+              <thead>
+                <tr class="GridRow_Office2007">
+                  <th class="GridHeader_Office2007" width="50%">Name</th>
+                  <th class="GridHeader_Office2007" width="25%">Is Defferrable</th>
+                  <th class="GridHeader_Office2007" width="25%">Initiially Defferred</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="GridRow_Office2007">
+                  <td>FK_InvoiceAmountType_CurrencyType</td>
+                  <td>NO</td>
+                  <td>NO</td>
+                </tr>
+                <tr class="GridRow_Office2007">
+                  <td>FK_InvoiceAmountType_InvoiceItem</td>
+                  <td>NO</td>
+                  <td>NO</td>
+                </tr>
+              </tbody>
+            </table>
+          </div><br><font style="font-weight:bold" size="2px">SQL</font>
+          <hr class="RadGrid RadGrid_Office2007">
+          <div class="RadGrid RadGrid_Office2007" style="width:100%;">
+            <table class="MasterTable_Office2007" cellspacing="0" style="width:100%;border-collapse:collapse;table-layout:auto;empty-cells:show;" id="ListOfTables">
+              <thead>
+                <tr class="GridRow_Office2007">
+                  <th class="GridHeader_Office2007" width="100%">Creation Script</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="GridRow_Office2007">
+                  <td>
+                    <pre>SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+CREATE TABLE [dbo].[InvoiceAmountType](
+	[InvoiceID] [int] NOT NULL,
+	[TaxType] [tinyint] NULL,
+	[SalesAmount] [decimal](18, 5) NULL,
+	[TaxAmount] [decimal](18, 5) NULL,
+	[TaxRate] [decimal](18, 5) NULL,
+	[TotalAmount] [decimal](18, 5) NULL,
+	[TotalAmountInChinese] [nvarchar](32) COLLATE Chinese_Taiwan_Stroke_CI_AS NULL,
+	[DiscountAmount] [decimal](18, 5) NULL,
+	[Adjustment] [decimal](18, 5) NULL,
+	[OriginalCurrencyAmount] [decimal](18, 5) NULL,
+	[ExchangeRate] [decimal](18, 5) NULL,
+	[CurrencyID] [int] NULL
+) ON [PRIMARY]
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'課稅別
+1：應稅
+2：零稅率
+3：免稅
+9：混合應稅與免稅或零稅率 (限收銀機發票無法分辨時使用)' , 
+	@level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'InvoiceAmountType', @level2type=N'COLUMN',@level2name=N'TaxType'
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'應稅銷售額合計(新台幣)' , 
+	@level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'InvoiceAmountType', @level2type=N'COLUMN',@level2name=N'SalesAmount'
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'營業稅額' , 
+	@level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'InvoiceAmountType', @level2type=N'COLUMN',@level2name=N'TaxAmount'
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'稅率' , 
+	@level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'InvoiceAmountType', @level2type=N'COLUMN',@level2name=N'TaxRate'
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'總計
+整數
+(應稅銷售額合計+免稅銷售額合計+零稅率銷售額合計+營業稅額=此總計欄位) ，可為負數' , 
+	@level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'InvoiceAmountType', @level2type=N'COLUMN',@level2name=N'TotalAmount'
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'中文國字大寫金額' , 
+	@level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'InvoiceAmountType', @level2type=N'COLUMN',@level2name=N'TotalAmountInChinese'
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'扣抵金額' , 
+	@level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'InvoiceAmountType', @level2type=N'COLUMN',@level2name=N'DiscountAmount'
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'角分調整' , 
+	@level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'InvoiceAmountType', @level2type=N'COLUMN',@level2name=N'Adjustment'
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'原幣金額' , 
+	@level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'InvoiceAmountType', @level2type=N'COLUMN',@level2name=N'OriginalCurrencyAmount'
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'匯率' , 
+	@level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'InvoiceAmountType', @level2type=N'COLUMN',@level2name=N'ExchangeRate'
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'發票消售金額明細檔' , 
+	@level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'InvoiceAmountType'</pre>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

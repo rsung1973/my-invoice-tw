@@ -1,0 +1,273 @@
+<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <title>View Details</title>
+    <LINK HREF="RadGrid_Office2007.css" REL="stylesheet" TYPE="text/css">
+    <LINK HREF="RadTabStrip.css" REL="stylesheet" TYPE="text/css">
+    <LINK HREF="RadTabStrip_Office2007.css" REL="stylesheet" TYPE="text/css">
+  </head>
+  <body class="RadGrid RadGrid_Office2007">
+    <table cellspacing="0" cellpadding="0" style="width:100%">
+      <tr>
+        <td>
+          <div id="RadTabStrip1" class="RadTabStrip RadTabStrip_Office2007 RadTabStripTop_Office2007">
+            <div class="rtsLevel rtsLevel1">
+              <ul class="rtsUL">
+                <li class="rtsLI rtsFirst rtsLast"><a class="rtsLink rtsSelected" href="#"><span class="rtsOut"><span class="rtsIn"><span class="rtsTxt"><font style="font-weight:bold" size="2.5px">View Details</font></span></span></span></a></li>
+              </ul>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-top:solid 0px #8db2e3; border-right:solid 3px #8db2e3; border-bottom:solid 1px #8db2e3; border-left:solid 1px #8db2e3; padding:10px;">
+          <font style="font-weight:bold" size="2px">Description</font>
+          <hr class="RadGrid RadGrid_Office2007">
+          <font style="font-weight:normal" size="2px">
+          </font><br><br><font style="font-weight:bold" size="2px">View Properties</font>
+          <hr class="RadGrid RadGrid_Office2007">
+          <div class="RadGrid RadGrid_Office2007" style="width:30%;">
+            <table class="MasterTable_Office2007" cellspacing="0" style="width:100%;border-collapse:collapse;table-layout:auto;empty-cells:show;" id="ListOfTables">
+              <thead>
+                <tr class="GridRow_Office2007">
+                  <th class="GridHeader_Office2007" width="20%">Name</th>
+                  <th class="GridHeader_Office2007" width="80%">Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="GridRow_Office2007">
+                  <td>Description</td>
+                  <td>
+                                 
+                              </td>
+                </tr>
+                <tr class="GridRow_Office2007">
+                  <td>Name</td>
+                  <td>viewAgencyInvoGroup</td>
+                </tr>
+                <tr class="GridRow_Office2007">
+                  <td>Schema</td>
+                  <td>dbo</td>
+                </tr>
+              </tbody>
+            </table>
+          </div><br><font style="font-weight:bold" size="2px">Resultset(s)</font>
+          <hr class="RadGrid RadGrid_Office2007">
+          <div class="RadGrid RadGrid_Office2007">
+            <table class="MasterTable_Office2007" cellspacing="0" style="width:100%;border-collapse:collapse;table-layout:auto;empty-cells:show;" id="ListOfTables">
+              <thead>
+                <tr class="GridRow_Office2007">
+                  <th class="GridHeader_Office2007" width="10%">Name</th>
+                  <th class="GridHeader_Office2007" width="35%">Description</th>
+                  <th class="GridHeader_Office2007" width="07%">Ordinal Position</th>
+                  <th class="GridHeader_Office2007" width="04%">Nullable</th>
+                  <th class="GridHeader_Office2007" width="06%">Data Type</th>
+                  <th class="GridHeader_Office2007" width="06%">Max Length</th>
+                  <th class="GridHeader_Office2007" width="06%">Octet Length</th>
+                  <th class="GridHeader_Office2007" width="05%">Sparse</th>
+                  <th class="GridHeader_Office2007" width="05%">Column Set</th>
+                  <th class="GridHeader_Office2007" width="05%">Filestream</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="GridRow_Office2007">
+                  <td>AgencyCode</td>
+                  <td>
+                                 
+                              </td>
+                  <td>1</td>
+                  <td>YES</td>
+                  <td>nvarchar</td>
+                  <td>64</td>
+                  <td>128</td>
+                  <td>false</td>
+                  <td>false</td>
+                  <td>false</td>
+                </tr>
+                <tr class="GridRow_Office2007">
+                  <td>WAName</td>
+                  <td>
+                                 
+                              </td>
+                  <td>2</td>
+                  <td>YES</td>
+                  <td>nvarchar</td>
+                  <td>128</td>
+                  <td>256</td>
+                  <td>false</td>
+                  <td>false</td>
+                  <td>false</td>
+                </tr>
+                <tr class="GridRow_Office2007">
+                  <td>InvoCount</td>
+                  <td>
+                                 
+                              </td>
+                  <td>3</td>
+                  <td>YES</td>
+                  <td>int</td>
+                  <td>
+                                 
+                              </td>
+                  <td>
+                                 
+                              </td>
+                  <td>false</td>
+                  <td>false</td>
+                  <td>false</td>
+                </tr>
+              </tbody>
+            </table>
+          </div><br><font style="font-weight:bold" size="2px">SQL</font>
+          <hr class="RadGrid RadGrid_Office2007">
+          <div class="RadGrid RadGrid_Office2007" style="width:100%;">
+            <table class="MasterTable_Office2007" cellspacing="0" style="width:100%;border-collapse:collapse;table-layout:auto;empty-cells:show;" id="ListOfTables">
+              <thead>
+                <tr class="GridRow_Office2007">
+                  <th class="GridHeader_Office2007" width="100%">Creation Script</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="GridRow_Office2007">
+                  <td>
+                    <pre>SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+CREATE VIEW [dbo].[viewAgencyInvoGroup]
+AS
+SELECT     AgencyCode, WAName, COUNT(No) AS InvoCount
+FROM         dbo.viewDonationList
+GROUP BY AgencyCode, WAName
+
+
+EXEC sys.sp_addextendedproperty @name=N'MS_DiagramPane1', @value=N'[0E232FF0-B466-11cf-A24F-00AA00A3EFFF, 1.00]
+Begin DesignProperties = 
+   Begin PaneConfigurations = 
+      Begin PaneConfiguration = 0
+         NumPanes = 4
+         Configuration = "(H (1[40] 4[20] 2[20] 3) )"
+      End
+      Begin PaneConfiguration = 1
+         NumPanes = 3
+         Configuration = "(H (1 [50] 4 [25] 3))"
+      End
+      Begin PaneConfiguration = 2
+         NumPanes = 3
+         Configuration = "(H (1 [50] 2 [25] 3))"
+      End
+      Begin PaneConfiguration = 3
+         NumPanes = 3
+         Configuration = "(H (4 [30] 2 [40] 3))"
+      End
+      Begin PaneConfiguration = 4
+         NumPanes = 2
+         Configuration = "(H (1 [56] 3))"
+      End
+      Begin PaneConfiguration = 5
+         NumPanes = 2
+         Configuration = "(H (2 [66] 3))"
+      End
+      Begin PaneConfiguration = 6
+         NumPanes = 2
+         Configuration = "(H (4 [50] 3))"
+      End
+      Begin PaneConfiguration = 7
+         NumPanes = 1
+         Configuration = "(V (3))"
+      End
+      Begin PaneConfiguration = 8
+         NumPanes = 3
+         Configuration = "(H (1[56] 4[18] 2) )"
+      End
+      Begin PaneConfiguration = 9
+         NumPanes = 2
+         Configuration = "(H (1 [75] 4))"
+      End
+      Begin PaneConfiguration = 10
+         NumPanes = 2
+         Configuration = "(H (1[66] 2) )"
+      End
+      Begin PaneConfiguration = 11
+         NumPanes = 2
+         Configuration = "(H (4 [60] 2))"
+      End
+      Begin PaneConfiguration = 12
+         NumPanes = 1
+         Configuration = "(H (1) )"
+      End
+      Begin PaneConfiguration = 13
+         NumPanes = 1
+         Configuration = "(V (4))"
+      End
+      Begin PaneConfiguration = 14
+         NumPanes = 1
+         Configuration = "(V (2))"
+      End
+      ActivePaneConfig = 0
+   End
+   Begin DiagramPane = 
+      Begin Origin = 
+         Top = 0
+         Left = 0
+      End
+      Begin Tables = 
+         Begin Table = "viewDonationList"
+            Begin Extent = 
+               Top = 6
+               Left = 38
+               Bottom = 195
+               Right = 192
+            End
+            DisplayFlags = 280
+            TopColumn = 0
+         End
+      End
+   End
+   Begin SQLPane = 
+   End
+   Begin DataPane = 
+      Begin ParameterDefaults = ""
+      End
+      Begin ColumnWidths = 9
+         Width = 284
+         Width = 1500
+         Width = 1500
+         Width = 1500
+         Width = 1500
+         Width = 1500
+         Width = 1500
+         Width = 1500
+         Width = 1500
+      End
+   End
+   Begin CriteriaPane = 
+      Begin ColumnWidths = 12
+         Column = 1440
+         Alias = 900
+         Table = 1170
+         Output = 720
+         Append = 1400
+         NewValue = 1170
+         SortType = 1350
+         SortOrder = 1410
+         GroupBy = 1350
+         Filter = 1350
+         Or = 1350
+         Or = 1350
+         Or = 1350
+      End
+   End
+End
+' , 
+	@level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'VIEW',@level1name=N'viewAgencyInvoGroup'
+EXEC sys.sp_addextendedproperty @name=N'MS_DiagramPaneCount', @value=1 , 
+	@level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'VIEW',@level1name=N'viewAgencyInvoGroup'</pre>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

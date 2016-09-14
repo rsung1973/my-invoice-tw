@@ -1,0 +1,6 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="GoogleInvoiceCSVList.ascx.cs" Inherits="eIVOGo.Module.EIVO.Export.GoogleInvoiceCSVList" %>
+<%@ Import Namespace="Model.InvoiceManagement" %><%@ Import Namespace="Model.DataEntity" %>序號,Google ID,發票號碼,買受人名稱,對方統編,單價(未稅),稅額,含稅金額,匯入狀態
+<asp:Repeater ID="rpExcel" runat="server">
+<ItemTemplate><%# ((GoogleInvoiceItem)Container.DataItem).Columns[0] %>,<%# ((GoogleInvoiceItem)Container.DataItem).Invoice.InvoiceBuyer.CustomerID %>,<%# ((GoogleInvoiceItem)Container.DataItem).Invoice.TrackCode + ((GoogleInvoiceItem)Container.DataItem).Invoice.No%>,<%# ((GoogleInvoiceItem)Container.DataItem).Invoice.InvoiceBuyer.CustomerName %>,<%# ((GoogleInvoiceItem)Container.DataItem).Invoice.InvoiceBuyer.IsB2C() ? "N/A" : ((GoogleInvoiceItem)Container.DataItem).Invoice.InvoiceBuyer.ReceiptNo %>,<%# ((GoogleInvoiceItem)Container.DataItem).Invoice.InvoiceAmountType.SalesAmount %>,<%# ((GoogleInvoiceItem)Container.DataItem).Invoice.InvoiceAmountType.TaxAmount %>,<%# ((GoogleInvoiceItem)Container.DataItem).Invoice.InvoiceAmountType.TotalAmount %>,<%# ((GoogleInvoiceItem)Container.DataItem).UploadStatus.ToString() %>
+</ItemTemplate>
+</asp:Repeater>

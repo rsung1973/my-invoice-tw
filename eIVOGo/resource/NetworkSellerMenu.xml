@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="big5"?>
+<menuItem value="" url="">
+  <menuItem value="帳號管理" url="~/SAM/EditMyself.aspx">
+    <workItem value="" url="~/SAM/register_msg.aspx" />
+    <workItem value="" url="~/MainPage.aspx" />
+  </menuItem>
+  <menuItem value="查詢/列印中獎清冊" url="~/Visitor/queryBonus.aspx" />
+  <workItem value="首頁" url="~/MainPage.aspx" />
+  <workItem value="站務新聞" url="~/SAM/publish_system_event_page.aspx" />    
+</menuItem>

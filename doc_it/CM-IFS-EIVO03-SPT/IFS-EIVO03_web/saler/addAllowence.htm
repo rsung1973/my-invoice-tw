@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=big5" />
+<link href="css/content.css" rel="stylesheet" type="text/css" />
+<link href="css/table.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="javascript/join.js"></script>
+<script language="JavaScript" src="javascript/checkAll.js"></script>
+
+<title>電子發票系統</title>
+</head>
+
+<body>
+<!--路徑名稱-->
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="30"><img src="images/path_left.gif" alt="" width="30" height="29" /></td>
+    <td bgcolor="#ecedd5">首頁 > 開立折讓</td>
+    <td width="18"><img src="images/path_right.gif" alt="" width="18" height="29" /></td>
+  </tr>
+</table>
+<!--交易畫面標題-->
+<h1><img src="images/icon_search.gif" width="29" height="28" border="0" align="absmiddle" />開立折讓</h1>
+<div id="border_gray">
+<!--表格 開始-->
+<form name="dataList" action="">
+  <table width="100%" border="0" cellpadding="0" cellspacing="0" id="table01">
+    <tr>
+      <th width="10" align="center" scope="col"><INPUT name="toggleAll" type="checkbox" id="toggleAll2" title="選擇或取消選擇全部資料"   onclick="ToggleAll(this); "></th>
+      <th width="40" nowrap="nowrap" scope="col">序號</th>
+      <th scope="col">品名</th>
+      <th scope="col">數量</th>
+      <th scope="col">單位</th>
+      <th scope="col">單價</th>
+      <th scope="col">金額</th>
+      <th scope="col">備註</th>
+    </tr>
+    <tr>
+      <td width="10" align="center"><INPUT name="Mid" type="checkbox" id="Mid"  onclick="Select1(this)" value="111"></td>
+      <td width="40" align="center" nowrap="nowrap">1</td>
+      <td>小墜-四面(銀)</td>
+      <td align="center">1</td>
+      <td align="center">個</td>
+      <td align="right">1,380.00</td>
+      <td align="right">1,380.00</td>
+      <td></td>
+    </tr>
+    <tr class="OldLace">
+      <td width="10" align="center"><INPUT name="Mid" type="checkbox" id="Mid"  onclick="Select1(this)" value="111"></td>
+      <td width="40" align="center" nowrap="nowrap">2</td>
+      <td>原住民娃娃吊飾</td>
+      <td align="center">4</td>
+      <td align="center">個</td>
+      <td align="right">60.00</td>
+      <td align="right">240.00</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td width="10" align="center"><INPUT name="Mid" type="checkbox" id="Mid"  onclick="Select1(this)" value="111"></td>
+      <td width="40" align="center" nowrap="nowrap">3</td>
+      <td>台灣盒-芒果干</td>
+      <td align="center">1</td>
+      <td align="center">個</td>
+      <td align="right">150.00</td>
+      <td align="right">150.00</td>
+      <td></td>
+    </tr>
+    <tr class="OldLace">
+      <td width="10" align="center"><INPUT name="Mid" type="checkbox" id="Mid"  onclick="Select1(this)" value="111"></td>
+      <td width="40" align="center" nowrap="nowrap">4</td>
+      <td>梅花黨章</td>
+      <td align="center">1</td>
+      <td align="center">個</td>
+      <td align="right">70.00</td>
+      <td align="right">70.00</td>
+      <td></td>
+    </tr>
+</table>
+</form>
+<br />
+<table width="100%" border="0" cellpadding="0" cellspacing="0" id="left_title">
+  <tr>
+    <th class="Head_style_a">已開立電子折讓單</th>
+  </tr>
+  <tr>
+    <td><img src="images/paper.gif" width="20" height="25" border="0" align="absmiddle" /> <a href="cancelAllowencePreview.htm" target="_blank">74423555</a></td>
+  </tr>
+  <tr>
+    <td><img src="images/paper.gif" width="20" height="25" border="0" align="absmiddle" /> <a href="cancelAllowencePreview.htm" target="_blank">74423556</a></td>
+  </tr>
+  </table>
+</div>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="Bargain_btn"><span class="table-title">
+      <input name="closewin" type="button" class="btn" value="開立折讓" onclick="window.location.href='createAllowence.htm'" />
+    </span></td>
+  </tr>
+</table>
+</body>
+</html>

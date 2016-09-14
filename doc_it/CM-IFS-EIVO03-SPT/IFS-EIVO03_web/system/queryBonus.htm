@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=big5" />
+<link href="css/content.css" rel="stylesheet" type="text/css" />
+<link href="css/table.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="javascript/join.js"></script>
+<title>電子發票系統</title>
+</head>
+
+<body>
+<!--路徑名稱-->
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="30"><img src="images/path_left.gif" alt="" width="30" height="29" /></td>
+    <td bgcolor="#ecedd5">首頁 > 中獎電子發票列印與郵寄</td>
+    <td width="18"><img src="images/path_right.gif" alt="" width="18" height="29" /></td>
+  </tr>
+</table>
+<!--交易畫面標題-->
+<h1><img src="images/icon_search.gif" width="29" height="28" border="0" align="absmiddle" />中獎電子發票列印與郵寄</h1>
+<div id="border_gray">
+<!--表格 開始-->
+<form name="addForm">
+<table width="100%" border="0" cellpadding="0" cellspacing="0" id="left_title">
+  <tr>
+    <th colspan="2" class="Head_style_a">查詢條件</th>
+    </tr>
+  <tr>
+    <th width="20%">日期區間</th>
+    <td class="tdleft">
+      自&nbsp;<input readonly name="appstartday" type="text" class="textfield" size="10" />
+      &nbsp;<img src="images/date.gif" width="16" height="15" border="0" align="absmiddle" style="cursor:hand;" onClick=calender(addForm.appstartday) />
+      至&nbsp;<input readonly name="appendday" type="text" class="textfield" size="10" />
+      &nbsp;<img src="images/date.gif" width="16" height="15" border="0" align="absmiddle" style="cursor:hand;" onClick=calender(addForm.appendday) />
+      </td>
+  </tr>
+  <tr>
+    <th>統編</th>
+    <td class="tdleft"><select name="ctl00" class="textfield">
+      <option selected="selected" value="全部">全部</option>
+      <option value="05714195">05714195 取絕未來實業有限公司西門門市</option>
+      <option value="26305533">26305533 蔣堂物賞</option>
+      <option value="70762419">70762419 網優商店</option>
+      <option value="87654321">87654321 測試商店</option>
+    </select></td>
+  </tr>
+  <tr>
+    <th>顯示捐贈</th>
+    <td class="tdleft">
+    <input type="radio" value="V1" checked="checked" name="R3" /> 
+      全部（含未捐贈）&nbsp;
+      <input type="radio" value="V1" name="R3" /> 
+      只顯示捐贈發票
+    </td>
+  </tr>
+</table>
+</form>
+<!--表格 結束-->
+</div>
+<!--按鈕-->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="Bargain_btn"><input type="button" name="Submit" class="btn" value="開始查詢" onClick="window.location='queryBonus_list.htm'" /></td>
+  </tr>
+</table>
+</body>
+</html>

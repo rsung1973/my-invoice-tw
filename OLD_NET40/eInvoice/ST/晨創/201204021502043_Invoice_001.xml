@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='Big5'?>
+<InvoiceRoot>
+<Invoice>
+<InvoiceNumber>AM83510443</InvoiceNumber>
+<InvoiceDate>2012/04/02</InvoiceDate>
+<InvoiceTime>15:02:43</InvoiceTime>
+<SellerId>53147117</SellerId>
+<BuyerId>0000000000</BuyerId>
+<BuyerName>E5HA</BuyerName>
+<InvoiceType>05</InvoiceType>
+<DonateMark>0</DonateMark>
+<InvoiceItem>
+<Description>HF2429 L#B</Description>
+<Quantity>1</Quantity>
+<Unit>N/A</Unit>
+<UnitPrice>500</UnitPrice>
+<Amount>500</Amount>
+<SequenceNumber>1</SequenceNumber>
+<Remark>N/A</Remark>
+</InvoiceItem>
+<InvoiceItem>
+<Description>運費</Description>
+<Quantity>1</Quantity>
+<Unit>N/A</Unit>
+<UnitPrice>50</UnitPrice>
+<Amount>50</Amount>
+<SequenceNumber>2</SequenceNumber>
+<Remark>N/A</Remark>
+</InvoiceItem>
+<InvoiceItem>
+<Description>金額減項 10$</Description>
+<Quantity>0</Quantity>
+<Unit>N/A</Unit>
+<UnitPrice>0</UnitPrice>
+<Amount>-10</Amount>
+<SequenceNumber>3</SequenceNumber>
+<Remark>N/A</Remark>
+</InvoiceItem>
+<SalesAmount>514</SalesAmount>
+<TaxType>1</TaxType>
+<TaxAmount>26</TaxAmount>
+<TotalAmount>540</TotalAmount>
+</Invoice>
+</InvoiceRoot>

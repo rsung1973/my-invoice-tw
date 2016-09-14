@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="big5"?>
+<menuItem value="" url="">
+  <menuItem value="《 首頁" url="~/page/main_page.aspx">
+    <workItem value="" url="~/sam/view_system_event_page.aspx" />
+    <workItem value="" url="~/arm/inbox_notification_page.aspx" />
+  </menuItem>
+  <menuItem value="《 會員管理" url="">
+    <menuItem value="會員使用者資料" url="">
+      <menuItem value="人員資料維護" url="~/sam/maintain_member_user_page.aspx" />
+    </menuItem>
+    <menuItem value="個人設定" url="~/page/main_page.aspx?showUserProfile">
+    </menuItem>
+  </menuItem>
+</menuItem>

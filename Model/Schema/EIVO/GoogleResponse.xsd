@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="Automation">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" maxOccurs="unbounded" name="Item">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Status" type="xs:int"></xs:element>
+                            <xs:element name="Description" type="xs:string"></xs:element>
+                            <xs:element name="Invoice" minOccurs="0" maxOccurs="1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="SellerId" type="xs:string"/>
+                                        <xs:element name="InvoiceNumber" type="xs:string"/>
+                                        <xs:element name="DataNumber" type="xs:string"/>
+                                        <xs:element name="InvoiceDate" type="xs:string"/>
+                                        <xs:element name="InvoiceTime" type="xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="CancelInvoice" minOccurs="0" maxOccurs="1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="SellerId" type="xs:string"/>
+                                        <xs:element name="CancelInvoiceNumber" type="xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Allowance" minOccurs="0" maxOccurs="1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="SellerId" type="xs:string"/>
+                                        <xs:element name="AllowanceNumber" type="xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="CancelAllowance" minOccurs="0" maxOccurs="1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="SellerId" type="xs:string"/>
+                                        <xs:element name="CancelAllowanceNumber" type="xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Attachment" minOccurs="0" maxOccurs="1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="FileName" type="xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="C0401" minOccurs="0" maxOccurs="1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="FileName" type="xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="C0501" minOccurs="0" maxOccurs="1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="FileName" type="xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="BranchTrack" minOccurs="0" maxOccurs="1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="SellerId" type="xs:string"/>
+                                        <xs:element name="Year" type="xs:int"/>
+                                        <xs:element name="PeriodNo" type="xs:string"/>
+                                        <xs:element name="TrackCode" type="xs:string"/>
+                                        <xs:element name="InvoiceBeginNo" type="xs:string"/>
+                                        <xs:element name="InvoiceEndNo" type="xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element maxOccurs="1" name="InvoiceEnterprise" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="SellerId" type="xs:string" />
+                                        <xs:element name="SellerName"  type="xs:string"/>
+                                        <xs:element name="Address" type="xs:string" />
+                                        <xs:element name="TEL" type="xs:string" />
+                                        <xs:element name="Email" type="xs:string" />
+                                        <xs:element name="ContactName" type="xs:string" />
+                                        <xs:element name="ContactPhone" type="xs:string" />
+                                        <xs:element name="ContactMobilePhone"  type="xs:string"/>
+                                        <xs:element name="UndertakerName" type="xs:string" />
+                                        <xs:element name="InvoiceType" type="xs:unsignedByte" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

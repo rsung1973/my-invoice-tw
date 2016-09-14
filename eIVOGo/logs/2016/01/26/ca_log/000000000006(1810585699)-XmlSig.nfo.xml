@@ -1,0 +1,69 @@
+<InvoiceRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="">
+  <Invoice>
+    <InvoiceNumber>FT42407076</InvoiceNumber>
+    <InvoiceDate>2016/01/26</InvoiceDate>
+    <InvoiceTime>16:21:57</InvoiceTime>
+    <SellerId>42375269</SellerId>
+    <BuyerName />
+    <BuyerId>0000000000</BuyerId>
+    <CustomsClearanceMark />
+    <InvoiceType>02</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <CarrierType />
+    <CarrierId1 />
+    <CarrierId2 />
+    <PrintMark>Y</PrintMark>
+    <NPOBAN />
+    <RandomNumber>9861</RandomNumber>
+    <InvoiceItem>
+      <Description>1夸脫  杏仁</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>380</UnitPrice>
+      <Amount>380</Amount>
+      <SequenceNumber>0</SequenceNumber>
+      <Remark />
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>小 夏威夷</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>180</UnitPrice>
+      <Amount>180</Amount>
+      <SequenceNumber>1</SequenceNumber>
+      <Remark />
+    </InvoiceItem>
+    <SalesAmount>533</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0.05</TaxRate>
+    <TaxAmount>27</TaxAmount>
+    <TotalAmount>560</TotalAmount>
+    <Contact>
+      <Name />
+      <Address />
+      <TEL />
+      <Email />
+    </Contact>
+  </Invoice>
+  <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+    <SignedInfo>
+      <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" />
+      <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" />
+      <Reference URI="">
+        <Transforms>
+          <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" />
+        </Transforms>
+        <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <DigestValue>J2E1mt+N9jfGTSGk5uxVjQIgdso=</DigestValue>
+      </Reference>
+    </SignedInfo>
+    <SignatureValue>moPQZvcbRPTvyYRbH7QVN4YcPTmRFa5OF0/j0ggR9ezNi4T3orfGuH8liDXeCKqo8UF/xMHTHn1OM97IX0IPqmoF4rf4+AwsVIUoxhPsctCWb/qvnybvpbIXXkuXiEg2bGimK8+64F6JOi2xk/t3vHeELcL63GXy935PO+GCp4M=</SignatureValue>
+    <KeyInfo>
+      <X509Data>
+        <X509Certificate>MIID/TCCAuWgAwIBAgIKJ9Xv1AAAAAAC9zANBgkqhkiG9w0BAQUFADAjMSEwHwYDVQQDExhVWEIyQiBDZXJ0aWZpY2F0ZSBDZW50ZXIwHhcNMTYwMTI1MDcwNDI5WhcNMjYwMTI1MDcxNDI5WjBXMQswCQYDVQQGEwJUVzELMAkGA1UECBMCVFAxETAPBgNVBAMTCDI3NzM2OTUzMSgwJgYJKoZIhvcNAQkBFhltYXgud2lubmllMDIyM0BpdGkuY29tLnR3MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCtY+nM168WAQVf6gFlHSZQVFltBu3eW8gqd9EKXc+Tcp2I8VfWjtmm2qzbBVWcbdep87iK8kABshcE0CYua96JvOCOXLh4XyXnP8gCoWQW6yqwZRXCE+ZzYueB15b4Os9JFVwOH3ds7KD9u3tISCeK66JtvSmab/N0W9G+pwBQHQIDAQABo4IBgTCCAX0wHQYDVR0OBBYEFMEzruVmChLMPXp87fbUlvQvZzbeMA4GA1UdDwEB/wQEAwIHgDAfBgNVHSMEGDAWgBSVsygGBCyD/R50LENBufmHm2CgLzCBgQYDVR0fBHoweDB2oHSgcoY4aHR0cDovL3NzbGNhL0NlcnRFbnJvbGwvVVhCMkIlMjBDZXJ0aWZpY2F0ZSUyMENlbnRlci5jcmyGNmZpbGU6Ly9cXFNTTENBXENlcnRFbnJvbGxcVVhCMkIgQ2VydGlmaWNhdGUgQ2VudGVyLmNybDCBpgYIKwYBBQUHAQEEgZkwgZYwSgYIKwYBBQUHMAKGPmh0dHA6Ly9zc2xjYS9DZXJ0RW5yb2xsL1NTTENBX1VYQjJCJTIwQ2VydGlmaWNhdGUlMjBDZW50ZXIuY3J0MEgGCCsGAQUFBzAChjxmaWxlOi8vXFxTU0xDQVxDZXJ0RW5yb2xsXFNTTENBX1VYQjJCIENlcnRpZmljYXRlIENlbnRlci5jcnQwDQYJKoZIhvcNAQEFBQADggEBALCZlUBZ/JHrZ3SABC0s7gRXOg6BoMw/yJUUqPFguEbJ2EMbEHJhuBp5SRAOJQLHtPT8BE+ugYf1CwCGWvBtnqtZh21Xbdb3iHSseF/eIw0/Ga+pR75yGB18ikCoWD2K/5PhcAgPrHkO3lboovgzM1QBQp/UNRbOBr84+BPqDbUn2utsDW3uX+ET/wwcX04COQlnaiXtSFSzs3PcTSch7kegPjEny6yuzsqR/eZd9YXcZ02Bef7HVGVFo1ZMBpETQPZ6Syhn8nvQLQtbXttXkCtObVa9I0bwqG/dvUOaJd3PB4SAu9ANujAhcdAqFMFBSR4PTeK4ehupxx+nlFug4oQ=</X509Certificate>
+      </X509Data>
+    </KeyInfo>
+  </Signature>
+</InvoiceRoot>

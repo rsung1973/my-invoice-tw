@@ -1,0 +1,68 @@
+<InvoiceRoot xmlns="">
+  <CompanyBan>26305533</CompanyBan>
+  <Invoice>
+    <InvoiceNumber>WK61500321</InvoiceNumber>
+    <InvoiceDate>2011/08/06</InvoiceDate>
+    <InvoiceTime>17:37:00</InvoiceTime>
+    <SellerId>26305533</SellerId>
+    <BuyerName />
+    <BuyerId />
+    <InvoiceType>03</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <CarrierType />
+    <CarrierId1 />
+    <CarrierId2 />
+    <PrintMark>Y</PrintMark>
+    <NPOBAN />
+    <RandomNumber>2511</RandomNumber>
+    <InvoiceItem>
+      <Description>磁鐵開瓶器-重點台灣(黃/綠)</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>99</UnitPrice>
+      <Amount>99.0000</Amount>
+      <SequenceNumber>1</SequenceNumber>
+      <Item>I1</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>總折讓</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>0</UnitPrice>
+      <Amount>0</Amount>
+      <SequenceNumber>999</SequenceNumber>
+      <Item>999</Item>
+      <Remark>總折讓</Remark>
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <SalesAmount>94</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0.05</TaxRate>
+    <TaxAmount>5</TaxAmount>
+    <TotalAmount>99</TotalAmount>
+    <DiscountAmount>0</DiscountAmount>
+  </Invoice>
+  <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+    <SignedInfo>
+      <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" />
+      <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" />
+      <Reference URI="">
+        <Transforms>
+          <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" />
+        </Transforms>
+        <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <DigestValue>GBZ0ikHCTZFgneNf+bQ2ykLoDYE=</DigestValue>
+      </Reference>
+    </SignedInfo>
+    <SignatureValue>KKdbbfEnuVxtrhKLsPnxsPxY1PsI7hIxsCGNV8wV7ffM/+4hGxAp79bed/QEsP+/WgS8RnVBgveBMdAKIGxSTnx4bjitciq8o8pMYObchtdf56tKHhsbXynfz1oPLL08WS/h/UaWmTfPTWxSKlLpqWCs93uA6wCYzR7WDxgcC98=</SignatureValue>
+    <KeyInfo>
+      <X509Data>
+        <X509Certificate>MIIESTCCAzGgAwIBAgIKWfWX8gAAAAABgDANBgkqhkiG9w0BAQUFADAjMSEwHwYDVQQDExhVWEIyQiBDZXJ0aWZpY2F0ZSBDZW50ZXIwHhcNMTEwNTI3MDI1MDIyWhcNMjEwNTI3MDMwMDIyWjCBjTELMAkGA1UEBhMCVFcxDzANBgNVBAgTBlRhaXdhbjEPMA0GA1UEBxMGVGFpcGVpMScwJQYDVQQKDB7lj5bntZXmnKrkvoblr6bmpa3mnInpmZDlhazlj7gxETAPBgNVBAMTCDI2MzA1NTMzMSAwHgYJKoZIhvcNAQkBFhFtb25pY2FAamRnLmNvbS50dzCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA28XClMYBEJzqBFzinSP7SqfUUwwONqP+38sHupd8hMLpoSFazoSUJI0VKhYD//EXXJ67LmeyTups0SmnQei9DpWpMMgWmPti924qEndOgoxkG9pqZ3mTA1MzFEz8ZTLQmEQWAPX0F5/B/ys/i5/R7rprCk6yaLuHHk+sB0eLKG0CAwEAAaOCAZYwggGSMA4GA1UdDwEB/wQEAwIE8DATBgNVHSUEDDAKBggrBgEFBQcDAjAdBgNVHQ4EFgQU0FFa5GDUWuXjhXeWRHahE9AuiKgwHwYDVR0jBBgwFoAUlbMoBgQsg/0edCxDQbn5h5tgoC8wgYEGA1UdHwR6MHgwdqB0oHKGOGh0dHA6Ly9zc2xjYS9DZXJ0RW5yb2xsL1VYQjJCJTIwQ2VydGlmaWNhdGUlMjBDZW50ZXIuY3JshjZmaWxlOi8vXFxTU0xDQVxDZXJ0RW5yb2xsXFVYQjJCIENlcnRpZmljYXRlIENlbnRlci5jcmwwgaYGCCsGAQUFBwEBBIGZMIGWMEoGCCsGAQUFBzAChj5odHRwOi8vc3NsY2EvQ2VydEVucm9sbC9TU0xDQV9VWEIyQiUyMENlcnRpZmljYXRlJTIwQ2VudGVyLmNydDBIBggrBgEFBQcwAoY8ZmlsZTovL1xcU1NMQ0FcQ2VydEVucm9sbFxTU0xDQV9VWEIyQiBDZXJ0aWZpY2F0ZSBDZW50ZXIuY3J0MA0GCSqGSIb3DQEBBQUAA4IBAQBuQSlgHsTzKX4JSgJnxQnaoiMpa0ttgCugsog2k5skf7rUkjKQdZgl3NOgiFvPUDQ2UdpRubmSpFMHBMPOJWCBNTX+W7TQ2IsPG7+JDrZ+FmwRnQEvi696eCnqdjthXIdetG7Z9E4kAPEspQag/OgPpI5L4XwWin8wmqGjIHAL+jMbqKwYS21LiLVc9zlbkbISPhoy2Q+6bg3IC3dP5Yi3oBiudaIYMUCN9NZbTDlj4izB5bgDKu74jSH+ZJj7blORy+XlmZ8U1363IaV1UQnuPjJm2CGo8AT7inmV6zd4Y2ygf03bIUlLn55YnXdPCD+IcU6qF3WxGHk6MRPifFhr</X509Certificate>
+      </X509Data>
+    </KeyInfo>
+  </Signature>
+</InvoiceRoot>

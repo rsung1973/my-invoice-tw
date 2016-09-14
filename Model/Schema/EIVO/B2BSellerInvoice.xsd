@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="B2BSellerInvoice" attributeFormDefault="unqualified"
+    elementFormDefault="qualified"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+    <xs:element name="SellerInvoiceRoot">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Invoice" maxOccurs="unbounded" minOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="InvoiceNumber" type="xs:string" />
+                            <xs:element name="InvoiceDate" type="xs:string" />
+                            <xs:element name="InvoiceTime" type="xs:string" nillable="1" />
+                            <xs:element name="SellerId" type="xs:string" />
+                            <xs:element name="BuyerId" type="xs:string" />
+                            <xs:element name="BuyerName" type="xs:string" />
+                            <xs:element name="InvoiceType">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="2"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="InvoiceItem" maxOccurs="unbounded" minOccurs="1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Description" type="xs:string" />
+                                        <xs:element name="Quantity" type="xs:decimal" />
+                                        <xs:element name="Quantity2" type="xs:decimal" nillable="1" />
+                                        <xs:element name="Unit" type="xs:string" />
+                                        <xs:element name="Unit2" type="xs:string" nillable="1" />
+                                        <xs:element name="UnitPrice" type="xs:decimal" />
+                                        <xs:element name="UnitPrice2" type="xs:decimal" nillable="1" />
+                                        <xs:element name="Amount" type="xs:decimal" />
+                                        <xs:element name="Amount2" type="xs:decimal" nillable="1" />
+                                        <xs:element name="SequenceNumber" type="xs:decimal" />
+                                        <xs:element name="Remark" type="xs:string" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="SalesAmount" type="xs:decimal" />
+                            <xs:element name="TaxType" type="xs:unsignedByte" />
+                            <xs:element name="TaxAmount" type="xs:decimal" />
+                            <xs:element name="TotalAmount" type="xs:decimal" />
+                            <xs:element name="ExtraRemark" minOccurs="0" maxOccurs="1" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

@@ -1,0 +1,47 @@
+<InvoiceRoot xmlns="">
+  <Invoice>
+    <InvoiceNumber>CJ25000130</InvoiceNumber>
+    <InvoiceDate>2016/01/05</InvoiceDate>
+    <InvoiceTime>19:28:50</InvoiceTime>
+    <SellerId>54763258</SellerId>
+    <BuyerId>0000000000</BuyerId>
+    <BuyerName>徐存瑩</BuyerName>
+    <SalesAmount>265</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0.05</TaxRate>
+    <TaxAmount>0</TaxAmount>
+    <TotalAmount>265</TotalAmount>
+    <PrintMark>N</PrintMark>
+    <InvoiceType>07</InvoiceType>
+    <RandomNumber>5704</RandomNumber>
+    <DonateMark>0</DonateMark>
+    <Contact>
+      <Name>徐存瑩</Name>
+      <TEL>932532735</TEL>
+    </Contact>
+    <InvoiceItem>
+      <SequenceNumber>1</SequenceNumber>
+      <Description>手機配件</Description>
+      <UnitPrice>265</UnitPrice>
+      <Quantity>1</Quantity>
+      <Amount>265</Amount>
+    </InvoiceItem>
+  </Invoice>
+  <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+    <SignedInfo>
+      <Reference URI="">
+        <Transforms>
+        </Transforms>
+        <DigestValue>KeUT6rv/DLiTWnPCKEyyJ/Tl3+w=</DigestValue>
+      </Reference>
+    </SignedInfo>
+    <SignatureValue>oZ0lo27yhw4hS0cSbDNBW90vsuvyma9J2WSxin/+SCm1NwIC/peGU4JH7ZE0m6gfTW4r2qpFGGvXCUsW371GhGxfgyL3NmOqBW7UpvChSXtFJu3uOlCpj2vYWS/g/Bj9aNDIpP+fQzoIZIwWUgCRq2ikiOkbXsBHSgpqIZ7NNKk=</SignatureValue>
+    <KeyInfo>
+      <X509Data>
+        <X509Certificate>MIID/TCCAuWgAwIBAgIKJ9Xv1AAAAAAC9zANBgkqhkiG9w0BAQUFADAjMSEwHwYDVQQDExhVWEIyQiBDZXJ0aWZpY2F0ZSBDZW50ZXIwHhcNMTYwMTI1MDcwNDI5WhcNMjYwMTI1MDcxNDI5WjBXMQswCQYDVQQGEwJUVzELMAkGA1UECBMCVFAxETAPBgNVBAMTCDI3NzM2OTUzMSgwJgYJKoZIhvcNAQkBFhltYXgud2lubmllMDIyM0BpdGkuY29tLnR3MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCtY+nM168WAQVf6gFlHSZQVFltBu3eW8gqd9EKXc+Tcp2I8VfWjtmm2qzbBVWcbdep87iK8kABshcE0CYua96JvOCOXLh4XyXnP8gCoWQW6yqwZRXCE+ZzYueB15b4Os9JFVwOH3ds7KD9u3tISCeK66JtvSmab/N0W9G+pwBQHQIDAQABo4IBgTCCAX0wHQYDVR0OBBYEFMEzruVmChLMPXp87fbUlvQvZzbeMA4GA1UdDwEB/wQEAwIHgDAfBgNVHSMEGDAWgBSVsygGBCyD/R50LENBufmHm2CgLzCBgQYDVR0fBHoweDB2oHSgcoY4aHR0cDovL3NzbGNhL0NlcnRFbnJvbGwvVVhCMkIlMjBDZXJ0aWZpY2F0ZSUyMENlbnRlci5jcmyGNmZpbGU6Ly9cXFNTTENBXENlcnRFbnJvbGxcVVhCMkIgQ2VydGlmaWNhdGUgQ2VudGVyLmNybDCBpgYIKwYBBQUHAQEEgZkwgZYwSgYIKwYBBQUHMAKGPmh0dHA6Ly9zc2xjYS9DZXJ0RW5yb2xsL1NTTENBX1VYQjJCJTIwQ2VydGlmaWNhdGUlMjBDZW50ZXIuY3J0MEgGCCsGAQUFBzAChjxmaWxlOi8vXFxTU0xDQVxDZXJ0RW5yb2xsXFNTTENBX1VYQjJCIENlcnRpZmljYXRlIENlbnRlci5jcnQwDQYJKoZIhvcNAQEFBQADggEBALCZlUBZ/JHrZ3SABC0s7gRXOg6BoMw/yJUUqPFguEbJ2EMbEHJhuBp5SRAOJQLHtPT8BE+ugYf1CwCGWvBtnqtZh21Xbdb3iHSseF/eIw0/Ga+pR75yGB18ikCoWD2K/5PhcAgPrHkO3lboovgzM1QBQp/UNRbOBr84+BPqDbUn2utsDW3uX+ET/wwcX04COQlnaiXtSFSzs3PcTSch7kegPjEny6yuzsqR/eZd9YXcZ02Bef7HVGVFo1ZMBpETQPZ6Syhn8nvQLQtbXttXkCtObVa9I0bwqG/dvUOaJd3PB4SAu9ANujAhcdAqFMFBSR4PTeK4ehupxx+nlFug4oQ=</X509Certificate>
+      </X509Data>
+    </KeyInfo>
+  </Signature>
+</InvoiceRoot>

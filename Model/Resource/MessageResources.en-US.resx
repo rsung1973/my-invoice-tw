@@ -1,0 +1,349 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AlertAllowanceDateFormat" xml:space="preserve">
+    <value>Allowance Date format is error，ex→(yyy/MM/dd)；upload data：{0}</value>
+  </data>
+  <data name="AlertAllowanceDuplicated" xml:space="preserve">
+    <value>Allowance data already exists:{0}</value>
+  </data>
+  <data name="AlertAllowanceNoLength" xml:space="preserve">
+    <value>Allowance No length up to 16 yards：{0}，TAG：&lt;AllowanceNumber /&gt;</value>
+  </data>
+  <data name="AlertAllowanceType" xml:space="preserve">
+    <value>Just buy discount format types prescribing for "1", selling prescribing for "2", Upload Data: {0}</value>
+  </data>
+  <data name="AlertAllowance_AllowanceSequenceNumber" xml:space="preserve">
+    <value>Allowance Sequence Number length up to 3 yards；Incorrect：{0}，TAG：&lt;AllowanceSequenceNumber/&gt;</value>
+  </data>
+  <data name="AlertAllowance_InvoiceBuyerError" xml:space="preserve">
+    <value>Invoice BuyerId is error，Incorrect：{0}</value>
+  </data>
+  <data name="AlertAllowance_InvoiceDate" xml:space="preserve">
+    <value>Inconsistent data upload date，InvoiceDate:{0}、UploadInvoiceDate:{1}</value>
+  </data>
+  <data name="AlertAllowance_InvoiceDateFormat" xml:space="preserve">
+    <value>Upload invoice date format is error，ex→(yyy/MM/dd)；upload data：{0}</value>
+  </data>
+  <data name="AlertAllowance_InvoiceSellerIsDifferent" xml:space="preserve">
+    <value>Seller inconsistent data，upload data：{0}</value>
+  </data>
+  <data name="AlertAllowance_OriginalDescription" xml:space="preserve">
+    <value>Original Description length up to 256 yards；Incorrect：{0}，TAG：&lt; OriginalDescription /&gt;</value>
+  </data>
+  <data name="AlertAllowance_OriginalSequenceNumber" xml:space="preserve">
+    <value>Original Invoice Number length up to 3 yards；Incorrect：{0}，TAG：&lt;OriginalInvoiceNumber/&gt;</value>
+  </data>
+  <data name="AlertAllowance_TaxType" xml:space="preserve">
+    <value>Tax Type format is error：{0}，TAG：&lt;TaxType/&gt;</value>
+  </data>
+  <data name="AlertAllowance_Unit" xml:space="preserve">
+    <value>Unit length up to 6 yards；{0}，TAG：&lt;Unit/&gt;</value>
+  </data>
+  <data name="AlertB2BInvoiceDonation" xml:space="preserve">
+    <value>B2B Invoice does not accept donations。</value>
+  </data>
+  <data name="AlertBuyerNameLength" xml:space="preserve">
+    <value>Buyer Name length up to 60 yards：{0}，TAG：&lt;BuyerName /&gt;</value>
+  </data>
+  <data name="AlertClearanceMarkExport" xml:space="preserve">
+    <value>Customs Clearance Mark error, export not via Custom: 1, export via Custom: 2, Incorrect Customs Clearance Mark: {0}, Incorrect TAG:&lt; CustomsClearanceMark /&gt;</value>
+  </data>
+  <data name="AlertClearanceMarkZeroTax" xml:space="preserve">
+    <value>Customs Clearance Mark should be filled for the Zero Tax e-GUI, Incorrect Customs Clearance Mark: {0}, Incorrect TAG:&lt; CustomsClearanceMark /&gt;</value>
+  </data>
+  <data name="AlertContactToPrintAll" xml:space="preserve">
+    <value>If the account is set to print, fill out the contact information；TAG:&lt; Contact /&gt;</value>
+  </data>
+  <data name="AlertDataDate" xml:space="preserve">
+    <value>Data Date can not be blank，TAG:&lt; DataDate /&gt;</value>
+  </data>
+  <data name="AlertDataDateFormat" xml:space="preserve">
+    <value>Format of Data Date error(YYYY/MM/DD),Incorrect Data:{0}, Incorrect TAG:&lt; DataDate /&gt;</value>
+  </data>
+  <data name="AlertDataNumber" xml:space="preserve">
+    <value>DataNumber can not be blank，TAG:&lt; DataNumber /&gt;</value>
+  </data>
+  <data name="AlertDataNumberDuplicated" xml:space="preserve">
+    <value>Duplicated DataNumber; Incorrect Data Number:{0}, Incorrect TAG: &lt; DataNumber /&gt;</value>
+  </data>
+  <data name="AlertDataNumberLimitedLength" xml:space="preserve">
+    <value>Maximum length of DataNumber is 60; Incorrect Data Number:{0}, Incorrect TAG: &lt; DataNumber /&gt;</value>
+  </data>
+  <data name="AlertDoationInvoiceCarryType" xml:space="preserve">
+    <value>Carrier Type should be blank for the donated e-GUI, Incorrect Carrier Type: {0}，Incorrect TAG:&lt; CarrierType /&gt;</value>
+  </data>
+  <data name="AlertGoogleId" xml:space="preserve">
+    <value>GoogleId can not be blank，TAG:&lt; GoogleId /&gt;</value>
+  </data>
+  <data name="AlertGoogleIdLengthLimit" xml:space="preserve">
+    <value>GoogleId can not be over 64 characters; Incorrect GoogleId:{0}, TAG:&lt; GoogleId /&gt;</value>
+  </data>
+  <data name="AlertInvalidSeller" xml:space="preserve">
+    <value>Seller ID does not exist, Seller ID: {0}, Incorrect TAG:&lt; SellerId /&gt;</value>
+  </data>
+  <data name="AlertInvoiceCarrierComplete" xml:space="preserve">
+    <value>Upload incomplete Carrier data，please check it。
+1.Carrier Type；2.CarrierId1、CarrierId2 Please fill in at least one project。</value>
+  </data>
+  <data name="AlertInvoiceCarrierLength" xml:space="preserve">
+    <value>Carrirt Type or Carrier ID1 or Carrier ID2 data length beyond the limit.
+EX：
+CarrierType：6 limit、Carrier ID1 or CarrierID2 ：64limit。
+Uplodate Data：
+CarrierType：{0}limit、
+Carrier ID1：{1}limit、
+CarrierID2 ：{2}limit。</value>
+  </data>
+  <data name="AlertInvoiceDate" xml:space="preserve">
+    <value>InvoiceDate can not be blank，TAG：&lt; InvoiceDate /&gt;</value>
+  </data>
+  <data name="AlertInvoiceDateTime" xml:space="preserve">
+    <value>InvoiceDate or InvoiceTime format error(yyyy/MM/dd HH:mm:ss)；Incorrect:{0} {1}</value>
+  </data>
+  <data name="AlertInvoiceDelivery" xml:space="preserve">
+    <value>Invoice is neither printed、nor identified by carrier、nor donated；Incorrect : {0}，TAG:&lt; InvoiceNumber /&gt;</value>
+  </data>
+  <data name="AlertInvoiceDelivery_DataNo" xml:space="preserve">
+    <value>Invoice is neither printed、nor identified by carrier、nor donated；Incorrect : {0}，TAG:&lt; DataNumber /&gt;</value>
+  </data>
+  <data name="AlertInvoiceDuplicated" xml:space="preserve">
+    <value>Duplicate invoice number，invoice data that already exists。</value>
+  </data>
+  <data name="AlertInvoiceNumber" xml:space="preserve">
+    <value>InvoiceNumber can not be blank，Incorrect:{0}，TAG：&lt; InvoicNumber /&gt;</value>
+  </data>
+  <data name="AlertInvoiceTime" xml:space="preserve">
+    <value>InvoiceTime can not be blank，TAG：&lt; InvoiceTime /&gt;</value>
+  </data>
+  <data name="AlertNullTrackNoInterval" xml:space="preserve">
+    <value>Invoice track code not set or run out of invoice number, Seller ID:{0}</value>
+  </data>
+  <data name="AlertPrintedInvoiceCarrierType" xml:space="preserve">
+    <value>Carrier Type should be blank for the printed e-GUI, Incorrect Carrier Type: {0}，Incorrect TAG:&lt; CarrierType /&gt;</value>
+  </data>
+  <data name="AlertPrintedInvoiceDonation" xml:space="preserve">
+    <value>Donated e-GUI can not be marked to be printed, Incorrect Donate Mark: {0}, Incorrect TAG:&lt; DonateMark/&gt;</value>
+  </data>
+  <data name="AlertSellerNameLength" xml:space="preserve">
+    <value>Seller Name length up to 60 yards：{0}，TAG：&lt;SellerName /&gt;</value>
+  </data>
+  <data name="AlertSellerSignature" xml:space="preserve">
+    <value>Certificate ID and Seller ID does not match, Seller ID: {0}, Incorrect TAG:&lt; SellerId /&gt;</value>
+  </data>
+  <data name="InvalidAllowanceDate" xml:space="preserve">
+    <value>Allowance Date can not be blank，Incorrect:{0}，TAG：&lt; Allowance Date /&gt;</value>
+  </data>
+  <data name="InvalidAllowanceNo" xml:space="preserve">
+    <value>Allowance Number can not be blank，Incorrect:{0}，TAG：&lt; Allowance Number /&gt;</value>
+  </data>
+  <data name="InvalidAllowance_InvoiceHasBeenCanceled" xml:space="preserve">
+    <value>Invoices obsolete。</value>
+  </data>
+  <data name="InvalidAllowance_NoInvoiceData" xml:space="preserve">
+    <value>Invoice Data does not exist。</value>
+  </data>
+  <data name="InvalidBuyerId" xml:space="preserve">
+    <value>Format of Buyer ID error, Incorrect Buyer ID: {0}, Incorrect TAG:&lt; BuyerId /&gt;</value>
+  </data>
+  <data name="InvalidBuyerName" xml:space="preserve">
+    <value>B2C buyer name format errors, 4 ASCII characters in length or Chinese full-width 2 characters，Incorrect：{0}，TAG:&lt; BuyerName /&gt;</value>
+  </data>
+  <data name="InvalidBuyerNameLengthLimit" xml:space="preserve">
+    <value>B2B Buyer Name could not be blank , and the maximum length is 60, Incorrect Buyer Name: {0}, Incorrect TAG:&lt; BuyerName /&gt;</value>
+  </data>
+  <data name="InvalidContactAddress" xml:space="preserve">
+    <value>Contact Address error, Incorrect : {0}, TAG:&lt; Address /&gt;</value>
+  </data>
+  <data name="InvalidContactEMail" xml:space="preserve">
+    <value>Contact Email error, Incorrect : {0}, TAG:&lt; Email /&gt;</value>
+  </data>
+  <data name="InvalidContactName" xml:space="preserve">
+    <value>Contact Name error, Incorrect : {0}, TAG:&lt; Name /&gt;</value>
+  </data>
+  <data name="InvalidContactPhone" xml:space="preserve">
+    <value>Contact telephone error, Incorrect : {0}, TAG:&lt; TEL /&gt;</value>
+  </data>
+  <data name="InvalidCostAmount" xml:space="preserve">
+    <value>Format of Amount error, Incorrect Amount: {0}, Incorrect TAG:&lt; Amount /&gt;</value>
+  </data>
+  <data name="InvalidDonationMark" xml:space="preserve">
+    <value>Donate Mark error, Incorrect Donate Mark: {0}, Incorrect TAG:&lt; DonateMark /&gt;</value>
+  </data>
+  <data name="InvalidDonationTaker" xml:space="preserve">
+    <value>Donation taker error, Incorrect NPOBAN: {0}, Incorrect TAG:&lt; NPOBAN /&gt;</value>
+  </data>
+  <data name="InvalidFreeTaxAmount" xml:space="preserve">
+    <value>Free Tax Sales Amount (NTD) should be positive and integer, Incorrect Free Tax Sales Amount: {0}, Incorrect TAG:&lt; FreeTaxSalesAmount /&gt;</value>
+  </data>
+  <data name="InvalidInvoiceDetails" xml:space="preserve">
+    <value>Invoice Product items not exist, TAG:&lt; InvoiceItem /&gt;</value>
+  </data>
+  <data name="InvalidInvoiceType" xml:space="preserve">
+    <value>Format of Invoice Type error, please fill in correct code 01-06, Incorrect Invoice Type: {0}, Incorrect TAG:&lt; InvoiceType /&gt;</value>
+  </data>
+  <data name="InvalidPieceUnit" xml:space="preserve">
+    <value>Format of Unit error, Incorrect Unit: {0}，Incorrect TAG:&lt; Unit /&gt;</value>
+  </data>
+  <data name="InvalidPrintMark" xml:space="preserve">
+    <value>PrintMark can not be blank，TAG:&lt; PrintMark /&gt;</value>
+  </data>
+  <data name="InvalidProductDescription" xml:space="preserve">
+    <value>Description should not exceed 256 characters, Incorrect Description: {0}，Incorrect TAG:&lt; Description /&gt;</value>
+  </data>
+  <data name="InvalidPublicCarrierType" xml:space="preserve">
+    <value>Carrier is not public type，Incorrect：{0}，TAG:&lt; CarrierType /&gt; ; {1}，TAG:&lt; CarrierId1 /&gt; ; {2}，TAG:&lt; CarrierId2 /&gt;</value>
+  </data>
+  <data name="InvalidRandomNumber" xml:space="preserve">
+    <value>RandomNumber should be 4 arabic numbers, Incorrect Random Number: {0}, Incorrect TAG:&lt; RandomNumber /&gt;</value>
+  </data>
+  <data name="InvalidReceiptNo" xml:space="preserve">
+    <value>Invalid Company ID: {0}, Incorrect TAG:&lt; BuyerId /&gt;</value>
+  </data>
+  <data name="InvalidSellerNotAttributionTheAgent" xml:space="preserve">
+    <value>Upload business profile is not registered under the this business: {0}, TAG: &lt;SellerId /&gt;; Agents: {1}</value>
+  </data>
+  <data name="InvalidSellerOrAgent" xml:space="preserve">
+    <value>The seller has not been registered data，Incorrect:{0}，TAG:&lt; SellerId /&gt;；也未註冊於機構:{1}，代理發票傳送</value>
+  </data>
+  <data name="InvalidSellingPrice" xml:space="preserve">
+    <value>Sales Amount (NTD) should be positive and integer, Incorrect Sales Amount: {0}, Incorrect TAG:&lt; SalesAmount /&gt;</value>
+  </data>
+  <data name="InvalidTaxAmount" xml:space="preserve">
+    <value>Tax Amount should be positive and integer, Incorrect Tax Amount: {0}, Incorrect TAG:&lt; TaxAmount /&gt;</value>
+  </data>
+  <data name="InvalidTaxRate" xml:space="preserve">
+    <value>Tax Rate error, Incorrect Tax Rate: {0}, Incorrect TAG:&lt; TaxRate /&gt;</value>
+  </data>
+  <data name="InvalidTaxType" xml:space="preserve">
+    <value>Tax Type error, Incorrect Tax Type: {0}, Incorrect TAG:&lt; TaxType /&gt;</value>
+  </data>
+  <data name="InvalidTotalAmount" xml:space="preserve">
+    <value>Total Amount should be positive and integer, Incorrect Total Amount: {0}, Incorrect TAG:&lt; TotalAmount /&gt;</value>
+  </data>
+  <data name="InvalidTrackCode" xml:space="preserve">
+    <value>Track Code error, Incorrect: {0}, Incorrect TAG:&lt; InvoicNumber /&gt;</value>
+  </data>
+  <data name="InvalidUnitPrice" xml:space="preserve">
+    <value>Format of Unit Price error, Incorrect Unit Price: {0}，Incorrect TAG:&lt; UnitPrice /&gt;</value>
+  </data>
+  <data name="InvalidZeroTaxAmount" xml:space="preserve">
+    <value>Zero Tax Sales Amount (NTD) should be positive and integer, Incorrect Zero Tax Sales Amount: {0}, Incorrect TAG:&lt; ZeroTaxSalesAmount /&gt;</value>
+  </data>
+</root>

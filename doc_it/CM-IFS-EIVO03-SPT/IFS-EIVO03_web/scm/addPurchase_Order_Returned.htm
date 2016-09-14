@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=big5" />
+<link href="css/content.css" rel="stylesheet" type="text/css" />
+<link href="css/table.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="javascript/join.js"></script>
+<title>電子發票系統</title>
+</head>
+
+<body>
+<!--路徑名稱-->
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="30"><img src="images/path_left.gif" alt="" width="30" height="29" /></td>
+    <td bgcolor="#ecedd5">首頁 > 新增採購退貨單</td>
+    <td width="18"><img src="images/path_right.gif" alt="" width="18" height="29" /></td>
+  </tr>
+</table>
+<!--交易畫面標題-->
+<h1><img src="images/icon_search.gif" width="29" height="28" border="0" align="absmiddle" />新增採購退貨單</h1>
+<div id="border_gray">
+<!--表格 開始-->
+<h2>供應商及倉儲</h2>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" id="left_title">
+  <tr>
+    <th colspan="2" class="Head_style_a">選擇供應商及倉儲</th>
+    </tr>
+  <tr>
+    <th width="15%">供應商</th>
+    <td class="tdleft"><select name="seller" size="1" class="textfield">
+      <option>請選擇</option>
+      <option>70762419&nbsp;網際優勢</option>
+      <option>12345678&nbsp;來來小吃</option>
+      <option>87654321&nbsp;來客精品</option>
+      <option>87654322&nbsp;南海圖書</option>
+      <option>87654323&nbsp;地虎書局</option>
+    </select>
+    </td>
+  </tr>
+  <tr>
+    <th>退貨倉儲</th>
+    <td class="tdleft">
+    <select name="seller" size="1" class="textfield">
+      <option>請選擇</option>
+      <option>彰化</option>
+      <option>廣州</option>
+    </select>
+    </td>
+  </tr>
+</table>
+<!--表格 結束-->
+</div>
+<!--按鈕-->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="Bargain_btn"><input type="button" name="Submit" class="btn" value="查詢" onClick="window.location='Purchase_Order_Returned_list.htm'" /></td>
+  </tr>
+</table>
+<div id="border_gray">
+<!--表格 開始-->
+<h2>退貨料品資訊</h2>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" id="table01">
+  <tr>
+  	<th width="10" align="center" scope="col">&nbsp;</th>	
+    <th nowrap="nowrap">供應商貨號</th>
+    <th nowrap="nowrap">料品Barcode</th>
+    <th nowrap="nowrap">料品名稱</th>
+    <th nowrap="nowrap">單價</th>
+    <th nowrap="nowrap">庫存數量</th>
+    <th nowrap="nowrap">退貨數量</th>
+    <th nowrap="nowrap">瑕疵數量</th>
+    <th nowrap="nowrap">顏色</th>
+    <th nowrap="nowrap">尺寸</th>
+    <th nowrap="nowrap">........</th>
+  </tr>
+  <tr>
+  	<td width="10" align="center"><INPUT name="Mid" type="checkbox" id="Mid"  onclick="Select1(this)" value="111"></td>
+    <td align="center">FB83274</td>
+    <td>012345023</td>
+    <td align="center">鋼筆</td>
+    <td align="center"><input name="T2" type="text" class="textfield" size="20" value="1000" /></td>
+    <td align="center">500</td>
+    <td align="center"><input name="T2" type="text" class="textfield" size="20" value="" /></td>
+    <td align="center"><input name="T2" type="text" class="textfield" size="20" value="" /></td>
+    <td align="right">藍</td>
+    <td align="center">N/A</td>
+    <td align="center">........</td>
+  </tr>
+  <tr>
+  	<td width="10" align="center"><INPUT name="Mid" type="checkbox" id="Mid"  onclick="Select1(this)" value="111"></td>
+    <td align="center">FB83274</td>
+    <td>012345024</td>
+    <td align="center">鋼筆</td>
+    <td align="center"><input name="T2" type="text" class="textfield" size="20" value="1000" /></td>
+    <td align="center">1,000</td>
+    <td align="center"><input name="T2" type="text" class="textfield" size="20" value="" /></td>
+    <td align="center"><input name="T2" type="text" class="textfield" size="20" value="" /></td>
+    <td align="right">紅</td>
+    <td align="center">N/A</td>
+    <td align="center">........</td>
+  </tr>
+  <tr>
+  	<td width="10" align="center"><INPUT name="Mid" type="checkbox" id="Mid"  onclick="Select1(this)" value="111"></td>
+    <td align="center">FB83265</td>
+    <td>012535033</td>
+    <td align="center">書套</td>
+    <td align="center"><input name="T2" type="text" class="textfield" size="20" value="1000" /></td>
+    <td align="center">2,000</td>
+    <td align="center"><input name="T2" type="text" class="textfield" size="20" value="" /></td>
+    <td align="center"><input name="T2" type="text" class="textfield" size="20" value="" /></td>
+    <td align="right">N/A</td>
+    <td align="center">L</td>
+    <td align="center">........</td>
+  </tr>
+</table>
+<!--表格 結束-->
+</div>
+<!--按鈕-->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="Bargain_btn"><input type="button" name="Submit" class="btn" value="採購退貨單預覽" onClick="window.location='previewPurchase_Order_Returned.htm'" /></td>
+  </tr>
+</table>
+</body>
+</html>

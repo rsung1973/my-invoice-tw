@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{90365DBC-0D13-4FA9-977E-9A8DF4A66E38}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>InvoiceClient</RootNamespace>
+    <AssemblyName>InvoiceClient</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Agent\AllowanceWatcher.cs" />
+    <Compile Include="Agent\AllowanceCancellationWatcher.cs" />
+    <Compile Include="Agent\AllowanceCancellationWatcherV2.cs" />
+    <Compile Include="Agent\AllowanceWatcherV2.cs" />
+    <Compile Include="Agent\AllowanceWatcherV2ForGoogle.cs" />
+    <Compile Include="Agent\BranchTrackWatcher.cs" />
+    <Compile Include="Agent\CsvInvoiceWatcherV2.cs" />
+    <Compile Include="Agent\InvoiceAttachmentWatcherForGoogle.cs" />
+    <Compile Include="Agent\InvoiceCancellationWatcherV2.cs" />
+    <Compile Include="Agent\InvoiceEnterpriseWatcher.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Agent\InvoiceMailTrackingInspectorForDoubleClick.cs" />
+    <Compile Include="Agent\InvoicePDFInspectorForDoubleClick.cs" />
+    <Compile Include="Agent\VacantInvoiceNoInspector.cs" />
+    <Compile Include="Agent\InvoiceTrackCodeInspector.cs" />
+    <Compile Include="Agent\InvoiceWatcherV2.cs" />
+    <Compile Include="Agent\MIGInvoiceCancellationWatcher.cs" />
+    <Compile Include="Agent\MIGInvoiceWatcher.cs" />
+    <Compile Include="Agent\PreInvoiceWatcherV2.cs" />
+    <Compile Include="Agent\WebClientEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Agent\WinningInvoiceInspector.cs" />
+    <Compile Include="Agent\InvoiceMappingInspector.cs" />
+    <Compile Include="Agent\DispatchInvoiceInspector.cs" />
+    <Compile Include="Agent\InvoiceServerInspector.cs" />
+    <Compile Include="Agent\InvoiceCancellationWatcher.cs" />
+    <Compile Include="Agent\InvoiceWatcher.cs" />
+    <Compile Include="Agent\InvoiceWelfareInspector.cs" />
+    <Compile Include="Agent\PhysicalChannelInvoiceWatcher.cs" />
+    <Compile Include="Agent\PhysicalChannelInvoiceCancellationWatcher.cs" />
+    <Compile Include="Agent\CsvInvoiceCancellationWatcher.cs" />
+    <Compile Include="Agent\CsvInvoiceWatcher.cs" />
+    <Compile Include="Agent\InvoiceWatcherForGoogle.cs" />
+    <Compile Include="Agent\InvoiceWatcherV2ForGoogle.cs" />
+    <Compile Include="Agent\InvoiceCancellationWatcherV2ForGoogle.cs" />
+    <Compile Include="Agent\AllowanceCancellationWatcherV2ForGoogle.cs" />
+    <Compile Include="Agent\InvoicePDFInspector.cs" />
+    <Compile Include="Agent\InvoiceMailTrackingInspector.cs" />
+    <Compile Include="Helper\PGPCrypto.cs" />
+    <Compile Include="MainContent\GoogleInvoiceServerConfigForDoubleClick.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainContent\GoogleInvoiceServerConfigForDoubleClick.Designer.cs">
+      <DependentUpon>GoogleInvoiceServerConfigForDoubleClick.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainContent\MIGInvoiceConfig.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainContent\MIGInvoiceConfig.Designer.cs">
+      <DependentUpon>MIGInvoiceConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainContent\GoogleGUIConfigTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainContent\GoogleGUIConfigTab.Designer.cs">
+      <DependentUpon>GoogleGUIConfigTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainContent\GoogleInvoiceServerConfig.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainContent\GoogleInvoiceServerConfig.Designer.cs">
+      <DependentUpon>GoogleInvoiceServerConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainContent\GoogleInvoiceConfig.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainContent\GoogleInvoiceConfig.Designer.cs">
+      <DependentUpon>GoogleInvoiceConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainContent\GoogleAttachmentConfig.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainContent\GoogleAttachmentConfig.Designer.cs">
+      <DependentUpon>GoogleAttachmentConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainContent\InvoiceServerConfig.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainContent\InvoiceServerConfig.Designer.cs">
+      <DependentUpon>InvoiceServerConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainContent\InvoiceWelfareConfig.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainContent\InvoiceWelfareConfig.Designer.cs">
+      <DependentUpon>InvoiceWelfareConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainContent\SystemConfigTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainContent\SystemConfigTab.Designer.cs">
+      <DependentUpon>SystemConfigTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\AppSigner.cs" />
+    <Compile Include="Helper\ExtensionMethods.cs" />
+    <Compile Include="InvoiceClientService.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InvoiceClientService.Designer.cs">
+      <DependentUpon>InvoiceClientService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainContent\B2CInvoiceCenterConfig.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainContent\B2CInvoiceCenterConfig.Designer.cs">
+      <DependentUpon>B2CInvoiceCenterConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainContent\PhysicalChannelConfig.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainContent\PhysicalChannelConfig.Designer.cs">
+      <DependentUpon>PhysicalChannelConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainContent\CsvInvoiceCenterConfig.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainContent\CsvInvoiceCenterConfig.Designer.cs">
+      <DependentUpon>CsvInvoiceCenterConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="ProjectInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProjectInstaller.Designer.cs">
+      <DependentUpon>ProjectInstaller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="TransferManagement\B2CInvoiceTransferManager.cs" />
+    <Compile Include="TransferManagement\BranchTrackTransferManager.cs" />
+    <Compile Include="TransferManagement\CsvInvoiceTransferManagerV2.cs" />
+    <Compile Include="TransferManagement\InvoiceAttachmentTransferManager.cs" />
+    <Compile Include="TransferManagement\InvoiceTransferManagerForAgent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TransferManagement\InvoiceAllowanceTransferManager.cs" />
+    <Compile Include="TransferManagement\InvoiceTransferManagerV2.cs" />
+    <Compile Include="TransferManagement\CsvInvoiceTransferManager.cs" />
+    <Compile Include="TransferManagement\InvoiceClientTransferManager.cs" />
+    <Compile Include="TransferManagement\InvoiceTransferManagerV2ForDSC.cs" />
+    <Compile Include="TransferManagement\MIGInvoiceTransferManager.cs" />
+    <Compile Include="TransferManagement\ServerInspector.cs" />
+    <Compile Include="TransferManagement\PhysicalChannelTransferManager.cs" />
+    <Compile Include="TransferManagement\InvoiceTransferManagerV2ForGoogle.cs" />
+    <Compile Include="Web References\WS_Invoice\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="MainContent\MIGInvoiceConfig.resx">
+      <DependentUpon>MIGInvoiceConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainContent\B2CInvoiceCenterConfig.resx">
+      <DependentUpon>B2CInvoiceCenterConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainContent\GoogleGUIConfigTab.resx">
+      <DependentUpon>GoogleGUIConfigTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainContent\GoogleInvoiceServerConfig.resx">
+      <DependentUpon>GoogleInvoiceServerConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainContent\GoogleInvoiceConfig.resx">
+      <DependentUpon>GoogleInvoiceConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainContent\CsvInvoiceCenterConfig.resx">
+      <DependentUpon>CsvInvoiceCenterConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainContent\GoogleAttachmentConfig.resx">
+      <DependentUpon>GoogleAttachmentConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainContent\InvoiceServerConfig.resx">
+      <DependentUpon>InvoiceServerConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainContent\InvoiceWelfareConfig.resx">
+      <DependentUpon>InvoiceWelfareConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainContent\SystemConfigTab.resx">
+      <DependentUpon>SystemConfigTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectInstaller.resx">
+      <DependentUpon>ProjectInstaller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app%28DoubleClick%29.config" />
+    <None Include="app%28Google%29.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="UXB2B Certificate Center.cer">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Web References\WS_Invoice\eInvoiceService.wsdl" />
+    <None Include="Web References\WS_Invoice\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost:2598/Published/eInvoiceService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WS_Invoice\</RelPath>
+      <UpdateFromURL>http://localhost:2598/Published/eInvoiceService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>InvoiceClient_WS_Invoice_eInvoiceService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="InvoiceTXN\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Uxnet\Uxnet.Com\Uxnet.Com.csproj">
+      <Project>{72edd90c-e7fe-44f4-8b9b-c9512f02d547}</Project>
+      <Name>Uxnet.Com</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{2F1547B6-2DD4-4A57-A40F-258103591603}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="notifyIcon.Icon.ico" />
+    <None Include="Web References\WS_Invoice\eInvoiceService.disco" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

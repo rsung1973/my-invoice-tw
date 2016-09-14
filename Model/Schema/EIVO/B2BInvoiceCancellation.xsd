@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="B2BInvoiceCancellation" attributeFormDefault="unqualified"
+    elementFormDefault="qualified"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+    <xs:element name="CancelInvoiceRoot">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="CancelInvoice" maxOccurs="unbounded" minOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="CancelInvoiceNumber" type="xs:string" />
+                            <xs:element name="InvoiceDate">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="10"/>
+                                        <xs:pattern value="[0-9][0-9][0-9][0-9]/[0-9][0-9]/[0-9][0-9]"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="BuyerId" type="xs:string" nillable="1" />
+                            <xs:element name="SellerId" type="xs:string" nillable="1" />
+                            <xs:element name="CancelDate">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="10"/>
+                                        <xs:pattern value="[0-9][0-9][0-9][0-9]/[0-9][0-9]/[0-9][0-9]"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="CancelTime">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="8"/>
+                                        <xs:pattern value="[0-9][0-9]:[0-9][0-9]:[0-9][0-9]"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="CancelReason" type="xs:string" />
+                            <xs:element name="ReturnTaxDocumentNumber" type="xs:string" nillable="1" />
+                            <xs:element name="Remark" type="xs:string" nillable="1" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

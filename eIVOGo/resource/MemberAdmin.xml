@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="big5"?>
+<menuItem value="" url="">
+  <menuItem value="帳號管理" url="~/SAM/EditMyself.aspx">
+    <workItem value="" url="~/SAM/register_msg.aspx" />
+    <workItem value="" url="~/MainPage.aspx" />
+  </menuItem>
+  <menuItem value="員工帳號管理" url="~/SCM_SYSTEM/MaintainUserProfileByMemberAdmin.aspx" />
+  <menuItem value="角色功能維護" url="~/SYS/MaintainMemberUserRole.aspx">
+    <workItem value="" url="~/SYS/EditMemberMenu.aspx" />
+  </menuItem>
+  <!--<menuItem value="電子折讓單開立" url="~/Saler/InvoiceAllowence.aspx" >
+    <workItem value="" url="~/Saler/AllowencePreview.aspx" />
+  </menuItem>
+  <menuItem value="作廢電子折讓單開立" url="~/Saler/InvoiceAllowanceCancell.aspx" >
+    <workItem value="" url="~/Saler/AllowencePreview.aspx" />
+  </menuItem>-->
+  <!--<menuItem value="財政部發票折讓&lt;br/&gt;含作廢檔匯出" url="~/Saler/exportInvoiceData.aspx" />-->
+  <menuItem value="供應商資料維護" url="~/SCM_SYSTEM/Supplier_Maintain.aspx">
+    <workItem value="" url="~/SCM_SYSTEM/Supplier_Maintain_Add.aspx" />
+  </menuItem>
+  <workItem value="首頁" url="~/MainPage.aspx">
+    <workItem value="" url="~/SCM_SYSTEM/Goods_Maintain_Add.aspx" />
+  </workItem>
+  <workItem value="站務新聞" url="~/SAM/publish_system_event_page.aspx">
+    <workItem value="" url="~/SCM_SYSTEM/Warehouse_Maintain_Add.aspx" />
+  </workItem>
+  <menuItem value="料品資料維護" url="~/SCM_SYSTEM/Goods_Maintain.aspx">
+    <workItem value="" url="~/SCM_SYSTEM/Market_Resource_Maintain_Add.aspx" />
+  </menuItem>
+  <menuItem value="倉儲資料維護" url="~/SCM_SYSTEM/Warehouse_Maintain.aspx">
+    <workItem value="" url="~/SCM_SYSTEM/Promotional_Project_Maintain_Add.aspx" />
+  </menuItem>
+  <menuItem value="網購通路來源維護" url="~/SCM_SYSTEM/Market_Resource_Maintain.aspx">
+    <workItem value="" url="~/SCM_SYSTEM/addMarket_Attribute_Maintain.aspx" />
+  </menuItem>
+  <menuItem value="促銷專案維護" url="~/SCM_SYSTEM/Promotional_Project_Maintain.aspx">
+    <workItem value="" url="~/SCM_SYSTEM/addBuyer_Maintain.aspx" />
+  </menuItem>
+  <menuItem value="網購通路平台屬性維護" url="~/SCM_SYSTEM/Market_Attribute_Maintain.aspx">
+    <workItem value="" url="~/SCM_SYSTEM/addMarket_Attribute_Maintain.aspx" />
+    <workItem value="" url="~/SCM_SYSTEM/addDelivery_Company_Maintain.aspx" />
+  </menuItem>
+  <menuItem value="買受人資料維護" url="~/SCM_SYSTEM/Buyer_Maintain.aspx">
+    <workItem value="" url="~/SCM_SYSTEM/addProducts_Plan_Maintain.aspx" />
+  </menuItem>
+  <menuItem value="宅配公司資料維護" url="~/SCM_SYSTEM/Delivery_Company_Maintain.aspx">
+    <workItem value="" url="~/SCM_SYSTEM/addDelivery_Company_Maintain.aspx" />
+  </menuItem>
+  <menuItem value="庫存警示維護作業" url="~/SCM_SYSTEM/Products_Plan_Maintain.aspx" />
+  <menuItem value="電子發票號碼維護" url="~/SAM/MaintainInvoiceNoInterval.aspx">
+  </menuItem>
+</menuItem>

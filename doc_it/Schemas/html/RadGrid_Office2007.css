@@ -1,0 +1,532 @@
+﻿/*Telerik RadGrid Office2007 Skin*/
+
+/*global*/
+
+.RadGrid_Office2007
+{
+	border:1px solid #3b5a82;
+	background:#fff;
+	color:#27413e;
+}
+
+.RadGrid_Office2007,
+.MasterTable_Office2007,
+.DetailTable_Office2007,
+.GroupPanel_Office2007 table,
+.GridEditForm_Office2007 table,
+.GridToolTip_Office2007
+{
+	font:11px tahoma,verdana,arial,sans-serif;
+}
+
+.MasterTable_Office2007,
+.DetailTable_Office2007
+{
+    border-collapse:separate !important;
+}
+
+.GridRow_Office2007 td,
+.GridAltRow_Office2007 td,
+.GridEditRow_Office2007 td,
+.GridFooter_Office2007 td,
+.GridGroupFooter_Office2007 td,
+.GridFilterRow_Office2007 td,
+.GridHeader_Office2007,
+.ResizeHeader_Office2007
+{
+	padding-left:4px;
+	padding-right:4px;
+}
+
+.RadGrid_Office2007 .rgAdd,
+.RadGrid_Office2007 .rgRefresh,
+.RadGrid_Office2007 .rgEdit,
+.RadGrid_Office2007 .rgDel,
+.RadGrid_Office2007 .rgFilter,
+.RadGrid_Office2007 .rgPagePrev,
+.RadGrid_Office2007 .rgPageNext,
+.RadGrid_Office2007 .rgPageFirst,
+.RadGrid_Office2007 .rgPageLast,
+.RadGrid_Office2007 .rgExpand,
+.RadGrid_Office2007 .rgCollapse,
+.RadGrid_Office2007 .rgSortAsc,
+.RadGrid_Office2007 .rgSortDesc,
+.RadGrid_Office2007 .rgUpdate,
+.RadGrid_Office2007 .rgCancel
+{
+	width:16px;
+	height:16px;
+	border:0;
+	padding:0;
+	background-color:transparent;
+	background-image:url('WebResource.axd?d=0QTcN9A18I_xywRurk5WcXMtC1G0YC9nKB1OaoIurh_8kOHWk6_htXDDY9ChUkFnFjvlMBnhjkSc_cmq442oiw2&t=633631350440000000');
+	background-repeat:no-repeat;
+	vertical-align:middle;
+	cursor:pointer;
+}
+
+.GroupPanelItems_Office2007 input,
+.GridCommandRow_Office2007 img,
+.GridHeader_Office2007 input,
+.GridFilterRow_Office2007 img,
+.GridPager_Office2007 img
+{
+	vertical-align:middle;
+}
+
+/*header*/
+
+.GridHeaderDiv_Office2007
+{
+	background:url('WebResource.axd?d=0QTcN9A18I_xywRurk5WcXMtC1G0YC9nKB1OaoIurh_8kOHWk6_htXDDY9ChUkFnFjvlMBnhjkSc_cmq442oiw2&t=633631350440000000') 0 -1616px repeat-x #fafafa;
+}
+
+.GridHeader_Office2007,
+.ResizeHeader_Office2007
+{
+	border-left:1px solid #9eb6ce;
+	border-bottom: solid 1px #9eb6ce;
+	padding-top:3px;
+	padding-bottom:2px;
+	background:url('WebResource.axd?d=0QTcN9A18I_xywRurk5WcXMtC1G0YC9nKB1OaoIurh_8kOHWk6_htXDDY9ChUkFnFjvlMBnhjkSc_cmq442oiw2&t=633631350440000000') 0 -200px repeat-x #d3dbe9;
+	text-align:left;
+	font-size:12px;
+	font-weight:bold;
+	cursor:hand;
+}
+
+.GridHeader_Office2007:first-child,
+.ResizeHeader_Office2007:first-child
+{
+	border-left:0;
+	padding-left:5px;
+}
+
+.GridHeader_Office2007 a
+{
+	color:#27413e;
+	text-decoration:none;
+}
+
+/*rows*/
+
+.GridFilterRow_Office2007 td,
+.GridRow_Office2007 td,
+.GridAltRow_Office2007 td,
+.GridEditRow_Office2007 td,
+.GridFooter_Office2007 td,
+.GridGroupFooter_Office2007 td
+{
+	border:1px #d0d7e5;
+	border-style:none none solid solid;
+	padding-top:3px;
+	padding-bottom:3px;
+}
+
+.GridFilterRow_Office2007>td:first-child,
+.GridRow_Office2007>td:first-child,
+.GridAltRow_Office2007>td:first-child,
+.GridEditRow_Office2007>td:first-child,
+.GridFooter_Office2007>td:first-child,
+.GridGroupFooter_Office2007>td:first-child
+{
+	border-left-color:#fff;
+}
+
+.GridRow_Office2007 a,
+.GridAltRow_Office2007 a,
+.GridEditRow_Office2007 a,
+.GridFooter_Office2007 a,
+.GridGroupFooter_Office2007 a,
+.GridEditForm_Office2007 a
+{
+	color:#27413e;
+}
+
+.SelectedRow_Office2007
+{
+	background:url('WebResource.axd?d=0QTcN9A18I_xywRurk5WcXMtC1G0YC9nKB1OaoIurh_8kOHWk6_htXDDY9ChUkFnFjvlMBnhjkSc_cmq442oiw2&t=633631350440000000') 0 -800px repeat-x #f1c15f;
+}
+
+.SelectedRow_Office2007 td,
+.SelectedRow_Office2007>td:first-child
+{
+	border-color:#f29536;
+}
+
+.ActiveRow_Office2007,
+.GridRowOver_Office2007
+{
+	background:none #f9d99f;
+}
+
+.ActiveRow_Office2007 td,
+.ActiveRow_Office2007>td:first-child,
+.GridRowOver_Office2007 td,
+.GridRowOver_Office2007>td:first-child
+{
+	border-left-color:#f9d99f;
+	border-right-color:#f9d99f;
+}
+
+.GridEditRow_Office2007
+{
+	background:#ffffe1;
+}
+
+.GridEditRow_Office2007 td,
+.GridEditRow_Office2007>td:first-child
+{
+	border-left-color:#ffffe1;
+	border-bottom-color:#d0d7e5;
+}
+
+/*footer*/
+
+.GridFooter_Office2007,
+.GridGroupFooter_Office2007,
+.GridFooter_Office2007 a,
+.GridGroupFooter_Office2007 a
+{
+	color:#666;
+}
+
+/*status*/
+
+.GridPager_Office2007 span
+{
+	color:#193d65;
+}
+
+/*pager*/
+
+.GridPager_Office2007
+{
+    background:url('WebResource.axd?d=0QTcN9A18I_xywRurk5WcXMtC1G0YC9nKB1OaoIurh_8kOHWk6_htXDDY9ChUkFnFjvlMBnhjkSc_cmq442oiw2&t=633631350440000000') 0 -600px repeat-x #d7e5f7;
+    line-height:20px;
+}
+
+.GridPager_Office2007 td
+{
+	border-top:1px solid #567db0;
+	border-bottom:1px solid #fff;
+	padding:1px 4px 2px;
+}
+
+.GridPager_Office2007 div span,
+.GridPager_Office2007 a,
+.GridPager_Office2007 .sliderPagerLabel_Office2007
+{
+	color:#01285c;
+}
+
+.PagerLeft_Office2007
+{
+	float:left;
+}
+
+.PagerRight_Office2007
+{
+	float:right;
+}
+
+.PagerCenter_Office2007
+{
+	text-align:center;
+}
+
+.PagerCenter_Office2007 span
+{
+	vertical-align:middle;
+}
+
+.RadGrid_Office2007 .rgPagePrev
+{
+	background-position:5px -1388px;
+}
+
+.RadGrid_Office2007 .rgPageNext
+{
+	background-position:-22px -1388px;
+}
+
+.RadGrid_Office2007 .rgPageFirst
+{
+	background-position:4px -1356px;
+}
+
+.RadGrid_Office2007 .rgPageLast
+{
+	background-position:-20px -1356px;
+}
+
+/*sorting, reordering*/
+
+.GridHeader_Office2007 .rgSortAsc
+{
+	background-position:-21px -1262px;
+	height:10px;
+}
+
+.GridHeader_Office2007 .rgSortDesc
+{
+	background-position:4px -1262px;
+	height:10px;
+}
+
+.TopReorderIndicator_Office2007,
+.BottomReorderIndicator_Office2007
+{
+	width:9px !important;
+	height:12px !important;
+	margin-left:-4px;
+	background:url('WebResource.axd?d=0QTcN9A18I_xywRurk5WcXMtC1G0YC9nKB1OaoIurh_8kOHWk6_htXDDY9ChUkFnFjvlMBnhjkSc_cmq442oiw2&t=633631350440000000') 0 -1232px no-repeat;
+}
+
+.BottomReorderIndicator_Office2007
+{
+	background-position:-23px -1232px;
+}
+
+/*filtering*/
+
+.GridFilterRow_Office2007
+{
+	background:#fafafa;
+}
+
+.RadGrid_Office2007 .rgFilter
+{
+	background-position:2px -1196px;
+}
+
+.GridFilterRow_Office2007 input[type="text"]
+{
+	border:1px solid #7f9db9;
+	font:12px arial,verdana,sans-serif;
+	color:#27413e;
+	vertical-align:middle;
+}
+
+/*grouping*/
+
+.GroupPanel_Office2007
+{
+	border-bottom:1px solid #688caf;
+	background:url('WebResource.axd?d=0QTcN9A18I_xywRurk5WcXMtC1G0YC9nKB1OaoIurh_8kOHWk6_htXDDY9ChUkFnFjvlMBnhjkSc_cmq442oiw2&t=633631350440000000') repeat-x #9ebde5;
+	color:#fff;
+}
+
+.GroupPanel_Office2007 td
+{
+	padding:2px 4px;
+}
+
+.GroupPanel_Office2007 td td
+{
+	padding:0;
+}
+
+.GroupPanelItems_Office2007
+{
+	border:1px solid #325373;
+	background:#fff;
+	color:#000;
+	padding:1px 2px;
+}
+
+.GroupPanel_Office2007 .rgSortAsc
+{
+	background-position:-21px -1259px;
+}
+
+.GroupPanel_Office2007 .rgSortDesc
+{
+	background-position:4px -1258px;
+}
+
+.GroupHeader_Office2007
+{
+	background:#e4ecf7;
+	color:#567db0;
+	font:bold 11px verdana,sans-serif;
+}
+
+.GroupHeader_Office2007 td
+{
+	border-bottom:1px solid #d0d7e5;
+	padding:1px 4px 2px 5px;
+}
+
+.GroupHeader_Office2007 p
+{
+	padding:0;
+	margin:0;
+}
+
+.RadGrid_Office2007 .rgExpand
+{
+	background-position:2px -1294px;
+}
+
+.RadGrid_Office2007 .rgCollapse
+{
+	background-position:2px -1326px;
+}
+
+.GroupHeader_Office2007 td div
+{
+	top:-0.6em;
+}
+
+.GroupHeader_Office2007 td div div
+{
+	top:0;
+}
+
+/*editing*/
+
+.GridEditForm_Office2007
+{
+	border-bottom:1px solid #d0d7e5;
+}
+
+.GridEditForm_Office2007 input[type="text"],
+.GridEditForm_Office2007 input[type="password"],
+.GridEditForm_Office2007 textarea
+{
+	border:1px solid #7f9db9;
+	font:12px arial,verdana,sans-serif;
+	color:#27413e;
+}
+
+.RadGrid_Office2007 .rgUpdate
+{
+	background-position:3px -1549px;
+}
+
+.RadGrid_Office2007 .rgCancel
+{
+	background-position:2px -1581px;
+}
+
+/*hierarchy*/
+
+.DetailTable_Office2007
+{
+	border:1px solid #9eb6ce;
+	border-right:0;
+}
+
+/*command row*/
+
+.GridCommandRow_Office2007
+{
+	background:#fafafa;
+}
+
+.GridCommandRow_Office2007 td
+{
+	border-bottom:1px solid #688caf;
+	padding:2px 4px;
+}
+
+.GridCommandRow_Office2007 td td
+{
+	border:0;
+	padding:1px;
+}
+
+.GridCommandRow_Office2007 a
+{
+	color:#000;
+	text-decoration:none;
+}
+
+.RadGrid_Office2007 .rgAdd
+{
+	background-position:2px -1422px;
+}
+
+.RadGrid_Office2007 .rgRefresh
+{
+	background-position:5px -1453px;
+}
+
+.RadGrid_Office2007 .rgEdit
+{
+	background-position:2px -1486px;
+}
+
+.RadGrid_Office2007 .rgDel
+{
+	background-position:2px -1518px;
+}
+
+/*loading*/
+
+.LoadingPanel_Office2007
+{
+	background:url('WebResource.axd?d=0QTcN9A18I_xywRurk5WcXMtC1G0YC9nKB1OaoIurh_8kOHWk6_htXDDY9ChUkFn0L4uFs8bEsxiim1I-XzBbqBXVgyZ1OXMdFoIxuNNmsU1&t=633631350440000000') center center no-repeat #fff;
+}
+
+/*multirow select*/
+
+.GridRowSelector_Office2007
+{
+	background:#336;
+}
+
+/*row drag n drop*/
+
+.GridItemDropIndicator_Office2007
+{
+    border-top:1px dashed #666;
+}
+
+/*tooltip*/
+
+.GridToolTip_Office2007
+{
+	border:1px solid #767676;
+	padding:3px;
+	background:#cad9ee;
+	color:#000;
+}
+
+/*rtl*/
+
+.RadGridRTL_Office2007 .GridHeader_Office2007,
+.RadGridRTL_Office2007 .ResizeHeader_Office2007
+{
+	text-align:right;
+	cursor:hand;
+}
+
+.RadGridRTL_Office2007 .PagerLeft_Office2007,
+.RadGridRTL_Office2007 .GridPager_Office2007 .radslider
+{
+	float:right;
+}
+
+.RadGridRTL_Office2007 .PagerRight_Office2007
+{
+	float:left;
+}
+
+.RadGridRTL_Office2007 .GridHeader_Office2007:first-child,
+.RadGridRTL_Office2007 .ResizeHeader_Office2007:first-child
+{
+	border-left:1px solid #9eb6ce;
+	padding-left:4px;
+}
+
+.RadGridRTL_Office2007 .GridFilterRow_Office2007>td:first-child,
+.RadGridRTL_Office2007 .GridRow_Office2007>td:first-child,
+.RadGridRTL_Office2007 .GridAltRow_Office2007>td:first-child,
+.RadGridRTL_Office2007 .GridEditRow_Office2007>td:first-child,
+.RadGridRTL_Office2007 .GridFooter_Office2007>td:first-child,
+.RadGridRTL_Office2007 .GridGroupFooter_Office2007>td:first-child
+{
+	border-left-color:#d0d7e5;
+}

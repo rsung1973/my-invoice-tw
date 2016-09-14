@@ -1,0 +1,40 @@
+﻿<%--
+Default skin template. The following skins are provided as examples only.
+
+1. Named control skin. The SkinId should be uniquely defined because
+   duplicate SkinId's per control type are not allowed in the same theme.
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White" >
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView>
+
+2. Default skin. The SkinId is not defined. Only one default 
+   control skin per control type is allowed in the same theme.
+
+<asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+--%>
+<%@ Register Src="~/Module/Common/PagingControl.ascx" TagName="PagingControl" TagPrefix="uc2" %>
+<%@ Register Src="~/Module/UI/EmptyDataRow.ascx" TagName="EmptyDataRow"
+    TagPrefix="uc4" %>
+
+<asp:Button  runat="server"  CssClass="btn" />
+<asp:GridView runat="server" AllowPaging="True" Width="100%" BorderWidth="0px"
+        CellPadding="0" GridLines="None" AutoGenerateColumns="False" CssClass="table01">
+        <Columns>
+        </Columns>
+        <AlternatingRowStyle CssClass="OldLace" />
+        <EmptyDataTemplate>
+            <uc4:EmptyDataRow ID="clearCss" runat="server" />
+        </EmptyDataTemplate>
+<%--        <EmptyDataRowStyle HorizontalAlign="Center" />
+        <EmptyDataTemplate>
+            <asp:Label ID="empty" runat="server" EnableViewState="false" ForeColor="Red" Text="查無資料!!"></asp:Label>
+        </EmptyDataTemplate>
+        <PagerTemplate>
+            <uc2:PagingControl runat="server" />
+        </PagerTemplate>--%>
+        <FooterStyle CssClass="total-count" />
+    </asp:GridView>
+<asp:DetailsView runat="server" AutoGenerateRows="False" 
+                DefaultMode="Insert" CssClass="left_title" GridLines="None">
+</asp:DetailsView>

@@ -1,0 +1,138 @@
+2016/01/27 05:00:47
+System.Net.Mail.SmtpException: 傳送郵件失敗。 ---> System.Net.WebException: 無法連接至遠端伺服器 ---> System.Net.Sockets.SocketException: 無法連線，因為目標電腦拒絕連線。 127.0.0.1:25
+   於 System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   於 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 內部例外狀況堆疊追蹤的結尾 ---
+   於 System.Net.ServicePoint.GetConnection(PooledStream PooledStream, Object owner, Boolean async, IPAddress& address, Socket& abortSocket, Socket& abortSocket6)
+   於 System.Net.PooledStream.Activate(Object owningObject, Boolean async, GeneralAsyncDelegate asyncCallback)
+   於 System.Net.ConnectionPool.GetConnection(Object owningObject, GeneralAsyncDelegate asyncCallback, Int32 creationTimeout)
+   於 System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   於 System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   於 System.Net.Mail.SmtpClient.GetConnection()
+   於 System.Net.Mail.SmtpClient.Send(MailMessage message)
+   --- 內部例外狀況堆疊追蹤的結尾 ---
+   於 System.Net.Mail.SmtpClient.Send(MailMessage message)
+   於 eIVOGo.services.ServiceWorkItem.doDailyTurnKeyCheck() 於 c:\Project\VM-SIT04\IFS-EIVO03\eIVOGo\services\ServiceWorkItem.cs: 行 244
+2016/01/27 10:06:52
+System.ArgumentNullException: 值不能為 null。
+參數名稱: source
+   於 System.Linq.Enumerable.Select[TSource,TResult](IEnumerable`1 source, Func`2 selector)
+   於 Model.InvoiceManagement.Validator.InvoiceRootFormatValidator.checkInvoiceProductItems(List`1 items)
+   於 Model.InvoiceManagement.Validator.InvoiceRootFormatValidator.Validate(InvoiceRootInvoice dataItem)
+   於 Model.InvoiceManagement.InvoiceManagerV3.SaveUploadInvoice(InvoiceRoot item, OrganizationToken owner)
+2016/01/27 10:06:58
+System.Net.Mail.SmtpException: 傳送郵件失敗。 ---> System.Net.WebException: 無法連接至遠端伺服器 ---> System.Net.Sockets.SocketException: 無法連線，因為目標電腦拒絕連線。 127.0.0.1:25
+   於 System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   於 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 內部例外狀況堆疊追蹤的結尾 ---
+   於 System.Net.ServicePoint.GetConnection(PooledStream PooledStream, Object owner, Boolean async, IPAddress& address, Socket& abortSocket, Socket& abortSocket6)
+   於 System.Net.PooledStream.Activate(Object owningObject, Boolean async, GeneralAsyncDelegate asyncCallback)
+   於 System.Net.ConnectionPool.GetConnection(Object owningObject, GeneralAsyncDelegate asyncCallback, Int32 creationTimeout)
+   於 System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   於 System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   於 System.Net.Mail.SmtpClient.GetConnection()
+   於 System.Net.Mail.SmtpClient.Send(MailMessage message)
+   --- 內部例外狀況堆疊追蹤的結尾 ---
+   於 System.Net.Mail.SmtpClient.Send(MailMessage message)
+   於 eIVOGo.Published.eInvoiceService.<.cctor>b__3(Object o, ExceptionEventArgs e) 於 c:\Project\VM-SIT04\IFS-EIVO03\eIVOGo\Published\eInvoiceService.asmx.cs: 行 109
+2016/01/27 10:07:00
+System.Net.Mail.SmtpException: 傳送郵件失敗。 ---> System.Net.WebException: 無法連接至遠端伺服器 ---> System.Net.Sockets.SocketException: 無法連線，因為目標電腦拒絕連線。 127.0.0.1:25
+   於 System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   於 System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- 內部例外狀況堆疊追蹤的結尾 ---
+   於 System.Net.ServicePoint.GetConnection(PooledStream PooledStream, Object owner, Boolean async, IPAddress& address, Socket& abortSocket, Socket& abortSocket6)
+   於 System.Net.PooledStream.Activate(Object owningObject, Boolean async, GeneralAsyncDelegate asyncCallback)
+   於 System.Net.ConnectionPool.GetConnection(Object owningObject, GeneralAsyncDelegate asyncCallback, Int32 creationTimeout)
+   於 System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   於 System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   於 System.Net.Mail.SmtpClient.GetConnection()
+   於 System.Net.Mail.SmtpClient.Send(MailMessage message)
+   --- 內部例外狀況堆疊追蹤的結尾 ---
+   於 System.Net.Mail.SmtpClient.Send(MailMessage message)
+   於 eIVOGo.Published.eInvoiceService.<.cctor>b__3(Object o, ExceptionEventArgs e) 於 c:\Project\VM-SIT04\IFS-EIVO03\eIVOGo\Published\eInvoiceService.asmx.cs: 行 109
+2016/01/27 10:10:29
+System.ArgumentNullException: 值不能為 null。
+參數名稱: source
+   於 System.Linq.Enumerable.Select[TSource,TResult](IEnumerable`1 source, Func`2 selector)
+   於 Model.InvoiceManagement.Validator.InvoiceRootFormatValidator.checkInvoice(List`1 items)
+   於 Model.InvoiceManagement.Validator.InvoiceRootFormatValidator.Validate(InvoiceRootInvoice dataItem)
+   於 Model.InvoiceManagement.InvoiceManagerV3.SaveUploadInvoice(InvoiceRoot item, OrganizationToken owner)
+2016/01/27 10:12:24
+System.ArgumentNullException: 值不能為 null。
+參數名稱: source
+   於 System.Linq.Enumerable.Select[TSource,TResult](IEnumerable`1 source, Func`2 selector)
+   於 Model.InvoiceManagement.Validator.InvoiceRootFormatValidator.checkInvoice(List`1 items)
+   於 Model.InvoiceManagement.Validator.InvoiceRootFormatValidator.Validate(InvoiceRootInvoice dataItem)
+   於 Model.InvoiceManagement.InvoiceManagerV3.SaveUploadInvoice(InvoiceRoot item, OrganizationToken owner)
+2016/01/27 10:21:26
+System.NullReferenceException: 並未將物件參考設定為物件的執行個體。
+   於 Model.InvoiceManagement.Validator.InvoiceRootFormatValidator.checkBusinessDetails(List`1 ex)
+   於 Model.InvoiceManagement.Validator.InvoiceRootFormatValidator.checkBusiness(List`1 ex)
+   於 Model.InvoiceManagement.Validator.InvoiceRootFormatValidator.Validate(InvoiceRootInvoice dataItem)
+   於 Model.InvoiceManagement.InvoiceManagerV3.SaveUploadInvoice(InvoiceRoot item, OrganizationToken owner)
+2016/01/27 10:21:27
+System.NullReferenceException: 並未將物件參考設定為物件的執行個體。
+   於 Model.InvoiceManagement.Validator.InvoiceRootFormatValidator.checkBusinessDetails(List`1 ex)
+   於 Model.InvoiceManagement.Validator.InvoiceRootFormatValidator.checkBusiness(List`1 ex)
+   於 Model.InvoiceManagement.Validator.InvoiceRootFormatValidator.Validate(InvoiceRootInvoice dataItem)
+   於 Model.InvoiceManagement.InvoiceManagerV3.SaveUploadInvoice(InvoiceRoot item, OrganizationToken owner)
+2016/01/27 10:26:12
+System.NullReferenceException: 並未將物件參考設定為物件的執行個體。
+   於 Model.InvoiceManagement.Validator.InvoiceRootFormatValidator.checkBusinessDetails(List`1 ex)
+   於 Model.InvoiceManagement.Validator.InvoiceRootFormatValidator.checkBusiness(List`1 ex)
+   於 Model.InvoiceManagement.Validator.InvoiceRootFormatValidator.Validate(InvoiceRootInvoice dataItem)
+   於 Model.InvoiceManagement.InvoiceManagerV3.SaveUploadInvoice(InvoiceRoot item, OrganizationToken owner)
+2016/01/27 10:26:59
+System.NullReferenceException: 並未將物件參考設定為物件的執行個體。
+   於 Model.InvoiceManagement.Validator.InvoiceRootFormatValidator.checkBusinessDetails(List`1 ex)
+   於 Model.InvoiceManagement.Validator.InvoiceRootFormatValidator.checkBusiness(List`1 ex)
+   於 Model.InvoiceManagement.Validator.InvoiceRootFormatValidator.Validate(InvoiceRootInvoice dataItem)
+   於 Model.InvoiceManagement.InvoiceManagerV3.SaveUploadInvoice(InvoiceRoot item, OrganizationToken owner)
+2016/01/27 11:10:52
+System.InvalidOperationException: 序列未包含項目
+   於 System.Data.Linq.SqlClient.SqlProvider.Execute(Expression query, QueryInfo queryInfo, IObjectReaderFactory factory, Object[] parentArgs, Object[] userArgs, ICompiledSubQuery[] subQueries, Object lastResult)
+   於 System.Data.Linq.SqlClient.SqlProvider.ExecuteAll(Expression query, QueryInfo[] queryInfos, IObjectReaderFactory factory, Object[] userArguments, ICompiledSubQuery[] subQueries)
+   於 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   於 System.Data.Linq.DataQuery`1.System.Linq.IQueryProvider.Execute[S](Expression expression)
+   於 Model.Helper.ExceptionNotification.processNotification()
+   於 Model.Helper.ExceptionNotification.SendNotification(Object stateInfo)
+2016/01/27 11:13:52
+System.ArgumentNullException: 值不能為 null。
+參數名稱: input
+   於 System.Text.RegularExpressions.Regex.IsMatch(String input)
+   於 Model.InvoiceManagement.Validator.ExtensionMethods.OrganizationValueCheck(Organization dataItem)
+   於 Model.InvoiceManagement.InvoiceEnterpriseManager.SaveInvoiceEnterprise(InvoiceEnterpriseRoot item, OrganizationToken token)
+2016/01/27 11:13:52
+System.ArgumentNullException: 值不能為 null。
+參數名稱: input
+   於 System.Text.RegularExpressions.Regex.IsMatch(String input)
+   於 Model.InvoiceManagement.Validator.ExtensionMethods.OrganizationValueCheck(Organization dataItem)
+   於 Model.InvoiceManagement.InvoiceEnterpriseManager.SaveInvoiceEnterprise(InvoiceEnterpriseRoot item, OrganizationToken token)
+2016/01/27 11:17:36
+System.ArgumentNullException: 值不能為 null。
+參數名稱: input
+   於 System.Text.RegularExpressions.Regex.IsMatch(String input)
+   於 Model.InvoiceManagement.Validator.ExtensionMethods.OrganizationValueCheck(Organization dataItem)
+   於 Model.InvoiceManagement.InvoiceEnterpriseManager.SaveInvoiceEnterprise(InvoiceEnterpriseRoot item, OrganizationToken token)
+2016/01/27 11:18:00
+System.ArgumentNullException: 值不能為 null。
+參數名稱: input
+   於 System.Text.RegularExpressions.Regex.IsMatch(String input)
+   於 Model.InvoiceManagement.Validator.ExtensionMethods.OrganizationValueCheck(Organization dataItem)
+   於 Model.InvoiceManagement.InvoiceEnterpriseManager.SaveInvoiceEnterprise(InvoiceEnterpriseRoot item, OrganizationToken token)
+2016/01/27 11:30:46
+System.InvalidOperationException: 序列未包含項目
+   於 System.Data.Linq.SqlClient.SqlProvider.Execute(Expression query, QueryInfo queryInfo, IObjectReaderFactory factory, Object[] parentArgs, Object[] userArgs, ICompiledSubQuery[] subQueries, Object lastResult)
+   於 System.Data.Linq.SqlClient.SqlProvider.ExecuteAll(Expression query, QueryInfo[] queryInfos, IObjectReaderFactory factory, Object[] userArguments, ICompiledSubQuery[] subQueries)
+   於 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   於 System.Data.Linq.DataQuery`1.System.Linq.IQueryProvider.Execute[S](Expression expression)
+   於 Model.Helper.ExceptionNotification.processNotification()
+   於 Model.Helper.ExceptionNotification.SendNotification(Object stateInfo)
+2016/01/27 11:32:38
+System.InvalidOperationException: 序列未包含項目
+   於 System.Data.Linq.SqlClient.SqlProvider.Execute(Expression query, QueryInfo queryInfo, IObjectReaderFactory factory, Object[] parentArgs, Object[] userArgs, ICompiledSubQuery[] subQueries, Object lastResult)
+   於 System.Data.Linq.SqlClient.SqlProvider.ExecuteAll(Expression query, QueryInfo[] queryInfos, IObjectReaderFactory factory, Object[] userArguments, ICompiledSubQuery[] subQueries)
+   於 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   於 System.Data.Linq.DataQuery`1.System.Linq.IQueryProvider.Execute[S](Expression expression)
+   於 Model.Helper.ExceptionNotification.processNotification()
+   於 Model.Helper.ExceptionNotification.SendNotification(Object stateInfo)

@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Invoice XSDVersion="2.8">
+  <Main>
+    <InoviceNumber>TD64421003</InoviceNumber>
+    <InvoiceDate>
+      <Year>0100</Year>
+      <Month>07</Month>
+      <Day>013</Day>
+    </InvoiceDate>
+    <InvoiceTime>13:32:52</InvoiceTime>
+    <Seller>
+      <Identifier>53147117</Identifier>
+      <Name>晨創有限公司</Name>
+      <Address>新北市板橋區中山路二段50之2號5樓</Address>
+      <PersonInCharge />
+      <TelephoneNumber>02-89538100</TelephoneNumber>
+      <FacsimileNumber />
+      <EmailAddress>Big44boom@gmail.com</EmailAddress>
+      <CustomerNumber />
+    </Seller>
+    <Buyer>
+      <Identifier />
+      <Name />
+      <PersonInCharge />
+    </Buyer>
+    <TaxCenter>台北區國稅局大安稅捐稽徵處</TaxCenter>
+    <PermitDate>00951124</PermitDate>
+    <PermitWord>MM448558696558</PermitWord>
+    <PermitNumber>HH8888888888888</PermitNumber>
+    <InvoiceType>05</InvoiceType>
+    <DonateMark>0</DonateMark>
+  </Main>
+  <Details>
+    <ProductItem>
+      <Description>Airwaves黑加侖子口香糖</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>39.00000</UnitPrice>
+      <Amount>39.00000</Amount>
+      <SequenceNumber>00</SequenceNumber>
+      <Remark />
+    </ProductItem>
+    <ProductItem>
+      <Description>Airwaves口香糖-蜂蜜檸檬</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>39.00000</UnitPrice>
+      <Amount>39.00000</Amount>
+      <SequenceNumber>01</SequenceNumber>
+      <Remark />
+    </ProductItem>
+    <ProductItem>
+      <Description>青箭口香糖</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>10.00000</UnitPrice>
+      <Amount>10.00000</Amount>
+      <SequenceNumber>02</SequenceNumber>
+      <Remark />
+    </ProductItem>
+  </Details>
+  <Amount>
+    <SalesAmount>84</SalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0</TaxRate>
+    <TaxAmount>4</TaxAmount>
+    <TotalAmount>88</TotalAmount>
+    <DiscountAmount>0</DiscountAmount>
+    <Currency>NTD</Currency>
+  </Amount>
+</Invoice>

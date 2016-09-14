@@ -1,0 +1,54 @@
+<InvoiceRoot xmlns="">
+  <Invoice>
+    <InvoiceNumber>QA12345701</InvoiceNumber>
+    <InvoiceDate>2016/03/07</InvoiceDate>
+    <InvoiceTime>10:25:01</InvoiceTime>
+    <SellerId>42375269</SellerId>
+    <BuyerId>0000000000</BuyerId>
+    <CustomsClearanceMark>2</CustomsClearanceMark>
+    <InvoiceType>07</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <CarrierType>3J0002</CarrierType>
+    <CarrierId1>/gtif8nq</CarrierId1>
+    <PrintMark>N</PrintMark>
+    <RandomNumber>1480</RandomNumber>
+    <InvoiceItem>
+      <Description>特大 原味</Description>
+      <Quantity>1</Quantity>
+      <UnitPrice>240</UnitPrice>
+      <Amount>240</Amount>
+      <SequenceNumber>0</SequenceNumber>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>小 原味</Description>
+      <Quantity>1</Quantity>
+      <UnitPrice>70</UnitPrice>
+      <Amount>70</Amount>
+      <SequenceNumber>1</SequenceNumber>
+    </InvoiceItem>
+    <SalesAmount>295</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>3</TaxType>
+    <TaxRate>0</TaxRate>
+    <TaxAmount>0</TaxAmount>
+    <TotalAmount>295</TotalAmount>
+    <Contact>
+    </Contact>
+  </Invoice>
+  <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+    <SignedInfo>
+      <Reference URI="">
+        <Transforms>
+        </Transforms>
+        <DigestValue>AyBFWCp54YCTinbMhDy/bZOoAqg=</DigestValue>
+      </Reference>
+    </SignedInfo>
+    <SignatureValue>sK6e1a8LfCGFASwoObljczdhBWvgzX30ehKmpyv29ZMrjnxbI5RR/FcQgvczoMBu9bsMVr3pv3aip24Ue8IKmKx9dsCmxYUI0ni2KqJTKhqqaF749lBdyPIzbu7HYoqWMMm5YdOw6MafnqQvDDXgqJhw5MhSYH+xcoqgK5416WU=</SignatureValue>
+    <KeyInfo>
+      <X509Data>
+        <X509Certificate>MIIEMjCCAxqgAwIBAgIKZvJzEwAAAAACSzANBgkqhkiG9w0BAQUFADAjMSEwHwYDVQQDExhVWEIyQiBDZXJ0aWZpY2F0ZSBDZW50ZXIwHhcNMTQwMzEyMDMzODA5WhcNMjQwMzEyMDM0ODA5WjAxMQswCQYDVQQGEwJUVzEPMA0GA1UEChMGR29vZ2xlMREwDwYDVQQDEwgyNzkzNDg1NTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAztitpzIE+UB3x4FehBtXtkQRXs9ONtHheqFatDIhZZvOqMkffQNh66zRIJtejoWOubTjoKYrgsgaKzKN5PowV4+6QvLKsEIqaaDD8mqr2HJD1TM/HZrGGgqr3ZVcn4HlqE8+19iTU2fMvmy6eTF86vgXPeqQwzCaEnXE0bi1dlMCAwEAAaOCAdwwggHYMA4GA1UdDwEB/wQEAwIE8DBEBgkqhkiG9w0BCQ8ENzA1MA4GCCqGSIb3DQMCAgIAgDAOBggqhkiG9w0DBAICAIAwBwYFKw4DAgcwCgYIKoZIhvcNAwcwHQYDVR0OBBYEFKffM2yTBlQKklJ2GD5ih4eI1urVMBMGA1UdJQQMMAoGCCsGAQUFBwMCMB8GA1UdIwQYMBaAFJWzKAYELIP9HnQsQ0G5+YebYKAvMIGBBgNVHR8EejB4MHagdKByhjhodHRwOi8vc3NsY2EvQ2VydEVucm9sbC9VWEIyQiUyMENlcnRpZmljYXRlJTIwQ2VudGVyLmNybIY2ZmlsZTovL1xcU1NMQ0FcQ2VydEVucm9sbFxVWEIyQiBDZXJ0aWZpY2F0ZSBDZW50ZXIuY3JsMIGmBggrBgEFBQcBAQSBmTCBljBKBggrBgEFBQcwAoY+aHR0cDovL3NzbGNhL0NlcnRFbnJvbGwvU1NMQ0FfVVhCMkIlMjBDZXJ0aWZpY2F0ZSUyMENlbnRlci5jcnQwSAYIKwYBBQUHMAKGPGZpbGU6Ly9cXFNTTENBXENlcnRFbnJvbGxcU1NMQ0FfVVhCMkIgQ2VydGlmaWNhdGUgQ2VudGVyLmNydDANBgkqhkiG9w0BAQUFAAOCAQEAwvwYTFZJrR+ZPvtlJE7f5FdaCv9U0LtY4Yd+3G8RY5XBU94Uui/oPdsNZmaw+iIzZX0Gv6We3IH/O87IMqfwtIT0SQeThPfzupasIz7/qV87qAFbF3OH5JdCWHoD1y13E/Sei26/GIbQUSZHQVCITI7T7g9b+USQYmqFcLwIWy9UWXyFhCUn71mBdXg04lAtQZ5XH+pQhMQLWYhxxUmtqJb2TB1xmcw/PNZCVpOyYXiewqW7FO5iGuXO8qq1jRK7kA7u4fZguLSzV9v+9tIucodsQ81Nv08lpauc733W6l7lQnCQZ5XC8a9xmwk0xVhVuASaLQELs9vgrvSL/JgjEA==</X509Certificate>
+      </X509Data>
+    </KeyInfo>
+  </Signature>
+</InvoiceRoot>

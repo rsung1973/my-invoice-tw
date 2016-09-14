@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="eInvoice" Class="FlowEntityDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=192.168.200.53\sqlexpress;Initial Catalog=eInvoice;Persist Security Info=True;User ID=eivo" SettingsObjectName="Model.Properties.Settings" SettingsPropertyName="eInvoiceConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="center.DocumentFlowControl" Member="DocumentFlowControl">
+    <Type Name="DocumentFlowControl">
+      <Column Name="StepID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NextStep" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PrevStep" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LevelID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FlowID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="DocumentFlowControl_DocumentFlowControl" Member="AsNextStepFor" Storage="_DocumentFlowControl2" ThisKey="StepID" OtherKey="NextStep" Type="DocumentFlowControl" />
+      <Association Name="DocumentFlowControl_DocumentFlowControl1" Member="AsPrevStepFor" Storage="_DocumentFlowControl4" ThisKey="StepID" OtherKey="PrevStep" Type="DocumentFlowControl" />
+      <Association Name="DocumentFlowControl_DocumentFlowStep" Member="DocumentFlowStep" ThisKey="StepID" OtherKey="CurrentFlowStep" Type="DocumentFlowStep" />
+      <Association Name="DocumentFlowControl_DocumentFlowBranch" Member="BranchFlow" ThisKey="StepID" OtherKey="StepID" Type="DocumentFlowBranch" />
+      <Association Name="DocumentFlowControl_DocumentFlowBranch1" Member="FlowAsBranch" ThisKey="StepID" OtherKey="BranchStep" Type="DocumentFlowBranch" />
+      <Association Name="DocumentFlowControl_DocumentFlow" Member="DocumentFlowAsInitStep" ThisKey="StepID" OtherKey="InitialStep" Type="DocumentFlow" />
+      <Association Name="DocumentFlowControl_DocumentFlowControl" Member="NextStepItem" Storage="_DocumentFlowControl1" ThisKey="NextStep" OtherKey="StepID" Type="DocumentFlowControl" IsForeignKey="true" />
+      <Association Name="DocumentFlowControl_DocumentFlowControl1" Member="PrevStepItem" Storage="_DocumentFlowControl3" ThisKey="PrevStep" OtherKey="StepID" Type="DocumentFlowControl" IsForeignKey="true" />
+      <Association Name="LevelExpression_DocumentFlowControl" Member="LevelExpression" ThisKey="LevelID" OtherKey="LevelID" Type="LevelExpression" IsForeignKey="true" />
+      <Association Name="DocumentFlow_DocumentFlowControl" Member="DocumentFlow" ThisKey="FlowID" OtherKey="FlowID" Type="DocumentFlow" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="center.DocumentFlowStep" Member="DocumentFlowStep">
+    <Type Name="DocumentFlowStep">
+      <Column Name="DocID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CurrentFlowStep" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="DocumentFlowControl_DocumentFlowStep" Member="DocumentFlowControl" ThisKey="CurrentFlowStep" OtherKey="StepID" Type="DocumentFlowControl" IsForeignKey="true" />
+      <Association Name="CDS_Document_DocumentFlowStep" Member="CDS_Document" ThisKey="DocID" OtherKey="DocID" Type="CDS_Document" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CDS_Document" Member="CDS_Document">
+    <Type Name="CDS_Document">
+      <Column Name="DocID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DocType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DocDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CurrentStep" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="CDS_Document_DocumentFlowStep" Member="DocumentFlowStep" ThisKey="DocID" OtherKey="DocID" Type="DocumentFlowStep" Cardinality="One" />
+      <Association Name="CDS_Document_DocumentProcessLog" Member="DocumentProcessLog" ThisKey="DocID" OtherKey="DocID" Type="DocumentProcessLog" />
+      <Association Name="DocumentType_CDS_Document" Member="DocumentType" ThisKey="DocType" OtherKey="TypeID" Type="DocumentType" IsForeignKey="true" />
+      <Association Name="LevelExpression_CDS_Document" Member="LevelExpression" ThisKey="CurrentStep" OtherKey="LevelID" Type="LevelExpression" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DocumentType" Member="DocumentType">
+    <Type Name="DocumentType">
+      <Column Name="TypeID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TypeName" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Association Name="DocumentType_CDS_Document" Member="CDS_Document" ThisKey="TypeID" OtherKey="DocType" Type="CDS_Document" />
+      <Association Name="DocumentType_DocumentTypeFlow" Member="DocumentTypeFlow" ThisKey="TypeID" OtherKey="TypeID" Type="DocumentTypeFlow" />
+      <Association Name="DocumentType_CommonDocumentTypeFlow" Member="CommonDocumentTypeFlow" ThisKey="TypeID" OtherKey="TypeID" Type="CommonDocumentTypeFlow" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DocumentProcessLog" Member="DocumentProcessLog">
+    <Type Name="DocumentProcessLog">
+      <Column Name="DocID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="StepDate" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FlowStep" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="CDS_Document_DocumentProcessLog" Member="CDS_Document" ThisKey="DocID" OtherKey="DocID" Type="CDS_Document" IsForeignKey="true" />
+      <Association Name="UserProfile_DocumentProcessLog" Member="UserProfile" ThisKey="UID" OtherKey="UID" Type="UserProfile" IsForeignKey="true" />
+      <Association Name="LevelExpression_DocumentProcessLog" Member="LevelExpression" ThisKey="FlowStep" OtherKey="LevelID" Type="LevelExpression" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Organization" Member="Organization">
+    <Type Name="Organization">
+      <Column Name="ContactName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Fax" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LogoURL" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CompanyName" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="CompanyID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ReceiptNo" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="ContactFax" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="ContactPhone" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="ContactMobilePhone" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="RegAddr" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="UndertakerName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Addr" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="EnglishName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EnglishAddr" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="EnglishRegAddr" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="ContactEmail" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UndertakerPhone" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="UndertakerFax" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="UndertakerMobilePhone" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="InvoiceSignature" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="UndertakerID" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="ContactTitle" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Association Name="Organization_BusinessRelationship" Member="BusinessRelationship" ThisKey="CompanyID" OtherKey="MasterID" Type="BusinessRelationship" />
+      <Association Name="Organization_BusinessRelationship1" Member="BusinessRelationship1" ThisKey="CompanyID" OtherKey="RelativeID" Type="BusinessRelationship" />
+      <Association Name="Organization_EnterpriseGroupMember" Member="EnterpriseGroupMember" ThisKey="CompanyID" OtherKey="CompanyID" Type="EnterpriseGroupMember" />
+      <Association Name="Organization_DocumentTypeFlow" Member="DocumentTypeFlow" ThisKey="CompanyID" OtherKey="CompanyID" Type="DocumentTypeFlow" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CategoryDefinition" Member="CategoryDefinition">
+    <Type Name="CategoryDefinition">
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Category" Type="System.String" DbType="NVarChar(32) NOT NULL" CanBeNull="false" />
+      <Column Name="CharacterURL" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserProfile" Member="UserProfile">
+    <Type Name="UserProfile">
+      <Column Name="UID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="PID" Type="System.String" DbType="NVarChar(32) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="ContactTitle" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="Region" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="PostalCode" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="Country" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="MobilePhone" Type="System.String" DbType="NVarChar(24)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(24)" CanBeNull="true" />
+      <Column Name="Phone2" Type="System.String" DbType="NVarChar(24)" CanBeNull="true" />
+      <Column Name="Fax" Type="System.String" DbType="NVarChar(24)" CanBeNull="true" />
+      <Column Name="EMail" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="Expiration" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Creator" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AuthID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LevelID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ThemeName" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="Password2" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Association Name="UserProfile_DocumentProcessLog" Member="DocumentProcessLog" ThisKey="UID" OtherKey="UID" Type="DocumentProcessLog" />
+      <Association Name="UserProfile_UserProfile" Member="UserProfile2" ThisKey="UID" OtherKey="Creator" Type="UserProfile" />
+      <Association Name="UserProfile_UserProfile1" Member="UserProfile4" ThisKey="UID" OtherKey="AuthID" Type="UserProfile" />
+      <Association Name="UserProfile_UserProfile" Member="UserProfile1" ThisKey="Creator" OtherKey="UID" Type="UserProfile" IsForeignKey="true" />
+      <Association Name="UserProfile_UserProfile1" Member="UserProfile3" ThisKey="AuthID" OtherKey="UID" Type="UserProfile" IsForeignKey="true" />
+      <Association Name="LevelExpression_UserProfile" Member="LevelExpression" ThisKey="LevelID" OtherKey="LevelID" Type="LevelExpression" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LevelExpression" Member="LevelExpression">
+    <Type Name="LevelExpression">
+      <Column Name="LevelID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Expression" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="LevelExpression_DocumentFlowControl" Member="DocumentFlowControl" ThisKey="LevelID" OtherKey="LevelID" Type="DocumentFlowControl" />
+      <Association Name="LevelExpression_CDS_Document" Member="CDS_Document" ThisKey="LevelID" OtherKey="CurrentStep" Type="CDS_Document" />
+      <Association Name="LevelExpression_DocumentProcessLog" Member="DocumentProcessLog" ThisKey="LevelID" OtherKey="FlowStep" Type="DocumentProcessLog" />
+      <Association Name="LevelExpression_UserProfile" Member="UserProfile" ThisKey="LevelID" OtherKey="LevelID" Type="UserProfile" />
+    </Type>
+  </Table>
+  <Table Name="center.BusinessRelationship" Member="BusinessRelationship">
+    <Type Name="BusinessRelationship">
+      <Column Name="MasterID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RelativeID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="BusinessID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Organization_BusinessRelationship" Member="Organization" ThisKey="MasterID" OtherKey="CompanyID" Type="Organization" IsForeignKey="true" />
+      <Association Name="Organization_BusinessRelationship1" Member="Organization1" ThisKey="RelativeID" OtherKey="CompanyID" Type="Organization" IsForeignKey="true" />
+      <Association Name="BusinessType_BusinessRelationship" Member="BusinessType" ThisKey="BusinessID" OtherKey="BusinessID" Type="BusinessType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EnterpriseGroup" Member="EnterpriseGroup">
+    <Type Name="EnterpriseGroup">
+      <Column Name="EnterpriseID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EnterpriseName" Type="System.String" DbType="NVarChar(64) NOT NULL" CanBeNull="false" />
+      <Association Name="EnterpriseGroup_EnterpriseGroupMember" Member="EnterpriseGroupMember" ThisKey="EnterpriseID" OtherKey="EnterpriseID" Type="EnterpriseGroupMember" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EnterpriseGroupMember" Member="EnterpriseGroupMember">
+    <Type Name="EnterpriseGroupMember">
+      <Column Name="EnterpriseID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CompanyID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="EnterpriseGroup_EnterpriseGroupMember" Member="EnterpriseGroup" ThisKey="EnterpriseID" OtherKey="EnterpriseID" Type="EnterpriseGroup" IsForeignKey="true" />
+      <Association Name="Organization_EnterpriseGroupMember" Member="Organization" ThisKey="CompanyID" OtherKey="CompanyID" Type="Organization" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="center.DocumentTypeFlow" Member="DocumentTypeFlow">
+    <Type Name="DocumentTypeFlow">
+      <Column Name="TypeID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FlowID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CompanyID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="BusinessID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="DocumentType_DocumentTypeFlow" Member="DocumentType" ThisKey="TypeID" OtherKey="TypeID" Type="DocumentType" IsForeignKey="true" />
+      <Association Name="Organization_DocumentTypeFlow" Member="Organization" ThisKey="CompanyID" OtherKey="CompanyID" Type="Organization" IsForeignKey="true" />
+      <Association Name="BusinessType_DocumentTypeFlow" Member="BusinessType" ThisKey="BusinessID" OtherKey="BusinessID" Type="BusinessType" IsForeignKey="true" />
+      <Association Name="DocumentFlow_DocumentTypeFlow" Member="DocumentFlow" ThisKey="FlowID" OtherKey="FlowID" Type="DocumentFlow" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="center.BusinessType" Member="BusinessType">
+    <Type Name="BusinessType">
+      <Column Name="BusinessID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Business" Type="System.String" DbType="NVarChar(64) NOT NULL" CanBeNull="false" />
+      <Association Name="BusinessType_BusinessRelationship" Member="BusinessRelationship" ThisKey="BusinessID" OtherKey="BusinessID" Type="BusinessRelationship" />
+      <Association Name="BusinessType_DocumentTypeFlow" Member="DocumentTypeFlow" ThisKey="BusinessID" OtherKey="BusinessID" Type="DocumentTypeFlow" />
+    </Type>
+  </Table>
+  <Table Name="center.CommonDocumentTypeFlow" Member="CommonDocumentTypeFlow">
+    <Type Name="CommonDocumentTypeFlow">
+      <Column Name="TypeID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FlowID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="DocumentType_CommonDocumentTypeFlow" Member="DocumentType" ThisKey="TypeID" OtherKey="TypeID" Type="DocumentType" IsForeignKey="true" />
+      <Association Name="DocumentFlow_CommonDocumentTypeFlow" Member="DocumentFlow" ThisKey="FlowID" OtherKey="FlowID" Type="DocumentFlow" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="center.DocumentFlowBranch" Member="DocumentFlowBranch">
+    <Type Name="DocumentFlowBranch">
+      <Column Name="StepID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="BranchStep" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="DocumentFlowControl_DocumentFlowBranch" Member="BranchStepFrom" ThisKey="StepID" OtherKey="StepID" Type="DocumentFlowControl" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="DocumentFlowControl_DocumentFlowBranch1" Member="BranchStepItem" ThisKey="BranchStep" OtherKey="StepID" Type="DocumentFlowControl" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="center.DocumentFlow" Member="DocumentFlow">
+    <Type Name="DocumentFlow">
+      <Column Name="FlowID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FlowName" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="InitialStep" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="DocumentFlow_DocumentFlowControl" Member="DocumentFlowControl" ThisKey="FlowID" OtherKey="FlowID" Type="DocumentFlowControl" />
+      <Association Name="DocumentFlow_DocumentTypeFlow" Member="DocumentTypeFlow" ThisKey="FlowID" OtherKey="FlowID" Type="DocumentTypeFlow" />
+      <Association Name="DocumentFlow_CommonDocumentTypeFlow" Member="CommonDocumentTypeFlow" ThisKey="FlowID" OtherKey="FlowID" Type="CommonDocumentTypeFlow" />
+      <Association Name="DocumentFlowControl_DocumentFlow" Member="InitStepItem" ThisKey="InitialStep" OtherKey="StepID" Type="DocumentFlowControl" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

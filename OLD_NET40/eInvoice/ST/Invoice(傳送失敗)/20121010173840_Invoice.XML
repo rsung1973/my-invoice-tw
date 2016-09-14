@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<InvoiceRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Invoice>
+    <InvoiceNumber>GH99950664</InvoiceNumber>
+    <InvoiceDate>2012/10/10</InvoiceDate>
+    <InvoiceTime>17:38:36</InvoiceTime>
+    <SellerId>26305533</SellerId>
+    <BuyerName />
+    <BuyerId />
+    <InvoiceType>03</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <CarrierType />
+    <CarrierId1 />
+    <CarrierId2 />
+    <PrintMark>Y</PrintMark>
+    <NPOBAN />
+    <RandomNumber>4384</RandomNumber>
+    <InvoiceItem>
+      <Description>雙面國旗防塵塞</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>120</UnitPrice>
+      <Amount>120.0000</Amount>
+      <SequenceNumber>1</SequenceNumber>
+      <Item>I1</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>總折讓</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>0</UnitPrice>
+      <Amount>0</Amount>
+      <SequenceNumber>999</SequenceNumber>
+      <Item>999</Item>
+      <Remark>總折讓</Remark>
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <SalesAmount>114</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0.05</TaxRate>
+    <TaxAmount>6</TaxAmount>
+    <TotalAmount>120</TotalAmount>
+    <DiscountAmount>0</DiscountAmount>
+  </Invoice>
+</InvoiceRoot>

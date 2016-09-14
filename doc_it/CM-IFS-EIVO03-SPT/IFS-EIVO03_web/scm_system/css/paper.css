@@ -1,0 +1,177 @@
+.dline01{border-top:1px solid #000000} /*黑線*/
+.dline01_right{border-right:1px solid #000000} /*黑線*/
+.dline01_tr{border-right:1px solid #000000;border-top:1px solid #000000} /*黑線*/
+.dline01_v{background:url(../images/line_v.gif) repeat-y right} /*黃底*/
+.dline01_trline{border-top:1px solid #000000;background:url(../images/line_l.gif) no-repeat top right} /*黃底*/
+.dline01_underline{border-bottom:1px solid #000000} /*黑線*/
+.dline01_underdotline{border-bottom:1px dotted #000000} /*黑線*/
+.dline01_dot{border-bottom:1px dotted #000000} /*黑線*/
+.dline03{background:#F3F3F3 url(../images/line.gif) repeat-x;padding-top:3px;padding-bottom:3px;} /*灰底*/
+.dline05{background:url(../images/line.gif) repeat-x;padding-top:3px;padding-bottom:3px;} /*無底色*/
+#bkcell{
+	border:1px solid #000000;
+	margin:10px;
+	padding:5px;
+	text-align:left;
+}
+
+#table_title{
+	border-bottom:4px solid #FF9933;
+	margin:1px;
+	color:#0A4B96;
+	text-align:left;
+	font-size:12pt;	
+	margin-top:10px;
+}
+#table_title td{
+	padding:5px;
+}
+
+#table_msg{
+	margin:10px;
+	color:#0A4B96;
+	text-align:left;
+	font-size:10pt;	
+}
+#table_msg td{
+	/*padding:5px;*/
+}
+
+#table01{
+	/*border-top:1px solid #D3D3D3;
+	border-left:1px solid #D3D3D3;*/
+	font-family:"Times New Roman",Times,Georgia,"新細明體","細明體",serif;
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 0px;
+	color:#000000;
+}
+#table01 caption{
+	font-family:Arial,Helvetica,Geneva,"新細明體","細明體",sans-serif;
+	font-size:12px;
+	color:#FF4500;
+	padding:5px 0px 2px 0px;
+}
+#table01 th {
+	padding:2px 0px 3px 0px;
+	font-family:sans-serif,Geneva,Arial,Helvetica,"新細明體","細明體",sans-serif;
+	font-size: 12px;
+	color: #FFFFFF;
+	background-color:#3C8AD8;
+	font-weight:normal;
+	line-height: 20px;
+}
+#table01 td{
+	font-family:"Times New Roman",Times,Georgia,"新細明體","細明體",serif;
+	font-size: 12px;
+	line-height: 150%;
+	text-align:center;
+	padding-top:3px;
+	padding-bottom:3px;
+}
+#table01 h1{
+	font-size:15px;
+	line-height:150%;
+	letter-spacing:0px;
+	font-weight:bold;
+	margin:0 10px 10px 10px;
+}
+#table01 h2{
+	font-size:11px;
+	line-height:150%;
+	letter-spacing:0px;
+	font-weight:bold;
+	margin:0 10px 0 10px;
+}
+#table01 h3{
+	font-size:11px;
+	line-height:150%;
+	letter-spacing:0px;
+	font-weight:normal;
+	margin:0 10px 0 10px;
+}
+#table01 p{
+	font-size:9px;
+	line-height:150%;
+	text-align:left;
+	margin:0 5px 0 10px;
+}
+
+#table_none{
+	font-size: 12px;
+	color:#555555;
+	line-height: 150%;
+	border:0px;
+}
+#table_none a:link,#table_none a:visited,#table_none a:active{
+	color:#636563;
+	line-height:150%;
+	text-decoration: none;
+	margin:2px 0px 2px 0px;
+}
+#table02{
+	/*border-top:1px solid #D3D3D3;
+	border-left:1px solid #D3D3D3;*/
+	font-family:"Times New Roman",Times,Georgia,"新細明體","細明體",serif;
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 0px;
+	color:#000000;
+}
+#table02 th{
+	padding:5px 0 5px 0px;
+	color:#000000;
+	font-size:12px;
+}
+#table02 td{
+	padding:5px 0 2px 5px;
+	color:#000000;
+	font-size:12px;
+}
+#table_none a:hover{
+	color:#0066CC;
+	text-decoration: underline;
+}
+#table_none td{
+	line-height:20px;
+	border:0px;
+	text-align:left;
+}
+
+.txt-green{
+	color:#009800;
+	text-align:right;
+}
+.td-white01{
+	background-color:#FFFFFF;
+}
+.td-gray01{
+	background-color:#F3F3F3;
+}
+.td-blue01{
+	background-color:#3C8AD8;
+}
+
+.text-red{
+	color:#FF4500;
+}
+td.txt-none{
+	font-family:"Times New Roman",Times,Georgia,"新細明體","細明體",serif;
+	color:#000000;
+	font-size:9px;
+}
+.pbtp{
+	margin:0px 0px 0px 0px;
+	padding:10px 0px 10px 0px;
+	text-align:center;
+}
+
+.button_01{
+	font-family:"新細明體","細明體",sans-serif;
+	font-size: 12px;
+	color:#0A4B96;
+	padding-top:3px;
+	letter-spacing: 5px;
+	border: 1px solid #027CC5;
+	background-color:#D5EBFF;
+	CURSOR: hand;
+}
+

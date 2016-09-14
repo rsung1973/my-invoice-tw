@@ -1,0 +1,20 @@
+﻿.js-fields-container {
+    /*width:100%;*/
+    border: 1px solid #d3d3d3;
+}
+
+    .js-fields-container div {
+        /*width:100%;*/
+    }
+
+    .js-fields-container .js-fields-header {
+        background-color: #d3d3d3;
+        padding: 2px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .js-fields-container .js-fields-content {
+        display: none;
+        padding: 5px;
+    }

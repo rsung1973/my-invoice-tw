@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="big5" ?>
+<menuItem value="" url="">
+	<menuItem value="《 首頁" url="main_page.aspx"></menuItem>
+	<menuItem value="《 訊息匣" url="inbox_notification_page.aspx"></menuItem>
+	<menuItem value="《 額度管理" url="Page2.htm">
+		<menuItem value="查詢功能             " url="Page2.htm">
+			<menuItem value="額度" url="Page2.htm" />
+			<menuItem value="額度變更記錄" url="Page2.htm" />
+			<menuItem value="額度審核狀況" url="Page2.htm" />
+			<menuItem value="動支明細表" url="Page2.htm" />
+			<menuItem value="帳齡分析表" url="Page2.htm" />
+			<menuItem value="逾期帳齡分析表" url="Page2.htm" />
+			<menuItem value="當日銀行付款清冊" url="Page2.htm" />
+			<menuItem value="當日買方兌現清冊" url="Page2.htm" />
+			<menuItem value="L/C基本資料" url="query_lc_page.aspx" />
+		</menuItem>
+		<menuItem value="匯入匯出             " url="Page2.htm">
+			<menuItem value="匯入A/R買斷合約" url="Page2.htm" />
+			<menuItem value="匯出額度恢復檔" url="Page2.htm" />
+			<menuItem value="匯入L/C基本資料" url="import_lc_main_page.aspx" />
+			<menuItem value="匯入L/C完整資料" url="import_lc_page.aspx"/>
+			<menuItem value="匯入匯票正面印章" url="import_signature_page.aspx" />
+			<menuItem value="匯入匯票反面印章" url="import_signature_page.aspx?sealType=back" />
+			<menuItem value="匯入發票印章" url="import_signature_page.aspx?sealType=invoice" />
+		</menuItem>
+		<menuItem value="變更功能             " url="Page2.htm">
+			<menuItem value="申請額度變更" url="Page2.htm" />
+			<menuItem value="申請額度展延" url="Page2.htm" />
+			<menuItem value="輸入可信用額度" url="Page2.htm" />
+			<menuItem value="設定銀行與被保人" url="Page2.htm" />
+		</menuItem>
+		<menuItem value="審核功能             " url="Page2.htm">
+			<menuItem value="交付內部審核" url="Page2.htm" />
+			<menuItem value="交付被保人用印" url="Page2.htm" />
+		</menuItem>
+	</menuItem>
+	<menuItem value="《 請購單管理" url="Page2.htm">
+		<menuItem value="查詢功能             " url="Page2.htm">
+			<menuItem value="請購單" url="Page2.htm" />
+			<menuItem value="請購單明細" url="Page2.htm" />
+			<menuItem value="付款請購單明細表" url="Page2.htm" />
+			<menuItem value="匯票基本資料" url="query_draft_page.aspx" />
+			<menuItem value="檢查/送出/刪除押匯單據" url="check_to_send_draft_list_page.aspx" />
+		</menuItem>
+		<menuItem value="匯入功能             " url="Page2.htm">
+			<menuItem value="請購單明細表" url="Page2.htm" />
+			<menuItem value="A/R發票" url="Page2.htm" />
+			<menuItem value="匯票" url="import_draft_main_page.aspx" />
+			<menuItem value="L/C發票" url="import_invoice_main_page.aspx" />
+		</menuItem>
+	</menuItem>
+	<menuItem value="《 票券管理" url="Page2.htm">
+		<menuItem value="查詢功能             " url="Page2.htm">
+			<menuItem value="待處理本票清冊" url="Page2.htm" />
+			<menuItem value="已開立本票清冊" url="Page2.htm" />
+			<menuItem value="待融資交易本票" url="Page2.htm" />
+			<menuItem value="買進成交單" url="Page2.htm" />
+			<menuItem value="背書備查簿" url="Page2.htm" />
+		</menuItem>
+		<menuItem value="匯入匯出             " url="Page2.htm">
+			<menuItem value="匯入待融資交易本票" url="Page2.htm" />
+			<menuItem value="匯出待融資交易本票" url="Page2.htm" />
+			<menuItem value="匯入背書印鑑" url="Page2.htm" />
+		</menuItem>
+		<menuItem value="電子印鑑管理" url="">
+		</menuItem>
+	</menuItem>
+	<menuItem value="《 逾期管理" url="Page2.htm">
+		<menuItem value="查詢                 " url="Page2.htm">
+			<menuItem value="查詢逾期請購單" url="Page2.htm" />
+			<menuItem value="當日銀行凍結清冊" url="Page2.htm" />
+			<menuItem value="當日銀行解凍清冊" url="Page2.htm" />
+		</menuItem>
+		<menuItem value="違約事件記錄" url="Page2.htm">
+		</menuItem>
+	</menuItem>
+	<menuItem value="《 會員管理" url="">
+		<menuItem value="會員資料" url="">
+			<menuItem value="會員資料維護" url="organization_main_page.aspx" />
+			<menuItem value="類別維護" url="category_main_page.aspx" />
+			<menuItem value="銀行資料維護" url="bank_main_page.aspx" />
+		</menuItem>
+		<menuItem value="會員使用者資料" url="">
+			<menuItem value="人員角色維護" url="user_role_main_page.aspx" />
+			<menuItem value="人員資料維護" url="main_page.aspx?userProfile" />
+		</menuItem>
+		<menuItem value="個人設定" url="main_page.aspx?showUserProfile">
+		</menuItem>
+	</menuItem>
+</menuItem>

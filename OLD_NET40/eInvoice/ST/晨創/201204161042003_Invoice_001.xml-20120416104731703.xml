@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<InvoiceRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Invoice>
+    <InvoiceNumber>AM83511148</InvoiceNumber>
+    <InvoiceDate>2012/04/16</InvoiceDate>
+    <InvoiceTime>10:42:03</InvoiceTime>
+    <SellerId>53147117</SellerId>
+    <BuyerName>5JLM</BuyerName>
+    <BuyerId>0000000000</BuyerId>
+    <InvoiceType>05</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <InvoiceItem>
+      <Description>BW5011#B蒂巴蕾唐辛子健康挺麗 燃燒系內衣三分袖</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>290</UnitPrice>
+      <Amount>290</Amount>
+      <SequenceNumber>1</SequenceNumber>
+      <Remark />
+      <TaxType>0</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>運費</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>50</UnitPrice>
+      <Amount>50</Amount>
+      <SequenceNumber>2</SequenceNumber>
+      <Remark />
+      <TaxType>0</TaxType>
+    </InvoiceItem>
+    <SalesAmount>324</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0</TaxRate>
+    <TaxAmount>16</TaxAmount>
+    <TotalAmount>340</TotalAmount>
+    <DiscountAmount>0</DiscountAmount>
+  </Invoice>
+</InvoiceRoot>

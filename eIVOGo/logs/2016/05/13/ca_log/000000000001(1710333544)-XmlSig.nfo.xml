@@ -1,0 +1,23 @@
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="">
+  <UXB2B>電子發票系統</UXB2B>
+  <Request actionName="用戶端系統正在執行中" periodicalInterval="1800" />
+  <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+    <SignedInfo>
+      <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" />
+      <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" />
+      <Reference URI="">
+        <Transforms>
+          <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" />
+        </Transforms>
+        <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <DigestValue>MeiwjXbywW1OUs4aBqmk6Z0N1jo=</DigestValue>
+      </Reference>
+    </SignedInfo>
+    <SignatureValue>NJFhx3WVo9I1mASJfECx4OunXCMWiXBHglG2wqyvwINXsF9mCIOxOLwj225nC9LX1+F076DYIzmZrujtUfTEZ0ZkDyAulvM5T/Cn+DSQWK/oJOecH3JwoduqmF6r8opvdM229LWljC6F8+4id4e2eIh8TOMVddeAfugkax3IdV0=</SignatureValue>
+    <KeyInfo>
+      <X509Data>
+        <X509Certificate>MIIEMjCCAxqgAwIBAgIKZvJzEwAAAAACSzANBgkqhkiG9w0BAQUFADAjMSEwHwYDVQQDExhVWEIyQiBDZXJ0aWZpY2F0ZSBDZW50ZXIwHhcNMTQwMzEyMDMzODA5WhcNMjQwMzEyMDM0ODA5WjAxMQswCQYDVQQGEwJUVzEPMA0GA1UEChMGR29vZ2xlMREwDwYDVQQDEwgyNzkzNDg1NTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAztitpzIE+UB3x4FehBtXtkQRXs9ONtHheqFatDIhZZvOqMkffQNh66zRIJtejoWOubTjoKYrgsgaKzKN5PowV4+6QvLKsEIqaaDD8mqr2HJD1TM/HZrGGgqr3ZVcn4HlqE8+19iTU2fMvmy6eTF86vgXPeqQwzCaEnXE0bi1dlMCAwEAAaOCAdwwggHYMA4GA1UdDwEB/wQEAwIE8DBEBgkqhkiG9w0BCQ8ENzA1MA4GCCqGSIb3DQMCAgIAgDAOBggqhkiG9w0DBAICAIAwBwYFKw4DAgcwCgYIKoZIhvcNAwcwHQYDVR0OBBYEFKffM2yTBlQKklJ2GD5ih4eI1urVMBMGA1UdJQQMMAoGCCsGAQUFBwMCMB8GA1UdIwQYMBaAFJWzKAYELIP9HnQsQ0G5+YebYKAvMIGBBgNVHR8EejB4MHagdKByhjhodHRwOi8vc3NsY2EvQ2VydEVucm9sbC9VWEIyQiUyMENlcnRpZmljYXRlJTIwQ2VudGVyLmNybIY2ZmlsZTovL1xcU1NMQ0FcQ2VydEVucm9sbFxVWEIyQiBDZXJ0aWZpY2F0ZSBDZW50ZXIuY3JsMIGmBggrBgEFBQcBAQSBmTCBljBKBggrBgEFBQcwAoY+aHR0cDovL3NzbGNhL0NlcnRFbnJvbGwvU1NMQ0FfVVhCMkIlMjBDZXJ0aWZpY2F0ZSUyMENlbnRlci5jcnQwSAYIKwYBBQUHMAKGPGZpbGU6Ly9cXFNTTENBXENlcnRFbnJvbGxcU1NMQ0FfVVhCMkIgQ2VydGlmaWNhdGUgQ2VudGVyLmNydDANBgkqhkiG9w0BAQUFAAOCAQEAwvwYTFZJrR+ZPvtlJE7f5FdaCv9U0LtY4Yd+3G8RY5XBU94Uui/oPdsNZmaw+iIzZX0Gv6We3IH/O87IMqfwtIT0SQeThPfzupasIz7/qV87qAFbF3OH5JdCWHoD1y13E/Sei26/GIbQUSZHQVCITI7T7g9b+USQYmqFcLwIWy9UWXyFhCUn71mBdXg04lAtQZ5XH+pQhMQLWYhxxUmtqJb2TB1xmcw/PNZCVpOyYXiewqW7FO5iGuXO8qq1jRK7kA7u4fZguLSzV9v+9tIucodsQ81Nv08lpauc733W6l7lQnCQZ5XC8a9xmwk0xVhVuASaLQELs9vgrvSL/JgjEA==</X509Certificate>
+      </X509Data>
+    </KeyInfo>
+  </Signature>
+</Root>

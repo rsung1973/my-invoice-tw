@@ -1,0 +1,100 @@
+2016/01/02 01:01:01
+System.Web.HttpUnhandledException (0x80004005): 已發生類型 'System.Web.HttpUnhandledException' 的例外狀況。 ---> System.InvalidOperationException: The partial view 'Module/InquireWinning' was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/DonatedInvoice/Module/InquireWinning.aspx
+~/Views/DonatedInvoice/Module/InquireWinning.ascx
+~/Views/Shared/Module/InquireWinning.aspx
+~/Views/Shared/Module/InquireWinning.ascx
+~/Views/DonatedInvoice/Module/InquireWinning.cshtml
+~/Views/DonatedInvoice/Module/InquireWinning.vbhtml
+~/Views/Shared/Module/InquireWinning.cshtml
+~/Views/Shared/Module/InquireWinning.vbhtml
+   於 System.Web.Mvc.HtmlHelper.FindPartialView(ViewContext viewContext, String partialViewName, ViewEngineCollection viewEngineCollection)
+   於 System.Web.Mvc.HtmlHelper.RenderPartialInternal(String partialViewName, ViewDataDictionary viewData, Object model, TextWriter writer, ViewEngineCollection viewEngineCollection)
+   於 System.Web.Mvc.Html.RenderPartialExtensions.RenderPartial(HtmlHelper htmlHelper, String partialViewName, Object model)
+   於 ASP.views_donatedinvoice_module_reportresult_ascx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 於 c:\Project\VM-SIT04\IFS-EIVO03\eIVOGo\Views\DonatedInvoice\Module\ReportResult.ascx: 行 18
+   於 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   於 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   於 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   於 System.Web.Mvc.ViewPage.Render(HtmlTextWriter writer)
+   於 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.HandleError(Exception e)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.ProcessRequest()
+   於 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   於 System.Web.Mvc.ViewPage.RenderView(ViewContext viewContext)
+   於 System.Web.Mvc.ViewUserControl.RenderViewAndRestoreContentType(ViewPage containerPage, ViewContext viewContext)
+   於 System.Web.Mvc.ViewUserControl.RenderView(ViewContext viewContext)
+   於 System.Web.Mvc.Html.RenderPartialExtensions.RenderPartial(HtmlHelper htmlHelper, String partialViewName, Object model)
+   於 ASP.views_donatedinvoice_reportresult_aspx.__RendermainContent(HtmlTextWriter __w, Control parameterContainer) 於 c:\Project\VM-SIT04\IFS-EIVO03\eIVOGo\Views\DonatedInvoice\ReportResult.aspx: 行 9
+   於 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   於 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   於 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   於 System.Web.UI.HtmlControls.HtmlForm.RenderChildren(HtmlTextWriter writer)
+   於 System.Web.UI.HtmlControls.HtmlContainerControl.Render(HtmlTextWriter writer)
+   於 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   於 System.Web.UI.HtmlControls.HtmlForm.RenderControl(HtmlTextWriter writer)
+   於 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   於 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   於 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   於 System.Web.Mvc.ViewPage.Render(HtmlTextWriter writer)
+   於 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.ProcessRequest()
+   於 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   於 ASP.views_donatedinvoice_reportresult_aspx.ProcessRequest(HttpContext context) 於 c:\Windows\Microsoft.NET\Framework64\v4.0.30319\Temporary ASP.NET Files\root\735e7382\d679391e\App_Web_x2r0sfai.0.cs: 行 0
+   於 System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerWrapper.<>c__DisplayClass4.<Wrap>b__3()
+   於 System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerWrapper.Wrap[TResult](Func`1 func)
+   於 System.Web.HttpServerUtility.ExecuteInternal(IHttpHandler handler, TextWriter writer, Boolean preserveForm, Boolean setPreviousPage, VirtualPath path, VirtualPath filePath, String physPath, Exception error, String queryStringOverride)
+2016/01/02 01:01:14
+System.Web.HttpUnhandledException (0x80004005): 已發生類型 'System.Web.HttpUnhandledException' 的例外狀況。 ---> System.InvalidOperationException: The partial view 'Module/InquireWinning' was not found or no view engine supports the searched locations. The following locations were searched:
+~/Views/DonatedInvoice/Module/InquireWinning.aspx
+~/Views/DonatedInvoice/Module/InquireWinning.ascx
+~/Views/Shared/Module/InquireWinning.aspx
+~/Views/Shared/Module/InquireWinning.ascx
+~/Views/DonatedInvoice/Module/InquireWinning.cshtml
+~/Views/DonatedInvoice/Module/InquireWinning.vbhtml
+~/Views/Shared/Module/InquireWinning.cshtml
+~/Views/Shared/Module/InquireWinning.vbhtml
+   於 System.Web.Mvc.HtmlHelper.FindPartialView(ViewContext viewContext, String partialViewName, ViewEngineCollection viewEngineCollection)
+   於 System.Web.Mvc.HtmlHelper.RenderPartialInternal(String partialViewName, ViewDataDictionary viewData, Object model, TextWriter writer, ViewEngineCollection viewEngineCollection)
+   於 System.Web.Mvc.Html.RenderPartialExtensions.RenderPartial(HtmlHelper htmlHelper, String partialViewName, Object model)
+   於 ASP.views_donatedinvoice_module_reportresult_ascx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) 於 c:\Project\VM-SIT04\IFS-EIVO03\eIVOGo\Views\DonatedInvoice\Module\ReportResult.ascx: 行 18
+   於 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   於 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   於 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   於 System.Web.Mvc.ViewPage.Render(HtmlTextWriter writer)
+   於 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.HandleError(Exception e)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.ProcessRequest()
+   於 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   於 System.Web.Mvc.ViewPage.RenderView(ViewContext viewContext)
+   於 System.Web.Mvc.ViewUserControl.RenderViewAndRestoreContentType(ViewPage containerPage, ViewContext viewContext)
+   於 System.Web.Mvc.ViewUserControl.RenderView(ViewContext viewContext)
+   於 System.Web.Mvc.Html.RenderPartialExtensions.RenderPartial(HtmlHelper htmlHelper, String partialViewName, Object model)
+   於 ASP.views_donatedinvoice_reportresult_aspx.__RendermainContent(HtmlTextWriter __w, Control parameterContainer) 於 c:\Project\VM-SIT04\IFS-EIVO03\eIVOGo\Views\DonatedInvoice\ReportResult.aspx: 行 9
+   於 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   於 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   於 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   於 System.Web.UI.HtmlControls.HtmlForm.RenderChildren(HtmlTextWriter writer)
+   於 System.Web.UI.HtmlControls.HtmlContainerControl.Render(HtmlTextWriter writer)
+   於 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   於 System.Web.UI.HtmlControls.HtmlForm.RenderControl(HtmlTextWriter writer)
+   於 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   於 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   於 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   於 System.Web.Mvc.ViewPage.Render(HtmlTextWriter writer)
+   於 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.ProcessRequest()
+   於 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   於 ASP.views_donatedinvoice_reportresult_aspx.ProcessRequest(HttpContext context) 於 c:\Windows\Microsoft.NET\Framework64\v4.0.30319\Temporary ASP.NET Files\root\735e7382\d679391e\App_Web_x2r0sfai.0.cs: 行 0
+   於 System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerWrapper.<>c__DisplayClass4.<Wrap>b__3()
+   於 System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerWrapper.Wrap[TResult](Func`1 func)
+   於 System.Web.HttpServerUtility.ExecuteInternal(IHttpHandler handler, TextWriter writer, Boolean preserveForm, Boolean setPreviousPage, VirtualPath path, VirtualPath filePath, String physPath, Exception error, String queryStringOverride)

@@ -1,0 +1,138 @@
+<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <title>Procedure Details</title>
+    <LINK HREF="RadGrid_Office2007.css" REL="stylesheet" TYPE="text/css">
+    <LINK HREF="RadTabStrip.css" REL="stylesheet" TYPE="text/css">
+    <LINK HREF="RadTabStrip_Office2007.css" REL="stylesheet" TYPE="text/css">
+  </head>
+  <body class="RadGrid RadGrid_Office2007">
+    <table cellspacing="0" cellpadding="0" style="width:100%">
+      <tr>
+        <td>
+          <div id="RadTabStrip1" class="RadTabStrip RadTabStrip_Office2007 RadTabStripTop_Office2007">
+            <div class="rtsLevel rtsLevel1">
+              <ul class="rtsUL">
+                <li class="rtsLI rtsFirst rtsLast"><a class="rtsLink rtsSelected" href="#"><span class="rtsOut"><span class="rtsIn"><span class="rtsTxt"><font style="font-weight:bold" size="2.5px">Procedure Details</font></span></span></span></a></li>
+              </ul>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-top:solid 0px #8db2e3; border-right:solid 3px #8db2e3; border-bottom:solid 1px #8db2e3; border-left:solid 1px #8db2e3; padding:10px;">
+          <font style="font-weight:bold" size="2px">Description</font>
+          <hr class="RadGrid RadGrid_Office2007">
+          <font style="font-weight:normal" size="2px"></font><br><br><font style="font-weight:bold" size="2px">Procedure Properties</font>
+          <hr class="RadGrid RadGrid_Office2007">
+          <div class="RadGrid RadGrid_Office2007" style="width:30%;">
+            <table class="MasterTable_Office2007" cellspacing="0" style="width:100%;border-collapse:collapse;table-layout:auto;empty-cells:show;" id="ListOfTables">
+              <thead>
+                <tr class="GridRow_Office2007">
+                  <th class="GridHeader_Office2007" width="20%">Name</th>
+                  <th class="GridHeader_Office2007" width="80%">Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="GridRow_Office2007">
+                  <td>Name</td>
+                  <td>GetCompanyUserRole</td>
+                </tr>
+                <tr class="GridRow_Office2007">
+                  <td>Schema</td>
+                  <td>dbo</td>
+                </tr>
+                <tr class="GridRow_Office2007">
+                  <td>Creation Date</td>
+                  <td>2006/12/4 下午 06:24:43</td>
+                </tr>
+                <tr class="GridRow_Office2007">
+                  <td>Last Altered</td>
+                  <td>2011/8/11 上午 11:37:47</td>
+                </tr>
+              </tbody>
+            </table>
+          </div><br><font style="font-weight:bold" size="2px">Parameter(s)</font>
+          <hr class="RadGrid RadGrid_Office2007">
+          <div class="RadGrid RadGrid_Office2007" style="width:50%;">
+            <table class="MasterTable_Office2007" cellspacing="0" style="width:100%;border-collapse:collapse;table-layout:auto;empty-cells:show;" id="ListOfTables">
+              <thead>
+                <tr class="GridRow_Office2007">
+                  <th class="GridHeader_Office2007" width="10%">Name</th>
+                  <th class="GridHeader_Office2007" width="10%">Data Type</th>
+                  <th class="GridHeader_Office2007" width="10%">Max Length</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="GridRow_Office2007">
+                  <td>@CategoryID</td>
+                  <td>int</td>
+                  <td>
+                                 
+                              </td>
+                </tr>
+                <tr class="GridRow_Office2007">
+                  <td>@CompanyID</td>
+                  <td>int</td>
+                  <td>
+                                 
+                              </td>
+                </tr>
+                <tr class="GridRow_Office2007">
+                  <td>@UID</td>
+                  <td>int</td>
+                  <td>
+                                 
+                              </td>
+                </tr>
+              </tbody>
+            </table>
+          </div><br><font style="font-weight:bold" size="2px">Recordset(s)</font>
+          <hr class="RadGrid RadGrid_Office2007">
+          <div class="RadGrid RadGrid_Office2007" style="width:50%;">
+            <table class="MasterTable_Office2007" cellspacing="0" style="width:100%;border-collapse:collapse;table-layout:auto;empty-cells:show;" id="ListOfTables">
+              <thead>
+                <tr class="GridRow_Office2007">
+                  <th class="GridHeader_Office2007" width="10%">Name</th>
+                  <th class="GridHeader_Office2007" width="10%">Data Type</th>
+                  <th class="GridHeader_Office2007" width="10%">Max Length</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div><br><font style="font-weight:bold" size="2px">SQL</font>
+          <hr class="RadGrid RadGrid_Office2007">
+          <div class="RadGrid RadGrid_Office2007" style="width:100%;">
+            <table class="MasterTable_Office2007" cellspacing="0" style="width:100%;border-collapse:collapse;table-layout:auto;empty-cells:show;" id="ListOfTables">
+              <thead>
+                <tr class="GridRow_Office2007">
+                  <th class="GridHeader_Office2007" width="100%">Creation Script</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="GridRow_Office2007">
+                  <td>
+                    <pre>SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+CREATE PROCEDURE [dbo].[GetCompanyUserRole]
+	(
+		@CompanyID	int,
+		@UID	int,
+		@CategoryID	int
+	)
+AS
+	/* SET NOCOUNT ON */
+	SELECT V_UserRole.*
+	FROM  V_UserRole where CompanyID = @CompanyID and UID = @UID and CategoryID = @CategoryID
+	RETURN 
+</pre>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

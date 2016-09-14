@@ -1,0 +1,11 @@
+<dsPKCS7>
+  <pkcs7Envelop>
+    <UniqueID>66F2731300000000024B</UniqueID>
+    <NotBefore>2014/3/12 上午 11:38:09</NotBefore>
+    <NotAfter>2024/3/12 上午 11:48:09</NotAfter>
+    <Subject>CN=27934855, O=Google, C=TW</Subject>
+    <Issuer>CN=UXB2B Certificate Center</Issuer>
+    <DataSignature>C:\Project\VM-SIT04\IFS-EIVO03\eIVOGo\logs\2016\06\28\ca_log\000000000003(1310329674)-XmlSig.nfo.xml</DataSignature>
+    <ActionTime>2016-06-28T13:10:32.964521+08:00</ActionTime>
+  </pkcs7Envelop>
+</dsPKCS7>

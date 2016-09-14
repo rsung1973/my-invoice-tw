@@ -1,0 +1,121 @@
+<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <title>Trigger Details</title>
+    <LINK HREF="RadGrid_Office2007.css" REL="stylesheet" TYPE="text/css">
+    <LINK HREF="RadTabStrip.css" REL="stylesheet" TYPE="text/css">
+    <LINK HREF="RadTabStrip_Office2007.css" REL="stylesheet" TYPE="text/css">
+  </head>
+  <body class="RadGrid RadGrid_Office2007">
+    <table cellspacing="0" cellpadding="0" style="width:100%">
+      <tr>
+        <td>
+          <div id="RadTabStrip1" class="RadTabStrip RadTabStrip_Office2007 RadTabStripTop_Office2007">
+            <div class="rtsLevel rtsLevel1">
+              <ul class="rtsUL">
+                <li class="rtsLI rtsFirst rtsLast"><a class="rtsLink rtsSelected" href="#"><span class="rtsOut"><span class="rtsIn"><span class="rtsTxt"><font style="font-weight:bold" size="2.5px">Trigger Details</font></span></span></span></a></li>
+              </ul>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-top:solid 0px #8db2e3; border-right:solid 3px #8db2e3; border-bottom:solid 1px #8db2e3; border-left:solid 1px #8db2e3; padding:10px;">
+          <font style="font-weight:bold" size="2px">Description</font>
+          <hr class="RadGrid RadGrid_Office2007">
+          <font style="font-weight:normal" size="2px">
+          </font><br><br><font style="font-weight:bold" size="2px">View Properties</font>
+          <hr class="RadGrid RadGrid_Office2007">
+          <div class="RadGrid RadGrid_Office2007" style="width:30%;">
+            <table class="MasterTable_Office2007" cellspacing="0" style="width:100%;border-collapse:collapse;table-layout:auto;empty-cells:show;" id="ListOfTables">
+              <thead>
+                <tr class="GridRow_Office2007">
+                  <th class="GridHeader_Office2007" width="20%">Name</th>
+                  <th class="GridHeader_Office2007" width="80%">Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="GridRow_Office2007">
+                  <td>Description</td>
+                  <td>
+                                 
+                              </td>
+                </tr>
+                <tr class="GridRow_Office2007">
+                  <td>Name</td>
+                  <td>TR_InvoiceItem</td>
+                </tr>
+                <tr class="GridRow_Office2007">
+                  <td>CreateDate</td>
+                  <td>2011/3/15 下午 04:41:31</td>
+                </tr>
+                <tr class="GridRow_Office2007">
+                  <td>IsEnabled</td>
+                  <td>True</td>
+                </tr>
+              </tbody>
+            </table>
+          </div><br><font style="font-weight:bold" size="2px">Type</font>
+          <hr class="RadGrid RadGrid_Office2007">
+          <div class="RadGrid RadGrid_Office2007" style="width:50%;">
+            <table class="MasterTable_Office2007" cellspacing="0" style="width:100%;border-collapse:collapse;table-layout:auto;empty-cells:show;" id="ListOfTables">
+              <thead>
+                <tr class="GridRow_Office2007">
+                  <th class="GridHeader_Office2007" width="10%">InsteadOf</th>
+                  <th class="GridHeader_Office2007" width="10%">Insert</th>
+                  <th class="GridHeader_Office2007" width="10%">Update</th>
+                  <th class="GridHeader_Office2007" width="10%">Delete</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="GridRow_Office2007">
+                  <td>False</td>
+                  <td>True</td>
+                  <td>False</td>
+                  <td>False</td>
+                </tr>
+              </tbody>
+            </table>
+          </div><br><font style="font-weight:bold" size="2px">SQL</font>
+          <hr class="RadGrid RadGrid_Office2007">
+          <div class="RadGrid RadGrid_Office2007" style="width:100%;">
+            <table class="MasterTable_Office2007" cellspacing="0" style="width:100%;border-collapse:collapse;table-layout:auto;empty-cells:show;" id="ListOfTables">
+              <thead>
+                <tr class="GridRow_Office2007">
+                  <th class="GridHeader_Office2007" width="100%">Creation Script</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="GridRow_Office2007">
+                  <td>
+                    <pre>SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+CREATE TRIGGER [dbo].[TR_InvoiceItem]
+   ON  [dbo].[InvoiceItem]
+   AFTER  INSERT
+AS 
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+	
+	INSERT INTO DocumentReplication
+               (DocID,TypeID)
+	SELECT inserted.InvoiceID,10
+	FROM  inserted  
+	
+	insert into CALog (DocID,TypeID,Catalog)
+	SELECT inserted.InvoiceID,10,10
+	FROM  inserted
+	
+END	  </pre>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

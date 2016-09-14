@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--此檔案是由 XML 結構描述設計工具自動產生。它儲存元件在設計工具介面上的版面配置資訊。-->
+<XSDDesignerLayout layoutVersion="2" viewPortLeft="-4725" viewPortTop="-746" zoom="100">
+    <Inbox_XmlElement left="-572" top="254" width="6012" height="2879" selected="0" zOrder="1" index="0" expanded="1">
+        <NegoEvent_XmlElement left="-3915" top="3641" width="5969" height="2878" selected="0" zOrder="2" index="0" expanded="1" />
+        <AREvent_XmlElement left="2688" top="3641" width="6096" height="2879" selected="0" zOrder="5" index="1" expanded="1" />
+    </Inbox_XmlElement>
+</XSDDesignerLayout>

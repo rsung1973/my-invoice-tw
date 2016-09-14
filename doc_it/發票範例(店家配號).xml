@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<InvoiceRoot>
+    <Invoice>
+        <InvoiceNumber>UW61233343</InvoiceNumber>
+        <InvoiceDate>2015/04/09</InvoiceDate>
+        <InvoiceTime>09:24:47</InvoiceTime>
+        <SellerId>04622803</SellerId>
+        <BuyerId>0000000000</BuyerId>
+        <BuyerName>xxxx</BuyerName>
+        <SalesAmount>110</SalesAmount>
+        <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+        <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+        <CustomsClearanceMark />
+        <TaxType>1</TaxType>
+        <TaxRate>0.05</TaxRate>
+        <TaxAmount>0</TaxAmount>
+        <TotalAmount>110</TotalAmount>
+        <PrintMark>Y</PrintMark>
+        <InvoiceType>07</InvoiceType>
+        <RandomNumber>7809</RandomNumber>
+        <DonateMark>0</DonateMark>
+        <CarrierType />
+        <CarrierId1 />
+        <CarrierId2 />
+        <NPOBAN />
+        <InvoiceItem>
+            <SequenceNumber>0</SequenceNumber>
+            <Description>葡萄乾吐司</Description>
+            <UnitPrice>60</UnitPrice>
+            <Quantity>1</Quantity>
+            <Amount>60</Amount>
+            <Unit />
+            <Remark />
+        </InvoiceItem>
+        <InvoiceItem>
+            <SequenceNumber>1</SequenceNumber>
+            <Description>松子棗糕</Description>
+            <UnitPrice>50</UnitPrice>
+            <Quantity>1</Quantity>
+            <Amount>50</Amount>
+            <Unit />
+            <Remark />
+        </InvoiceItem>
+    </Invoice>
+</InvoiceRoot>

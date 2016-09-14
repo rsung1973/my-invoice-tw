@@ -1,0 +1,25 @@
+<InvoiceEnterpriseRoot xmlns="">
+  <InvoiceEnterprise>
+    <SellerId>54763258</SellerId>
+    <SellerName>宜靜實業有限公司</SellerName>
+    <Address>臺中市北區文心路四段200號11樓之8</Address>
+    <TEL>(04)22411668</TEL>
+    <ContactName>黃小姐</ContactName>
+    <InvoiceType>07</InvoiceType>
+  </InvoiceEnterprise>
+  <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+    <SignedInfo>
+      <Reference URI="">
+        <Transforms>
+        </Transforms>
+        <DigestValue>vvqTi4Yn7rDZVwms55/znPi3emM=</DigestValue>
+      </Reference>
+    </SignedInfo>
+    <SignatureValue>pbJGr/1pCkxEV7nBhlZeBIvq73eH3QFc3FaEyffGzthyqY7brs9ZWo+ruyJrUi6F0Q+aS7LSaBXCfsjZ6uS5MoCv28wlEy/HoQDg5CaY8JWSmpxyhgetrtIc3CDJ0HTNAylxtGO+UxcHoCjk5v7hXIygg88TLeQCXCG+jQqxS0M=</SignatureValue>
+    <KeyInfo>
+      <X509Data>
+        <X509Certificate>MIID/TCCAuWgAwIBAgIKJ9Xv1AAAAAAC9zANBgkqhkiG9w0BAQUFADAjMSEwHwYDVQQDExhVWEIyQiBDZXJ0aWZpY2F0ZSBDZW50ZXIwHhcNMTYwMTI1MDcwNDI5WhcNMjYwMTI1MDcxNDI5WjBXMQswCQYDVQQGEwJUVzELMAkGA1UECBMCVFAxETAPBgNVBAMTCDI3NzM2OTUzMSgwJgYJKoZIhvcNAQkBFhltYXgud2lubmllMDIyM0BpdGkuY29tLnR3MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCtY+nM168WAQVf6gFlHSZQVFltBu3eW8gqd9EKXc+Tcp2I8VfWjtmm2qzbBVWcbdep87iK8kABshcE0CYua96JvOCOXLh4XyXnP8gCoWQW6yqwZRXCE+ZzYueB15b4Os9JFVwOH3ds7KD9u3tISCeK66JtvSmab/N0W9G+pwBQHQIDAQABo4IBgTCCAX0wHQYDVR0OBBYEFMEzruVmChLMPXp87fbUlvQvZzbeMA4GA1UdDwEB/wQEAwIHgDAfBgNVHSMEGDAWgBSVsygGBCyD/R50LENBufmHm2CgLzCBgQYDVR0fBHoweDB2oHSgcoY4aHR0cDovL3NzbGNhL0NlcnRFbnJvbGwvVVhCMkIlMjBDZXJ0aWZpY2F0ZSUyMENlbnRlci5jcmyGNmZpbGU6Ly9cXFNTTENBXENlcnRFbnJvbGxcVVhCMkIgQ2VydGlmaWNhdGUgQ2VudGVyLmNybDCBpgYIKwYBBQUHAQEEgZkwgZYwSgYIKwYBBQUHMAKGPmh0dHA6Ly9zc2xjYS9DZXJ0RW5yb2xsL1NTTENBX1VYQjJCJTIwQ2VydGlmaWNhdGUlMjBDZW50ZXIuY3J0MEgGCCsGAQUFBzAChjxmaWxlOi8vXFxTU0xDQVxDZXJ0RW5yb2xsXFNTTENBX1VYQjJCIENlcnRpZmljYXRlIENlbnRlci5jcnQwDQYJKoZIhvcNAQEFBQADggEBALCZlUBZ/JHrZ3SABC0s7gRXOg6BoMw/yJUUqPFguEbJ2EMbEHJhuBp5SRAOJQLHtPT8BE+ugYf1CwCGWvBtnqtZh21Xbdb3iHSseF/eIw0/Ga+pR75yGB18ikCoWD2K/5PhcAgPrHkO3lboovgzM1QBQp/UNRbOBr84+BPqDbUn2utsDW3uX+ET/wwcX04COQlnaiXtSFSzs3PcTSch7kegPjEny6yuzsqR/eZd9YXcZ02Bef7HVGVFo1ZMBpETQPZ6Syhn8nvQLQtbXttXkCtObVa9I0bwqG/dvUOaJd3PB4SAu9ANujAhcdAqFMFBSR4PTeK4ehupxx+nlFug4oQ=</X509Certificate>
+      </X509Data>
+    </KeyInfo>
+  </Signature>
+</InvoiceEnterpriseRoot>

@@ -1,0 +1,29 @@
+<InvoiceEnterpriseRoot xmlns="">
+  <InvoiceEnterprise>
+    <SellerId>42375269</SellerId>
+    <SellerName>台灣妙谷有限公司101門市部</SellerName>
+    <Address>台北市信義區市府路45號B1-32</Address>
+    <TEL>0281018670</TEL>
+    <Email>taipei101@garrettpopcorn.com.tw</Email>
+    <ContactName>李培元</ContactName>
+    <ContactPhone>0281018670</ContactPhone>
+    <ContactMobilePhone>0910686374</ContactMobilePhone>
+    <UndertakerName>Max</UndertakerName>
+    <InvoiceType>02</InvoiceType>
+  </InvoiceEnterprise>
+  <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+    <SignedInfo>
+      <Reference URI="">
+        <Transforms>
+        </Transforms>
+        <DigestValue>y6E/0PUJF2YfZaq7jBYfr2kY0us=</DigestValue>
+      </Reference>
+    </SignedInfo>
+    <SignatureValue>TGSwsBwmwaF8hToO8LIZeXSnXO3vJ/cUviPDiCDzPM716d1I4EZD7FNWRTy5L+tLHpWxHZQwmmZVeo1LOWOV0SyyFihPK2PhpixeoLMvqbaeGT+yq+SouUmG1CiJt5WNSUcIny5TxnCU8N8q0p1NPyR5uxCTRwvvlsybXfK/uOA=</SignatureValue>
+    <KeyInfo>
+      <X509Data>
+        <X509Certificate>MIID+jCCAuKgAwIBAgIKTzkcnQAAAAAC9jANBgkqhkiG9w0BAQUFADAjMSEwHwYDVQQDExhVWEIyQiBDZXJ0aWZpY2F0ZSBDZW50ZXIwHhcNMTUxMjE0MDUzNDI2WhcNMjUxMjE0MDU0NDI2WjBUMQswCQYDVQQGEwJUVzELMAkGA1UECBMCVFAxETAPBgNVBAMTCDI4NDQ2ODI4MSUwIwYJKoZIhvcNAQkBFhZzdGV2ZUB3aGluc3RvbmUuY29tLnR3MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDMYGj/yydFxLstww+ARGJBuyWTUqlOlBn7W1pDxOvzP8IkQVyalqXtv4QM6RsnZiLkQ0212jyDXx+buv0J6HJuKgFFXfUwtXrw6Oe0l9iajSrQ/S4BChToi8nmPdBKP0Fpeuc7ooA1UQcdzYR5JHtfksmqPjEPMYIiCyu76DvtRQIDAQABo4IBgTCCAX0wHQYDVR0OBBYEFAkXCMUDP3KxW/S0om1YMuB2uBvZMA4GA1UdDwEB/wQEAwIHgDAfBgNVHSMEGDAWgBSVsygGBCyD/R50LENBufmHm2CgLzCBgQYDVR0fBHoweDB2oHSgcoY4aHR0cDovL3NzbGNhL0NlcnRFbnJvbGwvVVhCMkIlMjBDZXJ0aWZpY2F0ZSUyMENlbnRlci5jcmyGNmZpbGU6Ly9cXFNTTENBXENlcnRFbnJvbGxcVVhCMkIgQ2VydGlmaWNhdGUgQ2VudGVyLmNybDCBpgYIKwYBBQUHAQEEgZkwgZYwSgYIKwYBBQUHMAKGPmh0dHA6Ly9zc2xjYS9DZXJ0RW5yb2xsL1NTTENBX1VYQjJCJTIwQ2VydGlmaWNhdGUlMjBDZW50ZXIuY3J0MEgGCCsGAQUFBzAChjxmaWxlOi8vXFxTU0xDQVxDZXJ0RW5yb2xsXFNTTENBX1VYQjJCIENlcnRpZmljYXRlIENlbnRlci5jcnQwDQYJKoZIhvcNAQEFBQADggEBAEKlKC76wuWhUidMIE5z0kqke+/iHtRVtkuefn6LSEuGgwD5NBapOr/nFcVEBcwNLfiw9WGNF8BfbdTYkCyNMCXhbDgdZ8NN0smMb5MU6+YfvqnHRGg67OKXGZJ1ASIBGKQjdK46Z7+LWoxX1zfRdwTE7ZnK87w2/UcUcRvkikSZ5TAd9ucSY8ItYyXeqNhm1W0LuPzO02KF3eK+NILq2JuE1n7yyXRhorpe81s2aZRrJgeDeW2bCAots0Ev6FUeFAws7vLl1nxD/cPzrPrLldHisIx/gjbnhNYMuMel+t4H55aW2mzl7YJfQ9V51rDahQombr9XUU/mp1ykU4CUnvQ=</X509Certificate>
+      </X509Data>
+    </KeyInfo>
+  </Signature>
+</InvoiceEnterpriseRoot>

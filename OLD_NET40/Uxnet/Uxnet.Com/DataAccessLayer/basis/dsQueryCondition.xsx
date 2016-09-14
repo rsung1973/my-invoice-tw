@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--此檔案是由 XML 結構描述設計工具自動產生。它儲存元件在設計工具介面上的版面配置資訊。-->
+<XSDDesignerLayout Style="TopDown" layoutVersion="2" viewPortLeft="-2652" viewPortTop="0" zoom="100">
+    <dsQueryCondition_XmlElement left="317" top="254" width="4233" height="2879" selected="0" zOrder="1" index="0" expanded="1">
+        <QueryCondition_XmlElement left="-1652" top="3641" width="8171" height="3725" selected="0" zOrder="2" index="0" expanded="1" />
+    </dsQueryCondition_XmlElement>
+</XSDDesignerLayout>

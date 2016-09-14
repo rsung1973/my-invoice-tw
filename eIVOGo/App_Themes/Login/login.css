@@ -1,0 +1,157 @@
+body {
+	margin:30px 0px 0px 0px;
+	text-align:center;
+}
+form{
+	margin:0px;
+	padding:0px;
+	text-align:right;
+	position:absolute;
+	right:50px;
+	top:275px;
+}
+.copyright{
+	font: 0.825em Arial, Helvetica, sans-serif;
+	color:#999999;
+	text-align:center;
+}
+.login{
+	background: url(../../images/index_bg.jpg) no-repeat;
+	margin:0px auto;
+	padding:0px;
+	width:780px;
+	height:395px;
+	position:relative;
+}
+table.sign_in
+{
+	margin:0;
+	padding:0px;
+}
+table.sign_in td
+{
+	padding:2px 4px 0px 4px;
+	text-align:left;
+}
+table.sign_in td span
+{
+	padding:0px;
+	padding-left:4px;
+	font: 0.825em Arial, Helvetica, sans-serif;
+	border-left:3px solid #f39800;
+	color:#77291e;
+}
+table.err01{
+	margin:5px 0px 0px 10px;
+	font: 0.825em Arial, Helvetica, sans-serif;
+	color:#FF3300;
+	border-width:0px;
+}
+table.err01 a{
+	color:#FF3300;
+	border-width:0px;
+}
+table.err01 a:hover{
+	color:#999;
+	text-decoration:none;
+	border-width:0px;
+}
+.textfield{
+	font: 0.825em Arial, Helvetica, sans-serif;
+	color: #666666;
+	border: 1px solid #7f9db9;
+}
+table.verifyno
+{
+	margin:0px;
+	padding:0px;
+}
+table.verifyno td
+{
+	padding:2px 4px 0px 4px;
+	text-align:left;
+	font: 0.825em Arial, Helvetica, sans-serif;
+	color:#8B4513;
+}
+#CaptchaImg1_imgNum
+{
+    width:90px;
+    height:23px;
+    border: 1px solid #C0C0C0;
+}
+span.forget_pw
+{
+	border-left-width: 0px !important;
+}
+span.forget_pw a 
+{
+	text-decoration:none;
+	color:#D2691E;
+}
+span.forget_pw a:hover
+{
+	text-decoration:none;
+	color:#A52A2A;
+	border-bottom:1px dotted #666;
+}
+
+/**¨ú±o±K½X**/
+.get_pw
+{
+    background: url('../../images/get_pw_bg.jpg') no-repeat;
+    margin: 0px auto;
+    padding: 0px;
+    width: 710px;
+    height: 315px;
+    position: relative;
+}
+
+form.getmail
+{
+	margin:0px;
+	padding:0px;
+	text-align:right;
+	position:absolute;
+	right:70px;
+	top:100px;
+}
+.copyright a
+{
+	text-decoration:none;
+	color:#D2691E;
+}
+.copyright a:hover
+{
+	text-decoration:none;
+	color:#A52A2A;
+	border-bottom:1px dotted #666;
+}
+/*¶]°¨¿O*/
+div.run{
+	background: url(../../images/run.gif) no-repeat left top;
+	position:relative;
+	width:650px;
+	height:25px;
+	margin:0 auto;
+	padding-top:5px;
+}
+.notice {
+	/*position:absolute;
+	right:75px;
+	top:345px;*/
+	font:10pt/150% Arial, Helvetica, sans-serif;
+	letter-spacing:1px;
+	color:#4169E1;
+	margin:0px;
+	padding:0px;
+	width:630px;
+}
+.notice a{
+	text-decoration:none;
+	border-bottom:1px dotted #69F;
+	color:#434343;
+}
+.notice a:hover{
+	text-decoration:none;
+	color:#FF8C00;
+}

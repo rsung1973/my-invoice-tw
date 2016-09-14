@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=big5" />
+
+<title>電子發票系統</title>
+<link href="css/body.css" rel="stylesheet" type="text/css" />
+	<script language="javascript">
+	<!--
+	<!--//顯示年份//-->
+	function show_date(){
+	var time=new Date(); //宣告日期物件，儲存目前系統時間
+	t_year=time.getFullYear(); //取得今年年分
+	if(t_year > 2011){
+	document.write(" - " + t_year);
+	}
+	}
+	-->
+	</script>
+</head>
+
+<body>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#c5e08a">
+  <tr>
+    <td width="208" height="26" bgcolor="#d9e28e">&nbsp;</td>
+    <td align="right"><span class="copyright">&copy; 2011
+      <script language="javascript">show_date();</script>
+    UXB2B. All rights reserved.</span></td>
+  </tr>
+</table>
+</body>
+</html>

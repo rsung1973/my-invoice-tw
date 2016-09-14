@@ -1,0 +1,8 @@
+﻿.modalBackground {
+	FILTER: alpha(opacity=70); BACKGROUND-COLOR: gray; opacity: 0.7
+}
+
+input[disabled="disabled"]
+{ 
+    color:#ACA899 !important; 
+} 

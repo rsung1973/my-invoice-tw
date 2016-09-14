@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="B2BReturnCancelAllowance" attributeFormDefault="unqualified"
+    elementFormDefault="qualified"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+    <xs:element name="ReturnCancelAllowanceRoot">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ReturnCancelAllowance" maxOccurs="unbounded" minOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Number" type="xs:string" />
+                            <xs:element name="BuyerId" type="xs:string" minOccurs="0" />
+                            <xs:element name="SellerId" type="xs:string" minOccurs="0" />
+                            <xs:element name="Date">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="10"/>
+                                        <xs:pattern value="[0-9][0-9][0-9][0-9]/[0-9][0-9]/[0-9][0-9]"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

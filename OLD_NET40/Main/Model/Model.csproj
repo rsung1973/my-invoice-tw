@@ -1,0 +1,672 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2F1547B6-2DD4-4A57-A40F-258103591603}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Model</RootNamespace>
+    <AssemblyName>Model</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddOn%28201311%29\Helper\B2CExtensionMethods.cs" />
+    <Compile Include="AddOn%28201311%29\InvoiceManagement\enUS\AllowanceRootValidator.cs" />
+    <Compile Include="AddOn%28201311%29\InvoiceManagement\enUS\CancelAllowanceRootValidator.cs" />
+    <Compile Include="AddOn%28201311%29\InvoiceManagement\enUS\CancelInvoiceRootValidator.cs" />
+    <Compile Include="AddOn%28201311%29\InvoiceManagement\enUS\Check_CarrierType_PrintMark_DonateMark.cs" />
+    <Compile Include="AddOn%28201311%29\InvoiceManagement\InvoiceManagerV2_Proxy.cs" />
+    <Compile Include="AddOn%28201412%29\InvoiceManagement\GoogleInvoiceManagerV2.cs" />
+    <Compile Include="AddOn%28201412%29\InvoiceManagement\InvoiceManagerV3.cs" />
+    <Compile Include="AddOn%28201412%29\InvoiceManagement\MIGInvoiceManager.cs" />
+    <Compile Include="AddOn%28201412%29\InvoiceManagement\Validator\AllowanceRootAllowanceValidator.cs" />
+    <Compile Include="AddOn%28201412%29\InvoiceManagement\Validator\GoogleInvoiceRootInvoiceValidator.cs" />
+    <Compile Include="AddOn%28201412%29\InvoiceManagement\Validator\C0401Validator.cs" />
+    <Compile Include="AddOn%28201412%29\InvoiceManagement\Validator\InvoiceRootFormatValidator.cs" />
+    <Compile Include="AddOn%28201412%29\InvoiceManagement\Validator\InvoiceRootInvoiceValidator.cs" />
+    <Compile Include="AddOn%28201311%29\InvoiceManagement\zhTW\AllowanceRootValidator.cs" />
+    <Compile Include="AddOn%28201311%29\InvoiceManagement\zhTW\CancelAllowanceRootValidator.cs" />
+    <Compile Include="AddOn%28201311%29\InvoiceManagement\zhTW\CancelInvoiceRootValidator.cs" />
+    <Compile Include="AddOn%28201311%29\InvoiceManagement\EIVOPlatformFactory.cs" />
+    <Compile Include="AddOn%28201311%29\InvoiceManagement\GoogleInvoiceManager.cs" />
+    <Compile Include="AddOn%28201311%29\InvoiceManagement\enUS\InvoiceRootValidator.cs" />
+    <Compile Include="AddOn%28201311%29\InvoiceManagement\InvoiceManagerV2.cs" />
+    <Compile Include="AddOn%28201311%29\InvoiceManagement\zhTW\CancelInvoiceRootValidator_C0501.cs" />
+    <Compile Include="AddOn%28201311%29\InvoiceManagement\zhTW\Check_CarrierType_PrintMark_DonateMark.cs" />
+    <Compile Include="AddOn%28201311%29\InvoiceManagement\zhTW\InvoiceRootValidator.cs" />
+    <Compile Include="AddOn%28201311%29\InvoiceManagement\zhTW\InvoiceRootValidator_C0401.cs" />
+    <Compile Include="BaseManagement\IManager.cs" />
+    <Compile Include="DataEntity\TurnKey2.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TurnKey2.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DocumentFlowManagement\ExtensionMethods.cs" />
+    <Compile Include="DocumentFlowManagement\FlowEntity.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FlowEntity.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DocumentManagement\ReceiptManager.cs" />
+    <Compile Include="Helper\B2BExceptionNotification.cs" />
+    <Compile Include="Helper\B2BExtensionMethods.cs" />
+    <Compile Include="Helper\InvoiceNotification.cs" />
+    <Compile Include="InvoiceManagement\B2BInvoiceManager.cs" />
+    <Compile Include="InvoiceManagement\B2CInvoiceManager.cs" />
+    <Compile Include="AddOn%28201311%29\InvoiceManagement\CsvInvoiceUploadManagerV2.cs" />
+    <Compile Include="InvoiceManagement\GovPlatformFactoryForB2C.cs" />
+    <Compile Include="InvoiceManagement\GovPlatformManagerForB2C.cs" />
+    <Compile Include="InvoiceManagement\IGoogleInvoiceUploadManager.cs" />
+    <Compile Include="InvoiceManagement\InvoiceEnterpriseManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="InvoiceManagement\TrackNoIntervalManager.cs" />
+    <Compile Include="InvoiceManagement\TrackNoManager.cs" />
+    <Compile Include="InvoiceManagement\GoogleAllowanceUploadManager.cs" />
+    <Compile Include="InvoiceManagement\GoogleInvoiceCancellationUploadManager.cs" />
+    <Compile Include="InvoiceManagement\GoogleAllowanceCancellationUploadManager.cs" />
+    <Compile Include="InvoiceManagement\GoogleUploadManager.cs" />
+    <Compile Include="InvoiceManagement\EIVOPlatformManager.cs" />
+    <Compile Include="InvoiceManagement\EIVOPlatformFactory.cs" />
+    <Compile Include="InvoiceManagement\CsvInvoiceUploadManager.cs" />
+    <Compile Include="InvoiceManagement\CsvInvoiceCancellationUploadManager.cs" />
+    <Compile Include="InvoiceManagement\Validator\ExtensionMethods.cs" />
+    <Compile Include="InvoiceManagement\Validator\TrackNoIntervalValidator.cs" />
+    <Compile Include="Resource\MessageResources.en-US.Designer.cs">
+      <DependentUpon>MessageResources.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resource\MessageResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MessageResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\EIVO\A0101.cs">
+      <DependentUpon>A0101.xsd</DependentUpon>
+      <SubType>code</SubType>
+    </Compile>
+    <Compile Include="Schema\EIVO\A0201.cs">
+      <DependentUpon>A0201.xsd</DependentUpon>
+      <SubType>code</SubType>
+    </Compile>
+    <Compile Include="Schema\EIVO\A0301.cs">
+      <DependentUpon>A0301.xsd</DependentUpon>
+      <SubType>code</SubType>
+    </Compile>
+    <Compile Include="Schema\EIVO\B0101.cs">
+      <DependentUpon>B0101.xsd</DependentUpon>
+      <SubType>code</SubType>
+    </Compile>
+    <Compile Include="Schema\EIVO\B0201.cs">
+      <DependentUpon>B0201.xsd</DependentUpon>
+      <SubType>code</SubType>
+    </Compile>
+    <Compile Include="Schema\EIVO\B2BAllowance.cs">
+      <DependentUpon>B2BAllowance.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\EIVO\B2BAllowanceCancellation.cs">
+      <DependentUpon>B2BAllowanceCancellation.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\EIVO\B2BBuyerInvoice.cs">
+      <DependentUpon>B2BBuyerInvoice.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\EIVO\B2BBuyerInvoiceReceipt.cs">
+      <DependentUpon>B2BBuyerInvoiceReceipt.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\EIVO\B2BDeleteAllowance.cs">
+      <DependentUpon>B2BDeleteAllowance.xsd</DependentUpon>
+      <SubType>code</SubType>
+    </Compile>
+    <Compile Include="Schema\EIVO\B2BDeleteCancelAllowance.cs">
+      <DependentUpon>B2BDeleteCancelAllowance.xsd</DependentUpon>
+      <SubType>code</SubType>
+    </Compile>
+    <Compile Include="Schema\EIVO\B2BDeleteCancelInvoice.cs">
+      <DependentUpon>B2BDeleteCancelInvoice.xsd</DependentUpon>
+      <SubType>code</SubType>
+    </Compile>
+    <Compile Include="Schema\EIVO\B2BDeleteInvoice.cs">
+      <DependentUpon>B2BDeleteInvoice.xsd</DependentUpon>
+      <SubType>code</SubType>
+    </Compile>
+    <Compile Include="Schema\EIVO\B2BInvoiceCancellation.cs">
+      <DependentUpon>B2BInvoiceCancellation.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\EIVO\B2BNotReceivedAllowance.cs">
+      <DependentUpon>B2BNotReceivedAllowance.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\EIVO\B2BNotReceivedCancelAllowance.cs">
+      <DependentUpon>B2BNotReceivedCancelAllowance.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\EIVO\B2BNotReceivedCancelInvoice.cs">
+      <DependentUpon>B2BNotReceivedCancelInvoice.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\EIVO\B2BNotReceivedInvoice.cs">
+      <DependentUpon>B2BNotReceivedInvoice.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\EIVO\B2BReceipt.cs">
+      <DependentUpon>B2BReceipt.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\EIVO\B2BReceiptCancellation.cs">
+      <DependentUpon>B2BReceiptCancellation.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\EIVO\B2BReturnAllowance.cs">
+      <DependentUpon>B2BReturnAllowance.xsd</DependentUpon>
+      <SubType>code</SubType>
+    </Compile>
+    <Compile Include="Schema\EIVO\B2BReturnCancelAllowance.cs">
+      <DependentUpon>B2BReturnCancelAllowance.xsd</DependentUpon>
+      <SubType>code</SubType>
+    </Compile>
+    <Compile Include="Schema\EIVO\B2BReturnCancelInvoice.cs">
+      <DependentUpon>B2BReturnCancelInvoice.xsd</DependentUpon>
+      <SubType>code</SubType>
+    </Compile>
+    <Compile Include="Schema\EIVO\B2BReturnInvoice.cs">
+      <DependentUpon>B2BReturnInvoice.xsd</DependentUpon>
+      <SubType>code</SubType>
+    </Compile>
+    <Compile Include="Schema\EIVO\B2BSellerInvoice.cs">
+      <DependentUpon>B2BSellerInvoice.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\EIVO\InvoiceTrackCode.cs">
+      <DependentUpon>InvoiceTrackCode.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\EIVO\B2CInvoiceMapping.cs">
+      <DependentUpon>B2CInvoiceMapping.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\EIVO\BranchTrack.cs">
+      <DependentUpon>BranchTrack.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\EIVO\InvoiceEnterprise.cs">
+      <DependentUpon>InvoiceEnterprise.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\EIVO\ResponseType.cs">
+      <SubType>code</SubType>
+    </Compile>
+    <Compile Include="Schema\MIG3_1\C0401.cs">
+      <DependentUpon>C0401.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\MIG3_1\C0501.cs">
+      <DependentUpon>C0501.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\MIG3_1\D0401.cs">
+      <DependentUpon>D0401.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\MIG3_1\D0501.cs">
+      <DependentUpon>D0501.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\MIG3_1\E0401.cs">
+      <DependentUpon>E0401.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\MIG3_1\E0402.cs">
+      <DependentUpon>E0402.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\MIG3_1\E0501.cs">
+      <DependentUpon>E0501.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\TurnKey\A0201.cs">
+      <DependentUpon>A0201.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\TurnKey\A0401.cs">
+      <DependentUpon>A0401.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\TurnKey\A0501.cs">
+      <DependentUpon>A0501.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\TurnKey\A1101.cs">
+      <DependentUpon>A1101.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\TurnKey\A1401.cs">
+      <DependentUpon>A1401.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\TurnKey\B0201.cs">
+      <DependentUpon>B0201.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\TurnKey\B0401.cs">
+      <DependentUpon>B0401.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\TurnKey\B0501.cs">
+      <DependentUpon>B0501.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\TurnKey\B1101.cs">
+      <DependentUpon>B1101.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\TurnKey\B1401.cs">
+      <DependentUpon>B1401.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\TurnKey\C0701.cs">
+      <DependentUpon>C0701.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\TurnKey\ResponseType.cs" />
+    <Compile Include="SCM\SCMEntityManager.cs" />
+    <Compile Include="SCMDataEntity\DataDefinition.cs" />
+    <Compile Include="SCMDataEntity\ExtensionMethods.cs" />
+    <Compile Include="DataEntity\DataDefinition.cs" />
+    <Compile Include="DataEntity\EIVOEntity.designer.cs">
+      <DependentUpon>EIVOEntity.dbml</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="DataEntity\ExtensionMethods.cs" />
+    <Compile Include="Helper\ExceptionNotification.cs" />
+    <Compile Include="Helper\ExtensionMethods.cs" />
+    <Compile Include="Helper\PKCS7Log.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InvoiceManagement\GoogleInvoiceUploadManager.cs" />
+    <Compile Include="InvoiceManagement\GovPlatformFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="InvoiceManagement\GovPlatformManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="InvoiceManagement\InvoiceManager.cs" />
+    <Compile Include="Locale\Naming.cs" />
+    <Compile Include="ModelTemplate\EIVOEntityManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Resource\Resource.cs" />
+    <Compile Include="Resource\ResourceConfig.cs" />
+    <Compile Include="Resource\ResourceConfigHandler.cs" />
+    <Compile Include="Resource\SystemDynamicConfig.cs" />
+    <Compile Include="Resource\WebKey.cs" />
+    <Compile Include="Schema\dsUserProfile.Designer.cs" />
+    <Compile Include="Schema\EIVO\B2CAllowance.cs">
+      <DependentUpon>B2CAllowance.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\EIVO\B2CAllowanceCancellation.cs">
+      <DependentUpon>B2CAllowanceCancellation.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\EIVO\B2CInvoice.cs">
+      <DependentUpon>B2CInvoice.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\EIVO\B2CInvoiceCancellation.cs">
+      <DependentUpon>B2CInvoiceCancellation.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\EIVO\B2CWelfareAgency.cs">
+      <DependentUpon>B2CWelfareAgency.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\EIVO\B2CWinningInvoice.cs">
+      <DependentUpon>B2CWinningInvoice.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\TXN\Exchange.cs">
+      <DependentUpon>Exchange.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SCMDataEntity\SCMEntity.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SCMEntity.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="SCM\BuyerShipmentManager.cs" />
+    <Compile Include="SCM\ExchangeGoodsManager.cs" />
+    <Compile Include="SCM\WarehouseManager.cs" />
+    <Compile Include="SCM\WarehouseWarrantManager.cs" />
+    <Compile Include="SCM\ReturnedGoodsManager.cs" />
+    <Compile Include="Security\MembershipManagement\ToDoManager.cs" />
+    <Compile Include="Security\MembershipManagement\UserManager.cs" />
+    <Compile Include="Security\MembershipManagement\UserProfile.cs" />
+    <Compile Include="Security\MembershipManagement\UserProfileFactory.cs" />
+    <Compile Include="Security\MembershipManagement\UserProfileImpl.cs" />
+    <Compile Include="Security\MembershipManagement\UserProfileManager.cs" />
+    <Compile Include="UIType.cs" />
+    <Compile Include="UploadManagement\CsvUploadManager.cs" />
+    <Compile Include="UploadManagement\ICsvUploadManager.cs" />
+    <Compile Include="UploadManagement\IUploadManager.cs" />
+    <Compile Include="UploadManagement\XmlUploadManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataEntity\EIVOEntity.dbml.layout">
+      <DependentUpon>EIVOEntity.dbml</DependentUpon>
+    </None>
+    <None Include="DataEntity\TurnKey2.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>TurnKey2.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DocumentFlowManagement\FlowEntity.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>FlowEntity.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\EIVO\A0101.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\EIVO\A0201.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\EIVO\A0301.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\EIVO\B0101.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\EIVO\B0201.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\EIVO\B2BAllowance.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\EIVO\B2BAllowanceCancellation.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\EIVO\B2BBuyerInvoice.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\EIVO\B2BBuyerInvoiceReceipt.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\EIVO\B2BDeleteAllowance.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\EIVO\B2BDeleteCancelAllowance.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\EIVO\B2BDeleteCancelInvoice.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\EIVO\B2BDeleteInvoice.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\EIVO\B2BInvoiceCancellation.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\EIVO\B2BNotReceivedAllowance.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\EIVO\B2BNotReceivedCancelAllowance.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\EIVO\B2BNotReceivedCancelInvoice.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\EIVO\B2BNotReceivedInvoice.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\EIVO\B2BReceipt.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\EIVO\B2BReceiptCancellation.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\EIVO\B2BReturnAllowance.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\EIVO\B2BReturnCancelAllowance.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\EIVO\B2BReturnCancelInvoice.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\EIVO\B2BReturnInvoice.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\EIVO\B2BSellerInvoice.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\EIVO\InvoiceTrackCode.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\EIVO\B2CInvoiceMapping.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\EIVO\DescriptionType.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\EIVO\BranchTrack.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\EIVO\GoogleResponse.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\EIVO\InvoiceEnterprise.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\MIG3_1\C0401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\MIG3_1\C0501.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\MIG3_1\D0401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\MIG3_1\D0501.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\MIG3_1\E0401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\MIG3_1\E0402.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\MIG3_1\E0501.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\MIG3_1\GenericType_3.1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\TurnKey\A0101.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\TurnKey\A0102.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\TurnKey\A0201.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\TurnKey\A0202.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\TurnKey\A0301.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\TurnKey\A0302.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\TurnKey\A0401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\TurnKey\A0501.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\TurnKey\A0601.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\TurnKey\A1101.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\TurnKey\A1401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\TurnKey\B0101.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\TurnKey\B0102.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\TurnKey\B0201.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\TurnKey\B0202.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\TurnKey\B0401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\TurnKey\B0501.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\TurnKey\B1101.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\TurnKey\B1401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\TurnKey\C0401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\TurnKey\C0501.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\TurnKey\C0601.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\TurnKey\C0701.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\TurnKey\D0401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\TurnKey\D0501.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\TurnKey\GenericType_3.0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SCMDataEntity\SCMEntity.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>SCMEntity.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataEntity\EIVOEntity.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>EIVOEntity.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\dsUserProfile.xsc">
+      <DependentUpon>dsUserProfile.xsd</DependentUpon>
+    </None>
+    <None Include="Schema\dsUserProfile.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsUserProfile1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\dsUserProfile.xss">
+      <DependentUpon>dsUserProfile.xsd</DependentUpon>
+    </None>
+    <None Include="Schema\EIVO\B2CAllowance.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\EIVO\B2CAllowanceCancellation.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\EIVO\B2CInvoice.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\EIVO\B2CInvoiceCancellation.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\EIVO\B2CWelfareAgency.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\EIVO\B2CWinningInvoice.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\TXN\Exchange.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SCMDataEntity\SCMEntity.dbml.layout">
+      <DependentUpon>SCMEntity.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DocumentFlowManagement\FlowEntity.dbml.layout">
+      <DependentUpon>FlowEntity.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataEntity\TurnKey2.dbml.layout">
+      <DependentUpon>TurnKey2.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Resource\MessageResources.en-US.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>MessageResources.en-US.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource\MessageResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>MessageResources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Uxnet\Uxnet.Com\Uxnet.Com.csproj">
+      <Project>{72edd90c-e7fe-44f4-8b9b-c9512f02d547}</Project>
+      <Name>Uxnet.Com</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Uxnet\Uxnet.Com\Uxnet.Com.csproj">
+      <Project>{72edd90c-e7fe-44f4-8b9b-c9512f02d547}</Project>
+      <Name>Uxnet.Com</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

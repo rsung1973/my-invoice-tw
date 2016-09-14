@@ -1,0 +1,93 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="eIVOGo.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ImageCodeKey" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ImageCode</Value>
+    </Setting>
+    <Setting Name="GovPlatformAutoTransferInterval" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">300000</Value>
+    </Setting>
+    <Setting Name="mailLinkAddress" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://localhost:2598</Value>
+    </Setting>
+    <Setting Name="GovPlatformNotificationUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">~/Published/GovPlatformNotificationPage.aspx</Value>
+    </Setting>
+    <Setting Name="ExceptionNotificationUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">~/Published/DataUploadExceptionNotificationPage.aspx</Value>
+    </Setting>
+    <Setting Name="GenerateMemberCodeUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">~/Published/GenerateMemberCode.ashx</Value>
+    </Setting>
+    <Setting Name="DefaultUserCarrierType" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">3J0001</Value>
+    </Setting>
+    <Setting Name="InvoiceMailUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">~/Published/InvoiceMailPage.aspx</Value>
+    </Setting>
+    <Setting Name="ClientResponseTimeoutAlertInterval" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">14400000</Value>
+    </Setting>
+    <Setting Name="PurchaseOrderPrefix" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="PurchaseOrderReturnedPrefix" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">11</Value>
+    </Setting>
+    <Setting Name="WarehouseWarrantPrefix" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">20</Value>
+    </Setting>
+    <Setting Name="BuyerOrderPrefix" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">30</Value>
+    </Setting>
+    <Setting Name="ShipmentPrefix" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">40</Value>
+    </Setting>
+    <Setting Name="GoodsReturnedPrefix" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">50</Value>
+    </Setting>
+    <Setting Name="GoodsExchangedPrefix" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">60</Value>
+    </Setting>
+    <Setting Name="AllowanceMailUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">~/Published/InvoiceAllowanceMailPage.aspx</Value>
+    </Setting>
+    <Setting Name="InvoiceCancellationMailUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">~/Published/InvoiceCancelMailPage.aspx</Value>
+    </Setting>
+    <Setting Name="NotifyToReceive" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">~/Published/NotifyToReceiveInvoice.aspx</Value>
+    </Setting>
+    <Setting Name="NotifyActivation" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">~/Published/NotifyMemberActivation.aspx</Value>
+    </Setting>
+    <Setting Name="CsvUploadEncoding" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Big5</Value>
+    </Setting>
+    <Setting Name="EnableGovPlatform" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="EnableEIVOPlatform" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="WebMaster" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">系統管理員 &lt;invoice_test@uxb2b.com&gt;</Value>
+    </Setting>
+    <Setting Name="SystemAdmin" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ifsadmin</Value>
+    </Setting>
+    <Setting Name="MailServer" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">localhost</Value>
+    </Setting>
+    <Setting Name="ShowAuthorizationNoInMail" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ReplyTo" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">it_test@uxb2b.com</Value>
+    </Setting>
+    <Setting Name="EnableJobScheduler" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

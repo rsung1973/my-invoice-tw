@@ -1,0 +1,11 @@
+<dsPKCS7>
+  <pkcs7Envelop>
+    <UniqueID>4F391C9D0000000002F6</UniqueID>
+    <NotBefore>2015/12/14 下午 01:34:26</NotBefore>
+    <NotAfter>2025/12/14 下午 01:44:26</NotAfter>
+    <Subject>E=steve@whinstone.com.tw, CN=28446828, S=TP, C=TW</Subject>
+    <Issuer>CN=UXB2B Certificate Center</Issuer>
+    <DataSignature>C:\Project\VM-SIT04\IFS-EIVO03\eIVOGo\logs\2016\02\01\ca_log\000000000007(0957337901)-XmlSig.nfo.xml</DataSignature>
+    <ActionTime>2016-02-01T09:57:29.5919432+08:00</ActionTime>
+  </pkcs7Envelop>
+</dsPKCS7>

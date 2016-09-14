@@ -1,0 +1,66 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Uxnet.Com.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="XpsPrinterName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Microsoft XPS Document Writer</Value>
+    </Setting>
+    <Setting Name="WndPrnTitle" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">列印</Value>
+    </Setting>
+    <Setting Name="BtnPrnTitle" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">列印(&amp;P)</Value>
+    </Setting>
+    <Setting Name="WndSaveAsTitle" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">另存檔案為</Value>
+    </Setting>
+    <Setting Name="BtnSaveTitle" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">儲存(&amp;S)</Value>
+    </Setting>
+    <Setting Name="PdfPrinterName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Bullzip PDF Printer</Value>
+    </Setting>
+    <Setting Name="SqlLog" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="Uxnet_Com_WS_DocumentService_DocumentCreator" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://hinet01:8880/DocumentService/DocumentCreator.asmx</Value>
+    </Setting>
+    <Setting Name="UseMessageCenter" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="MessageUploadUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://tpit-matrix/CDSAR/published/UploadFile.ashx</Value>
+    </Setting>
+    <Setting Name="Uxnet_Com_WS_MessageService_SendMessage" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://tpit-matrix/CDSAR/published/SendMessage.asmx</Value>
+    </Setting>
+    <Setting Name="LogPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DBConnectionStringName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">masterDB</Value>
+    </Setting>
+    <Setting Name="PDFWorkingQueue" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\UXB2B_EIVO\PDFQueue</Value>
+    </Setting>
+    <Setting Name="PdfOutput" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\Users\Ralph\AppData\Local\Temp\PdfPrinter.pdf</Value>
+    </Setting>
+    <Setting Name="MaxWaitingInterval" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">30000</Value>
+    </Setting>
+    <Setting Name="UsePDFPrinterService" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="IgnoreCertificateRevoked" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="PKCS7LogType" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Uxnet.Com.Security.UseCrypto.dsPKCS7,Uxnet.Com, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</Value>
+    </Setting>
+    <Setting Name="IPdfUtilityImpl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Uxnet.Com.Helper.DefaultTools.PdfUtility,Uxnet.Com, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

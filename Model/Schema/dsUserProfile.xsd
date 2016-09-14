@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="dsUserProfile" elementFormDefault="qualified" attributeFormDefault="qualified"
+	xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="dsUserProfile" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="V_UserRole">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="UID" type="xs:int" />
+							<xs:element name="RoleID" type="xs:int" />
+							<xs:element name="OrgaCateID" type="xs:int" />
+							<xs:element name="CompanyID" type="xs:int" />
+							<xs:element name="CategoryID" type="xs:int" />
+							<xs:element name="Role" type="xs:string" />
+							<xs:element name="Category" type="xs:string" />
+							<xs:element name="CharacterURL" type="xs:string" minOccurs="0" />
+							<xs:element name="CompanyName" type="xs:string" minOccurs="0" />
+							<xs:element name="InvoiceSignature" type="xs:string" minOccurs="0" />
+							<xs:element name="ReceiptNo" type="xs:string" minOccurs="0" />
+							<xs:element name="MenuID" type="xs:int" minOccurs="0" />
+							<xs:element name="SiteMenu" type="xs:string" minOccurs="0" />
+							<xs:element name="IndexUrl" type="xs:string" minOccurs="0" />
+							<xs:element name="BankCode" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="UserProfile">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="UID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="UserName" type="xs:string" minOccurs="0" />
+							<xs:element name="PID" type="xs:string" />
+							<xs:element name="Password" type="xs:string" minOccurs="0" />
+							<xs:element name="ContactTitle" type="xs:string" minOccurs="0" />
+							<xs:element name="Address" type="xs:string" minOccurs="0" />
+							<xs:element name="City" type="xs:string" minOccurs="0" />
+							<xs:element name="Region" type="xs:string" minOccurs="0" />
+							<xs:element name="PostalCode" type="xs:string" minOccurs="0" />
+							<xs:element name="Country" type="xs:string" minOccurs="0" />
+							<xs:element name="MobilePhone" type="xs:string" minOccurs="0" />
+							<xs:element name="Phone" type="xs:string" minOccurs="0" />
+							<xs:element name="Fax" type="xs:string" minOccurs="0" />
+							<xs:element name="EMail" type="xs:string" minOccurs="0" />
+							<xs:element name="Expiration" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="Creator" type="xs:int" minOccurs="0" />
+							<xs:element name="AuthID" type="xs:int" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="dsUserProfileKey1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//UserProfile" />
+			<xs:field xpath="UID" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

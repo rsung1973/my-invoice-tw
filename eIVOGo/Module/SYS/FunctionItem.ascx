@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="FunctionItem.ascx.cs" Inherits="eIVOGo.Module.SYS.FunctionItem" %>
+<input type="checkbox" id="cbFunction" runat="server" /><asp:Literal ID="litItemName" runat="server"></asp:Literal>

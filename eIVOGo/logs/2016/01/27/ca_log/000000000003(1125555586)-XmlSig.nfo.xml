@@ -1,0 +1,23 @@
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="">
+  <UXB2B>電子發票系統</UXB2B>
+  <Request actionName="讀取用戶端資料" periodicalInterval="1800" />
+  <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+    <SignedInfo>
+      <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" />
+      <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" />
+      <Reference URI="">
+        <Transforms>
+          <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" />
+        </Transforms>
+        <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <DigestValue>HaMK3WctFfXxZS6c6kVc7Ad0CZk=</DigestValue>
+      </Reference>
+    </SignedInfo>
+    <SignatureValue>e+DPU0qfgszq+6n0bpsyHuAVoKa8RsPGYIFW5lVo+Vwf3esFqMCUj57sKkCXM8K00DT1Y2dV09WD5D//6DZgUhm2qzMk2LqROoel6BAoWYUvsAarDsmL3A88n7VIhBG6jjcCqJx44LF4CI0T3jie58BgoLXG7vkKpavRbaRjOh8=</SignatureValue>
+    <KeyInfo>
+      <X509Data>
+        <X509Certificate>MIID+jCCAuKgAwIBAgIKTzkcnQAAAAAC9jANBgkqhkiG9w0BAQUFADAjMSEwHwYDVQQDExhVWEIyQiBDZXJ0aWZpY2F0ZSBDZW50ZXIwHhcNMTUxMjE0MDUzNDI2WhcNMjUxMjE0MDU0NDI2WjBUMQswCQYDVQQGEwJUVzELMAkGA1UECBMCVFAxETAPBgNVBAMTCDI4NDQ2ODI4MSUwIwYJKoZIhvcNAQkBFhZzdGV2ZUB3aGluc3RvbmUuY29tLnR3MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDMYGj/yydFxLstww+ARGJBuyWTUqlOlBn7W1pDxOvzP8IkQVyalqXtv4QM6RsnZiLkQ0212jyDXx+buv0J6HJuKgFFXfUwtXrw6Oe0l9iajSrQ/S4BChToi8nmPdBKP0Fpeuc7ooA1UQcdzYR5JHtfksmqPjEPMYIiCyu76DvtRQIDAQABo4IBgTCCAX0wHQYDVR0OBBYEFAkXCMUDP3KxW/S0om1YMuB2uBvZMA4GA1UdDwEB/wQEAwIHgDAfBgNVHSMEGDAWgBSVsygGBCyD/R50LENBufmHm2CgLzCBgQYDVR0fBHoweDB2oHSgcoY4aHR0cDovL3NzbGNhL0NlcnRFbnJvbGwvVVhCMkIlMjBDZXJ0aWZpY2F0ZSUyMENlbnRlci5jcmyGNmZpbGU6Ly9cXFNTTENBXENlcnRFbnJvbGxcVVhCMkIgQ2VydGlmaWNhdGUgQ2VudGVyLmNybDCBpgYIKwYBBQUHAQEEgZkwgZYwSgYIKwYBBQUHMAKGPmh0dHA6Ly9zc2xjYS9DZXJ0RW5yb2xsL1NTTENBX1VYQjJCJTIwQ2VydGlmaWNhdGUlMjBDZW50ZXIuY3J0MEgGCCsGAQUFBzAChjxmaWxlOi8vXFxTU0xDQVxDZXJ0RW5yb2xsXFNTTENBX1VYQjJCIENlcnRpZmljYXRlIENlbnRlci5jcnQwDQYJKoZIhvcNAQEFBQADggEBAEKlKC76wuWhUidMIE5z0kqke+/iHtRVtkuefn6LSEuGgwD5NBapOr/nFcVEBcwNLfiw9WGNF8BfbdTYkCyNMCXhbDgdZ8NN0smMb5MU6+YfvqnHRGg67OKXGZJ1ASIBGKQjdK46Z7+LWoxX1zfRdwTE7ZnK87w2/UcUcRvkikSZ5TAd9ucSY8ItYyXeqNhm1W0LuPzO02KF3eK+NILq2JuE1n7yyXRhorpe81s2aZRrJgeDeW2bCAots0Ev6FUeFAws7vLl1nxD/cPzrPrLldHisIx/gjbnhNYMuMel+t4H55aW2mzl7YJfQ9V51rDahQombr9XUU/mp1ykU4CUnvQ=</X509Certificate>
+      </X509Data>
+    </KeyInfo>
+  </Signature>
+</Root>

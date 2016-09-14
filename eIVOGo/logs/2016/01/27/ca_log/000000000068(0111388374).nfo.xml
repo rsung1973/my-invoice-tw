@@ -1,0 +1,11 @@
+<dsPKCS7>
+  <pkcs7Envelop>
+    <UniqueID>27D5EFD40000000002F7</UniqueID>
+    <NotBefore>2016/1/25 下午 03:04:29</NotBefore>
+    <NotAfter>2026/1/25 下午 03:14:29</NotAfter>
+    <Subject>E=max.winnie0223@iti.com.tw, CN=27736953, S=TP, C=TW</Subject>
+    <Issuer>CN=UXB2B Certificate Center</Issuer>
+    <DataSignature>C:\Project\VM-SIT04\IFS-EIVO03\eIVOGo\logs\2016\01\27\ca_log\000000000068(0111388345)-XmlSig.nfo.xml</DataSignature>
+    <ActionTime>2016-01-27T01:11:38.5725094+08:00</ActionTime>
+  </pkcs7Envelop>
+</dsPKCS7>

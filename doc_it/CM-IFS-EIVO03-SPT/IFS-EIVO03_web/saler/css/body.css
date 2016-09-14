@@ -1,0 +1,90 @@
+body {
+	margin:0px;
+	padding:0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+/*內文Body用樣式*/
+body.text_detail {
+	margin:10px;
+	padding:0px;
+	font-family:Geneva,Arial,Helvetica,"新細明體","細明體";
+	background:url(../images/content_bg.gif) repeat-x fixed top;
+	font-size:12px;
+	color:#666666;
+}
+
+form{
+	margin:0px;
+	padding:0px;
+}
+.copyright {
+	margin:0px 10px 0px 0px;
+	padding:0px;
+	color:#666666;
+}
+#sider {
+	background:url(../images/left_bg.gif) repeat-y;
+	SCROLLBAR-FACE-COLOR: #F3F1F4; 
+	SCROLLBAR-HIGHLIGHT-COLOR:  #F3F1F4; 
+	SCROLLBAR-SHADOW-COLOR:  #F3F1F4; 
+	SCROLLBAR-3DLIGHT-COLOR: #B6B4B7; 
+	SCROLLBAR-ARROW-COLOR: #B6B4B7; 
+	SCROLLBAR-DARKSHADOW-COLOR: #B6B4B7; 
+	SCROLLBAR-BASE-COLOR: #F3F1F4;
+	margin:0px 0px 0px 0px;
+	padding:0px;
+	font-family:Geneva,Arial,Helvetica,"新細明體","細明體",sans-serif;
+	font-size:12px;
+}
+#scroller {
+	SCROLLBAR-FACE-COLOR: #F3F1F4; 
+	SCROLLBAR-HIGHLIGHT-COLOR:  #F3F1F4; 
+	SCROLLBAR-SHADOW-COLOR:  #F3F1F4; 
+	SCROLLBAR-3DLIGHT-COLOR: #B6B4B7; 
+	SCROLLBAR-ARROW-COLOR: #B6B4B7; 
+	SCROLLBAR-DARKSHADOW-COLOR: #B6B4B7; 
+	SCROLLBAR-BASE-COLOR: #F3F1F4;
+	margin:0px 0px 0px 0px;
+	padding:0px;
+	font-family:Geneva,Arial,Helvetica,"新細明體","細明體",sans-serif;
+	font-size:12px;
+}
+/*ul#nav{
+	width:408px;
+	height:36px;
+	border:1px solid #000;
+}
+*/
+ul#nav li{
+	padding:0 0 0 0;
+	float:left;
+	background:url(../images/menu_over.jpg) right top;
+	list-style-type:none;
+}
+ul#nav li a.navLink{
+	display:block;
+	background:url(../images/menu_up.jpg) 0 0 repeat-x;
+	font:bold 11px/36px Arial, Helvetica, sans-serif;
+	color:#fff;
+	text-decoration:none;
+	background-color:inherit;
+	padding:0 13px;
+}
+ul#nav li a.navLink:hover{
+	background:url(../images/menu_over.jpg) 0 0 repeat-x;
+}
+ul#nav li a.hover{
+	display:block;
+	background:url(../images/menu_over.jpg) 0 0 repeat-x;
+	font:bold 11px/36px Arial, Helvetica, sans-serif;
+	color:#fff;
+	text-decoration:none;
+	background-color:inherit;
+	padding:0 13px;
+}
+ul#nav li.noImg{
+	padding:0;
+	float:left;
+	background-image:none;
+}

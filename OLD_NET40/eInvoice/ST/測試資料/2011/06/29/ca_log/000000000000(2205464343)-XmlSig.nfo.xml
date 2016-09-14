@@ -1,0 +1,296 @@
+<InvoiceRoot xmlns="">
+  <CompanyBan>26305533</CompanyBan>
+  <Invoice>
+    <InvoiceNumber>VF61500117</InvoiceNumber>
+    <InvoiceDate>2011/06/29</InvoiceDate>
+    <InvoiceTime>19:49:16</InvoiceTime>
+    <SellerId>26305533</SellerId>
+    <BuyerName />
+    <BuyerId />
+    <InvoiceType>03</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <CarrierType />
+    <CarrierId1 />
+    <CarrierId2 />
+    <PrintMark>Y</PrintMark>
+    <NPOBAN />
+    <RandomNumber>2003</RandomNumber>
+    <InvoiceItem>
+      <Description>枇杷喉爽-量販包</Description>
+      <Quantity>2.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>65</UnitPrice>
+      <Amount>130.0000</Amount>
+      <SequenceNumber>1</SequenceNumber>
+      <Item>I1</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>總折讓</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>0</UnitPrice>
+      <Amount>0</Amount>
+      <SequenceNumber>999</SequenceNumber>
+      <Item>999</Item>
+      <Remark>總折讓</Remark>
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <SalesAmount>124</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0.05</TaxRate>
+    <TaxAmount>6</TaxAmount>
+    <TotalAmount>130</TotalAmount>
+    <DiscountAmount>0</DiscountAmount>
+  </Invoice>
+  <Invoice>
+    <InvoiceNumber>VF61500118</InvoiceNumber>
+    <InvoiceDate>2011/06/29</InvoiceDate>
+    <InvoiceTime>19:50:42</InvoiceTime>
+    <SellerId>26305533</SellerId>
+    <BuyerName />
+    <BuyerId />
+    <InvoiceType>03</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <CarrierType />
+    <CarrierId1 />
+    <CarrierId2 />
+    <PrintMark>Y</PrintMark>
+    <NPOBAN />
+    <RandomNumber>2120</RandomNumber>
+    <InvoiceItem>
+      <Description>國旗液體溫度計</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>990</UnitPrice>
+      <Amount>990.0000</Amount>
+      <SequenceNumber>1</SequenceNumber>
+      <Item>I1</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>建國100拼圖鑰匙圈-名勝古蹟</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>180</UnitPrice>
+      <Amount>180.0000</Amount>
+      <SequenceNumber>2</SequenceNumber>
+      <Item>I2</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>胸章(中)-愛與和平</Description>
+      <Quantity>1.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>60</UnitPrice>
+      <Amount>60.0000</Amount>
+      <SequenceNumber>3</SequenceNumber>
+      <Item>I3</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>總折讓</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>0</UnitPrice>
+      <Amount>0</Amount>
+      <SequenceNumber>999</SequenceNumber>
+      <Item>999</Item>
+      <Remark>總折讓</Remark>
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <SalesAmount>1171</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0.05</TaxRate>
+    <TaxAmount>59</TaxAmount>
+    <TotalAmount>1230</TotalAmount>
+    <DiscountAmount>0</DiscountAmount>
+  </Invoice>
+  <Invoice>
+    <InvoiceNumber>VF61500119</InvoiceNumber>
+    <InvoiceDate>2011/06/29</InvoiceDate>
+    <InvoiceTime>20:43:32</InvoiceTime>
+    <SellerId>26305533</SellerId>
+    <BuyerName />
+    <BuyerId />
+    <InvoiceType>03</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <CarrierType />
+    <CarrierId1 />
+    <CarrierId2 />
+    <PrintMark>Y</PrintMark>
+    <NPOBAN />
+    <RandomNumber>2237</RandomNumber>
+    <InvoiceItem>
+      <Description>原住民娃娃吊飾</Description>
+      <Quantity>3.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>60</UnitPrice>
+      <Amount>180.0000</Amount>
+      <SequenceNumber>1</SequenceNumber>
+      <Item>I1</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>原住民娃娃鎖圈</Description>
+      <Quantity>2.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>60</UnitPrice>
+      <Amount>120.0000</Amount>
+      <SequenceNumber>2</SequenceNumber>
+      <Item>I2</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>總折讓</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>0</UnitPrice>
+      <Amount>0</Amount>
+      <SequenceNumber>999</SequenceNumber>
+      <Item>999</Item>
+      <Remark>總折讓</Remark>
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <SalesAmount>286</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0.05</TaxRate>
+    <TaxAmount>14</TaxAmount>
+    <TotalAmount>300</TotalAmount>
+    <DiscountAmount>0</DiscountAmount>
+  </Invoice>
+  <Invoice>
+    <InvoiceNumber>VF61500120</InvoiceNumber>
+    <InvoiceDate>2011/06/29</InvoiceDate>
+    <InvoiceTime>20:44:45</InvoiceTime>
+    <SellerId>26305533</SellerId>
+    <BuyerName />
+    <BuyerId />
+    <InvoiceType>03</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <CarrierType />
+    <CarrierId1 />
+    <CarrierId2 />
+    <PrintMark>Y</PrintMark>
+    <NPOBAN />
+    <RandomNumber>2353</RandomNumber>
+    <InvoiceItem>
+      <Description>原住民娃娃吊飾</Description>
+      <Quantity>2.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>60</UnitPrice>
+      <Amount>120.0000</Amount>
+      <SequenceNumber>1</SequenceNumber>
+      <Item>I1</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>原住民娃娃鎖圈</Description>
+      <Quantity>2.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>60</UnitPrice>
+      <Amount>120.0000</Amount>
+      <SequenceNumber>2</SequenceNumber>
+      <Item>I2</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>總折讓</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>0</UnitPrice>
+      <Amount>0</Amount>
+      <SequenceNumber>999</SequenceNumber>
+      <Item>999</Item>
+      <Remark>總折讓</Remark>
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <SalesAmount>229</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0.05</TaxRate>
+    <TaxAmount>11</TaxAmount>
+    <TotalAmount>240</TotalAmount>
+    <DiscountAmount>0</DiscountAmount>
+  </Invoice>
+  <Invoice>
+    <InvoiceNumber>VF61500121</InvoiceNumber>
+    <InvoiceDate>2011/06/29</InvoiceDate>
+    <InvoiceTime>20:46:37</InvoiceTime>
+    <SellerId>26305533</SellerId>
+    <BuyerName />
+    <BuyerId />
+    <InvoiceType>03</InvoiceType>
+    <DonateMark>0</DonateMark>
+    <CarrierType />
+    <CarrierId1 />
+    <CarrierId2 />
+    <PrintMark>Y</PrintMark>
+    <NPOBAN />
+    <RandomNumber>2470</RandomNumber>
+    <InvoiceItem>
+      <Description>原住民娃娃吊飾</Description>
+      <Quantity>6.00</Quantity>
+      <Unit>個</Unit>
+      <UnitPrice>60</UnitPrice>
+      <Amount>360.0000</Amount>
+      <SequenceNumber>1</SequenceNumber>
+      <Item>I1</Item>
+      <Remark />
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <InvoiceItem>
+      <Description>總折讓</Description>
+      <Quantity>1</Quantity>
+      <Unit />
+      <UnitPrice>0</UnitPrice>
+      <Amount>0</Amount>
+      <SequenceNumber>999</SequenceNumber>
+      <Item>999</Item>
+      <Remark>總折讓</Remark>
+      <TaxType>1</TaxType>
+    </InvoiceItem>
+    <SalesAmount>343</SalesAmount>
+    <FreeTaxSalesAmount>0</FreeTaxSalesAmount>
+    <ZeroTaxSalesAmount>0</ZeroTaxSalesAmount>
+    <TaxType>1</TaxType>
+    <TaxRate>0.05</TaxRate>
+    <TaxAmount>17</TaxAmount>
+    <TotalAmount>360</TotalAmount>
+    <DiscountAmount>0</DiscountAmount>
+  </Invoice>
+  <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+    <SignedInfo>
+      <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" />
+      <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" />
+      <Reference URI="">
+        <Transforms>
+          <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" />
+        </Transforms>
+        <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <DigestValue>YxgngcUq3CI/azyJcYpjSaQYCyE=</DigestValue>
+      </Reference>
+    </SignedInfo>
+    <SignatureValue>xu1fEW4XmRdBEzGliAgYaTnHrkzFgiH5auXXsgcrTMwBl8JD29pZcMlqZ++QEv2GLRJ8o9bXu+XYTCCjJJH+twpzrUVEDy3Fr3WPh8yISn5RNa0hIOqpSHn0RVnEA2c6K++3c0FE3HNLnlZZt4hB8WnBrD2lLYediP3CINDCVSg=</SignatureValue>
+    <KeyInfo>
+      <X509Data>
+        <X509Certificate>MIIESTCCAzGgAwIBAgIKWfWX8gAAAAABgDANBgkqhkiG9w0BAQUFADAjMSEwHwYDVQQDExhVWEIyQiBDZXJ0aWZpY2F0ZSBDZW50ZXIwHhcNMTEwNTI3MDI1MDIyWhcNMjEwNTI3MDMwMDIyWjCBjTELMAkGA1UEBhMCVFcxDzANBgNVBAgTBlRhaXdhbjEPMA0GA1UEBxMGVGFpcGVpMScwJQYDVQQKDB7lj5bntZXmnKrkvoblr6bmpa3mnInpmZDlhazlj7gxETAPBgNVBAMTCDI2MzA1NTMzMSAwHgYJKoZIhvcNAQkBFhFtb25pY2FAamRnLmNvbS50dzCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA28XClMYBEJzqBFzinSP7SqfUUwwONqP+38sHupd8hMLpoSFazoSUJI0VKhYD//EXXJ67LmeyTups0SmnQei9DpWpMMgWmPti924qEndOgoxkG9pqZ3mTA1MzFEz8ZTLQmEQWAPX0F5/B/ys/i5/R7rprCk6yaLuHHk+sB0eLKG0CAwEAAaOCAZYwggGSMA4GA1UdDwEB/wQEAwIE8DATBgNVHSUEDDAKBggrBgEFBQcDAjAdBgNVHQ4EFgQU0FFa5GDUWuXjhXeWRHahE9AuiKgwHwYDVR0jBBgwFoAUlbMoBgQsg/0edCxDQbn5h5tgoC8wgYEGA1UdHwR6MHgwdqB0oHKGOGh0dHA6Ly9zc2xjYS9DZXJ0RW5yb2xsL1VYQjJCJTIwQ2VydGlmaWNhdGUlMjBDZW50ZXIuY3JshjZmaWxlOi8vXFxTU0xDQVxDZXJ0RW5yb2xsXFVYQjJCIENlcnRpZmljYXRlIENlbnRlci5jcmwwgaYGCCsGAQUFBwEBBIGZMIGWMEoGCCsGAQUFBzAChj5odHRwOi8vc3NsY2EvQ2VydEVucm9sbC9TU0xDQV9VWEIyQiUyMENlcnRpZmljYXRlJTIwQ2VudGVyLmNydDBIBggrBgEFBQcwAoY8ZmlsZTovL1xcU1NMQ0FcQ2VydEVucm9sbFxTU0xDQV9VWEIyQiBDZXJ0aWZpY2F0ZSBDZW50ZXIuY3J0MA0GCSqGSIb3DQEBBQUAA4IBAQBuQSlgHsTzKX4JSgJnxQnaoiMpa0ttgCugsog2k5skf7rUkjKQdZgl3NOgiFvPUDQ2UdpRubmSpFMHBMPOJWCBNTX+W7TQ2IsPG7+JDrZ+FmwRnQEvi696eCnqdjthXIdetG7Z9E4kAPEspQag/OgPpI5L4XwWin8wmqGjIHAL+jMbqKwYS21LiLVc9zlbkbISPhoy2Q+6bg3IC3dP5Yi3oBiudaIYMUCN9NZbTDlj4izB5bgDKu74jSH+ZJj7blORy+XlmZ8U1363IaV1UQnuPjJm2CGo8AT7inmV6zd4Y2ygf03bIUlLn55YnXdPCD+IcU6qF3WxGHk6MRPifFhr</X509Certificate>
+      </X509Data>
+    </KeyInfo>
+  </Signature>
+</InvoiceRoot>

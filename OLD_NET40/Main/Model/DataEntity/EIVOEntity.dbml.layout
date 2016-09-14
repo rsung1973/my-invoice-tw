@@ -1,0 +1,1669 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 23.375, 126.5" name="EIVOEntity">
+  <DataContextMoniker Name="/EIVOEntityDataContext" />
+  <nestedChildShapes>
+    <classShape Id="59078091-a9da-4812-95db-5095cb11dcc6" absoluteBounds="0.75, 56.625, 2, 5.2323225911458451">
+      <DataClassMoniker Name="/EIVOEntityDataContext/Organization" />
+      <nestedChildShapes>
+        <elementListCompartment Id="71d24ea0-ceca-4c42-a3ab-5cd61e618680" absoluteBounds="0.76500000059604645, 57.08500000089407, 1.9700000000000002, 4.672322591145833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c8f7bc8b-1c23-4067-8bbc-cdb68a2590dd" absoluteBounds="12.25, 51.25, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/EIVOEntityDataContext/UserRole" />
+      <nestedChildShapes>
+        <elementListCompartment Id="48ec760b-b043-4f41-ac3e-664fda2ba2e0" absoluteBounds="12.265000000596046, 51.71000000089407, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d4a54ff2-4509-4284-aa11-98e196cfa5a5" absoluteBounds="3.5, 54.5, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/EIVOEntityDataContext/OrganizationCategory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ddd4dfdb-b674-46d2-a45c-23799404bc62" absoluteBounds="3.5150000005960464, 54.96000000089407, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 55.1931469726563); (6 : 55.1931469726563); (6 : 53.5); (8.72916666666667 : 53.5 : JumpStart); (8.89583333333333 : 53.5 : JumpEnd); (10.2057259166667 : 53.5 : JumpStart); (10.3723925833333 : 53.5 : JumpEnd); (11.0572891666667 : 53.5 : JumpStart); (11.5520833333333 : 53.5 : JumpEnd); (11.8541666666667 : 53.5 : JumpStart); (12.0208333333333 : 53.5 : JumpEnd); (13.25 : 53.5); (13.25 : 52.6362939453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/OrganizationCategory/OrganizationCategory_UserRole" />
+      <nodes>
+        <classShapeMoniker Id="d4a54ff2-4509-4284-aa11-98e196cfa5a5" />
+        <classShapeMoniker Id="c8f7bc8b-1c23-4067-8bbc-cdb68a2590dd" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 56.625); (1.75 : 55.1931469726563); (2.19791866666667 : 55.1931469726563 : JumpStart); (2.36458533333333 : 55.1931469726563 : JumpEnd); (3.22916666666667 : 55.1931469726563 : JumpStart); (3.39583333333333 : 55.1931469726563 : JumpEnd); (3.5 : 55.1931469726563)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/Organization/Organization_OrganizationCategory" />
+      <nodes>
+        <classShapeMoniker Id="59078091-a9da-4812-95db-5095cb11dcc6" />
+        <classShapeMoniker Id="d4a54ff2-4509-4284-aa11-98e196cfa5a5" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="8011f450-aa7e-454f-9a2e-415dc375f293" absoluteBounds="3.5, 45.625, 2, 1.1939925130208451">
+      <DataClassMoniker Name="/EIVOEntityDataContext/MenuControl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3c3e26b2-096d-404e-a610-29ed51f268d4" absoluteBounds="3.5150000005960464, 46.08500000089407, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fdfd5963-e8d1-46eb-8fa2-728cd6b991dd" absoluteBounds="6.25, 45.5, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/EIVOEntityDataContext/UserMenu" />
+      <nestedChildShapes>
+        <elementListCompartment Id="64953b61-4b02-4f40-80dc-a3f3c24e9bec" absoluteBounds="6.2650000005960464, 45.96000000089407, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 46.2219962565104); (5.79166666666667 : 46.2219962565104 : JumpStart); (6.08333333333333 : 46.2219962565104 : JumpEnd); (6.25 : 46.2219962565104)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/MenuControl/MenuControl_UserMenu" />
+      <nodes>
+        <classShapeMoniker Id="8011f450-aa7e-454f-9a2e-415dc375f293" />
+        <classShapeMoniker Id="fdfd5963-e8d1-46eb-8fa2-728cd6b991dd" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="820e9652-aaf7-4698-8b96-6423a6cda42b" absoluteBounds="12.25, 48.375, 2, 1.5785953776041737">
+      <DataClassMoniker Name="/EIVOEntityDataContext/UserAuth" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ecb8dcc3-6ea1-44fb-994c-f05b3bbb2716" absoluteBounds="12.265, 48.835000000000008, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d6179914-16e1-4cf6-9f5d-6f34fb0d2396" absoluteBounds="3.5, 63.5, 2, 1.7708968098958451">
+      <DataClassMoniker Name="/EIVOEntityDataContext/CDS_Document" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cf7070f5-b53c-48c1-995f-a7d17b8831f5" absoluteBounds="3.5150000005960464, 63.96000000089407, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b001574e-f8bd-4ca3-9ba6-2cf3cdc4330d" absoluteBounds="20.75, 71.625, 2, 1.1939925130208451">
+      <DataClassMoniker Name="/EIVOEntityDataContext/InvoiceAllowanceDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0f2d196a-8316-493a-82cc-25d754867330" absoluteBounds="20.765000000596046, 72.08500000089407, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="95492641-71f5-4930-840f-937c14767c9c" absoluteBounds="15, 61.875, 2, 1.1939925130208451">
+      <DataClassMoniker Name="/EIVOEntityDataContext/InvoiceByHousehold" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ee2cb5d0-3a98-4d2e-8845-779dacd4bae1" absoluteBounds="15.015000000596046, 62.33500000089407, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="894cd83f-49f5-48ec-ba25-9505b741502b" absoluteBounds="12, 109.75, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/EIVOEntityDataContext/InvoiceCancellation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0fd5e651-d546-444a-b3a7-538ad9a9e9b6" absoluteBounds="12.015000000596046, 110.21000000089407, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f299f3e9-ff7c-47a7-8e0c-fc1cfcb384b7" absoluteBounds="18, 60.875, 2, 1.1939925130208451">
+      <DataClassMoniker Name="/EIVOEntityDataContext/InvoiceDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ba089667-699d-429a-af17-f4c2143ec0bc" absoluteBounds="18.015000000596046, 61.33500000089407, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7a8ed046-ebc4-4412-aea4-091a7089cf92" absoluteBounds="12, 103.375, 2, 1.1939925130208167">
+      <DataClassMoniker Name="/EIVOEntityDataContext/InvoicePrintAssertion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0085a225-7412-45ce-8e58-748db9fd8285" absoluteBounds="12.015000000596046, 103.83500000089407, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="33157335-e9c3-4190-b844-d3d463044690" absoluteBounds="15.25, 59.875, 2, 1.1939925130208451">
+      <DataClassMoniker Name="/EIVOEntityDataContext/InvoiceProduct" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6f2fb05b-fcad-4e28-aa53-3afd1d21557d" absoluteBounds="15.265000000596046, 60.33500000089407, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cc0e9886-b393-4d6d-a095-2acf296f70e0" absoluteBounds="12, 107.5, 2, 1.5785953776041595">
+      <DataClassMoniker Name="/EIVOEntityDataContext/InvoiceRejection" />
+      <nestedChildShapes>
+        <elementListCompartment Id="77089152-305c-489d-bd92-50e1bee9b1fc" absoluteBounds="12.015000000596046, 107.96000000089407, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="393d5334-d56f-468b-a0f3-49669950001f" absoluteBounds="12, 105.375, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/EIVOEntityDataContext/InvoiceVoid" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5bb95e3c-decc-47ca-b69c-1f55acced004" absoluteBounds="12.015000000596046, 105.83500000089407, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(16.25 : 61.0689925130208); (16.25 : 61.4719962565104); (17.0729166666667 : 61.4719962565104 : JumpStart); (17.2395833333333 : 61.4719962565104 : JumpEnd); (17.6041666666667 : 61.4719962565104 : JumpStart); (17.8958333333333 : 61.4719962565104 : JumpEnd); (18 : 61.4719962565104)]" fixedFrom="Algorithm" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EIVOEntityDataContext/InvoiceProduct/InvoiceProduct_InvoiceDetail" />
+      <nodes>
+        <classShapeMoniker Id="33157335-e9c3-4190-b844-d3d463044690" />
+        <classShapeMoniker Id="f299f3e9-ff7c-47a7-8e0c-fc1cfcb384b7" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="fb0bd702-859c-4b38-98ce-e6cd263d1a98" absoluteBounds="15.25, 56.75, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/EIVOEntityDataContext/CurrencyType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="992c3ea6-21c2-4279-b7f5-6fad93c6d9fc" absoluteBounds="15.265000000596046, 57.21000000089407, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="735def6f-74a9-4cc8-a43e-1da7ca224d76" absoluteBounds="12, 79.875, 2, 1.0016910807291595">
+      <DataClassMoniker Name="/EIVOEntityDataContext/WelfareReplication" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8bd18e80-4cf4-43db-97a0-c5a3f338e397" absoluteBounds="12.015000000596046, 80.33500000089407, 1.9700000000000002, 0.44169108072916663" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f9b7eb80-3e3d-4f24-900f-dffacd4cd991" absoluteBounds="9.25, 78.625, 2, 1.5785953776041595">
+      <DataClassMoniker Name="/EIVOEntityDataContext/InvoiceWelfareAgency" />
+      <nestedChildShapes>
+        <elementListCompartment Id="afc0d8a1-5caf-4f4d-b080-d8baa8e67c32" absoluteBounds="9.2650000005960464, 79.08500000089407, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(11.25 : 80.0392976888021); (11.2916666666667 : 80.0392976888021 : JumpStart); (11.8958333333333 : 80.0392976888021 : JumpEnd); (12 : 80.0392976888021)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/InvoiceWelfareAgency/InvoiceWelfareAgency_WelfareReplication" />
+      <nodes>
+        <classShapeMoniker Id="f9b7eb80-3e3d-4f24-900f-dffacd4cd991" />
+        <classShapeMoniker Id="735def6f-74a9-4cc8-a43e-1da7ca224d76" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 59.2411612955729); (2.91666666666667 : 59.2411612955729 : JumpStart); (3.20833333333333 : 59.2411612955729 : JumpEnd); (3.25 : 59.2411612955729); (3.25 : 60.125); (3.29166666666667 : 60.125 : JumpStart); (3.53645833333333 : 60.125 : JumpEnd); (5.79166666666667 : 60.125 : JumpStart); (6.06770833333333 : 60.125 : JumpEnd); (6.07291666666667 : 60.125 : JumpStart); (6.27083333333333 : 60.125 : JumpEnd); (8.32291666666667 : 60.125 : JumpStart); (8.58484248582733 : 60.125 : JumpEnd); (8.66666666666667 : 60.125 : JumpStart); (8.89583333333333 : 60.125 : JumpEnd); (9 : 60.125); (9 : 71.875); (9.36978866666667 : 71.875 : JumpStart); (9.53645533333333 : 71.875 : JumpEnd); (10.6979186666667 : 71.875 : JumpStart); (10.8645853333333 : 71.875 : JumpEnd); (11.0729166666667 : 71.875 : JumpStart); (11.2395833333333 : 71.875 : JumpEnd); (11.25 : 71.875); (11.25 : 75.125); (9.27083333333333 : 75.125 : JumpStart); (9.10416666666667 : 75.125 : JumpEnd); (9 : 75.125); (9 : 78.25); (10.25 : 78.25); (10.25 : 78.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/Organization/Organization_InvoiceWelfareAgency" />
+      <nodes>
+        <classShapeMoniker Id="59078091-a9da-4812-95db-5095cb11dcc6" />
+        <classShapeMoniker Id="f9b7eb80-3e3d-4f24-900f-dffacd4cd991" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="311cc2fa-e89f-4e81-9ee1-454d621e2826" absoluteBounds="3.5, 77, 2, 1.1939925130208167">
+      <DataClassMoniker Name="/EIVOEntityDataContext/WelfareAgency" />
+      <nestedChildShapes>
+        <elementListCompartment Id="83f71e36-2422-4c34-a3f7-2c906a7e6159" absoluteBounds="3.5150000005960464, 77.46000000089407, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.5 : 78.1939925130208); (4.5 : 79.125); (5.79166666666667 : 79.125 : JumpStart); (6.20833333333333 : 79.125 : JumpEnd); (6.25 : 79.125); (6.25 : 79.9727197265625); (7.41666666666667 : 79.9727197265625 : JumpStart); (7.58333333333333 : 79.9727197265625 : JumpEnd); (8.875 : 79.9727197265625); (8.875 : 79.4142976888021); (9.25 : 79.4142976888021)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/WelfareAgency/WelfareAgency_InvoiceWelfareAgency" />
+      <nodes>
+        <classShapeMoniker Id="311cc2fa-e89f-4e81-9ee1-454d621e2826" />
+        <classShapeMoniker Id="f9b7eb80-3e3d-4f24-900f-dffacd4cd991" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 61.8573225911458); (1.75 : 63.6250000003601); (2.79166666666667 : 63.6250000003601 : JumpStart); (2.95833333333333 : 63.6250000003601 : JumpEnd); (3 : 63.6250000003601); (3 : 71.25); (3.66666666666667 : 71.25 : JumpStart); (3.83469456164864 : 71.25 : JumpEnd); (4 : 71.25); (4 : 76.75); (3.25 : 76.75); (3.25 : 77.5969962565104); (3.5 : 77.5969962565104)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/Organization/Organization_WelfareAgency" />
+      <nodes>
+        <classShapeMoniker Id="59078091-a9da-4812-95db-5095cb11dcc6" />
+        <classShapeMoniker Id="311cc2fa-e89f-4e81-9ee1-454d621e2826" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="09fee9d0-4313-44bc-aebf-e8b724c66493" absoluteBounds="9.5, 42.5, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/EIVOEntityDataContext/InvoiceUserCarrierType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3a2ba69a-738b-4812-9e85-ac03ec0e41a9" absoluteBounds="9.5150000005960464, 42.96000000089407, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6dff114a-d3eb-49ff-a17f-df5281f922da" absoluteBounds="9.25, 66, 2, 4.8477197265625023">
+      <DataClassMoniker Name="/EIVOEntityDataContext/InvoiceItem" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7e86f87e-e884-4b4c-bb5b-249a9dfc56e5" absoluteBounds="9.2650000005960464, 66.46000000089407, 1.9700000000000002, 4.2877197265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(11.25 : 66.0307682307692); (11.2848231849011 : 65.9959450458681 : JumpStart); (11.5276755650989 : 65.7530926656704 : JumpEnd); (11.5932682307692 : 65.6875); (11.6041666666667 : 65.6875 : JumpStart); (11.9583333333333 : 65.6875 : JumpEnd); (12.0416666666667 : 65.6875 : JumpStart); (12.2083333333333 : 65.6875 : JumpEnd); (12.6354146666667 : 65.6875 : JumpStart); (12.8020813333333 : 65.6875 : JumpEnd); (13.1666666666667 : 65.6875 : JumpStart); (13.3333333333333 : 65.6875 : JumpEnd); (14.3229166666667 : 65.6875 : JumpStart); (14.4895833333333 : 65.6875 : JumpEnd); (14.625 : 65.6875); (14.625 : 63.4439925130208); (14.8160744349011 : 63.2529180781197 : JumpStart); (14.9964255650989 : 63.072566947922 : JumpEnd); (15 : 63.0689925130208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EIVOEntityDataContext/InvoiceItem/InvoiceItem_InvoiceByHousehold" />
+      <nodes>
+        <classShapeMoniker Id="6dff114a-d3eb-49ff-a17f-df5281f922da" />
+        <classShapeMoniker Id="95492641-71f5-4930-840f-937c14767c9c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.25 : 70.8477197265625); (10.25 : 71.625); (10.4322926666667 : 71.625 : JumpStart); (10.8645853333333 : 71.625 : JumpEnd); (11.0729166666667 : 71.625 : JumpStart); (11.2395833333333 : 71.625 : JumpEnd); (11.2604154166667 : 71.625 : JumpStart); (11.4739583333333 : 71.625 : JumpEnd); (11.5 : 71.625); (11.5 : 89.375); (11.5416666666667 : 89.375 : JumpStart); (11.7083333333333 : 89.375 : JumpEnd); (11.7291666666667 : 89.375 : JumpStart); (11.9583333333333 : 89.375 : JumpEnd); (12 : 89.375); (12 : 92.25); (11.75 : 92.25); (11.75 : 110.731599121094); (12 : 110.731599121094)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/InvoiceItem/InvoiceItem_InvoiceCancellation" />
+      <nodes>
+        <classShapeMoniker Id="6dff114a-d3eb-49ff-a17f-df5281f922da" />
+        <classShapeMoniker Id="894cd83f-49f5-48ec-ba25-9505b741502b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 66.0353836153846); (11.2848231849011 : 66.0005604304835 : JumpStart); (11.4026743150989 : 65.8827093002857 : JumpEnd); (11.4103836153846 : 65.875); (11.6041666666667 : 65.875 : JumpStart); (11.7708333333333 : 65.875 : JumpEnd); (11.7916666666667 : 65.875 : JumpStart); (11.9583333333333 : 65.875 : JumpEnd); (12.0416666666667 : 65.875 : JumpStart); (12.2083333333333 : 65.875 : JumpEnd); (12.6354146666667 : 65.875 : JumpStart); (12.8020813333333 : 65.875 : JumpEnd); (13.1666666666667 : 65.875 : JumpStart); (13.3333333333333 : 65.875 : JumpEnd); (14.3229166666667 : 65.875 : JumpStart); (14.4895833333333 : 65.875 : JumpEnd); (14.6666666666667 : 65.875 : JumpStart); (15.0208333333333 : 65.875 : JumpEnd); (17.0729166666667 : 65.875 : JumpStart); (17.2395833333333 : 65.875 : JumpEnd); (17.625 : 65.875); (17.625 : 62.4439925130208); (17.6285744349011 : 62.4404180781197 : JumpStart); (17.7464255650989 : 62.322566947922 : JumpEnd); (17.7535744349011 : 62.3154180781197 : JumpStart); (17.8714255650989 : 62.197566947922 : JumpEnd); (18 : 62.0689925130208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EIVOEntityDataContext/InvoiceItem/InvoiceItem_InvoiceDetail" />
+      <nodes>
+        <classShapeMoniker Id="6dff114a-d3eb-49ff-a17f-df5281f922da" />
+        <classShapeMoniker Id="f299f3e9-ff7c-47a7-8e0c-fc1cfcb384b7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.781252 : 70.8477197265625); (10.781252 : 72); (11.0729166666667 : 72 : JumpStart); (11.7395833333333 : 72 : JumpEnd); (11.75 : 72); (11.75 : 89.125); (11.9791666666667 : 89.125 : JumpStart); (12.1458333333333 : 89.125 : JumpEnd); (12.25 : 89.125); (12.25 : 92); (12.2083333333333 : 92 : JumpStart); (11.8541666666667 : 92 : JumpEnd); (11.5 : 92); (11.5 : 103.97199625651); (11.5416666666667 : 103.97199625651 : JumpStart); (11.9583333333333 : 103.97199625651 : JumpEnd); (12 : 103.97199625651)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/InvoiceItem/InvoiceItem_InvoicePrintAssertion" />
+      <nodes>
+        <classShapeMoniker Id="6dff114a-d3eb-49ff-a17f-df5281f922da" />
+        <classShapeMoniker Id="7a8ed046-ebc4-4412-aea4-091a7089cf92" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.718748 : 70.8477197265625); (9.718748 : 71.75); (10.4322926666667 : 71.75 : JumpStart); (10.8645853333333 : 71.75 : JumpEnd); (11.0729166666667 : 71.75 : JumpStart); (11.2395833333333 : 71.75 : JumpEnd); (11.2604154166667 : 71.75 : JumpStart); (11.5833333333333 : 71.75 : JumpEnd); (11.625 : 71.75); (11.625 : 89.5); (11.7916666666667 : 89.5 : JumpStart); (12.0833333333333 : 89.5 : JumpEnd); (12.125 : 89.5); (12.125 : 92.375); (11.875 : 92.375); (11.875 : 108.289297688802); (12 : 108.289297688802)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/InvoiceItem/InvoiceItem_InvoiceRejection" />
+      <nodes>
+        <classShapeMoniker Id="6dff114a-d3eb-49ff-a17f-df5281f922da" />
+        <classShapeMoniker Id="cc0e9886-b393-4d6d-a095-2acf296f70e0" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.046878 : 70.8477197265625); (11.046878 : 71.5); (11.0729166666667 : 71.5 : JumpStart); (11.2395833333333 : 71.5 : JumpEnd); (11.375 : 71.5); (11.375 : 89.25); (11.4166666666667 : 89.25 : JumpStart); (11.7083333333333 : 89.25 : JumpEnd); (11.7291666666667 : 89.25 : JumpStart); (11.8958333333333 : 89.25 : JumpEnd); (11.9791666666667 : 89.25 : JumpStart); (12.1458333333333 : 89.25 : JumpEnd); (12.1666666666667 : 89.25 : JumpStart); (12.3333333333333 : 89.25 : JumpEnd); (12.375 : 89.25); (12.375 : 92.125); (12.2083333333333 : 92.125 : JumpStart); (11.8541666666667 : 92.125 : JumpEnd); (11.625 : 92.125); (11.625 : 106.068146972656); (11.6666666666667 : 106.068146972656 : JumpStart); (11.9583333333333 : 106.068146972656 : JumpEnd); (12 : 106.068146972656)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/InvoiceItem/InvoiceItem_InvoiceVoid" />
+      <nodes>
+        <classShapeMoniker Id="6dff114a-d3eb-49ff-a17f-df5281f922da" />
+        <classShapeMoniker Id="393d5334-d56f-468b-a0f3-49669950001f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.48637771684695 : 65.2708968098958); (5.87857443490112 : 65.66309352795 : JumpStart); (5.99642556509888 : 65.7809446581478 : JumpEnd); (6.03125 : 65.8157690930489); (6.03125 : 68.8806469726563); (6.04166666666667 : 68.8806469726563 : JumpStart); (6.27083333333333 : 68.8806469726563 : JumpEnd); (8.32291666666667 : 68.8806469726563 : JumpStart); (8.48958333333333 : 68.8806469726563 : JumpEnd); (8.60416666666667 : 68.8806469726563 : JumpStart); (8.77083333333333 : 68.8806469726563 : JumpEnd); (8.91666666666667 : 68.8806469726563 : JumpStart); (9.08333333333333 : 68.8806469726563 : JumpEnd); (9.25 : 68.8806469726563)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/CDS_Document/CDS_Document_InvoiceItem" />
+      <nodes>
+        <classShapeMoniker Id="d6179914-16e1-4cf6-9f5d-6f34fb0d2396" />
+        <classShapeMoniker Id="6dff114a-d3eb-49ff-a17f-df5281f922da" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 61.8388600526843); (3.09732443490112 : 62.1861844875854 : JumpStart); (3.34017556509888 : 62.4290356177832 : JumpEnd); (3.359375 : 62.4482350526843); (3.359375 : 66.3437505); (3.60839981733899 : 66.3437505 : JumpStart); (3.77506648400566 : 66.3437505 : JumpEnd); (3.86263696801132 : 66.3437505 : JumpStart); (4.02930363467798 : 66.3437505 : JumpEnd); (4.11687411868364 : 66.3437505 : JumpStart); (4.28354078535031 : 66.3437505 : JumpEnd); (4.62160229216121 : 66.3437505 : JumpStart); (4.78826895882787 : 66.3437505 : JumpEnd); (4.87209331496645 : 66.3437505 : JumpStart); (5.03875998163311 : 66.3437505 : JumpEnd); (5.63541666666667 : 66.3437505 : JumpStart); (6.23958333333333 : 66.3437505 : JumpEnd); (8.32291666666667 : 66.3437505 : JumpStart); (8.48958333333333 : 66.3437505 : JumpEnd); (8.57291616666667 : 66.3437505 : JumpStart); (8.77083333333333 : 66.3437505 : JumpEnd); (8.91666666666667 : 66.3437505 : JumpStart); (9.08333333333333 : 66.3437505 : JumpEnd); (9.25 : 66.3437505)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/Organization/Organization_InvoiceItem" />
+      <nodes>
+        <classShapeMoniker Id="59078091-a9da-4812-95db-5095cb11dcc6" />
+        <classShapeMoniker Id="6dff114a-d3eb-49ff-a17f-df5281f922da" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 61.8003985142228); (3.09732443490112 : 62.1477229491239 : JumpStart); (3.34017556509888 : 62.3905740793217 : JumpEnd); (3.375 : 62.4253985142228); (3.375 : 66.3437505); (3.60839981733899 : 66.3437505 : JumpStart); (3.77506648400566 : 66.3437505 : JumpEnd); (3.86263696801132 : 66.3437505 : JumpStart); (4.02930363467798 : 66.3437505 : JumpEnd); (4.11687411868364 : 66.3437505 : JumpStart); (4.28354078535031 : 66.3437505 : JumpEnd); (4.62160229216121 : 66.3437505 : JumpStart); (4.78826895882787 : 66.3437505 : JumpEnd); (4.87209331496645 : 66.3437505 : JumpStart); (5.03875998163311 : 66.3437505 : JumpEnd); (5.63541666666667 : 66.3437505 : JumpStart); (6.23958333333333 : 66.3437505 : JumpEnd); (8.32291666666667 : 66.3437505 : JumpStart); (8.48958333333333 : 66.3437505 : JumpEnd); (8.57291616666667 : 66.3437505 : JumpStart); (8.77083333333333 : 66.3437505 : JumpEnd); (8.91666666666667 : 66.3437505 : JumpStart); (9.08333333333333 : 66.3437505 : JumpEnd); (9.25 : 66.3437505)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/Organization/Organization_InvoiceItem1" />
+      <nodes>
+        <classShapeMoniker Id="59078091-a9da-4812-95db-5095cb11dcc6" />
+        <classShapeMoniker Id="6dff114a-d3eb-49ff-a17f-df5281f922da" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="a3a10561-cc44-4486-a5d3-ce7312e37103" absoluteBounds="0.75, 63.875, 2, 1.1939925130208451">
+      <DataClassMoniker Name="/EIVOEntityDataContext/DocumentType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d4b8d6e9-1fac-4e82-965e-8df2df3fe129" absoluteBounds="0.76500000059604645, 64.33500000089407, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 64.4719962565104); (2.91666666666667 : 64.4719962565104 : JumpStart); (3.48958333333333 : 64.4719962565104 : JumpEnd); (3.5 : 64.4719962565104)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/DocumentType/DocumentType_CDS_Document" />
+      <nodes>
+        <classShapeMoniker Id="a3a10561-cc44-4486-a5d3-ce7312e37103" />
+        <classShapeMoniker Id="d6179914-16e1-4cf6-9f5d-6f34fb0d2396" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="fbfe2a20-9041-4ff0-8c7f-e725ab4f2e45" absoluteBounds="0.75, 0.75, 2, 2.5401025390625">
+      <DataClassMoniker Name="/EIVOEntityDataContext/viewDomationListCountGroup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5f63aaf8-e4e2-4528-9170-78ec3ea2487c" absoluteBounds="0.76500000000000057, 1.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="acc9493b-f690-4a1e-8bc1-70d84d867783" absoluteBounds="12.25, 53.75, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/EIVOEntityDataContext/UserProfileExtension" />
+      <nestedChildShapes>
+        <elementListCompartment Id="814db6bd-f782-4f12-b77f-639bb071594d" absoluteBounds="12.265000000596046, 54.21000000089407, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0b91d931-db5a-41b0-9957-634935de5d97" absoluteBounds="18.25, 58.375, 2, 1.1939925130208451">
+      <DataClassMoniker Name="/EIVOEntityDataContext/UserProfileStatus" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4882fe7f-e006-49d9-9f0c-00a225339f3b" absoluteBounds="18.265, 58.835000000000008, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cf6f208f-514f-484d-b9a5-1db3daf591a4" absoluteBounds="15, 66.875, 2, 1.0016910807291595">
+      <DataClassMoniker Name="/EIVOEntityDataContext/ExceptionReplication" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8bf09bc0-63d6-455b-a4e4-47e85c64fffb" absoluteBounds="15.015000000596046, 67.33500000089407, 1.9700000000000002, 0.44169108072916663" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5fa40d36-38d6-43b8-8e77-0dd20e0dfe7f" absoluteBounds="9.5, 44.625, 2, 1.7708968098958451">
+      <DataClassMoniker Name="/EIVOEntityDataContext/MemberCode" />
+      <nestedChildShapes>
+        <elementListCompartment Id="820e9008-97df-4383-9050-e46a7d73ccb9" absoluteBounds="9.5150000005960464, 45.08500000089407, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.281252 : 56.625); (2.281252 : 53.0689925130208); (3.04166666666667 : 53.0689925130208 : JumpStart); (3.20833333333333 : 53.0689925130208 : JumpEnd); (3.22916666666667 : 53.0689925130208 : JumpStart); (3.39583333333333 : 53.0689925130208 : JumpEnd); (5.79166666666667 : 53.0689925130208 : JumpStart); (5.95833333333333 : 53.0689925130208 : JumpEnd); (6 : 53.0689925130208); (6 : 45.25); (9.125 : 45.25); (9.125 : 45.5104484049479); (9.5 : 45.5104484049479)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/Organization/Organization_MemberCode" />
+      <nodes>
+        <classShapeMoniker Id="59078091-a9da-4812-95db-5095cb11dcc6" />
+        <classShapeMoniker Id="5fa40d36-38d6-43b8-8e77-0dd20e0dfe7f" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="e7b75cd1-fb4b-45ca-8b81-9ec9139bb5f9" absoluteBounds="12.25, 43.375, 2, 2.1554996744791595">
+      <DataClassMoniker Name="/EIVOEntityDataContext/InvoiceUserCarrier" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4dfea0eb-1242-4c88-b66c-a76b34da659a" absoluteBounds="12.265000000596046, 43.83500000089407, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(14.25 : 44.4527498372396); (15.09375 : 44.4527498372396); (15.09375 : 61.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/InvoiceUserCarrier/InvoiceUserCarrier_InvoiceByHousehold" />
+      <nodes>
+        <classShapeMoniker Id="e7b75cd1-fb4b-45ca-8b81-9ec9139bb5f9" />
+        <classShapeMoniker Id="95492641-71f5-4930-840f-937c14767c9c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.5 : 43.6306469726563); (12.25 : 43.6306469726563)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/InvoiceUserCarrierType/InvoiceUserCarrierType_InvoiceUserCarrier" />
+      <nodes>
+        <classShapeMoniker Id="09fee9d0-4313-44bc-aebf-e8b724c66493" />
+        <classShapeMoniker Id="e7b75cd1-fb4b-45ca-8b81-9ec9139bb5f9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.5 : 45.0777498372396); (11.7916666666667 : 45.0777498372396 : JumpStart); (11.9583333333333 : 45.0777498372396 : JumpEnd); (12.25 : 45.0777498372396)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/MemberCode/MemberCode_InvoiceUserCarrier" />
+      <nodes>
+        <classShapeMoniker Id="5fa40d36-38d6-43b8-8e77-0dd20e0dfe7f" />
+        <classShapeMoniker Id="e7b75cd1-fb4b-45ca-8b81-9ec9139bb5f9" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="29adda3d-5bb4-40f6-8b7e-85263ad38c2a" absoluteBounds="12.25, 57.875, 2, 1.1939925130208167">
+      <DataClassMoniker Name="/EIVOEntityDataContext/DocumentDispatch" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f910b1aa-e8c1-440e-89cf-98adaad8e8e0" absoluteBounds="12.265000000596046, 58.33500000089407, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.48910217347756 : 63.5); (5.87857443490112 : 63.1105277385764 : JumpStart); (6.13705056509888 : 62.8520516083787 : JumpEnd); (6.1875 : 62.8016021734776); (6.1875 : 59.4439925130208); (8.32291666666667 : 59.4439925130208 : JumpStart); (8.48958333333333 : 59.4439925130208 : JumpEnd); (8.54166666666667 : 59.4439925130208 : JumpStart); (8.70833333333333 : 59.4439925130208 : JumpEnd); (8.72916666666667 : 59.4439925130208 : JumpStart); (8.95833333333333 : 59.4439925130208 : JumpEnd); (11.2604154166667 : 59.4439925130208 : JumpStart); (11.5520833333333 : 59.4439925130208 : JumpEnd); (11.6041666666667 : 59.4439925130208 : JumpStart); (11.7708333333333 : 59.4439925130208 : JumpEnd); (11.875 : 59.4439925130208); (11.8785744349011 : 59.4404180781197 : JumpStart); (11.9964255650989 : 59.3225669479219 : JumpEnd); (12.25 : 59.0689925130208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EIVOEntityDataContext/CDS_Document/CDS_Document_DocumentDispatch" />
+      <nodes>
+        <classShapeMoniker Id="d6179914-16e1-4cf6-9f5d-6f34fb0d2396" />
+        <classShapeMoniker Id="29adda3d-5bb4-40f6-8b7e-85263ad38c2a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 64.1422461284353); (2.875 : 64.1422461284353); (2.875 : 63.25); (3.04166666666667 : 63.25 : JumpStart); (3.48958333333333 : 63.25 : JumpEnd); (5.59855525090144 : 63.25 : JumpStart); (6.16145833333333 : 63.25 : JumpEnd); (8.32291666666667 : 63.25 : JumpStart); (8.48958333333333 : 63.25 : JumpEnd); (8.60416666666667 : 63.25 : JumpStart); (8.89583333333333 : 63.25 : JumpEnd); (8.91666666666667 : 63.25 : JumpStart); (9.08333333333333 : 63.25 : JumpEnd); (11.2604154166667 : 63.25 : JumpStart); (11.5520833333333 : 63.25 : JumpEnd); (11.6041666666667 : 63.25 : JumpStart); (11.8333333333333 : 63.25 : JumpEnd); (12 : 63.25); (12 : 59.6939925130208); (13.281252 : 59.6939925130208); (13.281252 : 59.0689925130208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/DocumentType/DocumentType_DocumentDispatch" />
+      <nodes>
+        <classShapeMoniker Id="a3a10561-cc44-4486-a5d3-ce7312e37103" />
+        <classShapeMoniker Id="29adda3d-5bb4-40f6-8b7e-85263ad38c2a" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="fe428122-6429-4c48-b547-edae70da0b52" absoluteBounds="15, 68.875, 2, 2.5401025390625023">
+      <DataClassMoniker Name="/EIVOEntityDataContext/InvoiceAllowance" />
+      <nestedChildShapes>
+        <elementListCompartment Id="59017247-f336-44aa-9c3f-af91a323487b" absoluteBounds="15.015000000596046, 69.33500000089407, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(17 : 70.4383048502604); (17.0729166666667 : 70.4383048502604 : JumpStart); (17.2395833333333 : 70.4383048502604 : JumpEnd); (17.7604166666667 : 70.4383048502604 : JumpStart); (17.9270833333333 : 70.4383048502604 : JumpEnd); (20.4166666666667 : 70.4383048502604 : JumpStart); (20.5833333333333 : 70.4383048502604 : JumpEnd); (20.84375 : 70.4383048502604); (20.84375 : 71.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/InvoiceAllowance/InvoiceAllowance_InvoiceAllowanceDetail" />
+      <nodes>
+        <classShapeMoniker Id="fe428122-6429-4c48-b547-edae70da0b52" />
+        <classShapeMoniker Id="b001574e-f8bd-4ca3-9ba6-2cf3cdc4330d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 65.2354778736979); (5.78541893619791 : 65.5208968098958); (5.85416666666667 : 65.5208968098958 : JumpStart); (6.23958333333333 : 65.5208968098958 : JumpEnd); (7.16666666666667 : 65.5208968098958 : JumpStart); (7.33333333333333 : 65.5208968098958 : JumpEnd); (8.32291666666667 : 65.5208968098958 : JumpStart); (8.48958333333333 : 65.5208968098958 : JumpEnd); (8.54166666666667 : 65.5208968098958 : JumpStart); (8.89583333333333 : 65.5208968098958 : JumpEnd); (8.91666666666667 : 65.5208968098958 : JumpStart); (9.08333333333333 : 65.5208968098958 : JumpEnd); (11.2604154166667 : 65.5208968098958 : JumpStart); (11.5520833333333 : 65.5208968098958 : JumpEnd); (11.6041666666667 : 65.5208968098958 : JumpStart); (11.8333333333333 : 65.5208968098958 : JumpEnd); (12.6354146666667 : 65.5208968098958 : JumpStart); (12.8020813333333 : 65.5208968098958 : JumpEnd); (14.3229166666667 : 65.5208968098958 : JumpStart); (14.4895833333333 : 65.5208968098958 : JumpEnd); (14.5416666666667 : 65.5208968098958 : JumpStart); (14.7083333333333 : 65.5208968098958 : JumpEnd); (14.75 : 65.5208968098958); (14.75 : 68.6234625384615); (14.8160744349011 : 68.6895369733627 : JumpStart); (14.9964255650989 : 68.8698881035604 : JumpEnd); (15.0015374615385 : 68.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EIVOEntityDataContext/CDS_Document/CDS_Document_InvoiceAllowance" />
+      <nodes>
+        <classShapeMoniker Id="d6179914-16e1-4cf6-9f5d-6f34fb0d2396" />
+        <classShapeMoniker Id="fe428122-6429-4c48-b547-edae70da0b52" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 69.28125); (11.2604154166667 : 69.28125 : JumpStart); (11.5520833333333 : 69.28125 : JumpEnd); (11.6041666666667 : 69.28125 : JumpStart); (11.7708333333333 : 69.28125 : JumpEnd); (11.7916666666667 : 69.28125 : JumpStart); (12.2083333333333 : 69.28125 : JumpEnd); (14.3229166666667 : 69.28125 : JumpStart); (14.4895833333333 : 69.28125 : JumpEnd); (14.7916666666667 : 69.28125 : JumpStart); (14.9583333333333 : 69.28125 : JumpEnd); (15 : 69.28125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/InvoiceItem/InvoiceItem_InvoiceAllowance" />
+      <nodes>
+        <classShapeMoniker Id="6dff114a-d3eb-49ff-a17f-df5281f922da" />
+        <classShapeMoniker Id="fe428122-6429-4c48-b547-edae70da0b52" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="43da4b36-0f5a-40ff-b261-f4280047860f" absoluteBounds="18, 73.75, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/EIVOEntityDataContext/InvoiceNoAssignment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2d51ca73-f139-49a6-a406-bba0330269eb" absoluteBounds="18.015, 74.210000000000008, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7ad5c9b1-ab15-49f6-8454-7098009adb75" absoluteBounds="15.25, 89.5, 2, 1.7708968098958451">
+      <DataClassMoniker Name="/EIVOEntityDataContext/InvoiceNoInterval" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fcf2aa69-3e35-4bd0-a0ee-796b2bfd5d5f" absoluteBounds="15.265000000596046, 89.96000000089407, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="112cf8ca-f059-4abb-933a-742a9faaef91" absoluteBounds="9.75, 89.625, 2, 1.5785953776041595">
+      <DataClassMoniker Name="/EIVOEntityDataContext/InvoiceTrackCode" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1b37bf18-2597-4eb7-b41b-ec1c571b7821" absoluteBounds="9.7650000005960464, 90.08500000089407, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d724cf04-c25e-4357-8b69-42b109bd47f7" absoluteBounds="12.5, 89.875, 2, 1.1939925130208451">
+      <DataClassMoniker Name="/EIVOEntityDataContext/InvoiceTrackCodeAssignment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4dbc9dae-8c46-477c-bcb4-f84358ab95f2" absoluteBounds="12.515, 90.335000000000008, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(10.515626 : 70.8477197265625); (10.515626 : 71.9375); (11.0729166666667 : 71.9375 : JumpStart); (11.2395833333333 : 71.9375 : JumpEnd); (11.2604154166667 : 71.9375 : JumpStart); (11.8645833333333 : 71.9375 : JumpEnd); (11.875 : 71.9375); (11.875 : 75.1747054036458); (12.9166666666667 : 75.1747054036458 : JumpStart); (13.0833333333333 : 75.1747054036458 : JumpEnd); (14.3229166666667 : 75.1747054036458 : JumpStart); (14.4895833333333 : 75.1747054036458 : JumpEnd); (14.75 : 75.1747054036458); (14.75 : 72.375); (14.8541666666667 : 72.375 : JumpStart); (15.0208333333333 : 72.375 : JumpEnd); (15.3854146666667 : 72.375 : JumpStart); (15.5520813333333 : 72.375 : JumpEnd); (15.9166666666667 : 72.375 : JumpStart); (16.0833333333333 : 72.375 : JumpEnd); (17.0729166666667 : 72.375 : JumpStart); (17.2395833333333 : 72.375 : JumpEnd); (17.2916666666667 : 72.375 : JumpStart); (17.5208333333333 : 72.375 : JumpEnd); (17.625 : 72.375); (17.625 : 74.4431469726563); (17.7604166666667 : 74.4431469726563 : JumpStart); (17.9270833333333 : 74.4431469726563 : JumpEnd); (18 : 74.4431469726563)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/InvoiceItem/InvoiceItem_InvoiceNoAssignment" />
+      <nodes>
+        <classShapeMoniker Id="6dff114a-d3eb-49ff-a17f-df5281f922da" />
+        <classShapeMoniker Id="43da4b36-0f5a-40ff-b261-f4280047860f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(16.25 : 89.5); (16.25 : 88.8477197265625); (17.5 : 88.8477197265625); (17.5 : 74.8209724589844); (17.7604166666667 : 74.8209724589844 : JumpStart); (17.9270833333333 : 74.8209724589844 : JumpEnd); (18 : 74.8209724589844)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/InvoiceNoInterval/InvoiceNoInterval_InvoiceNoAssignment" />
+      <nodes>
+        <classShapeMoniker Id="7ad5c9b1-ab15-49f6-8454-7098009adb75" />
+        <classShapeMoniker Id="43da4b36-0f5a-40ff-b261-f4280047860f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.5 : 90.4719962565104); (15.25 : 90.4719962565104)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/InvoiceTrackCodeAssignment/InvoiceTrackCodeAssignment_InvoiceNoInterval" />
+      <nodes>
+        <classShapeMoniker Id="d724cf04-c25e-4357-8b69-42b109bd47f7" />
+        <classShapeMoniker Id="7ad5c9b1-ab15-49f6-8454-7098009adb75" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.75 : 90.4719962565104); (11.7916666666667 : 90.4719962565104 : JumpStart); (12.4583333333333 : 90.4719962565104 : JumpEnd); (12.5 : 90.4719962565104)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/InvoiceTrackCode/InvoiceTrackCode_InvoiceTrackCodeAssignment" />
+      <nodes>
+        <classShapeMoniker Id="112cf8ca-f059-4abb-933a-742a9faaef91" />
+        <classShapeMoniker Id="d724cf04-c25e-4357-8b69-42b109bd47f7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 56.96875); (5.79166666666667 : 56.96875 : JumpStart); (5.95833333333333 : 56.96875 : JumpEnd); (8.32291666666667 : 56.96875 : JumpStart); (8.48958333333333 : 56.96875 : JumpEnd); (8.54166666666667 : 56.96875 : JumpStart); (8.70833333333333 : 56.96875 : JumpEnd); (8.72916666666667 : 56.96875 : JumpStart); (8.89583333333333 : 56.96875 : JumpEnd); (11.2604154166667 : 56.96875 : JumpStart); (11.5520833333333 : 56.96875 : JumpEnd); (11.6041666666667 : 56.96875 : JumpStart); (11.7708333333333 : 56.96875 : JumpEnd); (11.8541666666667 : 56.96875 : JumpStart); (12.0208333333333 : 56.96875 : JumpEnd); (14.40625 : 56.96875); (14.40625 : 89.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/Organization/Organization_InvoiceTrackCodeAssignment" />
+      <nodes>
+        <classShapeMoniker Id="59078091-a9da-4812-95db-5095cb11dcc6" />
+        <classShapeMoniker Id="d724cf04-c25e-4357-8b69-42b109bd47f7" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="9720e717-7b99-4e77-a173-4ebaa918970b" absoluteBounds="9.25, 63.75, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/EIVOEntityDataContext/DocumentOwner" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3743ac4b-7087-487a-b2be-779352fedc7b" absoluteBounds="9.265, 64.210000000000008, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.4544446026893 : 65.2708968098958); (4.4544446026893 : 65.7708968098958); (4.62160229216121 : 65.7708968098958 : JumpStart); (4.78826895882787 : 65.7708968098958 : JumpEnd); (4.87209331496645 : 65.7708968098958 : JumpStart); (5.03875998163311 : 65.7708968098958 : JumpEnd); (5.11304873956455 : 65.7708968098958 : JumpStart); (5.27971540623122 : 65.7708968098958 : JumpEnd); (5.82291666666667 : 65.7708968098958 : JumpStart); (6.23958333333333 : 65.7708968098958 : JumpEnd); (8.32291666666667 : 65.7708968098958 : JumpStart); (8.48958333333333 : 65.7708968098958 : JumpEnd); (8.625 : 65.7708968098958); (8.625 : 64.4431469726563); (8.72916666666667 : 64.4431469726563 : JumpStart); (8.89583333333333 : 64.4431469726563 : JumpEnd); (8.91666666666667 : 64.4431469726563 : JumpStart); (9.08333333333333 : 64.4431469726563 : JumpEnd); (9.25 : 64.4431469726563)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/CDS_Document/CDS_Document_DocumentOwner" />
+      <nodes>
+        <classShapeMoniker Id="d6179914-16e1-4cf6-9f5d-6f34fb0d2396" />
+        <classShapeMoniker Id="9720e717-7b99-4e77-a173-4ebaa918970b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 58.1049556477865); (3 : 58.1049556477865); (3 : 59.875); (3.16666666666667 : 59.875 : JumpStart); (3.36458333333333 : 59.875 : JumpEnd); (3.36979166666667 : 59.875 : JumpStart); (3.53645833333333 : 59.875 : JumpEnd); (5.79166666666667 : 59.875 : JumpStart); (6.06770833333333 : 59.875 : JumpEnd); (6.07291666666667 : 59.875 : JumpStart); (6.27083333333333 : 59.875 : JumpEnd); (8.32291666666667 : 59.875 : JumpStart); (8.48958333333333 : 59.875 : JumpEnd); (8.54166666666667 : 59.875 : JumpStart); (8.70833333333333 : 59.875 : JumpEnd); (8.75 : 59.875); (8.75 : 63.375); (8.91666666666667 : 63.375 : JumpStart); (9.08333333333333 : 63.375 : JumpEnd); (10.25 : 63.375); (10.25 : 63.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/Organization/Organization_DocumentOwner" />
+      <nodes>
+        <classShapeMoniker Id="59078091-a9da-4812-95db-5095cb11dcc6" />
+        <classShapeMoniker Id="9720e717-7b99-4e77-a173-4ebaa918970b" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="21281dfd-0277-42bb-b692-c7a6a2685271" absoluteBounds="9.25, 75.375, 2, 2.1554996744791595">
+      <DataClassMoniker Name="/EIVOEntityDataContext/UniformInvoiceWinningNumber" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a587e08e-5b84-43f6-b55e-b9471556a95d" absoluteBounds="9.265, 75.835000000000008, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="44d56bfd-f68b-4ecc-b1a0-83adbbfb5648" absoluteBounds="12, 72, 2, 2.9247054036458451">
+      <DataClassMoniker Name="/EIVOEntityDataContext/InvoiceWinningNumber" />
+      <nestedChildShapes>
+        <elementListCompartment Id="704d1e44-5ecf-4b98-b3d8-20d7b5cd2f45" absoluteBounds="12.015000000596046, 72.46000000089407, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(11.15625 : 70.8477197265625); (11.15625 : 74.345400390625); (11.1666666666667 : 74.345400390625 : JumpStart); (11.9583333333333 : 74.345400390625 : JumpEnd); (12 : 74.345400390625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/InvoiceItem/InvoiceItem_InvoiceWinningNumber" />
+      <nodes>
+        <classShapeMoniker Id="6dff114a-d3eb-49ff-a17f-df5281f922da" />
+        <classShapeMoniker Id="44d56bfd-f68b-4ecc-b1a0-83adbbfb5648" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.203125 : 75.375); (11.203125 : 74.6663053971354); (11.2916666666667 : 74.6663053971354 : JumpStart); (11.9583333333333 : 74.6663053971354 : JumpEnd); (12 : 74.6663053971354)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/UniformInvoiceWinningNumber/UniformInvoiceWinningNumber_InvoiceWinningNumber" />
+      <nodes>
+        <classShapeMoniker Id="21281dfd-0277-42bb-b692-c7a6a2685271" />
+        <classShapeMoniker Id="44d56bfd-f68b-4ecc-b1a0-83adbbfb5648" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="9a7d5584-ebce-4595-95fa-04b9913f7d00" absoluteBounds="6.25, 69.625, 2, 1.5785953776041595">
+      <DataClassMoniker Name="/EIVOEntityDataContext/DocumentPrintLog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2ba04333-528e-4657-9dee-dfbd45b79055" absoluteBounds="6.2650000000000006, 70.085000000000008, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.43733749749599 : 65.2708968098958); (5.875 : 65.7085593123999); (5.875 : 70.4142976888021); (5.90104166666667 : 70.4142976888021 : JumpStart); (6.23958333333333 : 70.4142976888021 : JumpEnd); (6.25 : 70.4142976888021)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/CDS_Document/CDS_Document_DocumentPrintLog" />
+      <nodes>
+        <classShapeMoniker Id="d6179914-16e1-4cf6-9f5d-6f34fb0d2396" />
+        <classShapeMoniker Id="9a7d5584-ebce-4595-95fa-04b9913f7d00" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 64.8017463845856); (2.875 : 64.8017463845856); (2.875 : 66.5); (2.91666666666667 : 66.5 : JumpStart); (3.41145833333333 : 66.5 : JumpEnd); (3.60839981733899 : 66.5 : JumpStart); (3.77506648400566 : 66.5 : JumpEnd); (3.86263696801132 : 66.5 : JumpStart); (4.02930363467798 : 66.5 : JumpEnd); (4.11687411868364 : 66.5 : JumpStart); (4.28354078535031 : 66.5 : JumpEnd); (4.87209331496645 : 66.5 : JumpStart); (5.03875998163311 : 66.5 : JumpEnd); (5.75 : 66.5); (5.75 : 69.25); (5.79166666666667 : 69.25 : JumpStart); (6.27083333333333 : 69.25 : JumpEnd); (7.25 : 69.25); (7.25 : 69.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/DocumentType/DocumentType_DocumentPrintLog" />
+      <nodes>
+        <classShapeMoniker Id="a3a10561-cc44-4486-a5d3-ce7312e37103" />
+        <classShapeMoniker Id="9a7d5584-ebce-4595-95fa-04b9913f7d00" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="d83d4410-20f1-4bf5-9ba3-57005fa080b6" absoluteBounds="12.25, 60.5, 2, 1.7708968098958451">
+      <DataClassMoniker Name="/EIVOEntityDataContext/DocumentDownloadLog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f14bb3be-2439-4fc2-a8a6-4e460026e3b8" absoluteBounds="12.265, 60.960000000000008, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 63.5476769910357); (5.89142699103566 : 63.15625); (5.90104166666667 : 63.15625 : JumpStart); (6.16145833333333 : 63.15625 : JumpEnd); (8.32291666666667 : 63.15625 : JumpStart); (8.48958333333333 : 63.15625 : JumpEnd); (8.60416666666667 : 63.15625 : JumpStart); (8.89583333333333 : 63.15625 : JumpEnd); (8.91666666666667 : 63.15625 : JumpStart); (9.08333333333333 : 63.15625 : JumpEnd); (11.2604154166667 : 63.15625 : JumpStart); (11.5520833333333 : 63.15625 : JumpEnd); (11.6041666666667 : 63.15625 : JumpStart); (11.8333333333333 : 63.15625 : JumpEnd); (11.9166666666667 : 63.15625 : JumpStart); (12.0833333333333 : 63.15625 : JumpEnd); (13.25 : 63.15625); (13.25 : 62.2708968098958)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/CDS_Document/CDS_Document_DocumentDownloadLog" />
+      <nodes>
+        <classShapeMoniker Id="d6179914-16e1-4cf6-9f5d-6f34fb0d2396" />
+        <classShapeMoniker Id="d83d4410-20f1-4bf5-9ba3-57005fa080b6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 63.9773710643977); (2.79166666666667 : 63.9773710643977 : JumpStart); (3.23958333333333 : 63.9773710643977 : JumpEnd); (3.25 : 63.9773710643977); (3.25 : 63); (3.27604166666667 : 63 : JumpStart); (3.53645833333333 : 63 : JumpEnd); (5.82291666666667 : 63 : JumpStart); (6.16145833333333 : 63 : JumpEnd); (8.32291666666667 : 63 : JumpStart); (8.48958333333333 : 63 : JumpEnd); (8.60416666666667 : 63 : JumpStart); (8.89583333333333 : 63 : JumpEnd); (8.91666666666667 : 63 : JumpStart); (9.08333333333333 : 63 : JumpEnd); (10.1666666666667 : 63 : JumpStart); (10.3333333333333 : 63 : JumpEnd); (11.2604154166667 : 63 : JumpStart); (11.5520833333333 : 63 : JumpEnd); (11.6041666666667 : 63 : JumpStart); (11.8333333333333 : 63 : JumpEnd); (11.9166666666667 : 63 : JumpStart); (12.0833333333333 : 63 : JumpEnd); (12.718748 : 63); (12.718748 : 62.2708968098958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/DocumentType/DocumentType_DocumentDownloadLog" />
+      <nodes>
+        <classShapeMoniker Id="a3a10561-cc44-4486-a5d3-ce7312e37103" />
+        <classShapeMoniker Id="d83d4410-20f1-4bf5-9ba3-57005fa080b6" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="e844600e-c6fd-457f-8f44-a09afc44deea" absoluteBounds="12, 101.25, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/EIVOEntityDataContext/InvoicePaperRequest" />
+      <nestedChildShapes>
+        <elementListCompartment Id="eccb6493-aad8-4a9f-ac76-e311887efd82" absoluteBounds="12.015000000596046, 101.71000000089407, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(9.984374 : 70.8477197265625); (9.984374 : 71.8125); (10.4322926666667 : 71.8125 : JumpStart); (10.8645853333333 : 71.8125 : JumpEnd); (11.0729166666667 : 71.8125 : JumpStart); (11.2395833333333 : 71.8125 : JumpEnd); (11.2604154166667 : 71.8125 : JumpStart); (11.4739583333333 : 71.8125 : JumpEnd); (11.5625 : 71.8125); (11.5625 : 89); (11.6041666666667 : 89 : JumpStart); (11.8958333333333 : 89 : JumpEnd); (12.0625 : 89); (12.0625 : 91.875); (12.0208333333333 : 91.875 : JumpStart); (11.8541666666667 : 91.875 : JumpEnd); (11.375 : 91.875); (11.375 : 101.943146972656); (11.4166666666667 : 101.943146972656 : JumpStart); (11.9583333333333 : 101.943146972656 : JumpEnd); (12 : 101.943146972656)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/InvoiceItem/InvoiceItem_InvoicePaperRequest" />
+      <nodes>
+        <classShapeMoniker Id="6dff114a-d3eb-49ff-a17f-df5281f922da" />
+        <classShapeMoniker Id="e844600e-c6fd-457f-8f44-a09afc44deea" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="86ca5825-60a7-4c6f-9b3b-0e9c5da7a466" absoluteBounds="15.25, 53.625, 2, 1.5785953776041595">
+      <DataClassMoniker Name="/EIVOEntityDataContext/InvoicePurchaseOrderUpload" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bac984a4-b238-4642-ac54-895af27c38f1" absoluteBounds="15.265, 54.085000000000008, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="66e31b31-2f6d-4d4c-ae95-6f4a38f22fab" absoluteBounds="12, 113, 2, 1.5785953776041595">
+      <DataClassMoniker Name="/EIVOEntityDataContext/InvoiceCancellationUpload" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5e15805c-a149-4851-bdfc-ed2e8b1c4f98" absoluteBounds="12.015000000596046, 113.46000000089407, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f32e8f57-448c-489a-a5f5-55a9a4bf1fed" absoluteBounds="14.75, 110.125, 2, 1.1939925130208167">
+      <DataClassMoniker Name="/EIVOEntityDataContext/InvoiceCancellationUploadList" />
+      <nestedChildShapes>
+        <elementListCompartment Id="92829114-15ad-4674-a8f9-d19f510c4ab5" absoluteBounds="14.765000000596046, 110.58500000089407, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(14 : 110.72199625651); (14.75 : 110.72199625651)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/InvoiceCancellation/InvoiceCancellation_InvoiceCancellationUploadList" />
+      <nodes>
+        <classShapeMoniker Id="894cd83f-49f5-48ec-ba25-9505b741502b" />
+        <classShapeMoniker Id="f32e8f57-448c-489a-a5f5-55a9a4bf1fed" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14 : 113.789297688802); (15.75 : 113.789297688802); (15.75 : 111.318992513021)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/InvoiceCancellationUpload/InvoiceCancellationUpload_InvoiceCancellationUploadList" />
+      <nodes>
+        <classShapeMoniker Id="66e31b31-2f6d-4d4c-ae95-6f4a38f22fab" />
+        <classShapeMoniker Id="f32e8f57-448c-489a-a5f5-55a9a4bf1fed" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="4326eff3-0c14-4bdd-9a98-c10fac00a63f" absoluteBounds="18, 70.75, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/EIVOEntityDataContext/InvoicePrintQueue" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f2371b60-7330-446a-9524-3741713d9a7c" absoluteBounds="18.015000000596046, 71.21000000089407, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(11.1875025 : 70.8477197265625); (11.1875025 : 71.5625); (11.2604154166667 : 71.5625 : JumpStart); (11.5520833333333 : 71.5625 : JumpEnd); (11.5729166666667 : 71.5625 : JumpStart); (11.8958333333333 : 71.5625 : JumpEnd); (11.9166666666667 : 71.5625 : JumpStart); (12.0833333333333 : 71.5625 : JumpEnd); (14.3229166666667 : 71.5625 : JumpStart); (14.4895833333333 : 71.5625 : JumpEnd); (14.7916666666667 : 71.5625 : JumpStart); (15.0208333333333 : 71.5625 : JumpEnd); (17.0317564352965 : 71.5625 : JumpStart); (17.3261164096554 : 71.5625 : JumpEnd); (17.7604166666667 : 71.5625 : JumpStart); (17.9270833333333 : 71.5625 : JumpEnd); (18 : 71.5625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/InvoiceItem/InvoiceItem_InvoicePrintQueue" />
+      <nodes>
+        <classShapeMoniker Id="6dff114a-d3eb-49ff-a17f-df5281f922da" />
+        <classShapeMoniker Id="4326eff3-0c14-4bdd-9a98-c10fac00a63f" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="83a5932d-61b1-40ce-8482-7b47aed3cc6d" absoluteBounds="12.25, 63.5, 2, 1.7708968098958167">
+      <DataClassMoniker Name="/EIVOEntityDataContext/DocumentReplication" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1b79ce11-6673-4a17-9b92-20d235d82c88" absoluteBounds="12.265, 63.960000000000008, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 63.5667481874499); (5.75424818744992 : 63.3125); (5.85416666666667 : 63.3125 : JumpStart); (6.16145833333333 : 63.3125 : JumpEnd); (8.32291666666667 : 63.3125 : JumpStart); (8.48958333333333 : 63.3125 : JumpEnd); (8.60416666666667 : 63.3125 : JumpStart); (8.89583333333333 : 63.3125 : JumpEnd); (8.91666666666667 : 63.3125 : JumpStart); (9.08333333333333 : 63.3125 : JumpEnd); (11.2604154166667 : 63.3125 : JumpStart); (11.5520833333333 : 63.3125 : JumpEnd); (11.6041666666667 : 63.3125 : JumpStart); (11.8333333333333 : 63.3125 : JumpEnd); (12.0625 : 63.3125); (12.25 : 63.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EIVOEntityDataContext/CDS_Document/CDS_Document_DocumentReplication" />
+      <nodes>
+        <classShapeMoniker Id="d6179914-16e1-4cf6-9f5d-6f34fb0d2396" />
+        <classShapeMoniker Id="83a5932d-61b1-40ce-8482-7b47aed3cc6d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 65.0487854855295); (2.75357443490112 : 65.0523599204306 : JumpStart); (3.21517556509888 : 65.5139610506284 : JumpEnd); (3.21875 : 65.5175354855295); (3.21875 : 65.3958968098958); (3.24479166666667 : 65.3958968098958 : JumpStart); (3.48958333333333 : 65.3958968098958 : JumpEnd); (3.60839981733899 : 65.3958968098958 : JumpStart); (3.77506648400566 : 65.3958968098958 : JumpEnd); (3.86263696801132 : 65.3958968098958 : JumpStart); (4.02930363467798 : 65.3958968098958 : JumpEnd); (4.11687411868364 : 65.3958968098958 : JumpStart); (4.28354078535031 : 65.3958968098958 : JumpEnd); (4.37111126935597 : 65.3958968098958 : JumpStart); (4.53777793602264 : 65.3958968098958 : JumpEnd); (4.62160229216121 : 65.3958968098958 : JumpStart); (4.78826895882787 : 65.3958968098958 : JumpEnd); (4.87209331496645 : 65.3958968098958 : JumpStart); (5.03875998163311 : 65.3958968098958 : JumpEnd); (5.11304873956455 : 65.3958968098958 : JumpStart); (5.27971540623122 : 65.3958968098958 : JumpEnd); (5.47900416416263 : 65.3958968098958 : JumpStart); (5.74375226953122 : 65.3958968098958 : JumpEnd); (5.85416666666667 : 65.3958968098958 : JumpStart); (6.23958333333333 : 65.3958968098958 : JumpEnd); (7.16666666666667 : 65.3958968098958 : JumpStart); (7.33333333333333 : 65.3958968098958 : JumpEnd); (8.32291666666667 : 65.3958968098958 : JumpStart); (8.48958333333333 : 65.3958968098958 : JumpEnd); (8.54166666666667 : 65.3958968098958 : JumpStart); (8.89583333333333 : 65.3958968098958 : JumpEnd); (8.91666666666667 : 65.3958968098958 : JumpStart); (9.08333333333333 : 65.3958968098958 : JumpEnd); (11.2604154166667 : 65.3958968098958 : JumpStart); (11.5520833333333 : 65.3958968098958 : JumpEnd); (11.6041666666667 : 65.3958968098958 : JumpStart); (11.8333333333333 : 65.3958968098958 : JumpEnd); (12.125 : 65.3958968098958); (12.25 : 65.2708968098958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EIVOEntityDataContext/DocumentType/DocumentType_DocumentReplication" />
+      <nodes>
+        <classShapeMoniker Id="a3a10561-cc44-4486-a5d3-ce7312e37103" />
+        <classShapeMoniker Id="83a5932d-61b1-40ce-8482-7b47aed3cc6d" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="c23c8401-7c5a-4e70-8fcc-88ac309cf4bc" absoluteBounds="15, 63.875, 2, 1.1939925130208167">
+      <DataClassMoniker Name="/EIVOEntityDataContext/ReplicationNotification" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e397daf0-6b63-4be0-b8fc-83da400ed9dc" absoluteBounds="15.015000000596046, 64.33500000089407, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(14.25 : 64.4719962565104); (14.3229166666667 : 64.4719962565104 : JumpStart); (14.4895833333333 : 64.4719962565104 : JumpEnd); (14.5416666666667 : 64.4719962565104 : JumpStart); (14.7083333333333 : 64.4719962565104 : JumpEnd); (14.7916666666667 : 64.4719962565104 : JumpStart); (14.9583333333333 : 64.4719962565104 : JumpEnd); (15 : 64.4719962565104)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/DocumentReplication/DocumentReplication_ReplicationNotification" />
+      <nodes>
+        <classShapeMoniker Id="83a5932d-61b1-40ce-8482-7b47aed3cc6d" />
+        <classShapeMoniker Id="c23c8401-7c5a-4e70-8fcc-88ac309cf4bc" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="701dccfa-e97f-43ea-ad00-b2843cfa9e77" absoluteBounds="3.5, 48.5, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/EIVOEntityDataContext/UserRoleDefinition" />
+      <nestedChildShapes>
+        <elementListCompartment Id="20c9fee2-068b-44dd-ade4-71b6cf3b3e55" absoluteBounds="3.5150000005960464, 48.96000000089407, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.5 : 49.8862939453125); (4.5 : 51); (5.79166666666667 : 51 : JumpStart); (6.08333333333333 : 51 : JumpEnd); (8.91666666666667 : 51 : JumpStart); (9.08333333333333 : 51 : JumpEnd); (9.25 : 51); (9.25 : 53.0977197265625); (10.2057259166667 : 53.0977197265625 : JumpStart); (10.3723925833333 : 53.0977197265625 : JumpEnd); (11.0572891666667 : 53.0977197265625 : JumpStart); (11.5520833333333 : 53.0977197265625 : JumpEnd); (11.875 : 53.0977197265625); (11.875 : 51.9431469726563); (12.25 : 51.9431469726563)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/UserRoleDefinition/UserRoleDefinition_UserRole" />
+      <nodes>
+        <classShapeMoniker Id="701dccfa-e97f-43ea-ad00-b2843cfa9e77" />
+        <classShapeMoniker Id="c8f7bc8b-1c23-4067-8bbc-cdb68a2590dd" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 48.5); (5.875 : 48.125); (5.875 : 45.8297461282552); (5.91666666666667 : 45.8297461282552 : JumpStart); (6.08333333333333 : 45.8297461282552 : JumpEnd); (6.25 : 45.8297461282552)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/UserRoleDefinition/UserRoleDefinition_UserMenu" />
+      <nodes>
+        <classShapeMoniker Id="701dccfa-e97f-43ea-ad00-b2843cfa9e77" />
+        <classShapeMoniker Id="fdfd5963-e8d1-46eb-8fa2-728cd6b991dd" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="c1e98d90-6eb8-43f7-9f50-22b3159b2f7f" absoluteBounds="0.75, 48.5, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/EIVOEntityDataContext/CategoryDefinition" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4028968f-e3e4-4c9b-b45b-2df6a8d8594d" absoluteBounds="0.76500000000000057, 48.960000000000008, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 49.8862939453125); (3.125 : 50.2612939453125); (3.125 : 54.8153214863281); (3.22916666666667 : 54.8153214863281 : JumpStart); (3.39583333333333 : 54.8153214863281 : JumpEnd); (3.5 : 54.8153214863281)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/CategoryDefinition/CategoryDefinition_OrganizationCategory" />
+      <nodes>
+        <classShapeMoniker Id="c1e98d90-6eb8-43f7-9f50-22b3159b2f7f" />
+        <classShapeMoniker Id="d4a54ff2-4509-4284-aa11-98e196cfa5a5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 48.5); (1.75 : 45.53125); (5.91666666666667 : 45.53125 : JumpStart); (6.08333333333333 : 45.53125 : JumpEnd); (6.25 : 45.53125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/CategoryDefinition/CategoryDefinition_UserMenu" />
+      <nodes>
+        <classShapeMoniker Id="c1e98d90-6eb8-43f7-9f50-22b3159b2f7f" />
+        <classShapeMoniker Id="fdfd5963-e8d1-46eb-8fa2-728cd6b991dd" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="30d44dec-c97e-4739-9d74-712c9f53ad9f" absoluteBounds="6.25, 48.5, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/EIVOEntityDataContext/OrganizationCategoryUserRole" />
+      <nestedChildShapes>
+        <elementListCompartment Id="365d60a0-4d00-4fa5-bf67-02b4ec3175c4" absoluteBounds="6.2650000000000006, 48.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 54.5); (5.875 : 54.125); (5.875 : 49.1931469726563); (5.91666666666667 : 49.1931469726563 : JumpStart); (6.08333333333333 : 49.1931469726563 : JumpEnd); (6.25 : 49.1931469726563)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/OrganizationCategory/OrganizationCategory_OrganizationCategoryUserRole" />
+      <nodes>
+        <classShapeMoniker Id="d4a54ff2-4509-4284-aa11-98e196cfa5a5" />
+        <classShapeMoniker Id="30d44dec-c97e-4739-9d74-712c9f53ad9f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 49.6022204589844); (5.79166666666667 : 49.6022204589844 : JumpStart); (6.08333333333333 : 49.6022204589844 : JumpEnd); (6.25 : 49.6022204589844)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/UserRoleDefinition/UserRoleDefinition_OrganizationCategoryUserRole" />
+      <nodes>
+        <classShapeMoniker Id="701dccfa-e97f-43ea-ad00-b2843cfa9e77" />
+        <classShapeMoniker Id="30d44dec-c97e-4739-9d74-712c9f53ad9f" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="c403bfd3-443a-49af-ac2f-f63fdd9fc09b" absoluteBounds="12, 99.25, 2, 1.1939925130208167">
+      <DataClassMoniker Name="/EIVOEntityDataContext/B2BBuyerInvoiceTag" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0c999101-c438-4643-9229-5e97d5ffec45" absoluteBounds="12.015000000596046, 99.71000000089407, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(9.453122 : 70.8477197265625); (9.453122 : 72.0625); (11.0729166666667 : 72.0625 : JumpStart); (11.4270820833333 : 72.0625 : JumpEnd); (11.4375 : 72.0625); (11.4375 : 89.4375); (11.7291666666667 : 89.4375 : JumpStart); (11.8958333333333 : 89.4375 : JumpEnd); (11.9375 : 89.4375); (11.9375 : 92.3125); (11.8125 : 92.3125); (11.8125 : 99.8469962565104); (12 : 99.8469962565104)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/InvoiceItem/InvoiceItem_B2BBuyerInvoiceTag" />
+      <nodes>
+        <classShapeMoniker Id="6dff114a-d3eb-49ff-a17f-df5281f922da" />
+        <classShapeMoniker Id="c403bfd3-443a-49af-ac2f-f63fdd9fc09b" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="7718807a-5623-4884-91de-ceb32b7e809a" absoluteBounds="6.25, 122.875, 2, 1.1939925130208167">
+      <DataClassMoniker Name="/EIVOEntityDataContext/DerivedDocument" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3facdc57-68aa-4600-a61c-1a9d90792001" absoluteBounds="6.2650000000000006, 123.33500000000001, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.94597030134465 : 65.2708968098958); (3.94597030134465 : 66.6250000003601); (4.87209331496645 : 66.6250000003601 : JumpStart); (5.03875998163311 : 66.6250000003601 : JumpEnd); (5.625 : 66.6250000003601); (5.625 : 72.25); (5.90104166666667 : 72.25 : JumpStart); (6.16145833333333 : 72.25 : JumpEnd); (6.54166666666667 : 72.25 : JumpStart); (6.70833333333333 : 72.25 : JumpEnd); (6.75 : 72.25); (6.75 : 74.625); (6.39583333333333 : 74.625 : JumpStart); (6.04166666666667 : 74.625 : JumpEnd); (6 : 74.625); (6 : 82.5); (6.29166666666667 : 82.5 : JumpStart); (6.45833333333333 : 82.5 : JumpEnd); (6.5 : 82.5); (6.5 : 115.25); (6 : 115.25); (6 : 123.47199625651); (6.04166666666667 : 123.47199625651 : JumpStart); (6.20833333333333 : 123.47199625651 : JumpEnd); (6.25 : 123.47199625651)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/CDS_Document/CDS_Document_DerivedDocument" />
+      <nodes>
+        <classShapeMoniker Id="d6179914-16e1-4cf6-9f5d-6f34fb0d2396" />
+        <classShapeMoniker Id="7718807a-5623-4884-91de-ceb32b7e809a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.95542664829978 : 65.2708968098958); (4.95542664829978 : 66.7500000003601); (5.54166666666667 : 66.7500000003601 : JumpStart); (5.80208333333333 : 66.7500000003601 : JumpEnd); (5.8125 : 66.7500000003601); (5.8125 : 72); (5.90104166666667 : 72 : JumpStart); (6.27083333333333 : 72 : JumpEnd); (7 : 72); (7 : 74.375); (6.83333333333333 : 74.375 : JumpStart); (6.54166666666667 : 74.375 : JumpEnd); (6.39583333333333 : 74.375 : JumpStart); (6.22916666666667 : 74.375 : JumpEnd); (6.125 : 74.375); (6.125 : 82.25); (6.75 : 82.25); (6.75 : 115); (6.70833333333333 : 115 : JumpStart); (6.29166666666667 : 115 : JumpEnd); (5.75 : 115); (5.75 : 123.142246128255); (5.91666666666667 : 123.142246128255 : JumpStart); (6.20833333333333 : 123.142246128255 : JumpEnd); (6.25 : 123.142246128255)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/CDS_Document/CDS_Document_DerivedDocument1" />
+      <nodes>
+        <classShapeMoniker Id="d6179914-16e1-4cf6-9f5d-6f34fb0d2396" />
+        <classShapeMoniker Id="7718807a-5623-4884-91de-ceb32b7e809a" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="b2410657-0d67-41f6-9cb9-0968856ea4d3" absoluteBounds="18, 62.875, 2, 3.1170068359375023">
+      <DataClassMoniker Name="/EIVOEntityDataContext/InvoiceAmountType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="895db2bb-9932-41d4-853d-4059c24c8f09" absoluteBounds="18.015000000596046, 63.33500000089407, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(17.25 : 58.0744429077524); (17.6285744349011 : 58.4530173426535 : JumpStart); (17.7464255650989 : 58.5708684728513 : JumpEnd); (17.8125 : 58.6369429077524); (17.8125 : 64.3750005); (18 : 64.3750005)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/CurrencyType/CurrencyType_InvoiceAmountType" />
+      <nodes>
+        <classShapeMoniker Id="fb0bd702-859c-4b38-98ce-e6cd263d1a98" />
+        <classShapeMoniker Id="b2410657-0d67-41f6-9cb9-0968856ea4d3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.25 : 66); (10.25 : 65.5833968098958); (11.2604154166667 : 65.5833968098958 : JumpStart); (11.5520833333333 : 65.5833968098958 : JumpEnd); (11.6041666666667 : 65.5833968098958 : JumpStart); (11.9583333333333 : 65.5833968098958 : JumpEnd); (12.6354146666667 : 65.5833968098958 : JumpStart); (12.8020813333333 : 65.5833968098958 : JumpEnd); (13.1666666666667 : 65.5833968098958 : JumpStart); (13.3333333333333 : 65.5833968098958 : JumpEnd); (14.3229166666667 : 65.5833968098958 : JumpStart); (14.4895833333333 : 65.5833968098958 : JumpEnd); (14.5416666666667 : 65.5833968098958 : JumpStart); (14.7083333333333 : 65.5833968098958 : JumpEnd); (14.7916666666667 : 65.5833968098958 : JumpStart); (15.0208333333333 : 65.5833968098958 : JumpEnd); (17.0729166666667 : 65.5833968098958 : JumpStart); (17.2395833333333 : 65.5833968098958 : JumpEnd); (17.375 : 65.5833968098958); (17.375 : 65.15625275); (17.5416666666667 : 65.15625275 : JumpStart); (17.7708333333333 : 65.15625275 : JumpEnd); (18 : 65.15625275)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/InvoiceItem/InvoiceItem_InvoiceAmountType" />
+      <nodes>
+        <classShapeMoniker Id="6dff114a-d3eb-49ff-a17f-df5281f922da" />
+        <classShapeMoniker Id="b2410657-0d67-41f6-9cb9-0968856ea4d3" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="6560eec0-f618-4d12-9d2f-e7d692e684ad" absoluteBounds="15, 72.625, 2, 3.6939111328125023">
+      <DataClassMoniker Name="/EIVOEntityDataContext/InvoiceBuyer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5fe20ded-4723-4a7e-912b-f7b28c336db7" absoluteBounds="15.015, 73.085000000000008, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e8c8e345-2011-4030-81ae-17b6a9f5b116" absoluteBounds="20.75, 62.375, 2, 3.5016097005208451">
+      <DataClassMoniker Name="/EIVOEntityDataContext/InvoiceAllowanceBuyer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ea121edb-68c5-43a9-90c3-accefebd3880" absoluteBounds="20.765, 62.835000000000008, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="00eb0460-e84a-462e-b4f6-a1ff0fb96da1" absoluteBounds="20.75, 74.375, 2, 3.5016097005208451">
+      <DataClassMoniker Name="/EIVOEntityDataContext/InvoiceAllowanceSeller" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b3b36677-f6ae-4c61-a984-619d6d25d77e" absoluteBounds="20.765000000596046, 74.83500000089407, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3efc43bf-17bb-409e-b33a-aabdcfa1321f" absoluteBounds="21, 66.625, 2, 3.5016097005208451">
+      <DataClassMoniker Name="/EIVOEntityDataContext/InvoiceSeller" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4bb3df45-0bad-4fc3-9a83-700d9996a934" absoluteBounds="21.015, 67.085000000000008, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(11.25 : 67.6583168076923); (11.2604154166667 : 67.6583168076923 : JumpStart); (11.5520833333333 : 67.6583168076923 : JumpEnd); (11.6041666666667 : 67.6583168076923 : JumpStart); (11.7708333333333 : 67.6583168076923 : JumpEnd); (11.7916666666667 : 67.6583168076923 : JumpStart); (11.9583333333333 : 67.6583168076923 : JumpEnd); (12 : 67.6583168076923); (12 : 71.7901025390625); (14.3229166666667 : 71.7901025390625 : JumpStart); (14.4895833333333 : 71.7901025390625 : JumpEnd); (14.7916666666667 : 71.7901025390625 : JumpStart); (15.0208333333333 : 71.7901025390625 : JumpEnd); (16 : 71.7901025390625); (16 : 72.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/InvoiceItem/InvoiceItem_InvoiceBuyer" />
+      <nodes>
+        <classShapeMoniker Id="6dff114a-d3eb-49ff-a17f-df5281f922da" />
+        <classShapeMoniker Id="6560eec0-f618-4d12-9d2f-e7d692e684ad" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 60.9114467571114); (3.19791666666667 : 60.9114467571114 : JumpStart); (3.36458333333333 : 60.9114467571114 : JumpEnd); (3.375 : 60.9114467571114); (3.375 : 60); (5.79166666666667 : 60 : JumpStart); (6.06770833333333 : 60 : JumpEnd); (6.07291666666667 : 60 : JumpStart); (6.27083333333333 : 60 : JumpEnd); (8.32291666666667 : 60 : JumpStart); (8.48958333333333 : 60 : JumpEnd); (8.66666666666667 : 60 : JumpStart); (8.89583333333333 : 60 : JumpEnd); (11.2604154166667 : 60 : JumpStart); (11.5520833333333 : 60 : JumpEnd); (11.6041666666667 : 60 : JumpStart); (11.8333333333333 : 60 : JumpEnd); (11.8541666666667 : 60 : JumpStart); (12.0833333333333 : 60 : JumpEnd); (14.3229166666667 : 60 : JumpStart); (14.4895833333333 : 60 : JumpEnd); (14.875 : 60); (14.875 : 72.25); (15.468748 : 72.25); (15.468748 : 72.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/Organization/Organization_InvoiceBuyer" />
+      <nodes>
+        <classShapeMoniker Id="59078091-a9da-4812-95db-5095cb11dcc6" />
+        <classShapeMoniker Id="6560eec0-f618-4d12-9d2f-e7d692e684ad" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(17 : 70.2824547753906); (17.0729166666667 : 70.2824547753906 : JumpStart); (17.2395833333333 : 70.2824547753906 : JumpEnd); (17.7604166666667 : 70.2824547753906 : JumpStart); (17.9270833333333 : 70.2824547753906 : JumpEnd); (20.4166666666667 : 70.2824547753906 : JumpStart); (20.5833333333333 : 70.2824547753906 : JumpEnd); (20.796875 : 70.2824547753906); (20.796875 : 65.8766097005208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/InvoiceAllowance/InvoiceAllowance_InvoiceAllowanceBuyer" />
+      <nodes>
+        <classShapeMoniker Id="fe428122-6429-4c48-b547-edae70da0b52" />
+        <classShapeMoniker Id="e8c8e345-2011-4030-81ae-17b6a9f5b116" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 59.7532462565104); (2.91666666666667 : 59.7532462565104 : JumpStart); (3.08333333333333 : 59.7532462565104 : JumpEnd); (3.16666666666667 : 59.7532462565104 : JumpStart); (3.36458333333333 : 59.7532462565104 : JumpEnd); (3.36979166666667 : 59.7532462565104 : JumpStart); (3.53645833333333 : 59.7532462565104 : JumpEnd); (5.79166666666667 : 59.7532462565104 : JumpStart); (6.06770833333333 : 59.7532462565104 : JumpEnd); (6.07291666666667 : 59.7532462565104 : JumpStart); (6.27083333333333 : 59.7532462565104 : JumpEnd); (8.32291666666667 : 59.7532462565104 : JumpStart); (8.48958333333333 : 59.7532462565104 : JumpEnd); (8.54166666666667 : 59.7532462565104 : JumpStart); (8.70833333333333 : 59.7532462565104 : JumpEnd); (8.72916666666667 : 59.7532462565104 : JumpStart); (8.89583333333333 : 59.7532462565104 : JumpEnd); (11.2604154166667 : 59.7532462565104 : JumpStart); (11.5520833333333 : 59.7532462565104 : JumpEnd); (11.6041666666667 : 59.7532462565104 : JumpStart); (11.8333333333333 : 59.7532462565104 : JumpEnd); (11.8541666666667 : 59.7532462565104 : JumpStart); (12.0208333333333 : 59.7532462565104 : JumpEnd); (14.3229166666667 : 59.7532462565104 : JumpStart); (14.4895833333333 : 59.7532462565104 : JumpEnd); (15.0104166666667 : 59.7532462565104 : JumpStart); (15.1770833333333 : 59.7532462565104 : JumpEnd); (17.6041666666667 : 59.7532462565104 : JumpStart); (17.8958333333333 : 59.7532462565104 : JumpEnd); (17.9166666666667 : 59.7532462565104 : JumpStart); (18.0833333333333 : 59.7532462565104 : JumpEnd); (21.75 : 59.7532462565104); (21.75 : 62.375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/Organization/Organization_InvoiceAllowanceBuyer" />
+      <nodes>
+        <classShapeMoniker Id="59078091-a9da-4812-95db-5095cb11dcc6" />
+        <classShapeMoniker Id="e8c8e345-2011-4030-81ae-17b6a9f5b116" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(17 : 71.3197169236779); (17.0973244349011 : 71.417041358579 : JumpStart); (17.2151755650989 : 71.5348924887768 : JumpEnd); (17.4375 : 71.7572169236779); (17.4375 : 76.5377013229167); (17.7604166666667 : 76.5377013229167 : JumpStart); (17.9270833333333 : 76.5377013229167 : JumpEnd); (20.2916666666667 : 76.5377013229167 : JumpStart); (20.4583333333333 : 76.5377013229167 : JumpEnd); (20.75 : 76.5377013229167)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/InvoiceAllowance/InvoiceAllowance_InvoiceAllowanceSeller" />
+      <nodes>
+        <classShapeMoniker Id="fe428122-6429-4c48-b547-edae70da0b52" />
+        <classShapeMoniker Id="00eb0460-e84a-462e-b4f6-a1ff0fb96da1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 58.6730584716797); (2.91666666666667 : 58.6730584716797 : JumpStart); (3.20833333333333 : 58.6730584716797 : JumpEnd); (3.375 : 58.6730584716797); (3.375 : 59.5881982421875); (5.79166666666667 : 59.5881982421875 : JumpStart); (6.06770833333333 : 59.5881982421875 : JumpEnd); (6.07291666666667 : 59.5881982421875 : JumpStart); (6.27083333333333 : 59.5881982421875 : JumpEnd); (8.32291666666667 : 59.5881982421875 : JumpStart); (8.48958333333333 : 59.5881982421875 : JumpEnd); (8.54166666666667 : 59.5881982421875 : JumpStart); (8.70833333333333 : 59.5881982421875 : JumpEnd); (8.72916666666667 : 59.5881982421875 : JumpStart); (8.89583333333333 : 59.5881982421875 : JumpEnd); (11.2604154166667 : 59.5881982421875 : JumpStart); (11.5520833333333 : 59.5881982421875 : JumpEnd); (11.6041666666667 : 59.5881982421875 : JumpStart); (11.7708333333333 : 59.5881982421875 : JumpEnd); (11.8541666666667 : 59.5881982421875 : JumpStart); (12.0208333333333 : 59.5881982421875 : JumpEnd); (13.1979186666667 : 59.5881982421875 : JumpStart); (13.3645853333333 : 59.5881982421875 : JumpEnd); (14.3229166666667 : 59.5881982421875 : JumpStart); (14.4895833333333 : 59.5881982421875 : JumpEnd); (15.0104166666667 : 59.5881982421875 : JumpStart); (15.1770833333333 : 59.5881982421875 : JumpEnd); (17.6041666666667 : 59.5881982421875 : JumpStart); (17.8958333333333 : 59.5881982421875 : JumpEnd); (18 : 59.5881982421875); (18 : 60.0689925130208); (20.5 : 60.0689925130208); (20.5 : 74); (21.75 : 74); (21.75 : 74.375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/Organization/Organization_InvoiceAllowanceSeller" />
+      <nodes>
+        <classShapeMoniker Id="59078091-a9da-4812-95db-5095cb11dcc6" />
+        <classShapeMoniker Id="00eb0460-e84a-462e-b4f6-a1ff0fb96da1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 66.0466366153846); (11.2604154166667 : 66.0466366153846 : JumpStart); (11.5520833333333 : 66.0466366153846 : JumpEnd); (11.6041666666667 : 66.0466366153846 : JumpStart); (11.7708333333333 : 66.0466366153846 : JumpEnd); (11.7916666666667 : 66.0466366153846 : JumpStart); (11.9583333333333 : 66.0466366153846 : JumpEnd); (12.0416666666667 : 66.0466366153846 : JumpStart); (12.2083333333333 : 66.0466366153846 : JumpEnd); (12.6354146666667 : 66.0466366153846 : JumpStart); (12.8020813333333 : 66.0466366153846 : JumpEnd); (13.1666666666667 : 66.0466366153846 : JumpStart); (13.3333333333333 : 66.0466366153846 : JumpEnd); (13.6979186666667 : 66.0466366153846 : JumpStart); (13.8645853333333 : 66.0466366153846 : JumpEnd); (14.3229166666667 : 66.0466366153846 : JumpStart); (14.4895833333333 : 66.0466366153846 : JumpEnd); (14.6666666666667 : 66.0466366153846 : JumpStart); (15.0208333333333 : 66.0466366153846 : JumpEnd); (17.0729166666667 : 66.0466366153846 : JumpStart); (17.2395833333333 : 66.0466366153846 : JumpEnd); (17.6041666666667 : 66.0466366153846 : JumpStart); (17.7708333333333 : 66.0466366153846 : JumpEnd); (20.4166666666667 : 66.0466366153846 : JumpStart); (20.5833333333333 : 66.0466366153846 : JumpEnd); (20.7135416666667 : 66.0466366153846 : JumpStart); (20.8802083333333 : 66.0466366153846 : JumpEnd); (22 : 66.0466366153846); (22 : 66.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/InvoiceItem/InvoiceItem_InvoiceSeller" />
+      <nodes>
+        <classShapeMoniker Id="6dff114a-d3eb-49ff-a17f-df5281f922da" />
+        <classShapeMoniker Id="3efc43bf-17bb-409e-b33a-aabdcfa1321f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 59.6627425130208); (2.91666666666667 : 59.6627425130208 : JumpStart); (3.08333333333333 : 59.6627425130208 : JumpEnd); (3.16666666666667 : 59.6627425130208 : JumpStart); (3.33333333333333 : 59.6627425130208 : JumpEnd); (3.36979166666667 : 59.6627425130208 : JumpStart); (3.53645833333333 : 59.6627425130208 : JumpEnd); (5.79166666666667 : 59.6627425130208 : JumpStart); (6.06770833333333 : 59.6627425130208 : JumpEnd); (6.07291666666667 : 59.6627425130208 : JumpStart); (6.27083333333333 : 59.6627425130208 : JumpEnd); (8.32291666666667 : 59.6627425130208 : JumpStart); (8.48958333333333 : 59.6627425130208 : JumpEnd); (8.54166666666667 : 59.6627425130208 : JumpStart); (8.70833333333333 : 59.6627425130208 : JumpEnd); (8.72916666666667 : 59.6627425130208 : JumpStart); (8.89583333333333 : 59.6627425130208 : JumpEnd); (11.2604154166667 : 59.6627425130208 : JumpStart); (11.5520833333333 : 59.6627425130208 : JumpEnd); (11.6041666666667 : 59.6627425130208 : JumpStart); (11.8333333333333 : 59.6627425130208 : JumpEnd); (11.8541666666667 : 59.6627425130208 : JumpStart); (12.0208333333333 : 59.6627425130208 : JumpEnd); (14.3229166666667 : 59.6627425130208 : JumpStart); (14.4895833333333 : 59.6627425130208 : JumpEnd); (15.0104166666667 : 59.6627425130208 : JumpStart); (15.1770833333333 : 59.6627425130208 : JumpEnd); (17.6041666666667 : 59.6627425130208 : JumpStart); (17.8958333333333 : 59.6627425130208 : JumpEnd); (22.90625 : 59.6627425130208); (22.90625 : 66.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/Organization/Organization_InvoiceSeller" />
+      <nodes>
+        <classShapeMoniker Id="59078091-a9da-4812-95db-5095cb11dcc6" />
+        <classShapeMoniker Id="3efc43bf-17bb-409e-b33a-aabdcfa1321f" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="ae9e2c8c-f149-4e8b-8ebc-799b43fb2bcd" absoluteBounds="0.75, 51.625, 2, 1.1939925130208451">
+      <DataClassMoniker Name="/EIVOEntityDataContext/EnterpriseGroup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="586d0098-00c7-4bf4-80d6-c0bc4d52bf46" absoluteBounds="0.76500000000000057, 52.085000000000008, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dbe01a8d-197e-4c54-92c4-ce1586083e2a" absoluteBounds="3.5, 51.625, 2, 1.1939925130208451">
+      <DataClassMoniker Name="/EIVOEntityDataContext/EnterpriseGroupMember" />
+      <nestedChildShapes>
+        <elementListCompartment Id="79213ad1-a8a0-4013-9e0d-d2c8f74f1e0d" absoluteBounds="3.5150000005960464, 52.08500000089407, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 52.2219962565104); (3.04166666666667 : 52.2219962565104 : JumpStart); (3.20833333333333 : 52.2219962565104 : JumpEnd); (3.5 : 52.2219962565104)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/EnterpriseGroup/EnterpriseGroup_EnterpriseGroupMember" />
+      <nodes>
+        <classShapeMoniker Id="ae9e2c8c-f149-4e8b-8ebc-799b43fb2bcd" />
+        <classShapeMoniker Id="dbe01a8d-197e-4c54-92c4-ce1586083e2a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 56.6865374615385); (3.3125 : 56.1240374615385); (3.3125 : 52.5517463847656); (3.5 : 52.5517463847656)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/Organization/Organization_EnterpriseGroupMember" />
+      <nodes>
+        <classShapeMoniker Id="59078091-a9da-4812-95db-5095cb11dcc6" />
+        <classShapeMoniker Id="dbe01a8d-197e-4c54-92c4-ce1586083e2a" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="a05d7d89-7d10-45cc-9600-49e19d373c8d" absoluteBounds="0.75, 66.5, 2, 1.1939925130208451">
+      <DataClassMoniker Name="/EIVOEntityDataContext/BusinessType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bcd87090-dd72-49a3-a2c2-b95af087ea31" absoluteBounds="0.76500000000000057, 66.960000000000008, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6d6c48ff-0fa5-4be2-b208-7ef241517960" absoluteBounds="0.75, 68.625, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/EIVOEntityDataContext/DocumentFlow" />
+      <nestedChildShapes>
+        <elementListCompartment Id="36a5a869-9d21-4550-b173-76774057640f" absoluteBounds="0.76500000000000057, 69.085000000000008, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2fc34283-c52e-45f8-a6e7-e15682fa879f" absoluteBounds="1.5, 71.5, 2, 1.7708968098958451">
+      <DataClassMoniker Name="/EIVOEntityDataContext/DocumentFlowControl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="884978c0-a2fd-4968-9415-b90f4757c5bc" absoluteBounds="1.5150000000000006, 71.960000000000008, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.125 : 71.5); (2.125 : 70.0112939453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/DocumentFlowControl/DocumentFlowControl_DocumentFlow" />
+      <nodes>
+        <classShapeMoniker Id="2fc34283-c52e-45f8-a6e7-e15682fa879f" />
+        <classShapeMoniker Id="6d6c48ff-0fa5-4be2-b208-7ef241517960" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.20552987154447 : 73.2708968098958); (2.20552987154447 : 73.5208968098958); (2.42367786020132 : 73.5208968098958 : JumpStart); (2.59034452686799 : 73.5208968098958 : JumpEnd); (2.80849251552484 : 73.5208968098958); (2.80849251552484 : 73.2708968098958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EIVOEntityDataContext/DocumentFlowControl/DocumentFlowControl_DocumentFlowControl" />
+      <nodes>
+        <classShapeMoniker Id="2fc34283-c52e-45f8-a6e7-e15682fa879f" />
+        <classShapeMoniker Id="2fc34283-c52e-45f8-a6e7-e15682fa879f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.5 : 72.1279872533554); (1.25 : 72.1279872533554); (1.25 : 72.6551696113782); (1.5 : 72.6551696113782)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EIVOEntityDataContext/DocumentFlowControl/DocumentFlowControl_DocumentFlowControl1" />
+      <nodes>
+        <classShapeMoniker Id="2fc34283-c52e-45f8-a6e7-e15682fa879f" />
+        <classShapeMoniker Id="2fc34283-c52e-45f8-a6e7-e15682fa879f" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="29919cd4-f3fa-4f02-a595-858a6e83908d" absoluteBounds="3.5, 60.625, 2, 1.5785953776041595">
+      <DataClassMoniker Name="/EIVOEntityDataContext/DocumentTypeFlow" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f9b1cadc-2db0-4909-bb45-24d927f1b373" absoluteBounds="3.5150000005960464, 61.08500000089407, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 66.5321449522736); (2.81607443490112 : 66.4660705173725 : JumpStart); (2.93392556509888 : 66.3482193871748 : JumpEnd); (2.94107443490112 : 66.3410705173725 : JumpStart); (3.38705056509888 : 65.8950943871748 : JumpEnd); (3.40625 : 65.8758949522736); (3.40625 : 61.5575205673578); (3.5 : 61.5575205673578)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/BusinessType/BusinessType_DocumentTypeFlow" />
+      <nodes>
+        <classShapeMoniker Id="a05d7d89-7d10-45cc-9600-49e19d373c8d" />
+        <classShapeMoniker Id="29919cd4-f3fa-4f02-a595-858a6e83908d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.72760602088341 : 68.625); (2.94107443490112 : 68.4115315859823 : JumpStart); (3.12142556509888 : 68.2311804557845 : JumpEnd); (3.15625 : 68.1963560208834); (3.15625 : 61.911809972481); (3.19791666666667 : 61.911809972481 : JumpStart); (3.48958333333333 : 61.911809972481 : JumpEnd); (3.5 : 61.911809972481)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/DocumentFlow/DocumentFlow_DocumentTypeFlow" />
+      <nodes>
+        <classShapeMoniker Id="6d6c48ff-0fa5-4be2-b208-7ef241517960" />
+        <classShapeMoniker Id="29919cd4-f3fa-4f02-a595-858a6e83908d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.73071242900757 : 63.875); (2.81607443490112 : 63.7896379941065 : JumpStart); (2.93392556509888 : 63.6717868639087 : JumpEnd); (3.06607443490112 : 63.5396379941065 : JumpStart); (3.18392556509888 : 63.4217868639087 : JumpEnd); (3.1875 : 63.4182124290076); (3.1875 : 61.2032311622346); (3.19791666666667 : 61.2032311622346 : JumpStart); (3.36458333333333 : 61.2032311622346 : JumpEnd); (3.5 : 61.2032311622346)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/DocumentType/DocumentType_DocumentTypeFlow" />
+      <nodes>
+        <classShapeMoniker Id="a3a10561-cc44-4486-a5d3-ce7312e37103" />
+        <classShapeMoniker Id="29919cd4-f3fa-4f02-a595-858a6e83908d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 60.7057233785557); (3.19791666666667 : 60.7057233785557 : JumpStart); (3.45833333333333 : 60.7057233785557 : JumpEnd); (3.5 : 60.7057233785557)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/Organization/Organization_DocumentTypeFlow" />
+      <nodes>
+        <classShapeMoniker Id="59078091-a9da-4812-95db-5095cb11dcc6" />
+        <classShapeMoniker Id="29919cd4-f3fa-4f02-a595-858a6e83908d" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="0be0a928-352f-42e0-a067-46ca66d3ddfa" absoluteBounds="6.25, 57.875, 2, 1.1939925130208451">
+      <DataClassMoniker Name="/EIVOEntityDataContext/DocumentFlowStep" />
+      <nestedChildShapes>
+        <elementListCompartment Id="37855dd6-2804-4da5-af9c-0165c89aeb1e" absoluteBounds="6.2650000000000006, 58.335000000000008, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.45095978064904 : 63.5); (5.87857443490112 : 63.0723853457479 : JumpStart); (6.13705056509888 : 62.8139092155502 : JumpEnd); (6.15625 : 62.794709780649); (6.15625 : 58.4719962565104); (6.25 : 58.4719962565104)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/CDS_Document/CDS_Document_DocumentFlowStep" />
+      <nodes>
+        <classShapeMoniker Id="d6179914-16e1-4cf6-9f5d-6f34fb0d2396" />
+        <classShapeMoniker Id="0be0a928-352f-42e0-a067-46ca66d3ddfa" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.5 : 71.5013612283153); (3.69107443490112 : 71.3102867934142 : JumpStart); (3.80892556509888 : 71.1924356632164 : JumpEnd); (3.8763612283153 : 71.125); (5.47916666666667 : 71.125 : JumpStart); (5.89583333333333 : 71.125 : JumpEnd); (5.9375 : 71.125); (5.9375 : 59.3814925130208); (6.09732443490112 : 59.2216680781197 : JumpStart); (6.21517556509888 : 59.103816947922 : JumpEnd); (6.25 : 59.0689925130208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EIVOEntityDataContext/DocumentFlowControl/DocumentFlowControl_DocumentFlowStep" />
+      <nodes>
+        <classShapeMoniker Id="2fc34283-c52e-45f8-a6e7-e15682fa879f" />
+        <classShapeMoniker Id="0be0a928-352f-42e0-a067-46ca66d3ddfa" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="aa1caa2f-6fc7-47fe-8a7f-ee8bc6085589" absoluteBounds="6.25, 63.5, 2, 1.7708968098958451">
+      <DataClassMoniker Name="/EIVOEntityDataContext/DocumentProcessLog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b623ddd1-ff2b-4dc3-af83-31ee7b32c716" absoluteBounds="6.2650000000000006, 63.960000000000008, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 64.3888529757362); (5.85416666666667 : 64.3888529757362 : JumpStart); (6.16145833333333 : 64.3888529757362 : JumpEnd); (6.25 : 64.3888529757362)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/CDS_Document/CDS_Document_DocumentProcessLog" />
+      <nodes>
+        <classShapeMoniker Id="d6179914-16e1-4cf6-9f5d-6f34fb0d2396" />
+        <classShapeMoniker Id="aa1caa2f-6fc7-47fe-8a7f-ee8bc6085589" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="59339ce0-f9c2-4637-be61-51a832ec153a" absoluteBounds="1.75, 74.625, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/EIVOEntityDataContext/LevelExpression" />
+      <nestedChildShapes>
+        <elementListCompartment Id="209ac4bb-5f3e-4fc0-b7b3-c29d71b2ea52" absoluteBounds="1.7650000000000006, 75.085000000000008, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.27924575776242 : 74.625); (3.27924575776242 : 73.5208968098958); (3.75 : 73.5208968098958); (3.75 : 70.5689925130208); (3.0625 : 70.5689925130208); (3.0625 : 64.9026985332031); (3.07291666666667 : 64.9026985332031 : JumpStart); (3.48958333333333 : 64.9026985332031 : JumpEnd); (3.5 : 64.9026985332031)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/LevelExpression/LevelExpression_CDS_Document" />
+      <nodes>
+        <classShapeMoniker Id="59339ce0-f9c2-4637-be61-51a832ec153a" />
+        <classShapeMoniker Id="d6179914-16e1-4cf6-9f5d-6f34fb0d2396" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.75 : 75.3181469726563); (3.91666666666667 : 75.3181469726563 : JumpStart); (4.08333333333333 : 75.3181469726563 : JumpEnd); (5.16666666666667 : 75.3181469726563 : JumpStart); (5.33333333333333 : 75.3181469726563 : JumpEnd); (5.79166666666667 : 75.3181469726563 : JumpStart); (6.20833333333333 : 75.3181469726563 : JumpEnd); (6.22916666666667 : 75.3181469726563 : JumpStart); (6.39583333333333 : 75.3181469726563 : JumpEnd); (6.4375 : 75.3181469726563); (6.4375 : 74.8125); (9.1875 : 74.8125); (9.1875 : 75.3125); (11.2916666666667 : 75.3125 : JumpStart); (11.8958333333333 : 75.3125 : JumpEnd); (12.9166666666667 : 75.3125 : JumpStart); (13.0833333333333 : 75.3125 : JumpEnd); (14.3229166666667 : 75.3125 : JumpStart); (14.4895833333333 : 75.3125 : JumpEnd); (14.9375 : 75.3125); (14.9375 : 59.6939925130208); (15.0104166666667 : 59.6939925130208 : JumpStart); (15.1770833333333 : 59.6939925130208 : JumpEnd); (17.6041666666667 : 59.6939925130208 : JumpStart); (17.8958333333333 : 59.6939925130208 : JumpEnd); (17.9166666666667 : 59.6939925130208 : JumpStart); (18.0833333333333 : 59.6939925130208 : JumpEnd); (19.25 : 59.6939925130208); (19.25 : 59.5689925130208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/LevelExpression/LevelExpression_UserProfileStatus" />
+      <nodes>
+        <classShapeMoniker Id="59339ce0-f9c2-4637-be61-51a832ec153a" />
+        <classShapeMoniker Id="0b91d931-db5a-41b0-9957-634935de5d97" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.50701119353466 : 74.625); (2.50701119353466 : 73.2708968098958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/LevelExpression/LevelExpression_DocumentFlowControl" />
+      <nodes>
+        <classShapeMoniker Id="59339ce0-f9c2-4637-be61-51a832ec153a" />
+        <classShapeMoniker Id="2fc34283-c52e-45f8-a6e7-e15682fa879f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.75 : 74.9403214863281); (3.91666666666667 : 74.9403214863281 : JumpStart); (4.08333333333333 : 74.9403214863281 : JumpEnd); (5.16666666666667 : 74.9403214863281 : JumpStart); (5.33333333333333 : 74.9403214863281 : JumpEnd); (5.79166666666667 : 74.9403214863281 : JumpStart); (6.20833333333333 : 74.9403214863281 : JumpEnd); (6.25 : 74.9403214863281); (6.25 : 74.5); (6.60416666666667 : 74.5 : JumpStart); (6.83333333333333 : 74.5 : JumpEnd); (7.25 : 74.5); (7.25 : 71.4535953776042); (6.125 : 71.4535953776042); (6.125 : 65.6458968098958); (7.25 : 65.6458968098958); (7.25 : 65.2708968098958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/LevelExpression/LevelExpression_DocumentProcessLog" />
+      <nodes>
+        <classShapeMoniker Id="59339ce0-f9c2-4637-be61-51a832ec153a" />
+        <classShapeMoniker Id="aa1caa2f-6fc7-47fe-8a7f-ee8bc6085589" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="7a2e9a5d-ca55-4a38-b6bc-c1d918040903" absoluteBounds="3.5, 66.875, 2, 1.1939925130208167">
+      <DataClassMoniker Name="/EIVOEntityDataContext/CommonDocumentTypeFlow" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0b741302-25bd-44de-bb15-3329be2f7d08" absoluteBounds="3.5150000005960464, 67.33500000089407, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 68.6484593590745); (2.94107443490112 : 68.4573849241734 : JumpStart); (3.18392556509888 : 68.2145337939756 : JumpEnd); (3.22232443490112 : 68.1761349241734 : JumpStart); (3.34017556509888 : 68.0582837939756 : JumpEnd); (3.375 : 68.0234593590745); (3.375 : 68.1949099684394); (3.50091745541859 : 68.0689925130208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EIVOEntityDataContext/DocumentFlow/DocumentFlow_CommonDocumentTypeFlow" />
+      <nodes>
+        <classShapeMoniker Id="6d6c48ff-0fa5-4be2-b208-7ef241517960" />
+        <classShapeMoniker Id="7a2e9a5d-ca55-4a38-b6bc-c1d918040903" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 65.0258240910622); (2.75357443490112 : 65.0293985259633 : JumpStart); (3.18392556509888 : 65.459749656161 : JumpEnd); (3.1875 : 65.4633240910622); (3.1875 : 66.5615825445814); (3.22232443490112 : 66.5964069794825 : JumpStart); (3.38705056509888 : 66.7611331096803 : JumpEnd); (3.50091745541859 : 66.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EIVOEntityDataContext/DocumentType/DocumentType_CommonDocumentTypeFlow" />
+      <nodes>
+        <classShapeMoniker Id="a3a10561-cc44-4486-a5d3-ce7312e37103" />
+        <classShapeMoniker Id="7a2e9a5d-ca55-4a38-b6bc-c1d918040903" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="799c360f-af79-4d7d-95af-5c7fc6ed7235" absoluteBounds="4.5, 72.5, 2, 1.5785953776041595">
+      <DataClassMoniker Name="/EIVOEntityDataContext/BusinessRelationship" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b3809e58-803e-4672-9ec7-d54fa292223b" absoluteBounds="4.5150000000000006, 72.960000000000008, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 66.5473249761368); (2.91666666666667 : 66.5473249761368 : JumpStart); (3.41145833333333 : 66.5473249761368 : JumpEnd); (3.60839981733899 : 66.5473249761368 : JumpStart); (3.77506648400566 : 66.5473249761368 : JumpEnd); (4.11687411868364 : 66.5473249761368 : JumpStart); (4.28354078535031 : 66.5473249761368 : JumpEnd); (4.87209331496645 : 66.5473249761368 : JumpStart); (5.03875998163311 : 66.5473249761368 : JumpEnd); (5.6875 : 66.5473249761368); (5.6875 : 72.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/BusinessType/BusinessType_BusinessRelationship" />
+      <nodes>
+        <classShapeMoniker Id="a05d7d89-7d10-45cc-9600-49e19d373c8d" />
+        <classShapeMoniker Id="799c360f-af79-4d7d-95af-5c7fc6ed7235" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.75 : 75.6959729589844); (3.91666666666667 : 75.6959729589844 : JumpStart); (4.08333333333333 : 75.6959729589844 : JumpEnd); (5.25 : 75.6959729589844); (5.25 : 74.0785953776042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/LevelExpression/LevelExpression_BusinessRelationship" />
+      <nodes>
+        <classShapeMoniker Id="59339ce0-f9c2-4637-be61-51a832ec153a" />
+        <classShapeMoniker Id="799c360f-af79-4d7d-95af-5c7fc6ed7235" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 57.1718775); (3.36979166666667 : 57.1718775 : JumpStart); (3.53645833333333 : 57.1718775 : JumpEnd); (5.79166666666667 : 57.1718775 : JumpStart); (5.95833333333333 : 57.1718775 : JumpEnd); (5.984375 : 57.1718775); (5.984375 : 72.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/Organization/Organization_BusinessRelationship" />
+      <nodes>
+        <classShapeMoniker Id="59078091-a9da-4812-95db-5095cb11dcc6" />
+        <classShapeMoniker Id="799c360f-af79-4d7d-95af-5c7fc6ed7235" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 60.21875); (3.19791666666667 : 60.21875 : JumpStart); (3.53645833333333 : 60.21875 : JumpEnd); (5.79166666666667 : 60.21875 : JumpStart); (6.06770833333333 : 60.21875 : JumpEnd); (6.078125 : 60.21875); (6.078125 : 72.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/Organization/Organization_BusinessRelationship1" />
+      <nodes>
+        <classShapeMoniker Id="59078091-a9da-4812-95db-5095cb11dcc6" />
+        <classShapeMoniker Id="799c360f-af79-4d7d-95af-5c7fc6ed7235" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="21ac0449-f2e0-4636-aa0b-fdb483ddd606" absoluteBounds="9, 54.125, 2, 2.3478011067708451">
+      <DataClassMoniker Name="/EIVOEntityDataContext/ReceiptDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8ae00cab-25ad-4a01-a5e3-af4744a61308" absoluteBounds="9.0150000005960464, 54.58500000089407, 1.9700000000000002, 1.7878011067708333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9f7ce541-414a-4c89-acad-117892154a4a" absoluteBounds="6.25, 60.375, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/EIVOEntityDataContext/ReceiptItem" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4d00f58a-47f4-48b5-bf80-9c7e74a801dd" absoluteBounds="6.2650000000000006, 60.835000000000008, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.25 : 60.376509152494); (8.34732443490112 : 60.2791847175929 : JumpStart); (8.46517556509888 : 60.1613335873951 : JumpEnd); (8.625 : 60.001509152494); (8.625 : 55.2989005533854); (8.72916666666667 : 55.2989005533854 : JumpStart); (8.89583333333333 : 55.2989005533854 : JumpEnd); (9 : 55.2989005533854)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/ReceiptItem/ReceiptItem_ReceiptDetail" />
+      <nodes>
+        <classShapeMoniker Id="9f7ce541-414a-4c89-acad-117892154a4a" />
+        <classShapeMoniker Id="21ac0449-f2e0-4636-aa0b-fdb483ddd606" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.4700309770633 : 63.5); (5.87857443490112 : 63.0914565421622 : JumpStart); (5.99642556509888 : 62.9736054119644 : JumpEnd); (6.015625 : 62.9544059770633); (6.015625 : 61.3565991210938); (6.07291666666667 : 61.3565991210938 : JumpStart); (6.23958333333333 : 61.3565991210938 : JumpEnd); (6.25 : 61.3565991210938)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/CDS_Document/CDS_Document_ReceiptItem" />
+      <nodes>
+        <classShapeMoniker Id="d6179914-16e1-4cf6-9f5d-6f34fb0d2396" />
+        <classShapeMoniker Id="9f7ce541-414a-4c89-acad-117892154a4a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 60.46875); (3.19791666666667 : 60.46875 : JumpStart); (3.53645833333333 : 60.46875 : JumpEnd); (5.79166666666667 : 60.46875 : JumpStart); (6.23958333333333 : 60.46875 : JumpEnd); (6.25 : 60.46875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/Organization/Organization_ReceiptItem" />
+      <nodes>
+        <classShapeMoniker Id="59078091-a9da-4812-95db-5095cb11dcc6" />
+        <classShapeMoniker Id="9f7ce541-414a-4c89-acad-117892154a4a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.2187475 : 61.8573225911458); (1.2187475 : 62.3021468098958); (1.66666666666667 : 62.3021468098958 : JumpStart); (1.83333333333333 : 62.3021468098958 : JumpEnd); (2.15051282051282 : 62.3021468098958 : JumpStart); (2.31717948717949 : 62.3021468098958 : JumpEnd); (3.07291666666667 : 62.3021468098958 : JumpStart); (3.53645833333333 : 62.3021468098958 : JumpEnd); (5.79166666666667 : 62.3021468098958 : JumpStart); (6.23958333333333 : 62.3021468098958 : JumpEnd); (6.25 : 62.3021468098958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/Organization/Organization_ReceiptItem1" />
+      <nodes>
+        <classShapeMoniker Id="59078091-a9da-4812-95db-5095cb11dcc6" />
+        <classShapeMoniker Id="9f7ce541-414a-4c89-acad-117892154a4a" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="115fe229-fea1-4242-b36b-a09924cb9d08" absoluteBounds="9, 72.125, 2, 1.5785953776041595">
+      <DataClassMoniker Name="/EIVOEntityDataContext/ReceiptCancellation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c337a71d-ed8d-49d3-b208-836b69e649a2" absoluteBounds="9.0150000005960464, 72.58500000089407, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.25 : 62.2762809899339); (8.34732443490112 : 62.373605424835 : JumpStart); (8.46517556509888 : 62.4914565550328 : JumpEnd); (8.6875 : 62.7137809899339); (8.6875 : 72.9142976888021); (9 : 72.9142976888021)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/ReceiptItem/ReceiptItem_ReceiptCancellation" />
+      <nodes>
+        <classShapeMoniker Id="9f7ce541-414a-4c89-acad-117892154a4a" />
+        <classShapeMoniker Id="115fe229-fea1-4242-b36b-a09924cb9d08" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="5310de70-e2a7-4974-a885-73d7357880c5" absoluteBounds="12.25, 66.25, 2, 2.3478011067708167">
+      <DataClassMoniker Name="/EIVOEntityDataContext/ExceptionLog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="21ec6b3b-4c90-4900-88b5-048e40579c1e" absoluteBounds="12.265000000596046, 66.71000000089407, 1.9700000000000002, 1.7878011067708333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(14.25 : 67.3758455403646); (14.3229166666667 : 67.3758455403646 : JumpStart); (14.4895833333333 : 67.3758455403646 : JumpEnd); (14.6666666666667 : 67.3758455403646 : JumpStart); (14.9583333333333 : 67.3758455403646 : JumpEnd); (15 : 67.3758455403646)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/ExceptionLog/ExceptionLog_ExceptionReplication" />
+      <nodes>
+        <classShapeMoniker Id="5310de70-e2a7-4974-a885-73d7357880c5" />
+        <classShapeMoniker Id="cf6f208f-514f-484d-b9a5-1db3daf591a4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 65.2109577640225); (5.73181404587339 : 65.4427718098958); (5.85416666666667 : 65.4427718098958 : JumpStart); (6.23958333333333 : 65.4427718098958 : JumpEnd); (7.16666666666667 : 65.4427718098958 : JumpStart); (7.33333333333333 : 65.4427718098958 : JumpEnd); (8.32291666666667 : 65.4427718098958 : JumpStart); (8.48958333333333 : 65.4427718098958 : JumpEnd); (8.54166666666667 : 65.4427718098958 : JumpStart); (8.89583333333333 : 65.4427718098958 : JumpEnd); (8.91666666666667 : 65.4427718098958 : JumpStart); (9.08333333333333 : 65.4427718098958 : JumpEnd); (11.2604154166667 : 65.4427718098958 : JumpStart); (11.5520833333333 : 65.4427718098958 : JumpEnd); (11.6041666666667 : 65.4427718098958 : JumpStart); (11.8333333333333 : 65.4427718098958 : JumpEnd); (12.6354146666667 : 65.4427718098958 : JumpStart); (12.8020813333333 : 65.4427718098958 : JumpEnd); (13.25 : 65.4427718098958); (13.25 : 66.25)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/CDS_Document/CDS_Document_ExceptionLog" />
+      <nodes>
+        <classShapeMoniker Id="d6179914-16e1-4cf6-9f5d-6f34fb0d2396" />
+        <classShapeMoniker Id="5310de70-e2a7-4974-a885-73d7357880c5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 64.636871320548); (2.9375 : 64.636871320548); (2.9375 : 65.3333968098958); (2.95127799103299 : 65.3333968098958 : JumpStart); (3.48958333333333 : 65.3333968098958 : JumpEnd); (5.41650416416263 : 65.3333968098958 : JumpStart); (5.68125226953122 : 65.3333968098958 : JumpEnd); (5.85416666666667 : 65.3333968098958 : JumpStart); (6.23958333333333 : 65.3333968098958 : JumpEnd); (8.32291666666667 : 65.3333968098958 : JumpStart); (8.48958333333333 : 65.3333968098958 : JumpEnd); (8.54166666666667 : 65.3333968098958 : JumpStart); (8.89583333333333 : 65.3333968098958 : JumpEnd); (8.91666666666667 : 65.3333968098958 : JumpStart); (9.08333333333333 : 65.3333968098958 : JumpEnd); (11.2604154166667 : 65.3333968098958 : JumpStart); (11.5520833333333 : 65.3333968098958 : JumpEnd); (11.6041666666667 : 65.3333968098958 : JumpStart); (11.8333333333333 : 65.3333968098958 : JumpEnd); (12.718748 : 65.3333968098958); (12.718748 : 66.25)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/DocumentType/DocumentType_ExceptionLog" />
+      <nodes>
+        <classShapeMoniker Id="a3a10561-cc44-4486-a5d3-ce7312e37103" />
+        <classShapeMoniker Id="5310de70-e2a7-4974-a885-73d7357880c5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 57.6384165738932); (3.125 : 57.6384165738932); (3.125 : 59.5256982421875); (3.16666666666667 : 59.5256982421875 : JumpStart); (3.33333333333333 : 59.5256982421875 : JumpEnd); (3.36979166666667 : 59.5256982421875 : JumpStart); (3.53645833333333 : 59.5256982421875 : JumpEnd); (5.79166666666667 : 59.5256982421875 : JumpStart); (6.06770833333333 : 59.5256982421875 : JumpEnd); (6.07291666666667 : 59.5256982421875 : JumpStart); (6.23958333333333 : 59.5256982421875 : JumpEnd); (8.32291666666667 : 59.5256982421875 : JumpStart); (8.48958333333333 : 59.5256982421875 : JumpEnd); (8.54166666666667 : 59.5256982421875 : JumpStart); (8.70833333333333 : 59.5256982421875 : JumpEnd); (8.72916666666667 : 59.5256982421875 : JumpStart); (8.95833333333333 : 59.5256982421875 : JumpEnd); (11.2604154166667 : 59.5256982421875 : JumpStart); (11.5520833333333 : 59.5256982421875 : JumpEnd); (11.75 : 59.5256982421875); (11.75 : 65.9375); (11.7916666666667 : 65.9375 : JumpStart); (11.9583333333333 : 65.9375 : JumpEnd); (12.0416666666667 : 65.9375 : JumpStart); (12.2083333333333 : 65.9375 : JumpEnd); (12.6354146666667 : 65.9375 : JumpStart); (12.8020813333333 : 65.9375 : JumpEnd); (13.1666666666667 : 65.9375 : JumpStart); (13.3333333333333 : 65.9375 : JumpEnd); (13.781252 : 65.9375); (13.781252 : 66.25)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/Organization/Organization_ExceptionLog" />
+      <nodes>
+        <classShapeMoniker Id="59078091-a9da-4812-95db-5095cb11dcc6" />
+        <classShapeMoniker Id="5310de70-e2a7-4974-a885-73d7357880c5" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="3ecb5a75-9d1b-4369-9090-2c7ac3d6d3b2" absoluteBounds="9.5, 48, 2, 4.8477197265625023">
+      <DataClassMoniker Name="/EIVOEntityDataContext/UserProfile" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1437641d-5e65-4f35-8f68-a8a7a9c807c9" absoluteBounds="9.515, 48.460000000000008, 1.9700000000000002, 4.2877197265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(11.5 : 51.5340734863281); (12.25 : 51.5340734863281)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/UserProfile/UserProfile_UserRole" />
+      <nodes>
+        <classShapeMoniker Id="3ecb5a75-9d1b-4369-9090-2c7ac3d6d3b2" />
+        <classShapeMoniker Id="c8f7bc8b-1c23-4067-8bbc-cdb68a2590dd" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.5 : 49.1642976888021); (12.25 : 49.1642976888021)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/UserProfile/UserProfile_UserAuth" />
+      <nodes>
+        <classShapeMoniker Id="3ecb5a75-9d1b-4369-9090-2c7ac3d6d3b2" />
+        <classShapeMoniker Id="820e9652-aaf7-4698-8b96-6423a6cda42b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.28125 : 52.8477197265625); (11.28125 : 53.90625); (11.2916641666667 : 53.90625 : JumpStart); (11.5520833333333 : 53.90625 : JumpEnd); (11.6041666666667 : 53.90625 : JumpStart); (11.7708333333333 : 53.90625 : JumpEnd); (11.8541666666667 : 53.90625 : JumpStart); (12.0208333333333 : 53.90625 : JumpEnd); (12.25 : 53.90625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/UserProfile/UserProfile_UserProfileExtension" />
+      <nodes>
+        <classShapeMoniker Id="3ecb5a75-9d1b-4369-9090-2c7ac3d6d3b2" />
+        <classShapeMoniker Id="acc9493b-f690-4a1e-8bc1-70d84d867783" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.40625 : 52.8477197265625); (11.40625 : 59.2877425130208); (11.6041666666667 : 59.2877425130208 : JumpStart); (11.7708333333333 : 59.2877425130208 : JumpEnd); (11.8541666666667 : 59.2877425130208 : JumpStart); (12.1145833333333 : 59.2877425130208 : JumpEnd); (13.1979186666667 : 59.2877425130208 : JumpStart); (13.3645853333333 : 59.2877425130208 : JumpEnd); (14.3229166666667 : 59.2877425130208 : JumpStart); (14.4895833333333 : 59.2877425130208 : JumpEnd); (15.0104166666667 : 59.2877425130208 : JumpStart); (15.1770833333333 : 59.2877425130208 : JumpEnd); (17.6041666666667 : 59.2877425130208 : JumpStart); (17.8958333333333 : 59.2877425130208 : JumpEnd); (18.25 : 59.2877425130208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/UserProfile/UserProfile_UserProfileStatus" />
+      <nodes>
+        <classShapeMoniker Id="3ecb5a75-9d1b-4369-9090-2c7ac3d6d3b2" />
+        <classShapeMoniker Id="0b91d931-db5a-41b0-9957-634935de5d97" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.5 : 48); (11.875 : 47.625); (11.875 : 44.3541984049479); (12.25 : 44.3541984049479)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/UserProfile/UserProfile_InvoiceUserCarrier" />
+      <nodes>
+        <classShapeMoniker Id="3ecb5a75-9d1b-4369-9090-2c7ac3d6d3b2" />
+        <classShapeMoniker Id="e7b75cd1-fb4b-45ca-8b81-9ec9139bb5f9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.3749975 : 52.8477197265625); (11.3749975 : 71.0569075520833); (11.2708358333333 : 71.0569075520833 : JumpStart); (10.4322926666667 : 71.0569075520833 : JumpEnd); (10.3333333333333 : 71.0569075520833 : JumpStart); (10.1666666666667 : 71.0569075520833 : JumpEnd); (10.0677073333333 : 71.0569075520833 : JumpStart); (9.90104066666667 : 71.0569075520833 : JumpEnd); (9.80208133333333 : 71.0569075520833 : JumpStart); (9.63541466666667 : 71.0569075520833 : JumpEnd); (9.53645533333333 : 71.0569075520833 : JumpStart); (9.36978866666667 : 71.0569075520833 : JumpEnd); (9.08333333333333 : 71.0569075520833 : JumpStart); (8.91666666666667 : 71.0569075520833 : JumpEnd); (8.77083333333333 : 71.0569075520833 : JumpStart); (8.60416666666667 : 71.0569075520833 : JumpEnd); (8.48958333333333 : 71.0569075520833 : JumpStart); (8.32291666666667 : 71.0569075520833 : JumpEnd); (8.25 : 71.0569075520833)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/UserProfile/UserProfile_DocumentPrintLog" />
+      <nodes>
+        <classShapeMoniker Id="3ecb5a75-9d1b-4369-9090-2c7ac3d6d3b2" />
+        <classShapeMoniker Id="9a7d5584-ebce-4595-95fa-04b9913f7d00" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.5 : 52.7846418034856); (11.9375 : 53.2221418034856); (11.9375 : 61.3854484049479); (12.25 : 61.3854484049479)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/UserProfile/UserProfile_DocumentDownloadLog" />
+      <nodes>
+        <classShapeMoniker Id="3ecb5a75-9d1b-4369-9090-2c7ac3d6d3b2" />
+        <classShapeMoniker Id="d83d4410-20f1-4bf5-9ba3-57005fa080b6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.1406225 : 52.8477197265625); (11.1406225 : 53.65625); (11.1979166666667 : 53.65625 : JumpStart); (11.5520833333333 : 53.65625 : JumpEnd); (11.8541666666667 : 53.65625 : JumpStart); (12.0208333333333 : 53.65625 : JumpEnd); (15.0104166666667 : 53.65625 : JumpStart); (15.1770833333333 : 53.65625 : JumpEnd); (15.25 : 53.65625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/UserProfile/UserProfile_InvoicePurchaseOrderUpload" />
+      <nodes>
+        <classShapeMoniker Id="3ecb5a75-9d1b-4369-9090-2c7ac3d6d3b2" />
+        <classShapeMoniker Id="86ca5825-60a7-4c6f-9b3b-0e9c5da7a466" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.28905925 : 52.8477197265625); (10.28905925 : 53.8125); (11.1979166666667 : 53.8125 : JumpStart); (11.5520833333333 : 53.8125 : JumpEnd); (11.6875 : 53.8125); (11.6875 : 89.3125); (11.7291666666667 : 89.3125 : JumpStart); (11.9583333333333 : 89.3125 : JumpEnd); (11.9791666666667 : 89.3125 : JumpStart); (12.1458333333333 : 89.3125 : JumpEnd); (12.1875 : 89.3125); (12.1875 : 92.1875); (12.0208333333333 : 92.1875 : JumpStart); (11.8541666666667 : 92.1875 : JumpEnd); (11.6875 : 92.1875); (11.6875 : 113.789297688802); (12 : 113.789297688802)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/UserProfile/UserProfile_InvoiceCancellationUpload" />
+      <nodes>
+        <classShapeMoniker Id="3ecb5a75-9d1b-4369-9090-2c7ac3d6d3b2" />
+        <classShapeMoniker Id="66e31b31-2f6d-4d4c-ae95-6f4a38f22fab" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.46875 : 52.8477197265625); (11.46875 : 71.6875); (11.5729166666667 : 71.6875 : JumpStart); (11.8958333333333 : 71.6875 : JumpEnd); (11.9166666666667 : 71.6875 : JumpStart); (12.0833333333333 : 71.6875 : JumpEnd); (14.3229166666667 : 71.6875 : JumpStart); (14.4895833333333 : 71.6875 : JumpEnd); (14.7916666666667 : 71.6875 : JumpStart); (15.0208333333333 : 71.6875 : JumpEnd); (17.0729166666667 : 71.6875 : JumpStart); (17.4511164096554 : 71.6875 : JumpEnd); (17.7604166666667 : 71.6875 : JumpStart); (17.9270833333333 : 71.6875 : JumpEnd); (18 : 71.6875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/UserProfile/UserProfile_InvoicePrintQueue" />
+      <nodes>
+        <classShapeMoniker Id="3ecb5a75-9d1b-4369-9090-2c7ac3d6d3b2" />
+        <classShapeMoniker Id="4326eff3-0c14-4bdd-9a98-c10fac00a63f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.4375 : 52.8477197265625); (11.4375 : 63.59375); (11.4270820833333 : 63.59375 : JumpStart); (11.2604154166667 : 63.59375 : JumpEnd); (10.3333333333333 : 63.59375 : JumpStart); (10.1666666666667 : 63.59375 : JumpEnd); (9.08333333333333 : 63.59375 : JumpStart); (8.91666666666667 : 63.59375 : JumpEnd); (8.89583333333333 : 63.59375 : JumpStart); (8.60416666666667 : 63.59375 : JumpEnd); (8.48958333333333 : 63.59375 : JumpStart); (8.32291666666667 : 63.59375 : JumpEnd); (8.25 : 63.59375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/UserProfile/UserProfile_DocumentProcessLog" />
+      <nodes>
+        <classShapeMoniker Id="3ecb5a75-9d1b-4369-9090-2c7ac3d6d3b2" />
+        <classShapeMoniker Id="aa1caa2f-6fc7-47fe-8a7f-ee8bc6085589" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.75 : 74.7394026985677); (3.91666666666667 : 74.7394026985677 : JumpStart); (4.08333333333333 : 74.7394026985677 : JumpEnd); (5.16666666666667 : 74.7394026985677 : JumpStart); (5.33333333333333 : 74.7394026985677 : JumpEnd); (5.79166666666667 : 74.7394026985677 : JumpStart); (6.39583333333333 : 74.7394026985677 : JumpEnd); (8.32291666666667 : 74.7394026985677 : JumpStart); (8.48958333333333 : 74.7394026985677 : JumpEnd); (11.1666666666667 : 74.7394026985677 : JumpStart); (11.3333333333333 : 74.7394026985677 : JumpEnd); (11.34374875 : 74.7394026985677); (11.34374875 : 52.8477197265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/LevelExpression/LevelExpression_UserProfile" />
+      <nodes>
+        <classShapeMoniker Id="59339ce0-f9c2-4637-be61-51a832ec153a" />
+        <classShapeMoniker Id="3ecb5a75-9d1b-4369-9090-2c7ac3d6d3b2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.2092307692308 : 48); (10.2092307692308 : 47.75); (10.8046153846154 : 47.75); (10.8046153846154 : 48)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EIVOEntityDataContext/UserProfile/UserProfile_UserProfile" />
+      <nodes>
+        <classShapeMoniker Id="3ecb5a75-9d1b-4369-9090-2c7ac3d6d3b2" />
+        <classShapeMoniker Id="3ecb5a75-9d1b-4369-9090-2c7ac3d6d3b2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.5 : 49.6730743689904); (9 : 49.6730743689904); (9 : 51.4249071890024); (9.16666666666667 : 51.4249071890024 : JumpStart); (9.33333333333333 : 51.4249071890024 : JumpEnd); (9.5 : 51.4249071890024)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EIVOEntityDataContext/UserProfile/UserProfile_UserProfile1" />
+      <nodes>
+        <classShapeMoniker Id="3ecb5a75-9d1b-4369-9090-2c7ac3d6d3b2" />
+        <classShapeMoniker Id="3ecb5a75-9d1b-4369-9090-2c7ac3d6d3b2" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="9594603c-0bb0-4cdd-8568-fa0698b0436a" absoluteBounds="3.5, 57.375, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/EIVOEntityDataContext/OrganizationToken" />
+      <nestedChildShapes>
+        <elementListCompartment Id="73678c7d-062d-4f25-a178-81b46639cd33" absoluteBounds="3.5150000005960464, 57.83500000089407, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 58.3890070597331); (2.91666666666667 : 58.3890070597331 : JumpStart); (3.20833333333333 : 58.3890070597331 : JumpEnd); (3.5 : 58.3890070597331)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/Organization/Organization_OrganizationToken" />
+      <nodes>
+        <classShapeMoniker Id="59078091-a9da-4812-95db-5095cb11dcc6" />
+        <classShapeMoniker Id="9594603c-0bb0-4cdd-8568-fa0698b0436a" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="fbfc7303-4e6a-43be-9537-10b197da0a4e" absoluteBounds="3.75, 79.375, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/EIVOEntityDataContext/UserToken" />
+      <nestedChildShapes>
+        <elementListCompartment Id="edc115ae-080e-43ed-90ee-7a450963d2ef" absoluteBounds="3.7650000000000006, 79.835000000000008, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(11.390625 : 52.8477197265625); (11.390625 : 80.8021468098958); (6.20833333333333 : 80.8021468098958 : JumpStart); (5.79166666666667 : 80.8021468098958 : JumpEnd); (5.75 : 80.8021468098958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/UserProfile/UserProfile_UserToken" />
+      <nodes>
+        <classShapeMoniker Id="3ecb5a75-9d1b-4369-9090-2c7ac3d6d3b2" />
+        <classShapeMoniker Id="fbfc7303-4e6a-43be-9537-10b197da0a4e" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="63e5815a-12b8-49e1-9757-fd41f53fd604" absoluteBounds="6.25, 124.875, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/EIVOEntityDataContext/Attachment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d60a6181-542a-4c0b-8be8-83afcad973fb" absoluteBounds="6.2650000000000006, 125.33500000000001, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.20020745201698 : 65.2708968098958); (4.20020745201698 : 66.6875000003601); (5.5625 : 66.6875000003601); (5.5625 : 72.375); (5.60416666666667 : 72.375 : JumpStart); (5.77083333333333 : 72.375 : JumpEnd); (5.90104166666667 : 72.375 : JumpStart); (6.16145833333333 : 72.375 : JumpEnd); (6.54166666666667 : 72.375 : JumpStart); (6.83333333333333 : 72.375 : JumpEnd); (6.875 : 72.375); (6.875 : 74.25); (6.83333333333333 : 74.25 : JumpStart); (6.54166666666667 : 74.25 : JumpEnd); (6 : 74.25); (6 : 82.625); (6.29166666666667 : 82.625 : JumpStart); (6.58333333333333 : 82.625 : JumpEnd); (6.625 : 82.625); (6.625 : 115.375); (6.125 : 115.375); (6.125 : 125.568146972656); (6.25 : 125.568146972656)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/CDS_Document/CDS_Document_Attachment" />
+      <nodes>
+        <classShapeMoniker Id="d6179914-16e1-4cf6-9f5d-6f34fb0d2396" />
+        <classShapeMoniker Id="63e5815a-12b8-49e1-9757-fd41f53fd604" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="a57372e5-88ec-4b1b-aa83-babd44f08fd1" absoluteBounds="18, 84, 2, 4.4631168619791595">
+      <DataClassMoniker Name="/EIVOEntityDataContext/InvoiceAllowanceItem" />
+      <nestedChildShapes>
+        <elementListCompartment Id="efcd9105-a5f6-4f35-96bb-61e4483a4f90" absoluteBounds="18.015, 84.460000000000008, 1.9700000000000002, 3.9031168619791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(20 : 84.0015374615385); (20.375 : 83.6265374615385); (20.375 : 72.2219962565104); (20.4166666666667 : 72.2219962565104 : JumpStart); (20.5833333333333 : 72.2219962565104 : JumpEnd); (20.75 : 72.2219962565104)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/InvoiceAllowanceItem/InvoiceAllowanceItem_InvoiceAllowanceDetail" />
+      <nodes>
+        <classShapeMoniker Id="a57372e5-88ec-4b1b-aa83-babd44f08fd1" />
+        <classShapeMoniker Id="b001574e-f8bd-4ca3-9ba6-2cf3cdc4330d" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="d834b71d-b98a-4033-aab6-ea0bb1ea14cf" absoluteBounds="15.25, 83.75, 2, 4.8477197265625023">
+      <DataClassMoniker Name="/EIVOEntityDataContext/InvoiceProductItem" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e7057ef9-9b7f-4b7f-949b-e62402b8e1a0" absoluteBounds="15.265, 84.210000000000008, 1.9700000000000002, 4.2877197265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(17.25 : 86.2315584309896); (17.4166666666667 : 86.2315584309896 : JumpStart); (17.5833333333333 : 86.2315584309896 : JumpEnd); (18 : 86.2315584309896)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/InvoiceProductItem/InvoiceProductItem_InvoiceAllowanceItem" />
+      <nodes>
+        <classShapeMoniker Id="d834b71d-b98a-4033-aab6-ea0bb1ea14cf" />
+        <classShapeMoniker Id="a57372e5-88ec-4b1b-aa83-babd44f08fd1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(17.15625 : 61.0689925130208); (17.15625 : 83.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/InvoiceProduct/InvoiceProduct_InvoiceProductItem" />
+      <nodes>
+        <classShapeMoniker Id="33157335-e9c3-4190-b844-d3d463044690" />
+        <classShapeMoniker Id="d834b71d-b98a-4033-aab6-ea0bb1ea14cf" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="45915db3-055c-4a23-a066-5da2fd4c3286" absoluteBounds="6.25, 51.25, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/EIVOEntityDataContext/EnterpriseGroupMemberToken" />
+      <nestedChildShapes>
+        <elementListCompartment Id="597719a4-ea3f-48e4-bcfb-786406f82670" absoluteBounds="6.2650000000000006, 51.71, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 52.2219962565104); (5.79166666666667 : 52.2219962565104 : JumpStart); (6.08333333333333 : 52.2219962565104 : JumpEnd); (6.25 : 52.2219962565104)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/EnterpriseGroupMember/EnterpriseGroupMember_EnterpriseGroupMemberToken" />
+      <nodes>
+        <classShapeMoniker Id="dbe01a8d-197e-4c54-92c4-ce1586083e2a" />
+        <classShapeMoniker Id="45915db3-055c-4a23-a066-5da2fd4c3286" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="6ae36c8c-084e-4a88-b0b7-933d792d5c27" absoluteBounds="4.25, 82.75, 2, 1.1939925130208167">
+      <DataClassMoniker Name="/EIVOEntityDataContext/DocumentFlowBranch" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f01de166-7ad0-46e1-b571-c061b2178be2" absoluteBounds="4.2650000000000006, 83.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.59375 : 73.2708968098958); (1.59375 : 83.3469962565104); (4.25 : 83.3469962565104)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/DocumentFlowControl/DocumentFlowControl_DocumentFlowBranch" />
+      <nodes>
+        <classShapeMoniker Id="2fc34283-c52e-45f8-a6e7-e15682fa879f" />
+        <classShapeMoniker Id="6ae36c8c-084e-4a88-b0b7-933d792d5c27" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.6250025 : 73.2708968098958); (1.6250025 : 83.0172456282552); (4.25 : 83.0172456282552)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/DocumentFlowControl/DocumentFlowControl_DocumentFlowBranch1" />
+      <nodes>
+        <classShapeMoniker Id="2fc34283-c52e-45f8-a6e7-e15682fa879f" />
+        <classShapeMoniker Id="6ae36c8c-084e-4a88-b0b7-933d792d5c27" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="03db1f33-71de-42b7-ac35-2a3ff6514719" absoluteBounds="12.25, 69.75, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/EIVOEntityDataContext/DocumentReady" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dd96099f-4291-4499-b176-4b6e572b2e7b" absoluteBounds="12.265, 70.210000000000008, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 65.2599979833734); (5.71402382652244 : 65.4740218098958); (5.85416666666667 : 65.4740218098958 : JumpStart); (6.23958333333333 : 65.4740218098958 : JumpEnd); (7.16666666666667 : 65.4740218098958 : JumpStart); (7.33333333333333 : 65.4740218098958 : JumpEnd); (8.32291666666667 : 65.4740218098958 : JumpStart); (8.48958333333333 : 65.4740218098958 : JumpEnd); (8.54166666666667 : 65.4740218098958 : JumpStart); (8.89583333333333 : 65.4740218098958 : JumpEnd); (8.91666666666667 : 65.4740218098958 : JumpStart); (9.08333333333333 : 65.4740218098958 : JumpEnd); (11.2604154166667 : 65.4740218098958 : JumpStart); (11.5520833333333 : 65.4740218098958 : JumpEnd); (11.6041666666667 : 65.4740218098958 : JumpStart); (11.8333333333333 : 65.4740218098958 : JumpEnd); (11.875 : 65.4740218098958); (11.875 : 69.375); (11.9410744349011 : 69.4410744349011 : JumpStart); (12.0589255650989 : 69.5589255650989 : JumpEnd); (12.25 : 69.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EIVOEntityDataContext/CDS_Document/CDS_Document_DocumentReady" />
+      <nodes>
+        <classShapeMoniker Id="d6179914-16e1-4cf6-9f5d-6f34fb0d2396" />
+        <classShapeMoniker Id="03db1f33-71de-42b7-ac35-2a3ff6514719" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 64.3071211924728); (2.8125 : 64.3071211924728); (2.8125 : 65.5521468098958); (2.91666666666667 : 65.5521468098958 : JumpStart); (3.48958333333333 : 65.5521468098958 : JumpEnd); (3.60839981733899 : 65.5521468098958 : JumpStart); (3.77506648400566 : 65.5521468098958 : JumpEnd); (3.86263696801132 : 65.5521468098958 : JumpStart); (4.02930363467798 : 65.5521468098958 : JumpEnd); (4.11687411868364 : 65.5521468098958 : JumpStart); (4.28354078535031 : 65.5521468098958 : JumpEnd); (4.37111126935597 : 65.5521468098958 : JumpStart); (4.53777793602264 : 65.5521468098958 : JumpEnd); (4.62160229216121 : 65.5521468098958 : JumpStart); (4.78826895882787 : 65.5521468098958 : JumpEnd); (4.87209331496645 : 65.5521468098958 : JumpStart); (5.03875998163311 : 65.5521468098958 : JumpEnd); (5.11304873956455 : 65.5521468098958 : JumpStart); (5.27971540623122 : 65.5521468098958 : JumpEnd); (5.63525416416263 : 65.5521468098958 : JumpStart); (6.23958333333333 : 65.5521468098958 : JumpEnd); (7.16666666666667 : 65.5521468098958 : JumpStart); (7.33333333333333 : 65.5521468098958 : JumpEnd); (8.32291666666667 : 65.5521468098958 : JumpStart); (8.48958333333333 : 65.5521468098958 : JumpEnd); (8.54166666666667 : 65.5521468098958 : JumpStart); (8.89583333333333 : 65.5521468098958 : JumpEnd); (8.91666666666667 : 65.5521468098958 : JumpStart); (9.08333333333333 : 65.5521468098958 : JumpEnd); (11.2604154166667 : 65.5521468098958 : JumpStart); (11.5520833333333 : 65.5521468098958 : JumpEnd); (11.6041666666667 : 65.5521468098958 : JumpStart); (11.8333333333333 : 65.5521468098958 : JumpEnd); (12.125 : 65.5521468098958); (12.125 : 69.5); (13.281252 : 69.5); (13.281252 : 69.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/DocumentType/DocumentType_DocumentReady" />
+      <nodes>
+        <classShapeMoniker Id="a3a10561-cc44-4486-a5d3-ce7312e37103" />
+        <classShapeMoniker Id="03db1f33-71de-42b7-ac35-2a3ff6514719" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="384bfa4f-682a-4c77-863c-df182811ae4e" absoluteBounds="9.25, 57.875, 2, 1.1939925130208451">
+      <DataClassMoniker Name="/EIVOEntityDataContext/DocumentAccessaryFlow" />
+      <nestedChildShapes>
+        <elementListCompartment Id="934d2581-9629-492f-9485-e4d2d3117a4c" absoluteBounds="9.265, 58.335000000000008, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 63.5095345982071); (5.90625 : 63.1032845982071); (5.90625 : 59.4752425130208); (6.07291666666667 : 59.4752425130208 : JumpStart); (6.23958333333333 : 59.4752425130208 : JumpEnd); (8.32291666666667 : 59.4752425130208 : JumpStart); (8.48958333333333 : 59.4752425130208 : JumpEnd); (8.54166666666667 : 59.4752425130208 : JumpStart); (8.70833333333333 : 59.4752425130208 : JumpEnd); (8.84375 : 59.4752425130208); (9.25 : 59.0689925130208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EIVOEntityDataContext/CDS_Document/CDS_Document_DocumentAccessaryFlow" />
+      <nodes>
+        <classShapeMoniker Id="d6179914-16e1-4cf6-9f5d-6f34fb0d2396" />
+        <classShapeMoniker Id="384bfa4f-682a-4c77-863c-df182811ae4e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.5937525 : 71.5); (2.5937525 : 70.2612939453125); (2.91666666666667 : 70.2612939453125 : JumpStart); (3.14583333333333 : 70.2612939453125 : JumpEnd); (3.28125 : 70.2612939453125); (3.28125 : 59.6194482421875); (3.36979166666667 : 59.6194482421875 : JumpStart); (3.53645833333333 : 59.6194482421875 : JumpEnd); (5.79166666666667 : 59.6194482421875 : JumpStart); (6.06770833333333 : 59.6194482421875 : JumpEnd); (6.07291666666667 : 59.6194482421875 : JumpStart); (6.27083333333333 : 59.6194482421875 : JumpEnd); (8.32291666666667 : 59.6194482421875 : JumpStart); (8.48958333333333 : 59.6194482421875 : JumpEnd); (8.54166666666667 : 59.6194482421875 : JumpStart); (8.70833333333333 : 59.6194482421875 : JumpEnd); (8.875 : 59.6194482421875); (8.875 : 58.4407442565104); (9.25 : 58.4407442565104)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/DocumentFlowControl/DocumentFlowControl_DocumentAccessaryFlow" />
+      <nodes>
+        <classShapeMoniker Id="2fc34283-c52e-45f8-a6e7-e15682fa879f" />
+        <classShapeMoniker Id="384bfa4f-682a-4c77-863c-df182811ae4e" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="81b66e63-852e-485f-8746-3a5ed24d9326" absoluteBounds="17.75, 78.875, 2, 1.1939925130208167">
+      <DataClassMoniker Name="/EIVOEntityDataContext/InvoiceAllowanceItemExtension" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9493ccc2-2b63-4287-a148-0f7cec60727b" absoluteBounds="17.765, 79.335000000000008, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(17 : 69.7430225764974); (17.0729166666667 : 69.7430225764974 : JumpStart); (17.2395833333333 : 69.7430225764974 : JumpEnd); (17.84375 : 69.7430225764974); (17.84375 : 78.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/InvoiceAllowance/InvoiceAllowance_InvoiceAllowanceItemExtension" />
+      <nodes>
+        <classShapeMoniker Id="fe428122-6429-4c48-b547-edae70da0b52" />
+        <classShapeMoniker Id="81b66e63-852e-485f-8746-3a5ed24d9326" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="ef80d0a4-fa0a-4f7f-914e-cfffa01176a3" absoluteBounds="6.25, 54.375, 2, 2.1554996744791595">
+      <DataClassMoniker Name="/EIVOEntityDataContext/CALog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ba10c29c-720d-4c95-96d3-fc989dfb0143" absoluteBounds="6.2650000000000006, 54.835000000000008, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.43188858423478 : 63.5); (5.875 : 63.0568885842348); (5.875 : 55.8618228235677); (6.25 : 55.8618228235677)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/CDS_Document/CDS_Document_CALog" />
+      <nodes>
+        <classShapeMoniker Id="d6179914-16e1-4cf6-9f5d-6f34fb0d2396" />
+        <classShapeMoniker Id="ef80d0a4-fa0a-4f7f-914e-cfffa01176a3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 63.9108187757291); (2.81607443490112 : 63.844744340828 : JumpStart); (2.93392556509888 : 63.7268932106303 : JumpEnd); (3.06607443490112 : 63.594744340828 : JumpStart); (3.43392556509888 : 63.2268932106303 : JumpEnd); (3.453125 : 63.2076937757291); (3.453125 : 56.9054996744792); (5.875 : 56.9054996744792); (6.25 : 56.5304996744792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EIVOEntityDataContext/DocumentType/DocumentType_CALog" />
+      <nodes>
+        <classShapeMoniker Id="a3a10561-cc44-4486-a5d3-ce7312e37103" />
+        <classShapeMoniker Id="ef80d0a4-fa0a-4f7f-914e-cfffa01176a3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.2187475 : 56.625); (1.2187475 : 56.2083943098958); (1.66666666666667 : 56.2083943098958 : JumpStart); (1.83333333333333 : 56.2083943098958 : JumpEnd); (2.19791866666667 : 56.2083943098958 : JumpStart); (2.36458533333333 : 56.2083943098958 : JumpEnd); (3.1448098183093 : 56.2083943098958 : JumpStart); (3.31147648497597 : 56.2083943098958 : JumpEnd); (5.79166666666667 : 56.2083943098958 : JumpStart); (5.95833333333333 : 56.2083943098958 : JumpEnd); (6.25 : 56.2083943098958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/Organization/Organization_CALog" />
+      <nodes>
+        <classShapeMoniker Id="59078091-a9da-4812-95db-5095cb11dcc6" />
+        <classShapeMoniker Id="ef80d0a4-fa0a-4f7f-914e-cfffa01176a3" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="184b32af-3954-4857-9bf2-d4cd238aecf2" absoluteBounds="6.25, 66.75, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/EIVOEntityDataContext/DocumentPrintQueue" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7607d53e-2508-4a06-aee4-3287aaa1be61" absoluteBounds="6.2650000000000006, 67.210000000000008, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.49182663010817 : 65.2708968098958); (5.90625 : 65.6853201797877); (5.90625 : 67.4431469726563); (5.94791666666667 : 67.4431469726563 : JumpStart); (6.23958333333333 : 67.4431469726563 : JumpEnd); (6.25 : 67.4431469726563)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/CDS_Document/CDS_Document_DocumentPrintQueue" />
+      <nodes>
+        <classShapeMoniker Id="d6179914-16e1-4cf6-9f5d-6f34fb0d2396" />
+        <classShapeMoniker Id="184b32af-3954-4857-9bf2-d4cd238aecf2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.5 : 52.8477197265625); (9.125 : 53.2227197265625); (8.8125 : 53.2227197265625); (8.8125 : 66.1875); (8.74642556509888 : 66.2535744349011 : JumpStart); (8.62857443490112 : 66.3714255650989 : JumpEnd); (8.46517556509888 : 66.5348244349011 : JumpStart); (8.34732443490112 : 66.6526755650989 : JumpEnd); (8.25 : 66.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/EIVOEntityDataContext/UserProfile/UserProfile_DocumentPrintQueue" />
+      <nodes>
+        <classShapeMoniker Id="3ecb5a75-9d1b-4369-9090-2c7ac3d6d3b2" />
+        <classShapeMoniker Id="184b32af-3954-4857-9bf2-d4cd238aecf2" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="8342d03a-7084-4f8f-97e3-645842f94962" absoluteBounds="6.25, 120.75, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/EIVOEntityDataContext/SMSNotificationQueue" />
+      <nestedChildShapes>
+        <elementListCompartment Id="021e42f9-a587-4d79-bb3b-c22239c99cdf" absoluteBounds="6.2650000000000006, 121.21000000000001, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.69173315067233 : 65.2708968098958); (3.69173315067233 : 66.8125000003601); (5.47916666666667 : 66.8125000003601 : JumpStart); (6.16145833333333 : 66.8125000003601 : JumpEnd); (6.1875 : 66.8125000003601); (6.1875 : 72.125); (6.625 : 72.125); (6.625 : 74.5625); (6.39583333333333 : 74.5625 : JumpStart); (6.22916666666667 : 74.5625 : JumpEnd); (6.20833333333333 : 74.5625 : JumpStart); (5.91666666666667 : 74.5625 : JumpEnd); (5.875 : 74.5625); (5.875 : 82.375); (5.91666666666667 : 82.375 : JumpStart); (6.08333333333333 : 82.375 : JumpEnd); (6.375 : 82.375); (6.375 : 115.125); (5.875 : 115.125); (5.875 : 121.443146972656); (5.91666666666667 : 121.443146972656 : JumpStart); (6.20833333333333 : 121.443146972656 : JumpEnd); (6.25 : 121.443146972656)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/CDS_Document/CDS_Document_SMSNotificationQueue" />
+      <nodes>
+        <classShapeMoniker Id="d6179914-16e1-4cf6-9f5d-6f34fb0d2396" />
+        <classShapeMoniker Id="8342d03a-7084-4f8f-97e3-645842f94962" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="3f8bf1e3-d357-478d-a933-30100e74ebf1" absoluteBounds="9.25, 60.375, 2, 2.1554996744791595">
+      <DataClassMoniker Name="/EIVOEntityDataContext/SMSNotificationLog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9d3f39dd-7b26-46dc-8fe8-6585a760a9c6" absoluteBounds="9.2650000005960464, 60.83500000089407, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 63.5286057946214); (5.9036057946214 : 63.125); (5.99479166666667 : 63.125 : JumpStart); (6.16145833333333 : 63.125 : JumpEnd); (8.32291666666667 : 63.125 : JumpStart); (8.48958333333333 : 63.125 : JumpEnd); (8.60416666666667 : 63.125 : JumpStart); (8.89583333333333 : 63.125 : JumpEnd); (8.91666666666667 : 63.125 : JumpStart); (9.08333333333333 : 63.125 : JumpEnd); (10.25 : 63.125); (10.25 : 62.5304996744792)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/CDS_Document/CDS_Document_SMSNotificationLog" />
+      <nodes>
+        <classShapeMoniker Id="d6179914-16e1-4cf6-9f5d-6f34fb0d2396" />
+        <classShapeMoniker Id="3f8bf1e3-d357-478d-a933-30100e74ebf1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.23384615384615 : 61.8573225911458); (2.23384615384615 : 62.4655989583333); (3.04166666666667 : 62.4655989583333 : JumpStart); (3.53645833333333 : 62.4655989583333 : JumpEnd); (5.79166666666667 : 62.4655989583333 : JumpStart); (6.27083333333333 : 62.4655989583333 : JumpEnd); (8.32291666666667 : 62.4655989583333 : JumpStart); (8.52265130173276 : 62.4655989583333 : JumpEnd); (8.66666666666667 : 62.4655989583333 : JumpStart); (8.89583333333333 : 62.4655989583333 : JumpEnd); (8.91666666666667 : 62.4655989583333 : JumpStart); (9.08333333333333 : 62.4655989583333 : JumpEnd); (9.25 : 62.4655989583333)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/Organization/Organization_SMSNotificationLog" />
+      <nodes>
+        <classShapeMoniker Id="59078091-a9da-4812-95db-5095cb11dcc6" />
+        <classShapeMoniker Id="3f8bf1e3-d357-478d-a933-30100e74ebf1" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="ae3b18da-066d-4ea2-b27c-51ec85c3a8ce" absoluteBounds="6.25, 119, 2, 1.0016910807291595">
+      <DataClassMoniker Name="/EIVOEntityDataContext/DocumentMappingQueue" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7d14f99c-307a-4a86-af51-22b1024e5e82" absoluteBounds="6.2650000000000006, 119.46000000000001, 1.9700000000000002, 0.44169108072916663" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="aab027f0-750f-4303-abe4-e98a36ce80bf" absoluteBounds="6.25, 117.25, 2, 1.0016910807291595">
+      <DataClassMoniker Name="/EIVOEntityDataContext/DocumentDownloadQueue" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c5157cbd-dc5e-498f-9a94-ecc1a823a442" absoluteBounds="6.2650000000000006, 117.71000000000001, 1.9700000000000002, 0.44169108072916663" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.70493562549454 : 65.2708968098958); (4.70493562549454 : 66.4375000003601); (4.87209331496645 : 66.4375000003601 : JumpStart); (5.03875998163311 : 66.4375000003601 : JumpEnd); (5.78125 : 66.4375000003601); (5.78125 : 71.875); (5.90104166666667 : 71.875 : JumpStart); (6.27083333333333 : 71.875 : JumpEnd); (7.125 : 71.875); (7.125 : 74.4375); (6.83333333333333 : 74.4375 : JumpStart); (6.54166666666667 : 74.4375 : JumpEnd); (6.39583333333333 : 74.4375 : JumpStart); (6.22916666666667 : 74.4375 : JumpEnd); (6.0625 : 74.4375); (6.0625 : 82.125); (6.875 : 82.125); (6.875 : 114.875); (6.83333333333333 : 114.875 : JumpStart); (6.29166666666667 : 114.875 : JumpEnd); (5.625 : 114.875); (5.625 : 119.500845540365); (5.66666666666667 : 119.500845540365 : JumpStart); (6.20833333333333 : 119.500845540365 : JumpEnd); (6.25 : 119.500845540365)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/CDS_Document/CDS_Document_DocumentMappingQueue" />
+      <nodes>
+        <classShapeMoniker Id="d6179914-16e1-4cf6-9f5d-6f34fb0d2396" />
+        <classShapeMoniker Id="ae3b18da-066d-4ea2-b27c-51ec85c3a8ce" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.19638207289789 : 65.2708968098958); (5.19638207289789 : 66.2500000003601); (5.71875 : 66.2500000003601); (5.71875 : 72.3125); (5.90104166666667 : 72.3125 : JumpStart); (6.16145833333333 : 72.3125 : JumpEnd); (6.54166666666667 : 72.3125 : JumpStart); (6.77083333333333 : 72.3125 : JumpEnd); (6.8125 : 72.3125); (6.8125 : 74.3125); (6.77083333333333 : 74.3125 : JumpStart); (6.54166666666667 : 74.3125 : JumpEnd); (6.39583333333333 : 74.3125 : JumpStart); (6.22916666666667 : 74.3125 : JumpEnd); (6 : 74.3125); (6 : 82.5625); (6.29166666666667 : 82.5625 : JumpStart); (6.45833333333333 : 82.5625 : JumpEnd); (6.5625 : 82.5625); (6.5625 : 115.3125); (6.0625 : 115.3125); (6.0625 : 117.750845540365); (6.25 : 117.750845540365)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/CDS_Document/CDS_Document_DocumentDownloadQueue" />
+      <nodes>
+        <classShapeMoniker Id="d6179914-16e1-4cf6-9f5d-6f34fb0d2396" />
+        <classShapeMoniker Id="aab027f0-750f-4303-abe4-e98a36ce80bf" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="57dc2be2-3b00-4bda-8088-9e27142b4876" absoluteBounds="12, 94.5, 2, 1.5785953776041595">
+      <DataClassMoniker Name="/EIVOEntityDataContext/InvoiceCarrier" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5b771b97-e3e3-4ec8-9a22-f80966c62f3a" absoluteBounds="12.015, 94.960000000000008, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(10.914065 : 70.8477197265625); (10.914065 : 71.4375); (11.0729166666667 : 71.4375 : JumpStart); (11.5520833333333 : 71.4375 : JumpEnd); (11.5729166666667 : 71.4375 : JumpStart); (11.7708333333333 : 71.4375 : JumpEnd); (11.8125 : 71.4375); (11.8125 : 89.5625); (11.8541666666667 : 89.5625 : JumpStart); (12.2708333333333 : 89.5625 : JumpEnd); (12.3125 : 89.5625); (12.3125 : 92.4375); (11.8958333333333 : 92.4375 : JumpStart); (11.6041666666667 : 92.4375 : JumpEnd); (11.5625 : 92.4375); (11.5625 : 95.2892976888021); (11.6041666666667 : 95.2892976888021 : JumpStart); (11.9583333333333 : 95.2892976888021 : JumpEnd); (12 : 95.2892976888021)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/InvoiceItem/InvoiceItem_InvoiceCarrier" />
+      <nodes>
+        <classShapeMoniker Id="6dff114a-d3eb-49ff-a17f-df5281f922da" />
+        <classShapeMoniker Id="57dc2be2-3b00-4bda-8088-9e27142b4876" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="3a4c45c0-50b4-4a8a-b832-47b0ee2c0af9" absoluteBounds="12, 92.5, 2, 1.1939925130208167">
+      <DataClassMoniker Name="/EIVOEntityDataContext/InvoiceDonation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="25b63a92-8ee8-40c0-9217-41f7ccbe33d2" absoluteBounds="12.015, 92.960000000000008, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(11.25 : 70.0957368632812); (11.2604154166667 : 70.0957368632812 : JumpStart); (11.5520833333333 : 70.0957368632812 : JumpEnd); (11.6041666666667 : 70.0957368632812 : JumpStart); (11.7708333333333 : 70.0957368632812 : JumpEnd); (11.78125 : 70.0957368632812); (11.78125 : 89.1875); (11.875 : 89.1875); (11.875 : 91.75); (11.9166666666667 : 91.75 : JumpStart); (12.5208333333333 : 91.75 : JumpEnd); (13.1874995 : 91.75); (13.1874995 : 92.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/InvoiceItem/InvoiceItem_InvoiceDonation" />
+      <nodes>
+        <classShapeMoniker Id="6dff114a-d3eb-49ff-a17f-df5281f922da" />
+        <classShapeMoniker Id="3a4c45c0-50b4-4a8a-b832-47b0ee2c0af9" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="64725b3c-dd63-42c1-8ece-ed1d1f834034" absoluteBounds="15.25, 92.375, 2, 1.7708968098958167">
+      <DataClassMoniker Name="/EIVOEntityDataContext/UnassignedInvoiceNo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1ee59245-64ac-4787-b593-aa30b48ad6ea" absoluteBounds="15.265, 92.835, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(14.28125 : 91.0689925130208); (14.28125 : 93.9511946614583); (15.25 : 93.9511946614583)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/InvoiceTrackCodeAssignment/InvoiceTrackCodeAssignment_UnassignedInvoiceNo" />
+      <nodes>
+        <classShapeMoniker Id="d724cf04-c25e-4357-8b69-42b109bd47f7" />
+        <classShapeMoniker Id="64725b3c-dd63-42c1-8ece-ed1d1f834034" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="c24eb8d9-0f85-481a-ad3b-3d3cc4befb38" absoluteBounds="17.75, 80.875, 2, 1.5785953776041595">
+      <DataClassMoniker Name="/EIVOEntityDataContext/InvoiceAllowanceCancellation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="352a4ed7-2efe-4ac6-9f2a-614759e15bfc" absoluteBounds="17.765, 81.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(16.9676923076923 : 71.4151025390625); (17.0973244349011 : 71.5447346662713 : JumpStart); (17.2151755650989 : 71.6625857964691 : JumpEnd); (17.375 : 71.8224102313702); (17.375 : 81.6642976888021); (17.4166666666667 : 81.6642976888021 : JumpStart); (17.5833333333333 : 81.6642976888021 : JumpEnd); (17.75 : 81.6642976888021)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/InvoiceAllowance/InvoiceAllowance_InvoiceAllowanceCancellation" />
+      <nodes>
+        <classShapeMoniker Id="fe428122-6429-4c48-b547-edae70da0b52" />
+        <classShapeMoniker Id="c24eb8d9-0f85-481a-ad3b-3d3cc4befb38" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="af3d083f-50e6-4ab4-beaa-d842d3590110" absoluteBounds="6.5, 74.875, 2, 4.8477197265625023">
+      <DataClassMoniker Name="/EIVOEntityDataContext/OrganizationStatus" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5a9bf90c-25ca-48f1-bae2-283395473255" absoluteBounds="6.5150000000000006, 75.335, 1.9700000000000002, 4.2877197265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.75 : 75.9161334521484); (3.91666666666667 : 75.9161334521484 : JumpStart); (4.08333333333333 : 75.9161334521484 : JumpEnd); (5.79166666666667 : 75.9161334521484 : JumpStart); (6.20833333333333 : 75.9161334521484 : JumpEnd); (6.5 : 75.9161334521484)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/LevelExpression/LevelExpression_OrganizationStatus" />
+      <nodes>
+        <classShapeMoniker Id="59339ce0-f9c2-4637-be61-51a832ec153a" />
+        <classShapeMoniker Id="af3d083f-50e6-4ab4-beaa-d842d3590110" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 56.8272710680088); (5.79166666666667 : 56.8272710680088 : JumpStart); (6.03656193980368 : 56.8272710680088 : JumpEnd); (8.40625 : 56.8272710680088); (8.40625 : 74.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/Organization/Organization_OrganizationStatus" />
+      <nodes>
+        <classShapeMoniker Id="59078091-a9da-4812-95db-5095cb11dcc6" />
+        <classShapeMoniker Id="af3d083f-50e6-4ab4-beaa-d842d3590110" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 80.3561807682292); (5.79166666666667 : 80.3561807682292 : JumpStart); (6.20833333333333 : 80.3561807682292 : JumpEnd); (7.5 : 80.3561807682292); (7.5 : 79.7227197265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/UserToken/UserToken_OrganizationStatus" />
+      <nodes>
+        <classShapeMoniker Id="fbfc7303-4e6a-43be-9537-10b197da0a4e" />
+        <classShapeMoniker Id="af3d083f-50e6-4ab4-beaa-d842d3590110" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="2c4fecfb-c440-4bc8-ab38-087adcc11b79" absoluteBounds="3.75, 0.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/EIVOEntityDataContext/SystemMessage" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9f15f613-5b16-475c-8078-60a1f4634223" absoluteBounds="3.7649999999999997, 1.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e52b23bc-b1d6-4684-bf9c-ab766453fbd9" absoluteBounds="12, 76.375, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/EIVOEntityDataContext/InvoiceDeliveryTracking" />
+      <nestedChildShapes>
+        <elementListCompartment Id="352bd36a-625e-4161-a795-dfaeb23e7439" absoluteBounds="12.015, 76.835000000000008, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(11.25 : 70.8169494957933); (11.2848231849011 : 70.8517726806944 : JumpStart); (11.5276755650989 : 71.0946250608921 : JumpEnd); (11.65625 : 71.2231994957933); (11.65625 : 77.3565991210938); (11.6666666666667 : 77.3565991210938 : JumpStart); (11.8958333333333 : 77.3565991210938 : JumpEnd); (12 : 77.3565991210938)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/InvoiceItem/InvoiceItem_InvoiceDeliveryTracking" />
+      <nodes>
+        <classShapeMoniker Id="6dff114a-d3eb-49ff-a17f-df5281f922da" />
+        <classShapeMoniker Id="e52b23bc-b1d6-4684-bf9c-ab766453fbd9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.75 : 75.5070599658203); (3.91666666666667 : 75.5070599658203 : JumpStart); (4.08333333333333 : 75.5070599658203 : JumpEnd); (5.16666666666667 : 75.5070599658203 : JumpStart); (5.33333333333333 : 75.5070599658203 : JumpEnd); (5.79166666666667 : 75.5070599658203 : JumpStart); (6.20833333333333 : 75.5070599658203 : JumpEnd); (6.3125 : 75.5070599658203); (6.3125 : 74.1875); (6.54166666666667 : 74.1875 : JumpStart); (6.89583333333333 : 74.1875 : JumpEnd); (6.91666666666667 : 74.1875 : JumpStart); (7.33333333333333 : 74.1875 : JumpEnd); (8.32291666666667 : 74.1875 : JumpStart); (8.48958333333333 : 74.1875 : JumpEnd); (11.0729166666667 : 74.1875 : JumpStart); (11.8958333333333 : 74.1875 : JumpEnd); (11.9375 : 74.1875); (11.9375 : 75.0497054036458); (13 : 75.0497054036458); (13 : 76.375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/LevelExpression/LevelExpression_InvoiceDeliveryTracking" />
+      <nodes>
+        <classShapeMoniker Id="59339ce0-f9c2-4637-be61-51a832ec153a" />
+        <classShapeMoniker Id="e52b23bc-b1d6-4684-bf9c-ab766453fbd9" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="b3cd3238-28de-43cc-a43b-e0be9ff8917f" absoluteBounds="6.25, 115.5, 2, 1.0016910807291595">
+      <DataClassMoniker Name="/EIVOEntityDataContext/DocumentSubscriptionQueue" />
+      <nestedChildShapes>
+        <elementListCompartment Id="818b9d1c-6ad8-4399-a1a4-f85a2aae0db4" absoluteBounds="6.265, 115.96000000000001, 1.9700000000000002, 0.44169108072916663" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 64.7999053698793); (5.85416666666667 : 64.7999053698793 : JumpStart); (6.06770833333333 : 64.7999053698793 : JumpEnd); (6.15625 : 64.7999053698793); (6.15625 : 72.1875); (6.6875 : 72.1875); (6.6875 : 74.65625); (6.39583333333333 : 74.65625 : JumpStart); (5.97916666666667 : 74.65625 : JumpEnd); (5.9375 : 74.65625); (5.9375 : 82.4375); (6.66666666666667 : 82.4375 : JumpStart); (6.95833333333333 : 82.4375 : JumpEnd); (7.5624995 : 82.4375); (7.5624995 : 115.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/CDS_Document/CDS_Document_DocumentSubscriptionQueue" />
+      <nodes>
+        <classShapeMoniker Id="d6179914-16e1-4cf6-9f5d-6f34fb0d2396" />
+        <classShapeMoniker Id="b3cd3238-28de-43cc-a43b-e0be9ff8917f" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="667db5cb-c7c7-461c-b443-867dddd21b63" absoluteBounds="3.5, 69.125, 2, 1.1939925130208451">
+      <DataClassMoniker Name="/EIVOEntityDataContext/InvoiceIssuerAgent" />
+      <nestedChildShapes>
+        <elementListCompartment Id="db0a0214-89d2-4f63-ae07-7daf446a81eb" absoluteBounds="3.5150000000000006, 69.585000000000008, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.69 : 61.8573225911458); (3.125 : 62.2923225911458); (3.125 : 69.6931474726563); (3.19791666666667 : 69.6931474726563 : JumpStart); (3.36458333333333 : 69.6931474726563 : JumpEnd); (3.5 : 69.6931474726563)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/Organization/Organization_InvoiceIssuerAgent" />
+      <nodes>
+        <classShapeMoniker Id="59078091-a9da-4812-95db-5095cb11dcc6" />
+        <classShapeMoniker Id="667db5cb-c7c7-461c-b443-867dddd21b63" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.74384615384615 : 61.8573225911458); (3.09732443490112 : 62.2108008722008 : JumpStart); (3.24642556509888 : 62.3599020023986 : JumpEnd); (3.328125 : 62.4416014372997); (3.328125 : 69.6931474726563); (3.5 : 69.6931474726563)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/Organization/Organization_InvoiceIssuerAgent1" />
+      <nodes>
+        <classShapeMoniker Id="59078091-a9da-4812-95db-5095cb11dcc6" />
+        <classShapeMoniker Id="667db5cb-c7c7-461c-b443-867dddd21b63" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="7b2269fa-674f-4bf0-8030-c6bf3c98140f" absoluteBounds="18, 67.625, 2, 1.5785953776041595">
+      <DataClassMoniker Name="/EIVOEntityDataContext/InvoicePurchaseOrder" />
+      <nestedChildShapes>
+        <elementListCompartment Id="78ee7746-154f-471b-a7bf-e2bc5407ec99" absoluteBounds="18.015, 68.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(11.25 : 68.7364005533854); (11.2604154166667 : 68.7364005533854 : JumpStart); (11.5520833333333 : 68.7364005533854 : JumpEnd); (11.6041666666667 : 68.7364005533854 : JumpStart); (11.7708333333333 : 68.7364005533854 : JumpEnd); (11.7916666666667 : 68.7364005533854 : JumpStart); (12.2083333333333 : 68.7364005533854 : JumpEnd); (14.3229166666667 : 68.7364005533854 : JumpStart); (14.4895833333333 : 68.7364005533854 : JumpEnd); (14.7796046815905 : 68.7364005533854 : JumpStart); (15.0208333333333 : 68.7364005533854 : JumpEnd); (17.0729166666667 : 68.7364005533854 : JumpStart); (17.2395833333333 : 68.7364005533854 : JumpEnd); (18 : 68.7364005533854)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/InvoiceItem/InvoiceItem_InvoicePurchaseOrder" />
+      <nodes>
+        <classShapeMoniker Id="6dff114a-d3eb-49ff-a17f-df5281f922da" />
+        <classShapeMoniker Id="7b2269fa-674f-4bf0-8030-c6bf3c98140f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(17.25 : 55.1416648666366); (17.6875 : 55.5791648666366); (17.6875 : 68.1494482766927); (18 : 68.1494482766927)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/InvoicePurchaseOrderUpload/InvoicePurchaseOrderUpload_InvoicePurchaseOrder" />
+      <nodes>
+        <classShapeMoniker Id="86ca5825-60a7-4c6f-9b3b-0e9c5da7a466" />
+        <classShapeMoniker Id="7b2269fa-674f-4bf0-8030-c6bf3c98140f" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="418ec681-40e7-4e15-90a8-619fa3c44084" absoluteBounds="12, 96.75, 2, 1.7708968098958167">
+      <DataClassMoniker Name="/EIVOEntityDataContext/InvoiceItemExtension" />
+      <nestedChildShapes>
+        <elementListCompartment Id="82b087b3-e4bf-476f-8561-ea2be1ccb6f7" absoluteBounds="12.015, 97.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(10.648439 : 70.8477197265625); (10.648439 : 71.90625); (10.6979186666667 : 71.90625 : JumpStart); (10.8645853333333 : 71.90625 : JumpEnd); (11.0729166666667 : 71.90625 : JumpStart); (11.2395833333333 : 71.90625 : JumpEnd); (11.2604154166667 : 71.90625 : JumpStart); (11.4739583333333 : 71.90625 : JumpEnd); (11.53125 : 71.90625); (11.53125 : 89.0625); (11.5416666666667 : 89.0625 : JumpStart); (11.8958333333333 : 89.0625 : JumpEnd); (12.4375 : 89.0625); (12.4375 : 92.0625); (12.3958333333333 : 92.0625 : JumpStart); (11.8541666666667 : 92.0625 : JumpEnd); (11.4375 : 92.0625); (11.4375 : 97.6354484049479); (11.5416666666667 : 97.6354484049479 : JumpStart); (11.9583333333333 : 97.6354484049479 : JumpEnd); (12 : 97.6354484049479)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/InvoiceItem/InvoiceItem_InvoiceItemExtension" />
+      <nodes>
+        <classShapeMoniker Id="6dff114a-d3eb-49ff-a17f-df5281f922da" />
+        <classShapeMoniker Id="418ec681-40e7-4e15-90a8-619fa3c44084" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="d8b278cd-183c-4b19-a79c-ea888741c25d" absoluteBounds="18, 89.625, 2, 1.5785953776041595">
+      <DataClassMoniker Name="/EIVOEntityDataContext/BlankInvoiceNoSummary" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bc8e34bc-7566-4897-8761-45eb6d61e3fe" absoluteBounds="18.015, 90.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(17.25 : 90.4142976888021); (18 : 90.4142976888021)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EIVOEntityDataContext/InvoiceNoInterval/InvoiceNoInterval_BlankInvoiceNoSummary" />
+      <nodes>
+        <classShapeMoniker Id="7ad5c9b1-ab15-49f6-8454-7098009adb75" />
+        <classShapeMoniker Id="d8b278cd-183c-4b19-a79c-ea888741c25d" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="ebe55777-e142-437c-a6c4-5e31023ddf55" absoluteBounds="3.75, 3.75, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/EIVOEntityDataContext/ProductItemCategory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f7b8ddd1-1039-4339-a15f-89f2a94000eb" absoluteBounds="3.7649999999999997, 4.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

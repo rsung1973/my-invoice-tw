@@ -1,0 +1,122 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="main_page.Master.cs"
+    Inherits="eIVOGo.main_page" %>
+
+<%@ Register Src="../Module/UI/PageMenuBar.ascx" TagName="PageMenuBar" TagPrefix="uc1" %>
+<%@ Register Assembly="Model" Namespace="Model.DataEntity" TagPrefix="cc1" %>
+<%@ Register Src="~/Module/Common/CommonScriptManager.ascx" TagPrefix="uc1" TagName="CommonScriptManager" %>
+<%@ Register Src="~/Module/Common/JsGrid.ascx" TagPrefix="uc1" TagName="JsGrid" %>
+
+
+<%@ Import Namespace="Model.DataEntity" %>
+<script runat="server">
+    protected override void OnInit(EventArgs e)
+    {
+        base.OnInit(e);
+        this.PreRender += new EventHandler(template_main_page_master_PreRender);
+        this.Load += new EventHandler(template_main_page_master_Load);
+    }
+
+    void template_main_page_master_PreRender(object sender, EventArgs e)
+    {
+        var data = dsEntity.CreateDataManager().EntityList.Where(s => s.AlwaysShow || (s.StartDate <= DateTime.Now && s.EndDate.Value.AddDays(1) > DateTime.Now));
+        rpList.DataSource = data;
+        rpList.DataBind();
+    }
+
+    void template_main_page_master_Load(object sender, EventArgs e)
+    {
+        //Page.ClientScript.RegisterClientScriptInclude("jQuery", VirtualPathUtility.ToAbsolute("~/Scripts/jquery-1.4.1.js"));
+    }
+</script>
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <title>電子發票系統</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="~/Content/eivo-bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap-theme.css" rel="stylesheet" type="text/css" />
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="headContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <uc1:CommonScriptManager runat="server" ID="CommonScriptManager" />
+        <uc1:JsGrid runat="server" ID="JsGrid" />
+    <div id="header" runat="server"   clientidmode ="Static">
+        <div class="logo">
+            <img id="Img3" runat="server" enableviewstate="False" src="~/images/header_logo.jpg"
+                width="505" height="90" alt="" border="0" />
+        </div>
+        <div class="public">
+            <div id="logout" runat="server">
+                <a id="alogout" runat="server" enableviewstate="false" href="~/Logout.aspx" target="_parent">
+                    <img runat="server" enableviewstate="false" id="img4" src="~/images/icon_logout.png"
+                        width="34" height="34" border="0" alt="" /><br />
+                    登出</a></div>
+            <%--<div id="regist" runat="server">
+                <a runat="server" enableviewstate="false" href="~/SAM/AddMember.aspx" target="_parent">
+                    <img id="Img5" runat="server" enableviewstate="false" src="~/images/icon_join.png" width="34" height="34" border="0" alt="" /><br />
+                    加入會員</a></div>--%>
+            <%--<div >
+                <a href="https://www.einvoice.nat.gov.tw/wSite/ct?xItem=15&ctNode=30" target="_blank">
+                    <img id="Img6" runat="server" enableviewstate="false" src="~/images/icon_link.png" width="34" height="34" border="0" alt="" /><br />
+                    全民稽核連線</a></div>--%>
+            <%--<div id="cardBelong" runat="server" visible="false">
+                <a runat="server" enableviewstate="false" href="~/SAM/cardBelong.aspx" target="_parent">
+                    <img runat="server" enableviewstate="false" id="img7" src="~/images/icon_device.png" width="34" height="34" border="0" alt="" /><br />
+                    會員載具歸戶</a></div>--%>
+        </div>
+    </div>
+    <div class="pub" id="hearder2" runat="server"   clientidmode ="Static">
+        <div class="nomopic">
+            <img id="Img8" runat="server" enableviewstate="false" src="~/images/pub_pic.jpg"
+                width="290" height="30" border="0" alt="" />
+        </div>
+        <div class="note">
+            <table width="0%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td><!--跑馬燈開始-->
+                        <marquee class="notice" scrollamount="2">
+                            <asp:Repeater ID="rpList" runat="server" EnableViewState="false">
+                                <ItemTemplate>
+                                    ‧系統公告：<FONT color="#434343"><%# ((SystemMessage)Container.DataItem).MessageContents %></FONT>
+                                </ItemTemplate>
+                            </asp:Repeater>
+                        </marquee>
+                        <!--跑馬燈結束-->
+                    </td>
+                    <td nowrap="nowrap"><span>[ <a id="A1" runat="server" enableviewstate="false" href="~/MainPage.aspx">首頁</a> ]</span><span>登入：<asp:Label
+                    ID="lblRole" runat="server"></asp:Label></span><span>登入日期：<% =DateTime.Now.ToShortDateString() %></span></td>
+                </tr>
+            </table>            
+        </div>
+    </div>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="main_txt">
+        <tr>
+            <td valign="top" class="side_body" width="215" height="450">
+                <uc1:PageMenuBar ID="PageMenuBar1" runat="server" />
+            </td>
+            <td valign="top">
+                <div class="content_body">
+                    <asp:ContentPlaceHolder ID="mainContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#c5e08a" id="footer" runat="server"   clientidmode ="Static">
+        <tr>
+            <td width="208" height="26" bgcolor="#d9e28e">
+                &nbsp;
+            </td>
+            <td align="right">
+                <span class="copyright">Powered by UXB2B</span>
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>
+<cc1:SystemMessagesDataSource ID="dsEntity" runat="server">
+</cc1:SystemMessagesDataSource>
