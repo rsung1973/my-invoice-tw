@@ -32,6 +32,7 @@
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
     <UseGlobalApplicationHostFile />
+    <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -60,6 +61,10 @@
     <Reference Include="AjaxMin, Version=4.97.4951.28478, Culture=neutral, PublicKeyToken=21ef50ce11b5d80f, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\AjaxMin.4.97.4951.28483\lib\net40\AjaxMin.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="ClosedXML, Version=0.76.0.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
       <HintPath>..\packages\ClosedXML.0.76.0\lib\net40-client\ClosedXML.dll</HintPath>
@@ -147,6 +152,10 @@
       <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
       <Private>True</Private>
@@ -173,6 +182,10 @@
     <Reference Include="System.Xml.Linq" />
     <Reference Include="ThoughtWorks.QRCode">
       <HintPath>..\..\eInvoice\Tools\QRCodeLib\ThoughtWorks.QRCode.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.5.2.14234, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="WindowsBase" />
   </ItemGroup>
@@ -254,6 +267,11 @@
     <Content Include="css\jsgrid-theme.min.css" />
     <Content Include="css\jsgrid.css" />
     <Content Include="css\jsgrid.min.css" />
+    <Content Include="css\lavish-bootstrap.css" />
+    <Content Include="css\rwd-table.css" />
+    <Content Include="css\rwd-table.min.css" />
+    <Content Include="css\sb-admin-2.css" />
+    <Content Include="css\sb-admin-2.min.css" />
     <Content Include="default.htm" />
     <Content Include="EIVO\DownloadAppconfig.aspx" />
     <Content Include="EIVO\DownloadMIG.aspx" />
@@ -825,7 +843,19 @@
     <Content Include="MvcHelper\CreateInvoiceSummaryReport.aspx" />
     <Content Include="Published\PrintSingleAllowance.aspx" />
     <Content Include="resource\SellerMenuForProxy.xml" />
+    <Content Include="Scripts\jquery.twbsPagination.js" />
+    <Content Include="Scripts\jquery.twbsPagination.min.js" />
+    <Content Include="Scripts\math.js" />
+    <Content Include="Scripts\math.min.js" />
+    <Content Include="Scripts\rwd-table.js" />
+    <Content Include="Scripts\rwd-table.min.js" />
+    <Content Include="Scripts\sb-admin-2.js" />
+    <Content Include="Scripts\sb-admin-2.min.js" />
     <Content Include="SYS\MaintainSystemMessage.aspx" />
+    <Content Include="vendor\metisMenu\metisMenu.css" />
+    <Content Include="vendor\metisMenu\metisMenu.js" />
+    <Content Include="vendor\metisMenu\metisMenu.min.css" />
+    <Content Include="vendor\metisMenu\metisMenu.min.js" />
     <Content Include="Views\DataExchange\Index.aspx" />
     <Content Include="Views\DataExchange\Module\DataIndex.ascx" />
     <Content Include="Views\DataFlow\SellerSelector.ascx" />
@@ -835,6 +865,7 @@
     <Content Include="Views\DonatedInvoice\ReportGridPage.aspx" />
     <Content Include="Views\DonatedInvoice\ReportIndex.aspx" />
     <Content Include="Views\DonatedInvoice\ReportResult.aspx" />
+    <Content Include="Views\Forms\SimpleInvoice.ascx" />
     <Content Include="Views\Handling\Index.aspx" />
     <Content Include="Views\InquireInvoice\ByCancellation.ascx" />
     <Content Include="Views\InquireInvoice\ByInvoiceNo.ascx" />
@@ -843,6 +874,14 @@
     <Content Include="Views\InquireInvoice\ByAttachment.ascx" />
     <Content Include="Views\InquireInvoice\ByDonatory.ascx" />
     <Content Include="Views\InquireInvoice\ByDonation.ascx" />
+    <Content Include="Views\InvoiceBusiness\CreateInvoice.aspx" />
+    <Content Include="Views\InvoiceBusiness\InvoiceProduct\AddItem.ascx" />
+    <Content Include="Views\InvoiceBusiness\InvoiceProduct\DataItem.ascx" />
+    <Content Include="Views\InvoiceBusiness\PrintInvoice.aspx" />
+    <Content Include="Views\InvoiceBusiness\POSDeviceList.ascx" />
+    <Content Include="Views\InvoiceBusiness\POSDevice\AddItem.ascx" />
+    <Content Include="Views\InvoiceBusiness\POSDevice\EditItem.ascx" />
+    <Content Include="Views\InvoiceBusiness\POSDevice\DataItem.ascx" />
     <Content Include="Views\InvoiceQuery\InvoiceMediaReport.aspx" />
     <Content Include="Views\InvoiceQuery\InvoiceSummaryResult.aspx" />
     <Content Include="Views\InvoiceQuery\InvoiceSummaryGridPage.aspx" />
@@ -855,19 +894,31 @@
     <Content Include="Views\InvoiceQuery\Module\AttachmentResult.ascx" />
     <Content Include="Views\InvoiceQuery\PrintInvoiceSummary.aspx" />
     <Content Include="Views\InvoiceQuery\InquireInvoiceMedia.ascx" />
+    <Content Include="Views\Module\CompanyList.ascx" />
+    <Content Include="Views\Module\InvoicePOSQRCode.ascx" />
+    <Content Include="Views\Module\InvoicePOSBarCode.ascx" />
     <Content Include="Views\Module\InvoiceSummaryList.ascx" />
     <Content Include="Views\Module\InvoiceAttachmentList.ascx" />
+    <Content Include="Views\Module\InvoicePOSPrintView.ascx" />
     <Content Include="Views\Module\OrganizationList.ascx" />
     <Content Include="Views\Module\QueryMessage.ascx" />
     <Content Include="Views\OrganizationQuery\GridPage.aspx" />
     <Content Include="Views\OrganizationQuery\Index.aspx" />
     <Content Include="Views\OrganizationQuery\InquiryResult.aspx" />
     <Content Include="Views\OrganizationQuery\Module\InquireOrganization.ascx" />
+    <Content Include="Views\OrganizationQuery\Module\CompanyResult.ascx" />
     <Content Include="Views\OrganizationQuery\Module\InquiryResult.ascx" />
     <Content Include="Views\Sample\Sample.ascx" />
     <Content Include="Views\Sample\Sample.aspx" />
     <Content Include="Views\Sample\SampleWithDB.aspx" />
+    <Content Include="Views\Shared\GlobalScript.ascx" />
+    <Content Include="Views\Shared\JsGrid.ascx" />
     <Content Include="Views\Shared\YearSelector.ascx" />
+    <Content Include="Views\SiteAction\Alert.ascx" />
+    <Content Include="Views\SiteAction\FunctionTitleBar.ascx" />
+    <Content Include="Views\SiteAction\SysAdminMenu.ascx" />
+    <Content Include="Views\SiteAction\PageMenuBar.ascx" />
+    <Content Include="Views\TestAll\Index.aspx" />
     <Content Include="Views\WinningInvoice\DownloadCSV.aspx" />
     <Content Include="Views\WinningInvoice\PrintResult.aspx" />
     <Content Include="Views\WinningInvoice\ReportGridPage.aspx" />
@@ -1287,8 +1338,10 @@
     <Content Include="Scripts\Web.config" />
     <Content Include="template\ContentPage.Master" />
     <Content Include="template\ContentScriptManagerPage.Master" />
+    <Content Include="template\MvcMainPage.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\DataExchangeController.cs" />
@@ -1297,8 +1350,10 @@
     <Compile Include="Controllers\HandlingController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InquireInvoiceController.cs" />
+    <Compile Include="Controllers\InvoiceBusinessController.cs" />
     <Compile Include="Controllers\OrganizationQueryController.cs" />
     <Compile Include="Controllers\SampleController.cs" />
+    <Compile Include="Controllers\TestAllController.cs" />
     <Compile Include="Controllers\WinningInvoiceController.cs" />
     <Compile Include="Controllers\InvoiceQueryController.cs" />
     <Compile Include="getPassword_email.aspx.cs">
@@ -1340,6 +1395,8 @@
     </Compile>
     <Compile Include="Models\InquireField.cs" />
     <Compile Include="Models\InquireOrganization.cs" />
+    <Compile Include="Models\ViewModel\InvoiceViewModelValidator.cs" />
+    <Compile Include="Models\ViewModel\InvoiceViewModel.cs" />
     <Compile Include="Models\ViewModel\LoginViewModel.cs" />
     <Compile Include="Module\Base\CommonInquireEntity.cs">
       <SubType>ASPXCodeBehind</SubType>

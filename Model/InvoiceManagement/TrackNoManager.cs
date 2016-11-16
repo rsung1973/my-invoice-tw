@@ -71,6 +71,18 @@ namespace Model.InvoiceManagement
             }
         }
 
+        public bool ApplyInvoiceDate(DateTime invoiceDate)
+        {
+            _uploadInvoiceDate = invoiceDate;
+            _currentInterval = getCurrentInterval();
+            return _currentInterval != null;
+        }
+
+        public int? PeekInvoiceNo()
+        {
+            return _currentInterval == null ? (int?)null : _currentInterval.StartNo + _currentInterval.InvoiceNoAssignments.Count;
+        }
+
         public bool CheckInvoiceNo(InvoiceItem item)
         {
             if (_currentInterval == null)

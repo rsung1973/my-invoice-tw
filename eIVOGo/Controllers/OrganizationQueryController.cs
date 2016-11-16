@@ -12,7 +12,7 @@ using Model.Security.MembershipManagement;
 
 namespace eIVOGo.Controllers
 {
-    public class OrganizationQueryController : Controller
+    public class OrganizationQueryController : SampleController<InvoiceItem>
     {
         protected ModelSourceInquiry<Organization> createModelInquiry()
         {
@@ -39,10 +39,33 @@ namespace eIVOGo.Controllers
             //ViewBag.PrintAction = "PrintResult";
             ModelSource<Organization> models = new ModelSource<Organization>();
             TempData.SetModelSource(models);
+            models.Items = models.Items.Where(o => o.OrganizationStatus != null);
             models.Inquiry = createModelInquiry();
             models.BuildQuery();
 
             return View("InquiryResult", models.Inquiry);
+        }
+
+        public ActionResult InquireCompany(int? pageIndex)
+        {
+            //ViewBag.HasQuery = true;
+            //ViewBag.PrintAction = "PrintResult";
+            ModelSource<Organization> models = new ModelSource<Organization>();
+            TempData.SetModelSource(models);
+            models.Items = models.Items.Where(o => o.OrganizationStatus != null);
+            models.Inquiry = createModelInquiry();
+            models.BuildQuery();
+
+            if (pageIndex.HasValue)
+            {
+                ViewBag.PageIndex = pageIndex - 1;
+                return View("~/Views/Module/CompanyList.ascx", models.Items);
+            }
+            else
+            {
+                ViewBag.PageIndex = 0;
+                return View("~/Views/OrganizationQuery/Module/CompanyResult.ascx", models.Inquiry);
+            }
         }
 
 

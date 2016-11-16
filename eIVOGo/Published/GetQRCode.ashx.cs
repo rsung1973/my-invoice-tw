@@ -38,7 +38,7 @@ namespace eIVOGo.Published
 
             initialize(request);
 
-            String content = HttpContext.Current.Server.UrlDecode(request.Params["text"]);
+            String content = request.Params["text"];
 
             try
             {

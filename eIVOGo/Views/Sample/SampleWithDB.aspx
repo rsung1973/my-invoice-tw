@@ -15,14 +15,14 @@
 </asp:Content>
 <script runat="server">
 
-    ModelSource<UserProfile> models;
+    ModelSource<InvoiceItem> models;
     ModelStateDictionary _modelState;
 
 
     protected override void OnInit(EventArgs e)
     {
         base.OnInit(e);
-        models = ((SampleController<UserProfile>)ViewContext.Controller).DataSource;
+        models = ((SampleController<InvoiceItem>)ViewContext.Controller).DataSource;
         _modelState = (ModelStateDictionary)ViewBag.ModelState;
     }
 

@@ -28,9 +28,9 @@
                         <h2>電子發票證明聯</h2>
                         <h2><%= _item.InvoiceDate.Value.Year-1911 %>年<%= (_item.InvoiceDate.Value.Month % 2).Equals(0) ? String.Format("{0:00}-{1:00}", _item.InvoiceDate.Value.Month - 1, _item.InvoiceDate.Value.Month) : String.Format("{0:00}-{1:00}", _item.InvoiceDate.Value.Month, _item.InvoiceDate.Value.Month+1)%>月 </h2>
                         <h2><%= _item.TrackCode + "-" + _item.No %></h2>
-                        <p style="font-family:新細明體;">
+                        <p>
                             <%= String.Format("{0:yyyy-MM-dd HH:mm:ss}", _item.InvoiceDate.Value)%> <%= _buyer.IsB2C()?"": (_item.Organization.OrganizationStatus.SettingInvoiceType.Value == 8 ? "格式" : String.Format("格式 {0}", showState(_item.Organization.OrganizationStatus.SettingInvoiceType.Value))) %><br />
-                            隨機碼 <%= _item.RandomNo %>&nbsp;&nbsp;&nbsp;&nbsp;總計 <%= String.Format("{0:##,###,###,###}",_item.InvoiceAmountType.TotalAmount) %><br />
+                            隨機碼 <%= _item.RandomNo %>&nbsp;&nbsp;&nbsp;&nbsp; 總計 <%= String.Format("{0:##,###,###,###}",_item.InvoiceAmountType.TotalAmount) %><br />
                             賣方<%= _item.Organization.ReceiptNo%> <%= _buyer.IsB2C() ? null : String.Format("買方{0}", _buyer.ReceiptNo)%>
                         </p>
                         <div class="code1">

@@ -331,15 +331,18 @@ namespace Model.DataEntity
     partial void InsertProductItemCategory(ProductItemCategory instance);
     partial void UpdateProductItemCategory(ProductItemCategory instance);
     partial void DeleteProductItemCategory(ProductItemCategory instance);
-    partial void InsertInvoiceNoSegment(InvoiceNoSegment instance);
-    partial void UpdateInvoiceNoSegment(InvoiceNoSegment instance);
-    partial void DeleteInvoiceNoSegment(InvoiceNoSegment instance);
-    partial void InsertInvoiceNoSegmentAssignment(InvoiceNoSegmentAssignment instance);
-    partial void UpdateInvoiceNoSegmentAssignment(InvoiceNoSegmentAssignment instance);
-    partial void DeleteInvoiceNoSegmentAssignment(InvoiceNoSegmentAssignment instance);
     partial void InsertInvoiceNoSegmentDisposition(InvoiceNoSegmentDisposition instance);
     partial void UpdateInvoiceNoSegmentDisposition(InvoiceNoSegmentDisposition instance);
     partial void DeleteInvoiceNoSegmentDisposition(InvoiceNoSegmentDisposition instance);
+    partial void InsertInvoiceNoSegment(InvoiceNoSegment instance);
+    partial void UpdateInvoiceNoSegment(InvoiceNoSegment instance);
+    partial void DeleteInvoiceNoSegment(InvoiceNoSegment instance);
+    partial void InsertPOSDevice(POSDevice instance);
+    partial void UpdatePOSDevice(POSDevice instance);
+    partial void DeletePOSDevice(POSDevice instance);
+    partial void InsertPOSInvoiceNoSegment(POSInvoiceNoSegment instance);
+    partial void UpdatePOSInvoiceNoSegment(POSInvoiceNoSegment instance);
+    partial void DeletePOSInvoiceNoSegment(POSInvoiceNoSegment instance);
     #endregion
 		
 		public EIVOEntityDataContext() : 
@@ -1180,7 +1183,15 @@ namespace Model.DataEntity
 			}
 		}
 		
-		public System.Data.Linq.Table<InvoiceNoSegment> InvoiceNoSegment
+		public System.Data.Linq.Table<InvoiceNoSegmentDisposition> InvoiceNoSegmentDisposition
+		{
+			get
+			{
+				return this.GetTable<InvoiceNoSegmentDisposition>();
+			}
+		}
+		
+		public System.Data.Linq.Table<InvoiceNoSegment> InvoiceNoSegments
 		{
 			get
 			{
@@ -1188,19 +1199,19 @@ namespace Model.DataEntity
 			}
 		}
 		
-		public System.Data.Linq.Table<InvoiceNoSegmentAssignment> InvoiceNoSegmentAssignment
+		public System.Data.Linq.Table<POSDevice> POSDevice
 		{
 			get
 			{
-				return this.GetTable<InvoiceNoSegmentAssignment>();
+				return this.GetTable<POSDevice>();
 			}
 		}
 		
-		public System.Data.Linq.Table<InvoiceNoSegmentDisposition> InvoiceNoSegmentDisposition
+		public System.Data.Linq.Table<POSInvoiceNoSegment> POSInvoiceNoSegment
 		{
 			get
 			{
-				return this.GetTable<InvoiceNoSegmentDisposition>();
+				return this.GetTable<POSInvoiceNoSegment>();
 			}
 		}
 		
@@ -1321,6 +1332,8 @@ namespace Model.DataEntity
 		private EntitySet<InvoiceIssuerAgent> _InvoiceInsurerAgent;
 		
 		private EntitySet<InvoiceIssuerAgent> _AsInvoiceInsurer;
+		
+		private EntitySet<POSDevice> _POSDevice;
 		
 		private bool serializing;
 		
@@ -2387,6 +2400,25 @@ namespace Model.DataEntity
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Organization_POSDevice", Storage="_POSDevice", ThisKey="CompanyID", OtherKey="CompanyID")]
+		[global::System.Runtime.Serialization.DataMemberAttribute(Order=49, EmitDefaultValue=false)]
+		public EntitySet<POSDevice> POSDevice
+		{
+			get
+			{
+				if ((this.serializing 
+							&& (this._POSDevice.HasLoadedOrAssignedValues == false)))
+				{
+					return null;
+				}
+				return this._POSDevice;
+			}
+			set
+			{
+				this._POSDevice.Assign(value);
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -2671,6 +2703,18 @@ namespace Model.DataEntity
 			entity.InvoiceInsurer = null;
 		}
 		
+		private void attach_POSDevice(POSDevice entity)
+		{
+			this.SendPropertyChanging();
+			entity.Organization = this;
+		}
+		
+		private void detach_POSDevice(POSDevice entity)
+		{
+			this.SendPropertyChanging();
+			entity.Organization = null;
+		}
+		
 		private void Initialize()
 		{
 			this._OrganizationCategory = new EntitySet<OrganizationCategory>(new Action<OrganizationCategory>(this.attach_OrganizationCategory), new Action<OrganizationCategory>(this.detach_OrganizationCategory));
@@ -2698,6 +2742,7 @@ namespace Model.DataEntity
 			this._InvoiceBuyer = new EntitySet<InvoiceBuyer>(new Action<InvoiceBuyer>(this.attach_InvoiceBuyer), new Action<InvoiceBuyer>(this.detach_InvoiceBuyer));
 			this._InvoiceInsurerAgent = new EntitySet<InvoiceIssuerAgent>(new Action<InvoiceIssuerAgent>(this.attach_InvoiceInsurerAgent), new Action<InvoiceIssuerAgent>(this.detach_InvoiceInsurerAgent));
 			this._AsInvoiceInsurer = new EntitySet<InvoiceIssuerAgent>(new Action<InvoiceIssuerAgent>(this.attach_AsInvoiceInsurer), new Action<InvoiceIssuerAgent>(this.detach_AsInvoiceInsurer));
+			this._POSDevice = new EntitySet<POSDevice>(new Action<POSDevice>(this.attach_POSDevice), new Action<POSDevice>(this.detach_POSDevice));
 			OnCreated();
 		}
 		
@@ -7516,8 +7561,6 @@ namespace Model.DataEntity
 		
 		private EntityRef<InvoiceItemExtension> _InvoiceItemExtension;
 		
-		private EntityRef<InvoiceNoSegmentAssignment> _InvoiceNoSegmentAssignment;
-		
 		private EntityRef<CDS_Document> _CDS_Document;
 		
 		private EntityRef<Organization> _Organization;
@@ -8684,41 +8727,6 @@ namespace Model.DataEntity
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="InvoiceItem_InvoiceNoSegmentAssignment", Storage="_InvoiceNoSegmentAssignment", ThisKey="InvoiceID", OtherKey="InvoiceID", IsUnique=true, IsForeignKey=false)]
-		[global::System.Runtime.Serialization.DataMemberAttribute(Order=42, EmitDefaultValue=false)]
-		public InvoiceNoSegmentAssignment InvoiceNoSegmentAssignment
-		{
-			get
-			{
-				if ((this.serializing 
-							&& (this._InvoiceNoSegmentAssignment.HasLoadedOrAssignedValue == false)))
-				{
-					return null;
-				}
-				return this._InvoiceNoSegmentAssignment.Entity;
-			}
-			set
-			{
-				InvoiceNoSegmentAssignment previousValue = this._InvoiceNoSegmentAssignment.Entity;
-				if (((previousValue != value) 
-							|| (this._InvoiceNoSegmentAssignment.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._InvoiceNoSegmentAssignment.Entity = null;
-						previousValue.InvoiceItem = null;
-					}
-					this._InvoiceNoSegmentAssignment.Entity = value;
-					if ((value != null))
-					{
-						value.InvoiceItem = this;
-					}
-					this.SendPropertyChanged("InvoiceNoSegmentAssignment");
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="CDS_Document_InvoiceItem", Storage="_CDS_Document", ThisKey="InvoiceID", OtherKey="DocID", IsForeignKey=true, DeleteOnNull=true, DeleteRule="CASCADE")]
 		public CDS_Document CDS_Document
 		{
@@ -8899,7 +8907,6 @@ namespace Model.DataEntity
 			this._InvoiceBuyer = default(EntityRef<InvoiceBuyer>);
 			this._InvoicePurchaseOrder = default(EntityRef<InvoicePurchaseOrder>);
 			this._InvoiceItemExtension = default(EntityRef<InvoiceItemExtension>);
-			this._InvoiceNoSegmentAssignment = default(EntityRef<InvoiceNoSegmentAssignment>);
 			this._CDS_Document = default(EntityRef<CDS_Document>);
 			this._Organization = default(EntityRef<Organization>);
 			this._Organization1 = default(EntityRef<Organization>);
@@ -11721,7 +11728,7 @@ namespace Model.DataEntity
 		
 		private EntitySet<BlankInvoiceNoSummary> _BlankInvoiceNoSummary;
 		
-		private EntitySet<InvoiceNoSegment> _InvoiceNoSegment;
+		private EntityRef<InvoiceNoSegment> _InvoiceNoSegment;
 		
 		private EntityRef<InvoiceTrackCodeAssignment> _InvoiceTrackCodeAssignment;
 		
@@ -11899,22 +11906,38 @@ namespace Model.DataEntity
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="InvoiceNoInterval_InvoiceNoSegment", Storage="_InvoiceNoSegment", ThisKey="IntervalID", OtherKey="IntervalID")]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="InvoiceNoInterval_InvoiceNoSegment", Storage="_InvoiceNoSegment", ThisKey="IntervalID", OtherKey="SegmentID", IsUnique=true, IsForeignKey=false)]
 		[global::System.Runtime.Serialization.DataMemberAttribute(Order=8, EmitDefaultValue=false)]
-		public EntitySet<InvoiceNoSegment> InvoiceNoSegment
+		public InvoiceNoSegment InvoiceNoSegment
 		{
 			get
 			{
 				if ((this.serializing 
-							&& (this._InvoiceNoSegment.HasLoadedOrAssignedValues == false)))
+							&& (this._InvoiceNoSegment.HasLoadedOrAssignedValue == false)))
 				{
 					return null;
 				}
-				return this._InvoiceNoSegment;
+				return this._InvoiceNoSegment.Entity;
 			}
 			set
 			{
-				this._InvoiceNoSegment.Assign(value);
+				InvoiceNoSegment previousValue = this._InvoiceNoSegment.Entity;
+				if (((previousValue != value) 
+							|| (this._InvoiceNoSegment.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._InvoiceNoSegment.Entity = null;
+						previousValue.InvoiceNoInterval = null;
+					}
+					this._InvoiceNoSegment.Entity = value;
+					if ((value != null))
+					{
+						value.InvoiceNoInterval = this;
+					}
+					this.SendPropertyChanged("InvoiceNoSegment");
+				}
 			}
 		}
 		
@@ -11998,23 +12021,11 @@ namespace Model.DataEntity
 			entity.InvoiceNoInterval = null;
 		}
 		
-		private void attach_InvoiceNoSegment(InvoiceNoSegment entity)
-		{
-			this.SendPropertyChanging();
-			entity.InvoiceNoInterval = this;
-		}
-		
-		private void detach_InvoiceNoSegment(InvoiceNoSegment entity)
-		{
-			this.SendPropertyChanging();
-			entity.InvoiceNoInterval = null;
-		}
-		
 		private void Initialize()
 		{
 			this._InvoiceNoAssignments = new EntitySet<InvoiceNoAssignment>(new Action<InvoiceNoAssignment>(this.attach_InvoiceNoAssignments), new Action<InvoiceNoAssignment>(this.detach_InvoiceNoAssignments));
 			this._BlankInvoiceNoSummary = new EntitySet<BlankInvoiceNoSummary>(new Action<BlankInvoiceNoSummary>(this.attach_BlankInvoiceNoSummary), new Action<BlankInvoiceNoSummary>(this.detach_BlankInvoiceNoSummary));
-			this._InvoiceNoSegment = new EntitySet<InvoiceNoSegment>(new Action<InvoiceNoSegment>(this.attach_InvoiceNoSegment), new Action<InvoiceNoSegment>(this.detach_InvoiceNoSegment));
+			this._InvoiceNoSegment = default(EntityRef<InvoiceNoSegment>);
 			this._InvoiceTrackCodeAssignment = default(EntityRef<InvoiceTrackCodeAssignment>);
 			OnCreated();
 		}
@@ -31845,519 +31856,6 @@ namespace Model.DataEntity
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.InvoiceNoSegment")]
-	[global::System.Runtime.Serialization.DataContractAttribute()]
-	public partial class InvoiceNoSegment : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _SegmentID;
-		
-		private int _IntervalID;
-		
-		private int _StartNo;
-		
-		private int _EndNo;
-		
-		private string _DeviceName;
-		
-		private EntitySet<InvoiceNoSegmentAssignment> _InvoiceNoSegmentAssignment;
-		
-		private EntityRef<InvoiceNoSegmentDisposition> _InvoiceNoSegmentDisposition;
-		
-		private EntityRef<InvoiceNoInterval> _InvoiceNoInterval;
-		
-		private bool serializing;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnSegmentIDChanging(int value);
-    partial void OnSegmentIDChanged();
-    partial void OnIntervalIDChanging(int value);
-    partial void OnIntervalIDChanged();
-    partial void OnStartNoChanging(int value);
-    partial void OnStartNoChanged();
-    partial void OnEndNoChanging(int value);
-    partial void OnEndNoChanged();
-    partial void OnDeviceNameChanging(string value);
-    partial void OnDeviceNameChanged();
-    #endregion
-		
-		public InvoiceNoSegment()
-		{
-			this.Initialize();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SegmentID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		[global::System.Runtime.Serialization.DataMemberAttribute(Order=1)]
-		public int SegmentID
-		{
-			get
-			{
-				return this._SegmentID;
-			}
-			set
-			{
-				if ((this._SegmentID != value))
-				{
-					this.OnSegmentIDChanging(value);
-					this.SendPropertyChanging();
-					this._SegmentID = value;
-					this.SendPropertyChanged("SegmentID");
-					this.OnSegmentIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IntervalID", DbType="Int NOT NULL")]
-		[global::System.Runtime.Serialization.DataMemberAttribute(Order=2)]
-		public int IntervalID
-		{
-			get
-			{
-				return this._IntervalID;
-			}
-			set
-			{
-				if ((this._IntervalID != value))
-				{
-					if (this._InvoiceNoInterval.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnIntervalIDChanging(value);
-					this.SendPropertyChanging();
-					this._IntervalID = value;
-					this.SendPropertyChanged("IntervalID");
-					this.OnIntervalIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StartNo", DbType="Int NOT NULL")]
-		[global::System.Runtime.Serialization.DataMemberAttribute(Order=3)]
-		public int StartNo
-		{
-			get
-			{
-				return this._StartNo;
-			}
-			set
-			{
-				if ((this._StartNo != value))
-				{
-					this.OnStartNoChanging(value);
-					this.SendPropertyChanging();
-					this._StartNo = value;
-					this.SendPropertyChanged("StartNo");
-					this.OnStartNoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EndNo", DbType="Int NOT NULL")]
-		[global::System.Runtime.Serialization.DataMemberAttribute(Order=4)]
-		public int EndNo
-		{
-			get
-			{
-				return this._EndNo;
-			}
-			set
-			{
-				if ((this._EndNo != value))
-				{
-					this.OnEndNoChanging(value);
-					this.SendPropertyChanging();
-					this._EndNo = value;
-					this.SendPropertyChanged("EndNo");
-					this.OnEndNoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DeviceName", DbType="NVarChar(64)")]
-		[global::System.Runtime.Serialization.DataMemberAttribute(Order=5)]
-		public string DeviceName
-		{
-			get
-			{
-				return this._DeviceName;
-			}
-			set
-			{
-				if ((this._DeviceName != value))
-				{
-					this.OnDeviceNameChanging(value);
-					this.SendPropertyChanging();
-					this._DeviceName = value;
-					this.SendPropertyChanged("DeviceName");
-					this.OnDeviceNameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="InvoiceNoSegment_InvoiceNoSegmentAssignment", Storage="_InvoiceNoSegmentAssignment", ThisKey="SegmentID", OtherKey="SegmentID")]
-		[global::System.Runtime.Serialization.DataMemberAttribute(Order=6, EmitDefaultValue=false)]
-		public EntitySet<InvoiceNoSegmentAssignment> InvoiceNoSegmentAssignment
-		{
-			get
-			{
-				if ((this.serializing 
-							&& (this._InvoiceNoSegmentAssignment.HasLoadedOrAssignedValues == false)))
-				{
-					return null;
-				}
-				return this._InvoiceNoSegmentAssignment;
-			}
-			set
-			{
-				this._InvoiceNoSegmentAssignment.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="InvoiceNoSegment_InvoiceNoSegmentDisposition", Storage="_InvoiceNoSegmentDisposition", ThisKey="SegmentID", OtherKey="SegmentID", IsUnique=true, IsForeignKey=false)]
-		[global::System.Runtime.Serialization.DataMemberAttribute(Order=7, EmitDefaultValue=false)]
-		public InvoiceNoSegmentDisposition InvoiceNoSegmentDisposition
-		{
-			get
-			{
-				if ((this.serializing 
-							&& (this._InvoiceNoSegmentDisposition.HasLoadedOrAssignedValue == false)))
-				{
-					return null;
-				}
-				return this._InvoiceNoSegmentDisposition.Entity;
-			}
-			set
-			{
-				InvoiceNoSegmentDisposition previousValue = this._InvoiceNoSegmentDisposition.Entity;
-				if (((previousValue != value) 
-							|| (this._InvoiceNoSegmentDisposition.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._InvoiceNoSegmentDisposition.Entity = null;
-						previousValue.InvoiceNoSegment = null;
-					}
-					this._InvoiceNoSegmentDisposition.Entity = value;
-					if ((value != null))
-					{
-						value.InvoiceNoSegment = this;
-					}
-					this.SendPropertyChanged("InvoiceNoSegmentDisposition");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="InvoiceNoInterval_InvoiceNoSegment", Storage="_InvoiceNoInterval", ThisKey="IntervalID", OtherKey="IntervalID", IsForeignKey=true)]
-		public InvoiceNoInterval InvoiceNoInterval
-		{
-			get
-			{
-				return this._InvoiceNoInterval.Entity;
-			}
-			set
-			{
-				InvoiceNoInterval previousValue = this._InvoiceNoInterval.Entity;
-				if (((previousValue != value) 
-							|| (this._InvoiceNoInterval.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._InvoiceNoInterval.Entity = null;
-						previousValue.InvoiceNoSegment.Remove(this);
-					}
-					this._InvoiceNoInterval.Entity = value;
-					if ((value != null))
-					{
-						value.InvoiceNoSegment.Add(this);
-						this._IntervalID = value.IntervalID;
-					}
-					else
-					{
-						this._IntervalID = default(int);
-					}
-					this.SendPropertyChanged("InvoiceNoInterval");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_InvoiceNoSegmentAssignment(InvoiceNoSegmentAssignment entity)
-		{
-			this.SendPropertyChanging();
-			entity.InvoiceNoSegment = this;
-		}
-		
-		private void detach_InvoiceNoSegmentAssignment(InvoiceNoSegmentAssignment entity)
-		{
-			this.SendPropertyChanging();
-			entity.InvoiceNoSegment = null;
-		}
-		
-		private void Initialize()
-		{
-			this._InvoiceNoSegmentAssignment = new EntitySet<InvoiceNoSegmentAssignment>(new Action<InvoiceNoSegmentAssignment>(this.attach_InvoiceNoSegmentAssignment), new Action<InvoiceNoSegmentAssignment>(this.detach_InvoiceNoSegmentAssignment));
-			this._InvoiceNoSegmentDisposition = default(EntityRef<InvoiceNoSegmentDisposition>);
-			this._InvoiceNoInterval = default(EntityRef<InvoiceNoInterval>);
-			OnCreated();
-		}
-		
-		[global::System.Runtime.Serialization.OnDeserializingAttribute()]
-		[global::System.ComponentModel.EditorBrowsableAttribute(EditorBrowsableState.Never)]
-		public void OnDeserializing(StreamingContext context)
-		{
-			this.Initialize();
-		}
-		
-		[global::System.Runtime.Serialization.OnSerializingAttribute()]
-		[global::System.ComponentModel.EditorBrowsableAttribute(EditorBrowsableState.Never)]
-		public void OnSerializing(StreamingContext context)
-		{
-			this.serializing = true;
-		}
-		
-		[global::System.Runtime.Serialization.OnSerializedAttribute()]
-		[global::System.ComponentModel.EditorBrowsableAttribute(EditorBrowsableState.Never)]
-		public void OnSerialized(StreamingContext context)
-		{
-			this.serializing = false;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.InvoiceNoSegmentAssignment")]
-	[global::System.Runtime.Serialization.DataContractAttribute()]
-	public partial class InvoiceNoSegmentAssignment : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _InvoiceID;
-		
-		private int _SegmentID;
-		
-		private System.Nullable<int> _InvoiceNo;
-		
-		private EntityRef<InvoiceItem> _InvoiceItem;
-		
-		private EntityRef<InvoiceNoSegment> _InvoiceNoSegment;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnInvoiceIDChanging(int value);
-    partial void OnInvoiceIDChanged();
-    partial void OnSegmentIDChanging(int value);
-    partial void OnSegmentIDChanged();
-    partial void OnInvoiceNoChanging(System.Nullable<int> value);
-    partial void OnInvoiceNoChanged();
-    #endregion
-		
-		public InvoiceNoSegmentAssignment()
-		{
-			this.Initialize();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_InvoiceID", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		[global::System.Runtime.Serialization.DataMemberAttribute(Order=1)]
-		public int InvoiceID
-		{
-			get
-			{
-				return this._InvoiceID;
-			}
-			set
-			{
-				if ((this._InvoiceID != value))
-				{
-					if (this._InvoiceItem.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnInvoiceIDChanging(value);
-					this.SendPropertyChanging();
-					this._InvoiceID = value;
-					this.SendPropertyChanged("InvoiceID");
-					this.OnInvoiceIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SegmentID", DbType="Int NOT NULL")]
-		[global::System.Runtime.Serialization.DataMemberAttribute(Order=2)]
-		public int SegmentID
-		{
-			get
-			{
-				return this._SegmentID;
-			}
-			set
-			{
-				if ((this._SegmentID != value))
-				{
-					if (this._InvoiceNoSegment.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnSegmentIDChanging(value);
-					this.SendPropertyChanging();
-					this._SegmentID = value;
-					this.SendPropertyChanged("SegmentID");
-					this.OnSegmentIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_InvoiceNo", DbType="Int")]
-		[global::System.Runtime.Serialization.DataMemberAttribute(Order=3)]
-		public System.Nullable<int> InvoiceNo
-		{
-			get
-			{
-				return this._InvoiceNo;
-			}
-			set
-			{
-				if ((this._InvoiceNo != value))
-				{
-					this.OnInvoiceNoChanging(value);
-					this.SendPropertyChanging();
-					this._InvoiceNo = value;
-					this.SendPropertyChanged("InvoiceNo");
-					this.OnInvoiceNoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="InvoiceItem_InvoiceNoSegmentAssignment", Storage="_InvoiceItem", ThisKey="InvoiceID", OtherKey="InvoiceID", IsForeignKey=true)]
-		public InvoiceItem InvoiceItem
-		{
-			get
-			{
-				return this._InvoiceItem.Entity;
-			}
-			set
-			{
-				InvoiceItem previousValue = this._InvoiceItem.Entity;
-				if (((previousValue != value) 
-							|| (this._InvoiceItem.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._InvoiceItem.Entity = null;
-						previousValue.InvoiceNoSegmentAssignment = null;
-					}
-					this._InvoiceItem.Entity = value;
-					if ((value != null))
-					{
-						value.InvoiceNoSegmentAssignment = this;
-						this._InvoiceID = value.InvoiceID;
-					}
-					else
-					{
-						this._InvoiceID = default(int);
-					}
-					this.SendPropertyChanged("InvoiceItem");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="InvoiceNoSegment_InvoiceNoSegmentAssignment", Storage="_InvoiceNoSegment", ThisKey="SegmentID", OtherKey="SegmentID", IsForeignKey=true)]
-		public InvoiceNoSegment InvoiceNoSegment
-		{
-			get
-			{
-				return this._InvoiceNoSegment.Entity;
-			}
-			set
-			{
-				InvoiceNoSegment previousValue = this._InvoiceNoSegment.Entity;
-				if (((previousValue != value) 
-							|| (this._InvoiceNoSegment.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._InvoiceNoSegment.Entity = null;
-						previousValue.InvoiceNoSegmentAssignment.Remove(this);
-					}
-					this._InvoiceNoSegment.Entity = value;
-					if ((value != null))
-					{
-						value.InvoiceNoSegmentAssignment.Add(this);
-						this._SegmentID = value.SegmentID;
-					}
-					else
-					{
-						this._SegmentID = default(int);
-					}
-					this.SendPropertyChanged("InvoiceNoSegment");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void Initialize()
-		{
-			this._InvoiceItem = default(EntityRef<InvoiceItem>);
-			this._InvoiceNoSegment = default(EntityRef<InvoiceNoSegment>);
-			OnCreated();
-		}
-		
-		[global::System.Runtime.Serialization.OnDeserializingAttribute()]
-		[global::System.ComponentModel.EditorBrowsableAttribute(EditorBrowsableState.Never)]
-		public void OnDeserializing(StreamingContext context)
-		{
-			this.Initialize();
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.InvoiceNoSegmentDisposition")]
 	[global::System.Runtime.Serialization.DataContractAttribute()]
 	public partial class InvoiceNoSegmentDisposition : INotifyPropertyChanging, INotifyPropertyChanged
@@ -32371,9 +31869,9 @@ namespace Model.DataEntity
 		
 		private int _DepartmentID;
 		
-		private EntityRef<InvoiceNoSegment> _InvoiceNoSegment;
-		
 		private EntityRef<UserProfile> _UserProfile;
+		
+		private EntityRef<InvoiceNoSegment> _InvoiceNoSegment;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -32463,40 +31961,6 @@ namespace Model.DataEntity
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="InvoiceNoSegment_InvoiceNoSegmentDisposition", Storage="_InvoiceNoSegment", ThisKey="SegmentID", OtherKey="SegmentID", IsForeignKey=true)]
-		public InvoiceNoSegment InvoiceNoSegment
-		{
-			get
-			{
-				return this._InvoiceNoSegment.Entity;
-			}
-			set
-			{
-				InvoiceNoSegment previousValue = this._InvoiceNoSegment.Entity;
-				if (((previousValue != value) 
-							|| (this._InvoiceNoSegment.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._InvoiceNoSegment.Entity = null;
-						previousValue.InvoiceNoSegmentDisposition = null;
-					}
-					this._InvoiceNoSegment.Entity = value;
-					if ((value != null))
-					{
-						value.InvoiceNoSegmentDisposition = this;
-						this._SegmentID = value.SegmentID;
-					}
-					else
-					{
-						this._SegmentID = default(int);
-					}
-					this.SendPropertyChanged("InvoiceNoSegment");
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="UserProfile_InvoiceNoSegmentDisposition", Storage="_UserProfile", ThisKey="UID", OtherKey="UID", IsForeignKey=true)]
 		public UserProfile UserProfile
 		{
@@ -32531,6 +31995,699 @@ namespace Model.DataEntity
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="InvoiceNoSegment_InvoiceNoSegmentDisposition", Storage="_InvoiceNoSegment", ThisKey="SegmentID", OtherKey="SegmentID", IsForeignKey=true)]
+		public InvoiceNoSegment InvoiceNoSegment
+		{
+			get
+			{
+				return this._InvoiceNoSegment.Entity;
+			}
+			set
+			{
+				InvoiceNoSegment previousValue = this._InvoiceNoSegment.Entity;
+				if (((previousValue != value) 
+							|| (this._InvoiceNoSegment.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._InvoiceNoSegment.Entity = null;
+						previousValue.InvoiceNoSegmentDisposition = null;
+					}
+					this._InvoiceNoSegment.Entity = value;
+					if ((value != null))
+					{
+						value.InvoiceNoSegmentDisposition = this;
+						this._SegmentID = value.SegmentID;
+					}
+					else
+					{
+						this._SegmentID = default(int);
+					}
+					this.SendPropertyChanged("InvoiceNoSegment");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void Initialize()
+		{
+			this._UserProfile = default(EntityRef<UserProfile>);
+			this._InvoiceNoSegment = default(EntityRef<InvoiceNoSegment>);
+			OnCreated();
+		}
+		
+		[global::System.Runtime.Serialization.OnDeserializingAttribute()]
+		[global::System.ComponentModel.EditorBrowsableAttribute(EditorBrowsableState.Never)]
+		public void OnDeserializing(StreamingContext context)
+		{
+			this.Initialize();
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.InvoiceNoSegment")]
+	[global::System.Runtime.Serialization.DataContractAttribute()]
+	public partial class InvoiceNoSegment : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _SegmentID;
+		
+		private string _DeviceName;
+		
+		private EntityRef<InvoiceNoSegmentDisposition> _InvoiceNoSegmentDisposition;
+		
+		private EntityRef<POSInvoiceNoSegment> _POSInvoiceNoSegment;
+		
+		private EntityRef<InvoiceNoInterval> _InvoiceNoInterval;
+		
+		private bool serializing;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnSegmentIDChanging(int value);
+    partial void OnSegmentIDChanged();
+    partial void OnDeviceNameChanging(string value);
+    partial void OnDeviceNameChanged();
+    #endregion
+		
+		public InvoiceNoSegment()
+		{
+			this.Initialize();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SegmentID", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Runtime.Serialization.DataMemberAttribute(Order=1)]
+		public int SegmentID
+		{
+			get
+			{
+				return this._SegmentID;
+			}
+			set
+			{
+				if ((this._SegmentID != value))
+				{
+					if (this._InvoiceNoInterval.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnSegmentIDChanging(value);
+					this.SendPropertyChanging();
+					this._SegmentID = value;
+					this.SendPropertyChanged("SegmentID");
+					this.OnSegmentIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DeviceName", DbType="NVarChar(64)")]
+		[global::System.Runtime.Serialization.DataMemberAttribute(Order=2)]
+		public string DeviceName
+		{
+			get
+			{
+				return this._DeviceName;
+			}
+			set
+			{
+				if ((this._DeviceName != value))
+				{
+					this.OnDeviceNameChanging(value);
+					this.SendPropertyChanging();
+					this._DeviceName = value;
+					this.SendPropertyChanged("DeviceName");
+					this.OnDeviceNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="InvoiceNoSegment_InvoiceNoSegmentDisposition", Storage="_InvoiceNoSegmentDisposition", ThisKey="SegmentID", OtherKey="SegmentID", IsUnique=true, IsForeignKey=false)]
+		[global::System.Runtime.Serialization.DataMemberAttribute(Order=3, EmitDefaultValue=false)]
+		public InvoiceNoSegmentDisposition InvoiceNoSegmentDisposition
+		{
+			get
+			{
+				if ((this.serializing 
+							&& (this._InvoiceNoSegmentDisposition.HasLoadedOrAssignedValue == false)))
+				{
+					return null;
+				}
+				return this._InvoiceNoSegmentDisposition.Entity;
+			}
+			set
+			{
+				InvoiceNoSegmentDisposition previousValue = this._InvoiceNoSegmentDisposition.Entity;
+				if (((previousValue != value) 
+							|| (this._InvoiceNoSegmentDisposition.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._InvoiceNoSegmentDisposition.Entity = null;
+						previousValue.InvoiceNoSegment = null;
+					}
+					this._InvoiceNoSegmentDisposition.Entity = value;
+					if ((value != null))
+					{
+						value.InvoiceNoSegment = this;
+					}
+					this.SendPropertyChanged("InvoiceNoSegmentDisposition");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="InvoiceNoSegment_POSInvoiceNoSegment", Storage="_POSInvoiceNoSegment", ThisKey="SegmentID", OtherKey="SegmentID", IsUnique=true, IsForeignKey=false)]
+		[global::System.Runtime.Serialization.DataMemberAttribute(Order=4, EmitDefaultValue=false)]
+		public POSInvoiceNoSegment POSInvoiceNoSegment
+		{
+			get
+			{
+				if ((this.serializing 
+							&& (this._POSInvoiceNoSegment.HasLoadedOrAssignedValue == false)))
+				{
+					return null;
+				}
+				return this._POSInvoiceNoSegment.Entity;
+			}
+			set
+			{
+				POSInvoiceNoSegment previousValue = this._POSInvoiceNoSegment.Entity;
+				if (((previousValue != value) 
+							|| (this._POSInvoiceNoSegment.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._POSInvoiceNoSegment.Entity = null;
+						previousValue.InvoiceNoSegment = null;
+					}
+					this._POSInvoiceNoSegment.Entity = value;
+					if ((value != null))
+					{
+						value.InvoiceNoSegment = this;
+					}
+					this.SendPropertyChanged("POSInvoiceNoSegment");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="InvoiceNoInterval_InvoiceNoSegment", Storage="_InvoiceNoInterval", ThisKey="SegmentID", OtherKey="IntervalID", IsForeignKey=true)]
+		public InvoiceNoInterval InvoiceNoInterval
+		{
+			get
+			{
+				return this._InvoiceNoInterval.Entity;
+			}
+			set
+			{
+				InvoiceNoInterval previousValue = this._InvoiceNoInterval.Entity;
+				if (((previousValue != value) 
+							|| (this._InvoiceNoInterval.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._InvoiceNoInterval.Entity = null;
+						previousValue.InvoiceNoSegment = null;
+					}
+					this._InvoiceNoInterval.Entity = value;
+					if ((value != null))
+					{
+						value.InvoiceNoSegment = this;
+						this._SegmentID = value.IntervalID;
+					}
+					else
+					{
+						this._SegmentID = default(int);
+					}
+					this.SendPropertyChanged("InvoiceNoInterval");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void Initialize()
+		{
+			this._InvoiceNoSegmentDisposition = default(EntityRef<InvoiceNoSegmentDisposition>);
+			this._POSInvoiceNoSegment = default(EntityRef<POSInvoiceNoSegment>);
+			this._InvoiceNoInterval = default(EntityRef<InvoiceNoInterval>);
+			OnCreated();
+		}
+		
+		[global::System.Runtime.Serialization.OnDeserializingAttribute()]
+		[global::System.ComponentModel.EditorBrowsableAttribute(EditorBrowsableState.Never)]
+		public void OnDeserializing(StreamingContext context)
+		{
+			this.Initialize();
+		}
+		
+		[global::System.Runtime.Serialization.OnSerializingAttribute()]
+		[global::System.ComponentModel.EditorBrowsableAttribute(EditorBrowsableState.Never)]
+		public void OnSerializing(StreamingContext context)
+		{
+			this.serializing = true;
+		}
+		
+		[global::System.Runtime.Serialization.OnSerializedAttribute()]
+		[global::System.ComponentModel.EditorBrowsableAttribute(EditorBrowsableState.Never)]
+		public void OnSerialized(StreamingContext context)
+		{
+			this.serializing = false;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.POSDevice")]
+	[global::System.Runtime.Serialization.DataContractAttribute()]
+	public partial class POSDevice : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _DeviceID;
+		
+		private string _POSNo;
+		
+		private int _CompanyID;
+		
+		private EntitySet<POSInvoiceNoSegment> _POSInvoiceNoSegment;
+		
+		private EntityRef<Organization> _Organization;
+		
+		private bool serializing;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnDeviceIDChanging(int value);
+    partial void OnDeviceIDChanged();
+    partial void OnPOSNoChanging(string value);
+    partial void OnPOSNoChanged();
+    partial void OnCompanyIDChanging(int value);
+    partial void OnCompanyIDChanged();
+    #endregion
+		
+		public POSDevice()
+		{
+			this.Initialize();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DeviceID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		[global::System.Runtime.Serialization.DataMemberAttribute(Order=1)]
+		public int DeviceID
+		{
+			get
+			{
+				return this._DeviceID;
+			}
+			set
+			{
+				if ((this._DeviceID != value))
+				{
+					this.OnDeviceIDChanging(value);
+					this.SendPropertyChanging();
+					this._DeviceID = value;
+					this.SendPropertyChanged("DeviceID");
+					this.OnDeviceIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_POSNo", DbType="NVarChar(64) NOT NULL", CanBeNull=false)]
+		[global::System.Runtime.Serialization.DataMemberAttribute(Order=2)]
+		public string POSNo
+		{
+			get
+			{
+				return this._POSNo;
+			}
+			set
+			{
+				if ((this._POSNo != value))
+				{
+					this.OnPOSNoChanging(value);
+					this.SendPropertyChanging();
+					this._POSNo = value;
+					this.SendPropertyChanged("POSNo");
+					this.OnPOSNoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CompanyID", DbType="Int NOT NULL")]
+		[global::System.Runtime.Serialization.DataMemberAttribute(Order=3)]
+		public int CompanyID
+		{
+			get
+			{
+				return this._CompanyID;
+			}
+			set
+			{
+				if ((this._CompanyID != value))
+				{
+					if (this._Organization.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnCompanyIDChanging(value);
+					this.SendPropertyChanging();
+					this._CompanyID = value;
+					this.SendPropertyChanged("CompanyID");
+					this.OnCompanyIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="POSDevice_POSInvoiceNoSegment", Storage="_POSInvoiceNoSegment", ThisKey="DeviceID", OtherKey="DeviceID")]
+		[global::System.Runtime.Serialization.DataMemberAttribute(Order=4, EmitDefaultValue=false)]
+		public EntitySet<POSInvoiceNoSegment> POSInvoiceNoSegment
+		{
+			get
+			{
+				if ((this.serializing 
+							&& (this._POSInvoiceNoSegment.HasLoadedOrAssignedValues == false)))
+				{
+					return null;
+				}
+				return this._POSInvoiceNoSegment;
+			}
+			set
+			{
+				this._POSInvoiceNoSegment.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Organization_POSDevice", Storage="_Organization", ThisKey="CompanyID", OtherKey="CompanyID", IsForeignKey=true)]
+		public Organization Organization
+		{
+			get
+			{
+				return this._Organization.Entity;
+			}
+			set
+			{
+				Organization previousValue = this._Organization.Entity;
+				if (((previousValue != value) 
+							|| (this._Organization.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Organization.Entity = null;
+						previousValue.POSDevice.Remove(this);
+					}
+					this._Organization.Entity = value;
+					if ((value != null))
+					{
+						value.POSDevice.Add(this);
+						this._CompanyID = value.CompanyID;
+					}
+					else
+					{
+						this._CompanyID = default(int);
+					}
+					this.SendPropertyChanged("Organization");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_POSInvoiceNoSegment(POSInvoiceNoSegment entity)
+		{
+			this.SendPropertyChanging();
+			entity.POSDevice = this;
+		}
+		
+		private void detach_POSInvoiceNoSegment(POSInvoiceNoSegment entity)
+		{
+			this.SendPropertyChanging();
+			entity.POSDevice = null;
+		}
+		
+		private void Initialize()
+		{
+			this._POSInvoiceNoSegment = new EntitySet<POSInvoiceNoSegment>(new Action<POSInvoiceNoSegment>(this.attach_POSInvoiceNoSegment), new Action<POSInvoiceNoSegment>(this.detach_POSInvoiceNoSegment));
+			this._Organization = default(EntityRef<Organization>);
+			OnCreated();
+		}
+		
+		[global::System.Runtime.Serialization.OnDeserializingAttribute()]
+		[global::System.ComponentModel.EditorBrowsableAttribute(EditorBrowsableState.Never)]
+		public void OnDeserializing(StreamingContext context)
+		{
+			this.Initialize();
+		}
+		
+		[global::System.Runtime.Serialization.OnSerializingAttribute()]
+		[global::System.ComponentModel.EditorBrowsableAttribute(EditorBrowsableState.Never)]
+		public void OnSerializing(StreamingContext context)
+		{
+			this.serializing = true;
+		}
+		
+		[global::System.Runtime.Serialization.OnSerializedAttribute()]
+		[global::System.ComponentModel.EditorBrowsableAttribute(EditorBrowsableState.Never)]
+		public void OnSerialized(StreamingContext context)
+		{
+			this.serializing = false;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.POSInvoiceNoSegment")]
+	[global::System.Runtime.Serialization.DataContractAttribute()]
+	public partial class POSInvoiceNoSegment : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _SegmentID;
+		
+		private int _DeviceID;
+		
+		private System.Nullable<System.DateTime> _RequestDate;
+		
+		private EntityRef<InvoiceNoSegment> _InvoiceNoSegment;
+		
+		private EntityRef<POSDevice> _POSDevice;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnSegmentIDChanging(int value);
+    partial void OnSegmentIDChanged();
+    partial void OnDeviceIDChanging(int value);
+    partial void OnDeviceIDChanged();
+    partial void OnRequestDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnRequestDateChanged();
+    #endregion
+		
+		public POSInvoiceNoSegment()
+		{
+			this.Initialize();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SegmentID", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Runtime.Serialization.DataMemberAttribute(Order=1)]
+		public int SegmentID
+		{
+			get
+			{
+				return this._SegmentID;
+			}
+			set
+			{
+				if ((this._SegmentID != value))
+				{
+					if (this._InvoiceNoSegment.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnSegmentIDChanging(value);
+					this.SendPropertyChanging();
+					this._SegmentID = value;
+					this.SendPropertyChanged("SegmentID");
+					this.OnSegmentIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DeviceID", DbType="Int NOT NULL")]
+		[global::System.Runtime.Serialization.DataMemberAttribute(Order=2)]
+		public int DeviceID
+		{
+			get
+			{
+				return this._DeviceID;
+			}
+			set
+			{
+				if ((this._DeviceID != value))
+				{
+					if (this._POSDevice.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnDeviceIDChanging(value);
+					this.SendPropertyChanging();
+					this._DeviceID = value;
+					this.SendPropertyChanged("DeviceID");
+					this.OnDeviceIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RequestDate", DbType="DateTime")]
+		[global::System.Runtime.Serialization.DataMemberAttribute(Order=3)]
+		public System.Nullable<System.DateTime> RequestDate
+		{
+			get
+			{
+				return this._RequestDate;
+			}
+			set
+			{
+				if ((this._RequestDate != value))
+				{
+					this.OnRequestDateChanging(value);
+					this.SendPropertyChanging();
+					this._RequestDate = value;
+					this.SendPropertyChanged("RequestDate");
+					this.OnRequestDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="InvoiceNoSegment_POSInvoiceNoSegment", Storage="_InvoiceNoSegment", ThisKey="SegmentID", OtherKey="SegmentID", IsForeignKey=true)]
+		public InvoiceNoSegment InvoiceNoSegment
+		{
+			get
+			{
+				return this._InvoiceNoSegment.Entity;
+			}
+			set
+			{
+				InvoiceNoSegment previousValue = this._InvoiceNoSegment.Entity;
+				if (((previousValue != value) 
+							|| (this._InvoiceNoSegment.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._InvoiceNoSegment.Entity = null;
+						previousValue.POSInvoiceNoSegment = null;
+					}
+					this._InvoiceNoSegment.Entity = value;
+					if ((value != null))
+					{
+						value.POSInvoiceNoSegment = this;
+						this._SegmentID = value.SegmentID;
+					}
+					else
+					{
+						this._SegmentID = default(int);
+					}
+					this.SendPropertyChanged("InvoiceNoSegment");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="POSDevice_POSInvoiceNoSegment", Storage="_POSDevice", ThisKey="DeviceID", OtherKey="DeviceID", IsForeignKey=true)]
+		public POSDevice POSDevice
+		{
+			get
+			{
+				return this._POSDevice.Entity;
+			}
+			set
+			{
+				POSDevice previousValue = this._POSDevice.Entity;
+				if (((previousValue != value) 
+							|| (this._POSDevice.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._POSDevice.Entity = null;
+						previousValue.POSInvoiceNoSegment.Remove(this);
+					}
+					this._POSDevice.Entity = value;
+					if ((value != null))
+					{
+						value.POSInvoiceNoSegment.Add(this);
+						this._DeviceID = value.DeviceID;
+					}
+					else
+					{
+						this._DeviceID = default(int);
+					}
+					this.SendPropertyChanged("POSDevice");
+				}
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -32554,7 +32711,7 @@ namespace Model.DataEntity
 		private void Initialize()
 		{
 			this._InvoiceNoSegment = default(EntityRef<InvoiceNoSegment>);
-			this._UserProfile = default(EntityRef<UserProfile>);
+			this._POSDevice = default(EntityRef<POSDevice>);
 			OnCreated();
 		}
 		

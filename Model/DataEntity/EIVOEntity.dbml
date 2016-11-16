@@ -50,6 +50,7 @@
       <Association Name="Organization_InvoiceBuyer" Member="InvoiceBuyer" ThisKey="CompanyID" OtherKey="BuyerID" Type="InvoiceBuyer" />
       <Association Name="Organization_InvoiceIssuerAgent" Member="InvoiceInsurerAgent" ThisKey="CompanyID" OtherKey="AgentID" Type="InvoiceIssuerAgent" />
       <Association Name="Organization_InvoiceIssuerAgent1" Member="AsInvoiceInsurer" ThisKey="CompanyID" OtherKey="IssuerID" Type="InvoiceIssuerAgent" />
+      <Association Name="Organization_POSDevice" Member="POSDevice" ThisKey="CompanyID" OtherKey="CompanyID" Type="POSDevice" />
     </Type>
   </Table>
   <Table Name="dbo.UserRole" Member="UserRole">
@@ -285,7 +286,6 @@
       <Association Name="InvoiceItem_InvoiceBuyer" Member="InvoiceBuyer" ThisKey="InvoiceID" OtherKey="InvoiceID" Type="InvoiceBuyer" Cardinality="One" />
       <Association Name="InvoiceItem_InvoicePurchaseOrder" Member="InvoicePurchaseOrder" ThisKey="InvoiceID" OtherKey="InvoiceID" Type="InvoicePurchaseOrder" Cardinality="One" />
       <Association Name="InvoiceItem_InvoiceItemExtension" Member="InvoiceItemExtension" ThisKey="InvoiceID" OtherKey="InvoiceID" Type="InvoiceItemExtension" Cardinality="One" />
-      <Association Name="InvoiceItem_InvoiceNoSegmentAssignment" Member="InvoiceNoSegmentAssignment" ThisKey="InvoiceID" OtherKey="InvoiceID" Type="InvoiceNoSegmentAssignment" Cardinality="One" />
       <Association Name="CDS_Document_InvoiceItem" Member="CDS_Document" ThisKey="InvoiceID" OtherKey="DocID" Type="CDS_Document" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
       <Association Name="Organization_InvoiceItem" Member="Organization" ThisKey="SellerID" OtherKey="CompanyID" Type="Organization" IsForeignKey="true" />
       <Association Name="Organization_InvoiceItem1" Member="Donatory" Storage="_Organization1" ThisKey="DonationID" OtherKey="CompanyID" Type="Organization" IsForeignKey="true" />
@@ -416,7 +416,7 @@
       <Column Name="EndNo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="InvoiceNoInterval_InvoiceNoAssignment" Member="InvoiceNoAssignments" ThisKey="IntervalID" OtherKey="IntervalID" Type="InvoiceNoAssignment" />
       <Association Name="InvoiceNoInterval_BlankInvoiceNoSummary" Member="BlankInvoiceNoSummary" ThisKey="IntervalID" OtherKey="IntervalID" Type="BlankInvoiceNoSummary" />
-      <Association Name="InvoiceNoInterval_InvoiceNoSegment" Member="InvoiceNoSegment" ThisKey="IntervalID" OtherKey="IntervalID" Type="InvoiceNoSegment" />
+      <Association Name="InvoiceNoInterval_InvoiceNoSegment" Member="InvoiceNoSegment" ThisKey="IntervalID" OtherKey="SegmentID" Type="InvoiceNoSegment" Cardinality="One" />
       <Association Name="InvoiceTrackCodeAssignment_InvoiceNoInterval" Member="InvoiceTrackCodeAssignment" ThisKey="TrackID,SellerID" OtherKey="TrackID,SellerID" Type="InvoiceTrackCodeAssignment" IsForeignKey="true" />
     </Type>
   </Table>
@@ -1244,34 +1244,40 @@
       <Column Name="UnitePrice" Type="System.Decimal" DbType="Decimal(18,5) NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
-  <Table Name="dbo.InvoiceNoSegment" Member="InvoiceNoSegment">
-    <Type Name="InvoiceNoSegment">
-      <Column Name="SegmentID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="IntervalID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="StartNo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="EndNo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="DeviceName" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
-      <Association Name="InvoiceNoSegment_InvoiceNoSegmentAssignment" Member="InvoiceNoSegmentAssignment" ThisKey="SegmentID" OtherKey="SegmentID" Type="InvoiceNoSegmentAssignment" />
-      <Association Name="InvoiceNoSegment_InvoiceNoSegmentDisposition" Member="InvoiceNoSegmentDisposition" ThisKey="SegmentID" OtherKey="SegmentID" Type="InvoiceNoSegmentDisposition" Cardinality="One" />
-      <Association Name="InvoiceNoInterval_InvoiceNoSegment" Member="InvoiceNoInterval" ThisKey="IntervalID" OtherKey="IntervalID" Type="InvoiceNoInterval" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.InvoiceNoSegmentAssignment" Member="InvoiceNoSegmentAssignment">
-    <Type Name="InvoiceNoSegmentAssignment">
-      <Column Name="InvoiceID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="SegmentID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="InvoiceNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="InvoiceItem_InvoiceNoSegmentAssignment" Member="InvoiceItem" ThisKey="InvoiceID" OtherKey="InvoiceID" Type="InvoiceItem" IsForeignKey="true" />
-      <Association Name="InvoiceNoSegment_InvoiceNoSegmentAssignment" Member="InvoiceNoSegment" ThisKey="SegmentID" OtherKey="SegmentID" Type="InvoiceNoSegment" IsForeignKey="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.InvoiceNoSegmentDisposition" Member="InvoiceNoSegmentDisposition">
     <Type Name="InvoiceNoSegmentDisposition">
       <Column Name="SegmentID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="UID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="DepartmentID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="InvoiceNoSegment_InvoiceNoSegmentDisposition" Member="InvoiceNoSegment" ThisKey="SegmentID" OtherKey="SegmentID" Type="InvoiceNoSegment" IsForeignKey="true" />
       <Association Name="UserProfile_InvoiceNoSegmentDisposition" Member="UserProfile" ThisKey="UID" OtherKey="UID" Type="UserProfile" IsForeignKey="true" />
+      <Association Name="InvoiceNoSegment_InvoiceNoSegmentDisposition" Member="InvoiceNoSegment" ThisKey="SegmentID" OtherKey="SegmentID" Type="InvoiceNoSegment" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.InvoiceNoSegment" Member="InvoiceNoSegments">
+    <Type Name="InvoiceNoSegment">
+      <Column Name="SegmentID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DeviceName" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Association Name="InvoiceNoSegment_InvoiceNoSegmentDisposition" Member="InvoiceNoSegmentDisposition" ThisKey="SegmentID" OtherKey="SegmentID" Type="InvoiceNoSegmentDisposition" Cardinality="One" />
+      <Association Name="InvoiceNoSegment_POSInvoiceNoSegment" Member="POSInvoiceNoSegment" ThisKey="SegmentID" OtherKey="SegmentID" Type="POSInvoiceNoSegment" Cardinality="One" />
+      <Association Name="InvoiceNoInterval_InvoiceNoSegment" Member="InvoiceNoInterval" ThisKey="SegmentID" OtherKey="IntervalID" Type="InvoiceNoInterval" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.POSDevice" Member="POSDevice">
+    <Type Name="POSDevice">
+      <Column Name="DeviceID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="POSNo" Type="System.String" DbType="NVarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="CompanyID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="POSDevice_POSInvoiceNoSegment" Member="POSInvoiceNoSegment" ThisKey="DeviceID" OtherKey="DeviceID" Type="POSInvoiceNoSegment" />
+      <Association Name="Organization_POSDevice" Member="Organization" ThisKey="CompanyID" OtherKey="CompanyID" Type="Organization" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.POSInvoiceNoSegment" Member="POSInvoiceNoSegment">
+    <Type Name="POSInvoiceNoSegment">
+      <Column Name="SegmentID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DeviceID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RequestDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="InvoiceNoSegment_POSInvoiceNoSegment" Member="InvoiceNoSegment" ThisKey="SegmentID" OtherKey="SegmentID" Type="InvoiceNoSegment" IsForeignKey="true" />
+      <Association Name="POSDevice_POSInvoiceNoSegment" Member="POSDevice" ThisKey="DeviceID" OtherKey="DeviceID" Type="POSDevice" IsForeignKey="true" />
     </Type>
   </Table>
   <Function Name="dbo.MatchDocumentAttachment" Method="MatchDocumentAttachment">

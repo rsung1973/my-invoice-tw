@@ -27,6 +27,7 @@
       <workItem value="" url="~/Handling/Index" />
       <workItem value="" url="~/Published/view_data.aspx" />
       <workItem value="" url="~/InvoiceQuery/InvoiceMediaReport" />
+      <workItem value="" url="~/MainPage.aspx" />
     </menuItem>
     <menuItem value="禦戈蝴臔" url="~/SAM/BuyerManager.aspx">
       <workItem value="" url="~/SAM/EditCompany.aspx" />
@@ -104,6 +105,10 @@
       <menuItem value="爹綪穨" url="~/Inquiry/VoidInvoices.aspx" />
     </menuItem>
   </menuItem>
+  <menuItem value="祇布穨" url="">
+    <menuItem value="絬秨ミ祇布" url="~/InvoiceBusiness/CreateInvoice">
+    </menuItem>
+  </menuItem>
   <menuItem value="参璸厨" url="">
     <menuItem value="祇布灿琩高" url="~/InvoiceQuery/InvoiceReport">
       <workItem value="" url="~/InvoiceQuery/Inquire" />
@@ -157,4 +162,5 @@
   <workItem value="" url="~/DataExchange/UpdateBuyer" />
   <workItem value="" url="~/Published/view_data.aspx" />
   <workItem value="" url="~/InvoiceQuery/InvoiceMediaReport" />
+  <workItem value="" url="~/TestAll/Index" />
 </menuItem>

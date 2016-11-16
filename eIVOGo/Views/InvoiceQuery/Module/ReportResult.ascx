@@ -19,7 +19,7 @@
 
 <% Html.RenderPartial("Module/InvoiceReport", Model); %>
 <% if(!models.InquiryHasError) {  %>
-<uc6:functiontitlebar id="resultTitle" runat="server" itemname="查詢結果" />
+<%  Html.RenderPartial("~/Views/SiteAction/FunctionTitleBar.ascx", "查詢結果"); %>
 <div class="border_gray">
     <uc4:QueryPrintableInfo runat="server" ID="queryInfo" />
     <% 

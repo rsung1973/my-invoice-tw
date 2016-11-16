@@ -19,9 +19,8 @@
 <%@ Import Namespace="Model.Locale" %>
 <%@ Import Namespace="Utility" %>
 <%@ Import Namespace="Uxnet.Web.WebUI" %>
-<uc5:PageAction ID="actionItem" runat="server" ItemName="首頁 > 資料管理" />
 <!--交易畫面標題-->
-<uc6:FunctionTitleBar ID="functionTitle" runat="server" ItemName="發票報表匯出" />
+<%  Html.RenderPartial("~/Views/SiteAction/FunctionTitleBar.ascx", "發票報表匯出"); %>
 <div class="border_gray">
     <!--表格 開始-->
     <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left_title">

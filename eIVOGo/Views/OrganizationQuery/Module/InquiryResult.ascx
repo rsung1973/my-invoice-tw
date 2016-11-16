@@ -15,7 +15,7 @@
 
 <% Html.RenderPartial("Module/InquireOrganization", Model); %>
 <% if(!models.InquiryHasError) {  %>
-<uc6:functiontitlebar id="resultTitle" runat="server" itemname="查詢結果" />
+<%  Html.RenderPartial("~/Views/SiteAction/FunctionTitleBar.ascx", "查詢結果"); %>
 <div class="border_gray">
     <% 
        Html.RenderPartial("~/Views/Module/OrganizationList.ascx", models); 

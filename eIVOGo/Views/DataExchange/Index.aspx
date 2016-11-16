@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/template/main_page.Master" AutoEventWireup="true" CodeBehind="base_page.aspx.cs" Inherits="eIVOGo.template.base_page" StylesheetTheme="Visitor" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/template/MvcMainPage.Master" AutoEventWireup="true" Inherits="System.Web.Mvc.ViewPage" %>
 
 <%@ Import Namespace="eIVOGo.Helper" %>
 <%@ Register Src="~/Views/DataExchange/Module/DataIndex.ascx" TagPrefix="uc1" TagName="DataIndex" %>

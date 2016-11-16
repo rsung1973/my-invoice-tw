@@ -12,13 +12,13 @@
 <script runat="server">
 
     ModelStateDictionary _modelState;
-    ModelSource<UserProfile> models;
+    ModelSource<InvoiceItem> models;
 
     protected override void OnInit(EventArgs e)
     {
         base.OnInit(e);
         _modelState = (ModelStateDictionary)ViewBag.ModelState;
-        models = ((SampleController<UserProfile>)ViewContext.Controller).DataSource;
+        models = ((SampleController<InvoiceItem>)ViewContext.Controller).DataSource;
     }
 
 </script>

@@ -259,7 +259,15 @@
                                 </tr>
                                 <tr>
                                     <td height="105" align="center" style="border-bottom-width: 0px; border-right-width: 0px;">
-                                        <img id="sealImg" runat="server" enableviewstate="false" src="~/Seal/chs_invoice.gif" width="115" height="100" />
+                                        <div class="eivo_stamp">
+                                            <%# _item.InvoiceAllowanceBuyer.CustomerName %><br />
+                                            統一編號<br />
+                                            <div class="notitle">
+                                                <%# _item.InvoiceAllowanceBuyer.ReceiptNo %>
+                                            </div>
+                                            電話:<%# _item.InvoiceAllowanceBuyer.Phone %><br />
+                                            <%# _item.InvoiceAllowanceBuyer.Address %><br />
+                                        </div>
                                     </td>
                                 </tr>
                             </table>

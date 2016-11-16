@@ -309,7 +309,7 @@
 
             using (System.IO.StreamWriter Output = new System.IO.StreamWriter(Response.OutputStream, Encoding.GetEncoding(950)))
             {
-                Output.WriteLine("掛號號碼,姓名,	寄件地名 (或地址)	,是否回,是否航空,是否印刷物,重量,郵資,備考");
+                Output.WriteLine("掛號號碼,姓名,	寄件地名 (或地址)	,是否回,是否航空,是否印刷物,重量,郵資,備考,遞件日期,Google Id,發票號碼,發票日期");
                 int start = 0, to = 0;
                 foreach (var item in DeliveryList)
                 {
@@ -324,7 +324,16 @@
                     Output.Write(",");
                     Output.Write(item.InvoiceItem.InvoiceBuyer.Address);
                     Output.Write(",,,,,,");
-                    Output.WriteLine(item.DuplicateCount);
+                    Output.Write(item.DuplicateCount);
+                    Output.Write(",");
+                    Output.Write(item.DeliveryDate.ToString("yyyy/MM/dd"));
+                    Output.Write(",");
+                    Output.Write(item.InvoiceItem.InvoiceBuyer.CustomerID);
+                    Output.Write(",");
+                    Output.Write(item.InvoiceItem.TrackCode);Output.Write(item.InvoiceItem.No);
+                    Output.Write(",");
+                    Output.WriteLine(String.Format("{0:yyyy/MM/dd}", item.InvoiceItem.InvoiceDate));
+
 
                     if (item.DuplicateCount.HasValue)
                     {
