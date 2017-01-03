@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 using Business.Helper;
 using ClosedXML.Excel;
+using Model.DataEntity;
 using Model.Locale;
 using Model.Security.MembershipManagement;
 using ModelExtension.DataExchange;
@@ -13,7 +14,7 @@ using Utility;
 
 namespace eIVOGo.Controllers
 {
-    public class DataExchangeController : Controller
+    public class DataExchangeController : SampleController<InvoiceItem>
     {
         // GET: DataExchange
         public ActionResult Index()

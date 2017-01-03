@@ -5,6 +5,6 @@
 
 <asp:Content ID="header" ContentPlaceHolderID="headContent" runat="server">
 </asp:Content>
-<asp:Content ID="mainContent" ContentPlaceHolderID="mainContent" runat="server">
+<asp:Content ID="mainContent" ContentPlaceHolderID="formContent" runat="server">
     <uc1:InquireOrganization runat="server" ID="InquireOrganization" />
 </asp:Content>

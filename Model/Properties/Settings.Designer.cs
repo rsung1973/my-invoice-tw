@@ -26,8 +26,8 @@ namespace Model.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=172.16.2.23\\sqlexpress;Initial Catalog=EIVO03;Persist Security Info=T" +
-            "rue;User ID=eivo;Password=eivoeivo")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=172.16.2.23\\sqlexpress,1433;Initial Catalog=EIVO03;Persist Security I" +
+            "nfo=True;User ID=eivo;Password=eivoeivo")]
         public string eInvoiceConnectionString {
             get {
                 return ((string)(this["eInvoiceConnectionString"]));

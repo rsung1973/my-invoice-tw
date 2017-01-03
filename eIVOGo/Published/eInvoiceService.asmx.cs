@@ -216,9 +216,12 @@ namespace eIVOGo.Published
                                         File.Move(tmpFile, pdfFile);
                                     }
 
-                                    String.Format("{0}?{1}", url, cipher.cipher(invoiceID.ToString()))
-                                        .MailWebPage(item.InvoiceBuyer.EMail, subject, pdfFile);
-
+                                    if (item.CDS_Document.DocumentOwner.Organization.OrganizationStatus.SubscribeB2BInvoicePDF == true
+                                        || !item.CDS_Document.DocumentOwner.Organization.OrganizationStatus.SubscribeB2BInvoicePDF.HasValue)
+                                    {
+                                        String.Format("{0}?{1}", url, cipher.cipher(invoiceID.ToString()))
+                                            .MailWebPage(item.InvoiceBuyer.EMail, subject, pdfFile);
+                                    }
                                 }
                             }
                             catch (Exception ex)

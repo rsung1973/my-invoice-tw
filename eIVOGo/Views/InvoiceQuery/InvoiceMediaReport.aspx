@@ -12,10 +12,15 @@
 
 <asp:Content ID="header" ContentPlaceHolderID="headContent" runat="server">
 </asp:Content>
-<asp:Content ID="mainContent" ContentPlaceHolderID="mainContent" runat="server">
+<asp:Content ID="mainContent" ContentPlaceHolderID="formContent" runat="server">
     <% Html.RenderPartial("~/Views/InvoiceQuery/Module/InvoiceMediaReport.ascx"); %>
 </asp:Content>
 <script runat="server">
 
+    protected override void OnInit(EventArgs e)
+    {
+        base.OnInit(e);
+        ViewBag.ActionName = "首頁 > 發票作業";
+    }
 
 </script>

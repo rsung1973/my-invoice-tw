@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns="urn:GEINV:eInvoiceMessage:B0202:3.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-targetNamespace="urn:GEINV:eInvoiceMessage:B0202:3.0" elementFormDefault="qualified"
+<xsd:schema xmlns="urn:GEINV:eInvoiceMessage:B0202:3.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+targetNamespace="urn:GEINV:eInvoiceMessage:B0202:3.1" elementFormDefault="qualified"
 attributeFormDefault="unqualified">
-    <xsd:include schemaLocation="GenericType_3.0.xsd"/>
+    <xsd:include schemaLocation="GenericType_3.1.xsd"/>
     <!--  作廢折讓證明單接收確認: B0202-->
     <xsd:element name="CancelAllowanceConfirm">
         <xsd:complexType>

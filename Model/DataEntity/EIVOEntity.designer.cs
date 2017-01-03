@@ -343,6 +343,9 @@ namespace Model.DataEntity
     partial void InsertPOSInvoiceNoSegment(POSInvoiceNoSegment instance);
     partial void UpdatePOSInvoiceNoSegment(POSInvoiceNoSegment instance);
     partial void DeletePOSInvoiceNoSegment(POSInvoiceNoSegment instance);
+    partial void InsertOrganizationExtension(OrganizationExtension instance);
+    partial void UpdateOrganizationExtension(OrganizationExtension instance);
+    partial void DeleteOrganizationExtension(OrganizationExtension instance);
     #endregion
 		
 		public EIVOEntityDataContext() : 
@@ -1215,6 +1218,14 @@ namespace Model.DataEntity
 			}
 		}
 		
+		public System.Data.Linq.Table<OrganizationExtension> OrganizationExtension
+		{
+			get
+			{
+				return this.GetTable<OrganizationExtension>();
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.MatchDocumentAttachment")]
 		public int MatchDocumentAttachment()
 		{
@@ -1227,6 +1238,13 @@ namespace Model.DataEntity
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), companyID, oldRoleID, newRoleID);
 			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.InquireVacantNo")]
+		public ISingleResult<InquireVacantNoResult> InquireVacantNo([global::System.Data.Linq.Mapping.ParameterAttribute(Name="SellerID", DbType="Int")] System.Nullable<int> sellerID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Year", DbType="Int")] System.Nullable<int> year, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PeriodNo", DbType="Int")] System.Nullable<int> periodNo)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), sellerID, year, periodNo);
+			return ((ISingleResult<InquireVacantNoResult>)(result.ReturnValue));
 		}
 	}
 	
@@ -1334,6 +1352,8 @@ namespace Model.DataEntity
 		private EntitySet<InvoiceIssuerAgent> _AsInvoiceInsurer;
 		
 		private EntitySet<POSDevice> _POSDevice;
+		
+		private EntityRef<OrganizationExtension> _OrganizationExtension;
 		
 		private bool serializing;
 		
@@ -2419,6 +2439,41 @@ namespace Model.DataEntity
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Organization_OrganizationExtension", Storage="_OrganizationExtension", ThisKey="CompanyID", OtherKey="CompanyID", IsUnique=true, IsForeignKey=false)]
+		[global::System.Runtime.Serialization.DataMemberAttribute(Order=50, EmitDefaultValue=false)]
+		public OrganizationExtension OrganizationExtension
+		{
+			get
+			{
+				if ((this.serializing 
+							&& (this._OrganizationExtension.HasLoadedOrAssignedValue == false)))
+				{
+					return null;
+				}
+				return this._OrganizationExtension.Entity;
+			}
+			set
+			{
+				OrganizationExtension previousValue = this._OrganizationExtension.Entity;
+				if (((previousValue != value) 
+							|| (this._OrganizationExtension.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._OrganizationExtension.Entity = null;
+						previousValue.Organization = null;
+					}
+					this._OrganizationExtension.Entity = value;
+					if ((value != null))
+					{
+						value.Organization = this;
+					}
+					this.SendPropertyChanged("OrganizationExtension");
+				}
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -2743,6 +2798,7 @@ namespace Model.DataEntity
 			this._InvoiceInsurerAgent = new EntitySet<InvoiceIssuerAgent>(new Action<InvoiceIssuerAgent>(this.attach_InvoiceInsurerAgent), new Action<InvoiceIssuerAgent>(this.detach_InvoiceInsurerAgent));
 			this._AsInvoiceInsurer = new EntitySet<InvoiceIssuerAgent>(new Action<InvoiceIssuerAgent>(this.attach_AsInvoiceInsurer), new Action<InvoiceIssuerAgent>(this.detach_AsInvoiceInsurer));
 			this._POSDevice = new EntitySet<POSDevice>(new Action<POSDevice>(this.attach_POSDevice), new Action<POSDevice>(this.detach_POSDevice));
+			this._OrganizationExtension = default(EntityRef<OrganizationExtension>);
 			OnCreated();
 		}
 		
@@ -29048,6 +29104,8 @@ namespace Model.DataEntity
 		
 		private System.Nullable<bool> _DisableWinningNotice;
 		
+		private System.Nullable<bool> _EntrustToPrint;
+		
 		private EntityRef<LevelExpression> _LevelExpression;
 		
 		private EntityRef<Organization> _Organization;
@@ -29102,6 +29160,8 @@ namespace Model.DataEntity
     partial void OnDisableIssuingNoticeChanged();
     partial void OnDisableWinningNoticeChanging(System.Nullable<bool> value);
     partial void OnDisableWinningNoticeChanged();
+    partial void OnEntrustToPrintChanging(System.Nullable<bool> value);
+    partial void OnEntrustToPrintChanged();
     #endregion
 		
 		public OrganizationStatus()
@@ -29579,6 +29639,27 @@ namespace Model.DataEntity
 					this._DisableWinningNotice = value;
 					this.SendPropertyChanged("DisableWinningNotice");
 					this.OnDisableWinningNoticeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EntrustToPrint", DbType="Bit")]
+		[global::System.Runtime.Serialization.DataMemberAttribute(Order=23)]
+		public System.Nullable<bool> EntrustToPrint
+		{
+			get
+			{
+				return this._EntrustToPrint;
+			}
+			set
+			{
+				if ((this._EntrustToPrint != value))
+				{
+					this.OnEntrustToPrintChanging(value);
+					this.SendPropertyChanging();
+					this._EntrustToPrint = value;
+					this.SendPropertyChanged("EntrustToPrint");
+					this.OnEntrustToPrintChanged();
 				}
 			}
 		}
@@ -32720,6 +32801,410 @@ namespace Model.DataEntity
 		public void OnDeserializing(StreamingContext context)
 		{
 			this.Initialize();
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.OrganizationExtension")]
+	[global::System.Runtime.Serialization.DataContractAttribute()]
+	public partial class OrganizationExtension : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _CompanyID;
+		
+		private string _CustomerNo;
+		
+		private string _TaxNo;
+		
+		private EntityRef<Organization> _Organization;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnCompanyIDChanging(int value);
+    partial void OnCompanyIDChanged();
+    partial void OnCustomerNoChanging(string value);
+    partial void OnCustomerNoChanged();
+    partial void OnTaxNoChanging(string value);
+    partial void OnTaxNoChanged();
+    #endregion
+		
+		public OrganizationExtension()
+		{
+			this.Initialize();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CompanyID", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Runtime.Serialization.DataMemberAttribute(Order=1)]
+		public int CompanyID
+		{
+			get
+			{
+				return this._CompanyID;
+			}
+			set
+			{
+				if ((this._CompanyID != value))
+				{
+					if (this._Organization.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnCompanyIDChanging(value);
+					this.SendPropertyChanging();
+					this._CompanyID = value;
+					this.SendPropertyChanged("CompanyID");
+					this.OnCompanyIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CustomerNo", DbType="NVarChar(16)")]
+		[global::System.Runtime.Serialization.DataMemberAttribute(Order=2)]
+		public string CustomerNo
+		{
+			get
+			{
+				return this._CustomerNo;
+			}
+			set
+			{
+				if ((this._CustomerNo != value))
+				{
+					this.OnCustomerNoChanging(value);
+					this.SendPropertyChanging();
+					this._CustomerNo = value;
+					this.SendPropertyChanged("CustomerNo");
+					this.OnCustomerNoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TaxNo", DbType="NVarChar(16)")]
+		[global::System.Runtime.Serialization.DataMemberAttribute(Order=3)]
+		public string TaxNo
+		{
+			get
+			{
+				return this._TaxNo;
+			}
+			set
+			{
+				if ((this._TaxNo != value))
+				{
+					this.OnTaxNoChanging(value);
+					this.SendPropertyChanging();
+					this._TaxNo = value;
+					this.SendPropertyChanged("TaxNo");
+					this.OnTaxNoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Organization_OrganizationExtension", Storage="_Organization", ThisKey="CompanyID", OtherKey="CompanyID", IsForeignKey=true)]
+		public Organization Organization
+		{
+			get
+			{
+				return this._Organization.Entity;
+			}
+			set
+			{
+				Organization previousValue = this._Organization.Entity;
+				if (((previousValue != value) 
+							|| (this._Organization.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Organization.Entity = null;
+						previousValue.OrganizationExtension = null;
+					}
+					this._Organization.Entity = value;
+					if ((value != null))
+					{
+						value.OrganizationExtension = this;
+						this._CompanyID = value.CompanyID;
+					}
+					else
+					{
+						this._CompanyID = default(int);
+					}
+					this.SendPropertyChanged("Organization");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void Initialize()
+		{
+			this._Organization = default(EntityRef<Organization>);
+			OnCreated();
+		}
+		
+		[global::System.Runtime.Serialization.OnDeserializingAttribute()]
+		[global::System.ComponentModel.EditorBrowsableAttribute(EditorBrowsableState.Never)]
+		public void OnDeserializing(StreamingContext context)
+		{
+			this.Initialize();
+		}
+	}
+	
+	[global::System.Runtime.Serialization.DataContractAttribute()]
+	public partial class InquireVacantNoResult
+	{
+		
+		private System.Nullable<long> _SeqNo;
+		
+		private short _Year;
+		
+		private short _PeriodNo;
+		
+		private string _TrackCode;
+		
+		private int _StartNo;
+		
+		private int _EndNo;
+		
+		private int _TrackID;
+		
+		private int _SellerID;
+		
+		private System.Nullable<int> _InvoiceID;
+		
+		private System.Nullable<int> _InvoiceNo;
+		
+		private System.Nullable<int> _CheckNext;
+		
+		private System.Nullable<int> _CheckPrev;
+		
+		public InquireVacantNoResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SeqNo", DbType="BigInt")]
+		[global::System.Runtime.Serialization.DataMemberAttribute(Order=1)]
+		public System.Nullable<long> SeqNo
+		{
+			get
+			{
+				return this._SeqNo;
+			}
+			set
+			{
+				if ((this._SeqNo != value))
+				{
+					this._SeqNo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Year", DbType="SmallInt NOT NULL")]
+		[global::System.Runtime.Serialization.DataMemberAttribute(Order=2)]
+		public short Year
+		{
+			get
+			{
+				return this._Year;
+			}
+			set
+			{
+				if ((this._Year != value))
+				{
+					this._Year = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PeriodNo", DbType="SmallInt NOT NULL")]
+		[global::System.Runtime.Serialization.DataMemberAttribute(Order=3)]
+		public short PeriodNo
+		{
+			get
+			{
+				return this._PeriodNo;
+			}
+			set
+			{
+				if ((this._PeriodNo != value))
+				{
+					this._PeriodNo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TrackCode", DbType="NVarChar(2) NOT NULL", CanBeNull=false)]
+		[global::System.Runtime.Serialization.DataMemberAttribute(Order=4)]
+		public string TrackCode
+		{
+			get
+			{
+				return this._TrackCode;
+			}
+			set
+			{
+				if ((this._TrackCode != value))
+				{
+					this._TrackCode = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StartNo", DbType="Int NOT NULL")]
+		[global::System.Runtime.Serialization.DataMemberAttribute(Order=5)]
+		public int StartNo
+		{
+			get
+			{
+				return this._StartNo;
+			}
+			set
+			{
+				if ((this._StartNo != value))
+				{
+					this._StartNo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EndNo", DbType="Int NOT NULL")]
+		[global::System.Runtime.Serialization.DataMemberAttribute(Order=6)]
+		public int EndNo
+		{
+			get
+			{
+				return this._EndNo;
+			}
+			set
+			{
+				if ((this._EndNo != value))
+				{
+					this._EndNo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TrackID", DbType="Int NOT NULL")]
+		[global::System.Runtime.Serialization.DataMemberAttribute(Order=7)]
+		public int TrackID
+		{
+			get
+			{
+				return this._TrackID;
+			}
+			set
+			{
+				if ((this._TrackID != value))
+				{
+					this._TrackID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SellerID", DbType="Int NOT NULL")]
+		[global::System.Runtime.Serialization.DataMemberAttribute(Order=8)]
+		public int SellerID
+		{
+			get
+			{
+				return this._SellerID;
+			}
+			set
+			{
+				if ((this._SellerID != value))
+				{
+					this._SellerID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_InvoiceID", DbType="Int")]
+		[global::System.Runtime.Serialization.DataMemberAttribute(Order=9)]
+		public System.Nullable<int> InvoiceID
+		{
+			get
+			{
+				return this._InvoiceID;
+			}
+			set
+			{
+				if ((this._InvoiceID != value))
+				{
+					this._InvoiceID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_InvoiceNo", DbType="Int")]
+		[global::System.Runtime.Serialization.DataMemberAttribute(Order=10)]
+		public System.Nullable<int> InvoiceNo
+		{
+			get
+			{
+				return this._InvoiceNo;
+			}
+			set
+			{
+				if ((this._InvoiceNo != value))
+				{
+					this._InvoiceNo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CheckNext", DbType="Int")]
+		[global::System.Runtime.Serialization.DataMemberAttribute(Order=11)]
+		public System.Nullable<int> CheckNext
+		{
+			get
+			{
+				return this._CheckNext;
+			}
+			set
+			{
+				if ((this._CheckNext != value))
+				{
+					this._CheckNext = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CheckPrev", DbType="Int")]
+		[global::System.Runtime.Serialization.DataMemberAttribute(Order=12)]
+		public System.Nullable<int> CheckPrev
+		{
+			get
+			{
+				return this._CheckPrev;
+			}
+			set
+			{
+				if ((this._CheckPrev != value))
+				{
+					this._CheckPrev = value;
+				}
+			}
 		}
 	}
 }

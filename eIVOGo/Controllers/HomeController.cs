@@ -4,14 +4,21 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+using Model.DataEntity;
+using eIVOGo.Helper;
+using Utility;
+using Model.Locale;
+using Model.Security.MembershipManagement;
+using Business.Helper;
+
 namespace eIVOGo.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : SampleController<InvoiceItem>
     {
         // GET: Home
-        public ActionResult Index()
+        public ActionResult MainPage()
         {
-            return Redirect("~/login.aspx");
+            return View();
         }
     }
 }

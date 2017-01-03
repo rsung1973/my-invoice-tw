@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns="urn:GEINV:eInvoiceMessage:B0101:3.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-targetNamespace="urn:GEINV:eInvoiceMessage:B0101:3.0" elementFormDefault="qualified"
+<xsd:schema xmlns="urn:GEINV:eInvoiceMessage:B0101:3.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+targetNamespace="urn:GEINV:eInvoiceMessage:B0101:3.1" elementFormDefault="qualified"
 attributeFormDefault="unqualified">
-    <xsd:include schemaLocation="GenericType_3.0.xsd"/>
+    <xsd:include schemaLocation="GenericType_3.1.xsd"/>
     <!--  開立折讓證明單: B0101 -->
     <xsd:element name="Allowance">
         <xsd:complexType>
@@ -65,6 +65,7 @@ attributeFormDefault="unqualified">
                         <xsd:element name="OriginalDescription">
                             <xsd:simpleType>
                                 <xsd:restriction base="xsd:string">
+                                    <xsd:minLength value="1"/>
                                     <xsd:maxLength value="256"/>
                                 </xsd:restriction>
                             </xsd:simpleType>
@@ -75,7 +76,6 @@ attributeFormDefault="unqualified">
                                 <xsd:restriction base="xsd:decimal">
                                     <xsd:totalDigits value="20"/>
                                     <xsd:fractionDigits value="7"/>
-                                    <xsd:minExclusive value="0"/>
                                 </xsd:restriction>
                             </xsd:simpleType>
                         </xsd:element>
@@ -110,7 +110,6 @@ attributeFormDefault="unqualified">
                             <xsd:simpleType>
                                 <xsd:restriction base="xsd:long">
                                     <xsd:totalDigits value="12"/>
-                                    <xsd:minInclusive value="0"/>
                                 </xsd:restriction>
                             </xsd:simpleType>
                         </xsd:element>

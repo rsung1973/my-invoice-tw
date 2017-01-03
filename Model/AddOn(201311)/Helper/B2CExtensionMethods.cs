@@ -249,15 +249,15 @@ namespace Model.Helper
             return result;
         }
 
-        public static Model.Schema.MIG3_1.E0402.BranchTrackBlank BuildE0402(this InvoiceTrackCodeAssignment item)
+        public static Model.Schema.TurnKey.E0402.BranchTrackBlank BuildE0402(this InvoiceTrackCodeAssignment item)
         {
-            var result = new Model.Schema.MIG3_1.E0402.BranchTrackBlank
+            var result = new Model.Schema.TurnKey.E0402.BranchTrackBlank
             {
-                Main = new Schema.MIG3_1.E0402.Main
+                Main = new Schema.TurnKey.E0402.Main
                 {
                     HeadBan = item.Organization.ReceiptNo,
                     BranchBan = item.Organization.ReceiptNo,
-                    InvoiceType = (Schema.MIG3_1.E0402.InvoiceTypeEnum)item.Organization.OrganizationStatus.SettingInvoiceType.Value,
+                    InvoiceType = (Schema.TurnKey.E0402.InvoiceTypeEnum)item.Organization.OrganizationStatus.SettingInvoiceType.Value,
                     YearMonth = String.Format("{0:000}{1:00}", item.InvoiceTrackCode.Year - 1911, item.InvoiceTrackCode.PeriodNo * 2),
                     InvoiceTrack = item.InvoiceTrackCode.TrackCode
                 },
@@ -266,13 +266,13 @@ namespace Model.Helper
             return result;
         }
 
-        private static Schema.MIG3_1.E0402.DetailsBranchTrackBlankItem[] buildE0402Details(InvoiceTrackCodeAssignment item)
+        private static Schema.TurnKey.E0402.DetailsBranchTrackBlankItem[] buildE0402Details(InvoiceTrackCodeAssignment item)
         {
-            List<Model.Schema.MIG3_1.E0402.DetailsBranchTrackBlankItem> items = new List<Schema.MIG3_1.E0402.DetailsBranchTrackBlankItem>();
+            List<Model.Schema.TurnKey.E0402.DetailsBranchTrackBlankItem> items = new List<Schema.TurnKey.E0402.DetailsBranchTrackBlankItem>();
 
             foreach (var detail in item.UnassignedInvoiceNo)
             {
-                items.Add(new Model.Schema.MIG3_1.E0402.DetailsBranchTrackBlankItem
+                items.Add(new Model.Schema.TurnKey.E0402.DetailsBranchTrackBlankItem
                     {
                         InvoiceBeginNo = String.Format("{0:00000000}", detail.InvoiceBeginNo),
                         InvoiceEndNo = String.Format("{0:00000000}", detail.InvoiceEndNo)

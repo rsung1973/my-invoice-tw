@@ -8,16 +8,19 @@
 <%@ Import Namespace="eIVOGo.Helper" %>
 <%@ Import Namespace="Model.Locale" %>
 <tr>
-    <th>統編
-    </th>
+    <th><%= ViewBag.Title %></th>
     <td class="tdleft">
-        <%= this.Model != null ? Html.DropDownList("sellerID", (IEnumerable<SelectListItem>)this.Model, "全部") : null %>
-        <script>
-            $(function () {
-                $('select[name="sellerID"]').val('<%= Request["sellerID"] %>');
-            });
-        </script>
+        <%  Html.RenderPartial("~/Views/DataFlow/SellerSelector.ascx", _model); %>
     </td>
 </tr>
+<script runat="server">
 
+    IEnumerable<Organization> _model;
+
+    protected override void OnInit(EventArgs e)
+    {
+        base.OnInit(e);
+        _model = (IEnumerable<Organization>)this.Model;
+    }
+</script>
 

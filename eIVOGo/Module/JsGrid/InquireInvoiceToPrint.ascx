@@ -24,6 +24,10 @@
 <%@ Register Src="~/Module/Common/DoPrintPOSHandler.ascx" TagPrefix="uc4" TagName="DoPrintPOSHandler" %>
 <%@ Register Src="~/Module/Common/DoDownloadHandler.ascx" TagPrefix="uc4" TagName="DoDownloadHandler" %>
 <%@ Register Src="~/Module/Inquiry/InquiryItem/InquireInvoiceType.ascx" TagPrefix="uc4" TagName="InquireInvoiceType" %>
+<%@ Register Src="~/Module/Inquiry/InquiryItem/InquireInvoiceBuyer.ascx" TagPrefix="uc4" TagName="InquireInvoiceBuyer" %>
+<%@ Register Src="~/Module/Inquiry/InquiryItem/InquireInvoiceBuyerName.ascx" TagPrefix="uc4" TagName="InquireInvoiceBuyerName" %>
+
+
 
 <%@ Import Namespace="System.IO" %>
 <%@ Import Namespace="eIVOGo.Helper" %>
@@ -44,6 +48,8 @@
             <uc4:InquireInvoiceConsumption runat="server" ID="inquireConsumption" />
             <uc4:InquireInvoiceSeller runat="server" ID="inquireSeller" QueryRequired="true" AlertMessage="請選擇公司名稱!!" />
             <uc4:InquireCustomerID runat="server" ID="inquireCustomerID" />
+            <uc4:InquireInvoiceBuyer runat="server" ID="inquireBuyer" />
+            <uc4:InquireInvoiceBuyerName runat="server" ID="inquireBuyerName" />
             <uc4:InquireInvoiceDate runat="server" ID="inquireDate" />
             <uc4:InquireInvoiceNo runat="server" ID="inquireNo" />
             <uc4:InquireInvoiceAttachment runat="server" ID="inquireAttachment" />

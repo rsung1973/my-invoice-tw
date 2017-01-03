@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns="urn:GEINV:eInvoiceMessage:A0102:3.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-targetNamespace="urn:GEINV:eInvoiceMessage:A0102:3.0" elementFormDefault="qualified"
+<xsd:schema xmlns="urn:GEINV:eInvoiceMessage:A0102:3.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+targetNamespace="urn:GEINV:eInvoiceMessage:A0102:3.1" elementFormDefault="qualified"
 attributeFormDefault="unqualified">
-    <xsd:include schemaLocation="GenericType_3.0.xsd"/>
+    <xsd:include schemaLocation="GenericType_3.1.xsd"/>
     <!--  發票接收確認: A0102 -->
     <xsd:element name="InvoiceConfirm">
         <xsd:complexType>
@@ -41,6 +41,8 @@ attributeFormDefault="unqualified">
                         </xsd:restriction>
                     </xsd:simpleType>
                 </xsd:element>
+                <!--  買受人簽署適用零稅率註記-->
+                <xsd:element name="BondedAreaConfirm" type="BondedAreaEnum" minOccurs="0"/>
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>

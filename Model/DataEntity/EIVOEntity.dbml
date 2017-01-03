@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="EIVO03" Class="EIVOEntityDataContext" Serialization="Unidirectional" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=172.16.2.23\sqlexpress;Initial Catalog=EIVO03;Persist Security Info=True;User ID=eivo" SettingsObjectName="Model.Properties.Settings" SettingsPropertyName="eInvoiceConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=172.16.2.23\sqlexpress,1433;Initial Catalog=EIVO03;Persist Security Info=True;User ID=eivo" SettingsObjectName="Model.Properties.Settings" SettingsPropertyName="eInvoiceConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Organization" Member="Organization">
     <Type Name="Organization">
       <Column Name="ContactName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
@@ -51,6 +51,7 @@
       <Association Name="Organization_InvoiceIssuerAgent" Member="InvoiceInsurerAgent" ThisKey="CompanyID" OtherKey="AgentID" Type="InvoiceIssuerAgent" />
       <Association Name="Organization_InvoiceIssuerAgent1" Member="AsInvoiceInsurer" ThisKey="CompanyID" OtherKey="IssuerID" Type="InvoiceIssuerAgent" />
       <Association Name="Organization_POSDevice" Member="POSDevice" ThisKey="CompanyID" OtherKey="CompanyID" Type="POSDevice" />
+      <Association Name="Organization_OrganizationExtension" Member="OrganizationExtension" ThisKey="CompanyID" OtherKey="CompanyID" Type="OrganizationExtension" Cardinality="One" />
     </Type>
   </Table>
   <Table Name="dbo.UserRole" Member="UserRole">
@@ -1143,6 +1144,7 @@
       <Column Name="UseB2BStandalone" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Column Name="DisableIssuingNotice" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Column Name="DisableWinningNotice" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EntrustToPrint" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Association Name="LevelExpression_OrganizationStatus" Member="LevelExpression" ThisKey="CurrentLevel" OtherKey="LevelID" Type="LevelExpression" IsForeignKey="true" />
       <Association Name="Organization_OrganizationStatus" Member="Organization" ThisKey="CompanyID" OtherKey="CompanyID" Type="Organization" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
       <Association Name="UserToken_OrganizationStatus" Member="UserToken" ThisKey="TokenID" OtherKey="Token" Type="UserToken" IsForeignKey="true" />
@@ -1280,6 +1282,14 @@
       <Association Name="POSDevice_POSInvoiceNoSegment" Member="POSDevice" ThisKey="DeviceID" OtherKey="DeviceID" Type="POSDevice" IsForeignKey="true" />
     </Type>
   </Table>
+  <Table Name="dbo.OrganizationExtension" Member="OrganizationExtension">
+    <Type Name="OrganizationExtension">
+      <Column Name="CompanyID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CustomerNo" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="TaxNo" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Association Name="Organization_OrganizationExtension" Member="Organization" ThisKey="CompanyID" OtherKey="CompanyID" Type="Organization" IsForeignKey="true" />
+    </Type>
+  </Table>
   <Function Name="dbo.MatchDocumentAttachment" Method="MatchDocumentAttachment">
     <Return Type="System.Int32" />
   </Function>
@@ -1288,5 +1298,24 @@
     <Parameter Name="OldRoleID" Parameter="oldRoleID" Type="System.Int32" DbType="Int" />
     <Parameter Name="NewRoleID" Parameter="newRoleID" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.InquireVacantNo" Method="InquireVacantNo">
+    <Parameter Name="SellerID" Parameter="sellerID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Year" Parameter="year" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PeriodNo" Parameter="periodNo" Type="System.Int32" DbType="Int" />
+    <ElementType Name="InquireVacantNoResult">
+      <Column Name="SeqNo" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Year" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="PeriodNo" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="TrackCode" Type="System.String" DbType="NVarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="StartNo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EndNo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TrackID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SellerID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="InvoiceID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="InvoiceNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CheckNext" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CheckPrev" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
   </Function>
 </Database>

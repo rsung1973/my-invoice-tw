@@ -441,14 +441,14 @@ namespace Model.Helper
                     DonateMark = string.IsNullOrEmpty(item.DonateMark) ? Model.Schema.TurnKey.A0401.DonateMarkEnum.Item0 : (Schema.TurnKey.A0401.DonateMarkEnum)(int.Parse(item.DonateMark)),
                     GroupMark = item.GroupMark,
                     InvoiceDate = String.Format("{0:yyyyMMdd}", item.InvoiceDate),
-                    InvoiceTimeSpecified = false,
+                    //InvoiceTimeSpecified = false,
                     InvoiceNumber = String.Format("{0}{1}", item.TrackCode, item.No),
                     MainRemark = item.Remark,
-                    PermitNumber = item.PermitNumber,
-                    PermitDate = item.PermitDate.HasValue ? String.Format("{0:yyyyMMdd}", item.PermitDate.Value) : null,
-                    PermitWord = item.PermitWord,
-                    RelateNumber = item.RelateNumber,
-                    TaxCenter = item.TaxCenter,
+                    //PermitNumber = item.PermitNumber,
+                    //PermitDate = item.PermitDate.HasValue ? String.Format("{0:yyyyMMdd}", item.PermitDate.Value) : null,
+                    //PermitWord = item.PermitWord,
+                    //RelateNumber = item.RelateNumber,
+                    //TaxCenter = item.TaxCenter,
                     Seller = new Schema.TurnKey.A0401.MainSeller
                     {
                         Address = item.InvoiceSeller.Address,
@@ -885,15 +885,15 @@ namespace Model.Helper
             return null;
         }
 
-        public static Model.Schema.MIG3_1.E0402.BranchTrackBlank BuildE0402(this InvoiceTrackCodeAssignment item, IQueryable<UnassignedInvoiceNoSummary> Summary)
+        public static Model.Schema.TurnKey.E0402.BranchTrackBlank BuildE0402(this InvoiceTrackCodeAssignment item, IQueryable<UnassignedInvoiceNoSummary> Summary)
         {
-            var result = new Model.Schema.MIG3_1.E0402.BranchTrackBlank
+            var result = new Model.Schema.TurnKey.E0402.BranchTrackBlank
             {
-                Main = new Schema.MIG3_1.E0402.Main
+                Main = new Schema.TurnKey.E0402.Main
                 {
                     HeadBan = item.Organization.ReceiptNo,
                     BranchBan = item.Organization.ReceiptNo,
-                    InvoiceType = (Schema.MIG3_1.E0402.InvoiceTypeEnum)(5),
+                    InvoiceType = (Schema.TurnKey.E0402.InvoiceTypeEnum)(5),
                     YearMonth = String.Format("{0:000}{1:00}", item.InvoiceTrackCode.Year - 1911, item.InvoiceTrackCode.PeriodNo * 2),
                     InvoiceTrack = item.InvoiceTrackCode.TrackCode
                 },
@@ -902,13 +902,13 @@ namespace Model.Helper
             return result;
         }
 
-        private static Schema.MIG3_1.E0402.DetailsBranchTrackBlankItem[] buildE0402Details(InvoiceTrackCodeAssignment item, IQueryable<UnassignedInvoiceNoSummary> Summary)
+        private static Schema.TurnKey.E0402.DetailsBranchTrackBlankItem[] buildE0402Details(InvoiceTrackCodeAssignment item, IQueryable<UnassignedInvoiceNoSummary> Summary)
         {
-            List<Model.Schema.MIG3_1.E0402.DetailsBranchTrackBlankItem> items = new List<Schema.MIG3_1.E0402.DetailsBranchTrackBlankItem>();
+            List<Model.Schema.TurnKey.E0402.DetailsBranchTrackBlankItem> items = new List<Schema.TurnKey.E0402.DetailsBranchTrackBlankItem>();
 
             foreach (var detail in Summary.ToList())
             {
-                items.Add(new Model.Schema.MIG3_1.E0402.DetailsBranchTrackBlankItem
+                items.Add(new Model.Schema.TurnKey.E0402.DetailsBranchTrackBlankItem
                 {
                     InvoiceBeginNo = String.Format("{0:00000000}", detail.StartNo),
                     InvoiceEndNo = String.Format("{0:00000000}", detail.EndNo)

@@ -8,19 +8,41 @@ using System.Web.Mvc;
 using System.Web.Mvc.Html;
 using System.Web.UI;
 using eIVOGo.Helper;
+using eIVOGo.Models.ViewModel;
 using eIVOGo.Module.Base;
 using Model.DataEntity;
 using Model.Locale;
 using Model.Security.MembershipManagement;
 using Utility;
+using Uxnet.Com.DataAccessLayer.Models;
 
 namespace eIVOGo.Models
 {
     public partial class CommonInquiry<TEntity> : ModelSourceInquiry<TEntity>
         where TEntity : class,new()
     {
+        protected InquireInvoiceViewModel _viewModel;
+        protected Controller _currentController;
+        public CommonInquiry() : base()
+        {
+
+        }
         public Controller CurrentController
-        { get; set; }
+        {
+            get
+            {
+                return _currentController;
+            }
+            set
+            {
+                _currentController = value;
+                _viewModel = null;
+                if (_currentController != null)
+                {
+                    _viewModel = (InquireInvoiceViewModel)_currentController.ViewBag.ViewModel;
+                }
+            }
+        }
 
         public void Render(HtmlHelper Html)
         {
@@ -68,7 +90,8 @@ namespace eIVOGo.Models
 
     public partial class InquireCustomerID : CommonInquiry<InvoiceItem>
     {
-        public override void BuildQueryExpression(ModelSource<InvoiceItem> models)
+        
+        public override void BuildQueryExpression(ModelSource<EIVOEntityDataContext, InvoiceItem> models)
         {
             if (!String.IsNullOrEmpty(CurrentController.Request["customerID"]))
             {
@@ -80,9 +103,25 @@ namespace eIVOGo.Models
         }
     }
 
+    public partial class InquireAllowanceCustomerID : CommonInquiry<InvoiceAllowance>
+    {
+
+        public override void BuildQueryExpression(ModelSource<EIVOEntityDataContext, InvoiceAllowance> models)
+        {
+            if (!String.IsNullOrEmpty(CurrentController.Request["customerID"]))
+            {
+                HasSet = true;
+                models.Items = models.Items.Where(i => i.InvoiceAllowanceBuyer.CustomerID == CurrentController.Request["customerID"].Trim());
+            }
+
+            base.BuildQueryExpression(models);
+        }
+    }
+
+
     public partial class InquireInvoiceSeller : CommonInquiry<InvoiceItem>
     {
-        public override void BuildQueryExpression(ModelSource<InvoiceItem> models)
+        public override void BuildQueryExpression(ModelSource<EIVOEntityDataContext, InvoiceItem> models)
         {
             if (!String.IsNullOrEmpty(CurrentController.Request["sellerID"]))
             {
@@ -94,9 +133,79 @@ namespace eIVOGo.Models
         }
     }
 
+    public partial class InquireAllowanceSeller : CommonInquiry<InvoiceAllowance>
+    {
+        public override void BuildQueryExpression(ModelSource<EIVOEntityDataContext, InvoiceAllowance> models)
+        {
+            if (_viewModel!=null && _viewModel.CompanyID.HasValue)
+            {
+                HasSet = true;
+                models.Items = models.Items.Where(d => d.InvoiceAllowanceSeller.SellerID == _viewModel.CompanyID);
+            }
+
+            base.BuildQueryExpression(models);
+        }
+    }
+
+    public partial class InquireInvoiceBuyer : CommonInquiry<InvoiceItem>
+    {
+        public override void BuildQueryExpression(ModelSource<EIVOEntityDataContext, InvoiceItem> models)
+        {
+            if (!String.IsNullOrEmpty(CurrentController.Request["receiptNo"]))
+            {
+                HasSet = true;
+                models.Items = models.Items.Where(d => d.InvoiceBuyer.ReceiptNo == CurrentController.Request["receiptNo"].GetEfficientString());
+            }
+
+            base.BuildQueryExpression(models);
+        }
+    }
+
+    public partial class InquireAllowanceBuyer : CommonInquiry<InvoiceAllowance>
+    {
+        public override void BuildQueryExpression(ModelSource<EIVOEntityDataContext, InvoiceAllowance> models)
+        {
+            if (_viewModel!=null && !String.IsNullOrEmpty(_viewModel.BuyerReceiptNo))
+            {
+                HasSet = true;
+                models.Items = models.Items.Where(d => d.InvoiceAllowanceBuyer.ReceiptNo == _viewModel.BuyerReceiptNo.GetEfficientString());
+            }
+
+            base.BuildQueryExpression(models);
+        }
+    }
+
+    public partial class InquireInvoiceBuyerByName : CommonInquiry<InvoiceItem>
+    {
+        public override void BuildQueryExpression(ModelSource<EIVOEntityDataContext, InvoiceItem> models)
+        {
+            if (!String.IsNullOrEmpty(CurrentController.Request["buyerName"]))
+            {
+                HasSet = true;
+                models.Items = models.Items.Where(d => d.InvoiceBuyer.CustomerName.Contains(CurrentController.Request["buyerName"].Trim()));
+            }
+
+            base.BuildQueryExpression(models);
+        }
+    }
+
+    public partial class InquireAllowanceBuyerByName : CommonInquiry<InvoiceAllowance>
+    {
+        public override void BuildQueryExpression(ModelSource<EIVOEntityDataContext, InvoiceAllowance> models)
+        {
+            if (_viewModel!=null && !String.IsNullOrEmpty(_viewModel.BuyerName.GetEfficientString()))
+            {
+                HasSet = true;
+                models.Items = models.Items.Where(d => d.InvoiceAllowanceBuyer.CustomerName.Contains(CurrentController.Request["buyerName"].Trim()));
+            }
+
+            base.BuildQueryExpression(models);
+        }
+    }
+
     public partial class InquireInvoiceDate : CommonInquiry<InvoiceItem>
     {
-        public override void BuildQueryExpression(ModelSource<InvoiceItem> models)
+        public override void BuildQueryExpression(ModelSource<EIVOEntityDataContext, InvoiceItem> models)
         {
             DateTime? dateFrom;
             if (CurrentController.Request["invoiceDateFrom"].ParseDate(out dateFrom))
@@ -116,9 +225,32 @@ namespace eIVOGo.Models
 
     }
 
+    public partial class InquireAllowanceDate : CommonInquiry<InvoiceAllowance>
+    {
+        public override void BuildQueryExpression(ModelSource<EIVOEntityDataContext, InvoiceAllowance> models)
+        {
+            if (_viewModel != null)
+            {
+                if (_viewModel.DateFrom.HasValue)
+                {
+                    models.Items = models.Items.Where(i => i.AllowanceDate >= _viewModel.DateFrom);
+                    HasSet = true;
+                }
+
+                if (_viewModel.DateTo.HasValue)
+                {
+                    models.Items = models.Items.Where(i => i.AllowanceDate < _viewModel.DateTo.Value.AddDays(1));
+                    HasSet = true;
+                }
+            }
+            base.BuildQueryExpression(models);
+        }
+
+    }
+
     public partial class InquireInvoiceConsumption : CommonInquiry<InvoiceItem>
     {
-        public override void BuildQueryExpression(ModelSource<InvoiceItem> models)
+        public override void BuildQueryExpression(ModelSource<EIVOEntityDataContext, InvoiceItem> models)
         {
             if (CurrentController.Request["cc1"] == "B2B")
             {
@@ -143,6 +275,36 @@ namespace eIVOGo.Models
         }
     }
 
+    public partial class InquireAllowanceConsumption : CommonInquiry<InvoiceAllowance>
+    {
+        public override void BuildQueryExpression(ModelSource<EIVOEntityDataContext, InvoiceAllowance> models)
+        {
+            if (_viewModel != null)
+            {
+                if (_viewModel.Consumption == "B2B")
+                {
+                    models.Items = models.Items.Where(i => i.InvoiceAllowanceBuyer.ReceiptNo != "0000000000");
+                    HasSet = true;
+                }
+                else if (_viewModel.Consumption == "B2C")
+                {
+                    models.Items = models.Items.Where(i => i.InvoiceAllowanceBuyer.ReceiptNo == "0000000000");
+                    HasSet = true;
+                }
+            }
+
+            base.BuildQueryExpression(models);
+        }
+
+        public bool QueryForB2C
+        {
+            get
+            {
+                return CurrentController.Request["cc1"] == "B2C";
+            }
+        }
+    }
+
     public partial class InquireInvoiceConsumptionExtensionToPrint : CommonInquiry<InvoiceItem>
     {
         private InquireInvoiceConsumption _inquiry;
@@ -152,7 +314,7 @@ namespace eIVOGo.Models
             _inquiry = inquiry;
         }
 
-        public override void BuildQueryExpression(ModelSource<InvoiceItem> models)
+        public override void BuildQueryExpression(ModelSource<EIVOEntityDataContext, InvoiceItem> models)
         {
             if (_inquiry.QueryForB2C)
             {
@@ -172,7 +334,7 @@ namespace eIVOGo.Models
             _userProfile = profile;
         }
 
-        public override void BuildQueryExpression(ModelSource<InvoiceItem> models)
+        public override void BuildQueryExpression(ModelSource<EIVOEntityDataContext, InvoiceItem> models)
         {
             switch ((Naming.RoleID)_userProfile.CurrentUserRole.RoleID)
             {
@@ -192,9 +354,38 @@ namespace eIVOGo.Models
         }
     }
 
+    public partial class InquireAllowanceByRole : CommonInquiry<InvoiceAllowance>
+    {
+        protected UserProfileMember _userProfile;
+
+        public InquireAllowanceByRole(UserProfileMember profile)
+        {
+            _userProfile = profile;
+        }
+
+        public override void BuildQueryExpression(ModelSource<EIVOEntityDataContext, InvoiceAllowance> models)
+        {
+            switch ((Naming.RoleID)_userProfile.CurrentUserRole.RoleID)
+            {
+                case Naming.RoleID.ROLE_GUEST:
+                case Naming.RoleID.ROLE_BUYER:
+                case Naming.RoleID.ROLE_SYS:
+                    break;
+
+                default:
+                    models.Items = models.GetDataContext()
+                                .GetAllowanceByAgent(models.Items, _userProfile.CurrentUserRole.OrganizationCategory.CompanyID);
+                    break;
+            }
+
+
+            base.BuildQueryExpression(models);
+        }
+    }
+
     public partial class InquireEffectiveInvoice : CommonInquiry<InvoiceItem>
     {
-        public override void BuildQueryExpression(ModelSource<InvoiceItem> models)
+        public override void BuildQueryExpression(ModelSource<EIVOEntityDataContext, InvoiceItem> models)
         {
             if (CurrentController.Request["cancelled"] == "1")
             {
@@ -209,9 +400,26 @@ namespace eIVOGo.Models
         }
     }
 
+    public partial class InquireEffectiveAllowance : CommonInquiry<InvoiceAllowance>
+    {
+        public override void BuildQueryExpression(ModelSource<EIVOEntityDataContext, InvoiceAllowance> models)
+        {
+            if (_viewModel!=null && _viewModel.IsCancelled == true)
+            {
+                models.Items = models.Items.Where(i => i.InvoiceAllowanceCancellation != null);
+                this.HasSet = true;
+            }
+            else
+            {
+                models.Items = models.Items.Where(i => i.InvoiceAllowanceCancellation == null);
+            }
+            base.BuildQueryExpression(models);
+        }
+    }
+
     public partial class InquireWinningInvoice : CommonInquiry<InvoiceItem>
     {
-        public override void BuildQueryExpression(ModelSource<InvoiceItem> models)
+        public override void BuildQueryExpression(ModelSource<EIVOEntityDataContext, InvoiceItem> models)
         {
             if (CurrentController.Request["winning"] == null || CurrentController.Request["winning"] == "1")
             {
@@ -224,7 +432,7 @@ namespace eIVOGo.Models
 
     public partial class InquireInvoicePeriod : CommonInquiry<InvoiceItem>
     {
-        public override void BuildQueryExpression(ModelSource<InvoiceItem> models)
+        public override void BuildQueryExpression(ModelSource<EIVOEntityDataContext, InvoiceItem> models)
         {
             if (CurrentController.Request["period"] != null)
             {
@@ -249,7 +457,7 @@ namespace eIVOGo.Models
 
     public partial class InquireDonatedInvoice : CommonInquiry<InvoiceItem>
     {
-        public override void BuildQueryExpression(ModelSource<InvoiceItem> models)
+        public override void BuildQueryExpression(ModelSource<EIVOEntityDataContext, InvoiceItem> models)
         {
             models.Items = models.Items.Where(i => i.InvoiceCancellation == null
                 && i.InvoiceDonation != null);
@@ -266,7 +474,7 @@ namespace eIVOGo.Models
 
     public partial class InquireDonatory : CommonInquiry<InvoiceItem>
     {
-        public override void BuildQueryExpression(ModelSource<InvoiceItem> models)
+        public override void BuildQueryExpression(ModelSource<EIVOEntityDataContext, InvoiceItem> models)
         {
 
             if (!String.IsNullOrEmpty(CurrentController.Request["donatory"]))
@@ -281,7 +489,7 @@ namespace eIVOGo.Models
 
     public partial class InquireInvoiceAttachment : CommonInquiry<InvoiceItem>
     {
-        public override void BuildQueryExpression(ModelSource<InvoiceItem> models)
+        public override void BuildQueryExpression(ModelSource<EIVOEntityDataContext, InvoiceItem> models)
         {
             if (CurrentController.Request["attachment"] == "1")
             {
@@ -296,7 +504,7 @@ namespace eIVOGo.Models
 
     public partial class InquireInvoiceNo : CommonInquiry<InvoiceItem>
     {
-        public override void BuildQueryExpression(ModelSource<InvoiceItem> models)
+        public override void BuildQueryExpression(ModelSource<EIVOEntityDataContext, InvoiceItem> models)
         {
             if (!String.IsNullOrEmpty(CurrentController.Request["invoiceNo"]))
             {
@@ -319,14 +527,42 @@ namespace eIVOGo.Models
 
     }
 
+    public partial class InquireAllowanceNo : CommonInquiry<InvoiceAllowance>
+    {
+        public override void BuildQueryExpression(ModelSource<EIVOEntityDataContext, InvoiceAllowance> models)
+        {
+            if (_viewModel != null && !String.IsNullOrEmpty(_viewModel.DataNo))
+            {
+                models.Items = models.Items.Where(i => i.AllowanceNumber == _viewModel.DataNo.GetEfficientString());
+                HasSet = true;
+            }
+            base.BuildQueryExpression(models);
+        }
+
+    }
+
     public partial class InquireInvoiceAgent : CommonInquiry<InvoiceItem>
     {
-        public override void BuildQueryExpression(ModelSource<InvoiceItem> models)
+        public override void BuildQueryExpression(ModelSource<EIVOEntityDataContext, InvoiceItem> models)
         {
             if (!String.IsNullOrEmpty(CurrentController.Request["agentID"]))
             {
                 HasSet = true;
                 models.Items = models.Items.Where(d => d.CDS_Document.DocumentOwner.OwnerID == int.Parse(CurrentController.Request["agentID"]));
+            }
+
+            base.BuildQueryExpression(models);
+        }
+    }
+
+    public partial class InquireAllowanceAgent : CommonInquiry<InvoiceAllowance>
+    {
+        public override void BuildQueryExpression(ModelSource<EIVOEntityDataContext, InvoiceAllowance> models)
+        {
+            if (_viewModel!=null && _viewModel.AgentID.HasValue)
+            {
+                HasSet = true;
+                models.Items = models.Items.Where(d => d.CDS_Document.DocumentOwner.OwnerID == _viewModel.AgentID);
             }
 
             base.BuildQueryExpression(models);

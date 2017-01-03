@@ -33,10 +33,12 @@ namespace eIVOGo.Controllers
             var inquireConsumption = new InquireInvoiceConsumption { ControllerName = "InquireInvoice", ActionName = "ByConsumption", CurrentController = this };
             inquireConsumption.Append(new InquireInvoiceConsumptionExtensionToPrint(inquireConsumption) { CurrentController = this });
 
-            return (new InquireEffectiveInvoice { CurrentController = this })
+            return (ModelSourceInquiry<InvoiceItem>)(new InquireEffectiveInvoice { CurrentController = this })
                 .Append(new InquireInvoiceByRole(_userProfile) { CurrentController = this })
                 .Append(inquireConsumption)
                 .Append(new InquireInvoiceSeller { ControllerName = "InquireInvoice", ActionName = "BySeller", /*QueryRequired = true, AlertMessage = "請選擇公司名稱!!",*/ CurrentController = this })
+                .Append(new InquireInvoiceBuyer { ControllerName = "InquireInvoice", ActionName = "ByBuyer", CurrentController = this })
+                .Append(new InquireInvoiceBuyerByName { ControllerName = "InquireInvoice", ActionName = "ByBuyerName", CurrentController = this })
                 .Append(new InquireInvoiceDate { ControllerName = "InquireInvoice", ActionName = "ByInvoiceDate", CurrentController = this })
                 .Append(new InquireInvoiceAttachment { ControllerName = "InquireInvoice", ActionName = "ByAttachment", CurrentController = this })
                 .Append(new InquireInvoiceNo { CurrentController = this })
@@ -78,12 +80,21 @@ namespace eIVOGo.Controllers
 
             if (items.Count() > 0)
             {
-                ViewBag.TaxNo = taxNo;
+                ViewBag.TaxNo = taxNo.GetEfficientString();
                 ViewBag.FileName = String.Format("{0:d4}{1:d2}({2}).txt", year, periodNo, items.First().Organization.ReceiptNo);
+                var orgItem = models.GetTable<Organization>().Where(o => o.CompanyID == sellerID).First();
+                if (orgItem.OrganizationExtension == null)
+                    orgItem.OrganizationExtension = new OrganizationExtension { };
+                if (orgItem.OrganizationExtension.TaxNo != (String)ViewBag.TaxNo)
+                {
+                    orgItem.OrganizationExtension.TaxNo = (String)ViewBag.TaxNo;
+                    models.SubmitChanges();
+                }
             }
             else
             {
-                ViewBag.FileName = "test.txt";
+                ViewBag.Message = "資料不存在!!";
+                return View("InvoiceMediaReport");
             }
 
             return View(items);

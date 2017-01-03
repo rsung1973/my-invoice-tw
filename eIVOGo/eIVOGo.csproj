@@ -118,6 +118,7 @@
       <HintPath>bin\QREncrypter.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data.Linq" />
@@ -348,9 +349,19 @@
     <Content Include="Inquiry\VoidInvoices.aspx" />
     <Content Include="Inquiry\PrintInvoices.aspx" />
     <Content Include="Inquiry\PrintWinningInvoices.aspx" />
-    <Content Include="login.aspx" />
+    <Content Include="Module\Inquiry\InquiryItem\InquireInvoiceBuyer.ascx" />
+    <Content Include="Module\jQuery\EnumSelector.ascx" />
+    <Content Include="Scripts\jquery.blockUI.js" />
+    <Content Include="Views\Account\AccountIndex.aspx" />
+    <Content Include="Views\Account\AccountQuery.ascx" />
+    <Content Include="Views\Account\Login.aspx" />
     <Content Include="logout.aspx" />
-    <Content Include="MainPage.aspx" />
+    <Content Include="Views\Account\Module\DataItem.ascx" />
+    <Content Include="Views\Account\Module\ItemList.ascx" />
+    <Content Include="Views\Account\Module\QueryResult.ascx" />
+    <Content Include="Views\Account\ScriptHelper\Common.ascx" />
+    <Content Include="Views\DataFlow\UserRoleSelector.ascx" />
+    <Content Include="Views\Home\MainPage.aspx" />
     <Content Include="Module\Ajax\PagingControl.ascx" />
     <Content Include="Module\Base\InquireEntity.ascx" />
     <Content Include="Module\Base\InvoiceItemBasicList.ascx" />
@@ -856,6 +867,19 @@
     <Content Include="vendor\metisMenu\metisMenu.js" />
     <Content Include="vendor\metisMenu\metisMenu.min.css" />
     <Content Include="vendor\metisMenu\metisMenu.min.js" />
+    <Content Include="Views\AllowanceProcess\Module\DataItem.ascx" />
+    <Content Include="Views\AllowanceProcess\Module\ItemList.ascx" />
+    <Content Include="Views\AllowanceProcess\Module\QueryResult.ascx" />
+    <Content Include="Views\BusinessRelationship\ImportCounterpartBusiness.aspx" />
+    <Content Include="Views\BusinessRelationship\Module\AddItem.ascx" />
+    <Content Include="Views\BusinessRelationship\Module\DataItem.ascx" />
+    <Content Include="Views\BusinessRelationship\Module\GroupMemberSelector.ascx" />
+    <Content Include="Views\BusinessRelationship\Module\ImportCounterpartBusiness.ascx" />
+    <Content Include="Views\BusinessRelationship\Module\ImportCounterpartBusinessList.ascx" />
+    <Content Include="Views\BusinessRelationship\Module\ItemList.ascx" />
+    <Content Include="Views\BusinessRelationship\Module\MaintainBusinessRelationship.ascx" />
+    <Content Include="Views\BusinessRelationship\MaintainRelationship.aspx" />
+    <Content Include="Views\BusinessRelationship\Module\QueryResult.ascx" />
     <Content Include="Views\DataExchange\Index.aspx" />
     <Content Include="Views\DataExchange\Module\DataIndex.ascx" />
     <Content Include="Views\DataFlow\SellerSelector.ascx" />
@@ -867,9 +891,11 @@
     <Content Include="Views\DonatedInvoice\ReportResult.aspx" />
     <Content Include="Views\Forms\SimpleInvoice.ascx" />
     <Content Include="Views\Handling\Index.aspx" />
+    <Content Include="Views\InquireInvoice\ByBuyerName.ascx" />
     <Content Include="Views\InquireInvoice\ByCancellation.ascx" />
     <Content Include="Views\InquireInvoice\ByInvoiceNo.ascx" />
     <Content Include="Views\InquireInvoice\ByAgent.ascx" />
+    <Content Include="Views\InquireInvoice\ByBuyer.ascx" />
     <Content Include="Views\InquireInvoice\ByWinningNumber.ascx" />
     <Content Include="Views\InquireInvoice\ByAttachment.ascx" />
     <Content Include="Views\InquireInvoice\ByDonatory.ascx" />
@@ -882,6 +908,35 @@
     <Content Include="Views\InvoiceBusiness\POSDevice\AddItem.ascx" />
     <Content Include="Views\InvoiceBusiness\POSDevice\EditItem.ascx" />
     <Content Include="Views\InvoiceBusiness\POSDevice\DataItem.ascx" />
+    <Content Include="Views\InvoiceNo\VacantNoQuery.ascx" />
+    <Content Include="Views\InvoiceNo\VacantNoIndex.aspx" />
+    <Content Include="Views\InvoiceNo\InvoiceNoIntervalManager.ascx" />
+    <Content Include="Views\InvoiceNo\MaintainInvoiceNoInterval.aspx" />
+    <Content Include="Views\InvoiceNo\Module\EditItem.ascx" />
+    <Content Include="Views\InvoiceNo\Module\AddItem.ascx" />
+    <Content Include="Views\InvoiceNo\Module\DataItem.ascx" />
+    <Content Include="Views\InvoiceNo\Module\TrackCodeSelector.ascx" />
+    <Content Include="Views\InvoiceNo\Module\IntervalItemList.ascx" />
+    <Content Include="Views\InvoiceNo\Module\QueryResult.ascx" />
+    <Content Include="Views\AllowanceProcess\Index.aspx" />
+    <Content Include="Views\AllowanceProcess\AllowanceQuery.ascx" />
+    <Content Include="Views\InvoiceNo\VacantNo\DataItem.ascx" />
+    <Content Include="Views\InvoiceNo\VacantNo\ItemList.ascx" />
+    <Content Include="Views\InvoiceNo\VacantNo\QueryResult.ascx" />
+    <Content Include="Views\InvoiceProcess\InvoiceQueryForNotice.ascx" />
+    <Content Include="Views\InvoiceProcess\IssuingNotice.aspx" />
+    <Content Include="Views\InvoiceProcess\ResultAction\DoNotify.ascx" />
+    <Content Include="Views\InvoiceProcess\ResultAction\MainQueryAction.ascx" />
+    <Content Include="Views\InvoiceProcess\InvoiceQueryBySeller.ascx" />
+    <Content Include="Views\InvoiceProcess\ScriptHelper\Notify.ascx" />
+    <Content Include="Views\InvoiceProcess\ScriptHelper\Common.ascx" />
+    <Content Include="Views\InvoiceProcess\SellerIndex.aspx" />
+    <Content Include="Views\InvoiceProcess\Index.aspx" />
+    <Content Include="Views\InvoiceProcess\InvoiceQuery.ascx" />
+    <Content Include="Views\InvoiceProcess\Module\PrintResult.ascx" />
+    <Content Include="Views\InvoiceProcess\Module\DataItem.ascx" />
+    <Content Include="Views\InvoiceProcess\Module\ItemList.ascx" />
+    <Content Include="Views\InvoiceProcess\Module\QueryResult.ascx" />
     <Content Include="Views\InvoiceQuery\InvoiceMediaReport.aspx" />
     <Content Include="Views\InvoiceQuery\InvoiceSummaryResult.aspx" />
     <Content Include="Views\InvoiceQuery\InvoiceSummaryGridPage.aspx" />
@@ -911,14 +966,29 @@
     <Content Include="Views\Sample\Sample.ascx" />
     <Content Include="Views\Sample\Sample.aspx" />
     <Content Include="Views\Sample\SampleWithDB.aspx" />
+    <Content Include="Views\Shared\AlertMessage.ascx" />
+    <Content Include="Views\Shared\CaptchaImg.ascx" />
     <Content Include="Views\Shared\GlobalScript.ascx" />
     <Content Include="Views\Shared\JsGrid.ascx" />
+    <Content Include="Views\Shared\ReportInputError.ascx" />
     <Content Include="Views\Shared\YearSelector.ascx" />
     <Content Include="Views\SiteAction\Alert.ascx" />
     <Content Include="Views\SiteAction\FunctionTitleBar.ascx" />
+    <Content Include="Views\SiteAction\SellerMenu.ascx" />
     <Content Include="Views\SiteAction\SysAdminMenu.ascx" />
     <Content Include="Views\SiteAction\PageMenuBar.ascx" />
     <Content Include="Views\TestAll\Index.aspx" />
+    <Content Include="Views\TrackCode\Module\AddItem.ascx" />
+    <Content Include="Views\TrackCode\Module\DataItem.ascx" />
+    <Content Include="Views\TrackCode\Module\EditItem.ascx" />
+    <Content Include="Views\TrackCode\Module\ItemList.ascx" />
+    <Content Include="Views\TrackCode\Module\QueryResult.ascx" />
+    <Content Include="Views\TrackCode\ScriptHelper\Common.ascx" />
+    <Content Include="Views\TrackCode\TrackCodeQuery.ascx" />
+    <Content Include="Views\TrackCode\Index.aspx" />
+    <Content Include="Views\UserProfile\EditMySelf.aspx" />
+    <Content Include="Views\UserProfile\EditUserProfile.ascx" />
+    <Content Include="Views\UserProfile\Module\ItemForm.ascx" />
     <Content Include="Views\WinningInvoice\DownloadCSV.aspx" />
     <Content Include="Views\WinningInvoice\PrintResult.aspx" />
     <Content Include="Views\WinningInvoice\ReportGridPage.aspx" />
@@ -994,6 +1064,7 @@
     <Content Include="Published\InvoiceClient%28XP-Win2003%29.zip" />
     <Content Include="Helper\GetSample.ashx" />
     <Content Include="SAM\Web.config" />
+    <Content Include="Published\ImportCompany.csv" />
     <None Include="Scripts\jquery-1.11.3.intellisense.js" />
     <Content Include="Scripts\jquery-1.11.3.js" />
     <Content Include="Scripts\jquery-1.11.3.min.js" />
@@ -1051,6 +1122,7 @@
     <Content Include="_test\MyPopupModal.ascx" />
     <Content Include="_test\DemoPrintInvoicePage.aspx" />
     <Content Include="_test\PutFiles.aspx" />
+    <Content Include="_test\TestInvoiceCancellation.aspx" />
     <Content Include="_test\TestRouteConfig.aspx" />
     <Content Include="_test\UpdateData.aspx" />
     <Content Include="_test\TestC0701.aspx" />
@@ -1341,19 +1413,30 @@
     <Content Include="template\MvcMainPage.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddOn\Published\eInvoiceService_201612.asmx.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AllowanceProcessController.cs" />
     <Compile Include="Controllers\DataExchangeController.cs" />
+    <Compile Include="Controllers\DataEntityController.cs" />
     <Compile Include="Controllers\DataFlowController.cs" />
     <Compile Include="Controllers\DonatedInvoiceController.cs" />
     <Compile Include="Controllers\HandlingController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InquireInvoiceController.cs" />
     <Compile Include="Controllers\InvoiceBusinessController.cs" />
+    <Compile Include="Controllers\InvoiceNoController.cs" />
+    <Compile Include="Controllers\InvoiceProcessController.cs" />
     <Compile Include="Controllers\OrganizationQueryController.cs" />
+    <Compile Include="Controllers\BusinessRelationshipController.cs" />
     <Compile Include="Controllers\SampleController.cs" />
     <Compile Include="Controllers\TestAllController.cs" />
+    <Compile Include="Controllers\TrackCodeController.cs" />
+    <Compile Include="Controllers\UserProfileController.cs" />
     <Compile Include="Controllers\WinningInvoiceController.cs" />
     <Compile Include="Controllers\InvoiceQueryController.cs" />
     <Compile Include="getPassword_email.aspx.cs">
@@ -1366,35 +1449,18 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helper\BusinessCounterpartUploadManager.cs" />
     <Compile Include="Helper\ExtensionMethods.cs" />
+    <Compile Include="Helper\LoginHandler.cs" />
     <Compile Include="Helper\QueryExtensionMethods.cs" />
-    <Compile Include="login.aspx.cs">
-      <DependentUpon>login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="login.aspx.designer.cs">
-      <DependentUpon>login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="logout.aspx.cs">
-      <DependentUpon>logout.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="logout.aspx.designer.cs">
-      <DependentUpon>logout.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="MainPage.aspx.cs">
-      <DependentUpon>MainPage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="MainPage.aspx.designer.cs">
-      <DependentUpon>MainPage.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Models\DataItemDefinition.cs" />
     <Compile Include="Models\DataListSource.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Models\InquireField.cs" />
     <Compile Include="Models\InquireOrganization.cs" />
+    <Compile Include="Models\ViewModel\CommonViewModel.cs" />
+    <Compile Include="Models\ViewModel\InputViewModel.cs" />
     <Compile Include="Models\ViewModel\InvoiceViewModelValidator.cs" />
     <Compile Include="Models\ViewModel\InvoiceViewModel.cs" />
     <Compile Include="Models\ViewModel\LoginViewModel.cs" />
@@ -3894,7 +3960,7 @@
       <DependentUpon>PrintInvoicePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="services\ServiceWorkItem.cs" />
-    <Compile Include="AddOn%28201311%29\Published\eInvoiceService.asmx.cs">
+    <Compile Include="AddOn\Published\eInvoiceService_201311.asmx.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="template\base_page.aspx.cs">
@@ -3940,9 +4006,7 @@
       <DependentUpon>InvoiceItemListTemplate.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\Home\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\..\Uxnet\Uxnet.Com\Uxnet.Com.csproj">
       <Project>{72edd90c-e7fe-44f4-8b9b-c9512f02d547}</Project>

@@ -9,7 +9,6 @@ using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using Model.Security.MembershipManagement;
 using Model.Resource;
-using Services;
 using Uxnet.Web.Module.Common;
 
 namespace Business.Helper
@@ -21,10 +20,9 @@ namespace Business.Helper
             get
             {
                 UserProfileMember profile;
-                if ((profile = LogonSvc.GetUserProfile(Model.UIType.WebUI)) == null)
+                if ((profile = HttpContext.Current.GetUser()) == null)
                 {
-                    HttpContext context = HttpContext.Current;
-                    context.Response.Redirect(FormsAuthentication.LoginUrl);
+                    FormsAuthentication.RedirectToLoginPage();
                 }
                 return profile;
             }
@@ -32,16 +30,15 @@ namespace Business.Helper
 
         public static void Logout()
         {
-            LogonSvc.UserLogout();
-            HttpContext context = HttpContext.Current;
-            context.Response.Redirect(FormsAuthentication.LoginUrl);
+            HttpContext.Current.Logout();
+            FormsAuthentication.RedirectToLoginPage();
         }
 
         public static bool Logon
         {
             get
             {
-                return LogonSvc.GetUserProfile(Model.UIType.WebUI) != null;
+                return UserProfile != null;
             }
         }
 

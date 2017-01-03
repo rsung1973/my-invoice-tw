@@ -33,17 +33,17 @@ namespace eIVOGo.template
         protected override void OnInit(EventArgs e)
         {
             base.OnInit(e);
-            this.Error += new EventHandler(base_page_Error);
+            //this.Error += new EventHandler(base_page_Error);
         }
 
-        void base_page_Error(object sender, EventArgs e)
-        {
-            Exception ex = Server.GetLastError();
-            if (ex != null)
-            {
-                Logger.Error(ex);
-            }
-        }
+        //void base_page_Error(object sender, EventArgs e)
+        //{
+        //    Exception ex = Server.GetLastError();
+        //    if (ex != null)
+        //    {
+        //        Logger.Error(ex);
+        //    }
+        //}
 
 
     }

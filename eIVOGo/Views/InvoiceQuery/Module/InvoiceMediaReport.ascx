@@ -6,9 +6,6 @@
 <%@ Register Src="~/Views/InquireInvoice/ByInvoiceNo.ascx" TagPrefix="uc5" TagName="ByInvoiceNo" %>
 <%@ Register Src="~/Views/InquireInvoice/ByCancellation.ascx" TagPrefix="uc5" TagName="ByCancellation" %>
 
-
-
-
 <%@ Import Namespace="System.IO" %>
 <%@ Import Namespace="System.Linq.Expressions" %>
 <%@ Import Namespace="System.Web.Mvc.Html" %>
@@ -19,9 +16,8 @@
 <%@ Import Namespace="Model.Locale" %>
 <%@ Import Namespace="Utility" %>
 <%@ Import Namespace="Uxnet.Web.WebUI" %>
-<uc5:PageAction ID="actionItem" runat="server" ItemName="首頁 > 資料管理" />
 <!--交易畫面標題-->
-<uc6:FunctionTitleBar ID="functionTitle" runat="server" ItemName="發票媒體申報檔匯出" />
+<%  Html.RenderPartial("~/Views/SiteAction/FunctionTitleBar.ascx", "發票媒體申報檔查詢／匯出"); %>
 <div class="border_gray">
     <!--表格 開始-->
     <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left_title">
@@ -34,6 +30,23 @@
             </th>
             <td class="tdleft">
                 <%  Html.RenderAction("SellerSelector", "DataFlow"); %>
+                <script>
+                    $(function () {
+                        function getTaxNo(sellerID) {
+                            $.post('<%= Url.Action("OrganizationExtension","DataEntity") %>', { 'id': sellerID }, function (data) {
+                                if (data) {
+                                    $('input[name="taxNo"]').val(data.TaxNo);
+                                }
+                            });
+                        }
+                        $('select[name="SellerID"]').on('change', function (evt) {
+                            getTaxNo($(this).val())
+                        });
+
+                        getTaxNo($('select[name="SellerID"]').val());
+
+                    });
+                </script>
             </td>
         </tr>        
         <tr>
@@ -55,12 +68,10 @@
             </th>
             <td class="tdleft">
                 <select name="periodNo">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
+                    <%  for (int y = 1; y < 7; y++)
+                        { %>
+                    <option value="<%= y %>"><%= String.Format("{0:00}-{1:00}月",y*2-1,y*2) %></option>
+                    <%  } %>
                 </select>
                 <script>
                     $(function(){
@@ -79,11 +90,36 @@
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
     <tr>
         <td class="Bargain_btn">
-            <input type="button" value="查詢" name="btnQuery" class="btn" onclick="$('form').prop('action', '<%= Url.Action(ViewBag.QueryAction) %>    ').submit();" />
+            <input type="button" value="查詢" name="btnQuery" class="btn" onclick="uiMediaReport.download();" />
         </td>
     </tr>
 </table>
-<!--表格 開始-->
+<script>
+    var uiMediaReport;
+    $(function () {
+        var $postForm;
+        uiMediaReport = {
+
+            download: function () {
+                if ($postForm) {
+                    $postForm.remove();
+                }
+
+                $postForm = $('<form method="post" />').prop('action', '<%= Url.Action("InquireInvoiceMedia","InvoiceQuery") %>')
+                    .css('display', 'none').appendTo($('body'));
+
+                $('#theForm').serializeArray().forEach(function (item, index) {
+                    $('<input type="hidden">')
+                        .prop('name', item.name).prop('value', item.value)
+                        .appendTo($postForm);
+                });
+                $postForm.submit();
+                //showLoading();
+            },
+        };
+    });
+</script>
+
 <script runat="server">
 
 

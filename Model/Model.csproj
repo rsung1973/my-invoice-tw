@@ -242,14 +242,26 @@
     <Compile Include="Schema\MIG3_1\E0401.cs">
       <DependentUpon>E0401.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Schema\MIG3_1\E0402.cs">
-      <DependentUpon>E0402.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Schema\MIG3_1\E0501.cs">
       <DependentUpon>E0501.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Schema\TurnKey\A0101.cs">
+      <DependentUpon>A0101.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\TurnKey\A0102.cs">
+      <DependentUpon>A0102.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Schema\TurnKey\A0201.cs">
       <DependentUpon>A0201.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\TurnKey\A0202.cs">
+      <DependentUpon>A0202.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\TurnKey\A0301.cs">
+      <DependentUpon>A0301.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\TurnKey\A0302.cs">
+      <DependentUpon>A0302.xsd</DependentUpon>
     </Compile>
     <Compile Include="Schema\TurnKey\A0401.cs">
       <DependentUpon>A0401.xsd</DependentUpon>
@@ -257,14 +269,26 @@
     <Compile Include="Schema\TurnKey\A0501.cs">
       <DependentUpon>A0501.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Schema\TurnKey\A0601.cs">
+      <DependentUpon>A0601.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Schema\TurnKey\A1101.cs">
       <DependentUpon>A1101.xsd</DependentUpon>
     </Compile>
     <Compile Include="Schema\TurnKey\A1401.cs">
       <DependentUpon>A1401.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Schema\TurnKey\B0101.cs">
+      <DependentUpon>B0101.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\TurnKey\B0102.cs">
+      <DependentUpon>B0102.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Schema\TurnKey\B0201.cs">
       <DependentUpon>B0201.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\TurnKey\B0202.cs">
+      <DependentUpon>B0202.xsd</DependentUpon>
     </Compile>
     <Compile Include="Schema\TurnKey\B0401.cs">
       <DependentUpon>B0401.xsd</DependentUpon>
@@ -278,8 +302,32 @@
     <Compile Include="Schema\TurnKey\B1401.cs">
       <DependentUpon>B1401.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Schema\TurnKey\C0401.cs">
+      <DependentUpon>C0401.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\TurnKey\C0501.cs">
+      <DependentUpon>C0501.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\TurnKey\C0601.cs">
+      <DependentUpon>C0601.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Schema\TurnKey\C0701.cs">
       <DependentUpon>C0701.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\TurnKey\D0401.cs">
+      <DependentUpon>D0401.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\TurnKey\D0501.cs">
+      <DependentUpon>D0501.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\TurnKey\E0401.cs">
+      <DependentUpon>E0401.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\TurnKey\E0402.cs">
+      <DependentUpon>E0402.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\TurnKey\E0501.cs">
+      <DependentUpon>E0501.xsd</DependentUpon>
     </Compile>
     <Compile Include="Schema\TurnKey\ResponseType.cs" />
     <Compile Include="SCM\SCMEntityManager.cs" />
@@ -482,9 +530,6 @@
     <None Include="Schema\MIG3_1\E0401.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Schema\MIG3_1\E0402.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Schema\MIG3_1\E0501.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -566,7 +611,19 @@
     <None Include="Schema\TurnKey\D0501.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Schema\TurnKey\E0401.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\TurnKey\E0402.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\TurnKey\E0501.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Schema\TurnKey\GenericType_3.0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schema\TurnKey\GenericType_3.1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="SCMDataEntity\SCMEntity.dbml">

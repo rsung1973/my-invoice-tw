@@ -87,7 +87,7 @@
                         </marquee>
                         <!--跑馬燈結束-->
                     </td>
-                    <td nowrap="nowrap"><span>[ <a id="A1" runat="server" enableviewstate="false" href="~/MainPage.aspx">首頁</a> ]</span><span>登入：<asp:Label
+                    <td nowrap="nowrap"><span>[ <a id="A1" runat="server" enableviewstate="false" href="~/Home/MainPage">首頁</a> ]</span><span>登入：<asp:Label
                     ID="lblRole" runat="server"></asp:Label></span><span>登入日期：<% =DateTime.Now.ToShortDateString() %></span></td>
                 </tr>
             </table>            

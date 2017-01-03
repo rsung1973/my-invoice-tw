@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns="urn:GEINV:eInvoiceMessage:A0501:3.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-targetNamespace="urn:GEINV:eInvoiceMessage:A0501:3.0" elementFormDefault="qualified"
+<xsd:schema xmlns="urn:GEINV:eInvoiceMessage:A0501:3.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+targetNamespace="urn:GEINV:eInvoiceMessage:A0501:3.1" elementFormDefault="qualified"
 attributeFormDefault="unqualified">
-    <xsd:include schemaLocation="GenericType_3.0.xsd"/>
+    <xsd:include schemaLocation="GenericType_3.1.xsd"/>
     <!--  作廢發票: A0501 -->
     <xsd:element name="CancelInvoice">
         <xsd:complexType>
@@ -31,14 +31,16 @@ attributeFormDefault="unqualified">
                 <xsd:element name="CancelDate" type="DateType"/>
                 <!--  作廢時間  -->
                 <xsd:element name="CancelTime" type="TimeType"/>
-                <!--  專案退稅核准文號  -->
+                <!--  發票作廢原因-->
                 <xsd:element name="CancelReason">
                     <xsd:simpleType>
                         <xsd:restriction base="xsd:string">
+                            <xsd:minLength value="1"/>
                             <xsd:maxLength value="20"/>
                         </xsd:restriction>
                     </xsd:simpleType>
                 </xsd:element>
+                <!--  專案退稅核准文號  -->
                 <xsd:element name="ReturnTaxDocumentNumber" minOccurs="0">
                     <xsd:simpleType>
                         <xsd:restriction base="xsd:string">

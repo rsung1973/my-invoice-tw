@@ -2498,7 +2498,7 @@ namespace Model.InvoiceManagement
                     RoleRemark = invoice.Main.Seller.RoleRemark,
                     Organization = seller
                 },
-                InvoiceDate = DateTime.ParseExact(String.Format("{0}", invoice.Main.InvoiceDate), "yyyyMMdd", System.Globalization.CultureInfo.CurrentCulture).Add(invoice.Main.InvoiceTimeSpecified ? invoice.Main.InvoiceTime.TimeOfDay : TimeSpan.Zero),
+                InvoiceDate = DateTime.ParseExact(String.Format("{0}", invoice.Main.InvoiceDate), "yyyyMMdd", System.Globalization.CultureInfo.CurrentCulture).Add(invoice.Main.InvoiceTime),
                 InvoiceType = (byte)((int)invoice.Main.InvoiceType),
                 No = invNo,
                 TrackCode = trackCode,
@@ -2509,12 +2509,12 @@ namespace Model.InvoiceManagement
                 DonateMark = ((int)invoice.Main.DonateMark).ToString(),
                 CustomsClearanceMark = invoice.Main.CustomsClearanceMarkSpecified ? ((int)invoice.Main.CustomsClearanceMark).ToString() : null,
                 GroupMark = invoice.Main.GroupMark,
-                PermitDate = String.IsNullOrEmpty(invoice.Main.PermitDate) ? (DateTime?)null : DateTime.ParseExact(invoice.Main.PermitDate, "yyyyMMdd", System.Globalization.CultureInfo.CurrentCulture),
-                PermitNumber = invoice.Main.PermitNumber,
-                PermitWord = invoice.Main.PermitWord,
+                //PermitDate = String.IsNullOrEmpty(invoice.Main.PermitDate) ? (DateTime?)null : DateTime.ParseExact(invoice.Main.PermitDate, "yyyyMMdd", System.Globalization.CultureInfo.CurrentCulture),
+                //PermitNumber = invoice.Main.PermitNumber,
+                //PermitWord = invoice.Main.PermitWord,
                 RelateNumber = invoice.Main.RelateNumber,
                 Remark = invoice.Main.MainRemark,
-                TaxCenter = invoice.Main.TaxCenter,
+                //TaxCenter = invoice.Main.TaxCenter,
                 InvoiceAmountType = new InvoiceAmountType
                 {
                     DiscountAmount = invoice.Amount.DiscountAmountSpecified ? invoice.Amount.DiscountAmount : (decimal?)null,

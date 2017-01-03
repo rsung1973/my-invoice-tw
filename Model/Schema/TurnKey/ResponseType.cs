@@ -119,7 +119,7 @@ namespace Model.Schema.TurnKey
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName = "A1401",Namespace="urn:GEINV:eInvoiceMessage:A1401:3.0" /*AnonymousType = true*/)]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName = "A1401",Namespace="urn:GEINV:eInvoiceMessage:A1401:3.1" /*AnonymousType = true*/)]
     public partial class RootResponseSingleA1401 : RootResponse
     {
 

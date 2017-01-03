@@ -4,7 +4,7 @@
 <%@ Import Namespace="eIVOGo.Helper" %>
 <asp:Content ID="header" ContentPlaceHolderID="headContent" runat="server">
 </asp:Content>
-<asp:Content ID="mainContent" ContentPlaceHolderID="mainContent" runat="server">
+<asp:Content ID="mainContent" ContentPlaceHolderID="formContent" runat="server">
     <uc1:InvoiceReport runat="server" ID="InvoiceReport" />
 </asp:Content>
 <script runat="server">

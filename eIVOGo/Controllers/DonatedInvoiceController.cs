@@ -20,7 +20,7 @@ namespace eIVOGo.Controllers
             UserProfileMember userProfile = WebPageUtility.UserProfile;
 
 
-            return (new InquireDonatedInvoice { ControllerName = "InquireInvoice", ActionName = "ByDonation", CurrentController = this })
+            return (ModelSourceInquiry<InvoiceItem>)(new InquireDonatedInvoice { ControllerName = "InquireInvoice", ActionName = "ByDonation", CurrentController = this })
                 .Append(new InquireInvoiceByRole(userProfile) { CurrentController = this })
                 .Append(new InquireInvoiceSeller { ControllerName = "InquireInvoice", ActionName = "BySeller", CurrentController = this })
                 .Append(new InquireInvoiceDate { ControllerName = "InquireInvoice", ActionName = "ByInvoiceDate", CurrentController = this })

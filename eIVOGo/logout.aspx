@@ -1,5 +1,6 @@
-﻿<%@ Page Title="" Language="C#"  AutoEventWireup="true" CodeBehind="logout.aspx.cs" Inherits="eIVOGo.logout" StylesheetTheme="Login" %>
-<html xmlns="http://www.w3.org/1999/xhtml">
+﻿<%@ Page Title="" Language="C#" AutoEventWireup="true" Inherits="System.Web.Mvc.ViewPage" StylesheetTheme="Login" %>
+<%@ Import Namespace="Business.Helper" %>
+<html>
 <head id="Head1" runat="server">
     <title>電子發票系統</title>
 <script type="text/javascript" language="javascript">
@@ -23,3 +24,11 @@
     </div>
 </body>
 </html>
+<script runat="server">
+    protected override void OnInit(EventArgs e)
+    {
+        base.OnInit(e);
+        Context.Logout();
+        FormsAuthentication.RedirectToLoginPage();
+    }
+</script>

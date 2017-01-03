@@ -36,6 +36,16 @@ namespace Model.Locale
             開立發票店家代理 = 20,
         }
 
+        public enum MemberCategoryID
+        {
+            發票開立人 = 15,	            //	2	賣方	     sketch_seller.gif
+            相對營業人 = 16,	            //	3	買方	     sketch_buyer.gif
+            GOOGLE_Taiwan = 17,              //  4   Google台灣
+            集團成員 = 18,
+            店家發票自動配號 = 19,
+            開立發票店家代理 = 20,                    //  5   發票開立代理
+        }
+
         public enum RoleID
         {
             ROLE_SYS = 1,	                            //	1	系統公司	 sketch_admin.gif
@@ -48,6 +58,20 @@ namespace Model.Locale
             相對營業人 = 62,
             集團成員_自動開立接收 = 63
         }
+
+        public enum EIVOUserRoleID
+        {
+            系統管理員 = 1,	                            //	1	系統公司	 sketch_admin.gif
+            會員 = 51,	                        //	2	賣方	     sketch_seller.gif
+            買受人 = 52,	                        //	3	買方	     sketch_buyer.gif
+            訪客 = 53,
+            //ROLE_NETWORKSELLER = 54,                    //  4   網購業者
+            GOOGLE台灣 = 55,                         //  5   GOOGLE台灣
+            //集團成員 = 61,
+            //相對營業人 = 62,
+            //集團成員_自動開立接收 = 63
+        }
+
 
         public enum RoleQueryDefinition
         {
@@ -96,6 +120,14 @@ namespace Model.Locale
             Wait_For_Check = 1102,                      //1102	等待回覆確認	等待回覆確認
             Checked = 1103                              //1103	人員已確認	    人員已確認
         }
+
+        public enum BusinessRelationshipStatus
+        {
+            註記停用 = 1101,                      //1101	註記停用	    註記停用
+            等待回覆確認 = 1102,                      //1102	等待回覆確認	等待回覆確認
+            人員已確認 = 1103                              //1103	人員已確認	    人員已確認
+        }
+
 
         public enum CACatalogDefinition
         {
@@ -356,6 +388,12 @@ namespace Model.Locale
         {
             FromWeb = 0,
             FromGW=1
+        }
+
+        public enum EnterpriseGroup
+        {
+            SOGO百貨 = 1,
+            網際優勢股份有限公司 = 2
         }
 
         public enum DataResultMode

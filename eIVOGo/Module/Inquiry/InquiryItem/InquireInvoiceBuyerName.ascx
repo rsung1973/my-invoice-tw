@@ -5,7 +5,7 @@
 <%@ Import Namespace="Model.DataEntity" %>
 <%@ Import Namespace="Utility" %>
 <tr>
-    <th>客戶名稱</th>
+    <th>買受人名稱</th>
     <td class="tdleft">
         <input name="buyerName" type="text" value="<%= Request["buyerName"] %>" size="64" />
     </td>

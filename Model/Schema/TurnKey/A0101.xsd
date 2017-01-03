@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns="urn:GEINV:eInvoiceMessage:A0101:3.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-targetNamespace="urn:GEINV:eInvoiceMessage:A0101:3.0" elementFormDefault="qualified"
+<xsd:schema xmlns="urn:GEINV:eInvoiceMessage:A0101:3.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+targetNamespace="urn:GEINV:eInvoiceMessage:A0101:3.1" elementFormDefault="qualified"
 attributeFormDefault="unqualified">
-    <xsd:include schemaLocation="GenericType_3.0.xsd"/>
+    <xsd:include schemaLocation="GenericType_3.1.xsd"/>
     <!--  開立發票  A0101-->
     <xsd:element name="Invoice">
         <xsd:complexType>
@@ -24,7 +24,7 @@ attributeFormDefault="unqualified">
             <!--  發票日期  -->
             <xsd:element name="InvoiceDate" type="DateType"/>
             <!--  發票時間  -->
-            <xsd:element name="InvoiceTime" type="TimeType" minOccurs="0"/>
+            <xsd:element name="InvoiceTime" type="TimeType" />
             <!--  賣方  -->
             <xsd:element name="Seller">
                 <xsd:complexType mixed="false">
@@ -37,7 +37,7 @@ attributeFormDefault="unqualified">
                     <xsd:group ref="RoleDescriptionType"/>
                 </xsd:complexType>
             </xsd:element>
-            <!--  發票檢查碼 -->
+            <!--  發票檢查碼   -->
             <xsd:element name="CheckNumber" minOccurs="0">
                 <xsd:simpleType>
                     <xsd:restriction base="xsd:string">
@@ -56,33 +56,7 @@ attributeFormDefault="unqualified">
                 </xsd:simpleType>
             </xsd:element>
             <!--  通關方式註記  -->
-            <xsd:element name="CustomsClearanceMark" type="CustomsClearanceMarkEnum"  minOccurs="0"/>
-            <!--  稅捐稽徵處名稱  -->
-            <xsd:element name="TaxCenter" minOccurs="0">
-                <xsd:simpleType>
-                    <xsd:restriction base="xsd:string">
-                        <xsd:maxLength value="40"/>
-                    </xsd:restriction>
-                </xsd:simpleType>
-            </xsd:element>
-            <!--  核准日期  -->
-            <xsd:element name="PermitDate" type="DateType" minOccurs="0"/>
-            <!--  核准文  -->
-            <xsd:element name="PermitWord" minOccurs="0">
-                <xsd:simpleType>
-                    <xsd:restriction base="xsd:string">
-                        <xsd:maxLength value="40"/>
-                    </xsd:restriction>
-                </xsd:simpleType>
-            </xsd:element>
-            <!--  核准號  -->
-            <xsd:element name="PermitNumber" minOccurs="0">
-                <xsd:simpleType>
-                    <xsd:restriction base="xsd:string">
-                        <xsd:maxLength value="20"/>
-                    </xsd:restriction>
-                </xsd:simpleType>
-            </xsd:element>
+            <xsd:element name="CustomsClearanceMark" type="CustomsClearanceMarkEnum" minOccurs="0"/>
             <!--  沖帳別  -->
             <xsd:element name="Category" minOccurs="0">
                 <xsd:simpleType>
@@ -131,6 +105,7 @@ attributeFormDefault="unqualified">
                         <xsd:element name="Description">
                             <xsd:simpleType>
                                 <xsd:restriction base="xsd:string">
+                                    <xsd:minLength value="1"/>
                                     <xsd:maxLength value="256"/>
                                 </xsd:restriction>
                             </xsd:simpleType>
@@ -141,7 +116,6 @@ attributeFormDefault="unqualified">
                                 <xsd:restriction base="xsd:decimal">
                                     <xsd:totalDigits value="20"/>
                                     <xsd:fractionDigits value="7"/>
-                                    <xsd:minInclusive value="0"/>
                                 </xsd:restriction>
                             </xsd:simpleType>
                         </xsd:element>
@@ -175,6 +149,7 @@ attributeFormDefault="unqualified">
                         <xsd:element name="SequenceNumber">
                             <xsd:simpleType>
                                 <xsd:restriction base="xsd:string">
+                                    <xsd:minLength value="1"/>
                                     <xsd:maxLength value="3"/>
                                 </xsd:restriction>
                             </xsd:simpleType>

@@ -67,6 +67,24 @@ namespace eIVOGo.Module.JsGrid {
         protected global::eIVOGo.Module.Inquiry.InquiryItem.InquireInvoice inquireCustomerID;
         
         /// <summary>
+        /// inquireBuyer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::eIVOGo.Module.Inquiry.InquiryItem.InquireInvoice inquireBuyer;
+        
+        /// <summary>
+        /// inquireBuyerName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::eIVOGo.Module.Inquiry.InquiryItem.InquireInvoice inquireBuyerName;
+        
+        /// <summary>
         /// inquireDate control.
         /// </summary>
         /// <remarks>

@@ -10,32 +10,58 @@
 <cc1:OrganizationDataSource ID="dsEntity" runat="server">
 </cc1:OrganizationDataSource>
 <script runat="server">
-    UserProfileMember _userProfile;
+
     protected override void OnInit(EventArgs e)
     {
-        _userProfile = WebPageUtility.UserProfile;
         base.OnInit(e);
-        var userProfile = Business.Helper.WebPageUtility.UserProfile;
+
+        var userProfile = WebPageUtility.UserProfile;
         var mgr = ((OrganizationDataSource)dsEntity).CreateDataManager();
-        
-        if (_userProfile.CurrentUserRole.OrganizationCategory.CategoryID == (int)Naming.B2CCategoryID.開立發票店家代理)
+        IQueryable<Organization> orgItems = mgr.GetTable<Organization>();
+        switch ((Naming.CategoryID)userProfile.CurrentUserRole.OrganizationCategory.CategoryID)
         {
-            selector.DataSource = mgr.EntityList
+            case Naming.CategoryID.COMP_SYS:
+                selector.DataSource = orgItems.Where(
+                    o => o.OrganizationCategory.Any(
+                        c => c.CategoryID == (int)Naming.CategoryID.COMP_E_INVOICE_B2C_SELLER 
+                            || c.CategoryID == (int)Naming.CategoryID.COMP_VIRTUAL_CHANNEL
+                            || c.CategoryID == (int)Naming.CategoryID.COMP_E_INVOICE_GOOGLE_TW
+                            || c.CategoryID == (int)Naming.CategoryID.COMP_INVOICE_AGENT))
+                        .OrderBy(o => o.ReceiptNo)
+                        .Select(o => new
+                        {
+                            Expression = String.Format("{0} {1}", o.ReceiptNo, o.CompanyName),
+                            o.CompanyID
+                        });                
+                break;
+            case Naming.CategoryID.COMP_INVOICE_AGENT:
+                selector.DataSource = mgr.GetQueryByAgent(userProfile.CurrentUserRole.OrganizationCategory.CompanyID)
+                        .OrderBy(o => o.ReceiptNo)
+                        .Select(o => new
+                        {
+                            Expression = String.Format("{0} {1}", o.ReceiptNo, o.CompanyName),
+                            o.CompanyID
+                        });              
 
-                .Join(mgr.GetTable<InvoiceIssuerAgent>(), o => o.CompanyID, a => a.AgentID, (o, a) => o);
+                break;
                 
-        }
-        else
-        {
+            case Naming.CategoryID.COMP_E_INVOICE_B2C_SELLER:
+            case Naming.CategoryID.COMP_VIRTUAL_CHANNEL:
+            case Naming.CategoryID.COMP_E_INVOICE_GOOGLE_TW:
+                selector.DataSource = orgItems.Where(
+                    o => o.CompanyID == userProfile.CurrentUserRole.OrganizationCategory.CompanyID)
+                        .Select(o => new
+                        {
+                            Expression = String.Format("{0} {1}", o.ReceiptNo, o.CompanyName),
+                            o.CompanyID
+                        });
 
-            selector.DataSource = mgr.EntityList.Where(o => o.OrganizationCategory
-            .Any(c => c.CategoryID == (int)Naming.B2CCategoryID.Google台灣
-                || c.CategoryID == (int)Naming.B2CCategoryID.店家
-                || c.CategoryID == (int)Naming.B2CCategoryID.店家發票自動配號
-                || c.CategoryID == (int)Naming.B2CCategoryID.開立發票店家代理))
-            .OrderBy(o => o.ReceiptNo).Select(o => new { Expression = String.Format("{0} {1}", o.ReceiptNo, o.CompanyName), o.CompanyID });
-            
-        }
+                break;
+
+            default:
+                break;
+        }  
+
         this.PreRender += new EventHandler(module_eivo_forseller_masterbusinessselector_ascx_PreRender);
     }
 
@@ -43,33 +69,7 @@
     {
         if (!_isBound)
         {
-            var userProfile = Business.Helper.WebPageUtility.UserProfile;
-            var mgr = ((OrganizationDataSource)dsEntity).CreateDataManager();
-
-            if (_userProfile.CurrentUserRole.OrganizationCategory.CategoryID == (int)Naming.B2CCategoryID.開立發票店家代理)
-            {
-                selector.DataSource = mgr.EntityList
-
-                    .Join(mgr.GetTable<InvoiceIssuerAgent>().Where(a => a.AgentID == _userProfile.CurrentUserRole.OrganizationCategory.CompanyID)
-                    , o => o.CompanyID, a => a.IssuerID, (o, a) => o)
-                    .Concat(mgr.EntityList.Where(o => o.CompanyID == _userProfile.CurrentUserRole.OrganizationCategory.CompanyID))
-                    .OrderBy(o => o.ReceiptNo).Select(o => new { Expression = String.Format("{0} {1}", o.ReceiptNo, o.CompanyName), o.CompanyID });
-
-            }
-            else
-            {
-
-                selector.DataSource = mgr.EntityList.Where(o => o.OrganizationCategory
-                .Any(c => c.CategoryID == (int)Naming.B2CCategoryID.Google台灣
-                    || c.CategoryID == (int)Naming.B2CCategoryID.店家
-                    || c.CategoryID == (int)Naming.B2CCategoryID.店家發票自動配號
-                    || c.CategoryID == (int)Naming.B2CCategoryID.開立發票店家代理))
-                .OrderBy(o => o.ReceiptNo).Select(o => new { Expression = String.Format("{0} {1}", o.ReceiptNo, o.CompanyName), o.CompanyID });
-
-            }
-            //selector.DataSource = this.Select().OrderBy(o => o.ReceiptNo).Select(o => new { Expression = String.Format("{0} {1}", o.ReceiptNo, o.CompanyName), o.CompanyID });
             selector.DataBind();
-           
         }
     }
 

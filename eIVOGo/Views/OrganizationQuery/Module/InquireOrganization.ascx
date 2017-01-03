@@ -73,6 +73,7 @@
         $('form').ajaxForm({
             url: "<%= Url.Action("InquireCompany","OrganizationQuery") %>" + "?pageIndex=" + pageNum,
             beforeSubmit: function () {
+                showLoading();
             },
             success: function (data) {
                 if (data) {
@@ -85,8 +86,10 @@
                         $('.queryAction').after($result);
                     }
                 }
+                hideLoading();
             },
             error: function () {
+                hideLoading();
             }
         }).submit();
     }

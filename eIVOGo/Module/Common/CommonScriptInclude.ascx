@@ -10,7 +10,11 @@
 <script type="text/javascript" src="<%=VirtualPathUtility.ToAbsolute("~/vendor/metisMenu/metisMenu.min.js") %>"></script>
 <script type="text/javascript" src="<%=VirtualPathUtility.ToAbsolute("~/Scripts/sb-admin-2.js") %>"></script>
 <script type="text/javascript" src="<%=VirtualPathUtility.ToAbsolute("~/Scripts/math.min.js") %>"></script>
+<script type="text/javascript" src="<%=VirtualPathUtility.ToAbsolute("~/Scripts/jquery.blockUI.js") %>"></script>
 <script>
+
+    var $global = {};
+
     $.fn.serializeObject = function () {
         var o = {};
         var a = this.serializeArray();
@@ -26,4 +30,97 @@
         });
         return o;
     };
+
+    function showLoading(autoHide,onBlock) {
+        $.blockUI({
+            message:  '<img src="<%= VirtualPathUtility.ToAbsolute("~/images/loading.gif") %>" /><h1>Loading</h1>', 
+            css: {
+                border: 'none',
+                padding: '15px',
+                backgroundColor: '#000',
+                '-webkit-border-radius': '10px',
+                '-moz-border-radius': '10px',
+                opacity: .5,
+                color: '#fff'
+            },
+            // 背景圖層
+            overlayCSS:  { 
+                backgroundColor: '#3276B1', 
+                opacity:         0.6, 
+                cursor:          'wait' 
+            },
+            onBlock: onBlock
+        });
+
+        if(autoHide)
+            setTimeout($.unblockUI, 5000);
+    }
+
+    function hideLoading() {
+        $.unblockUI();
+    }
+
+    function initSort (sort,offset) {
+
+        $('.itemList th').each(function (idx, elmt) {
+            var $this = $(this);
+            if(sort.indexOf(idx+offset)>=0) {
+                $this.attr('aria-sort', 'ascending');
+                $this.append('<i class="fa fa-sort-asc" aria-hidden="true"></i>')
+                    .append($('<input type="hidden" name="sort"/>').val(idx+1));
+            } else if(sort.indexOf(-idx-offset)>=0) {
+                $this.attr('aria-sort', 'desending');
+                $this.append('<i class="fa fa-sort-desc" aria-hidden="true"></i>')
+                    .append($('<input type="hidden" name="sort"/>').val(-idx-1));
+            }
+        });
+    }
+
+    function buildSort(inquire, currentPageIndex, offset) {
+
+        var chkBox = $(".itemList input[name='chkAll']");
+        var chkItem = $(".itemList input[name='chkItem']");
+        chkBox.click(function () {
+            chkItem.prop('checked', chkBox.is(':checked'));
+        });
+
+        chkItem.click(function (e) {
+            if (!$(this).is(':checked')) {
+                chkBox.prop('checked', false);
+            }
+        });
+
+        $('.itemList th').each(function (idx, elmt) {
+            var $this = $(this);
+            if (!$this.is('[aria-sort="other"]')) {
+                if (!$this.is('[aria-sort]')) {
+                    $this.append('<i class="fa fa-sort" aria-hidden="true"></i>')
+                        .append('<input type="hidden" name="sort"/>');
+                    $this.attr('aria-sort', 'none');
+                }
+                $this.on('click', function (evt) {
+                    var $target = $(this);
+                    $target.find('i').remove();
+                    if ($target.is('[aria-sort="none"]')) {
+                        $target.append('<i class="fa fa-sort-asc" aria-hidden="true"></i>');
+                        $target.attr('aria-sort', 'ascending');
+                        $target.find('input[name="sort"]').val(idx + offset);
+                    } else if ($target.is('[aria-sort="ascending"]')) {
+                        $target.append('<i class="fa fa-sort-desc" aria-hidden="true"></i>');
+                        $target.attr('aria-sort', 'descending');
+                        $target.find('input[name="sort"]').val(-idx - offset);
+                    } else {
+                        $target.append('<i class="fa fa-sort" aria-hidden="true"></i>');
+                        $target.attr('aria-sort', 'none');
+                        $target.find('input[name="sort"]').val('');
+                    }
+                    inquire(currentPageIndex, function (data) {
+                        var $node = $('.itemList').next();
+                        $('.itemList').remove();
+                        $node.before(data);
+                    });
+                });
+            }
+        });
+    }
 </script>

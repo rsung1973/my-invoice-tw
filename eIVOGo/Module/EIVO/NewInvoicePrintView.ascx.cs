@@ -36,7 +36,7 @@ namespace eIVOGo.Module.EIVO
         {
             if (IsSysAdmin == true)
             {
-                _userProfile = Services.LogonSvc.CreateUserProfile(Settings.Default.SystemAdmin);
+                _userProfile = UserProfileFactory.CreateInstance(Settings.Default.SystemAdmin);
                 if (_userProfile == null)
                 {
                     throw new Exception("SystemAdmin Not Found!!");

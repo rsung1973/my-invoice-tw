@@ -9,58 +9,24 @@ using Model.Locale;
 
 namespace eIVOGo.Controllers
 {
-    public class InquireInvoiceController : Controller
+    public class InquireInvoiceController : SampleController<InvoiceItem>
     {
-        public ActionResult BySeller()
+        public ActionResult BySeller(String fieldName,String title)
         {
+            ViewBag.FieldName = fieldName ?? "sellerID";
+            ViewBag.Title = title ?? "統編";
             var userProfile = Business.Helper.WebPageUtility.UserProfile;
-            var mgr = TempData.InvokeModelSource<Organization>();
-            IEnumerable<SelectListItem> items = null;
-            IQueryable<Organization> orgItems = mgr.GetTable<Organization>();
+            var orgItems = userProfile.InitializeOrganizationQuery(models);
+            return View(orgItems);
+        }
 
-            switch ((Naming.CategoryID)userProfile.CurrentUserRole.OrganizationCategory.CategoryID)
-            {
-                case Naming.CategoryID.COMP_SYS:
-                    items = orgItems.Where(
-                        o => o.OrganizationCategory.Any(
-                            c => c.CategoryID == (int)Naming.CategoryID.COMP_E_INVOICE_B2C_SELLER
-                                || c.CategoryID == (int)Naming.CategoryID.COMP_VIRTUAL_CHANNEL
-                                || c.CategoryID == (int)Naming.CategoryID.COMP_E_INVOICE_GOOGLE_TW
-                                || c.CategoryID == (int)Naming.CategoryID.COMP_INVOICE_AGENT))
-                            .OrderBy(o => o.ReceiptNo)
-                            .Select(o => new SelectListItem
-                            {
-                                Text = String.Format("{0} {1}", o.ReceiptNo, o.CompanyName),
-                                Value = o.CompanyID.ToString()
-                            });
-                    break;
-                case Naming.CategoryID.COMP_INVOICE_AGENT:
-                    items = mgr.GetQueryByAgent(userProfile.CurrentUserRole.OrganizationCategory.CompanyID)
-                            .OrderBy(o => o.ReceiptNo)
-                            .Select(o => new SelectListItem
-                            {
-                                Text = String.Format("{0} {1}", o.ReceiptNo, o.CompanyName),
-                                Value = o.CompanyID.ToString()
-                            });
-
-                    break;
-
-                case Naming.CategoryID.COMP_E_INVOICE_B2C_SELLER:
-                case Naming.CategoryID.COMP_VIRTUAL_CHANNEL:
-                case Naming.CategoryID.COMP_E_INVOICE_GOOGLE_TW:
-                    items = orgItems.Where(
-                        o => o.CompanyID == userProfile.CurrentUserRole.OrganizationCategory.CompanyID)
-                            .Select(o => new SelectListItem
-                            {
-                                Text = String.Format("{0} {1}", o.ReceiptNo, o.CompanyName),
-                                Value = o.CompanyID.ToString()
-                            });
-
-                    break;
-                default:
-                    break;
-            }
-            return View(items);
+        public ActionResult ByBuyer()
+        {
+            return View();
+        }
+        public ActionResult ByBuyerName()
+        {
+            return View();
         }
 
         public ActionResult ByInvoiceDate()

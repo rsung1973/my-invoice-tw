@@ -70,7 +70,8 @@ namespace eIVOGo.Module.SAM
             if (_entity != null)
             {
                 modelItem.DataItem = _entity.CompanyID;
-                this.InvoiceType.SelectedValue = _entity.OrganizationStatus.SettingInvoiceType.Value.ToString();
+                if (_entity.OrganizationStatus.SettingInvoiceType.HasValue)
+                    this.InvoiceType.SelectedValue = _entity.OrganizationStatus.SettingInvoiceType.Value.ToString();
             }
             else
             {

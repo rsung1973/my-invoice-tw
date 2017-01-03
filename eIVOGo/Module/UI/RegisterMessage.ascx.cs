@@ -73,7 +73,7 @@ namespace eIVOGo.Module.UI
 
         protected void btnBackHome_Click(object sender, EventArgs e)
         {
-            Response.Redirect("../MainPage.aspx");
+            Response.Redirect("~/Home/MainPage");
         }
 
         protected void btnBack_Click(object sender, EventArgs e)

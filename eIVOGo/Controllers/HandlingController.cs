@@ -13,11 +13,11 @@ using Business.Helper;
 
 namespace eIVOGo.Controllers
 {
-    public class HandlingController : Controller
+    public class HandlingController : SampleController<InvoiceItem>
     {
         protected UserProfileMember _userProfile;
 
-        public HandlingController()
+        public HandlingController() : base()
         {
             _userProfile = WebPageUtility.UserProfile;
         }
@@ -61,6 +61,35 @@ namespace eIVOGo.Controllers
         public ActionResult EnableCompany(int companyID)
         {
             updateCompanyStatus(companyID, Naming.MemberStatusDefinition.Checked);
+            return View("Index");
+        }
+
+        public ActionResult ApplyRelationship(int companyID)
+        {
+            var item = models.GetTable<Organization>().Where(o => o.CompanyID == companyID).FirstOrDefault();
+            if (item == null)
+            {
+                ViewBag.Message = "資料不存在!!";
+            }
+            else
+            {
+                if(!item.IsEnterpriseGroupMember())
+                {
+                    models.GetTable<EnterpriseGroupMember>().InsertOnSubmit(
+                        new EnterpriseGroupMember
+                        {
+                            EnterpriseID = (int)Naming.EnterpriseGroup.網際優勢股份有限公司,
+                            CompanyID = item.CompanyID
+                        });
+                    models.SubmitChanges();
+                    ViewBag.Message = "設定完成!!";
+                }
+                else
+                {
+                    ViewBag.Message = "設開立人已是B2B營業人!!";
+                }
+            }
+
             return View("Index");
         }
         // GET: Handling/Create

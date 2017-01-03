@@ -18,7 +18,7 @@ namespace eIVOGo.Controllers
         {
             UserProfileMember userProfile = WebPageUtility.UserProfile;
 
-            return (new InquireOrganizationReceiptNo { CurrentController = this })
+            return (ModelSourceInquiry<Organization>)(new InquireOrganizationReceiptNo { CurrentController = this })
                 .Append(new InquireOrganizationStatus { CurrentController = this })
                 .Append(new InquireCompanyName { CurrentController = this });
 

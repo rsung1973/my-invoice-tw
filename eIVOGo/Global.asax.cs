@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Web;
 using System.Web.Http;
 using System.Web.Mvc;
@@ -14,18 +15,44 @@ namespace eIVOGo
 {
     public class Global : System.Web.HttpApplication
     {
+        public Global()
+    : base()
+        {
+            this.AuthenticateRequest += Global_AuthenticateRequest;
+            this.AuthorizeRequest += Global_AuthorizeRequest;
+        }
+
+        void Global_AuthorizeRequest(object sender, EventArgs e)
+        {
+
+        }
+
+        void Global_AuthenticateRequest(object sender, EventArgs e)
+        {
+            if (Context.User == null)
+            {
+                HttpCookie cookie = Context.Request.Cookies[FormsAuthentication.FormsCookieName];
+                if (cookie != null && !String.IsNullOrEmpty(cookie.Value))
+                {
+                    FormsAuthenticationTicket ticket = FormsAuthentication.Decrypt(cookie.Value);
+                    FormsIdentity identity = new FormsIdentity(ticket);
+                    Context.User = new ClaimsPrincipal(identity);
+                }
+            }
+        }
 
         protected virtual void Application_Start(object sender, EventArgs e)
         {
             // Code that runs on application startup
-            Uxnet.Com.Helper.JobScheduler.StartUp();
-            eIVOGo.Module.SAM.SystemMonitorControl.StartUp();
-            eIVOGo.Published.eInvoiceService.StartUp();
-
             AreaRegistration.RegisterAllAreas();
             //GlobalConfiguration.Configure(WebApiConfig.Register);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            Uxnet.Com.Helper.JobScheduler.StartUp();
+            eIVOGo.Module.SAM.SystemMonitorControl.StartUp();
+            eIVOGo.Published.eInvoiceService.StartUp();
+
 
         }
 

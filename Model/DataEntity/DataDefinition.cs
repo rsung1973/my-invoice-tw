@@ -14,5 +14,5 @@ namespace Model.DataEntity
         public int? DuplicateCount { get; set; }
         public bool MergedItem { get; set; }
     }
-    
+
 }

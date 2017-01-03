@@ -56,7 +56,7 @@
                 <span style="color: red">*</span>類別
             </th>
             <td class="tdleft">
-                <uc2:EnumSelector ID="CategoryID" runat="server" TypeName="Model.Locale.Naming+B2CCategoryID, Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+                <uc2:EnumSelector ID="CategoryID" runat="server" TypeName="Model.Locale.Naming+MemberCategoryID, Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
                     SelectorIndication="請選擇" SelectedValue="<%# _entity.OrganizationCategory[0].CategoryID %>" />
             </td>
         </tr>

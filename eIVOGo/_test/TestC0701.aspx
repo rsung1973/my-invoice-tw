@@ -67,7 +67,7 @@
                         BuyerId = item.InvoiceBuyer.ReceiptNo,
                         SellerId = item.InvoiceSeller.ReceiptNo,
                         VoidDate = DateTime.Now.Date.ToString("yyyyMMdd"),
-                        VoidTime = DateTime.Now.ToString("HH:mm:ss"),
+                        VoidTime = DateTime.Now.TimeOfDay,
                         VoidReason = "註銷重開",
                         Remark = ""
                     };
@@ -130,7 +130,7 @@
             BuyerId = item.InvoiceBuyer.ReceiptNo,
             SellerId = item.InvoiceSeller.ReceiptNo,
             VoidDate = DateTime.Now.Date.ToString("yyyyMMdd"),
-            VoidTime = DateTime.Now.ToString("HH:mm:ss"),
+            VoidTime = DateTime.Now.TimeOfDay,
             VoidReason = "註銷重開",
             Remark = ""
         }).ConvertToXml().Save(Path.Combine(storedPath, "C0701_" + item.TrackCode + item.No + ".xml"));

@@ -126,10 +126,21 @@ namespace Model.InvoiceManagement
             String[] column = item.Columns;
 
             bool isB2C = this.isB2C(item.Columns);
-            if (!isB2C && (column[(int)FieldIndex.對方統編].Length != 8 || !ValueValidity.ValidateString(column[(int)FieldIndex.對方統編], 20)))
+            if (!isB2C)
             {
-                item.Status = String.Join("、", item.Status, "對方統編格式錯誤");
-                _bResult = false;
+                if (column[(int)FieldIndex.對方統編].Length != 8 || !ValueValidity.ValidateString(column[(int)FieldIndex.對方統編], 20))
+                {
+                    item.Status = String.Join("、", item.Status, "對方統編格式錯誤");
+                    _bResult = false;
+                }
+                else if(_seller.IsEnterpriseGroupMember())
+                {
+                    if (!_seller.MasterRelation.Any(b => b.Counterpart.ReceiptNo == column[(int)FieldIndex.對方統編]))
+                    {
+                        item.Status = String.Join("、", item.Status, "對方統編不為已設定的B2B相對營業人");
+                        _bResult = false;
+                    }
+                }
             }
 
             checkInputFields(item);

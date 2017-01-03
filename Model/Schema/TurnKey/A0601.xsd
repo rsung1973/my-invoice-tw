@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns="urn:GEINV:eInvoiceMessage:A0601:3.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-targetNamespace="urn:GEINV:eInvoiceMessage:A0601:3.0" elementFormDefault="qualified"
+<xsd:schema xmlns="urn:GEINV:eInvoiceMessage:A0601:3.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+targetNamespace="urn:GEINV:eInvoiceMessage:A0601:3.1" elementFormDefault="qualified"
 attributeFormDefault="unqualified">
-    <xsd:include schemaLocation="GenericType_3.0.xsd"/>
+    <xsd:include schemaLocation="GenericType_3.1.xsd"/>
     <!--  退回發票: A0601 -->
     <xsd:element name="RejectInvoice">
         <xsd:complexType>
@@ -35,6 +35,7 @@ attributeFormDefault="unqualified">
                 <xsd:element name="RejectReason">
                     <xsd:simpleType>
                         <xsd:restriction base="xsd:string">
+                            <xsd:minLength value="1"/>
                             <xsd:maxLength value="20"/>
                         </xsd:restriction>
                     </xsd:simpleType>

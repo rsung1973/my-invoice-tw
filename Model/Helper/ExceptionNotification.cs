@@ -23,6 +23,7 @@ namespace Model.Helper
         public CancelAllowanceRoot CancelAllowanceData { get; set; }
         public IEnumerable<ItemUpload<InvoiceItem>> InvoiceError { get; set; }
         public IEnumerable<ItemUpload<InvoiceItem>> InvoiceCancellationError { get; set; }
+        public IEnumerable<ItemUpload<Organization>> BusinessCounterpartError { get; set; }
     }
 
     public partial class ExceptionEventArgs : EventArgs

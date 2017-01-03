@@ -5,7 +5,7 @@
 
 <asp:Content ID="header" ContentPlaceHolderID="headContent" runat="server">
 </asp:Content>
-<asp:Content ID="mainContent" ContentPlaceHolderID="mainContent" runat="server">
+<asp:Content ID="mainContent" ContentPlaceHolderID="formContent" runat="server">
     <% Html.RenderPartial("Module/InvoiceSummaryResult", Model); %>
 </asp:Content>
 <script runat="server">

@@ -12,32 +12,20 @@ using System.Web.Mvc;
 using System.Web.Security;
 using Model.DataEntity;
 using Utility;
+using Uxnet.Web.Controllers;
 
 namespace eIVOGo.Controllers
 {
-    public class SampleController<TEntity> : Controller
+    public class SampleController<TEntity> : SampleController<EIVOEntityDataContext, TEntity>
         where TEntity : class, new()
     {
-        protected ModelSource<TEntity> models;
 
-        protected SampleController() :base()
-        {
-            models = new ModelSource<TEntity>();
-            
-        }
-
-        public ModelSource<TEntity> DataSource
+        public new ModelSource<TEntity> DataSource
         {
             get
             {
-                return models;
+                return new ModelSource<TEntity>(models);
             }
-        }
-
-        protected override void OnResultExecuted(ResultExecutedContext filterContext)
-        {
-            base.OnResultExecuted(filterContext);
-            models.Dispose();
         }
     }
 }

@@ -191,7 +191,7 @@ namespace Model.InvoiceManagement.Validator
                 return new Exception(String.Format("賣方為非註冊店家,開立人統一編號:{0}，TAG:< Identifier />", _c0401Item.Main.Seller.Identifier));
             }
 
-            if (_seller.CompanyID != _owner.CompanyID)
+            if (_seller.CompanyID != _owner.CompanyID && !_mgr.GetTable<InvoiceIssuerAgent>().Any(a => a.AgentID == _owner.CompanyID && a.IssuerID == _seller.CompanyID))
             {
                 return new Exception(String.Format("簽章設定人與發票開立人不符,開立人統一編號:{0}，TAG:< Identifier />", _c0401Item.Main.Seller.Identifier));
             }

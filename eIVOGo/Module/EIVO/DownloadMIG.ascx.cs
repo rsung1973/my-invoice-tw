@@ -14,6 +14,7 @@ using System.IO;
 using System.Net;
 using System.Globalization;
 using System.Text.RegularExpressions;
+using Model.Schema.MIG3_1.C0401;
 
 namespace eIVOGo.Module.EIVO
 {
@@ -209,7 +210,7 @@ namespace eIVOGo.Module.EIVO
                             FacsimileNumber = txtBuyerFAX.Text,
                             Address = txtBuyerAddress.Text,
                         },
-                        CustomsClearanceMark = String.IsNullOrEmpty(txtCustomerMark.Text) ? Model.Schema.MIG3_1.C0401.CustomsClearanceMarkEnum.Item1 : (Model.Schema.MIG3_1.C0401.CustomsClearanceMarkEnum)int.Parse(txtCustomerMark.Text),
+                        CustomsClearanceMark = String.IsNullOrEmpty(txtCustomerMark.Text) ? CustomsClearanceMarkEnum.Item1 : (Model.Schema.MIG3_1.C0401.CustomsClearanceMarkEnum)int.Parse(txtCustomerMark.Text),
                         InvoiceType = (Model.Schema.MIG3_1.C0401.InvoiceTypeEnum)(int.Parse(ddInvoiceType.SelectedValue)),
                         PrintMark = ddPrintMark.SelectedValue,
                         DonateMark = (Model.Schema.MIG3_1.C0401.DonateMarkEnum)int.Parse(ddDonateMark.SelectedValue),
@@ -265,7 +266,7 @@ namespace eIVOGo.Module.EIVO
                     BuyerId = txtBuyerId2.Text,
                     SellerId = txtSellerId2.Text,
                     VoidDate = DateTime.Now.Date.ToString("yyyyMMdd"),
-                    VoidTime = DateTime.Now.TimeOfDay.ToString("hh\\:mm\\:ss"),                    
+                    VoidTime = DateTime.Now.TimeOfDay,                    
                     VoidReason = txtVoidReason.Text,
                     Remark = txtRemark.Text
                 };
