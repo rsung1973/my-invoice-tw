@@ -341,8 +341,6 @@ namespace eIVOGo.Controllers
         public ActionResult InvoiceSummaryGridPage(int index, int size)
         {
             //ViewBag.HasQuery = true;
-            ModelSource<InvoiceItem> models = new ModelSource<InvoiceItem>();
-            TempData.SetModelSource(models);
             models.Inquiry = createModelInquiry();
             models.BuildQuery();
 
@@ -351,8 +349,8 @@ namespace eIVOGo.Controllers
             else
                 index = 0;
 
-            models.InquiryPageIndex = index;
-            models.InquiryPageSize = size;
+            ViewBag.PageIndex = index;
+            ViewBag.PageSize = size;
 
             return View(models.Items);
         }

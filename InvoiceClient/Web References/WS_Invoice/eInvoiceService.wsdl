@@ -2,6 +2,26 @@
 <wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.uxb2b.com/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.uxb2b.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
     <s:schema elementFormDefault="qualified" targetNamespace="http://www.uxb2b.com/">
+      <s:element name="UploadInvoiceBuyerCmsCSV">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uploadData" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadInvoiceBuyerCmsCSVResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadInvoiceBuyerCmsCSVResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="UploadInvoice">
         <s:complexType>
           <s:sequence>
@@ -1197,6 +1217,12 @@
       </s:element>
     </s:schema>
   </wsdl:types>
+  <wsdl:message name="UploadInvoiceBuyerCmsCSVSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadInvoiceBuyerCmsCSV" />
+  </wsdl:message>
+  <wsdl:message name="UploadInvoiceBuyerCmsCSVSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadInvoiceBuyerCmsCSVResponse" />
+  </wsdl:message>
   <wsdl:message name="UploadInvoiceSoapIn">
     <wsdl:part name="parameters" element="tns:UploadInvoice" />
   </wsdl:message>
@@ -1492,6 +1518,10 @@
     <wsdl:part name="parameters" element="tns:GetVacantInvoiceNoResponse" />
   </wsdl:message>
   <wsdl:portType name="eInvoiceServiceSoap">
+    <wsdl:operation name="UploadInvoiceBuyerCmsCSV">
+      <wsdl:input message="tns:UploadInvoiceBuyerCmsCSVSoapIn" />
+      <wsdl:output message="tns:UploadInvoiceBuyerCmsCSVSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="UploadInvoice">
       <wsdl:input message="tns:UploadInvoiceSoapIn" />
       <wsdl:output message="tns:UploadInvoiceSoapOut" />
@@ -1691,6 +1721,15 @@
   </wsdl:portType>
   <wsdl:binding name="eInvoiceServiceSoap" type="tns:eInvoiceServiceSoap">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UploadInvoiceBuyerCmsCSV">
+      <soap:operation soapAction="http://www.uxb2b.com/UploadInvoiceBuyerCmsCSV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="UploadInvoice">
       <soap:operation soapAction="http://www.uxb2b.com/UploadInvoice" style="document" />
       <wsdl:input>
@@ -2135,6 +2174,15 @@
   </wsdl:binding>
   <wsdl:binding name="eInvoiceServiceSoap12" type="tns:eInvoiceServiceSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UploadInvoiceBuyerCmsCSV">
+      <soap12:operation soapAction="http://www.uxb2b.com/UploadInvoiceBuyerCmsCSV" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="UploadInvoice">
       <soap12:operation soapAction="http://www.uxb2b.com/UploadInvoice" style="document" />
       <wsdl:input>

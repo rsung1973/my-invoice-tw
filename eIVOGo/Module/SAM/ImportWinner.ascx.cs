@@ -242,28 +242,13 @@ namespace eIVOGo.Module.SAM
                         var winNumData=im.GetTable<InvoiceWinningNumber>().Where(w => w.InvoiceID == invoiceData.InvoiceID);
                         if (winNumData.Count() > 0)
                         {
-                            winNumData.FirstOrDefault().WinningNO = invoiceData.No;
-                            winNumData.FirstOrDefault().Year = invoiceData.InvoiceDate.Value.Year;
-                            winNumData.FirstOrDefault().MonthFrom = oddMonth;
-                            winNumData.FirstOrDefault().MonthTo = evenMonth;
-                            winNumData.FirstOrDefault().WinningType = d.WinningType;
-                            winNumData.FirstOrDefault().BonusDescription = d.BonusDescription.ToString();
-                            winNumData.FirstOrDefault().TrackCode = invoiceData.TrackCode;
-                            winNumData.FirstOrDefault().DataType = d.DataType;
+
                         }
                         else
                         {
                             iwnTB.InsertOnSubmit(new InvoiceWinningNumber
                             {
-                                WinningNO = invoiceData.No,
-                                Year = invoiceData.InvoiceDate.Value.Year,
-                                MonthFrom = oddMonth,
-                                MonthTo = evenMonth,
-                                WinningType = d.WinningType,
-                                BonusDescription = d.BonusDescription.ToString(),
                                 InvoiceID = invoiceData.InvoiceID,
-                                TrackCode = invoiceData.TrackCode,
-                                DataType = d.DataType
                             });
 
                             if (d.DepositMK.Trim().Equals("Y"))

@@ -11,7 +11,7 @@ using Utility;
 using Model.Schema.TXN;
 using InvoiceClient.Helper;
 using InvoiceClient.TransferManagement;
-using Model.Schema.MIG3_1.E0402;
+using Model.Schema.TurnKey.E0402;
 
 namespace InvoiceClient.Agent
 {

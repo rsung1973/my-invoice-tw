@@ -250,7 +250,7 @@ namespace eIVOGo.Module.SAM
         //            body.Append("-------------------------------------------------<br/>");
         //            body.Append("請立即透過下方帳號啟用連結 登入網際優勢電子發票獨立第三方平台 變更密碼 。<br/><br/>");
         //            body.Append("帳號啟用連結： ");
-        //            body.Append("<a href=").Append(Settings.Default.mailLinkAddress).Append(VirtualPathUtility.ToAbsolute("~/SAM/EditMyself.aspx")).Append("?active=aEfs45WE>會員帳號啟用</a>");
+        //            body.Append("<a href=").Append(Settings.Default.mailLinkAddress).Append(VirtualPathUtility.ToAbsolute("~/UserProfile/EditMySelf")).Append("?active=aEfs45WE>會員帳號啟用</a>");
         //            body.Append("<br/><br/>電子發票獨立第三方平台 感謝您的加入");
 
         //            message.Body = body.ToString();

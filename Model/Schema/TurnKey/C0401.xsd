@@ -22,9 +22,9 @@ attributeFormDefault="unqualified">
             <!--  發票號碼  -->
             <xsd:element name="InvoiceNumber" type="InvoiceNumberType"/>
             <!--  發票日期  -->
-            <xsd:element name="InvoiceDate" type=" DateType"/>
+            <xsd:element name="InvoiceDate" type="DateType"/>
             <!--  發票時間  -->
-            <xsd:element name="InvoiceTime" type=" TimeType"/>
+            <xsd:element name="InvoiceTime" type="TimeType"/>
             <!--  賣方  -->
             <xsd:element name="Seller">
                 <xsd:complexType mixed="false">

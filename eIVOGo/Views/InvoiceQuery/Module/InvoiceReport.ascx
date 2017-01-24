@@ -44,7 +44,7 @@
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
     <tr>
         <td class="Bargain_btn">
-            <input type="button" value="查詢" name="btnQuery" class="btn" onclick="$('form').prop('action', '<%= Url.Action(ViewBag.QueryAction) %>    ').submit();" />
+            <input type="button" value="查詢" name="btnQuery" class="btn" onclick="$('form').prop('action', '<%= Url.Action(ViewBag.QueryAction) %>').submit();" />
         </td>
     </tr>
 </table>
@@ -65,7 +65,7 @@
         //    {
         //        models.Items = models.Items.Where(i => i.DonateMark == "0"
         //            && (i.PrintMark == "Y" || (i.PrintMark == "N" && i.InvoiceWinningNumber != null))
-        //            && !i.CDS_Document.DocumentPrintLogs.Any(l => l.TypeID == (int)Naming.DocumentTypeDefinition.E_Invoice));
+        //            && !i.CDS_Document.DocumentPrintLog.Any(l => l.TypeID == (int)Naming.DocumentTypeDefinition.E_Invoice));
         //    }
 
         //    result.Visible = true;

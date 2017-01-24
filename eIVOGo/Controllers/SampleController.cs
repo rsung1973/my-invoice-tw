@@ -20,11 +20,15 @@ namespace eIVOGo.Controllers
         where TEntity : class, new()
     {
 
+        protected SampleController() : base()
+        {
+            models = new ModelSource<TEntity>(models);
+        }
         public new ModelSource<TEntity> DataSource
         {
             get
             {
-                return new ModelSource<TEntity>(models);
+                return (ModelSource<TEntity>)models;
             }
         }
     }

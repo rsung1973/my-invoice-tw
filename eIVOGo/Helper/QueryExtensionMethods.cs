@@ -41,6 +41,20 @@ namespace eIVOGo.Helper
             }
         }
 
+        public static DataSet GetDataSetResult<TEntity>(this ModelSource<TEntity> models, IQueryable items,DataTable table)
+            where TEntity : class, new()
+        {
+            using (SqlCommand sqlCmd = (SqlCommand)models.GetCommand(items))
+            {
+                sqlCmd.Connection = (SqlConnection)models.GetDataContext().Connection;
+                using (SqlDataAdapter adapter = new SqlDataAdapter(sqlCmd))
+                {
+                    adapter.Fill(table);
+                    return table.DataSet;
+                }
+            }
+        }
+
         public static ClosedXML.Excel.XLWorkbook GetExcelResult<TEntity>(this ModelSource<TEntity> models,IQueryable items,String tableName = null)
             where TEntity : class, new()
         {
@@ -48,10 +62,15 @@ namespace eIVOGo.Helper
             {
                 if (tableName != null)
                     ds.Tables[0].TableName = ds.DataSetName = tableName;
-                ClosedXML.Excel.XLWorkbook xls = new ClosedXML.Excel.XLWorkbook();
-                xls.Worksheets.Add(ds);
-                return xls;
+                return ConvertToExcel(ds);
             }
+        }
+
+        public static ClosedXML.Excel.XLWorkbook ConvertToExcel(this DataSet ds)
+        {
+            ClosedXML.Excel.XLWorkbook xls = new ClosedXML.Excel.XLWorkbook();
+            xls.Worksheets.Add(ds);
+            return xls;
         }
 
         public static IQueryable<Organization> InitializeOrganizationQuery(this UserProfileMember userProfile, GenericManager<EIVOEntityDataContext> mgr)
@@ -81,6 +100,13 @@ namespace eIVOGo.Helper
             return mgr.GetTable<Organization>().Where(o => false);
         }
 
+        public static IQueryable<UserProfile> FilterByOrganization(this IQueryable<UserProfile> items, GenericManager<EIVOEntityDataContext> models, int companyID)
+        {
+            return items.Join(models.GetTable<UserRole>()
+                            .Join(models.GetTable<OrganizationCategory>().Where(c => c.CompanyID == companyID),
+                                r => r.OrgaCateID, c => c.OrgaCateID, (r, c) => r),
+                        u => u.UID, r => r.UID, (u, r) => u);
+        }
 
     }
 }

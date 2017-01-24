@@ -63,14 +63,12 @@ namespace eIVOGo.Module.Common
             {
                 int year = state.setYear;
                 int period = state.setPeriod;
-                int smonth = (period * 2) - 1;
-                int emonth = period * 2;
                 try
                 {
                     using (InvoiceManager mgr = new InvoiceManager())
                     {
                         var winningInvoices = mgr.GetTable<InvoiceWinningNumber>()
-                            .Where(n => n.Year == year & n.MonthFrom == (byte)smonth & n.MonthTo == (byte)emonth
+                            .Where(n => n.UniformInvoiceWinningNumber.Year == year && n.UniformInvoiceWinningNumber.Period == period
                             && n.InvoiceItem.Organization.OrganizationStatus.DisableWinningNotice != true
                             && n.InvoiceItem.InvoiceDonation == null
                             && n.InvoiceItem.InvoiceCancellation == null);
@@ -174,7 +172,7 @@ namespace eIVOGo.Module.Common
                 body.Append("-------------------------------------------------<br>");
                 body.Append("請立即透過下面帳號啟用連結登入 網際優勢電子發票獨立第三方平台 變更密碼 。<br><br>");
                 body.Append("帳號啟用連結： ");
-                body.Append("<a href=").Append(Settings.Default.mailLinkAddress).Append(VirtualPathUtility.ToAbsolute("~/SAM/EditMyself.aspx")).Append("?active=aEfs45WE>會員帳號啟用</a>");
+                body.Append("<a href=").Append(Settings.Default.mailLinkAddress).Append(VirtualPathUtility.ToAbsolute("~/UserProfile/EditMySelf")).Append("?active=aEfs45WE>會員帳號啟用</a>");
                 body.Append("<br><br>電子發票獨立第三方平台 感謝您的加入");
 
                 message.Body = body.ToString();
@@ -216,7 +214,7 @@ namespace eIVOGo.Module.Common
                     body.Append("-------------------------------------------------<br>");
                     body.Append("請立即透過下方帳號啟用連結 登入網際優勢電子發票獨立第三方平台 變更密碼 。<br><br>");
                     body.Append("帳號啟用連結： ");
-                    body.Append("<a href=").Append(Settings.Default.mailLinkAddress).Append(VirtualPathUtility.ToAbsolute("~/SAM/EditMyself.aspx")).Append("?active=aEfs45WE>會員帳號啟用</a>");
+                    body.Append("<a href=").Append(Settings.Default.mailLinkAddress).Append(VirtualPathUtility.ToAbsolute("~/UserProfile/EditMySelf")).Append("?active=aEfs45WE>會員帳號啟用</a>");
                     body.Append("<br><br>電子發票獨立第三方平台 感謝您的加入");
 
                     message.Body = body.ToString();

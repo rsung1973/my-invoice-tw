@@ -136,6 +136,11 @@ namespace eIVOGo.Module.Entity
             }
             _entity.Password2 = ValueValidity.MakePassword(pwd);
             _entity.Password = (new CipherDecipherSrv()).cipher(pwd);
+            if (_entity.UserProfileStatus == null)
+            {
+                _entity.UserProfileStatus = new UserProfileStatus { };
+            }
+            _entity.UserProfileStatus.CurrentLevel = (int)Naming.MemberStatusDefinition.Checked;
 
             _entity.EMail = EMail.Text.Trim();
 

@@ -131,7 +131,7 @@
         itemList.Grid.PageSize = inquireSize.PageSize;
 
         _queryExpr = i => i.InvoiceCancellation == null && i.InvoiceWinningNumber != null
-            && !i.CDS_Document.DocumentPrintLogs.Any(l => l.TypeID == (int)Naming.DocumentTypeDefinition.E_Invoice);
+            && !i.CDS_Document.DocumentPrintLog.Any(l => l.TypeID == (int)Naming.DocumentTypeDefinition.E_Invoice);
 
     }
 

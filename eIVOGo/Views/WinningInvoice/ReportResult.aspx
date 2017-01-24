@@ -10,13 +10,10 @@
 </asp:Content>
 <script runat="server">
 
-    public override void Dispose()
+    protected override void OnInit(EventArgs e)
     {
-        var models = TempData.GetGenericModelSource();
-        if (models != null)
-            models.Dispose();
-        
-        base.Dispose();
+        base.OnInit(e);
+        ViewBag.ActionName = "首頁 > 發票作業";
     }
 
 </script>

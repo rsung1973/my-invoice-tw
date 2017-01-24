@@ -88,6 +88,7 @@
     <Compile Include="Agent\CsvInvoiceWatcherV2.cs" />
     <Compile Include="Agent\InvoiceAttachmentWatcherForGoogle.cs" />
     <Compile Include="Agent\InvoiceCancellationWatcherV2.cs" />
+    <Compile Include="Agent\InvoiceBuyerWatcher.cs" />
     <Compile Include="Agent\InvoiceEnterpriseWatcher.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -217,6 +218,7 @@
     <Compile Include="Settings.cs" />
     <Compile Include="TransferManagement\B2CInvoiceTransferManager.cs" />
     <Compile Include="TransferManagement\BranchTrackTransferManager.cs" />
+    <Compile Include="TransferManagement\InvoiceBusinessTransferManager.cs" />
     <Compile Include="TransferManagement\CsvInvoiceTransferManagerV2.cs" />
     <Compile Include="TransferManagement\InvoiceAttachmentTransferManager.cs" />
     <Compile Include="TransferManagement\InvoiceTransferManagerForAgent.cs">

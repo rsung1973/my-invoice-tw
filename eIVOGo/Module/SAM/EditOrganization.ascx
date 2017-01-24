@@ -121,8 +121,14 @@
         <tr>
             <th width="150">電子發票核准函號
             </th>
-            <td class="tdleft" colspan="3">
-                <asp:TextBox ID="AuthorizationNo" runat="server" Columns="68" Text='<%# _entity.OrganizationStatus.AuthorizationNo %>' />
+            <td class="tdleft" >
+                <asp:TextBox ID="AuthorizationNo" runat="server" Text='<%# _entity.OrganizationStatus.AuthorizationNo %>' />
+            </td>
+            <th>自動核准列印
+            </th>
+            <td class="tdleft">
+                <asp:CheckBox ID="EntrustToPrint" runat="server" Checked='<%# _entity.OrganizationStatus.EntrustToPrint == true  %>'
+                    Text="B2B發票買受人可重複列印" />
             </td>
         </tr>
         <tr>
@@ -134,7 +140,7 @@
             </td>
             <th>設定簡訊通知
             </th>
-            <td class="tdleft" colspan="3">
+            <td class="tdleft">
                 <asp:CheckBox ID="SetToNotifyCounterpartBySMS" runat="server" Checked='<%# _entity.OrganizationStatus.SetToNotifyCounterpartBySMS == true  %>'
                     Text="使用簡訊通知買受人" />
             </td>
@@ -184,13 +190,18 @@
         <tr>
             <th >上傳系統格式
             </th>
-            <td class="tdleft" colspan="3">
+            <td class="tdleft">
                 <select name="uploadType">
                     <option>XML</option>
                     <option>CSV</option>
                     <option>MIG</option>
                     <option>XML(含折讓單)</option>
                 </select>
+            </td>
+            <th>公司LOGO</th>
+            <td>
+                <img id="logo" style="width:300px;" src="<%= _entity.LogoURL!=null ? VirtualPathUtility.ToAbsolute("~/" +_entity.LogoURL) : null %>" />
+                <input type="file" id="fileLogo" style="display:inline;" name="fileLogo" />
             </td>
         </tr>
 
@@ -243,6 +254,32 @@
         });
     });
     <% } %>
+
+    $(function () {
+
+        var fileUpload = $('#fileLogo');
+        var elmt = fileUpload.parent();
+
+        fileUpload.off('click').on('change', function () {
+
+            $('<form method="post" id="myForm" enctype="multipart/form-data"></form>')
+            .append(fileUpload).ajaxForm({
+                url: "<%= VirtualPathUtility.ToAbsolute("~/Organization/UpdateLogo") %>",
+                data: { 'id': '<%= _entity.CompanyID %>' },
+                beforeSubmit: function () {
+                    showLoading();
+                },
+                success: function (data) {
+                    hideLoading();
+                    elmt.append(fileUpload);
+                    $(data).appendTo($('body')).remove();
+                },
+                error: function () {
+                    elmt.append(fileUpload);
+                }
+            }).submit();
+        });
+    });
 </script>
 <cc1:OrganizationDataSource ID="dsEntity" runat="server">
 </cc1:OrganizationDataSource>

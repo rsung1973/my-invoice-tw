@@ -170,3 +170,16 @@ ol{
     font-style: italic;
     border: 1px dotted red;
 }
+
+a.tab-link {
+    padding: 5px !important;
+}
+
+.nav-tabs > li .close {
+    margin: -2px 0 0 10px;
+    font-size: 18px;
+}
+
+.marginBottom {
+    margin-bottom: 1px !important;
+}

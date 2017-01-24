@@ -1,0 +1,42 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<%@ Import Namespace="System.IO" %>
+<%@ Import Namespace="System.Linq.Expressions" %>
+<%@ Import Namespace="System.Web.Mvc.Html" %>
+<%@ Import Namespace="Model.DataEntity" %>
+<%@ Import Namespace="System.Web.Optimization" %>
+
+<asp:contentplaceholder id="headContent" runat="server">
+</asp:contentplaceholder>
+
+<div class="container-fluid">
+    <%  if (ViewBag.ActionName != null)
+        { %>
+<%--    <div class="row">
+        <div class="col-lg-12">
+            <h2 class="page-header"><%= ViewBag.ActionName %></h2>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>--%>
+    <%  }  %>
+    <h2>
+        <br />
+    </h2>
+    <form runat="server" role="form" enctype="multipart/form-data">
+        <asp:contentplaceholder id="formContent" runat="server">
+                                </asp:contentplaceholder>
+    </form>
+    <div class="row">
+        <asp:contentplaceholder id="mainContent" runat="server">
+                                </asp:contentplaceholder>
+    </div>
+    <!-- /.row -->
+</div>
+<script runat="server">
+
+    protected override void OnInit(EventArgs e)
+    {
+        base.OnInit(e);
+    }
+
+</script>

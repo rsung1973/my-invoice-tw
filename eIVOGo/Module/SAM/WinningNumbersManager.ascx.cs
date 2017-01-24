@@ -221,7 +221,7 @@ namespace eIVOGo.Module.SAM
                         && i.InvoiceAmountType.TotalAmount > 0 && i.InvoiceCancellation == null && i.InvoiceBuyer.ReceiptNo == "0000000000");
                     var winNos = mgr.GetTable<UniformInvoiceWinningNumber>().Where(d => d.Year == year & d.Period == period).OrderBy(d => d.Rank);
 
-                    var countWinNo = mgr.GetTable<InvoiceWinningNumber>().Where(n => n.Year == year & n.MonthFrom == (byte)smonth & n.MonthTo == (byte)emonth);
+                    var countWinNo = mgr.GetTable<InvoiceWinningNumber>().Where(n => n.UniformInvoiceWinningNumber.Year == year && n.UniformInvoiceWinningNumber.Period == period);
                     if (countWinNo.Count() > 0)
                     {
                         mgr.GetTable<InvoiceWinningNumber>().DeleteAllOnSubmit(countWinNo);
@@ -235,14 +235,7 @@ namespace eIVOGo.Module.SAM
                             {
                                 mgr.GetTable<InvoiceWinningNumber>().InsertOnSubmit(new InvoiceWinningNumber
                                 {
-                                    WinningNO = ino.No,
-                                    Year = year,
-                                    MonthFrom = (byte)smonth,
-                                    MonthTo = (byte)emonth,
-                                    WinningType = d.PrizeType,
-                                    BonusDescription = d.Bonus.ToString(),
                                     InvoiceID = ino.InvoiceID,
-                                    TrackCode = ino.TrackCode,
                                     WinningID=d.WinningID
                                 });
                                 totalCount += 1;

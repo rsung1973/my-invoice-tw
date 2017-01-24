@@ -142,9 +142,9 @@ namespace eIVOGo.Module.Inquiry
                                select new
                                {
                                    d.InvoiceID,
-                                   d.Year,
-                                   d.MonthFrom,
-                                   d.MonthTo,
+                                   d.UniformInvoiceWinningNumber.Year,
+                                   MonthFrom = d.UniformInvoiceWinningNumber.Period*2-1,
+                                   MonthTo = d.UniformInvoiceWinningNumber.Period*2,
                                    d.InvoiceItem.TrackCode,
                                    d.InvoiceItem.No,
                                    d.InvoiceItem.InvoiceDate,

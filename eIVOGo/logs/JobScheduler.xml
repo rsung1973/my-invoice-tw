@@ -1,17 +1,17 @@
 <?xml version="1.0"?>
 <ArrayOfJobItem xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <JobItem>
-    <Schedule>2017-01-10T05:00:00</Schedule>
+    <Schedule>2017-02-10T05:00:00</Schedule>
     <AssemblyQualifiedName>eIVOGo.services.ServiceWorkItem+UnassignNOCheckSchedule, eIVOGo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</AssemblyQualifiedName>
     <Description>計算上期空白發票</Description>
   </JobItem>
   <JobItem>
-    <Schedule>2017-01-10T05:00:00</Schedule>
+    <Schedule>2017-02-10T05:00:00</Schedule>
     <AssemblyQualifiedName>eIVOGo.services.ServiceWorkItem+DailyCheckSchedule, eIVOGo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</AssemblyQualifiedName>
     <Description>簡訊儲值通知</Description>
   </JobItem>
   <JobItem>
-    <Schedule>2017-01-04T05:00:00</Schedule>
+    <Schedule>2017-01-25T05:00:00</Schedule>
     <AssemblyQualifiedName>eIVOGo.services.ServiceWorkItem+TurnKeyCheckSchedule, eIVOGo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</AssemblyQualifiedName>
     <Description>每日未上傳大平台統計</Description>
   </JobItem>

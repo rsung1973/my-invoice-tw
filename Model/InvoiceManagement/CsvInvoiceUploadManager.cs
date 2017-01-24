@@ -124,7 +124,7 @@ namespace Model.InvoiceManagement
         protected override bool validate(ItemUpload<InvoiceItem> item)
         {
             String[] column = item.Columns;
-
+            BusinessRelationship relation = null;
             bool isB2C = this.isB2C(item.Columns);
             if (!isB2C)
             {
@@ -135,7 +135,9 @@ namespace Model.InvoiceManagement
                 }
                 else if(_seller.IsEnterpriseGroupMember())
                 {
-                    if (!_seller.MasterRelation.Any(b => b.Counterpart.ReceiptNo == column[(int)FieldIndex.對方統編]))
+                    relation = _seller.MasterRelation.Where(b => b.Counterpart.ReceiptNo == column[(int)FieldIndex.對方統編])
+                        .FirstOrDefault();
+                    if (relation == null)
                     {
                         item.Status = String.Join("、", item.Status, "對方統編不為已設定的B2B相對營業人");
                         _bResult = false;
@@ -188,6 +190,7 @@ namespace Model.InvoiceManagement
                     },
                     InvoiceBuyer = new InvoiceBuyer
                     {
+                        BuyerID = relation!=null ? (int?)relation.RelativeID : null,
                         CustomerID = column[2],
                         ReceiptNo = isB2C ? "0000000000" : column[(int)FieldIndex.對方統編],
                         Name = column[(int)FieldIndex.名稱],
@@ -390,11 +393,11 @@ namespace Model.InvoiceManagement
                 item.Status = String.Join("、", item.Status, "序號非12位數");
                 _bResult = false;
             }
-            else if (!ValueValidity.ValidateString(column[(int)FieldIndex.序號], 20))
-            {
-                item.Status = String.Join("、", item.Status, "序號格式錯誤");
-                _bResult = false;
-            }
+            //else if (!ValueValidity.ValidateString(column[(int)FieldIndex.序號], 20))
+            //{
+            //    item.Status = String.Join("、", item.Status, "序號格式錯誤");
+            //    _bResult = false;
+            //}
 
             if (String.IsNullOrEmpty(column[(int)FieldIndex.客戶ID]) /*|| !ValueValidity.ValidateString(column[2], 20)*/)
             {

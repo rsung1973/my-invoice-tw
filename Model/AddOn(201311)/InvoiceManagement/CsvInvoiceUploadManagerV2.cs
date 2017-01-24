@@ -76,7 +76,7 @@ namespace Model.InvoiceManagement
         protected override bool validate(ItemUpload<InvoiceItem> item)
         {
             String[] column = item.Columns;
-
+            BusinessRelationship relation = null;
             bool isB2C = this.isB2C(item.Columns);
             if (!isB2C)
             {
@@ -87,7 +87,9 @@ namespace Model.InvoiceManagement
                 }
                 else if (_seller.IsEnterpriseGroupMember())
                 {
-                    if (!_seller.MasterRelation.Any(b => b.Counterpart.ReceiptNo == column[(int)FieldIndex.對方統編]))
+                    relation = _seller.MasterRelation.Where(b => b.Counterpart.ReceiptNo == column[(int)FieldIndex.對方統編])
+                        .FirstOrDefault();
+                    if (relation == null)
                     {
                         item.Status = String.Join("、", item.Status, "對方統編不為已設定的B2B相對營業人");
                         _bResult = false;
@@ -205,6 +207,7 @@ namespace Model.InvoiceManagement
                     },
                     InvoiceBuyer = new InvoiceBuyer
                     {
+                        BuyerID = relation != null ? (int?)relation.RelativeID : null,
                         CustomerID = column[2],
                         ReceiptNo = isB2C ? "0000000000" : column[(int)FieldIndex.對方統編],
                         Name = column[(int)FieldIndex.名稱],

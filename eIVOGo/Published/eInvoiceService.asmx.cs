@@ -193,7 +193,8 @@ namespace eIVOGo.Published
                                 }                                
 
                                 String subject = item.Organization.CompanyName + "電子發票開立郵件通知";
-                                if (item.InvoiceBuyer.IsB2C())
+                                if (item.InvoiceBuyer.IsB2C()
+                                    || item.CDS_Document.DocumentOwner.Organization.OrganizationStatus.SubscribeB2BInvoicePDF == false)
                                 {
                                     String.Format("{0}?{1}", url, cipher.cipher(invoiceID.ToString()))
                                         .MailWebPage(item.InvoiceBuyer.EMail, subject);
@@ -203,7 +204,7 @@ namespace eIVOGo.Published
 
                                     //將Log下的B2B發票PDF，Copy至暫存資料夾
                                     String pdfFile = Path.Combine(Logger.LogPath.GetDateStylePath(item.InvoiceDate.Value), String.Format("{0}{1}.pdf", item.TrackCode, item.No));
-                                    
+
                                     if (!File.Exists(pdfFile))
                                     {
                                         String tmpFile;
@@ -216,12 +217,8 @@ namespace eIVOGo.Published
                                         File.Move(tmpFile, pdfFile);
                                     }
 
-                                    if (item.CDS_Document.DocumentOwner.Organization.OrganizationStatus.SubscribeB2BInvoicePDF == true
-                                        || !item.CDS_Document.DocumentOwner.Organization.OrganizationStatus.SubscribeB2BInvoicePDF.HasValue)
-                                    {
-                                        String.Format("{0}?{1}", url, cipher.cipher(invoiceID.ToString()))
-                                            .MailWebPage(item.InvoiceBuyer.EMail, subject, pdfFile);
-                                    }
+                                    String.Format("{0}?{1}", url, cipher.cipher(invoiceID.ToString()))
+                                        .MailWebPage(item.InvoiceBuyer.EMail, subject, pdfFile);
                                 }
                             }
                             catch (Exception ex)

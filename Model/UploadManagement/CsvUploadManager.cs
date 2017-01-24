@@ -11,6 +11,7 @@ using Model.Security.MembershipManagement;
 using Utility;
 using DataAccessLayer.basis;
 using System.Data.Linq;
+using CsvHelper;
 
 namespace Model.UploadManagement
 {
@@ -55,41 +56,45 @@ namespace Model.UploadManagement
 
                 String line;
                 int lineIdx = 0;
-
-                while ((line = sr.ReadLine()) != null)
+                using (CsvParser parser = new CsvParser(sr))
                 {
-                    if (String.IsNullOrEmpty(line))
-                        continue;
+                    String[] column;
+                    //while ((line = sr.ReadLine()) != null)
+                    while ((column = parser.Read()) != null)
+                    {
+                        //if (String.IsNullOrEmpty(line))
+                        //    continue;
 
-                    lineIdx++;
-                    TUploadItem item = new TUploadItem();
-                    item.DataContent = line;
-                    String[] column = line.Split(',');
-                    if (column.Length < __COLUMN_COUNT)
-                    {
-                        item.Columns = (String[])Array.CreateInstance(typeof(String), __COLUMN_COUNT);
-                        item.Status = String.Format("第{0}筆:資料欄位錯誤", lineIdx);
-                        _bResult = false;
-                    }
-                    else
-                    {
-                        item.Columns = column.Select(s => s.Trim()).ToArray();
-                        validate(item);
-                    }
+                        lineIdx++;
+                        TUploadItem item = new TUploadItem();
+                        //item.DataContent = line;
+                        //String[] column = line.Split(',');
+                        if (column.Length < __COLUMN_COUNT)
+                        {
+                            item.Columns = (String[])Array.CreateInstance(typeof(String), __COLUMN_COUNT);
+                            item.Status = String.Format("第{0}筆:資料欄位錯誤", lineIdx);
+                            _bResult = false;
+                        }
+                        else
+                        {
+                            item.Columns = column.Select(s => s.Trim()).ToArray();
+                            validate(item);
+                        }
 
-                    if (String.IsNullOrEmpty(item.Status))
-                    {
-                        item.UploadStatus = Naming.UploadStatusDefinition.等待匯入;
-                    }
-                    else
-                    {
-                        item.UploadStatus = Naming.UploadStatusDefinition.資料錯誤;
-                        item.Status = String.Format("第{0}筆:{1}", lineIdx, item.Status.Substring(1));
-                    }
-                    _items.Add(item);
+                        if (String.IsNullOrEmpty(item.Status))
+                        {
+                            item.UploadStatus = Naming.UploadStatusDefinition.等待匯入;
+                        }
+                        else
+                        {
+                            item.UploadStatus = Naming.UploadStatusDefinition.資料錯誤;
+                            item.Status = String.Format("第{0}筆:{1}", lineIdx, item.Status.Substring(1));
+                        }
+                        _items.Add(item);
 
-                    if (_breakParsing)
-                        break;
+                        if (_breakParsing)
+                            break;
+                    }
                 }
             }
 

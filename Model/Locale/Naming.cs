@@ -403,5 +403,41 @@ namespace Model.Locale
             Download = 2
         }
 
+        public enum WinningPrizeType
+        {
+            特別獎 = 1,
+            特獎 = 2,
+            頭獎 = 3,
+            二獎 = 4,
+            三獎 = 5,
+            四獎 = 6,
+            五獎 = 7,
+            六獎 = 8,
+            增開六獎 = 9
+        }
+
+        public enum EditableWinningPrizeType
+        {
+            特別獎 = 1,
+            特獎 = 2,
+            頭獎 = 3,
+            增開六獎 = 9
+        }
+
+
+        public readonly static int[] WinningBonus =
+        {
+            0,
+            10000000,
+            2000000,
+            200000,
+            40000,
+            10000,
+            4000,
+            1000,
+            200,
+            200
+        };
+
     }
 }

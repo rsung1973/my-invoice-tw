@@ -17,20 +17,10 @@
 </asp:Content>
 <script runat="server">
 
-    ModelSource<InvoiceItem> models;
     protected override void OnInit(EventArgs e)
     {
         base.OnInit(e);
-        models = TempData.GetModelSource<InvoiceItem>();
-        models.DataSourcePath = VirtualPathUtility.ToAbsolute("~/WinningInvoice/ReportGridPage");
-    }
-
-    public override void Dispose()
-    {
-        if (models != null)
-            models.Dispose();
-
-        base.Dispose();
+        ViewBag.ActionName = "首頁 > 發票作業";
     }
 
 </script>

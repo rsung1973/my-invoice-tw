@@ -11,9 +11,43 @@
 <script type="text/javascript" src="<%=VirtualPathUtility.ToAbsolute("~/Scripts/sb-admin-2.js") %>"></script>
 <script type="text/javascript" src="<%=VirtualPathUtility.ToAbsolute("~/Scripts/math.min.js") %>"></script>
 <script type="text/javascript" src="<%=VirtualPathUtility.ToAbsolute("~/Scripts/jquery.blockUI.js") %>"></script>
+<script type="text/javascript" src="<%=VirtualPathUtility.ToAbsolute("~/Scripts/linq.js") %>"></script>
+<script type="text/javascript" src="<%=VirtualPathUtility.ToAbsolute("~/Scripts/linq.jquery.js") %>"></script>
+<script type="text/javascript" src="<%=VirtualPathUtility.ToAbsolute("~/Scripts/stringformat-1.11.min.js") %>"></script>
+
 <script>
 
-    var $global = {};
+    var $global = (function () {
+
+        return {
+            registerCloseEvent: function ($tab) {
+                $tab.find(".closeTab").click(function () {
+
+                    //there are multiple elements which has .closeTab icon so close the tab whose close icon is clicked
+                    var tabContentId = $(this).parent().attr("href");
+                    $(this).parent().parent().remove(); //remove li of tab
+                    $('#masterTab a:last').tab('show'); // Select first tab
+                    $(tabContentId).remove(); //remove respective tab content
+
+                });
+            },
+            showTab: function (tabId) {
+                $('#masterTab a[href="#' + tabId + '"]').tab('show');
+            },
+            createTab: function (tabId, tabText, tabContent, show) {
+                var newTab = $('<li role="presentation"></li>')
+                        .append($('<a href="#masterHome" class="tab-link" role="tab" data-toggle="tab"></a>')
+                            .attr('href', '#' + tabId).attr('aria-controls', tabId).text(tabText)
+                            .append($('<button class="close closeTab"><i class="fa fa-times" aria-hidden="true"></i></button>')));
+                newTab.appendTo($('#masterTab'));
+                $('<div role="tabpanel" class="tab-pane"></div>').attr('id', tabId)
+                    .append(tabContent).appendTo($('#masterTabContent'));
+                this.registerCloseEvent(newTab);
+                if (show)
+                    this.showTab(tabId);
+            },
+        };
+    })();
 
     $.fn.serializeObject = function () {
         var o = {};

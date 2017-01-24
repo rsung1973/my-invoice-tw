@@ -46,9 +46,9 @@ namespace eIVOGo.Module.EIVO
         void Page_PreRenderComplete(object sender, EventArgs e)
         {
             var mgr = dsEntity.CreateDataManager();
-            if (!_item.CDS_Document.DocumentPrintLogs.Any(l => l.TypeID == (int)Naming.DocumentTypeDefinition.E_Allowance))
+            if (!_item.CDS_Document.DocumentPrintLog.Any(l => l.TypeID == (int)Naming.DocumentTypeDefinition.E_Allowance))
             {                
-                _item.CDS_Document.DocumentPrintLogs.Add(new DocumentPrintLog
+                _item.CDS_Document.DocumentPrintLog.Add(new DocumentPrintLog
                 {
                     PrintDate = DateTime.Now,
                     UID = _userProfile.UID,

@@ -112,7 +112,6 @@
       <Association Name="CDS_Document_DocumentDispatch" Member="DocumentDispatches" ThisKey="DocID" OtherKey="DocID" Type="DocumentDispatch" />
       <Association Name="CDS_Document_InvoiceAllowance" Member="InvoiceAllowance" ThisKey="DocID" OtherKey="AllowanceID" Type="InvoiceAllowance" Cardinality="One" />
       <Association Name="CDS_Document_DocumentOwner" Member="DocumentOwner" ThisKey="DocID" OtherKey="DocID" Type="DocumentOwner" Cardinality="One" />
-      <Association Name="CDS_Document_DocumentPrintLog" Member="DocumentPrintLogs" ThisKey="DocID" OtherKey="DocID" Type="DocumentPrintLog" />
       <Association Name="CDS_Document_DocumentDownloadLog" Member="DocumentDownloadLogs" ThisKey="DocID" OtherKey="DocID" Type="DocumentDownloadLog" />
       <Association Name="CDS_Document_DocumentReplication" Member="DocumentReplications" ThisKey="DocID" OtherKey="DocID" Type="DocumentReplication" />
       <Association Name="CDS_Document_DerivedDocument" Member="DerivedDocument" ThisKey="DocID" OtherKey="DocID" Type="DerivedDocument" Cardinality="One" />
@@ -131,6 +130,8 @@
       <Association Name="CDS_Document_DocumentMappingQueue" Member="DocumentMappingQueue" ThisKey="DocID" OtherKey="DocID" Type="DocumentMappingQueue" Cardinality="One" />
       <Association Name="CDS_Document_DocumentDownloadQueue" Member="DocumentDownloadQueue" ThisKey="DocID" OtherKey="DocID" Type="DocumentDownloadQueue" Cardinality="One" />
       <Association Name="CDS_Document_DocumentSubscriptionQueue" Member="DocumentSubscriptionQueue" ThisKey="DocID" OtherKey="DocID" Type="DocumentSubscriptionQueue" Cardinality="One" />
+      <Association Name="CDS_Document_DocumentAuthorization" Member="DocumentAuthorization" ThisKey="DocID" OtherKey="DocID" Type="DocumentAuthorization" Cardinality="One" />
+      <Association Name="CDS_Document_DocumentPrintLog" Member="DocumentPrintLog" ThisKey="DocID" OtherKey="DocID" Type="DocumentPrintLog" />
       <Association Name="DocumentType_CDS_Document" Member="DocumentType" ThisKey="DocType" OtherKey="TypeID" Type="DocumentType" IsForeignKey="true" />
       <Association Name="LevelExpression_CDS_Document" Member="LevelExpression" ThisKey="CurrentStep" OtherKey="LevelID" Type="LevelExpression" IsForeignKey="true" />
     </Type>
@@ -275,7 +276,6 @@
       <Association Name="InvoiceItem_InvoiceVoid" Member="InvoiceVoid" ThisKey="InvoiceID" OtherKey="InvoiceID" Type="InvoiceVoid" Cardinality="One" />
       <Association Name="InvoiceItem_InvoiceAllowance" Member="InvoiceAllowances" ThisKey="InvoiceID" OtherKey="InvoiceID" Type="InvoiceAllowance" />
       <Association Name="InvoiceItem_InvoiceNoAssignment" Member="InvoiceNoAssignment" ThisKey="InvoiceID" OtherKey="InvoiceID" Type="InvoiceNoAssignment" Cardinality="One" />
-      <Association Name="InvoiceItem_InvoiceWinningNumber" Member="InvoiceWinningNumber" ThisKey="InvoiceID" OtherKey="InvoiceID" Type="InvoiceWinningNumber" Cardinality="One" />
       <Association Name="InvoiceItem_InvoicePaperRequest" Member="InvoicePaperRequest" ThisKey="InvoiceID" OtherKey="InvoiceID" Type="InvoicePaperRequest" Cardinality="One" />
       <Association Name="InvoiceItem_InvoicePrintQueue" Member="InvoicePrintQueue" ThisKey="InvoiceID" OtherKey="InvoiceID" Type="InvoicePrintQueue" Cardinality="One" />
       <Association Name="InvoiceItem_B2BBuyerInvoiceTag" Member="B2BBuyerInvoiceTag" ThisKey="InvoiceID" OtherKey="InvoiceID" Type="B2BBuyerInvoiceTag" Cardinality="One" />
@@ -287,6 +287,8 @@
       <Association Name="InvoiceItem_InvoiceBuyer" Member="InvoiceBuyer" ThisKey="InvoiceID" OtherKey="InvoiceID" Type="InvoiceBuyer" Cardinality="One" />
       <Association Name="InvoiceItem_InvoicePurchaseOrder" Member="InvoicePurchaseOrder" ThisKey="InvoiceID" OtherKey="InvoiceID" Type="InvoicePurchaseOrder" Cardinality="One" />
       <Association Name="InvoiceItem_InvoiceItemExtension" Member="InvoiceItemExtension" ThisKey="InvoiceID" OtherKey="InvoiceID" Type="InvoiceItemExtension" Cardinality="One" />
+      <Association Name="InvoiceItem_InvoiceWinningNumber" Member="InvoiceWinningNumber" ThisKey="InvoiceID" OtherKey="InvoiceID" Type="InvoiceWinningNumber" Cardinality="One" />
+      <Association Name="InvoiceItem_InvoiceMail" Member="InvoiceMail" ThisKey="InvoiceID" OtherKey="InvoiceID" Type="InvoiceMail" Cardinality="One" />
       <Association Name="CDS_Document_InvoiceItem" Member="CDS_Document" ThisKey="InvoiceID" OtherKey="DocID" Type="CDS_Document" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
       <Association Name="Organization_InvoiceItem" Member="Organization" ThisKey="SellerID" OtherKey="CompanyID" Type="Organization" IsForeignKey="true" />
       <Association Name="Organization_InvoiceItem1" Member="Donatory" Storage="_Organization1" ThisKey="DonationID" OtherKey="CompanyID" Type="Organization" IsForeignKey="true" />
@@ -298,7 +300,6 @@
       <Column Name="TypeName" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
       <Association Name="DocumentType_CDS_Document" Member="CDS_Documents" ThisKey="TypeID" OtherKey="DocType" Type="CDS_Document" />
       <Association Name="DocumentType_DocumentDispatch" Member="DocumentDispatches" ThisKey="TypeID" OtherKey="TypeID" Type="DocumentDispatch" />
-      <Association Name="DocumentType_DocumentPrintLog" Member="DocumentPrintLogs" ThisKey="TypeID" OtherKey="TypeID" Type="DocumentPrintLog" />
       <Association Name="DocumentType_DocumentDownloadLog" Member="DocumentDownloadLogs" ThisKey="TypeID" OtherKey="TypeID" Type="DocumentDownloadLog" />
       <Association Name="DocumentType_DocumentReplication" Member="DocumentReplications" ThisKey="TypeID" OtherKey="TypeID" Type="DocumentReplication" />
       <Association Name="DocumentType_DocumentTypeFlow" Member="DocumentTypeFlow" ThisKey="TypeID" OtherKey="TypeID" Type="DocumentTypeFlow" />
@@ -306,6 +307,7 @@
       <Association Name="DocumentType_ExceptionLog" Member="ExceptionLog" ThisKey="TypeID" OtherKey="TypeID" Type="ExceptionLog" />
       <Association Name="DocumentType_DocumentReady" Member="DocumentReady" ThisKey="TypeID" OtherKey="TypeID" Type="DocumentReady" />
       <Association Name="DocumentType_CALog" Member="CALog" ThisKey="TypeID" OtherKey="TypeID" Type="CALog" />
+      <Association Name="DocumentType_DocumentPrintLog" Member="DocumentPrintLog" ThisKey="TypeID" OtherKey="TypeID" Type="DocumentPrintLog" />
     </Type>
   </Table>
   <Table Name="dbo.viewDomationListCountGroup" Member="viewDomationListCountGroups">
@@ -458,35 +460,7 @@
       <Column Name="WinningNO" Type="System.String" DbType="NVarChar(16) NOT NULL" CanBeNull="false" />
       <Column Name="PrizeType" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
       <Column Name="Bonus" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="UniformInvoiceWinningNumber_InvoiceWinningNumber" Member="InvoiceWinningNumbers" ThisKey="WinningID" OtherKey="WinningID" Type="InvoiceWinningNumber" />
-    </Type>
-  </Table>
-  <Table Name="dbo.InvoiceWinningNumber" Member="InvoiceWinningNumbers">
-    <Type Name="InvoiceWinningNumber">
-      <Column Name="WinningNO" Type="System.String" DbType="NVarChar(16) NOT NULL" CanBeNull="false" />
-      <Column Name="Year" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="MonthFrom" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
-      <Column Name="MonthTo" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
-      <Column Name="WinningType" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
-      <Column Name="InvoiceID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="TrackCode" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
-      <Column Name="DataType" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
-      <Column Name="BonusDescription" Type="System.String" DbType="NVarChar(32)" CanBeNull="true" />
-      <Column Name="WinningID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="DownloadDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Association Name="InvoiceItem_InvoiceWinningNumber" Member="InvoiceItem" ThisKey="InvoiceID" OtherKey="InvoiceID" Type="InvoiceItem" IsForeignKey="true" />
-      <Association Name="UniformInvoiceWinningNumber_InvoiceWinningNumber" Member="UniformInvoiceWinningNumber" ThisKey="WinningID" OtherKey="WinningID" Type="UniformInvoiceWinningNumber" IsForeignKey="true" DeleteRule="CASCADE" />
-    </Type>
-  </Table>
-  <Table Name="dbo.DocumentPrintLog" Member="DocumentPrintLogs">
-    <Type Name="DocumentPrintLog">
-      <Column Name="DocID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="TypeID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="PrintDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
-      <Column Name="UID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="CDS_Document_DocumentPrintLog" Member="CDS_Document" ThisKey="DocID" OtherKey="DocID" Type="CDS_Document" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
-      <Association Name="DocumentType_DocumentPrintLog" Member="DocumentType" ThisKey="TypeID" OtherKey="TypeID" Type="DocumentType" IsForeignKey="true" />
-      <Association Name="UserProfile_DocumentPrintLog" Member="UserProfile" ThisKey="UID" OtherKey="UID" Type="UserProfile" IsForeignKey="true" />
+      <Association Name="UniformInvoiceWinningNumber_InvoiceWinningNumber" Member="InvoiceWinningNumber" ThisKey="WinningID" OtherKey="WinningID" Type="InvoiceWinningNumber" />
     </Type>
   </Table>
   <Table Name="dbo.DocumentDownloadLog" Member="DocumentDownloadLogs">
@@ -784,6 +758,7 @@
       <Association Name="LevelExpression_UserProfile" Member="UserProfile" ThisKey="LevelID" OtherKey="LevelID" Type="UserProfile" />
       <Association Name="LevelExpression_OrganizationStatus" Member="OrganizationStatus" ThisKey="LevelID" OtherKey="CurrentLevel" Type="OrganizationStatus" />
       <Association Name="LevelExpression_InvoiceDeliveryTracking" Member="InvoiceDeliveryTracking" ThisKey="LevelID" OtherKey="DeliveryStatus" Type="InvoiceDeliveryTracking" />
+      <Association Name="LevelExpression_InvoiceMailTracking" Member="InvoiceMailTracking" ThisKey="LevelID" OtherKey="DeliveryStatus" Type="InvoiceMailTracking" />
     </Type>
   </Table>
   <Table Name="center.CommonDocumentTypeFlow" Member="CommonDocumentTypeFlow">
@@ -887,7 +862,6 @@
       <Association Name="UserProfile_UserProfileExtension" Member="UserProfileExtension" ThisKey="UID" OtherKey="UID" Type="UserProfileExtension" Cardinality="One" />
       <Association Name="UserProfile_UserProfileStatus" Member="UserProfileStatus" ThisKey="UID" OtherKey="UID" Type="UserProfileStatus" Cardinality="One" />
       <Association Name="UserProfile_InvoiceUserCarrier" Member="InvoiceUserCarrier" ThisKey="UID" OtherKey="UID" Type="InvoiceUserCarrier" />
-      <Association Name="UserProfile_DocumentPrintLog" Member="DocumentPrintLog" ThisKey="UID" OtherKey="UID" Type="DocumentPrintLog" />
       <Association Name="UserProfile_DocumentDownloadLog" Member="DocumentDownloadLog" ThisKey="UID" OtherKey="UID" Type="DocumentDownloadLog" />
       <Association Name="UserProfile_InvoicePurchaseOrderUpload" Member="InvoicePurchaseOrderUpload" ThisKey="UID" OtherKey="UID" Type="InvoicePurchaseOrderUpload" />
       <Association Name="UserProfile_InvoiceCancellationUpload" Member="InvoiceCancellationUpload" ThisKey="UID" OtherKey="UID" Type="InvoiceCancellationUpload" />
@@ -898,6 +872,7 @@
       <Association Name="UserProfile_UserToken" Member="UserToken" ThisKey="UID" OtherKey="UID" Type="UserToken" />
       <Association Name="UserProfile_DocumentPrintQueue" Member="DocumentPrintQueues" ThisKey="UID" OtherKey="UID" Type="DocumentPrintQueue" />
       <Association Name="UserProfile_InvoiceNoSegmentDisposition" Member="InvoiceNoSegmentDisposition" ThisKey="UID" OtherKey="UID" Type="InvoiceNoSegmentDisposition" />
+      <Association Name="UserProfile_DocumentPrintLog" Member="DocumentPrintLog" ThisKey="UID" OtherKey="UID" Type="DocumentPrintLog" />
       <Association Name="LevelExpression_UserProfile" Member="LevelExpression" ThisKey="LevelID" OtherKey="LevelID" Type="LevelExpression" IsForeignKey="true" />
       <Association Name="UserProfile_UserProfile" Member="UserProfile1" ThisKey="Creator" OtherKey="UID" Type="UserProfile" IsForeignKey="true" />
       <Association Name="UserProfile_UserProfile1" Member="UserProfile3" ThisKey="AuthID" OtherKey="UID" Type="UserProfile" IsForeignKey="true" />
@@ -1290,6 +1265,52 @@
       <Association Name="Organization_OrganizationExtension" Member="Organization" ThisKey="CompanyID" OtherKey="CompanyID" Type="Organization" IsForeignKey="true" />
     </Type>
   </Table>
+  <Table Name="dbo.InvoiceWinningNumber" Member="InvoiceWinningNumber">
+    <Type Name="InvoiceWinningNumber">
+      <Column Name="InvoiceID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="WinningID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DownloadDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="InvoiceItem_InvoiceWinningNumber" Member="InvoiceItem" ThisKey="InvoiceID" OtherKey="InvoiceID" Type="InvoiceItem" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="UniformInvoiceWinningNumber_InvoiceWinningNumber" Member="UniformInvoiceWinningNumber" ThisKey="WinningID" OtherKey="WinningID" Type="UniformInvoiceWinningNumber" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.InvoiceMailTracking" Member="InvoiceMailTracking">
+    <Type Name="InvoiceMailTracking">
+      <Column Name="MailID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TrackingNo1" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="TrackingNo2" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="DeliveryDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DeliveryStatus" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="InvoiceMailTracking_InvoiceMail" Member="InvoiceMail" ThisKey="MailID" OtherKey="MailID" Type="InvoiceMail" />
+      <Association Name="LevelExpression_InvoiceMailTracking" Member="LevelExpression" ThisKey="DeliveryStatus" OtherKey="LevelID" Type="LevelExpression" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.InvoiceMail" Member="InvoiceMail">
+    <Type Name="InvoiceMail">
+      <Column Name="InvoiceID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MailID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="InvoiceItem_InvoiceMail" Member="InvoiceItem" ThisKey="InvoiceID" OtherKey="InvoiceID" Type="InvoiceItem" IsForeignKey="true" />
+      <Association Name="InvoiceMailTracking_InvoiceMail" Member="InvoiceMailTracking" ThisKey="MailID" OtherKey="MailID" Type="InvoiceMailTracking" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DocumentAuthorization" Member="DocumentAuthorization">
+    <Type Name="DocumentAuthorization">
+      <Column Name="DocID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="CDS_Document_DocumentAuthorization" Member="CDS_Document" ThisKey="DocID" OtherKey="DocID" Type="CDS_Document" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DocumentPrintLog" Member="DocumentPrintLog">
+    <Type Name="DocumentPrintLog">
+      <Column Name="DocID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PrintDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LogID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Association Name="CDS_Document_DocumentPrintLog" Member="CDS_Document" ThisKey="DocID" OtherKey="DocID" Type="CDS_Document" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="DocumentType_DocumentPrintLog" Member="DocumentType" ThisKey="TypeID" OtherKey="TypeID" Type="DocumentType" IsForeignKey="true" />
+      <Association Name="UserProfile_DocumentPrintLog" Member="UserProfile" ThisKey="UID" OtherKey="UID" Type="UserProfile" IsForeignKey="true" />
+    </Type>
+  </Table>
   <Function Name="dbo.MatchDocumentAttachment" Method="MatchDocumentAttachment">
     <Return Type="System.Int32" />
   </Function>
@@ -1317,5 +1338,16 @@
       <Column Name="CheckNext" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="CheckPrev" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </ElementType>
+  </Function>
+  <Function Name="dbo.ProcessInvoiceNo" Method="ProcessInvoiceNo">
+    <Parameter Name="SellerID" Parameter="sellerID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Year" Parameter="year" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PeriodNo" Parameter="periodNo" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.MatchWinningInvoiceNo" Method="MatchWinningInvoiceNo">
+    <Parameter Name="Year" Parameter="year" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PeriodNo" Parameter="periodNo" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
   </Function>
 </Database>

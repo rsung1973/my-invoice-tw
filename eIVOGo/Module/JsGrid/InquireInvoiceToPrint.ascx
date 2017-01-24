@@ -133,7 +133,7 @@
         {
             _queryExpr = _queryExpr.And(i => i.DonateMark == "0"
                 && (i.PrintMark == "Y" || (i.PrintMark == "N" && i.InvoiceWinningNumber != null))
-                && !i.CDS_Document.DocumentPrintLogs.Any(l => l.TypeID == (int)Naming.DocumentTypeDefinition.E_Invoice));
+                && !i.CDS_Document.DocumentPrintLog.Any(l => l.TypeID == (int)Naming.DocumentTypeDefinition.E_Invoice));
         }        
         base.buildQueryItem();
     }

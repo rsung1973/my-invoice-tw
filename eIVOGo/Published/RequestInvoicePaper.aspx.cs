@@ -44,7 +44,7 @@ namespace eIVOGo.Published
             }
             else
             {
-                if (_item.CDS_Document.DocumentPrintLogs.Any(p => p.TypeID == (int)Naming.DocumentTypeDefinition.E_Invoice))
+                if (_item.CDS_Document.DocumentPrintLog.Any(p => p.TypeID == (int)Naming.DocumentTypeDefinition.E_Invoice))
                 {
                     WebMessageBox.Alert(Page, "發票已列印!!");
                 }

@@ -82,7 +82,7 @@ namespace eIVOGo
                         body.Append("-------------------------------------------------<br>");
                         body.Append("請立即透過下方密碼變更連結 登入網際優勢電子發票獨立第三方平台 變更密碼 。<br><br>");
                         body.Append("密碼變更連結： ");
-                        body.Append("<a href=").Append(Settings.Default.mailLinkAddress).Append(VirtualPathUtility.ToAbsolute("~/SAM/EditMyself.aspx")).Append("?active=aEfs45WE>會員密碼變更</a>");
+                        body.Append("<a href=").Append(Settings.Default.mailLinkAddress).Append(VirtualPathUtility.ToAbsolute("~/UserProfile/EditMySelf")).Append("?active=aEfs45WE>會員密碼變更</a>");
                         body.Append("<br><br>電子發票獨立第三方平台 感謝您的使用");
 
                         message.Body = body.ToString();

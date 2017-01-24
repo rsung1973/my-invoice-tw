@@ -8,8 +8,8 @@
 <%@ Register Src="~/Module/SYS/Info/ServiceNotation.ascx" TagPrefix="uc1" TagName="ServiceNotation" %>
 
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head runat="server">
     <style type="text/css">
         body {
@@ -155,15 +155,6 @@
             color: #FF0000;
         }
 
-        .Head_style_a {
-            font-size: 12px !important;
-            color: #A0522D;
-            background: url(images/Head_style_1.gif) repeat-x top;
-            padding-top: 5px 2px 5px 2px;
-            text-align: center;
-            line-height: 15px;
-            letter-spacing: 1px;
-        }
     </style>
     <title>電子發票系統</title>
 </head>
@@ -197,6 +188,12 @@
         &nbsp;<div id="showService" runat="server" visible='<%# _item.Organization.OrganizationStatus.SetToOutsourcingCS == true %>'>
             <uc1:ServiceNotation runat="server" ID="ServiceNotation" />
         </div>
+        <%  if (_item.Organization.OrganizationStatus.SubscribeB2BInvoicePDF == false)
+            { %>
+        <p class="red">
+            ※<a href="<%= eIVOGo.Properties.Settings.Default.mailLinkAddress + VirtualPathUtility.ToAbsolute("~/InvoiceProcess/InquireForIncoming") + "?queryAtStart=True&invoiceNo=" + _item.TrackCode + _item.No %>">請點此連結列印發票</a>
+        </p>
+        <%  } %>
         <p class="red">
             ※此信件為系統發出信件，請勿直接回覆。
         </p>

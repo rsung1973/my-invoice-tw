@@ -58,7 +58,7 @@
         </asp:TemplateField>
         <asp:TemplateField HeaderText="列印狀態">
             <ItemTemplate>
-                <%# ((InvoiceItem)Container.DataItem).CDS_Document.DocumentPrintLogs.Count > 0 ? "已列印" : "未列印"%>
+                <%# ((InvoiceItem)Container.DataItem).CDS_Document.DocumentPrintLog.Count > 0 ? "已列印" : "未列印"%>
             </ItemTemplate>
             <ItemStyle HorizontalAlign="Center" />
         </asp:TemplateField>

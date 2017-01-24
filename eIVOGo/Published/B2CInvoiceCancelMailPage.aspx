@@ -154,15 +154,7 @@
         {
 	        color:#FF0000;
         }
-        .Head_style_a{
-	        font-size:12px!important;
-	        color:#A0522D;
-	        background:url(images/Head_style_1.gif) repeat-x top;
-	        padding-top:5px 2px 5px 2px;
-	        text-align:center;
-	        line-height:15px;
-	        letter-spacing:1px;
-        }
+
     </style>
     <title>電子發票系統</title>
 </head>

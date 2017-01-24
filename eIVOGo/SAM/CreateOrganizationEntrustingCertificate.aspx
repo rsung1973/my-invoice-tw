@@ -15,6 +15,6 @@
 
     void orgToken_Done(object sender, EventArgs e)
     {
-        this.AjaxAlertAndRedirect("憑證設定完成!!",VirtualPathUtility.ToAbsolute("~/SAM/EditMyself.aspx"));
+        this.AjaxAlertAndRedirect("憑證設定完成!!",VirtualPathUtility.ToAbsolute("~/UserProfile/EditMySelf"));
     }
 </script>

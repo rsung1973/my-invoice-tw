@@ -28,7 +28,7 @@
                                         <tr>
                                             <td align="center" nowrap="nowrap" class="title">
                                                 電子計算機統一發票 (
-                                                <%# _item.CDS_Document.DocumentPrintLogs.Any(l=>l.TypeID==(int)Model.Locale.Naming.DocumentTypeDefinition.E_Invoice)?"副本":"正本" %>
+                                                <%# _item.CDS_Document.DocumentPrintLog.Any(l=>l.TypeID==(int)Model.Locale.Naming.DocumentTypeDefinition.E_Invoice)?"副本":"正本" %>
                                                 )
                                             </td>
                                         </tr>

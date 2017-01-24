@@ -65,7 +65,7 @@ namespace eIVOGo.SAM
                     //sb.Append(item.InvoiceBuyer.IsB2C() ? "" : item.InvoiceBuyer.Address);//買受人地址(取消不顯示)
                     sb.Append("");//買受人地址
                     sb.Append(",");
-                    sb.Append(item.CDS_Document.DocumentPrintLogs.Any(l => l.TypeID == (int)Model.Locale.Naming.DocumentTypeDefinition.E_Invoice) ? "副本" : "正本");//發票正副本
+                    sb.Append(item.CDS_Document.DocumentPrintLog.Any(l => l.TypeID == (int)Model.Locale.Naming.DocumentTypeDefinition.E_Invoice) ? "副本" : "正本");//發票正副本
                     sb.Append(",");
                     sb.Append(item.InvoiceDate.Value.Year - 1911);//發票開立民國年
                     sb.Append(",");

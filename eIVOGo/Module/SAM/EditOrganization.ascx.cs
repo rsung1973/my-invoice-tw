@@ -159,6 +159,7 @@ namespace eIVOGo.Module.SAM
             _entity.OrganizationStatus.SubscribeB2BInvoicePDF = SubscribeB2BInvoicePDF.Checked;
             _entity.OrganizationStatus.UseB2BStandalone = UseB2BStandalone.Checked;
             _entity.OrganizationStatus.DisableWinningNotice = !SetWinningNotice.Checked;
+            _entity.OrganizationStatus.EntrustToPrint = EntrustToPrint.Checked;
             if (!_entity.OrganizationValueCheck(this))
             {
                 return false;

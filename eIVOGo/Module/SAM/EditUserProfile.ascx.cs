@@ -192,6 +192,7 @@ namespace eIVOGo.Module.SAM
                 }
 
                 DataItem.Password2 = Utility.ValueValidity.MakePassword(this.txtPassword.Text);
+                DataItem.UserProfileStatus.CurrentLevel = (int)Naming.MemberStatusDefinition.Checked;
             }
 
             DataItem.PID = this.txtID.Text.Trim().Equals("由系統產生") ? this.txtEmail.Text.Trim() : this.txtID.Text.Trim();

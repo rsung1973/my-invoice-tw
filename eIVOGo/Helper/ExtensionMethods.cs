@@ -214,10 +214,18 @@ namespace eIVOGo.Helper
 
         public static bool IsPrintableInvoice(this CDS_Document item)
         {
-            return item.InvoiceItem != null 
-                && (!item.InvoiceItem.InvoiceBuyer.IsB2C() 
-                    || ((item.InvoiceItem.PrintMark == "Y" || (item.InvoiceItem.PrintMark == "N" && item.InvoiceItem.InvoiceWinningNumber != null))
-                        && !item.DocumentPrintLogs.Any(l => l.TypeID == (int)Naming.DocumentTypeDefinition.E_Invoice)));
+            return item.InvoiceItem == null ? false
+                : item.InvoiceItem.InvoiceBuyer.IsB2C()
+                    ? item.InvoiceItem.PrintMark == "Y" || (item.InvoiceItem.PrintMark == "N" && item.InvoiceItem.InvoiceWinningNumber != null)
+                        ? item.DocumentPrintLog.Any(l => l.TypeID == (int)Naming.DocumentTypeDefinition.E_Invoice)
+                            ? item.DocumentAuthorization != null ? true : false
+                        : false
+                    : false
+                : item.InvoiceItem.Organization.OrganizationStatus.EntrustToPrint == false
+                    ? item.DocumentPrintLog.Any(l => l.TypeID == (int)Naming.DocumentTypeDefinition.E_Invoice)
+                        ? item.DocumentAuthorization != null ? true : false
+                        : true
+                    : true;
         }
 
         public static void SetModelSource<TEntity>(this TempDataDictionary tempData, ModelSource<TEntity> models)
@@ -284,6 +292,11 @@ namespace eIVOGo.Helper
         public static bool CheckSystemCompany(this UserProfileMember _userProfile)
         {
             return _userProfile.CurrentUserRole.OrganizationCategory.CategoryID == (int)Naming.CategoryID.COMP_SYS;
+        }
+
+        public static bool IsSystemAdmin(this UserProfileMember profile)
+        {
+            return profile != null && profile.CurrentUserRole.RoleID == (int)Naming.RoleID.ROLE_SYS;
         }
 
     }

@@ -6,7 +6,14 @@
 <%@ Import Namespace="eIVOGo.Module.Common" %>
 <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left_title">
   <tr>
-    <th nowrap="nowrap" colspan="4" class="Head_style_a"><%# _item.Organization.CompanyName %>電子發票開立通知</th>
+      <%    if (_item.Organization.LogoURL != null)
+            { %>
+      <th colspan="2">
+        <img id="logo" style="width:300px;"  src='<%= eIVOGo.Properties.Settings.Default.mailLinkAddress + VirtualPathUtility.ToAbsolute("~/" +_item.Organization.LogoURL) %>' />
+      </th>
+      <%    } %>
+    <th nowrap="nowrap" colspan="4" class="Head_style_a tdleft">
+        <%# _item.Organization.CompanyName %>電子發票開立通知</th>
   </tr>
     <tr>
         <th width="100">

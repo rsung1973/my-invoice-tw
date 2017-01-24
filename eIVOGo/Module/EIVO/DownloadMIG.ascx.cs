@@ -266,7 +266,7 @@ namespace eIVOGo.Module.EIVO
                     BuyerId = txtBuyerId2.Text,
                     SellerId = txtSellerId2.Text,
                     VoidDate = DateTime.Now.Date.ToString("yyyyMMdd"),
-                    VoidTime = DateTime.Now.TimeOfDay,                    
+                    VoidTime = DateTime.Now,                    
                     VoidReason = txtVoidReason.Text,
                     Remark = txtRemark.Text
                 };

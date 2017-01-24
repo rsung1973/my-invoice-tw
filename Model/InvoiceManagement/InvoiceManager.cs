@@ -870,5 +870,65 @@ namespace Model.InvoiceManagement
             return result;
         }
 
+        public void CancelInvoice(IEnumerable<int> invoiceID)
+        {
+            if (invoiceID != null && invoiceID.Count() > 0)
+            {
+                DateTime cancelDate = DateTime.Now;
+                this.EventItems = new List<InvoiceItem>();
+                foreach(var invID  in invoiceID)
+                {
+                    var item = this.EntityList.Where(i => i.InvoiceID == invID).FirstOrDefault();
+                    if(item!=null && CancelInvoice(item,ref cancelDate))
+                    {
+                        EventItems.Add(item);
+                    }
+                }
+
+                if(EventItems.Count>0)
+                {
+                    EventItems.Select(i => i.InvoiceID).SendIssuingNotification();
+                }
+            }
+        }
+
+        public bool CancelInvoice(InvoiceItem item,ref DateTime cancelDate)
+        {
+            if (item.InvoiceCancellation == null)
+            {
+                InvoiceCancellation cancelItem = new InvoiceCancellation
+                {
+                    InvoiceItem = item,
+                    CancellationNo = item.TrackCode + item.No,
+                    Remark = "作廢發票",
+                    ReturnTaxDocumentNo = "",
+                    CancelDate = cancelDate,
+                    CancelReason = "作廢發票"
+                };
+
+                var doc = new DerivedDocument
+                {
+                    CDS_Document = new CDS_Document
+                    {
+                        DocType = (int)Naming.DocumentTypeDefinition.E_InvoiceCancellation,
+                        DocDate = DateTime.Now,
+                        DocumentOwner = new DocumentOwner
+                        {
+                            OwnerID = item.CDS_Document.DocumentOwner.OwnerID
+                        }
+                    },
+                    SourceID = item.InvoiceID
+                };
+
+                this.GetTable<DerivedDocument>().InsertOnSubmit(doc);
+                this.SubmitChanges();
+
+                return true;
+            }
+
+            return false;
+        }
+
+
     }
 }

@@ -18,7 +18,7 @@
     -------------------------------------------------<br />
     請立即透過下面帳號啟用連結登入 電子發票系統 變更密碼 。<br />
     <br />
-    帳號啟用連結： <a href='<%# String.Format("{0}{1}?active=aEfs45WE",eIVOGo.Properties.Settings.Default.mailLinkAddress,VirtualPathUtility.ToAbsolute("~/SAM/EditMyself.aspx")) %>'>
+    帳號啟用連結： <a href='<%# String.Format("{0}{1}?active=aEfs45WE",eIVOGo.Properties.Settings.Default.mailLinkAddress,VirtualPathUtility.ToAbsolute("~/UserProfile/EditMySelf")) %>'>
         會員帳號啟用</a>
     <br />
     <br />

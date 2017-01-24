@@ -136,11 +136,14 @@
     <Setting Name="ResponseUpload" Type="System.Boolean" Scope="Application">
       <Value Profile="(Default)">True</Value>
     </Setting>
+    <Setting Name="PGPWaitingForExitInMilliSeconds" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">30000</Value>
+    </Setting>
     <Setting Name="UploadAttachment" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">https://eceivo.uxifs.com/eivo03ready/Published/UploadAttachmentForGoogle.ashx</Value>
+      <Value Profile="(Default)">http://eivo4all.uxifs.com/NewEIVO03/Published/UploadAttachmentForGoogle.ashx</Value>
     </Setting>
     <Setting Name="ActivationKey" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">59a6ba40-4c58-4b02-93db-d6799d6478c0</Value>
+      <Value Profile="(Default)">4aecd9a6-1b86-46ba-a10d-83e681e78e63</Value>
     </Setting>
     <Setting Name="InvoiceClient_WS_Invoice_eInvoiceService" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">http://localhost:2598/Published/eInvoiceService.asmx</Value>
@@ -148,23 +151,20 @@
     <Setting Name="TransferManager" Type="System.String" Scope="Application">
       <Value Profile="(Default)">
                     InvoiceClient.TransferManagement.InvoiceTransferManagerForAgent, InvoiceClient, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;
-                    InvoiceClient.TransferManagement.BranchTrackTransferManager, InvoiceClient, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;
-                    InvoiceClient.TransferManagement.MIGInvoiceTransferManager, InvoiceClient, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;
                 </Value>
     </Setting>
     <Setting Name="ServerInspector" Type="System.String" Scope="Application">
       <Value Profile="(Default)">
                     InvoiceClient.Agent.VacantInvoiceNoInspector, InvoiceClient, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;
                     InvoiceClient.Agent.InvoiceMappingInspector, InvoiceClient, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;
-                    InvoiceClient.Agent.InvoiceTrackCodeInspector, InvoiceClient, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;
                     InvoiceClient.Agent.InvoiceServerInspector, InvoiceClient, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;
                 </Value>
     </Setting>
-    <Setting Name="PGPWaitingForExitInMilliSeconds" Type="System.Int32" Scope="Application">
-      <Value Profile="(Default)">30000</Value>
-    </Setting>
     <Setting Name="ClientID" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">GoogleGUI</Value>
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="UploadCsvBuyerFolder" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">B2B相對營業人</Value>
     </Setting>
   </Settings>
 </SettingsFile>

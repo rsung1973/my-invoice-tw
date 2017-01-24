@@ -33,7 +33,7 @@
         <%     }
                foreach (var info in Directory.EnumerateFiles(Request["f_info"]))
                { %>
-        <%= info %><br />
+        <%= info %>[<%= (new FileInfo(info)).CreationTime %>]<br />
         <%     }
         %>
 

@@ -91,7 +91,7 @@
         ((ASP.module_inquiry_inquiryitem_urlradiodirective_ascx)urlGo).CreatePrintQuery();
 
         _queryExpr = i =>  i.DonateMark == "0" && i.InvoiceCancellation == null && i.InvoiceWinningNumber != null
-            && !i.CDS_Document.DocumentPrintLogs.Any(l => l.TypeID == (int)Naming.DocumentTypeDefinition.E_Invoice);
+            && !i.CDS_Document.DocumentPrintLog.Any(l => l.TypeID == (int)Naming.DocumentTypeDefinition.E_Invoice);
         
         doDownload.DoAction = arg =>
             {

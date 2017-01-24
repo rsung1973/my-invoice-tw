@@ -320,7 +320,7 @@ namespace eIVOGo.Models
             {
                 models.Items = models.Items.Where(i => i.DonateMark == "0"
                     && (i.PrintMark == "Y" || (i.PrintMark == "N" && i.InvoiceWinningNumber != null))
-                    && !i.CDS_Document.DocumentPrintLogs.Any(l => l.TypeID == (int)Naming.DocumentTypeDefinition.E_Invoice));
+                    && (!i.CDS_Document.DocumentPrintLog.Any(l => l.TypeID == (int)Naming.DocumentTypeDefinition.E_Invoice) || i.CDS_Document.DocumentAuthorization != null));
             }
         }
     }
@@ -338,8 +338,12 @@ namespace eIVOGo.Models
         {
             switch ((Naming.RoleID)_userProfile.CurrentUserRole.RoleID)
             {
-                case Naming.RoleID.ROLE_GUEST:
                 case Naming.RoleID.ROLE_BUYER:
+                    models.Items = models.Items.Join(models.GetTable<InvoiceBuyer>()
+                                .Where(b => b.BuyerID == _userProfile.CurrentUserRole.OrganizationCategory.CompanyID),
+                            i => i.InvoiceID, b => b.InvoiceID, (i, b) => i);
+                    break;
+                case Naming.RoleID.ROLE_GUEST:
                 case Naming.RoleID.ROLE_SYS:
                     break;
 
@@ -387,7 +391,7 @@ namespace eIVOGo.Models
     {
         public override void BuildQueryExpression(ModelSource<EIVOEntityDataContext, InvoiceItem> models)
         {
-            if (CurrentController.Request["cancelled"] == "1")
+            if (_viewModel != null && _viewModel.Cancelled == true)
             {
                 models.Items = models.Items.Where(i => i.InvoiceCancellation != null);
                 this.HasSet = true;
@@ -404,7 +408,7 @@ namespace eIVOGo.Models
     {
         public override void BuildQueryExpression(ModelSource<EIVOEntityDataContext, InvoiceAllowance> models)
         {
-            if (_viewModel!=null && _viewModel.IsCancelled == true)
+            if (_viewModel!=null && _viewModel.Cancelled == true)
             {
                 models.Items = models.Items.Where(i => i.InvoiceAllowanceCancellation != null);
                 this.HasSet = true;
@@ -421,7 +425,7 @@ namespace eIVOGo.Models
     {
         public override void BuildQueryExpression(ModelSource<EIVOEntityDataContext, InvoiceItem> models)
         {
-            if (CurrentController.Request["winning"] == null || CurrentController.Request["winning"] == "1")
+            if (CurrentController.Request["winning"] == "1")
             {
                 models.Items = models.Items.Where(i => i.InvoiceWinningNumber != null);
                 HasSet = true;
